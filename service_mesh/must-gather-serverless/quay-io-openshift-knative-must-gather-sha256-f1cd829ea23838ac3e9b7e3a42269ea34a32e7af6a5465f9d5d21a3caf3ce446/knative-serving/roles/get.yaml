@@ -1,0 +1,186 @@
+apiVersion: v1
+items:
+- apiVersion: rbac.authorization.k8s.io/v1
+  kind: Role
+  metadata:
+    annotations:
+      operator-sdk/primary-resource: istio-system/kiali
+      operator-sdk/primary-resource-type: Kiali.kiali.io
+    creationTimestamp: "2023-03-03T20:05:19Z"
+    labels:
+      app: kiali
+      app.kubernetes.io/instance: kiali
+      app.kubernetes.io/name: kiali
+      app.kubernetes.io/part-of: kiali
+      app.kubernetes.io/version: 13442c85948c6ef194b3c0a5547f6deb44e6318b2326a563cd324b50ca75XXX
+      version: 13442c85948c6ef194b3c0a5547f6deb44e6318b2326a563cd324b50ca75XXX
+    name: kiali
+    namespace: knative-serving
+    resourceVersion: "36213"
+    uid: 346ec030-0da4-498b-b30f-d82906a6d10e
+  rules:
+  - apiGroups:
+    - ""
+    resources:
+    - configmaps
+    - endpoints
+    - pods/log
+    - pods/proxy
+    verbs:
+    - get
+    - list
+    - watch
+  - apiGroups:
+    - ""
+    resources:
+    - namespaces
+    - pods
+    - replicationcontrollers
+    - services
+    verbs:
+    - get
+    - list
+    - watch
+    - patch
+  - apiGroups:
+    - ""
+    resources:
+    - pods/portforward
+    verbs:
+    - create
+    - post
+  - apiGroups:
+    - extensions
+    - apps
+    resources:
+    - daemonsets
+    - deployments
+    - replicasets
+    - statefulsets
+    verbs:
+    - get
+    - list
+    - watch
+    - patch
+  - apiGroups:
+    - batch
+    resources:
+    - cronjobs
+    - jobs
+    verbs:
+    - get
+    - list
+    - watch
+    - patch
+  - apiGroups:
+    - networking.istio.io
+    - security.istio.io
+    resources:
+    - '*'
+    verbs:
+    - get
+    - list
+    - watch
+    - create
+    - delete
+    - patch
+  - apiGroups:
+    - apps.openshift.io
+    resources:
+    - deploymentconfigs
+    verbs:
+    - get
+    - list
+    - watch
+    - patch
+  - apiGroups:
+    - project.openshift.io
+    resources:
+    - projects
+    verbs:
+    - get
+  - apiGroups:
+    - route.openshift.io
+    resources:
+    - routes
+    verbs:
+    - get
+  - apiGroups:
+    - iter8.tools
+    resources:
+    - experiments
+    verbs:
+    - get
+    - list
+    - watch
+    - create
+    - delete
+    - patch
+  - apiGroups:
+    - authentication.k8s.io
+    resources:
+    - tokenreviews
+    verbs:
+    - create
+- apiVersion: rbac.authorization.k8s.io/v1
+  kind: Role
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"rbac.authorization.k8s.io/v1","kind":"Role","metadata":{"name":"knative-prometheus-k8s","namespace":"knative-serving","ownerReferences":[{"apiVersion":"operator.knative.dev/v1beta1","blockOwnerDeletion":true,"controller":true,"kind":"KnativeServing","name":"knative-serving","uid":"0ad2d391-945e-4b39-841a-1da3211311cd"}]},"rules":[{"apiGroups":[""],"resources":["services","endpoints","pods"],"verbs":["get","list","watch"]}]}
+    creationTimestamp: "2023-03-03T20:09:29Z"
+    name: knative-prometheus-k8s
+    namespace: knative-serving
+    ownerReferences:
+    - apiVersion: operator.knative.dev/v1beta1
+      blockOwnerDeletion: true
+      controller: true
+      kind: KnativeServing
+      name: knative-serving
+      uid: 0ad2d391-945e-4b39-841a-1da3211311cd
+    resourceVersion: "39775"
+    uid: 492c85b1-d9bc-4132-ab74-c5f99768087c
+  rules:
+  - apiGroups:
+    - ""
+    resources:
+    - services
+    - endpoints
+    - pods
+    verbs:
+    - get
+    - list
+    - watch
+- apiVersion: rbac.authorization.k8s.io/v1
+  kind: Role
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"rbac.authorization.k8s.io/v1","kind":"Role","metadata":{"name":"openshift-serverless-view-serving-configmaps","namespace":"knative-serving","ownerReferences":[{"apiVersion":"operator.knative.dev/v1beta1","blockOwnerDeletion":true,"controller":true,"kind":"KnativeServing","name":"knative-serving","uid":"0ad2d391-945e-4b39-841a-1da3211311cd"}]},"rules":[{"apiGroups":[""],"resourceNames":["config-autoscaler"],"resources":["configmaps"],"verbs":["get","list","watch"]}]}
+    creationTimestamp: "2023-03-03T20:09:29Z"
+    name: openshift-serverless-view-serving-configmaps
+    namespace: knative-serving
+    ownerReferences:
+    - apiVersion: operator.knative.dev/v1beta1
+      blockOwnerDeletion: true
+      controller: true
+      kind: KnativeServing
+      name: knative-serving
+      uid: 0ad2d391-945e-4b39-841a-1da3211311cd
+    resourceVersion: "39770"
+    uid: 9d92390a-2eef-41c4-915c-3c6c5a591f01
+  rules:
+  - apiGroups:
+    - ""
+    resourceNames:
+    - config-autoscaler
+    resources:
+    - configmaps
+    verbs:
+    - get
+    - list
+    - watch
+kind: List
+metadata:
+  resourceVersion: ""
+  selfLink: ""

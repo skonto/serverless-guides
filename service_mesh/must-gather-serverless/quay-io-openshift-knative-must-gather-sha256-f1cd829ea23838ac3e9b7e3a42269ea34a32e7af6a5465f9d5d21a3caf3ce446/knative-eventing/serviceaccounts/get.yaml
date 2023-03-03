@@ -1,0 +1,42 @@
+apiVersion: v1
+items:
+- apiVersion: v1
+  imagePullSecrets:
+  - name: builder-dockercfg-lt5nn
+  kind: ServiceAccount
+  metadata:
+    creationTimestamp: "2023-03-03T20:08:27Z"
+    name: builder
+    namespace: knative-eventing
+    resourceVersion: "38454"
+    uid: 14e97d67-9c8c-454f-bf33-4abdfb3d372d
+  secrets:
+  - name: builder-dockercfg-lt5nn
+- apiVersion: v1
+  imagePullSecrets:
+  - name: default-dockercfg-8nx2t
+  kind: ServiceAccount
+  metadata:
+    creationTimestamp: "2023-03-03T20:08:27Z"
+    name: default
+    namespace: knative-eventing
+    resourceVersion: "38449"
+    uid: 68694c44-17bf-499d-92e3-dfc5857ad4ae
+  secrets:
+  - name: default-dockercfg-8nx2t
+- apiVersion: v1
+  imagePullSecrets:
+  - name: deployer-dockercfg-qg8p7
+  kind: ServiceAccount
+  metadata:
+    creationTimestamp: "2023-03-03T20:08:27Z"
+    name: deployer
+    namespace: knative-eventing
+    resourceVersion: "38456"
+    uid: 194abf91-73b4-477e-a660-670da11322fb
+  secrets:
+  - name: deployer-dockercfg-qg8p7
+kind: List
+metadata:
+  resourceVersion: ""
+  selfLink: ""

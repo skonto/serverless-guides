@@ -1,0 +1,134 @@
+---
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2023-03-03T20:02:43Z"
+    creationTimestamp: "2023-03-03T20:02:11Z"
+    labels:
+      name: istio-operator
+    name: istio-operator-metrics
+    namespace: openshift-operators
+    resourceVersion: "34034"
+    uid: 6f9af846-f48b-4389-acbd-e9c378adc2a3
+  subsets:
+  - addresses:
+    - ip: 10.129.2.17
+      nodeName: ci-ln-4zhdf4b-72292-lw57b-worker-c-szhjg
+      targetRef:
+        kind: Pod
+        name: istio-operator-746b578f6f-h87nd
+        namespace: openshift-operators
+        uid: c9083046-3db1-4640-ac57-968d50c13a91
+    ports:
+    - name: http-metrics
+      port: 8383
+      protocol: TCP
+    - name: cr-metrics
+      port: 8686
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2023-03-03T20:02:08Z"
+    creationTimestamp: "2023-03-03T20:01:31Z"
+    labels:
+      app.kubernetes.io/component: metrics
+      name: jaeger-operator
+      operators.coreos.com/jaeger-product.openshift-operators: ""
+    name: jaeger-operator-metrics
+    namespace: openshift-operators
+    resourceVersion: "33466"
+    uid: 9536d444-c38e-4fb3-9904-34271c3db64c
+  subsets:
+  - addresses:
+    - ip: 10.129.2.15
+      nodeName: ci-ln-4zhdf4b-72292-lw57b-worker-c-szhjg
+      targetRef:
+        kind: Pod
+        name: jaeger-operator-7c8984f44c-qnjsw
+        namespace: openshift-operators
+        uid: 8167ef2b-7871-472b-971f-86cf5e74af0c
+    ports:
+    - name: https
+      port: 8443
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2023-03-03T20:02:08Z"
+    creationTimestamp: "2023-03-03T20:01:37Z"
+    labels:
+      operators.coreos.com/jaeger-product.openshift-operators: ""
+    name: jaeger-operator-service
+    namespace: openshift-operators
+    resourceVersion: "33468"
+    uid: 08ad1186-7b10-4ab9-9724-148e7cf94cee
+  subsets:
+  - addresses:
+    - ip: 10.129.2.15
+      nodeName: ci-ln-4zhdf4b-72292-lw57b-worker-c-szhjg
+      targetRef:
+        kind: Pod
+        name: jaeger-operator-7c8984f44c-qnjsw
+        namespace: openshift-operators
+        uid: 8167ef2b-7871-472b-971f-86cf5e74af0c
+    ports:
+    - name: "443"
+      port: 9443
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2023-03-03T20:02:08Z"
+    creationTimestamp: "2023-03-03T20:01:32Z"
+    labels:
+      name: jaeger-operator
+      operators.coreos.com/jaeger-product.openshift-operators: ""
+    name: jaeger-operator-webhook-service
+    namespace: openshift-operators
+    resourceVersion: "33471"
+    uid: 5b8b7d3b-56b6-487b-af00-1388d6288d27
+  subsets:
+  - addresses:
+    - ip: 10.129.2.15
+      nodeName: ci-ln-4zhdf4b-72292-lw57b-worker-c-szhjg
+      targetRef:
+        kind: Pod
+        name: jaeger-operator-7c8984f44c-qnjsw
+        namespace: openshift-operators
+        uid: 8167ef2b-7871-472b-971f-86cf5e74af0c
+    ports:
+    - port: 9443
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2023-03-03T20:02:43Z"
+    creationTimestamp: "2023-03-03T20:02:07Z"
+    name: maistra-admission-controller
+    namespace: openshift-operators
+    resourceVersion: "34038"
+    uid: f09aac9a-d58d-4ab3-82bf-279498383696
+  subsets:
+  - addresses:
+    - ip: 10.129.2.17
+      nodeName: ci-ln-4zhdf4b-72292-lw57b-worker-c-szhjg
+      targetRef:
+        kind: Pod
+        name: istio-operator-746b578f6f-h87nd
+        namespace: openshift-operators
+        uid: c9083046-3db1-4640-ac57-968d50c13a91
+    ports:
+    - name: validation
+      port: 11999
+      protocol: TCP
+kind: EndpointsList
+metadata:
+  resourceVersion: "61037"

@@ -1,0 +1,8 @@
+2023-03-03T20:03:25.241627541Z 2023/03/03 20:03:25 provider.go:129: Defaulting client-id to system:serviceaccount:istio-system:grafana
+2023-03-03T20:03:25.241627541Z 2023/03/03 20:03:25 provider.go:134: Defaulting client-secret to service account token /var/run/secrets/kubernetes.io/serviceaccount/token
+2023-03-03T20:03:25.241627541Z 2023/03/03 20:03:25 oauthproxy.go:203: mapping path "/" => upstream "http://localhost:3000/"
+2023-03-03T20:03:25.241627541Z 2023/03/03 20:03:25 oauthproxy.go:230: OAuthProxy configured for  Client ID: system:serviceaccount:istio-system:grafana
+2023-03-03T20:03:25.241627541Z 2023/03/03 20:03:25 oauthproxy.go:240: Cookie settings: name:_oauth_proxy secure(https):true httponly:true expiry:168h0m0s domain:<default> samesite: refresh:disabled
+2023-03-03T20:03:25.241627541Z 2023/03/03 20:03:25 main.go:156: using htpasswd file /etc/proxy/htpasswd/auth
+2023-03-03T20:03:25.241627541Z 2023/03/03 20:03:25 http.go:107: HTTPS: listening on [::]:3001
+2023-03-03T20:03:25.241627541Z I0303 20:03:25.240471       1 dynamic_serving_content.go:130] Starting serving::/etc/tls/private/tls.crt::/etc/tls/private/tls.key

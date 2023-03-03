@@ -1,0 +1,153 @@
+---
+apiVersion: admissionregistration.k8s.io/v1
+kind: ValidatingWebhookConfiguration
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"admissionregistration.k8s.io/v1","kind":"ValidatingWebhookConfiguration","metadata":{"labels":{"app.kubernetes.io/component":"webhook","app.kubernetes.io/name":"knative-serving","app.kubernetes.io/version":"1.5.0"},"name":"validation.webhook.serving.knative.dev"},"webhooks":[{"admissionReviewVersions":["v1","v1beta1"],"clientConfig":{"service":{"name":"webhook","namespace":"knative-serving"}},"failurePolicy":"Fail","name":"validation.webhook.serving.knative.dev","rules":[{"apiGroups":["autoscaling.internal.knative.dev","networking.internal.knative.dev","serving.knative.dev"],"apiVersions":["*"],"operations":["CREATE","UPDATE","DELETE"],"resources":["metrics","podautoscalers","certificates","ingresses","serverlessservices","configurations","revisions","routes","services"],"scope":"*"}],"sideEffects":"None","timeoutSeconds":10}]}
+  creationTimestamp: "2023-03-03T20:09:43Z"
+  generation: 12
+  labels:
+    app.kubernetes.io/component: webhook
+    app.kubernetes.io/name: knative-serving
+    app.kubernetes.io/version: 1.5.0
+  name: validation.webhook.serving.knative.dev
+  ownerReferences:
+  - apiVersion: v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: Namespace
+    name: knative-serving
+    uid: fcb3c7a3-ed6a-4771-9ad2-46d8c1d9b3f3
+  resourceVersion: "40882"
+  uid: 742ef25d-3093-4f5a-9bd4-a87f7e9a5a05
+webhooks:
+- admissionReviewVersions:
+  - v1
+  - v1beta1
+  clientConfig:
+    caBundle: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUNUakNDQWZXZ0F3SUJBZ0lSQUpvTTl5V1pyMEV2Z2dtZkpxTHRKNlV3Q2dZSUtvWkl6ajBFQXdJd1BERVUKTUJJR0ExVUVDaE1MYTI1aGRHbDJaUzVrWlhZeEpEQWlCZ05WQkFNVEczZGxZbWh2YjJzdWEyNWhkR2wyWlMxegpaWEoyYVc1bkxuTjJZekFlRncweU16QXpNRE15TURBNU5UZGFGdzB5TXpBek1UQXlNREE1TlRkYU1Ed3hGREFTCkJnTlZCQW9UQzJ0dVlYUnBkbVV1WkdWMk1TUXdJZ1lEVlFRREV4dDNaV0pvYjI5ckxtdHVZWFJwZG1VdGMyVnkKZG1sdVp5NXpkbU13V1RBVEJnY3Foa2pPUFFJQkJnZ3Foa2pPUFFNQkJ3TkNBQVNMdlNSSk5yYTZnZDVMUVN5MwpNaUNxaVlwZ1hWNTlBNlJvSi8rbjlVWU1VTjQ2MzYzSDJjMGpHdXdjcmZxazJXMlUvZ1dqV2lqajBTdzF5akFQCkMvK2xvNEhYTUlIVU1BNEdBMVVkRHdFQi93UUVBd0lDaERBZEJnTlZIU1VFRmpBVUJnZ3JCZ0VGQlFjREFRWUkKS3dZQkJRVUhBd0l3RHdZRFZSMFRBUUgvQkFVd0F3RUIvekFkQmdOVkhRNEVGZ1FVclVjUUhubW1xVmd3NktzRAorNHpsTStDVWNWZ3djd1lEVlIwUkJHd3dhb0lIZDJWaWFHOXZhNElYZDJWaWFHOXZheTVyYm1GMGFYWmxMWE5sCmNuWnBibWVDRzNkbFltaHZiMnN1YTI1aGRHbDJaUzF6WlhKMmFXNW5Mbk4yWTRJcGQyVmlhRzl2YXk1cmJtRjAKYVhabExYTmxjblpwYm1jdWMzWmpMbU5zZFhOMFpYSXViRzlqWVd3d0NnWUlLb1pJemowRUF3SURSd0F3UkFJZwpVNWFLR002bGFIWGVoN1lFbjEvNnk0ek5oNjBEcEk3QTUzeFdwWENBa3ZJQ0lHanpDYVV5aGVnSUlCejBubzF2CklDNy9laUpwV3piR0Q0Qlcrcm80cjFGdQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg==
+    service:
+      name: webhook
+      namespace: knative-serving
+      path: /resource-validation
+      port: 443
+  failurePolicy: Fail
+  matchPolicy: Equivalent
+  name: validation.webhook.serving.knative.dev
+  namespaceSelector:
+    matchExpressions:
+    - key: webhooks.knative.dev/exclude
+      operator: DoesNotExist
+  objectSelector: {}
+  rules:
+  - apiGroups:
+    - autoscaling.internal.knative.dev
+    apiVersions:
+    - v1alpha1
+    operations:
+    - CREATE
+    - UPDATE
+    - DELETE
+    resources:
+    - metrics
+    - metrics/status
+    scope: '*'
+  - apiGroups:
+    - autoscaling.internal.knative.dev
+    apiVersions:
+    - v1alpha1
+    operations:
+    - CREATE
+    - UPDATE
+    - DELETE
+    resources:
+    - podautoscalers
+    - podautoscalers/status
+    scope: '*'
+  - apiGroups:
+    - networking.internal.knative.dev
+    apiVersions:
+    - v1alpha1
+    operations:
+    - CREATE
+    - UPDATE
+    - DELETE
+    resources:
+    - certificates
+    - certificates/status
+    scope: '*'
+  - apiGroups:
+    - networking.internal.knative.dev
+    apiVersions:
+    - v1alpha1
+    operations:
+    - CREATE
+    - UPDATE
+    - DELETE
+    resources:
+    - ingresses
+    - ingresses/status
+    scope: '*'
+  - apiGroups:
+    - networking.internal.knative.dev
+    apiVersions:
+    - v1alpha1
+    operations:
+    - CREATE
+    - UPDATE
+    - DELETE
+    resources:
+    - serverlessservices
+    - serverlessservices/status
+    scope: '*'
+  - apiGroups:
+    - serving.knative.dev
+    apiVersions:
+    - v1
+    operations:
+    - CREATE
+    - UPDATE
+    - DELETE
+    resources:
+    - configurations
+    - configurations/status
+    scope: '*'
+  - apiGroups:
+    - serving.knative.dev
+    apiVersions:
+    - v1
+    operations:
+    - CREATE
+    - UPDATE
+    - DELETE
+    resources:
+    - revisions
+    - revisions/status
+    scope: '*'
+  - apiGroups:
+    - serving.knative.dev
+    apiVersions:
+    - v1
+    operations:
+    - CREATE
+    - UPDATE
+    - DELETE
+    resources:
+    - routes
+    - routes/status
+    scope: '*'
+  - apiGroups:
+    - serving.knative.dev
+    apiVersions:
+    - v1
+    operations:
+    - CREATE
+    - UPDATE
+    - DELETE
+    resources:
+    - services
+    - services/status
+    scope: '*'
+  sideEffects: None
+  timeoutSeconds: 10

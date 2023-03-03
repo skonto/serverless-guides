@@ -1,0 +1,349 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    alm-examples: |-
+      [
+        {
+          "apiVersion": "jaegertracing.io/v1",
+          "kind": "Jaeger",
+          "metadata": {
+            "name": "jaeger-all-in-one-inmemory"
+          },
+          "spec": {
+            "strategy": "allInOne"
+          },
+          "status":{
+            "phase":"Running"
+          }
+        }
+      ]
+    capabilities: Deep Insights
+    categories: Logging & Tracing
+    certified: "false"
+    containerImage: registry.redhat.io/rhosdt/jaeger-rhel8-operator@sha256:454a40d442bd9fc9c5a0fc1d55cb9f51a5b360a034be72d71f7e961c68b9e985
+    createdAt: "2022-11-15 14:41:05.521406"
+    description: Provides tracing, monitoring and troubleshooting for microservices-based
+      distributed systems
+    k8s.ovn.org/pod-networks: '{"default":{"ip_addresses":["10.129.2.15/23"],"mac_address":"0a:58:0a:81:02:0f","gateway_ips":["10.129.2.1"],"ip_address":"10.129.2.15/23","gateway_ip":"10.129.2.1"}}'
+    k8s.v1.cni.cncf.io/network-status: |-
+      [{
+          "name": "ovn-kubernetes",
+          "interface": "eth0",
+          "ips": [
+              "10.129.2.15"
+          ],
+          "mac": "0a:58:0a:81:02:0f",
+          "default": true,
+          "dns": {}
+      }]
+    k8s.v1.cni.cncf.io/networks-status: |-
+      [{
+          "name": "ovn-kubernetes",
+          "interface": "eth0",
+          "ips": [
+              "10.129.2.15"
+          ],
+          "mac": "0a:58:0a:81:02:0f",
+          "default": true,
+          "dns": {}
+      }]
+    olm.operatorGroup: global-operators
+    olm.operatorNamespace: openshift-operators
+    olm.skipRange: '>=1.13.0 <1.39.0-3'
+    olm.targetNamespaces: ""
+    olmcahash: 13a260e8cd024f7bb2acb887c0c3a20c28548c59870742ee9c417a579863183a
+    openshift.io/scc: restricted-v2
+    operatorframework.io/cluster-monitoring: "true"
+    operatorframework.io/properties: '{"properties":[{"type":"olm.gvk","value":{"group":"jaegertracing.io","kind":"Jaeger","version":"v1"}},{"type":"olm.package","value":{"packageName":"jaeger-product","version":"1.39.0-3"}}]}'
+    operatorframework.io/suggested-namespace: openshift-distributed-tracing
+    operators.openshift.io/infrastructure-features: '["disconnected"]'
+    operators.openshift.io/valid-subscription: '["OpenShift Container Platform", "OpenShift
+      Platform Plus"]'
+    repository: https://github.com/jaegertracing/jaeger-operator
+    seccomp.security.alpha.kubernetes.io/pod: runtime/default
+    support: Red Hat
+  creationTimestamp: "2023-03-03T20:01:38Z"
+  generateName: jaeger-operator-7c8984f44c-
+  labels:
+    name: jaeger-operator
+    pod-template-hash: 7c8984f44c
+  name: jaeger-operator-7c8984f44c-qnjsw
+  namespace: openshift-operators
+  ownerReferences:
+  - apiVersion: apps/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: ReplicaSet
+    name: jaeger-operator-7c8984f44c
+    uid: 5c511167-f51e-41e6-88cb-e7d95a477820
+  resourceVersion: "33463"
+  uid: 8167ef2b-7871-472b-971f-86cf5e74af0c
+spec:
+  containers:
+  - args:
+    - start
+    - --health-probe-bind-address=:8081
+    - --leader-elect
+    - --jaeger-agent-image=registry.redhat.io/rhosdt/jaeger-agent-rhel8@sha256:3e1ba1ee591592252d89de9fefcda9827994046a85f66fc4462866f7f23c590a
+    - --jaeger-query-image=registry.redhat.io/rhosdt/jaeger-query-rhel8@sha256:faed0ead147c051ec26fa4ed71efb6d806384ae4f3b689b5a4e277c9aecf1172
+    - --jaeger-collector-image=registry.redhat.io/rhosdt/jaeger-collector-rhel8@sha256:e04094d1c23e7f99d2c24078c85534d16740b240e75c3d36e53a7f24a6814913
+    - --jaeger-ingester-image=registry.redhat.io/rhosdt/jaeger-ingester-rhel8@sha256:bd65c26c603c5476313ab74eae575456f8d6c1d57e20baf568d49807ddd75987
+    - --jaeger-all-in-one-image=registry.redhat.io/rhosdt/jaeger-all-in-one-rhel8@sha256:833b64936a1035187fef2b26c439900af33f5ad8678e117f866987801b1bfb88
+    - --jaeger-es-index-cleaner-image=registry.redhat.io/rhosdt/jaeger-es-index-cleaner-rhel8@sha256:0065bf16da7fdf11c018388a4eb33349610129ea0465491d2bb6b24c275621dc
+    - --jaeger-es-rollover-image=registry.redhat.io/rhosdt/jaeger-es-rollover-rhel8@sha256:a6a8798b7cb70972089a0cfe258d33a262f1108db528ea3183ff78286db99bd9
+    - --openshift-oauth-proxy-image=registry.redhat.io/openshift4/ose-oauth-proxy:latest
+    - --openshift-oauth-proxy-imagestream-ns=openshift
+    - --openshift-oauth-proxy-imagestream-name=oauth-proxy
+    - --documentation-url=https://access.redhat.com/documentation/en-us/openshift_container_platform/4.9/html/distributed_tracing/index
+    env:
+    - name: WATCH_NAMESPACE
+      valueFrom:
+        fieldRef:
+          apiVersion: v1
+          fieldPath: metadata.annotations['olm.targetNamespaces']
+    - name: POD_NAMESPACE
+      valueFrom:
+        fieldRef:
+          apiVersion: v1
+          fieldPath: metadata.namespace
+    - name: OPERATOR_NAME
+      value: jaeger-operator
+    - name: RELATED_IMAGE_JAEGER_AGENT
+      value: registry.redhat.io/rhosdt/jaeger-agent-rhel8@sha256:3e1ba1ee591592252d89de9fefcda9827994046a85f66fc4462866f7f23c590a
+    - name: RELATED_IMAGE_JAEGER_QUERY
+      value: registry.redhat.io/rhosdt/jaeger-query-rhel8@sha256:faed0ead147c051ec26fa4ed71efb6d806384ae4f3b689b5a4e277c9aecf1172
+    - name: RELATED_IMAGE_JAEGER_COLLECTOR
+      value: registry.redhat.io/rhosdt/jaeger-collector-rhel8@sha256:e04094d1c23e7f99d2c24078c85534d16740b240e75c3d36e53a7f24a6814913
+    - name: RELATED_IMAGE_JAEGER_INGESTER
+      value: registry.redhat.io/rhosdt/jaeger-ingester-rhel8@sha256:bd65c26c603c5476313ab74eae575456f8d6c1d57e20baf568d49807ddd75987
+    - name: RELATED_IMAGE_JAEGER_ALL_IN_ONE
+      value: registry.redhat.io/rhosdt/jaeger-all-in-one-rhel8@sha256:833b64936a1035187fef2b26c439900af33f5ad8678e117f866987801b1bfb88
+    - name: RELATED_IMAGE_JAEGER_ES_INDEX_CLEANER
+      value: registry.redhat.io/rhosdt/jaeger-es-index-cleaner-rhel8@sha256:0065bf16da7fdf11c018388a4eb33349610129ea0465491d2bb6b24c275621dc
+    - name: RELATED_IMAGE_JAEGER_ES_ROLLOVER
+      value: registry.redhat.io/rhosdt/jaeger-es-rollover-rhel8@sha256:a6a8798b7cb70972089a0cfe258d33a262f1108db528ea3183ff78286db99bd9
+    - name: POD_NAME
+      valueFrom:
+        fieldRef:
+          apiVersion: v1
+          fieldPath: metadata.name
+    - name: OPERATOR_CONDITION_NAME
+      value: jaeger-operator.v1.39.0-3
+    image: registry.redhat.io/rhosdt/jaeger-rhel8-operator@sha256:454a40d442bd9fc9c5a0fc1d55cb9f51a5b360a034be72d71f7e961c68b9e985
+    imagePullPolicy: Always
+    livenessProbe:
+      failureThreshold: 3
+      httpGet:
+        path: /healthz
+        port: 8081
+        scheme: HTTP
+      initialDelaySeconds: 15
+      periodSeconds: 20
+      successThreshold: 1
+      timeoutSeconds: 1
+    name: jaeger-operator
+    ports:
+    - containerPort: 9443
+      name: webhook-server
+      protocol: TCP
+    - containerPort: 8383
+      name: http-metrics
+      protocol: TCP
+    readinessProbe:
+      failureThreshold: 3
+      httpGet:
+        path: /readyz
+        port: 8081
+        scheme: HTTP
+      initialDelaySeconds: 5
+      periodSeconds: 10
+      successThreshold: 1
+      timeoutSeconds: 1
+    resources:
+      limits:
+        cpu: 500m
+        memory: 512Mi
+      requests:
+        cpu: 100m
+        memory: 128Mi
+    securityContext:
+      allowPrivilegeEscalation: false
+      capabilities:
+        drop:
+        - ALL
+      runAsUser: 1000410000
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /tmp/k8s-webhook-server/serving-certs
+      name: webhook-cert
+    - mountPath: /apiserver.local.config/certificates
+      name: apiservice-cert
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-9dll8
+      readOnly: true
+  - args:
+    - --secure-listen-address=0.0.0.0:8443
+    - --upstream=http://127.0.0.1:8383/
+    - --logtostderr=true
+    - --v=0
+    env:
+    - name: OPERATOR_CONDITION_NAME
+      value: jaeger-operator.v1.39.0-3
+    image: registry.redhat.io/openshift4/ose-kube-rbac-proxy@sha256:f7993b7a5458679621f6686bdc4ab818659e051ef6cdf6a8e107f627adf5f178
+    imagePullPolicy: IfNotPresent
+    name: kube-rbac-proxy
+    ports:
+    - containerPort: 8443
+      name: https
+      protocol: TCP
+    resources:
+      limits:
+        cpu: 500m
+        memory: 128Mi
+      requests:
+        cpu: 5m
+        memory: 64Mi
+    securityContext:
+      allowPrivilegeEscalation: false
+      capabilities:
+        drop:
+        - ALL
+      runAsUser: 1000410000
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /apiserver.local.config/certificates
+      name: apiservice-cert
+    - mountPath: /tmp/k8s-webhook-server/serving-certs
+      name: webhook-cert
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-9dll8
+      readOnly: true
+  dnsPolicy: ClusterFirst
+  enableServiceLinks: true
+  imagePullSecrets:
+  - name: jaeger-operator-dockercfg-dhgf9
+  nodeName: ci-ln-4zhdf4b-72292-lw57b-worker-c-szhjg
+  preemptionPolicy: PreemptLowerPriority
+  priority: 0
+  restartPolicy: Always
+  schedulerName: default-scheduler
+  securityContext:
+    fsGroup: 1000410000
+    runAsNonRoot: true
+    seLinuxOptions:
+      level: s0:c20,c15
+    seccompProfile:
+      type: RuntimeDefault
+  serviceAccount: jaeger-operator
+  serviceAccountName: jaeger-operator
+  terminationGracePeriodSeconds: 10
+  tolerations:
+  - effect: NoExecute
+    key: node.kubernetes.io/not-ready
+    operator: Exists
+    tolerationSeconds: 300
+  - effect: NoExecute
+    key: node.kubernetes.io/unreachable
+    operator: Exists
+    tolerationSeconds: 300
+  - effect: NoSchedule
+    key: node.kubernetes.io/memory-pressure
+    operator: Exists
+  volumes:
+  - name: cert
+    secret:
+      defaultMode: 420
+      secretName: jaeger-operator-service-cert
+  - name: apiservice-cert
+    secret:
+      defaultMode: 420
+      items:
+      - key: tls.crt
+        path: apiserver.crt
+      - key: tls.key
+        path: apiserver.key
+      secretName: jaeger-operator-service-cert
+  - name: webhook-cert
+    secret:
+      defaultMode: 420
+      items:
+      - key: tls.crt
+        path: tls.crt
+      - key: tls.key
+        path: tls.key
+      secretName: jaeger-operator-service-cert
+  - name: kube-api-access-9dll8
+    projected:
+      defaultMode: 420
+      sources:
+      - serviceAccountToken:
+          expirationSeconds: 3607
+          path: token
+      - configMap:
+          items:
+          - key: ca.crt
+            path: ca.crt
+          name: kube-root-ca.crt
+      - downwardAPI:
+          items:
+          - fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.namespace
+            path: namespace
+      - configMap:
+          items:
+          - key: service-ca.crt
+            path: service-ca.crt
+          name: openshift-service-ca.crt
+status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-03T20:01:38Z"
+    status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-03T20:02:08Z"
+    status: "True"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-03T20:02:08Z"
+    status: "True"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-03T20:01:38Z"
+    status: "True"
+    type: PodScheduled
+  containerStatuses:
+  - containerID: cri-o://623263b927dbab366806106a3c2aece4735bc44945f4f036988cad7c9e19625b
+    image: registry.redhat.io/rhosdt/jaeger-rhel8-operator@sha256:454a40d442bd9fc9c5a0fc1d55cb9f51a5b360a034be72d71f7e961c68b9e985
+    imageID: registry.redhat.io/rhosdt/jaeger-rhel8-operator@sha256:454a40d442bd9fc9c5a0fc1d55cb9f51a5b360a034be72d71f7e961c68b9e985
+    lastState: {}
+    name: jaeger-operator
+    ready: true
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2023-03-03T20:02:02Z"
+  - containerID: cri-o://926b1e389257806bb72c70276506b6dd33ce683bf977c83bbeee6e0af0d3fb4c
+    image: registry.redhat.io/openshift4/ose-kube-rbac-proxy@sha256:f7993b7a5458679621f6686bdc4ab818659e051ef6cdf6a8e107f627adf5f178
+    imageID: registry.redhat.io/openshift4/ose-kube-rbac-proxy@sha256:1f0388e5fb4c96efbb2dacb5791aceee5d0df98378ed5f7c2b59c3307f3bda17
+    lastState: {}
+    name: kube-rbac-proxy
+    ready: true
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2023-03-03T20:02:07Z"
+  hostIP: 10.0.128.4
+  phase: Running
+  podIP: 10.129.2.15
+  podIPs:
+  - ip: 10.129.2.15
+  qosClass: Burstable
+  startTime: "2023-03-03T20:01:38Z"

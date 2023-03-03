@@ -1,0 +1,40 @@
+2023-03-03T20:09:53.967125870Z 2023/03/03 20:09:53 Registering 4 clients
+2023-03-03T20:09:53.967125870Z 2023/03/03 20:09:53 Registering 5 informer factories
+2023-03-03T20:09:53.967125870Z 2023/03/03 20:09:53 Registering 5 informers
+2023-03-03T20:09:53.967125870Z 2023/03/03 20:09:53 Registering 1 filtered informers
+2023-03-03T20:09:53.967125870Z 2023/03/03 20:09:53 Registering 2 controllers
+2023-03-03T20:09:53.967357177Z 2023/03/03 20:09:53 Failed to get k8s version Get "https://172.30.0.1:443/version": dial tcp 172.30.0.1:443: connect: connection refused
+2023-03-03T20:09:54.967962026Z 2023/03/03 20:09:54 Failed to get k8s version Get "https://172.30.0.1:443/version": dial tcp 172.30.0.1:443: connect: connection refused
+2023-03-03T20:09:55.968264401Z 2023/03/03 20:09:55 Failed to get k8s version Get "https://172.30.0.1:443/version": dial tcp 172.30.0.1:443: connect: connection refused
+2023-03-03T20:09:56.968444812Z 2023/03/03 20:09:56 Failed to get k8s version Get "https://172.30.0.1:443/version": dial tcp 172.30.0.1:443: connect: connection refused
+2023-03-03T20:09:57.968215962Z 2023/03/03 20:09:57 Failed to get k8s version Get "https://172.30.0.1:443/version": dial tcp 172.30.0.1:443: connect: connection refused
+2023-03-03T20:09:58.968272928Z 2023/03/03 20:09:58 Failed to get k8s version Get "https://172.30.0.1:443/version": dial tcp 172.30.0.1:443: connect: connection refused
+2023-03-03T20:09:59.972145241Z 2023/03/03 20:09:59 Failed to get k8s version Get "https://172.30.0.1:443/version": dial tcp 172.30.0.1:443: connect: connection refused
+2023-03-03T20:10:00.968100321Z 2023/03/03 20:10:00 Failed to get k8s version Get "https://172.30.0.1:443/version": dial tcp 172.30.0.1:443: connect: connection refused
+2023-03-03T20:10:01.968400527Z 2023/03/03 20:10:01 Failed to get k8s version Get "https://172.30.0.1:443/version": dial tcp 172.30.0.1:443: connect: connection refused
+2023-03-03T20:10:02.968179372Z 2023/03/03 20:10:02 Failed to get k8s version Get "https://172.30.0.1:443/version": dial tcp 172.30.0.1:443: connect: connection refused
+2023-03-03T20:10:03.968431834Z 2023/03/03 20:10:03 Failed to get k8s version Get "https://172.30.0.1:443/version": dial tcp 172.30.0.1:443: connect: connection refused
+2023-03-03T20:10:04.967868026Z 2023/03/03 20:10:04 Failed to get k8s version Get "https://172.30.0.1:443/version": dial tcp 172.30.0.1:443: connect: connection refused
+2023-03-03T20:10:05.968077709Z 2023/03/03 20:10:05 Failed to get k8s version Get "https://172.30.0.1:443/version": dial tcp 172.30.0.1:443: connect: connection refused
+2023-03-03T20:10:06.968183252Z 2023/03/03 20:10:06 Failed to get k8s version Get "https://172.30.0.1:443/version": dial tcp 172.30.0.1:443: connect: connection refused
+2023-03-03T20:10:07.968087233Z 2023/03/03 20:10:07 Failed to get k8s version Get "https://172.30.0.1:443/version": dial tcp 172.30.0.1:443: connect: connection refused
+2023-03-03T20:10:08.968034920Z 2023/03/03 20:10:08 Failed to get k8s version Get "https://172.30.0.1:443/version": dial tcp 172.30.0.1:443: connect: connection refused
+2023-03-03T20:10:09.968236546Z 2023/03/03 20:10:09 Failed to get k8s version Get "https://172.30.0.1:443/version": dial tcp 172.30.0.1:443: connect: connection refused
+2023-03-03T20:10:10.968083035Z 2023/03/03 20:10:10 Failed to get k8s version Get "https://172.30.0.1:443/version": dial tcp 172.30.0.1:443: connect: connection refused
+2023-03-03T20:10:11.968218687Z 2023/03/03 20:10:11 Failed to get k8s version Get "https://172.30.0.1:443/version": dial tcp 172.30.0.1:443: connect: connection refused
+2023-03-03T20:10:12.967893224Z 2023/03/03 20:10:12 Failed to get k8s version Get "https://172.30.0.1:443/version": dial tcp 172.30.0.1:443: connect: connection refused
+2023-03-03T20:10:13.968716487Z 2023/03/03 20:10:13 Failed to get k8s version Get "https://172.30.0.1:443/version": dial tcp 172.30.0.1:443: connect: connection refused
+2023-03-03T20:10:14.984043653Z {"severity":"INFO","timestamp":"2023-03-03T20:10:14.983905716Z","caller":"logging/config.go:80","message":"Fetch GitHub commit ID from kodata failed","error":"\"KO_DATA_PATH\" does not exist or is empty"}
+2023-03-03T20:10:14.984743792Z {"severity":"INFO","timestamp":"2023-03-03T20:10:14.984140788Z","logger":"autoscaler","caller":"profiling/server.go:64","message":"Profiling enabled: false"}
+2023-03-03T20:10:14.994319584Z {"severity":"INFO","timestamp":"2023-03-03T20:10:14.99425015Z","logger":"autoscaler","caller":"kpa/controller.go:75","message":"Setting up ConfigMap receivers"}
+2023-03-03T20:10:14.994761719Z {"severity":"INFO","timestamp":"2023-03-03T20:10:14.994385235Z","logger":"autoscaler","caller":"kpa/controller.go:89","message":"Setting up KPA-Class event handlers"}
+2023-03-03T20:10:15.210600250Z {"severity":"INFO","timestamp":"2023-03-03T20:10:15.210494105Z","logger":"autoscaler","caller":"autoscaler/main.go:177","message":"Running with Standard leader election"}
+2023-03-03T20:10:15.211326174Z {"severity":"INFO","timestamp":"2023-03-03T20:10:15.211254253Z","logger":"autoscaler","caller":"leaderelection/context.go:149","message":"autoscaler-bucket-00-of-01 will run in leader-elected mode with id \"autoscaler-67df785744-m8k8c_10.128.2.22\""}
+2023-03-03T20:10:15.211326174Z {"severity":"INFO","timestamp":"2023-03-03T20:10:15.211310099Z","logger":"autoscaler","caller":"controller/controller.go:486","message":"Starting controller and workers","knative.dev/controller":"knative.dev.serving.pkg.reconciler.metric.reconciler","knative.dev/kind":"autoscaling.internal.knative.dev.Metric"}
+2023-03-03T20:10:15.211393254Z {"severity":"INFO","timestamp":"2023-03-03T20:10:15.211325997Z","logger":"autoscaler","caller":"controller/controller.go:496","message":"Started workers","knative.dev/controller":"knative.dev.serving.pkg.reconciler.metric.reconciler","knative.dev/kind":"autoscaling.internal.knative.dev.Metric"}
+2023-03-03T20:10:15.211393254Z {"severity":"INFO","timestamp":"2023-03-03T20:10:15.211348325Z","logger":"autoscaler.stats-websocket-server","caller":"statserver/server.go:96","message":"Starting","address":":8080"}
+2023-03-03T20:10:15.211534561Z {"severity":"INFO","timestamp":"2023-03-03T20:10:15.211474596Z","logger":"autoscaler","caller":"leaderelection/context.go:149","message":"autoscaler-bucket-00-of-01 will run in leader-elected mode with id \"autoscaler-67df785744-m8k8c_10.128.2.22\""}
+2023-03-03T20:10:15.211534561Z {"severity":"INFO","timestamp":"2023-03-03T20:10:15.211521912Z","logger":"autoscaler","caller":"controller/controller.go:486","message":"Starting controller and workers","knative.dev/controller":"knative.dev.serving.pkg.reconciler.autoscaling.kpa.Reconciler","knative.dev/kind":"autoscaling.internal.knative.dev.PodAutoscaler"}
+2023-03-03T20:10:15.211575856Z {"severity":"INFO","timestamp":"2023-03-03T20:10:15.211534202Z","logger":"autoscaler","caller":"controller/controller.go:496","message":"Started workers","knative.dev/controller":"knative.dev.serving.pkg.reconciler.autoscaling.kpa.Reconciler","knative.dev/kind":"autoscaling.internal.knative.dev.PodAutoscaler"}
+2023-03-03T20:10:15.211619233Z I0303 20:10:15.211595       1 leaderelection.go:248] attempting to acquire leader lease knative-serving/autoscaler-bucket-00-of-01...
+2023-03-03T20:10:15.211925082Z I0303 20:10:15.211875       1 leaderelection.go:248] attempting to acquire leader lease knative-serving/autoscaler-bucket-00-of-01...

@@ -1,0 +1,8 @@
+Name:         knativeeventings.operator.knative.dev-v1beta1-crdview
+Labels:       olm.opgroup.permissions/aggregate-to-e7e16f558a6aac4c-view=true
+              rbac.authorization.k8s.io/aggregate-to-view=true
+Annotations:  <none>
+PolicyRule:
+  Resources                                       Non-Resource URLs  Resource Names                           Verbs
+  ---------                                       -----------------  --------------                           -----
+  customresourcedefinitions.apiextensions.k8s.io  []                 [knativeeventings.operator.knative.dev]  [get]

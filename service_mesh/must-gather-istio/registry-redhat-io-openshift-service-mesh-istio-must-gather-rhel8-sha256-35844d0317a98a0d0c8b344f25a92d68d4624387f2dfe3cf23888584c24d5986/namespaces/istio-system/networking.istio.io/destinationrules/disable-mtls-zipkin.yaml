@@ -1,0 +1,38 @@
+---
+apiVersion: networking.istio.io/v1beta1
+kind: DestinationRule
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"networking.istio.io/v1beta1","kind":"DestinationRule","metadata":{"annotations":{"maistra.io/mesh-generation":"2.3.1-1-2"},"labels":{"app":"jaeger","app.kubernetes.io/component":"tracing","app.kubernetes.io/instance":"istio-system","app.kubernetes.io/managed-by":"maistra-istio-operator","app.kubernetes.io/name":"tracing","app.kubernetes.io/part-of":"istio","app.kubernetes.io/version":"2.3.1-1-2","maistra-version":"2.1.6","maistra.io/owner":"istio-system","maistra.io/owner-name":"basic","release":"istio"},"name":"disable-mtls-zipkin","namespace":"istio-system","ownerReferences":[{"apiVersion":"maistra.io/v2","blockOwnerDeletion":true,"controller":true,"kind":"ServiceMeshControlPlane","name":"basic","uid":"0c79eb74-854c-4f98-85c6-5955e78fd93e"}]},"spec":{"host":"zipkin","trafficPolicy":{"tls":{"mode":"DISABLE"}}}}
+    maistra.io/mesh-generation: 2.3.1-1-2
+  creationTimestamp: "2023-03-03T20:03:20Z"
+  generation: 1
+  labels:
+    app: jaeger
+    app.kubernetes.io/component: tracing
+    app.kubernetes.io/instance: istio-system
+    app.kubernetes.io/managed-by: maistra-istio-operator
+    app.kubernetes.io/name: tracing
+    app.kubernetes.io/part-of: istio
+    app.kubernetes.io/version: 2.3.1-1-2
+    maistra-version: 2.1.6
+    maistra.io/owner: istio-system
+    maistra.io/owner-name: basic
+    release: istio
+  name: disable-mtls-zipkin
+  namespace: istio-system
+  ownerReferences:
+  - apiVersion: maistra.io/v2
+    blockOwnerDeletion: true
+    controller: true
+    kind: ServiceMeshControlPlane
+    name: basic
+    uid: 0c79eb74-854c-4f98-85c6-5955e78fd93e
+  resourceVersion: "34818"
+  uid: 21ab7b53-224a-4f4b-afb9-2bbd5ccaeef8
+spec:
+  host: zipkin
+  trafficPolicy:
+    tls:
+      mode: DISABLE

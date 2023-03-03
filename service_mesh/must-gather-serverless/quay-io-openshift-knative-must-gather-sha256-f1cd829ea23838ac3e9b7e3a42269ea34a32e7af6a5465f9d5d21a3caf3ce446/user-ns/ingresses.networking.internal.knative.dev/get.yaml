@@ -1,0 +1,84 @@
+apiVersion: v1
+items:
+- apiVersion: networking.internal.knative.dev/v1alpha1
+  kind: Ingress
+  metadata:
+    annotations:
+      networking.internal.knative.dev/rollout: '{"configurations":[{"configurationName":"helloworld-go","percent":100,"revisions":[{"revisionName":"helloworld-go-00001","percent":100}],"stepParams":{}}]}'
+      networking.knative.dev/ingress.class: istio.ingress.networking.knative.dev
+      serving.knative.dev/creator: system:admin
+      serving.knative.dev/lastModifier: system:admin
+      serving.knative.openshift.io/enablePassthrough: "true"
+    creationTimestamp: "2023-03-03T20:12:09Z"
+    finalizers:
+    - ocp-ingress
+    - ingresses.networking.internal.knative.dev
+    generation: 1
+    labels:
+      serving.knative.dev/route: helloworld-go
+      serving.knative.dev/routeNamespace: user-ns
+      serving.knative.dev/service: helloworld-go
+    name: helloworld-go
+    namespace: user-ns
+    ownerReferences:
+    - apiVersion: serving.knative.dev/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Route
+      name: helloworld-go
+      uid: cc382a7b-a535-4792-bde8-f9be2865b474
+    resourceVersion: "42049"
+    uid: d2ba8638-1c3e-4aad-a540-4cadff8e1f9a
+  spec:
+    httpOption: Enabled
+    rules:
+    - hosts:
+      - helloworld-go.user-ns
+      - helloworld-go.user-ns.svc
+      - helloworld-go.user-ns.svc.cluster.local
+      http:
+        paths:
+        - splits:
+          - appendHeaders:
+              Knative-Serving-Namespace: user-ns
+              Knative-Serving-Revision: helloworld-go-00001
+            percent: 100
+            serviceName: helloworld-go-00001
+            serviceNamespace: user-ns
+            servicePort: 80
+      visibility: ClusterLocal
+    - hosts:
+      - helloworld-go-user-ns.apps.ci-ln-4zhdf4b-72292.origin-ci-int-gce.dev.rhcloud.com
+      http:
+        paths:
+        - splits:
+          - appendHeaders:
+              Knative-Serving-Namespace: user-ns
+              Knative-Serving-Revision: helloworld-go-00001
+            percent: 100
+            serviceName: helloworld-go-00001
+            serviceNamespace: user-ns
+            servicePort: 80
+      visibility: ExternalIP
+  status:
+    conditions:
+    - lastTransitionTime: "2023-03-03T20:12:09Z"
+      status: "True"
+      type: LoadBalancerReady
+    - lastTransitionTime: "2023-03-03T20:12:09Z"
+      status: "True"
+      type: NetworkConfigured
+    - lastTransitionTime: "2023-03-03T20:12:09Z"
+      status: "True"
+      type: Ready
+    observedGeneration: 1
+    privateLoadBalancer:
+      ingress:
+      - domainInternal: knative-local-gateway.istio-system.svc.cluster.local
+    publicLoadBalancer:
+      ingress:
+      - domainInternal: istio-ingressgateway.istio-system.svc.cluster.local
+kind: List
+metadata:
+  resourceVersion: ""
+  selfLink: ""

@@ -1,0 +1,677 @@
+---
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"v1","kind":"Service","metadata":{"labels":{"app":"activator","app.kubernetes.io/component":"activator","app.kubernetes.io/name":"knative-serving","app.kubernetes.io/version":"1.5.0"},"name":"activator-service","namespace":"knative-serving","ownerReferences":[{"apiVersion":"operator.knative.dev/v1beta1","blockOwnerDeletion":true,"controller":true,"kind":"KnativeServing","name":"knative-serving","uid":"0ad2d391-945e-4b39-841a-1da3211311cd"}]},"spec":{"ports":[{"name":"http-metrics","port":9090,"targetPort":9090},{"name":"http-profiling","port":8008,"targetPort":8008},{"name":"http","port":80,"targetPort":8012},{"name":"http2","port":81,"targetPort":8013},{"name":"https","port":443,"targetPort":8112}],"selector":{"app":"activator"},"type":"ClusterIP"}}
+    creationTimestamp: "2023-03-03T20:09:38Z"
+    labels:
+      app: activator
+      app.kubernetes.io/component: activator
+      app.kubernetes.io/name: knative-serving
+      app.kubernetes.io/version: 1.5.0
+    name: activator-service
+    namespace: knative-serving
+    ownerReferences:
+    - apiVersion: operator.knative.dev/v1beta1
+      blockOwnerDeletion: true
+      controller: true
+      kind: KnativeServing
+      name: knative-serving
+      uid: 0ad2d391-945e-4b39-841a-1da3211311cd
+    resourceVersion: "39978"
+    uid: 85b98ef8-65b0-451b-96f0-16b0b681009c
+  spec:
+    clusterIP: 172.30.224.176
+    clusterIPs:
+    - 172.30.224.176
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - name: http-metrics
+      port: 9090
+      protocol: TCP
+      targetPort: 9090
+    - name: http-profiling
+      port: 8008
+      protocol: TCP
+      targetPort: 8008
+    - name: http
+      port: 80
+      protocol: TCP
+      targetPort: 8012
+    - name: http2
+      port: 81
+      protocol: TCP
+      targetPort: 8013
+    - name: https
+      port: 443
+      protocol: TCP
+      targetPort: 8112
+    selector:
+      app: activator
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"v1","kind":"Service","metadata":{"annotations":{"service.beta.openshift.io/serving-cert-secret-name":"activator-sm-service-tls"},"creationTimestamp":null,"labels":{"name":"activator-sm-service"},"name":"activator-sm-service","namespace":"knative-serving","ownerReferences":[{"apiVersion":"operator.knative.dev/v1beta1","blockOwnerDeletion":true,"controller":true,"kind":"KnativeServing","name":"knative-serving","uid":"0ad2d391-945e-4b39-841a-1da3211311cd"}]},"spec":{"ports":[{"name":"https","port":8444,"targetPort":8444}],"selector":{"app":"activator"}},"status":{"loadBalancer":{}}}
+      service.alpha.openshift.io/serving-cert-signed-by: openshift-service-serving-signer@1677872198
+      service.beta.openshift.io/serving-cert-secret-name: activator-sm-service-tls
+      service.beta.openshift.io/serving-cert-signed-by: openshift-service-serving-signer@1677872198
+    creationTimestamp: "2023-03-03T20:09:42Z"
+    labels:
+      name: activator-sm-service
+    name: activator-sm-service
+    namespace: knative-serving
+    ownerReferences:
+    - apiVersion: operator.knative.dev/v1beta1
+      blockOwnerDeletion: true
+      controller: true
+      kind: KnativeServing
+      name: knative-serving
+      uid: 0ad2d391-945e-4b39-841a-1da3211311cd
+    resourceVersion: "40120"
+    uid: 2f6a5abc-2e00-471f-a9df-ae15cbe7db3e
+  spec:
+    clusterIP: 172.30.82.154
+    clusterIPs:
+    - 172.30.82.154
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - name: https
+      port: 8444
+      protocol: TCP
+      targetPort: 8444
+    selector:
+      app: activator
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"v1","kind":"Service","metadata":{"labels":{"app":"autoscaler","app.kubernetes.io/component":"autoscaler","app.kubernetes.io/name":"knative-serving","app.kubernetes.io/version":"1.5.0"},"name":"autoscaler","namespace":"knative-serving","ownerReferences":[{"apiVersion":"operator.knative.dev/v1beta1","blockOwnerDeletion":true,"controller":true,"kind":"KnativeServing","name":"knative-serving","uid":"0ad2d391-945e-4b39-841a-1da3211311cd"}]},"spec":{"ports":[{"name":"http-metrics","port":9090,"targetPort":9090},{"name":"http-profiling","port":8008,"targetPort":8008},{"name":"http","port":8080,"targetPort":8080}],"selector":{"app":"autoscaler"}}}
+    creationTimestamp: "2023-03-03T20:09:38Z"
+    labels:
+      app: autoscaler
+      app.kubernetes.io/component: autoscaler
+      app.kubernetes.io/name: knative-serving
+      app.kubernetes.io/version: 1.5.0
+    name: autoscaler
+    namespace: knative-serving
+    ownerReferences:
+    - apiVersion: operator.knative.dev/v1beta1
+      blockOwnerDeletion: true
+      controller: true
+      kind: KnativeServing
+      name: knative-serving
+      uid: 0ad2d391-945e-4b39-841a-1da3211311cd
+    resourceVersion: "39981"
+    uid: 0aa11b2c-19f8-49c7-8a5f-3dfc50cc7d6d
+  spec:
+    clusterIP: 172.30.79.138
+    clusterIPs:
+    - 172.30.79.138
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - name: http-metrics
+      port: 9090
+      protocol: TCP
+      targetPort: 9090
+    - name: http-profiling
+      port: 8008
+      protocol: TCP
+      targetPort: 8008
+    - name: http
+      port: 8080
+      protocol: TCP
+      targetPort: 8080
+    selector:
+      app: autoscaler
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    creationTimestamp: "2023-03-03T20:10:09Z"
+    name: autoscaler-bucket-00-of-01
+    namespace: knative-serving
+    resourceVersion: "40478"
+    uid: 1f94f4c0-8a43-4d79-8e99-b9d365889928
+  spec:
+    clusterIP: 172.30.5.85
+    clusterIPs:
+    - 172.30.5.85
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - name: http
+      port: 8080
+      protocol: TCP
+      targetPort: 8080
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"v1","kind":"Service","metadata":{"labels":{"app":"autoscaler-hpa","app.kubernetes.io/component":"autoscaler-hpa","app.kubernetes.io/name":"knative-serving","app.kubernetes.io/version":"1.5.0","autoscaling.knative.dev/autoscaler-provider":"hpa"},"name":"autoscaler-hpa","namespace":"knative-serving","ownerReferences":[{"apiVersion":"operator.knative.dev/v1beta1","blockOwnerDeletion":true,"controller":true,"kind":"KnativeServing","name":"knative-serving","uid":"0ad2d391-945e-4b39-841a-1da3211311cd"}]},"spec":{"ports":[{"name":"http-metrics","port":9090,"targetPort":9090},{"name":"http-profiling","port":8008,"targetPort":8008}],"selector":{"app":"autoscaler-hpa"}}}
+    creationTimestamp: "2023-03-03T20:09:40Z"
+    labels:
+      app: autoscaler-hpa
+      app.kubernetes.io/component: autoscaler-hpa
+      app.kubernetes.io/name: knative-serving
+      app.kubernetes.io/version: 1.5.0
+      autoscaling.knative.dev/autoscaler-provider: hpa
+    name: autoscaler-hpa
+    namespace: knative-serving
+    ownerReferences:
+    - apiVersion: operator.knative.dev/v1beta1
+      blockOwnerDeletion: true
+      controller: true
+      kind: KnativeServing
+      name: knative-serving
+      uid: 0ad2d391-945e-4b39-841a-1da3211311cd
+    resourceVersion: "40023"
+    uid: 7e76944d-9bfb-4b93-8fbe-85ae3682dc98
+  spec:
+    clusterIP: 172.30.166.165
+    clusterIPs:
+    - 172.30.166.165
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - name: http-metrics
+      port: 9090
+      protocol: TCP
+      targetPort: 9090
+    - name: http-profiling
+      port: 8008
+      protocol: TCP
+      targetPort: 8008
+    selector:
+      app: autoscaler-hpa
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"v1","kind":"Service","metadata":{"annotations":{"service.beta.openshift.io/serving-cert-secret-name":"autoscaler-hpa-sm-service-tls"},"creationTimestamp":null,"labels":{"name":"autoscaler-hpa-sm-service"},"name":"autoscaler-hpa-sm-service","namespace":"knative-serving","ownerReferences":[{"apiVersion":"operator.knative.dev/v1beta1","blockOwnerDeletion":true,"controller":true,"kind":"KnativeServing","name":"knative-serving","uid":"0ad2d391-945e-4b39-841a-1da3211311cd"}]},"spec":{"ports":[{"name":"https","port":8444,"targetPort":8444}],"selector":{"app":"autoscaler-hpa"}},"status":{"loadBalancer":{}}}
+      service.alpha.openshift.io/serving-cert-signed-by: openshift-service-serving-signer@1677872198
+      service.beta.openshift.io/serving-cert-secret-name: autoscaler-hpa-sm-service-tls
+      service.beta.openshift.io/serving-cert-signed-by: openshift-service-serving-signer@1677872198
+    creationTimestamp: "2023-03-03T20:09:41Z"
+    labels:
+      name: autoscaler-hpa-sm-service
+    name: autoscaler-hpa-sm-service
+    namespace: knative-serving
+    ownerReferences:
+    - apiVersion: operator.knative.dev/v1beta1
+      blockOwnerDeletion: true
+      controller: true
+      kind: KnativeServing
+      name: knative-serving
+      uid: 0ad2d391-945e-4b39-841a-1da3211311cd
+    resourceVersion: "40094"
+    uid: 418f7a68-0a75-4f90-84d2-60da04235262
+  spec:
+    clusterIP: 172.30.29.200
+    clusterIPs:
+    - 172.30.29.200
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - name: https
+      port: 8444
+      protocol: TCP
+      targetPort: 8444
+    selector:
+      app: autoscaler-hpa
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"v1","kind":"Service","metadata":{"annotations":{"service.beta.openshift.io/serving-cert-secret-name":"autoscaler-sm-service-tls"},"creationTimestamp":null,"labels":{"name":"autoscaler-sm-service"},"name":"autoscaler-sm-service","namespace":"knative-serving","ownerReferences":[{"apiVersion":"operator.knative.dev/v1beta1","blockOwnerDeletion":true,"controller":true,"kind":"KnativeServing","name":"knative-serving","uid":"0ad2d391-945e-4b39-841a-1da3211311cd"}]},"spec":{"ports":[{"name":"https","port":8444,"targetPort":8444}],"selector":{"app":"autoscaler"}},"status":{"loadBalancer":{}}}
+      service.alpha.openshift.io/serving-cert-signed-by: openshift-service-serving-signer@1677872198
+      service.beta.openshift.io/serving-cert-secret-name: autoscaler-sm-service-tls
+      service.beta.openshift.io/serving-cert-signed-by: openshift-service-serving-signer@1677872198
+    creationTimestamp: "2023-03-03T20:09:43Z"
+    labels:
+      name: autoscaler-sm-service
+    name: autoscaler-sm-service
+    namespace: knative-serving
+    ownerReferences:
+    - apiVersion: operator.knative.dev/v1beta1
+      blockOwnerDeletion: true
+      controller: true
+      kind: KnativeServing
+      name: knative-serving
+      uid: 0ad2d391-945e-4b39-841a-1da3211311cd
+    resourceVersion: "40133"
+    uid: 6f1e4faf-678d-4123-9ba0-db70bcb0ab45
+  spec:
+    clusterIP: 172.30.143.235
+    clusterIPs:
+    - 172.30.143.235
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - name: https
+      port: 8444
+      protocol: TCP
+      targetPort: 8444
+    selector:
+      app: autoscaler
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"v1","kind":"Service","metadata":{"labels":{"app":"controller","app.kubernetes.io/component":"controller","app.kubernetes.io/name":"knative-serving","app.kubernetes.io/version":"1.5.0"},"name":"controller","namespace":"knative-serving","ownerReferences":[{"apiVersion":"operator.knative.dev/v1beta1","blockOwnerDeletion":true,"controller":true,"kind":"KnativeServing","name":"knative-serving","uid":"0ad2d391-945e-4b39-841a-1da3211311cd"}]},"spec":{"ports":[{"name":"http-metrics","port":9090,"targetPort":9090},{"name":"http-profiling","port":8008,"targetPort":8008}],"selector":{"app":"controller"}}}
+    creationTimestamp: "2023-03-03T20:09:38Z"
+    labels:
+      app: controller
+      app.kubernetes.io/component: controller
+      app.kubernetes.io/name: knative-serving
+      app.kubernetes.io/version: 1.5.0
+    name: controller
+    namespace: knative-serving
+    ownerReferences:
+    - apiVersion: operator.knative.dev/v1beta1
+      blockOwnerDeletion: true
+      controller: true
+      kind: KnativeServing
+      name: knative-serving
+      uid: 0ad2d391-945e-4b39-841a-1da3211311cd
+    resourceVersion: "39987"
+    uid: dcf6dc05-bdd7-4563-afcf-a7ff6001a63a
+  spec:
+    clusterIP: 172.30.89.148
+    clusterIPs:
+    - 172.30.89.148
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - name: http-metrics
+      port: 9090
+      protocol: TCP
+      targetPort: 9090
+    - name: http-profiling
+      port: 8008
+      protocol: TCP
+      targetPort: 8008
+    selector:
+      app: controller
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"v1","kind":"Service","metadata":{"annotations":{"service.beta.openshift.io/serving-cert-secret-name":"controller-sm-service-tls"},"creationTimestamp":null,"labels":{"name":"controller-sm-service"},"name":"controller-sm-service","namespace":"knative-serving","ownerReferences":[{"apiVersion":"operator.knative.dev/v1beta1","blockOwnerDeletion":true,"controller":true,"kind":"KnativeServing","name":"knative-serving","uid":"0ad2d391-945e-4b39-841a-1da3211311cd"}]},"spec":{"ports":[{"name":"https","port":8444,"targetPort":8444}],"selector":{"app":"controller"}},"status":{"loadBalancer":{}}}
+      service.alpha.openshift.io/serving-cert-signed-by: openshift-service-serving-signer@1677872198
+      service.beta.openshift.io/serving-cert-secret-name: controller-sm-service-tls
+      service.beta.openshift.io/serving-cert-signed-by: openshift-service-serving-signer@1677872198
+    creationTimestamp: "2023-03-03T20:09:41Z"
+    labels:
+      name: controller-sm-service
+    name: controller-sm-service
+    namespace: knative-serving
+    ownerReferences:
+    - apiVersion: operator.knative.dev/v1beta1
+      blockOwnerDeletion: true
+      controller: true
+      kind: KnativeServing
+      name: knative-serving
+      uid: 0ad2d391-945e-4b39-841a-1da3211311cd
+    resourceVersion: "40096"
+    uid: 729535c7-3b62-4ebc-ab19-98d180f9b96b
+  spec:
+    clusterIP: 172.30.6.119
+    clusterIPs:
+    - 172.30.6.119
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - name: https
+      port: 8444
+      protocol: TCP
+      targetPort: 8444
+    selector:
+      app: controller
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"v1","kind":"Service","metadata":{"annotations":{"service.beta.openshift.io/serving-cert-secret-name":"domain-mapping-sm-service-tls"},"creationTimestamp":null,"labels":{"name":"domain-mapping-sm-service"},"name":"domain-mapping-sm-service","namespace":"knative-serving","ownerReferences":[{"apiVersion":"operator.knative.dev/v1beta1","blockOwnerDeletion":true,"controller":true,"kind":"KnativeServing","name":"knative-serving","uid":"0ad2d391-945e-4b39-841a-1da3211311cd"}]},"spec":{"ports":[{"name":"https","port":8444,"targetPort":8444}],"selector":{"app":"domain-mapping"}},"status":{"loadBalancer":{}}}
+      service.alpha.openshift.io/serving-cert-signed-by: openshift-service-serving-signer@1677872198
+      service.beta.openshift.io/serving-cert-secret-name: domain-mapping-sm-service-tls
+      service.beta.openshift.io/serving-cert-signed-by: openshift-service-serving-signer@1677872198
+    creationTimestamp: "2023-03-03T20:09:42Z"
+    labels:
+      name: domain-mapping-sm-service
+    name: domain-mapping-sm-service
+    namespace: knative-serving
+    ownerReferences:
+    - apiVersion: operator.knative.dev/v1beta1
+      blockOwnerDeletion: true
+      controller: true
+      kind: KnativeServing
+      name: knative-serving
+      uid: 0ad2d391-945e-4b39-841a-1da3211311cd
+    resourceVersion: "40100"
+    uid: d01e787d-a20f-427b-94e1-fb463e3a211c
+  spec:
+    clusterIP: 172.30.7.150
+    clusterIPs:
+    - 172.30.7.150
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - name: https
+      port: 8444
+      protocol: TCP
+      targetPort: 8444
+    selector:
+      app: domain-mapping
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"v1","kind":"Service","metadata":{"labels":{"app.kubernetes.io/component":"domain-mapping","app.kubernetes.io/name":"knative-serving","app.kubernetes.io/version":"1.5.0","role":"domainmapping-webhook"},"name":"domainmapping-webhook","namespace":"knative-serving","ownerReferences":[{"apiVersion":"operator.knative.dev/v1beta1","blockOwnerDeletion":true,"controller":true,"kind":"KnativeServing","name":"knative-serving","uid":"0ad2d391-945e-4b39-841a-1da3211311cd"}]},"spec":{"ports":[{"name":"http-metrics","port":9090,"targetPort":9090},{"name":"http-profiling","port":8008,"targetPort":8008},{"name":"https-webhook","port":443,"targetPort":8443}],"selector":{"role":"domainmapping-webhook"}}}
+    creationTimestamp: "2023-03-03T20:09:38Z"
+    labels:
+      app.kubernetes.io/component: domain-mapping
+      app.kubernetes.io/name: knative-serving
+      app.kubernetes.io/version: 1.5.0
+      role: domainmapping-webhook
+    name: domainmapping-webhook
+    namespace: knative-serving
+    ownerReferences:
+    - apiVersion: operator.knative.dev/v1beta1
+      blockOwnerDeletion: true
+      controller: true
+      kind: KnativeServing
+      name: knative-serving
+      uid: 0ad2d391-945e-4b39-841a-1da3211311cd
+    resourceVersion: "39997"
+    uid: 35acf9a9-d99a-45a1-b1d0-725f9507c007
+  spec:
+    clusterIP: 172.30.23.173
+    clusterIPs:
+    - 172.30.23.173
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - name: http-metrics
+      port: 9090
+      protocol: TCP
+      targetPort: 9090
+    - name: http-profiling
+      port: 8008
+      protocol: TCP
+      targetPort: 8008
+    - name: https-webhook
+      port: 443
+      protocol: TCP
+      targetPort: 8443
+    selector:
+      role: domainmapping-webhook
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"v1","kind":"Service","metadata":{"annotations":{"service.beta.openshift.io/serving-cert-secret-name":"domainmapping-webhook-sm-service-tls"},"creationTimestamp":null,"labels":{"name":"domainmapping-webhook-sm-service"},"name":"domainmapping-webhook-sm-service","namespace":"knative-serving","ownerReferences":[{"apiVersion":"operator.knative.dev/v1beta1","blockOwnerDeletion":true,"controller":true,"kind":"KnativeServing","name":"knative-serving","uid":"0ad2d391-945e-4b39-841a-1da3211311cd"}]},"spec":{"ports":[{"name":"https","port":8444,"targetPort":8444}],"selector":{"app":"domainmapping-webhook"}},"status":{"loadBalancer":{}}}
+      service.alpha.openshift.io/serving-cert-signed-by: openshift-service-serving-signer@1677872198
+      service.beta.openshift.io/serving-cert-secret-name: domainmapping-webhook-sm-service-tls
+      service.beta.openshift.io/serving-cert-signed-by: openshift-service-serving-signer@1677872198
+    creationTimestamp: "2023-03-03T20:09:42Z"
+    labels:
+      name: domainmapping-webhook-sm-service
+    name: domainmapping-webhook-sm-service
+    namespace: knative-serving
+    ownerReferences:
+    - apiVersion: operator.knative.dev/v1beta1
+      blockOwnerDeletion: true
+      controller: true
+      kind: KnativeServing
+      name: knative-serving
+      uid: 0ad2d391-945e-4b39-841a-1da3211311cd
+    resourceVersion: "40108"
+    uid: 37ecc21e-b1bc-4564-8527-ab55bd8ae33b
+  spec:
+    clusterIP: 172.30.82.198
+    clusterIPs:
+    - 172.30.82.198
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - name: https
+      port: 8444
+      protocol: TCP
+      targetPort: 8444
+    selector:
+      app: domainmapping-webhook
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"v1","kind":"Service","metadata":{"labels":{"app.kubernetes.io/component":"net-istio","app.kubernetes.io/name":"knative-serving","app.kubernetes.io/version":"devel","networking.knative.dev/ingress-provider":"istio","role":"net-istio-webhook"},"name":"net-istio-webhook","namespace":"knative-serving","ownerReferences":[{"apiVersion":"operator.knative.dev/v1beta1","blockOwnerDeletion":true,"controller":true,"kind":"KnativeServing","name":"knative-serving","uid":"0ad2d391-945e-4b39-841a-1da3211311cd"}]},"spec":{"ports":[{"name":"http-metrics","port":9090,"targetPort":9090},{"name":"http-profiling","port":8008,"targetPort":8008},{"name":"https-webhook","port":443,"targetPort":8443}],"selector":{"app":"net-istio-webhook"}}}
+    creationTimestamp: "2023-03-03T20:09:41Z"
+    labels:
+      app.kubernetes.io/component: net-istio
+      app.kubernetes.io/name: knative-serving
+      app.kubernetes.io/version: devel
+      networking.knative.dev/ingress-provider: istio
+      role: net-istio-webhook
+    name: net-istio-webhook
+    namespace: knative-serving
+    ownerReferences:
+    - apiVersion: operator.knative.dev/v1beta1
+      blockOwnerDeletion: true
+      controller: true
+      kind: KnativeServing
+      name: knative-serving
+      uid: 0ad2d391-945e-4b39-841a-1da3211311cd
+    resourceVersion: "40091"
+    uid: 1a671bf3-054d-4f50-a148-1bcd6b3f2415
+  spec:
+    clusterIP: 172.30.106.142
+    clusterIPs:
+    - 172.30.106.142
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - name: http-metrics
+      port: 9090
+      protocol: TCP
+      targetPort: 9090
+    - name: http-profiling
+      port: 8008
+      protocol: TCP
+      targetPort: 8008
+    - name: https-webhook
+      port: 443
+      protocol: TCP
+      targetPort: 8443
+    selector:
+      app: net-istio-webhook
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"v1","kind":"Service","metadata":{"labels":{"app.kubernetes.io/component":"webhook","app.kubernetes.io/name":"knative-serving","app.kubernetes.io/version":"1.5.0","role":"webhook"},"name":"webhook","namespace":"knative-serving","ownerReferences":[{"apiVersion":"operator.knative.dev/v1beta1","blockOwnerDeletion":true,"controller":true,"kind":"KnativeServing","name":"knative-serving","uid":"0ad2d391-945e-4b39-841a-1da3211311cd"}]},"spec":{"ports":[{"name":"http-metrics","port":9090,"targetPort":9090},{"name":"http-profiling","port":8008,"targetPort":8008},{"name":"https-webhook","port":443,"targetPort":8443}],"selector":{"role":"webhook"}}}
+    creationTimestamp: "2023-03-03T20:09:39Z"
+    labels:
+      app.kubernetes.io/component: webhook
+      app.kubernetes.io/name: knative-serving
+      app.kubernetes.io/version: 1.5.0
+      role: webhook
+    name: webhook
+    namespace: knative-serving
+    ownerReferences:
+    - apiVersion: operator.knative.dev/v1beta1
+      blockOwnerDeletion: true
+      controller: true
+      kind: KnativeServing
+      name: knative-serving
+      uid: 0ad2d391-945e-4b39-841a-1da3211311cd
+    resourceVersion: "40007"
+    uid: 99298631-24d8-403d-be80-2a8bc411ae90
+  spec:
+    clusterIP: 172.30.51.186
+    clusterIPs:
+    - 172.30.51.186
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - name: http-metrics
+      port: 9090
+      protocol: TCP
+      targetPort: 9090
+    - name: http-profiling
+      port: 8008
+      protocol: TCP
+      targetPort: 8008
+    - name: https-webhook
+      port: 443
+      protocol: TCP
+      targetPort: 8443
+    selector:
+      role: webhook
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"v1","kind":"Service","metadata":{"annotations":{"service.beta.openshift.io/serving-cert-secret-name":"webhook-sm-service-tls"},"creationTimestamp":null,"labels":{"name":"webhook-sm-service"},"name":"webhook-sm-service","namespace":"knative-serving","ownerReferences":[{"apiVersion":"operator.knative.dev/v1beta1","blockOwnerDeletion":true,"controller":true,"kind":"KnativeServing","name":"knative-serving","uid":"0ad2d391-945e-4b39-841a-1da3211311cd"}]},"spec":{"ports":[{"name":"https","port":8444,"targetPort":8444}],"selector":{"app":"webhook"}},"status":{"loadBalancer":{}}}
+      service.alpha.openshift.io/serving-cert-signed-by: openshift-service-serving-signer@1677872198
+      service.beta.openshift.io/serving-cert-secret-name: webhook-sm-service-tls
+      service.beta.openshift.io/serving-cert-signed-by: openshift-service-serving-signer@1677872198
+    creationTimestamp: "2023-03-03T20:09:42Z"
+    labels:
+      name: webhook-sm-service
+    name: webhook-sm-service
+    namespace: knative-serving
+    ownerReferences:
+    - apiVersion: operator.knative.dev/v1beta1
+      blockOwnerDeletion: true
+      controller: true
+      kind: KnativeServing
+      name: knative-serving
+      uid: 0ad2d391-945e-4b39-841a-1da3211311cd
+    resourceVersion: "40115"
+    uid: 18dc09ee-2cb7-4a6e-a81a-58a918e63553
+  spec:
+    clusterIP: 172.30.150.61
+    clusterIPs:
+    - 172.30.150.61
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - name: https
+      port: 8444
+      protocol: TCP
+      targetPort: 8444
+    selector:
+      app: webhook
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+kind: ServiceList
+metadata:
+  resourceVersion: "61083"

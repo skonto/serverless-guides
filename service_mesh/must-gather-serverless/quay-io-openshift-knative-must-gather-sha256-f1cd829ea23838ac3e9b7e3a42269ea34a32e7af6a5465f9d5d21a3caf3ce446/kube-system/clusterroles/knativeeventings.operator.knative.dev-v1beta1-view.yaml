@@ -1,0 +1,26 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  creationTimestamp: "2023-03-03T20:08:36Z"
+  labels:
+    olm.opgroup.permissions/aggregate-to-e7e16f558a6aac4c-view: "true"
+    rbac.authorization.k8s.io/aggregate-to-view: "true"
+  name: knativeeventings.operator.knative.dev-v1beta1-view
+  ownerReferences:
+  - apiVersion: apiextensions.k8s.io/v1
+    blockOwnerDeletion: false
+    controller: false
+    kind: CustomResourceDefinition
+    name: knativeeventings.operator.knative.dev
+    uid: 7a1198fc-7fb8-4cdc-baa4-2e28e8e92028
+  resourceVersion: "38626"
+  uid: 0e50b70c-1fcc-41c1-be75-e44df1271708
+rules:
+- apiGroups:
+  - operator.knative.dev
+  resources:
+  - knativeeventings
+  verbs:
+  - get
+  - list
+  - watch

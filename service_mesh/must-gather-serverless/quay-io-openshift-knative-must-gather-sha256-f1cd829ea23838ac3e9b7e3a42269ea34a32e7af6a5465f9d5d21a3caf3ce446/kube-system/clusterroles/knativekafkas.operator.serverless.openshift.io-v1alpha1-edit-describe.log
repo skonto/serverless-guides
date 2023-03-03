@@ -1,0 +1,8 @@
+Name:         knativekafkas.operator.serverless.openshift.io-v1alpha1-edit
+Labels:       olm.opgroup.permissions/aggregate-to-bcd12f4466e2f513-edit=true
+              rbac.authorization.k8s.io/aggregate-to-edit=true
+Annotations:  <none>
+PolicyRule:
+  Resources                                       Non-Resource URLs  Resource Names  Verbs
+  ---------                                       -----------------  --------------  -----
+  knativekafkas.operator.serverless.openshift.io  []                 []              [create update patch delete]

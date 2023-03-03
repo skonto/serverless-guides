@@ -1,0 +1,394 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    checksum/config: d2485b1ee9f9be63381c231826a43742bb10ebac2964bdc3f22a100eab9d032c
+    checksum/dashboards-json-config: 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b
+    checksum/sc-dashboard-provider-config: 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b
+    k8s.ovn.org/pod-networks: '{"default":{"ip_addresses":["10.129.2.23/23"],"mac_address":"0a:58:0a:81:02:17","gateway_ips":["10.129.2.1"],"ip_address":"10.129.2.23/23","gateway_ip":"10.129.2.1"}}'
+    k8s.v1.cni.cncf.io/network-status: |-
+      [{
+          "name": "ovn-kubernetes",
+          "interface": "eth0",
+          "ips": [
+              "10.129.2.23"
+          ],
+          "mac": "0a:58:0a:81:02:17",
+          "default": true,
+          "dns": {}
+      }]
+    k8s.v1.cni.cncf.io/networks-status: |-
+      [{
+          "name": "ovn-kubernetes",
+          "interface": "eth0",
+          "ips": [
+              "10.129.2.23"
+          ],
+          "mac": "0a:58:0a:81:02:17",
+          "default": true,
+          "dns": {}
+      }]
+    openshift.io/scc: restricted-v2
+    seccomp.security.alpha.kubernetes.io/pod: runtime/default
+    sidecar.istio.io/inject: "false"
+  creationTimestamp: "2023-03-03T20:03:21Z"
+  generateName: grafana-5bf9788595-
+  labels:
+    app: grafana
+    maistra-control-plane: istio-system
+    pod-template-hash: 5bf9788595
+  name: grafana-5bf9788595-56tp4
+  namespace: istio-system
+  ownerReferences:
+  - apiVersion: apps/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: ReplicaSet
+    name: grafana-5bf9788595
+    uid: c777555c-0790-4add-b70e-ae746d4a3665
+  resourceVersion: "35194"
+  uid: 2a3f07ee-9962-4f24-83c0-f15461118ea5
+spec:
+  affinity:
+    nodeAffinity:
+      preferredDuringSchedulingIgnoredDuringExecution:
+      - preference:
+          matchExpressions:
+          - key: beta.kubernetes.io/arch
+            operator: In
+            values:
+            - amd64
+        weight: 2
+      - preference:
+          matchExpressions:
+          - key: beta.kubernetes.io/arch
+            operator: In
+            values:
+            - ppc64le
+        weight: 2
+      - preference:
+          matchExpressions:
+          - key: beta.kubernetes.io/arch
+            operator: In
+            values:
+            - s390x
+        weight: 2
+      requiredDuringSchedulingIgnoredDuringExecution:
+        nodeSelectorTerms:
+        - matchExpressions:
+          - key: beta.kubernetes.io/arch
+            operator: In
+            values:
+            - amd64
+            - ppc64le
+            - s390x
+  containers:
+  - args:
+    - -provider=openshift
+    - -https-address=:3001
+    - -http-address=
+    - -email-domain=*
+    - -upstream=http://localhost:3000
+    - -htpasswd-file=/etc/proxy/htpasswd/auth
+    - -display-htpasswd-form=false
+    - '-openshift-sar={"namespace": "istio-system", "resource": "pods", "verb": "get"}'
+    - -client-secret-file=/var/run/secrets/kubernetes.io/serviceaccount/token
+    - -openshift-service-account=grafana
+    - -cookie-secret-file=/etc/proxy/secrets/session_secret
+    - -tls-cert=/etc/tls/private/tls.crt
+    - -tls-key=/etc/tls/private/tls.key
+    - -openshift-ca=/etc/pki/tls/cert.pem
+    - -openshift-ca=/var/run/secrets/kubernetes.io/serviceaccount/ca.crt
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:ce1de860b639d4831bb74b0271aed6882b45febb37f60bcf8a31157b87ce0495
+    imagePullPolicy: IfNotPresent
+    name: grafana-proxy
+    ports:
+    - containerPort: 3001
+      name: https
+      protocol: TCP
+    readinessProbe:
+      failureThreshold: 3
+      httpGet:
+        path: /oauth/healthz
+        port: https
+        scheme: HTTPS
+      periodSeconds: 10
+      successThreshold: 1
+      timeoutSeconds: 1
+    resources:
+      requests:
+        cpu: 10m
+        memory: 128Mi
+    securityContext:
+      allowPrivilegeEscalation: false
+      capabilities:
+        drop:
+        - ALL
+      runAsNonRoot: true
+      runAsUser: 1000680000
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /etc/tls/private
+      name: secret-grafana-tls
+    - mountPath: /etc/proxy/htpasswd
+      name: secret-htpasswd
+    - mountPath: /etc/proxy/secrets
+      name: secret-grafana-proxy
+    - mountPath: /etc/pki/ca-trust/extracted/pem/
+      name: trusted-ca-bundle
+      readOnly: true
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-btgwk
+      readOnly: true
+  - env:
+    - name: GRAFANA_PORT
+      value: "3000"
+    - name: GF_AUTH_BASIC_ENABLED
+      value: "false"
+    - name: GF_AUTH_PROXY_ENABLED
+      value: "true"
+    - name: GF_AUTH_PROXY_AUTO_SIGN_UP
+      value: "true"
+    - name: GF_AUTH_PROXY_WHITELIST
+      value: 127.0.0.0/24,::1
+    - name: GF_AUTH_PROXY_HEADERS
+      value: Email:X-Forwarded-Email
+    - name: GF_AUTH_PROXY_HEADER_NAME
+      value: X-Forwarded-User
+    - name: GF_USERS_AUTO_ASSIGN_ORG_ROLE
+      value: Admin
+    image: registry.redhat.io/openshift-service-mesh/grafana-rhel8@sha256:12a2436fa98384cc7dd054c1ed586742f623a11c9bbc47e7fd67aab847dc8430
+    imagePullPolicy: IfNotPresent
+    livenessProbe:
+      failureThreshold: 10
+      httpGet:
+        path: /api/health
+        port: 3000
+        scheme: HTTP
+      initialDelaySeconds: 60
+      periodSeconds: 10
+      successThreshold: 1
+      timeoutSeconds: 30
+    name: grafana
+    ports:
+    - containerPort: 3000
+      name: service
+      protocol: TCP
+    - containerPort: 3000
+      name: grafana
+      protocol: TCP
+    readinessProbe:
+      failureThreshold: 3
+      httpGet:
+        path: /api/health
+        port: 3000
+        scheme: HTTP
+      periodSeconds: 10
+      successThreshold: 1
+      timeoutSeconds: 1
+    resources:
+      requests:
+        cpu: 10m
+        memory: 128Mi
+    securityContext:
+      allowPrivilegeEscalation: false
+      capabilities:
+        drop:
+        - ALL
+      runAsNonRoot: true
+      runAsUser: 1000680000
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /etc/grafana/grafana.ini
+      name: config
+      subPath: grafana.ini
+    - mountPath: /data/grafana
+      name: data
+    - mountPath: /var/lib/grafana/dashboards/istio/istio-extension-dashboard.json
+      name: dashboards-istio-istio-extension-dashboard
+      readOnly: true
+      subPath: istio-extension-dashboard.json
+    - mountPath: /var/lib/grafana/dashboards/istio/istio-mesh-dashboard.json
+      name: dashboards-istio-istio-mesh-dashboard
+      readOnly: true
+      subPath: istio-mesh-dashboard.json
+    - mountPath: /var/lib/grafana/dashboards/istio/istio-performance-dashboard.json
+      name: dashboards-istio-istio-performance-dashboard
+      readOnly: true
+      subPath: istio-performance-dashboard.json
+    - mountPath: /var/lib/grafana/dashboards/istio/istio-service-dashboard.json
+      name: dashboards-istio-istio-service-dashboard
+      readOnly: true
+      subPath: istio-service-dashboard.json
+    - mountPath: /var/lib/grafana/dashboards/istio/istio-workload-dashboard.json
+      name: dashboards-istio-istio-workload-dashboard
+      readOnly: true
+      subPath: istio-workload-dashboard.json
+    - mountPath: /var/lib/grafana/dashboards/istio/pilot-dashboard.json
+      name: dashboards-istio-pilot-dashboard
+      readOnly: true
+      subPath: pilot-dashboard.json
+    - mountPath: /etc/grafana/provisioning/datasources/datasources.yaml
+      name: config
+      subPath: datasources.yaml
+    - mountPath: /etc/grafana/provisioning/dashboards/dashboardproviders.yaml
+      name: config
+      subPath: dashboardproviders.yaml
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-btgwk
+      readOnly: true
+  dnsPolicy: ClusterFirst
+  enableServiceLinks: true
+  imagePullSecrets:
+  - name: grafana-dockercfg-lj2lx
+  nodeName: ci-ln-4zhdf4b-72292-lw57b-worker-c-szhjg
+  preemptionPolicy: PreemptLowerPriority
+  priority: 0
+  restartPolicy: Always
+  schedulerName: default-scheduler
+  securityContext:
+    fsGroup: 1000680000
+    seLinuxOptions:
+      level: s0:c26,c15
+    seccompProfile:
+      type: RuntimeDefault
+  serviceAccount: grafana
+  serviceAccountName: grafana
+  terminationGracePeriodSeconds: 30
+  tolerations:
+  - effect: NoExecute
+    key: node.kubernetes.io/not-ready
+    operator: Exists
+    tolerationSeconds: 300
+  - effect: NoExecute
+    key: node.kubernetes.io/unreachable
+    operator: Exists
+    tolerationSeconds: 300
+  - effect: NoSchedule
+    key: node.kubernetes.io/memory-pressure
+    operator: Exists
+  volumes:
+  - name: secret-grafana-tls
+    secret:
+      defaultMode: 420
+      secretName: grafana-tls
+  - name: secret-htpasswd
+    secret:
+      defaultMode: 420
+      secretName: htpasswd
+  - name: secret-grafana-proxy
+    secret:
+      defaultMode: 420
+      secretName: grafana-proxy
+  - configMap:
+      defaultMode: 420
+      items:
+      - key: ca-bundle.crt
+        path: tls-ca-bundle.pem
+      name: trusted-ca-bundle
+      optional: true
+    name: trusted-ca-bundle
+  - configMap:
+      defaultMode: 420
+      name: istio-grafana
+    name: config
+  - emptyDir: {}
+    name: data
+  - configMap:
+      defaultMode: 420
+      name: istio-grafana-configuration-dashboards-istio-extension-dashboard
+    name: dashboards-istio-istio-extension-dashboard
+  - configMap:
+      defaultMode: 420
+      name: istio-grafana-configuration-dashboards-istio-mesh-dashboard
+    name: dashboards-istio-istio-mesh-dashboard
+  - configMap:
+      defaultMode: 420
+      name: istio-grafana-configuration-dashboards-istio-performance-dashboard
+    name: dashboards-istio-istio-performance-dashboard
+  - configMap:
+      defaultMode: 420
+      name: istio-grafana-configuration-dashboards-istio-service-dashboard
+    name: dashboards-istio-istio-service-dashboard
+  - configMap:
+      defaultMode: 420
+      name: istio-grafana-configuration-dashboards-istio-workload-dashboard
+    name: dashboards-istio-istio-workload-dashboard
+  - configMap:
+      defaultMode: 420
+      name: istio-grafana-configuration-dashboards-pilot-dashboard
+    name: dashboards-istio-pilot-dashboard
+  - name: kube-api-access-btgwk
+    projected:
+      defaultMode: 420
+      sources:
+      - serviceAccountToken:
+          expirationSeconds: 3607
+          path: token
+      - configMap:
+          items:
+          - key: ca.crt
+            path: ca.crt
+          name: kube-root-ca.crt
+      - downwardAPI:
+          items:
+          - fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.namespace
+            path: namespace
+      - configMap:
+          items:
+          - key: service-ca.crt
+            path: service-ca.crt
+          name: openshift-service-ca.crt
+status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-03T20:03:21Z"
+    status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-03T20:03:39Z"
+    status: "True"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-03T20:03:39Z"
+    status: "True"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-03T20:03:21Z"
+    status: "True"
+    type: PodScheduled
+  containerStatuses:
+  - containerID: cri-o://e48845e71c9855c7f157d68e7df84d07be51db40317a83f21ab513c2b1f6949a
+    image: registry.redhat.io/openshift-service-mesh/grafana-rhel8@sha256:12a2436fa98384cc7dd054c1ed586742f623a11c9bbc47e7fd67aab847dc8430
+    imageID: registry.redhat.io/openshift-service-mesh/grafana-rhel8@sha256:12a2436fa98384cc7dd054c1ed586742f623a11c9bbc47e7fd67aab847dc8430
+    lastState: {}
+    name: grafana
+    ready: true
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2023-03-03T20:03:38Z"
+  - containerID: cri-o://bf1c3ce558e657b058679c85410f7cee67a8b0939e49969b7450c3e9116db785
+    image: registry.redhat.io/openshift4/ose-oauth-proxy:latest
+    imageID: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:20507ebcaa06a2f027c7f7eb37a549b548f1d47b0335efa2be17813472acbdae
+    lastState: {}
+    name: grafana-proxy
+    ready: true
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2023-03-03T20:03:25Z"
+  hostIP: 10.0.128.4
+  phase: Running
+  podIP: 10.129.2.23
+  podIPs:
+  - ip: 10.129.2.23
+  qosClass: Burstable
+  startTime: "2023-03-03T20:03:21Z"

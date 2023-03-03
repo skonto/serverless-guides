@@ -1,0 +1,25 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  annotations:
+    openshift.io/sa.scc.mcs: s0:c26,c15
+    openshift.io/sa.scc.supplemental-groups: 1000680000/10000
+    openshift.io/sa.scc.uid-range: 1000680000/10000
+  creationTimestamp: "2023-03-03T20:02:04Z"
+  labels:
+    kiali.io/member-of: istio-system
+    kubernetes.io/metadata.name: istio-system
+    maistra.io/ignore-namespace: ignore
+    maistra.io/member-of: istio-system
+    pod-security.kubernetes.io/audit: restricted
+    pod-security.kubernetes.io/audit-version: v1.24
+    pod-security.kubernetes.io/warn: restricted
+    pod-security.kubernetes.io/warn-version: v1.24
+  name: istio-system
+  resourceVersion: "35670"
+  uid: 0c80e636-9b29-4cb5-8a82-7c4a0c1fb2af
+spec:
+  finalizers:
+  - kubernetes
+status:
+  phase: Active

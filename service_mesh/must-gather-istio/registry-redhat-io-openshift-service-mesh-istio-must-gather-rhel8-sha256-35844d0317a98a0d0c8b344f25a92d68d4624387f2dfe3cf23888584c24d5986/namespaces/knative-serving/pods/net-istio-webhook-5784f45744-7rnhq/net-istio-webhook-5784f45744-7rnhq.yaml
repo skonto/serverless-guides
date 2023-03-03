@@ -1,0 +1,194 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    cluster-autoscaler.kubernetes.io/safe-to-evict: "false"
+    k8s.ovn.org/pod-networks: '{"default":{"ip_addresses":["10.129.2.37/23"],"mac_address":"0a:58:0a:81:02:25","gateway_ips":["10.129.2.1"],"ip_address":"10.129.2.37/23","gateway_ip":"10.129.2.1"}}'
+    k8s.v1.cni.cncf.io/network-status: |-
+      [{
+          "name": "ovn-kubernetes",
+          "interface": "eth0",
+          "ips": [
+              "10.129.2.37"
+          ],
+          "mac": "0a:58:0a:81:02:25",
+          "default": true,
+          "dns": {}
+      }]
+    k8s.v1.cni.cncf.io/networks-status: |-
+      [{
+          "name": "ovn-kubernetes",
+          "interface": "eth0",
+          "ips": [
+              "10.129.2.37"
+          ],
+          "mac": "0a:58:0a:81:02:25",
+          "default": true,
+          "dns": {}
+      }]
+    openshift.io/scc: restricted-v2
+    seccomp.security.alpha.kubernetes.io/pod: runtime/default
+  creationTimestamp: "2023-03-03T20:09:42Z"
+  generateName: net-istio-webhook-5784f45744-
+  labels:
+    app: net-istio-webhook
+    app.kubernetes.io/component: net-istio
+    app.kubernetes.io/name: knative-serving
+    app.kubernetes.io/version: devel
+    pod-template-hash: 5784f45744
+    role: net-istio-webhook
+  name: net-istio-webhook-5784f45744-7rnhq
+  namespace: knative-serving
+  ownerReferences:
+  - apiVersion: apps/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: ReplicaSet
+    name: net-istio-webhook-5784f45744
+    uid: 35e04b18-c5db-4303-930a-4c1ede6d0300
+  resourceVersion: "40210"
+  uid: 11677da6-487c-4289-84a2-979ae05c1ff1
+spec:
+  containers:
+  - env:
+    - name: SYSTEM_NAMESPACE
+      valueFrom:
+        fieldRef:
+          apiVersion: v1
+          fieldPath: metadata.namespace
+    - name: CONFIG_LOGGING_NAME
+      value: config-logging
+    - name: CONFIG_OBSERVABILITY_NAME
+      value: config-observability
+    - name: METRICS_DOMAIN
+      value: knative.dev/net-istio
+    - name: WEBHOOK_NAME
+      value: net-istio-webhook
+    image: registry.redhat.io/openshift-serverless-1/net-istio-webhook-rhel8@sha256:c317e8815afc35c8e8a800bd1c9a127126359b954beddf54a196db66c7f1a8f3
+    imagePullPolicy: IfNotPresent
+    name: webhook
+    ports:
+    - containerPort: 9090
+      name: metrics
+      protocol: TCP
+    - containerPort: 8008
+      name: profiling
+      protocol: TCP
+    - containerPort: 8443
+      name: https-webhook
+      protocol: TCP
+    resources:
+      limits:
+        cpu: 200m
+        memory: 1Gi
+      requests:
+        cpu: 20m
+        memory: 20Mi
+    securityContext:
+      allowPrivilegeEscalation: false
+      capabilities:
+        drop:
+        - ALL
+      readOnlyRootFilesystem: true
+      runAsNonRoot: true
+      runAsUser: 1000710000
+      seccompProfile:
+        type: RuntimeDefault
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-spff6
+      readOnly: true
+  dnsPolicy: ClusterFirst
+  enableServiceLinks: true
+  imagePullSecrets:
+  - name: controller-dockercfg-cwxbr
+  nodeName: ci-ln-4zhdf4b-72292-lw57b-worker-c-szhjg
+  preemptionPolicy: PreemptLowerPriority
+  priority: 0
+  restartPolicy: Always
+  schedulerName: default-scheduler
+  securityContext:
+    fsGroup: 1000710000
+    seLinuxOptions:
+      level: s0:c27,c4
+    seccompProfile:
+      type: RuntimeDefault
+  serviceAccount: controller
+  serviceAccountName: controller
+  terminationGracePeriodSeconds: 30
+  tolerations:
+  - effect: NoExecute
+    key: node.kubernetes.io/not-ready
+    operator: Exists
+    tolerationSeconds: 300
+  - effect: NoExecute
+    key: node.kubernetes.io/unreachable
+    operator: Exists
+    tolerationSeconds: 300
+  - effect: NoSchedule
+    key: node.kubernetes.io/memory-pressure
+    operator: Exists
+  volumes:
+  - name: kube-api-access-spff6
+    projected:
+      defaultMode: 420
+      sources:
+      - serviceAccountToken:
+          expirationSeconds: 3607
+          path: token
+      - configMap:
+          items:
+          - key: ca.crt
+            path: ca.crt
+          name: kube-root-ca.crt
+      - downwardAPI:
+          items:
+          - fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.namespace
+            path: namespace
+      - configMap:
+          items:
+          - key: service-ca.crt
+            path: service-ca.crt
+          name: openshift-service-ca.crt
+status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-03T20:09:42Z"
+    status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-03T20:09:57Z"
+    status: "True"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-03T20:09:57Z"
+    status: "True"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-03T20:09:42Z"
+    status: "True"
+    type: PodScheduled
+  containerStatuses:
+  - containerID: cri-o://33f264de4e31fa06c0f0d618b4c6ba04b63547ca86a9b7c4a4854194ab314804
+    image: registry.redhat.io/openshift-serverless-1/net-istio-webhook-rhel8@sha256:c317e8815afc35c8e8a800bd1c9a127126359b954beddf54a196db66c7f1a8f3
+    imageID: registry.redhat.io/openshift-serverless-1/net-istio-webhook-rhel8@sha256:729d6e4a11c727107df48845c44da3122f33c719635c608cccb188ebc02dfddf
+    lastState: {}
+    name: webhook
+    ready: true
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2023-03-03T20:09:57Z"
+  hostIP: 10.0.128.4
+  phase: Running
+  podIP: 10.129.2.37
+  podIPs:
+  - ip: 10.129.2.37
+  qosClass: Burstable
+  startTime: "2023-03-03T20:09:42Z"

@@ -1,0 +1,221 @@
+---
+apiVersion: discovery.k8s.io/v1
+items:
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - 10.129.2.17
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: ci-ln-4zhdf4b-72292-lw57b-worker-c-szhjg
+    targetRef:
+      kind: Pod
+      name: istio-operator-746b578f6f-h87nd
+      namespace: openshift-operators
+      uid: c9083046-3db1-4640-ac57-968d50c13a91
+    zone: us-central1-c
+  kind: EndpointSlice
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2023-03-03T20:02:43Z"
+    creationTimestamp: "2023-03-03T20:02:11Z"
+    generateName: istio-operator-metrics-
+    generation: 3
+    labels:
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      kubernetes.io/service-name: istio-operator-metrics
+      name: istio-operator
+    name: istio-operator-metrics-dmn6m
+    namespace: openshift-operators
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: istio-operator-metrics
+      uid: 6dbe4e7a-e65e-4715-aef0-73520c0662b2
+    resourceVersion: "34035"
+    uid: d099f112-ac8e-4d7c-875f-bae8b66bbd5a
+  ports:
+  - name: cr-metrics
+    port: 8686
+    protocol: TCP
+  - name: http-metrics
+    port: 8383
+    protocol: TCP
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - 10.129.2.15
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: ci-ln-4zhdf4b-72292-lw57b-worker-c-szhjg
+    targetRef:
+      kind: Pod
+      name: jaeger-operator-7c8984f44c-qnjsw
+      namespace: openshift-operators
+      uid: 8167ef2b-7871-472b-971f-86cf5e74af0c
+    zone: us-central1-c
+  kind: EndpointSlice
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2023-03-03T20:02:08Z"
+    creationTimestamp: "2023-03-03T20:01:31Z"
+    generateName: jaeger-operator-metrics-
+    generation: 3
+    labels:
+      app.kubernetes.io/component: metrics
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      kubernetes.io/service-name: jaeger-operator-metrics
+      name: jaeger-operator
+      operators.coreos.com/jaeger-product.openshift-operators: ""
+    name: jaeger-operator-metrics-5bs7f
+    namespace: openshift-operators
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: jaeger-operator-metrics
+      uid: 68956d24-70d7-488f-bc53-8f3957b8f3ac
+    resourceVersion: "33465"
+    uid: f5a02b3e-1a0a-4a0a-84c8-6203a178857e
+  ports:
+  - name: https
+    port: 8443
+    protocol: TCP
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - 10.129.2.15
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: ci-ln-4zhdf4b-72292-lw57b-worker-c-szhjg
+    targetRef:
+      kind: Pod
+      name: jaeger-operator-7c8984f44c-qnjsw
+      namespace: openshift-operators
+      uid: 8167ef2b-7871-472b-971f-86cf5e74af0c
+    zone: us-central1-c
+  kind: EndpointSlice
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2023-03-03T20:02:08Z"
+    creationTimestamp: "2023-03-03T20:01:37Z"
+    generateName: jaeger-operator-service-
+    generation: 3
+    labels:
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      kubernetes.io/service-name: jaeger-operator-service
+      operators.coreos.com/jaeger-product.openshift-operators: ""
+    name: jaeger-operator-service-x9gjk
+    namespace: openshift-operators
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: jaeger-operator-service
+      uid: 53bf8d4f-1b6e-4d6b-8fd9-f2b791bd02b9
+    resourceVersion: "33472"
+    uid: 6e8cfb68-4674-4904-8e28-b4aa436c1106
+  ports:
+  - name: "443"
+    port: 9443
+    protocol: TCP
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - 10.129.2.15
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: ci-ln-4zhdf4b-72292-lw57b-worker-c-szhjg
+    targetRef:
+      kind: Pod
+      name: jaeger-operator-7c8984f44c-qnjsw
+      namespace: openshift-operators
+      uid: 8167ef2b-7871-472b-971f-86cf5e74af0c
+    zone: us-central1-c
+  kind: EndpointSlice
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2023-03-03T20:02:08Z"
+    creationTimestamp: "2023-03-03T20:01:32Z"
+    generateName: jaeger-operator-webhook-service-
+    generation: 3
+    labels:
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      kubernetes.io/service-name: jaeger-operator-webhook-service
+      name: jaeger-operator
+      operators.coreos.com/jaeger-product.openshift-operators: ""
+    name: jaeger-operator-webhook-service-r49p4
+    namespace: openshift-operators
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: jaeger-operator-webhook-service
+      uid: d05ad450-ab77-420c-a6ba-e6961926c4cd
+    resourceVersion: "33467"
+    uid: 747de9a8-3618-46c7-9a8e-4914b04586e7
+  ports:
+  - name: ""
+    port: 9443
+    protocol: TCP
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - 10.129.2.17
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: ci-ln-4zhdf4b-72292-lw57b-worker-c-szhjg
+    targetRef:
+      kind: Pod
+      name: istio-operator-746b578f6f-h87nd
+      namespace: openshift-operators
+      uid: c9083046-3db1-4640-ac57-968d50c13a91
+    zone: us-central1-c
+  kind: EndpointSlice
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2023-03-03T20:02:43Z"
+    creationTimestamp: "2023-03-03T20:02:07Z"
+    generateName: maistra-admission-controller-
+    generation: 3
+    labels:
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      kubernetes.io/service-name: maistra-admission-controller
+    name: maistra-admission-controller-wxvcg
+    namespace: openshift-operators
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: maistra-admission-controller
+      uid: 3931044c-8f8f-4404-8c4d-cac1a2de2b2f
+    resourceVersion: "34033"
+    uid: 86d4a05f-6a20-474e-b88f-524e79dca574
+  ports:
+  - name: validation
+    port: 11999
+    protocol: TCP
+kind: EndpointSliceList
+metadata:
+  resourceVersion: "61037"

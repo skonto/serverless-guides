@@ -1,0 +1,71 @@
+2023/03/03 20:09:53 Registering 4 clients
+2023/03/03 20:09:53 Registering 5 informer factories
+2023/03/03 20:09:53 Registering 5 informers
+2023/03/03 20:09:53 Registering 1 filtered informers
+2023/03/03 20:09:53 Registering 2 controllers
+2023/03/03 20:09:53 Failed to get k8s version Get "https://172.30.0.1:443/version": dial tcp 172.30.0.1:443: connect: connection refused
+2023/03/03 20:09:54 Failed to get k8s version Get "https://172.30.0.1:443/version": dial tcp 172.30.0.1:443: connect: connection refused
+2023/03/03 20:09:55 Failed to get k8s version Get "https://172.30.0.1:443/version": dial tcp 172.30.0.1:443: connect: connection refused
+2023/03/03 20:09:56 Failed to get k8s version Get "https://172.30.0.1:443/version": dial tcp 172.30.0.1:443: connect: connection refused
+2023/03/03 20:09:57 Failed to get k8s version Get "https://172.30.0.1:443/version": dial tcp 172.30.0.1:443: connect: connection refused
+2023/03/03 20:09:58 Failed to get k8s version Get "https://172.30.0.1:443/version": dial tcp 172.30.0.1:443: connect: connection refused
+2023/03/03 20:09:59 Failed to get k8s version Get "https://172.30.0.1:443/version": dial tcp 172.30.0.1:443: connect: connection refused
+2023/03/03 20:10:00 Failed to get k8s version Get "https://172.30.0.1:443/version": dial tcp 172.30.0.1:443: connect: connection refused
+2023/03/03 20:10:01 Failed to get k8s version Get "https://172.30.0.1:443/version": dial tcp 172.30.0.1:443: connect: connection refused
+2023/03/03 20:10:02 Failed to get k8s version Get "https://172.30.0.1:443/version": dial tcp 172.30.0.1:443: connect: connection refused
+2023/03/03 20:10:03 Failed to get k8s version Get "https://172.30.0.1:443/version": dial tcp 172.30.0.1:443: connect: connection refused
+2023/03/03 20:10:04 Failed to get k8s version Get "https://172.30.0.1:443/version": dial tcp 172.30.0.1:443: connect: connection refused
+2023/03/03 20:10:05 Failed to get k8s version Get "https://172.30.0.1:443/version": dial tcp 172.30.0.1:443: connect: connection refused
+2023/03/03 20:10:06 Failed to get k8s version Get "https://172.30.0.1:443/version": dial tcp 172.30.0.1:443: connect: connection refused
+2023/03/03 20:10:07 Failed to get k8s version Get "https://172.30.0.1:443/version": dial tcp 172.30.0.1:443: connect: connection refused
+2023/03/03 20:10:08 Failed to get k8s version Get "https://172.30.0.1:443/version": dial tcp 172.30.0.1:443: connect: connection refused
+2023/03/03 20:10:09 Failed to get k8s version Get "https://172.30.0.1:443/version": dial tcp 172.30.0.1:443: connect: connection refused
+2023/03/03 20:10:10 Failed to get k8s version Get "https://172.30.0.1:443/version": dial tcp 172.30.0.1:443: connect: connection refused
+2023/03/03 20:10:11 Failed to get k8s version Get "https://172.30.0.1:443/version": dial tcp 172.30.0.1:443: connect: connection refused
+2023/03/03 20:10:12 Failed to get k8s version Get "https://172.30.0.1:443/version": dial tcp 172.30.0.1:443: connect: connection refused
+2023/03/03 20:10:13 Failed to get k8s version Get "https://172.30.0.1:443/version": dial tcp 172.30.0.1:443: connect: connection refused
+{"severity":"INFO","timestamp":"2023-03-03T20:10:14.983905716Z","caller":"logging/config.go:80","message":"Fetch GitHub commit ID from kodata failed","error":"\"KO_DATA_PATH\" does not exist or is empty"}
+{"severity":"INFO","timestamp":"2023-03-03T20:10:14.984140788Z","logger":"autoscaler","caller":"profiling/server.go:64","message":"Profiling enabled: false"}
+{"severity":"INFO","timestamp":"2023-03-03T20:10:14.99425015Z","logger":"autoscaler","caller":"kpa/controller.go:75","message":"Setting up ConfigMap receivers"}
+{"severity":"INFO","timestamp":"2023-03-03T20:10:14.994385235Z","logger":"autoscaler","caller":"kpa/controller.go:89","message":"Setting up KPA-Class event handlers"}
+{"severity":"INFO","timestamp":"2023-03-03T20:10:15.210494105Z","logger":"autoscaler","caller":"autoscaler/main.go:177","message":"Running with Standard leader election"}
+{"severity":"INFO","timestamp":"2023-03-03T20:10:15.211254253Z","logger":"autoscaler","caller":"leaderelection/context.go:149","message":"autoscaler-bucket-00-of-01 will run in leader-elected mode with id \"autoscaler-67df785744-m8k8c_10.128.2.22\""}
+{"severity":"INFO","timestamp":"2023-03-03T20:10:15.211310099Z","logger":"autoscaler","caller":"controller/controller.go:486","message":"Starting controller and workers","knative.dev/controller":"knative.dev.serving.pkg.reconciler.metric.reconciler","knative.dev/kind":"autoscaling.internal.knative.dev.Metric"}
+{"severity":"INFO","timestamp":"2023-03-03T20:10:15.211325997Z","logger":"autoscaler","caller":"controller/controller.go:496","message":"Started workers","knative.dev/controller":"knative.dev.serving.pkg.reconciler.metric.reconciler","knative.dev/kind":"autoscaling.internal.knative.dev.Metric"}
+{"severity":"INFO","timestamp":"2023-03-03T20:10:15.211348325Z","logger":"autoscaler.stats-websocket-server","caller":"statserver/server.go:96","message":"Starting","address":":8080"}
+{"severity":"INFO","timestamp":"2023-03-03T20:10:15.211474596Z","logger":"autoscaler","caller":"leaderelection/context.go:149","message":"autoscaler-bucket-00-of-01 will run in leader-elected mode with id \"autoscaler-67df785744-m8k8c_10.128.2.22\""}
+{"severity":"INFO","timestamp":"2023-03-03T20:10:15.211521912Z","logger":"autoscaler","caller":"controller/controller.go:486","message":"Starting controller and workers","knative.dev/controller":"knative.dev.serving.pkg.reconciler.autoscaling.kpa.Reconciler","knative.dev/kind":"autoscaling.internal.knative.dev.PodAutoscaler"}
+{"severity":"INFO","timestamp":"2023-03-03T20:10:15.211534202Z","logger":"autoscaler","caller":"controller/controller.go:496","message":"Started workers","knative.dev/controller":"knative.dev.serving.pkg.reconciler.autoscaling.kpa.Reconciler","knative.dev/kind":"autoscaling.internal.knative.dev.PodAutoscaler"}
+I0303 20:10:15.211595       1 leaderelection.go:248] attempting to acquire leader lease knative-serving/autoscaler-bucket-00-of-01...
+I0303 20:10:15.211875       1 leaderelection.go:248] attempting to acquire leader lease knative-serving/autoscaler-bucket-00-of-01...
+2023-03-03T20:10:03.717582Z	info	citadelclient	Citadel client using custom root cert: istiod-basic.istio-system.svc:15012
+2023-03-03T20:10:03.747407Z	info	ads	All caches have been synced up in 35.371007ms, marking server ready
+2023-03-03T20:10:03.748010Z	info	sds	SDS server for workload certificates started, listening on "./etc/istio/proxy/SDS"
+2023-03-03T20:10:03.748110Z	info	sds	Start SDS grpc server
+2023-03-03T20:10:03.748583Z	info	xdsproxy	Initializing with upstream address "istiod-basic.istio-system.svc:15012" and cluster "Kubernetes"
+2023-03-03T20:10:03.749658Z	info	dns	Starting local udp DNS server at localhost:15053
+2023-03-03T20:10:03.749780Z	info	dns	Starting local tcp DNS server at localhost:15053
+2023-03-03T20:10:03.925058Z	info	cache	Root cert has changed, start rotating root cert
+2023-03-03T20:10:03.925095Z	info	ads	XDS: Incremental Pushing:0 ConnectedEndpoints:0 Version:
+2023-03-03T20:10:03.925109Z	info	cache	generated new workload certificate	latency=177.224795ms ttl=23h59m59.074898574s
+2023-03-03T20:10:05.042362Z	error	Request to probe app failed: Get "http://localhost:8080/": dial tcp [::1]:8080: connect: connection refused, original URL path = /app-health/autoscaler/readyz
+app URL path = /
+2023-03-03T20:10:06.042025Z	error	Request to probe app failed: Get "http://localhost:8080/": dial tcp [::1]:8080: connect: connection refused, original URL path = /app-health/autoscaler/readyz
+app URL path = /
+2023-03-03T20:10:07.043826Z	error	Request to probe app failed: Get "http://localhost:8080/": dial tcp [::1]:8080: connect: connection refused, original URL path = /app-health/autoscaler/readyz
+app URL path = /
+2023-03-03T20:10:09.882342Z	error	Request to probe app failed: Get "http://localhost:8080/": dial tcp [::1]:8080: connect: connection refused, original URL path = /app-health/autoscaler/livez
+app URL path = /
+2023-03-03T20:10:09.882510Z	error	Request to probe app failed: Get "http://localhost:8080/": dial tcp [::1]:8080: connect: connection refused, original URL path = /app-health/autoscaler/readyz
+app URL path = /
+2023-03-03T20:10:14.059939Z	warn	Error fetching GCP zone: Get "http://169.254.169.254/computeMetadata/v1/instance/zone": dial tcp 169.254.169.254:80: connect: connection refused
+2023-03-03T20:10:14.129465Z	warning	envoy runtime	Unable to use runtime singleton for feature envoy.http.headermap.lazy_map_min_size
+2023-03-03T20:10:14.129563Z	warning	envoy runtime	Unable to use runtime singleton for feature envoy.http.headermap.lazy_map_min_size
+2023-03-03T20:10:14.130279Z	warning	envoy runtime	Unable to use runtime singleton for feature envoy.http.headermap.lazy_map_min_size
+2023-03-03T20:10:14.130339Z	warning	envoy runtime	Unable to use runtime singleton for feature envoy.http.headermap.lazy_map_min_size
+2023-03-03T20:10:14.177843Z	info	xdsproxy	connected to upstream XDS server: istiod-basic.istio-system.svc:15012
+2023-03-03T20:10:14.251983Z	info	ads	ADS: new connection for node:sidecar~10.128.2.22~autoscaler-67df785744-m8k8c.knative-serving~knative-serving.svc.cluster.local-2
+2023-03-03T20:10:14.252106Z	info	cache	returned workload certificate from cache	ttl=23h59m48.747903398s
+2023-03-03T20:10:14.252105Z	info	ads	ADS: new connection for node:sidecar~10.128.2.22~autoscaler-67df785744-m8k8c.knative-serving~knative-serving.svc.cluster.local-1
+2023-03-03T20:10:14.252376Z	info	sds	SDS: PUSH	resource=default
+2023-03-03T20:10:14.252543Z	info	sds	SDS: PUSH	resource=ROOTCA

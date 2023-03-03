@@ -1,0 +1,125 @@
+Name:         helloworld-go-00001
+Namespace:    user-ns
+Labels:       app=helloworld-go
+              serving.knative.dev/configuration=helloworld-go
+              serving.knative.dev/configurationGeneration=1
+              serving.knative.dev/configurationUID=f6730460-522d-4ebe-b323-b0f4b37e4898
+              serving.knative.dev/routingState=active
+              serving.knative.dev/service=helloworld-go
+              serving.knative.dev/serviceUID=d558b282-1662-40cf-9923-df98602a2224
+Annotations:  autoscaling.knative.dev/minScale: 1
+              autoscaling.knative.dev/target: 10
+              autoscaling.knative.dev/targetBurstCapacity: 0
+              serving.knative.dev/creator: system:admin
+              serving.knative.dev/routes: helloworld-go
+              serving.knative.dev/routingStateModified: 2023-03-03T20:11:48Z
+              sidecar.istio.io/inject: true
+              sidecar.istio.io/rewriteAppHTTPProbers: true
+API Version:  serving.knative.dev/v1
+Kind:         Revision
+Metadata:
+  Creation Timestamp:  2023-03-03T20:11:48Z
+  Generation:          1
+  Managed Fields:
+    API Version:  serving.knative.dev/v1
+    Fields Type:  FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .:
+          f:autoscaling.knative.dev/minScale:
+          f:autoscaling.knative.dev/target:
+          f:autoscaling.knative.dev/targetBurstCapacity:
+          f:serving.knative.dev/creator:
+          f:serving.knative.dev/routes:
+          f:serving.knative.dev/routingStateModified:
+          f:sidecar.istio.io/inject:
+          f:sidecar.istio.io/rewriteAppHTTPProbers:
+        f:labels:
+          .:
+          f:app:
+          f:serving.knative.dev/configuration:
+          f:serving.knative.dev/configurationGeneration:
+          f:serving.knative.dev/configurationUID:
+          f:serving.knative.dev/routingState:
+          f:serving.knative.dev/service:
+          f:serving.knative.dev/serviceUID:
+        f:ownerReferences:
+          .:
+          k:{"uid":"f6730460-522d-4ebe-b323-b0f4b37e4898"}:
+      f:spec:
+        .:
+        f:containerConcurrency:
+        f:containers:
+        f:enableServiceLinks:
+        f:timeoutSeconds:
+    Manager:      Go-http-client
+    Operation:    Update
+    Time:         2023-03-03T20:11:48Z
+    API Version:  serving.knative.dev/v1
+    Fields Type:  FieldsV1
+    fieldsV1:
+      f:status:
+        .:
+        f:actualReplicas:
+        f:conditions:
+        f:containerStatuses:
+        f:desiredReplicas:
+        f:observedGeneration:
+    Manager:      Go-http-client
+    Operation:    Update
+    Subresource:  status
+    Time:         2023-03-03T20:12:11Z
+  Owner References:
+    API Version:           serving.knative.dev/v1
+    Block Owner Deletion:  true
+    Controller:            true
+    Kind:                  Configuration
+    Name:                  helloworld-go
+    UID:                   f6730460-522d-4ebe-b323-b0f4b37e4898
+  Resource Version:        42082
+  UID:                     b112ab15-7cfb-4148-83ac-6223c437b2d4
+Spec:
+  Container Concurrency:  0
+  Containers:
+    Env:
+      Name:             TARGET
+      Value:            Go Sample v1
+    Image:              docker.io/skonto/helloworld-go
+    Image Pull Policy:  Always
+    Name:               user-container
+    Readiness Probe:
+      Success Threshold:  1
+      Tcp Socket:
+        Port:  0
+    Resources:
+      Requests:
+        Cpu:             200m
+  Enable Service Links:  false
+  Timeout Seconds:       300
+Status:
+  Actual Replicas:  1
+  Conditions:
+    Last Transition Time:  2023-03-03T20:12:09Z
+    Severity:              Info
+    Status:                True
+    Type:                  Active
+    Last Transition Time:  2023-03-03T20:12:09Z
+    Status:                True
+    Type:                  ContainerHealthy
+    Last Transition Time:  2023-03-03T20:12:09Z
+    Status:                True
+    Type:                  Ready
+    Last Transition Time:  2023-03-03T20:12:09Z
+    Status:                True
+    Type:                  ResourcesAvailable
+  Container Statuses:
+    Image Digest:       index.docker.io/skonto/helloworld-go@sha256:dd20d7659c16bdc58c09740a543ef3c36b7c04742a2b6b280a30c2a76dcf6c09
+    Name:               user-container
+  Desired Replicas:     1
+  Observed Generation:  1
+Events:
+  Type     Reason         Age                From                 Message
+  ----     ------         ----               ----                 -------
+  Warning  InternalError  12m (x2 over 12m)  revision-controller  failed to update deployment "helloworld-go-00001-deployment": Operation cannot be fulfilled on deployments.apps "helloworld-go-00001-deployment": the object has been modified; please apply your changes to the latest version and try again
+  Normal   RevisionReady  12m                revision-controller  Revision becomes ready upon all resources being ready

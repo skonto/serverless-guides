@@ -1,0 +1,24 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"rbac.authorization.k8s.io/v1","kind":"ClusterRole","metadata":{"labels":{"app.kubernetes.io/name":"knative-serving","app.kubernetes.io/version":"1.5.0","duck.knative.dev/podspecable":"true"},"name":"knative-serving-podspecable-binding"},"rules":[{"apiGroups":["serving.knative.dev"],"resources":["configurations","services"],"verbs":["list","watch","patch"]}]}
+  creationTimestamp: "2023-03-03T20:09:29Z"
+  labels:
+    app.kubernetes.io/name: knative-serving
+    app.kubernetes.io/version: 1.5.0
+    duck.knative.dev/podspecable: "true"
+  name: knative-serving-podspecable-binding
+  resourceVersion: "39767"
+  uid: a68ffea9-dbb1-47d8-81ca-3257b71a9595
+rules:
+- apiGroups:
+  - serving.knative.dev
+  resources:
+  - configurations
+  - services
+  verbs:
+  - list
+  - watch
+  - patch

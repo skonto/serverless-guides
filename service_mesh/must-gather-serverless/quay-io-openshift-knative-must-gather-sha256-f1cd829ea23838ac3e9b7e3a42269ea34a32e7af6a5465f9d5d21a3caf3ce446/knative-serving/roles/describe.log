@@ -1,0 +1,58 @@
+Name:         kiali
+Labels:       app=kiali
+              app.kubernetes.io/instance=kiali
+              app.kubernetes.io/name=kiali
+              app.kubernetes.io/part-of=kiali
+              app.kubernetes.io/version=13442c85948c6ef194b3c0a5547f6deb44e6318b2326a563cd324b50ca75XXX
+              version=13442c85948c6ef194b3c0a5547f6deb44e6318b2326a563cd324b50ca75XXX
+Annotations:  operator-sdk/primary-resource: istio-system/kiali
+              operator-sdk/primary-resource-type: Kiali.kiali.io
+PolicyRule:
+  Resources                            Non-Resource URLs  Resource Names  Verbs
+  ---------                            -----------------  --------------  -----
+  pods/portforward                     []                 []              [create post]
+  tokenreviews.authentication.k8s.io   []                 []              [create]
+  experiments.iter8.tools              []                 []              [get list watch create delete patch]
+  *.networking.istio.io                []                 []              [get list watch create delete patch]
+  *.security.istio.io                  []                 []              [get list watch create delete patch]
+  namespaces                           []                 []              [get list watch patch]
+  pods                                 []                 []              [get list watch patch]
+  replicationcontrollers               []                 []              [get list watch patch]
+  services                             []                 []              [get list watch patch]
+  deploymentconfigs.apps.openshift.io  []                 []              [get list watch patch]
+  daemonsets.apps                      []                 []              [get list watch patch]
+  deployments.apps                     []                 []              [get list watch patch]
+  replicasets.apps                     []                 []              [get list watch patch]
+  statefulsets.apps                    []                 []              [get list watch patch]
+  cronjobs.batch                       []                 []              [get list watch patch]
+  jobs.batch                           []                 []              [get list watch patch]
+  daemonsets.extensions                []                 []              [get list watch patch]
+  deployments.extensions               []                 []              [get list watch patch]
+  replicasets.extensions               []                 []              [get list watch patch]
+  statefulsets.extensions              []                 []              [get list watch patch]
+  configmaps                           []                 []              [get list watch]
+  endpoints                            []                 []              [get list watch]
+  pods/log                             []                 []              [get list watch]
+  pods/proxy                           []                 []              [get list watch]
+  projects.project.openshift.io        []                 []              [get]
+  routes.route.openshift.io            []                 []              [get]
+
+
+Name:         knative-prometheus-k8s
+Labels:       <none>
+Annotations:  <none>
+PolicyRule:
+  Resources  Non-Resource URLs  Resource Names  Verbs
+  ---------  -----------------  --------------  -----
+  endpoints  []                 []              [get list watch]
+  pods       []                 []              [get list watch]
+  services   []                 []              [get list watch]
+
+
+Name:         openshift-serverless-view-serving-configmaps
+Labels:       <none>
+Annotations:  <none>
+PolicyRule:
+  Resources   Non-Resource URLs  Resource Names       Verbs
+  ---------   -----------------  --------------       -----
+  configmaps  []                 [config-autoscaler]  [get list watch]

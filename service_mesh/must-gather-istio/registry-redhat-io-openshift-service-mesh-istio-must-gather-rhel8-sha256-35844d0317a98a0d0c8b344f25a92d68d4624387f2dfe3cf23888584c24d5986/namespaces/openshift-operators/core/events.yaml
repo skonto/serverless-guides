@@ -1,0 +1,3854 @@
+---
+apiVersion: v1
+items:
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:02:05Z"
+  involvedObject:
+    apiVersion: coordination.k8s.io/v1
+    kind: Lease
+    name: 31e04290.jaegertracing.io
+    namespace: openshift-operators
+    resourceVersion: "33321"
+    uid: f7459e06-46e9-41be-9069-9d8ea47c1f9b
+  kind: Event
+  lastTimestamp: "2023-03-03T20:02:05Z"
+  message: jaeger-operator-7c8984f44c-qnjsw_b304b6f3-8d27-4282-b79b-599335a95589 became
+    leader
+  metadata:
+    creationTimestamp: "2023-03-03T20:02:05Z"
+    name: 31e04290.jaegertracing.io.1749014370e8cf32
+    namespace: openshift-operators
+    resourceVersion: "33322"
+    uid: 807b91e5-ee23-49a3-806a-fd5bcbc089e7
+  reason: LeaderElection
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: jaeger-operator-7c8984f44c-qnjsw_b304b6f3-8d27-4282-b79b-599335a95589
+  type: Normal
+- action: Binding
+  apiVersion: v1
+  eventTime: "2023-03-03T20:02:56.588264Z"
+  firstTimestamp: null
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: istio-cni-node-2nx56
+    namespace: openshift-operators
+    resourceVersion: "34390"
+    uid: f006421c-21fd-4841-83c1-3e10d6f542a4
+  kind: Event
+  lastTimestamp: null
+  message: Successfully assigned openshift-operators/istio-cni-node-2nx56 to ci-ln-4zhdf4b-72292-lw57b-worker-b-wtt2s
+  metadata:
+    creationTimestamp: "2023-03-03T20:02:56Z"
+    name: istio-cni-node-2nx56.1749014f5f7cb51f
+    namespace: openshift-operators
+    resourceVersion: "34398"
+    uid: 108ef75b-ca1c-4559-a48b-d8155f9edcb7
+  reason: Scheduled
+  reportingComponent: default-scheduler
+  reportingInstance: default-scheduler-ci-ln-4zhdf4b-72292-lw57b-master-1
+  source: {}
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:02:57Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: istio-cni-node-2nx56
+    namespace: openshift-operators
+    resourceVersion: "34401"
+    uid: f006421c-21fd-4841-83c1-3e10d6f542a4
+  kind: Event
+  lastTimestamp: "2023-03-03T20:02:57Z"
+  message: Add eth0 [10.128.2.18/23] from ovn-kubernetes
+  metadata:
+    creationTimestamp: "2023-03-03T20:02:57Z"
+    name: istio-cni-node-2nx56.1749014f9c392855
+    namespace: openshift-operators
+    resourceVersion: "34455"
+    uid: 20f6f968-6973-403f-98d5-d9161d1be592
+  reason: AddedInterface
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: multus
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:02:57Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{install-cni-v2-0}
+    kind: Pod
+    name: istio-cni-node-2nx56
+    namespace: openshift-operators
+    resourceVersion: "34391"
+    uid: f006421c-21fd-4841-83c1-3e10d6f542a4
+  kind: Event
+  lastTimestamp: "2023-03-03T20:02:57Z"
+  message: Pulling image "registry.redhat.io/openshift-service-mesh/istio-cni-rhel8@sha256:161b3438a666469b230602b85d5c207f0f225210b5ba18c6ee7b9ae08127af23"
+  metadata:
+    creationTimestamp: "2023-03-03T20:02:57Z"
+    name: istio-cni-node-2nx56.1749014fb28782f9
+    namespace: openshift-operators
+    resourceVersion: "34466"
+    uid: cdcd972d-7692-4423-b7d2-ee4895631c82
+  reason: Pulling
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-worker-b-wtt2s
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:03:02Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{install-cni-v2-0}
+    kind: Pod
+    name: istio-cni-node-2nx56
+    namespace: openshift-operators
+    resourceVersion: "34391"
+    uid: f006421c-21fd-4841-83c1-3e10d6f542a4
+  kind: Event
+  lastTimestamp: "2023-03-03T20:03:02Z"
+  message: Successfully pulled image "registry.redhat.io/openshift-service-mesh/istio-cni-rhel8@sha256:161b3438a666469b230602b85d5c207f0f225210b5ba18c6ee7b9ae08127af23"
+    in 4.337689536s
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:02Z"
+    name: istio-cni-node-2nx56.17490150b513c4b7
+    namespace: openshift-operators
+    resourceVersion: "34522"
+    uid: bbd22189-9d25-479c-8566-04a8716ea7e7
+  reason: Pulled
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-worker-b-wtt2s
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:03:02Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{install-cni-v2-0}
+    kind: Pod
+    name: istio-cni-node-2nx56
+    namespace: openshift-operators
+    resourceVersion: "34391"
+    uid: f006421c-21fd-4841-83c1-3e10d6f542a4
+  kind: Event
+  lastTimestamp: "2023-03-03T20:03:02Z"
+  message: Created container install-cni-v2-0
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:02Z"
+    name: istio-cni-node-2nx56.17490150bce348be
+    namespace: openshift-operators
+    resourceVersion: "34526"
+    uid: 2a6481a4-8be9-441a-9cc5-5f5e5b42109c
+  reason: Created
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-worker-b-wtt2s
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:03:02Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{install-cni-v2-0}
+    kind: Pod
+    name: istio-cni-node-2nx56
+    namespace: openshift-operators
+    resourceVersion: "34391"
+    uid: f006421c-21fd-4841-83c1-3e10d6f542a4
+  kind: Event
+  lastTimestamp: "2023-03-03T20:03:02Z"
+  message: Started container install-cni-v2-0
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:02Z"
+    name: istio-cni-node-2nx56.17490150be88952d
+    namespace: openshift-operators
+    resourceVersion: "34528"
+    uid: ab9f507c-61d6-47b2-93c8-793329260854
+  reason: Started
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-worker-b-wtt2s
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:03:02Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{install-cni-v2-1}
+    kind: Pod
+    name: istio-cni-node-2nx56
+    namespace: openshift-operators
+    resourceVersion: "34391"
+    uid: f006421c-21fd-4841-83c1-3e10d6f542a4
+  kind: Event
+  lastTimestamp: "2023-03-03T20:03:02Z"
+  message: Pulling image "registry.redhat.io/openshift-service-mesh/istio-cni-rhel8@sha256:5c0eacb3024dab93e376c2edc60a02b066b62de5f40d81628d80ecd4f4a7dc4b"
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:02Z"
+    name: istio-cni-node-2nx56.17490150be987aee
+    namespace: openshift-operators
+    resourceVersion: "34529"
+    uid: cd45dfe7-979e-497f-b035-ab0fdbd4c0c4
+  reason: Pulling
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-worker-b-wtt2s
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:03:06Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{install-cni-v2-1}
+    kind: Pod
+    name: istio-cni-node-2nx56
+    namespace: openshift-operators
+    resourceVersion: "34391"
+    uid: f006421c-21fd-4841-83c1-3e10d6f542a4
+  kind: Event
+  lastTimestamp: "2023-03-03T20:03:06Z"
+  message: Successfully pulled image "registry.redhat.io/openshift-service-mesh/istio-cni-rhel8@sha256:5c0eacb3024dab93e376c2edc60a02b066b62de5f40d81628d80ecd4f4a7dc4b"
+    in 4.471559578s
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:06Z"
+    name: istio-cni-node-2nx56.17490151c91f5894
+    namespace: openshift-operators
+    resourceVersion: "34566"
+    uid: f59554a3-b227-4c82-8348-5cf36d8d7eb5
+  reason: Pulled
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-worker-b-wtt2s
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:03:07Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{install-cni-v2-1}
+    kind: Pod
+    name: istio-cni-node-2nx56
+    namespace: openshift-operators
+    resourceVersion: "34391"
+    uid: f006421c-21fd-4841-83c1-3e10d6f542a4
+  kind: Event
+  lastTimestamp: "2023-03-03T20:03:07Z"
+  message: Created container install-cni-v2-1
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:07Z"
+    name: istio-cni-node-2nx56.17490151d3a80ef6
+    namespace: openshift-operators
+    resourceVersion: "34572"
+    uid: 5979085f-d846-42c6-9584-b71446de84b9
+  reason: Created
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-worker-b-wtt2s
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:03:07Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{install-cni-v2-1}
+    kind: Pod
+    name: istio-cni-node-2nx56
+    namespace: openshift-operators
+    resourceVersion: "34391"
+    uid: f006421c-21fd-4841-83c1-3e10d6f542a4
+  kind: Event
+  lastTimestamp: "2023-03-03T20:03:07Z"
+  message: Started container install-cni-v2-1
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:07Z"
+    name: istio-cni-node-2nx56.17490151d55cec25
+    namespace: openshift-operators
+    resourceVersion: "34573"
+    uid: 11f14c54-a20d-4660-a234-ca1fb16183bd
+  reason: Started
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-worker-b-wtt2s
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:03:07Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{install-cni-v2-2}
+    kind: Pod
+    name: istio-cni-node-2nx56
+    namespace: openshift-operators
+    resourceVersion: "34391"
+    uid: f006421c-21fd-4841-83c1-3e10d6f542a4
+  kind: Event
+  lastTimestamp: "2023-03-03T20:03:07Z"
+  message: Pulling image "registry.redhat.io/openshift-service-mesh/istio-cni-rhel8@sha256:a3f23302c832e418e55821328d859396f3fa79c5b8b08623251b33c0841ba892"
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:07Z"
+    name: istio-cni-node-2nx56.17490151d56e4a06
+    namespace: openshift-operators
+    resourceVersion: "34574"
+    uid: 429b5eb0-ce40-48db-903c-2affcb40a4aa
+  reason: Pulling
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-worker-b-wtt2s
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:03:12Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{install-cni-v2-2}
+    kind: Pod
+    name: istio-cni-node-2nx56
+    namespace: openshift-operators
+    resourceVersion: "34391"
+    uid: f006421c-21fd-4841-83c1-3e10d6f542a4
+  kind: Event
+  lastTimestamp: "2023-03-03T20:03:12Z"
+  message: Successfully pulled image "registry.redhat.io/openshift-service-mesh/istio-cni-rhel8@sha256:a3f23302c832e418e55821328d859396f3fa79c5b8b08623251b33c0841ba892"
+    in 5.363216677s
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:12Z"
+    name: istio-cni-node-2nx56.17490153151b0535
+    namespace: openshift-operators
+    resourceVersion: "34669"
+    uid: 8f60c9ad-8404-47d5-b864-34b56bbf5dd8
+  reason: Pulled
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-worker-b-wtt2s
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:03:12Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{install-cni-v2-2}
+    kind: Pod
+    name: istio-cni-node-2nx56
+    namespace: openshift-operators
+    resourceVersion: "34391"
+    uid: f006421c-21fd-4841-83c1-3e10d6f542a4
+  kind: Event
+  lastTimestamp: "2023-03-03T20:03:12Z"
+  message: Created container install-cni-v2-2
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:12Z"
+    name: istio-cni-node-2nx56.174901531e6ef696
+    namespace: openshift-operators
+    resourceVersion: "34679"
+    uid: ab442c77-7f57-4327-b3a9-503b0c7686d1
+  reason: Created
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-worker-b-wtt2s
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:03:12Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{install-cni-v2-2}
+    kind: Pod
+    name: istio-cni-node-2nx56
+    namespace: openshift-operators
+    resourceVersion: "34391"
+    uid: f006421c-21fd-4841-83c1-3e10d6f542a4
+  kind: Event
+  lastTimestamp: "2023-03-03T20:03:12Z"
+  message: Started container install-cni-v2-2
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:12Z"
+    name: istio-cni-node-2nx56.17490153201e4515
+    namespace: openshift-operators
+    resourceVersion: "34680"
+    uid: 93cbf510-b140-4de7-9f68-db1eda3ac831
+  reason: Started
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-worker-b-wtt2s
+  type: Normal
+- action: Binding
+  apiVersion: v1
+  eventTime: "2023-03-03T20:02:56.861504Z"
+  firstTimestamp: null
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: istio-cni-node-58xx9
+    namespace: openshift-operators
+    resourceVersion: "34409"
+    uid: 7ee4de7d-78c1-4bf6-89f2-273d2c0a6a4a
+  kind: Event
+  lastTimestamp: null
+  message: Successfully assigned openshift-operators/istio-cni-node-58xx9 to ci-ln-4zhdf4b-72292-lw57b-master-1
+  metadata:
+    creationTimestamp: "2023-03-03T20:02:56Z"
+    name: istio-cni-node-58xx9.1749014f6fc61419
+    namespace: openshift-operators
+    resourceVersion: "34420"
+    uid: a06065b9-3938-4749-9f00-d9de0ff368ae
+  reason: Scheduled
+  reportingComponent: default-scheduler
+  reportingInstance: default-scheduler-ci-ln-4zhdf4b-72292-lw57b-master-1
+  source: {}
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:02:58Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: istio-cni-node-58xx9
+    namespace: openshift-operators
+    resourceVersion: "34441"
+    uid: 7ee4de7d-78c1-4bf6-89f2-273d2c0a6a4a
+  kind: Event
+  lastTimestamp: "2023-03-03T20:02:58Z"
+  message: Add eth0 [10.129.0.68/23] from ovn-kubernetes
+  metadata:
+    creationTimestamp: "2023-03-03T20:02:58Z"
+    name: istio-cni-node-58xx9.1749014fcb6fa7c6
+    namespace: openshift-operators
+    resourceVersion: "34479"
+    uid: a5622b64-9a00-487d-a3ba-7f5a818c2249
+  reason: AddedInterface
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: multus
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:02:58Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{install-cni-v2-0}
+    kind: Pod
+    name: istio-cni-node-58xx9
+    namespace: openshift-operators
+    resourceVersion: "34415"
+    uid: 7ee4de7d-78c1-4bf6-89f2-273d2c0a6a4a
+  kind: Event
+  lastTimestamp: "2023-03-03T20:02:58Z"
+  message: Pulling image "registry.redhat.io/openshift-service-mesh/istio-cni-rhel8@sha256:161b3438a666469b230602b85d5c207f0f225210b5ba18c6ee7b9ae08127af23"
+  metadata:
+    creationTimestamp: "2023-03-03T20:02:58Z"
+    name: istio-cni-node-58xx9.1749014fd13ac924
+    namespace: openshift-operators
+    resourceVersion: "34482"
+    uid: fa7bcc5c-1cac-4aa1-b73f-08048c177a90
+  reason: Pulling
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-master-1
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:03:06Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{install-cni-v2-0}
+    kind: Pod
+    name: istio-cni-node-58xx9
+    namespace: openshift-operators
+    resourceVersion: "34415"
+    uid: 7ee4de7d-78c1-4bf6-89f2-273d2c0a6a4a
+  kind: Event
+  lastTimestamp: "2023-03-03T20:03:06Z"
+  message: Successfully pulled image "registry.redhat.io/openshift-service-mesh/istio-cni-rhel8@sha256:161b3438a666469b230602b85d5c207f0f225210b5ba18c6ee7b9ae08127af23"
+    in 8.155810971s
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:06Z"
+    name: istio-cni-node-58xx9.17490151b75afab2
+    namespace: openshift-operators
+    resourceVersion: "34559"
+    uid: f41957f2-3ec7-47b3-8a3b-33b4bb34faaa
+  reason: Pulled
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-master-1
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:03:06Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{install-cni-v2-0}
+    kind: Pod
+    name: istio-cni-node-58xx9
+    namespace: openshift-operators
+    resourceVersion: "34415"
+    uid: 7ee4de7d-78c1-4bf6-89f2-273d2c0a6a4a
+  kind: Event
+  lastTimestamp: "2023-03-03T20:03:06Z"
+  message: Created container install-cni-v2-0
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:06Z"
+    name: istio-cni-node-58xx9.17490151c8df7a98
+    namespace: openshift-operators
+    resourceVersion: "34565"
+    uid: 051d907d-f703-4cc9-a7ad-372578a0d158
+  reason: Created
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-master-1
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:03:06Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{install-cni-v2-0}
+    kind: Pod
+    name: istio-cni-node-58xx9
+    namespace: openshift-operators
+    resourceVersion: "34415"
+    uid: 7ee4de7d-78c1-4bf6-89f2-273d2c0a6a4a
+  kind: Event
+  lastTimestamp: "2023-03-03T20:03:06Z"
+  message: Started container install-cni-v2-0
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:06Z"
+    name: istio-cni-node-58xx9.17490151cbc35134
+    namespace: openshift-operators
+    resourceVersion: "34568"
+    uid: f6ea6daa-752e-47a2-b194-b487184ae50f
+  reason: Started
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-master-1
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:03:06Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{install-cni-v2-1}
+    kind: Pod
+    name: istio-cni-node-58xx9
+    namespace: openshift-operators
+    resourceVersion: "34415"
+    uid: 7ee4de7d-78c1-4bf6-89f2-273d2c0a6a4a
+  kind: Event
+  lastTimestamp: "2023-03-03T20:03:06Z"
+  message: Pulling image "registry.redhat.io/openshift-service-mesh/istio-cni-rhel8@sha256:5c0eacb3024dab93e376c2edc60a02b066b62de5f40d81628d80ecd4f4a7dc4b"
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:07Z"
+    name: istio-cni-node-58xx9.17490151cc0ee2d0
+    namespace: openshift-operators
+    resourceVersion: "34570"
+    uid: 2b0ea419-5f21-44f1-a5e0-304faef04675
+  reason: Pulling
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-master-1
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:03:16Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{install-cni-v2-1}
+    kind: Pod
+    name: istio-cni-node-58xx9
+    namespace: openshift-operators
+    resourceVersion: "34415"
+    uid: 7ee4de7d-78c1-4bf6-89f2-273d2c0a6a4a
+  kind: Event
+  lastTimestamp: "2023-03-03T20:03:16Z"
+  message: Successfully pulled image "registry.redhat.io/openshift-service-mesh/istio-cni-rhel8@sha256:5c0eacb3024dab93e376c2edc60a02b066b62de5f40d81628d80ecd4f4a7dc4b"
+    in 9.682678677s
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:16Z"
+    name: istio-cni-node-58xx9.174901540d31941b
+    namespace: openshift-operators
+    resourceVersion: "34752"
+    uid: a5cb9bda-2892-4fbc-82b3-9b23a1e3cc5b
+  reason: Pulled
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-master-1
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:03:16Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{install-cni-v2-1}
+    kind: Pod
+    name: istio-cni-node-58xx9
+    namespace: openshift-operators
+    resourceVersion: "34415"
+    uid: 7ee4de7d-78c1-4bf6-89f2-273d2c0a6a4a
+  kind: Event
+  lastTimestamp: "2023-03-03T20:03:16Z"
+  message: Created container install-cni-v2-1
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:16Z"
+    name: istio-cni-node-58xx9.174901541f418643
+    namespace: openshift-operators
+    resourceVersion: "34759"
+    uid: 1cb30679-ba86-409d-a84a-c20ba831eb5f
+  reason: Created
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-master-1
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:03:17Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{install-cni-v2-1}
+    kind: Pod
+    name: istio-cni-node-58xx9
+    namespace: openshift-operators
+    resourceVersion: "34415"
+    uid: 7ee4de7d-78c1-4bf6-89f2-273d2c0a6a4a
+  kind: Event
+  lastTimestamp: "2023-03-03T20:03:17Z"
+  message: Started container install-cni-v2-1
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:17Z"
+    name: istio-cni-node-58xx9.1749015422289162
+    namespace: openshift-operators
+    resourceVersion: "34761"
+    uid: 454de7ec-fb77-4bc2-badb-daf6aa120c60
+  reason: Started
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-master-1
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:03:17Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{install-cni-v2-2}
+    kind: Pod
+    name: istio-cni-node-58xx9
+    namespace: openshift-operators
+    resourceVersion: "34415"
+    uid: 7ee4de7d-78c1-4bf6-89f2-273d2c0a6a4a
+  kind: Event
+  lastTimestamp: "2023-03-03T20:03:17Z"
+  message: Pulling image "registry.redhat.io/openshift-service-mesh/istio-cni-rhel8@sha256:a3f23302c832e418e55821328d859396f3fa79c5b8b08623251b33c0841ba892"
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:17Z"
+    name: istio-cni-node-58xx9.1749015422405000
+    namespace: openshift-operators
+    resourceVersion: "34762"
+    uid: c9e71293-0abb-4386-9beb-f2858ac97e4a
+  reason: Pulling
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-master-1
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:03:25Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{install-cni-v2-2}
+    kind: Pod
+    name: istio-cni-node-58xx9
+    namespace: openshift-operators
+    resourceVersion: "34415"
+    uid: 7ee4de7d-78c1-4bf6-89f2-273d2c0a6a4a
+  kind: Event
+  lastTimestamp: "2023-03-03T20:03:25Z"
+  message: Successfully pulled image "registry.redhat.io/openshift-service-mesh/istio-cni-rhel8@sha256:a3f23302c832e418e55821328d859396f3fa79c5b8b08623251b33c0841ba892"
+    in 8.896435336s
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:25Z"
+    name: istio-cni-node-58xx9.1749015634859781
+    namespace: openshift-operators
+    resourceVersion: "35028"
+    uid: 5394a726-0b41-42f1-acda-453d7421ec34
+  reason: Pulled
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-master-1
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:03:26Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{install-cni-v2-2}
+    kind: Pod
+    name: istio-cni-node-58xx9
+    namespace: openshift-operators
+    resourceVersion: "34415"
+    uid: 7ee4de7d-78c1-4bf6-89f2-273d2c0a6a4a
+  kind: Event
+  lastTimestamp: "2023-03-03T20:03:26Z"
+  message: Created container install-cni-v2-2
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:26Z"
+    name: istio-cni-node-58xx9.174901564823fa6e
+    namespace: openshift-operators
+    resourceVersion: "35032"
+    uid: 388bea6b-d080-4ce4-bd4b-c43e3612ebec
+  reason: Created
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-master-1
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:03:26Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{install-cni-v2-2}
+    kind: Pod
+    name: istio-cni-node-58xx9
+    namespace: openshift-operators
+    resourceVersion: "34415"
+    uid: 7ee4de7d-78c1-4bf6-89f2-273d2c0a6a4a
+  kind: Event
+  lastTimestamp: "2023-03-03T20:03:26Z"
+  message: Started container install-cni-v2-2
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:26Z"
+    name: istio-cni-node-58xx9.174901564c213607
+    namespace: openshift-operators
+    resourceVersion: "35033"
+    uid: 83498216-21a4-416d-b0bd-1745bac9d60e
+  reason: Started
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-master-1
+  type: Normal
+- action: Binding
+  apiVersion: v1
+  eventTime: "2023-03-03T20:02:56.845022Z"
+  firstTimestamp: null
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: istio-cni-node-66t7g
+    namespace: openshift-operators
+    resourceVersion: "34408"
+    uid: e8a541bd-1452-476d-a24f-07556dcb9318
+  kind: Event
+  lastTimestamp: null
+  message: Successfully assigned openshift-operators/istio-cni-node-66t7g to ci-ln-4zhdf4b-72292-lw57b-worker-a-z86r5
+  metadata:
+    creationTimestamp: "2023-03-03T20:02:56Z"
+    name: istio-cni-node-66t7g.1749014f6eca9a70
+    namespace: openshift-operators
+    resourceVersion: "34418"
+    uid: 35eeaa7b-519c-46f4-aeeb-568f4d2816f9
+  reason: Scheduled
+  reportingComponent: default-scheduler
+  reportingInstance: default-scheduler-ci-ln-4zhdf4b-72292-lw57b-master-1
+  source: {}
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:02:57Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: istio-cni-node-66t7g
+    namespace: openshift-operators
+    resourceVersion: "34439"
+    uid: e8a541bd-1452-476d-a24f-07556dcb9318
+  kind: Event
+  lastTimestamp: "2023-03-03T20:02:57Z"
+  message: Add eth0 [10.131.0.21/23] from ovn-kubernetes
+  metadata:
+    creationTimestamp: "2023-03-03T20:02:57Z"
+    name: istio-cni-node-66t7g.1749014fa99a0741
+    namespace: openshift-operators
+    resourceVersion: "34460"
+    uid: 56119801-f390-4454-b045-9287f8beadd7
+  reason: AddedInterface
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: multus
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:02:57Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{install-cni-v2-0}
+    kind: Pod
+    name: istio-cni-node-66t7g
+    namespace: openshift-operators
+    resourceVersion: "34413"
+    uid: e8a541bd-1452-476d-a24f-07556dcb9318
+  kind: Event
+  lastTimestamp: "2023-03-03T20:02:57Z"
+  message: Pulling image "registry.redhat.io/openshift-service-mesh/istio-cni-rhel8@sha256:161b3438a666469b230602b85d5c207f0f225210b5ba18c6ee7b9ae08127af23"
+  metadata:
+    creationTimestamp: "2023-03-03T20:02:57Z"
+    name: istio-cni-node-66t7g.1749014fb1a97b67
+    namespace: openshift-operators
+    resourceVersion: "34465"
+    uid: 3ee7986d-d736-4dfe-92ef-acc3761a2e0a
+  reason: Pulling
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-worker-a-z86r5
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:03:02Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{install-cni-v2-0}
+    kind: Pod
+    name: istio-cni-node-66t7g
+    namespace: openshift-operators
+    resourceVersion: "34413"
+    uid: e8a541bd-1452-476d-a24f-07556dcb9318
+  kind: Event
+  lastTimestamp: "2023-03-03T20:03:02Z"
+  message: Successfully pulled image "registry.redhat.io/openshift-service-mesh/istio-cni-rhel8@sha256:161b3438a666469b230602b85d5c207f0f225210b5ba18c6ee7b9ae08127af23"
+    in 4.202706829s
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:02Z"
+    name: istio-cni-node-66t7g.17490150ac29f9a8
+    namespace: openshift-operators
+    resourceVersion: "34520"
+    uid: bbf18f3e-9bcc-4111-bb3f-853fbea4f7a7
+  reason: Pulled
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-worker-a-z86r5
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:03:02Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{install-cni-v2-0}
+    kind: Pod
+    name: istio-cni-node-66t7g
+    namespace: openshift-operators
+    resourceVersion: "34413"
+    uid: e8a541bd-1452-476d-a24f-07556dcb9318
+  kind: Event
+  lastTimestamp: "2023-03-03T20:03:02Z"
+  message: Created container install-cni-v2-0
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:02Z"
+    name: istio-cni-node-66t7g.17490150b3b3bed5
+    namespace: openshift-operators
+    resourceVersion: "34521"
+    uid: 04e6c0fd-d056-4b2c-a927-9b19a2953ae0
+  reason: Created
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-worker-a-z86r5
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:03:02Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{install-cni-v2-0}
+    kind: Pod
+    name: istio-cni-node-66t7g
+    namespace: openshift-operators
+    resourceVersion: "34413"
+    uid: e8a541bd-1452-476d-a24f-07556dcb9318
+  kind: Event
+  lastTimestamp: "2023-03-03T20:03:02Z"
+  message: Started container install-cni-v2-0
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:02Z"
+    name: istio-cni-node-66t7g.17490150b5634bf1
+    namespace: openshift-operators
+    resourceVersion: "34523"
+    uid: 6b71ce19-ab78-4eb4-81ac-4728b2addba8
+  reason: Started
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-worker-a-z86r5
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:03:02Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{install-cni-v2-1}
+    kind: Pod
+    name: istio-cni-node-66t7g
+    namespace: openshift-operators
+    resourceVersion: "34413"
+    uid: e8a541bd-1452-476d-a24f-07556dcb9318
+  kind: Event
+  lastTimestamp: "2023-03-03T20:03:02Z"
+  message: Pulling image "registry.redhat.io/openshift-service-mesh/istio-cni-rhel8@sha256:5c0eacb3024dab93e376c2edc60a02b066b62de5f40d81628d80ecd4f4a7dc4b"
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:02Z"
+    name: istio-cni-node-66t7g.17490150b572f029
+    namespace: openshift-operators
+    resourceVersion: "34524"
+    uid: c9cb7566-acfb-46de-a19c-d5ee4711740a
+  reason: Pulling
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-worker-a-z86r5
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:03:06Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{install-cni-v2-1}
+    kind: Pod
+    name: istio-cni-node-66t7g
+    namespace: openshift-operators
+    resourceVersion: "34413"
+    uid: e8a541bd-1452-476d-a24f-07556dcb9318
+  kind: Event
+  lastTimestamp: "2023-03-03T20:03:06Z"
+  message: Successfully pulled image "registry.redhat.io/openshift-service-mesh/istio-cni-rhel8@sha256:5c0eacb3024dab93e376c2edc60a02b066b62de5f40d81628d80ecd4f4a7dc4b"
+    in 4.379864262s
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:06Z"
+    name: istio-cni-node-66t7g.17490151ba82af5b
+    namespace: openshift-operators
+    resourceVersion: "34561"
+    uid: d7cdad19-ff8f-4906-a737-688cd870637d
+  reason: Pulled
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-worker-a-z86r5
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:03:06Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{install-cni-v2-1}
+    kind: Pod
+    name: istio-cni-node-66t7g
+    namespace: openshift-operators
+    resourceVersion: "34413"
+    uid: e8a541bd-1452-476d-a24f-07556dcb9318
+  kind: Event
+  lastTimestamp: "2023-03-03T20:03:06Z"
+  message: Created container install-cni-v2-1
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:06Z"
+    name: istio-cni-node-66t7g.17490151c2697b1a
+    namespace: openshift-operators
+    resourceVersion: "34562"
+    uid: 5fa9d216-1f7f-4892-8e78-d0921988c224
+  reason: Created
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-worker-a-z86r5
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:03:06Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{install-cni-v2-1}
+    kind: Pod
+    name: istio-cni-node-66t7g
+    namespace: openshift-operators
+    resourceVersion: "34413"
+    uid: e8a541bd-1452-476d-a24f-07556dcb9318
+  kind: Event
+  lastTimestamp: "2023-03-03T20:03:06Z"
+  message: Started container install-cni-v2-1
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:06Z"
+    name: istio-cni-node-66t7g.17490151c3e4ee16
+    namespace: openshift-operators
+    resourceVersion: "34563"
+    uid: d9248af0-2854-42fe-ab66-320237fedbce
+  reason: Started
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-worker-a-z86r5
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:03:06Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{install-cni-v2-2}
+    kind: Pod
+    name: istio-cni-node-66t7g
+    namespace: openshift-operators
+    resourceVersion: "34413"
+    uid: e8a541bd-1452-476d-a24f-07556dcb9318
+  kind: Event
+  lastTimestamp: "2023-03-03T20:03:06Z"
+  message: Pulling image "registry.redhat.io/openshift-service-mesh/istio-cni-rhel8@sha256:a3f23302c832e418e55821328d859396f3fa79c5b8b08623251b33c0841ba892"
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:06Z"
+    name: istio-cni-node-66t7g.17490151c3f3488a
+    namespace: openshift-operators
+    resourceVersion: "34564"
+    uid: ad451cec-84e3-443e-a9d3-4d39ffd59a34
+  reason: Pulling
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-worker-a-z86r5
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:03:11Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{install-cni-v2-2}
+    kind: Pod
+    name: istio-cni-node-66t7g
+    namespace: openshift-operators
+    resourceVersion: "34413"
+    uid: e8a541bd-1452-476d-a24f-07556dcb9318
+  kind: Event
+  lastTimestamp: "2023-03-03T20:03:11Z"
+  message: Successfully pulled image "registry.redhat.io/openshift-service-mesh/istio-cni-rhel8@sha256:a3f23302c832e418e55821328d859396f3fa79c5b8b08623251b33c0841ba892"
+    in 5.087170154s
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:11Z"
+    name: istio-cni-node-66t7g.17490152f32ba08c
+    namespace: openshift-operators
+    resourceVersion: "34637"
+    uid: a1c21926-0756-4aad-8ccb-a9029091a63d
+  reason: Pulled
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-worker-a-z86r5
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:03:12Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{install-cni-v2-2}
+    kind: Pod
+    name: istio-cni-node-66t7g
+    namespace: openshift-operators
+    resourceVersion: "34413"
+    uid: e8a541bd-1452-476d-a24f-07556dcb9318
+  kind: Event
+  lastTimestamp: "2023-03-03T20:03:12Z"
+  message: Created container install-cni-v2-2
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:12Z"
+    name: istio-cni-node-66t7g.17490152fb8cd4e7
+    namespace: openshift-operators
+    resourceVersion: "34646"
+    uid: aa87be4c-185b-4fb5-a1ec-890b4c1f30de
+  reason: Created
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-worker-a-z86r5
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:03:12Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{install-cni-v2-2}
+    kind: Pod
+    name: istio-cni-node-66t7g
+    namespace: openshift-operators
+    resourceVersion: "34413"
+    uid: e8a541bd-1452-476d-a24f-07556dcb9318
+  kind: Event
+  lastTimestamp: "2023-03-03T20:03:12Z"
+  message: Started container install-cni-v2-2
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:12Z"
+    name: istio-cni-node-66t7g.17490152fdac1cea
+    namespace: openshift-operators
+    resourceVersion: "34650"
+    uid: 00ab00fa-3939-4ed4-91b6-06b700759959
+  reason: Started
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-worker-a-z86r5
+  type: Normal
+- action: Binding
+  apiVersion: v1
+  eventTime: "2023-03-03T20:02:56.737520Z"
+  firstTimestamp: null
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: istio-cni-node-thqjx
+    namespace: openshift-operators
+    resourceVersion: "34400"
+    uid: f5fea837-5206-4ced-a955-85aab3989661
+  kind: Event
+  lastTimestamp: null
+  message: Successfully assigned openshift-operators/istio-cni-node-thqjx to ci-ln-4zhdf4b-72292-lw57b-master-0
+  metadata:
+    creationTimestamp: "2023-03-03T20:02:56Z"
+    name: istio-cni-node-thqjx.1749014f686237e7
+    namespace: openshift-operators
+    resourceVersion: "34405"
+    uid: 456d4a1f-81f8-4f5a-aa54-925552167e63
+  reason: Scheduled
+  reportingComponent: default-scheduler
+  reportingInstance: default-scheduler-ci-ln-4zhdf4b-72292-lw57b-master-1
+  source: {}
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:02:58Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: istio-cni-node-thqjx
+    namespace: openshift-operators
+    resourceVersion: "34443"
+    uid: f5fea837-5206-4ced-a955-85aab3989661
+  kind: Event
+  lastTimestamp: "2023-03-03T20:02:58Z"
+  message: Add eth0 [10.130.0.44/23] from ovn-kubernetes
+  metadata:
+    creationTimestamp: "2023-03-03T20:02:58Z"
+    name: istio-cni-node-thqjx.1749014fd299ccdc
+    namespace: openshift-operators
+    resourceVersion: "34483"
+    uid: 491fd355-428f-4db8-a0ae-b1b7f4809cb8
+  reason: AddedInterface
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: multus
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:02:58Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{install-cni-v2-0}
+    kind: Pod
+    name: istio-cni-node-thqjx
+    namespace: openshift-operators
+    resourceVersion: "34402"
+    uid: f5fea837-5206-4ced-a955-85aab3989661
+  kind: Event
+  lastTimestamp: "2023-03-03T20:02:58Z"
+  message: Pulling image "registry.redhat.io/openshift-service-mesh/istio-cni-rhel8@sha256:161b3438a666469b230602b85d5c207f0f225210b5ba18c6ee7b9ae08127af23"
+  metadata:
+    creationTimestamp: "2023-03-03T20:02:58Z"
+    name: istio-cni-node-thqjx.1749014fda3dab12
+    namespace: openshift-operators
+    resourceVersion: "34485"
+    uid: 7540e1b2-6836-44ee-914f-56c05ba88038
+  reason: Pulling
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-master-0
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:03:04Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{install-cni-v2-0}
+    kind: Pod
+    name: istio-cni-node-thqjx
+    namespace: openshift-operators
+    resourceVersion: "34402"
+    uid: f5fea837-5206-4ced-a955-85aab3989661
+  kind: Event
+  lastTimestamp: "2023-03-03T20:03:04Z"
+  message: Successfully pulled image "registry.redhat.io/openshift-service-mesh/istio-cni-rhel8@sha256:161b3438a666469b230602b85d5c207f0f225210b5ba18c6ee7b9ae08127af23"
+    in 6.194327168s
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:04Z"
+    name: istio-cni-node-thqjx.174901514b746224
+    namespace: openshift-operators
+    resourceVersion: "34546"
+    uid: 760ea8e2-0b05-410a-9117-9a6fceb5a633
+  reason: Pulled
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-master-0
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:03:05Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{install-cni-v2-0}
+    kind: Pod
+    name: istio-cni-node-thqjx
+    namespace: openshift-operators
+    resourceVersion: "34402"
+    uid: f5fea837-5206-4ced-a955-85aab3989661
+  kind: Event
+  lastTimestamp: "2023-03-03T20:03:05Z"
+  message: Created container install-cni-v2-0
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:05Z"
+    name: istio-cni-node-thqjx.1749015158b68690
+    namespace: openshift-operators
+    resourceVersion: "34548"
+    uid: 211c277b-3c8a-4e59-9ac5-cd2f96be55a9
+  reason: Created
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-master-0
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:03:05Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{install-cni-v2-0}
+    kind: Pod
+    name: istio-cni-node-thqjx
+    namespace: openshift-operators
+    resourceVersion: "34402"
+    uid: f5fea837-5206-4ced-a955-85aab3989661
+  kind: Event
+  lastTimestamp: "2023-03-03T20:03:05Z"
+  message: Started container install-cni-v2-0
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:05Z"
+    name: istio-cni-node-thqjx.174901515ae98a17
+    namespace: openshift-operators
+    resourceVersion: "34549"
+    uid: 5a3ad1a3-41d3-43a1-b715-98eed82ef586
+  reason: Started
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-master-0
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:03:05Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{install-cni-v2-1}
+    kind: Pod
+    name: istio-cni-node-thqjx
+    namespace: openshift-operators
+    resourceVersion: "34402"
+    uid: f5fea837-5206-4ced-a955-85aab3989661
+  kind: Event
+  lastTimestamp: "2023-03-03T20:03:05Z"
+  message: Pulling image "registry.redhat.io/openshift-service-mesh/istio-cni-rhel8@sha256:5c0eacb3024dab93e376c2edc60a02b066b62de5f40d81628d80ecd4f4a7dc4b"
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:05Z"
+    name: istio-cni-node-thqjx.174901515b0777f0
+    namespace: openshift-operators
+    resourceVersion: "34550"
+    uid: 8b8910f8-e78d-40dc-b472-31037a49975f
+  reason: Pulling
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-master-0
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:03:10Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{install-cni-v2-1}
+    kind: Pod
+    name: istio-cni-node-thqjx
+    namespace: openshift-operators
+    resourceVersion: "34402"
+    uid: f5fea837-5206-4ced-a955-85aab3989661
+  kind: Event
+  lastTimestamp: "2023-03-03T20:03:10Z"
+  message: Successfully pulled image "registry.redhat.io/openshift-service-mesh/istio-cni-rhel8@sha256:5c0eacb3024dab93e376c2edc60a02b066b62de5f40d81628d80ecd4f4a7dc4b"
+    in 4.913200919s
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:10Z"
+    name: istio-cni-node-thqjx.174901527fe162d1
+    namespace: openshift-operators
+    resourceVersion: "34596"
+    uid: 6995beda-6d64-4b99-a6f7-84356a09a4c2
+  reason: Pulled
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-master-0
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:03:10Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{install-cni-v2-1}
+    kind: Pod
+    name: istio-cni-node-thqjx
+    namespace: openshift-operators
+    resourceVersion: "34402"
+    uid: f5fea837-5206-4ced-a955-85aab3989661
+  kind: Event
+  lastTimestamp: "2023-03-03T20:03:10Z"
+  message: Created container install-cni-v2-1
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:10Z"
+    name: istio-cni-node-thqjx.174901529514f2ea
+    namespace: openshift-operators
+    resourceVersion: "34606"
+    uid: 767d6bdf-d778-4bda-be71-d2fa9d51b1bf
+  reason: Created
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-master-0
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:03:10Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{install-cni-v2-1}
+    kind: Pod
+    name: istio-cni-node-thqjx
+    namespace: openshift-operators
+    resourceVersion: "34402"
+    uid: f5fea837-5206-4ced-a955-85aab3989661
+  kind: Event
+  lastTimestamp: "2023-03-03T20:03:10Z"
+  message: Started container install-cni-v2-1
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:10Z"
+    name: istio-cni-node-thqjx.17490152999a4c86
+    namespace: openshift-operators
+    resourceVersion: "34607"
+    uid: abd7040d-62f0-4612-976c-d38069d1e291
+  reason: Started
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-master-0
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:03:10Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{install-cni-v2-2}
+    kind: Pod
+    name: istio-cni-node-thqjx
+    namespace: openshift-operators
+    resourceVersion: "34402"
+    uid: f5fea837-5206-4ced-a955-85aab3989661
+  kind: Event
+  lastTimestamp: "2023-03-03T20:03:10Z"
+  message: Pulling image "registry.redhat.io/openshift-service-mesh/istio-cni-rhel8@sha256:a3f23302c832e418e55821328d859396f3fa79c5b8b08623251b33c0841ba892"
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:10Z"
+    name: istio-cni-node-thqjx.1749015299b47a10
+    namespace: openshift-operators
+    resourceVersion: "34608"
+    uid: 85dd8833-7de4-4456-9f7e-7d6a80c27946
+  reason: Pulling
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-master-0
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:03:16Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{install-cni-v2-2}
+    kind: Pod
+    name: istio-cni-node-thqjx
+    namespace: openshift-operators
+    resourceVersion: "34402"
+    uid: f5fea837-5206-4ced-a955-85aab3989661
+  kind: Event
+  lastTimestamp: "2023-03-03T20:03:16Z"
+  message: Successfully pulled image "registry.redhat.io/openshift-service-mesh/istio-cni-rhel8@sha256:a3f23302c832e418e55821328d859396f3fa79c5b8b08623251b33c0841ba892"
+    in 6.302318927s
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:16Z"
+    name: istio-cni-node-thqjx.17490154115a7b0d
+    namespace: openshift-operators
+    resourceVersion: "34753"
+    uid: edd77fe9-8869-4406-a822-f0c81a4dc3b0
+  reason: Pulled
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-master-0
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:03:16Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{install-cni-v2-2}
+    kind: Pod
+    name: istio-cni-node-thqjx
+    namespace: openshift-operators
+    resourceVersion: "34402"
+    uid: f5fea837-5206-4ced-a955-85aab3989661
+  kind: Event
+  lastTimestamp: "2023-03-03T20:03:16Z"
+  message: Created container install-cni-v2-2
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:16Z"
+    name: istio-cni-node-thqjx.174901541f3ec399
+    namespace: openshift-operators
+    resourceVersion: "34758"
+    uid: e50590ff-518b-4753-90a7-f1a68ce91e87
+  reason: Created
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-master-0
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:03:17Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{install-cni-v2-2}
+    kind: Pod
+    name: istio-cni-node-thqjx
+    namespace: openshift-operators
+    resourceVersion: "34402"
+    uid: f5fea837-5206-4ced-a955-85aab3989661
+  kind: Event
+  lastTimestamp: "2023-03-03T20:03:17Z"
+  message: Started container install-cni-v2-2
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:17Z"
+    name: istio-cni-node-thqjx.1749015421e46176
+    namespace: openshift-operators
+    resourceVersion: "34760"
+    uid: eda291c7-d9cc-494e-b33d-f6bcfc92537c
+  reason: Started
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-master-0
+  type: Normal
+- action: Binding
+  apiVersion: v1
+  eventTime: "2023-03-03T20:02:56.895613Z"
+  firstTimestamp: null
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: istio-cni-node-tmtck
+    namespace: openshift-operators
+    resourceVersion: "34410"
+    uid: e17f4a6f-7dc5-47b6-a8b1-751509ab98a9
+  kind: Event
+  lastTimestamp: null
+  message: Successfully assigned openshift-operators/istio-cni-node-tmtck to ci-ln-4zhdf4b-72292-lw57b-master-2
+  metadata:
+    creationTimestamp: "2023-03-03T20:02:56Z"
+    name: istio-cni-node-tmtck.1749014f71ce759a
+    namespace: openshift-operators
+    resourceVersion: "34422"
+    uid: 8bad111e-50e0-468b-901c-05da55c28807
+  reason: Scheduled
+  reportingComponent: default-scheduler
+  reportingInstance: default-scheduler-ci-ln-4zhdf4b-72292-lw57b-master-1
+  source: {}
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:03:00Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: istio-cni-node-tmtck
+    namespace: openshift-operators
+    resourceVersion: "34442"
+    uid: e17f4a6f-7dc5-47b6-a8b1-751509ab98a9
+  kind: Event
+  lastTimestamp: "2023-03-03T20:03:00Z"
+  message: Add eth0 [10.128.0.55/23] from ovn-kubernetes
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:00Z"
+    name: istio-cni-node-tmtck.174901502e2f89f8
+    namespace: openshift-operators
+    resourceVersion: "34495"
+    uid: 8a07b86b-b04b-4720-99b2-a301120d639a
+  reason: AddedInterface
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: multus
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:03:00Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{install-cni-v2-0}
+    kind: Pod
+    name: istio-cni-node-tmtck
+    namespace: openshift-operators
+    resourceVersion: "34416"
+    uid: e17f4a6f-7dc5-47b6-a8b1-751509ab98a9
+  kind: Event
+  lastTimestamp: "2023-03-03T20:03:00Z"
+  message: Pulling image "registry.redhat.io/openshift-service-mesh/istio-cni-rhel8@sha256:161b3438a666469b230602b85d5c207f0f225210b5ba18c6ee7b9ae08127af23"
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:00Z"
+    name: istio-cni-node-tmtck.1749015031a79e1b
+    namespace: openshift-operators
+    resourceVersion: "34497"
+    uid: 8fa227a2-3f34-4e1f-8017-39cda6ca8dc0
+  reason: Pulling
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-master-2
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:03:06Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{install-cni-v2-0}
+    kind: Pod
+    name: istio-cni-node-tmtck
+    namespace: openshift-operators
+    resourceVersion: "34416"
+    uid: e17f4a6f-7dc5-47b6-a8b1-751509ab98a9
+  kind: Event
+  lastTimestamp: "2023-03-03T20:03:06Z"
+  message: Successfully pulled image "registry.redhat.io/openshift-service-mesh/istio-cni-rhel8@sha256:161b3438a666469b230602b85d5c207f0f225210b5ba18c6ee7b9ae08127af23"
+    in 6.581721396s
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:06Z"
+    name: istio-cni-node-tmtck.17490151b9f50cb7
+    namespace: openshift-operators
+    resourceVersion: "34560"
+    uid: 18b9bc8a-b43d-4e50-be38-084c9264313f
+  reason: Pulled
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-master-2
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:03:06Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{install-cni-v2-0}
+    kind: Pod
+    name: istio-cni-node-tmtck
+    namespace: openshift-operators
+    resourceVersion: "34416"
+    uid: e17f4a6f-7dc5-47b6-a8b1-751509ab98a9
+  kind: Event
+  lastTimestamp: "2023-03-03T20:03:06Z"
+  message: Created container install-cni-v2-0
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:06Z"
+    name: istio-cni-node-tmtck.17490151c9d5447e
+    namespace: openshift-operators
+    resourceVersion: "34567"
+    uid: 6ea6d532-9d50-4e0a-9f93-a6e73c9043f2
+  reason: Created
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-master-2
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:03:07Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{install-cni-v2-0}
+    kind: Pod
+    name: istio-cni-node-tmtck
+    namespace: openshift-operators
+    resourceVersion: "34416"
+    uid: e17f4a6f-7dc5-47b6-a8b1-751509ab98a9
+  kind: Event
+  lastTimestamp: "2023-03-03T20:03:07Z"
+  message: Started container install-cni-v2-0
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:07Z"
+    name: istio-cni-node-tmtck.17490151cc745af4
+    namespace: openshift-operators
+    resourceVersion: "34569"
+    uid: b54ddde9-b7ed-4125-b256-25351b5ca80a
+  reason: Started
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-master-2
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:03:07Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{install-cni-v2-1}
+    kind: Pod
+    name: istio-cni-node-tmtck
+    namespace: openshift-operators
+    resourceVersion: "34416"
+    uid: e17f4a6f-7dc5-47b6-a8b1-751509ab98a9
+  kind: Event
+  lastTimestamp: "2023-03-03T20:03:07Z"
+  message: Pulling image "registry.redhat.io/openshift-service-mesh/istio-cni-rhel8@sha256:5c0eacb3024dab93e376c2edc60a02b066b62de5f40d81628d80ecd4f4a7dc4b"
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:07Z"
+    name: istio-cni-node-tmtck.17490151cc996f2f
+    namespace: openshift-operators
+    resourceVersion: "34571"
+    uid: 02e3184f-0f16-448f-86fb-b6543e227c2d
+  reason: Pulling
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-master-2
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:03:13Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{install-cni-v2-1}
+    kind: Pod
+    name: istio-cni-node-tmtck
+    namespace: openshift-operators
+    resourceVersion: "34416"
+    uid: e17f4a6f-7dc5-47b6-a8b1-751509ab98a9
+  kind: Event
+  lastTimestamp: "2023-03-03T20:03:13Z"
+  message: Successfully pulled image "registry.redhat.io/openshift-service-mesh/istio-cni-rhel8@sha256:5c0eacb3024dab93e376c2edc60a02b066b62de5f40d81628d80ecd4f4a7dc4b"
+    in 6.629241421s
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:13Z"
+    name: istio-cni-node-tmtck.1749015357bbf2a1
+    namespace: openshift-operators
+    resourceVersion: "34701"
+    uid: 26b8f342-56f3-415c-88c1-9ad009cb5324
+  reason: Pulled
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-master-2
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:03:13Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{install-cni-v2-1}
+    kind: Pod
+    name: istio-cni-node-tmtck
+    namespace: openshift-operators
+    resourceVersion: "34416"
+    uid: e17f4a6f-7dc5-47b6-a8b1-751509ab98a9
+  kind: Event
+  lastTimestamp: "2023-03-03T20:03:13Z"
+  message: Created container install-cni-v2-1
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:14Z"
+    name: istio-cni-node-tmtck.174901536d3ff1f2
+    namespace: openshift-operators
+    resourceVersion: "34705"
+    uid: 5734c0f2-a378-4d2c-8332-ea68a77d1296
+  reason: Created
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-master-2
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:03:14Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{install-cni-v2-1}
+    kind: Pod
+    name: istio-cni-node-tmtck
+    namespace: openshift-operators
+    resourceVersion: "34416"
+    uid: e17f4a6f-7dc5-47b6-a8b1-751509ab98a9
+  kind: Event
+  lastTimestamp: "2023-03-03T20:03:14Z"
+  message: Started container install-cni-v2-1
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:14Z"
+    name: istio-cni-node-tmtck.1749015371ba2e11
+    namespace: openshift-operators
+    resourceVersion: "34709"
+    uid: 0e7e37bc-3e38-4793-bbb4-ad1ed1a19467
+  reason: Started
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-master-2
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:03:14Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{install-cni-v2-2}
+    kind: Pod
+    name: istio-cni-node-tmtck
+    namespace: openshift-operators
+    resourceVersion: "34416"
+    uid: e17f4a6f-7dc5-47b6-a8b1-751509ab98a9
+  kind: Event
+  lastTimestamp: "2023-03-03T20:03:14Z"
+  message: Pulling image "registry.redhat.io/openshift-service-mesh/istio-cni-rhel8@sha256:a3f23302c832e418e55821328d859396f3fa79c5b8b08623251b33c0841ba892"
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:14Z"
+    name: istio-cni-node-tmtck.1749015371fb9ad5
+    namespace: openshift-operators
+    resourceVersion: "34710"
+    uid: c901c83e-a2dc-4935-bd19-b3d152673c8f
+  reason: Pulling
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-master-2
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:03:25Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{install-cni-v2-2}
+    kind: Pod
+    name: istio-cni-node-tmtck
+    namespace: openshift-operators
+    resourceVersion: "34416"
+    uid: e17f4a6f-7dc5-47b6-a8b1-751509ab98a9
+  kind: Event
+  lastTimestamp: "2023-03-03T20:03:25Z"
+  message: Successfully pulled image "registry.redhat.io/openshift-service-mesh/istio-cni-rhel8@sha256:a3f23302c832e418e55821328d859396f3fa79c5b8b08623251b33c0841ba892"
+    in 11.660091387s
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:25Z"
+    name: istio-cni-node-tmtck.1749015628fad46c
+    namespace: openshift-operators
+    resourceVersion: "35027"
+    uid: 2e03c5eb-33cf-4fea-9881-f6b5b182faf9
+  reason: Pulled
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-master-2
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:03:26Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{install-cni-v2-2}
+    kind: Pod
+    name: istio-cni-node-tmtck
+    namespace: openshift-operators
+    resourceVersion: "34416"
+    uid: e17f4a6f-7dc5-47b6-a8b1-751509ab98a9
+  kind: Event
+  lastTimestamp: "2023-03-03T20:03:26Z"
+  message: Created container install-cni-v2-2
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:26Z"
+    name: istio-cni-node-tmtck.174901563a258192
+    namespace: openshift-operators
+    resourceVersion: "35029"
+    uid: a8855b4b-842f-48ac-b14d-216f3f615c84
+  reason: Created
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-master-2
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:03:26Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{install-cni-v2-2}
+    kind: Pod
+    name: istio-cni-node-tmtck
+    namespace: openshift-operators
+    resourceVersion: "34416"
+    uid: e17f4a6f-7dc5-47b6-a8b1-751509ab98a9
+  kind: Event
+  lastTimestamp: "2023-03-03T20:03:26Z"
+  message: Started container install-cni-v2-2
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:26Z"
+    name: istio-cni-node-tmtck.174901563d98d2f4
+    namespace: openshift-operators
+    resourceVersion: "35031"
+    uid: d21ac4bf-600e-405f-b745-9ace2a50c99b
+  reason: Started
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-master-2
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:03:27Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{install-cni-v2-2}
+    kind: Pod
+    name: istio-cni-node-tmtck
+    namespace: openshift-operators
+    resourceVersion: "34416"
+    uid: e17f4a6f-7dc5-47b6-a8b1-751509ab98a9
+  kind: Event
+  lastTimestamp: "2023-03-03T20:03:27Z"
+  message: |+
+    Readiness probe error: HTTP probe failed with statuscode: 503
+    body: Service Unavailable
+
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:27Z"
+    name: istio-cni-node-tmtck.174901569792b76b
+    namespace: openshift-operators
+    resourceVersion: "35049"
+    uid: 3d00a233-c738-427a-95c1-34aec3052c16
+  reason: ProbeError
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-master-2
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:03:27Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{install-cni-v2-2}
+    kind: Pod
+    name: istio-cni-node-tmtck
+    namespace: openshift-operators
+    resourceVersion: "34416"
+    uid: e17f4a6f-7dc5-47b6-a8b1-751509ab98a9
+  kind: Event
+  lastTimestamp: "2023-03-03T20:03:27Z"
+  message: 'Readiness probe failed: HTTP probe failed with statuscode: 503'
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:27Z"
+    name: istio-cni-node-tmtck.174901569793b525
+    namespace: openshift-operators
+    resourceVersion: "35050"
+    uid: e79c4da2-d22b-4b4e-88e8-058fa92a78a9
+  reason: Unhealthy
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-master-2
+  type: Warning
+- action: Binding
+  apiVersion: v1
+  eventTime: "2023-03-03T20:02:56.687475Z"
+  firstTimestamp: null
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: istio-cni-node-z5gk2
+    namespace: openshift-operators
+    resourceVersion: "34393"
+    uid: 830e0950-39e3-410c-b6d9-f0b74ba03700
+  kind: Event
+  lastTimestamp: null
+  message: Successfully assigned openshift-operators/istio-cni-node-z5gk2 to ci-ln-4zhdf4b-72292-lw57b-worker-c-szhjg
+  metadata:
+    creationTimestamp: "2023-03-03T20:02:56Z"
+    name: istio-cni-node-z5gk2.1749014f65668d48
+    namespace: openshift-operators
+    resourceVersion: "34403"
+    uid: 29dedbc6-806a-4f7e-88b3-a8434965cfe9
+  reason: Scheduled
+  reportingComponent: default-scheduler
+  reportingInstance: default-scheduler-ci-ln-4zhdf4b-72292-lw57b-master-1
+  source: {}
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:02:57Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: istio-cni-node-z5gk2
+    namespace: openshift-operators
+    resourceVersion: "34427"
+    uid: 830e0950-39e3-410c-b6d9-f0b74ba03700
+  kind: Event
+  lastTimestamp: "2023-03-03T20:02:57Z"
+  message: Add eth0 [10.129.2.18/23] from ovn-kubernetes
+  metadata:
+    creationTimestamp: "2023-03-03T20:02:57Z"
+    name: istio-cni-node-z5gk2.1749014fa17c37ba
+    namespace: openshift-operators
+    resourceVersion: "34453"
+    uid: 26e9f2f5-4cb7-494d-b594-3762327b83bb
+  reason: AddedInterface
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: multus
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:02:57Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{install-cni-v2-0}
+    kind: Pod
+    name: istio-cni-node-z5gk2
+    namespace: openshift-operators
+    resourceVersion: "34397"
+    uid: 830e0950-39e3-410c-b6d9-f0b74ba03700
+  kind: Event
+  lastTimestamp: "2023-03-03T20:02:57Z"
+  message: Pulling image "registry.redhat.io/openshift-service-mesh/istio-cni-rhel8@sha256:161b3438a666469b230602b85d5c207f0f225210b5ba18c6ee7b9ae08127af23"
+  metadata:
+    creationTimestamp: "2023-03-03T20:02:57Z"
+    name: istio-cni-node-z5gk2.1749014fa582f4ae
+    namespace: openshift-operators
+    resourceVersion: "34457"
+    uid: 6be528d7-86f1-4909-87bb-b52b440efa5c
+  reason: Pulling
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-worker-c-szhjg
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:03:02Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{install-cni-v2-0}
+    kind: Pod
+    name: istio-cni-node-z5gk2
+    namespace: openshift-operators
+    resourceVersion: "34397"
+    uid: 830e0950-39e3-410c-b6d9-f0b74ba03700
+  kind: Event
+  lastTimestamp: "2023-03-03T20:03:02Z"
+  message: Successfully pulled image "registry.redhat.io/openshift-service-mesh/istio-cni-rhel8@sha256:161b3438a666469b230602b85d5c207f0f225210b5ba18c6ee7b9ae08127af23"
+    in 4.647636273s
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:02Z"
+    name: istio-cni-node-z5gk2.17490150ba8899d6
+    namespace: openshift-operators
+    resourceVersion: "34525"
+    uid: d4e5bbcd-a392-4a35-94de-1cc12be77e01
+  reason: Pulled
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-worker-c-szhjg
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:03:02Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{install-cni-v2-0}
+    kind: Pod
+    name: istio-cni-node-z5gk2
+    namespace: openshift-operators
+    resourceVersion: "34397"
+    uid: 830e0950-39e3-410c-b6d9-f0b74ba03700
+  kind: Event
+  lastTimestamp: "2023-03-03T20:03:02Z"
+  message: Created container install-cni-v2-0
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:02Z"
+    name: istio-cni-node-z5gk2.17490150c609efcb
+    namespace: openshift-operators
+    resourceVersion: "34530"
+    uid: 6a740bff-b6f5-4d19-85ec-0f8e19e84041
+  reason: Created
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-worker-c-szhjg
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:03:02Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{install-cni-v2-0}
+    kind: Pod
+    name: istio-cni-node-z5gk2
+    namespace: openshift-operators
+    resourceVersion: "34397"
+    uid: 830e0950-39e3-410c-b6d9-f0b74ba03700
+  kind: Event
+  lastTimestamp: "2023-03-03T20:03:02Z"
+  message: Started container install-cni-v2-0
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:02Z"
+    name: istio-cni-node-z5gk2.17490150c906e559
+    namespace: openshift-operators
+    resourceVersion: "34531"
+    uid: e670128b-747e-48f8-a217-f50d6bbe9fcd
+  reason: Started
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-worker-c-szhjg
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:03:02Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{install-cni-v2-1}
+    kind: Pod
+    name: istio-cni-node-z5gk2
+    namespace: openshift-operators
+    resourceVersion: "34397"
+    uid: 830e0950-39e3-410c-b6d9-f0b74ba03700
+  kind: Event
+  lastTimestamp: "2023-03-03T20:03:02Z"
+  message: Pulling image "registry.redhat.io/openshift-service-mesh/istio-cni-rhel8@sha256:5c0eacb3024dab93e376c2edc60a02b066b62de5f40d81628d80ecd4f4a7dc4b"
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:02Z"
+    name: istio-cni-node-z5gk2.17490150c99f942e
+    namespace: openshift-operators
+    resourceVersion: "34532"
+    uid: ed3b9511-b59b-4c55-99f4-fb7bce5f1f42
+  reason: Pulling
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-worker-c-szhjg
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:03:05Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{install-cni-v2-1}
+    kind: Pod
+    name: istio-cni-node-z5gk2
+    namespace: openshift-operators
+    resourceVersion: "34397"
+    uid: 830e0950-39e3-410c-b6d9-f0b74ba03700
+  kind: Event
+  lastTimestamp: "2023-03-03T20:03:05Z"
+  message: Successfully pulled image "registry.redhat.io/openshift-service-mesh/istio-cni-rhel8@sha256:5c0eacb3024dab93e376c2edc60a02b066b62de5f40d81628d80ecd4f4a7dc4b"
+    in 3.140655098s
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:05Z"
+    name: istio-cni-node-z5gk2.1749015184d26c15
+    namespace: openshift-operators
+    resourceVersion: "34553"
+    uid: 97d015ff-2fb2-4886-a10c-170140f3542b
+  reason: Pulled
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-worker-c-szhjg
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:03:06Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{install-cni-v2-1}
+    kind: Pod
+    name: istio-cni-node-z5gk2
+    namespace: openshift-operators
+    resourceVersion: "34397"
+    uid: 830e0950-39e3-410c-b6d9-f0b74ba03700
+  kind: Event
+  lastTimestamp: "2023-03-03T20:03:06Z"
+  message: Created container install-cni-v2-1
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:06Z"
+    name: istio-cni-node-z5gk2.174901519511cd67
+    namespace: openshift-operators
+    resourceVersion: "34555"
+    uid: 845e2bdf-8562-4f2d-b1d4-dfcee915a4ce
+  reason: Created
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-worker-c-szhjg
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:03:06Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{install-cni-v2-1}
+    kind: Pod
+    name: istio-cni-node-z5gk2
+    namespace: openshift-operators
+    resourceVersion: "34397"
+    uid: 830e0950-39e3-410c-b6d9-f0b74ba03700
+  kind: Event
+  lastTimestamp: "2023-03-03T20:03:06Z"
+  message: Started container install-cni-v2-1
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:06Z"
+    name: istio-cni-node-z5gk2.1749015198227fa3
+    namespace: openshift-operators
+    resourceVersion: "34556"
+    uid: ae00a345-bd3d-4dc9-ac49-f455ab1ed147
+  reason: Started
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-worker-c-szhjg
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:03:06Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{install-cni-v2-2}
+    kind: Pod
+    name: istio-cni-node-z5gk2
+    namespace: openshift-operators
+    resourceVersion: "34397"
+    uid: 830e0950-39e3-410c-b6d9-f0b74ba03700
+  kind: Event
+  lastTimestamp: "2023-03-03T20:03:06Z"
+  message: Pulling image "registry.redhat.io/openshift-service-mesh/istio-cni-rhel8@sha256:a3f23302c832e418e55821328d859396f3fa79c5b8b08623251b33c0841ba892"
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:06Z"
+    name: istio-cni-node-z5gk2.174901519835253c
+    namespace: openshift-operators
+    resourceVersion: "34557"
+    uid: 536f89d3-3ba2-4b0c-8ab3-e0b867b7f504
+  reason: Pulling
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-worker-c-szhjg
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:03:13Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{install-cni-v2-2}
+    kind: Pod
+    name: istio-cni-node-z5gk2
+    namespace: openshift-operators
+    resourceVersion: "34397"
+    uid: 830e0950-39e3-410c-b6d9-f0b74ba03700
+  kind: Event
+  lastTimestamp: "2023-03-03T20:03:13Z"
+  message: Successfully pulled image "registry.redhat.io/openshift-service-mesh/istio-cni-rhel8@sha256:a3f23302c832e418e55821328d859396f3fa79c5b8b08623251b33c0841ba892"
+    in 7.180879648s
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:13Z"
+    name: istio-cni-node-z5gk2.174901534438e5f5
+    namespace: openshift-operators
+    resourceVersion: "34695"
+    uid: 979dcaff-dcd4-43ab-8426-286944a73319
+  reason: Pulled
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-worker-c-szhjg
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:03:13Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{install-cni-v2-2}
+    kind: Pod
+    name: istio-cni-node-z5gk2
+    namespace: openshift-operators
+    resourceVersion: "34397"
+    uid: 830e0950-39e3-410c-b6d9-f0b74ba03700
+  kind: Event
+  lastTimestamp: "2023-03-03T20:03:13Z"
+  message: Created container install-cni-v2-2
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:13Z"
+    name: istio-cni-node-z5gk2.174901534e0638d8
+    namespace: openshift-operators
+    resourceVersion: "34698"
+    uid: 108842ba-be5c-4f41-b37b-47429f46a955
+  reason: Created
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-worker-c-szhjg
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:03:13Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{install-cni-v2-2}
+    kind: Pod
+    name: istio-cni-node-z5gk2
+    namespace: openshift-operators
+    resourceVersion: "34397"
+    uid: 830e0950-39e3-410c-b6d9-f0b74ba03700
+  kind: Event
+  lastTimestamp: "2023-03-03T20:03:13Z"
+  message: Started container install-cni-v2-2
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:13Z"
+    name: istio-cni-node-z5gk2.17490153500386d3
+    namespace: openshift-operators
+    resourceVersion: "34699"
+    uid: 073a070a-6f9b-47e9-b6c6-179562f8698d
+  reason: Started
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-worker-c-szhjg
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:02:56Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: DaemonSet
+    name: istio-cni-node
+    namespace: openshift-operators
+    resourceVersion: "34383"
+    uid: 4ceb4c0a-b0b6-4cb5-898b-ad0c25f55004
+  kind: Event
+  lastTimestamp: "2023-03-03T20:02:56Z"
+  message: 'Created pod: istio-cni-node-2nx56'
+  metadata:
+    creationTimestamp: "2023-03-03T20:02:56Z"
+    name: istio-cni-node.1749014f5c4ad85c
+    namespace: openshift-operators
+    resourceVersion: "34392"
+    uid: 8d06494f-0a47-43f9-a591-06de379de5fc
+  reason: SuccessfulCreate
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: daemonset-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:02:56Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: DaemonSet
+    name: istio-cni-node
+    namespace: openshift-operators
+    resourceVersion: "34383"
+    uid: 4ceb4c0a-b0b6-4cb5-898b-ad0c25f55004
+  kind: Event
+  lastTimestamp: "2023-03-03T20:02:56Z"
+  message: 'Created pod: istio-cni-node-z5gk2'
+  metadata:
+    creationTimestamp: "2023-03-03T20:02:56Z"
+    name: istio-cni-node.1749014f60c3db9b
+    namespace: openshift-operators
+    resourceVersion: "34396"
+    uid: 32f70c5c-b44d-41d5-87c9-0c00408e9513
+  reason: SuccessfulCreate
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: daemonset-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:02:56Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: DaemonSet
+    name: istio-cni-node
+    namespace: openshift-operators
+    resourceVersion: "34383"
+    uid: 4ceb4c0a-b0b6-4cb5-898b-ad0c25f55004
+  kind: Event
+  lastTimestamp: "2023-03-03T20:02:56Z"
+  message: 'Created pod: istio-cni-node-thqjx'
+  metadata:
+    creationTimestamp: "2023-03-03T20:02:56Z"
+    name: istio-cni-node.1749014f6564a184
+    namespace: openshift-operators
+    resourceVersion: "34404"
+    uid: 9b37ea10-52d5-4f7a-87a0-cf736811c85a
+  reason: SuccessfulCreate
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: daemonset-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:02:56Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: DaemonSet
+    name: istio-cni-node
+    namespace: openshift-operators
+    resourceVersion: "34383"
+    uid: 4ceb4c0a-b0b6-4cb5-898b-ad0c25f55004
+  kind: Event
+  lastTimestamp: "2023-03-03T20:02:56Z"
+  message: 'Created pod: istio-cni-node-66t7g'
+  metadata:
+    creationTimestamp: "2023-03-03T20:02:56Z"
+    name: istio-cni-node.1749014f6c56616d
+    namespace: openshift-operators
+    resourceVersion: "34414"
+    uid: 453103a7-75e3-4540-9c60-8d93493e9901
+  reason: SuccessfulCreate
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: daemonset-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:02:56Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: DaemonSet
+    name: istio-cni-node
+    namespace: openshift-operators
+    resourceVersion: "34383"
+    uid: 4ceb4c0a-b0b6-4cb5-898b-ad0c25f55004
+  kind: Event
+  lastTimestamp: "2023-03-03T20:02:56Z"
+  message: 'Created pod: istio-cni-node-tmtck'
+  metadata:
+    creationTimestamp: "2023-03-03T20:02:56Z"
+    name: istio-cni-node.1749014f6d5e0772
+    namespace: openshift-operators
+    resourceVersion: "34419"
+    uid: 270af9d3-52fe-4eca-a149-1cc2dde73bdb
+  reason: SuccessfulCreate
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: daemonset-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:02:56Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: DaemonSet
+    name: istio-cni-node
+    namespace: openshift-operators
+    resourceVersion: "34383"
+    uid: 4ceb4c0a-b0b6-4cb5-898b-ad0c25f55004
+  kind: Event
+  lastTimestamp: "2023-03-03T20:02:56Z"
+  message: 'Created pod: istio-cni-node-58xx9'
+  metadata:
+    creationTimestamp: "2023-03-03T20:02:56Z"
+    name: istio-cni-node.1749014f6de16256
+    namespace: openshift-operators
+    resourceVersion: "34424"
+    uid: 7feccca8-b25f-48c5-93a5-31bac8737e1a
+  reason: SuccessfulCreate
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: daemonset-controller
+  type: Normal
+- action: Binding
+  apiVersion: v1
+  eventTime: "2023-03-03T20:01:44.191278Z"
+  firstTimestamp: null
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: istio-operator-746b578f6f-h87nd
+    namespace: openshift-operators
+    resourceVersion: "32782"
+    uid: c9083046-3db1-4640-ac57-968d50c13a91
+  kind: Event
+  lastTimestamp: null
+  message: Successfully assigned openshift-operators/istio-operator-746b578f6f-h87nd
+    to ci-ln-4zhdf4b-72292-lw57b-worker-c-szhjg
+  metadata:
+    creationTimestamp: "2023-03-03T20:01:44Z"
+    name: istio-operator-746b578f6f-h87nd.1749013e844a6ac9
+    namespace: openshift-operators
+    resourceVersion: "32787"
+    uid: d0902ab7-2196-41fa-b494-5a063544a9d9
+  reason: Scheduled
+  reportingComponent: default-scheduler
+  reportingInstance: default-scheduler-ci-ln-4zhdf4b-72292-lw57b-master-1
+  source: {}
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:01:45Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: istio-operator-746b578f6f-h87nd
+    namespace: openshift-operators
+    resourceVersion: "32793"
+    uid: c9083046-3db1-4640-ac57-968d50c13a91
+  kind: Event
+  lastTimestamp: "2023-03-03T20:01:45Z"
+  message: Add eth0 [10.129.2.17/23] from ovn-kubernetes
+  metadata:
+    creationTimestamp: "2023-03-03T20:01:45Z"
+    name: istio-operator-746b578f6f-h87nd.1749013ed9aa003b
+    namespace: openshift-operators
+    resourceVersion: "32822"
+    uid: 6cb592f9-17fc-404f-b3fd-ac12df0eabd2
+  reason: AddedInterface
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: multus
+  type: Normal
+- apiVersion: v1
+  count: 2
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:01:45Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{istio-operator}
+    kind: Pod
+    name: istio-operator-746b578f6f-h87nd
+    namespace: openshift-operators
+    resourceVersion: "32785"
+    uid: c9083046-3db1-4640-ac57-968d50c13a91
+  kind: Event
+  lastTimestamp: "2023-03-03T20:02:42Z"
+  message: Pulling image "registry.redhat.io/openshift-service-mesh/istio-rhel8-operator@sha256:de34c50c3b67468056c3d8bd18c575da696efb7657989724714af294859df14d"
+  metadata:
+    creationTimestamp: "2023-03-03T20:01:45Z"
+    name: istio-operator-746b578f6f-h87nd.1749013ee4af20f9
+    namespace: openshift-operators
+    resourceVersion: "34007"
+    uid: b95b086c-33bb-4191-ae9a-53b8c4d5e8d4
+  reason: Pulling
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-worker-c-szhjg
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:02:02Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{istio-operator}
+    kind: Pod
+    name: istio-operator-746b578f6f-h87nd
+    namespace: openshift-operators
+    resourceVersion: "32785"
+    uid: c9083046-3db1-4640-ac57-968d50c13a91
+  kind: Event
+  lastTimestamp: "2023-03-03T20:02:02Z"
+  message: Successfully pulled image "registry.redhat.io/openshift-service-mesh/istio-rhel8-operator@sha256:de34c50c3b67468056c3d8bd18c575da696efb7657989724714af294859df14d"
+    in 16.450789926s
+  metadata:
+    creationTimestamp: "2023-03-03T20:02:02Z"
+    name: istio-operator-746b578f6f-h87nd.17490142b93ad1d7
+    namespace: openshift-operators
+    resourceVersion: "33167"
+    uid: b0ae14f4-a2bd-4511-9c96-162bec187ff4
+  reason: Pulled
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-worker-c-szhjg
+  type: Normal
+- apiVersion: v1
+  count: 2
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:02:02Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{istio-operator}
+    kind: Pod
+    name: istio-operator-746b578f6f-h87nd
+    namespace: openshift-operators
+    resourceVersion: "32785"
+    uid: c9083046-3db1-4640-ac57-968d50c13a91
+  kind: Event
+  lastTimestamp: "2023-03-03T20:02:43Z"
+  message: Created container istio-operator
+  metadata:
+    creationTimestamp: "2023-03-03T20:02:02Z"
+    name: istio-operator-746b578f6f-h87nd.17490142cb75a773
+    namespace: openshift-operators
+    resourceVersion: "34021"
+    uid: 536bd4ba-b36e-40a2-ac7d-99588709aa71
+  reason: Created
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-worker-c-szhjg
+  type: Normal
+- apiVersion: v1
+  count: 2
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:02:02Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{istio-operator}
+    kind: Pod
+    name: istio-operator-746b578f6f-h87nd
+    namespace: openshift-operators
+    resourceVersion: "32785"
+    uid: c9083046-3db1-4640-ac57-968d50c13a91
+  kind: Event
+  lastTimestamp: "2023-03-03T20:02:43Z"
+  message: Started container istio-operator
+  metadata:
+    creationTimestamp: "2023-03-03T20:02:02Z"
+    name: istio-operator-746b578f6f-h87nd.17490142cf60dfad
+    namespace: openshift-operators
+    resourceVersion: "34022"
+    uid: d557427c-ab3a-49a9-af33-19ceb0e132ad
+  reason: Started
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-worker-c-szhjg
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:02:42Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{istio-operator}
+    kind: Pod
+    name: istio-operator-746b578f6f-h87nd
+    namespace: openshift-operators
+    resourceVersion: "32785"
+    uid: c9083046-3db1-4640-ac57-968d50c13a91
+  kind: Event
+  lastTimestamp: "2023-03-03T20:02:42Z"
+  message: Successfully pulled image "registry.redhat.io/openshift-service-mesh/istio-rhel8-operator@sha256:de34c50c3b67468056c3d8bd18c575da696efb7657989724714af294859df14d"
+    in 429.199951ms
+  metadata:
+    creationTimestamp: "2023-03-03T20:02:42Z"
+    name: istio-operator-746b578f6f-h87nd.1749014c286a7110
+    namespace: openshift-operators
+    resourceVersion: "34019"
+    uid: 776f98f0-41e9-4368-bce6-e5e6b0fcf9bb
+  reason: Pulled
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-worker-c-szhjg
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:01:44Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: ReplicaSet
+    name: istio-operator-746b578f6f
+    namespace: openshift-operators
+    resourceVersion: "32779"
+    uid: 4cbbec90-9aba-4a63-81e2-9b6cbd49fc59
+  kind: Event
+  lastTimestamp: "2023-03-03T20:01:44Z"
+  message: 'Created pod: istio-operator-746b578f6f-h87nd'
+  metadata:
+    creationTimestamp: "2023-03-03T20:01:44Z"
+    name: istio-operator-746b578f6f.1749013e82e9de72
+    namespace: openshift-operators
+    resourceVersion: "32784"
+    uid: 92aa39fa-5ebf-40d9-bb5a-edb0a9e5787d
+  reason: SuccessfulCreate
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: replicaset-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:01:44Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: istio-operator
+    namespace: openshift-operators
+    resourceVersion: "32778"
+    uid: 108dbed5-e4fa-4f69-8505-bae30038d342
+  kind: Event
+  lastTimestamp: "2023-03-03T20:01:44Z"
+  message: Scaled up replica set istio-operator-746b578f6f to 1
+  metadata:
+    creationTimestamp: "2023-03-03T20:01:44Z"
+    name: istio-operator.1749013e7ff52d17
+    namespace: openshift-operators
+    resourceVersion: "32780"
+    uid: 89f10940-5bc3-468b-8c98-98a409a3782e
+  reason: ScalingReplicaSet
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: deployment-controller
+  type: Normal
+- action: Binding
+  apiVersion: v1
+  eventTime: "2023-03-03T20:01:38.819687Z"
+  firstTimestamp: null
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: jaeger-operator-7c8984f44c-qnjsw
+    namespace: openshift-operators
+    resourceVersion: "32617"
+    uid: 8167ef2b-7871-472b-971f-86cf5e74af0c
+  kind: Event
+  lastTimestamp: null
+  message: Successfully assigned openshift-operators/jaeger-operator-7c8984f44c-qnjsw
+    to ci-ln-4zhdf4b-72292-lw57b-worker-c-szhjg
+  metadata:
+    creationTimestamp: "2023-03-03T20:01:38Z"
+    name: jaeger-operator-7c8984f44c-qnjsw.1749013d441e767a
+    namespace: openshift-operators
+    resourceVersion: "32631"
+    uid: 0f41e0ea-ebef-4f6e-b41a-e9df0a60be68
+  reason: Scheduled
+  reportingComponent: default-scheduler
+  reportingInstance: default-scheduler-ci-ln-4zhdf4b-72292-lw57b-master-1
+  source: {}
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:01:41Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: jaeger-operator-7c8984f44c-qnjsw
+    namespace: openshift-operators
+    resourceVersion: "32632"
+    uid: 8167ef2b-7871-472b-971f-86cf5e74af0c
+  kind: Event
+  lastTimestamp: "2023-03-03T20:01:41Z"
+  message: Add eth0 [10.129.2.15/23] from ovn-kubernetes
+  metadata:
+    creationTimestamp: "2023-03-03T20:01:41Z"
+    name: jaeger-operator-7c8984f44c-qnjsw.1749013dda2d5ca2
+    namespace: openshift-operators
+    resourceVersion: "32714"
+    uid: 522fab67-762f-4f0e-8b9b-b38dda89fcef
+  reason: AddedInterface
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: multus
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:01:41Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{jaeger-operator}
+    kind: Pod
+    name: jaeger-operator-7c8984f44c-qnjsw
+    namespace: openshift-operators
+    resourceVersion: "32624"
+    uid: 8167ef2b-7871-472b-971f-86cf5e74af0c
+  kind: Event
+  lastTimestamp: "2023-03-03T20:01:41Z"
+  message: Pulling image "registry.redhat.io/rhosdt/jaeger-rhel8-operator@sha256:454a40d442bd9fc9c5a0fc1d55cb9f51a5b360a034be72d71f7e961c68b9e985"
+  metadata:
+    creationTimestamp: "2023-03-03T20:01:41Z"
+    name: jaeger-operator-7c8984f44c-qnjsw.1749013de37b0db4
+    namespace: openshift-operators
+    resourceVersion: "32717"
+    uid: 66c29cbc-2b95-4b3f-8733-3a9d3710dd70
+  reason: Pulling
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-worker-c-szhjg
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:02:02Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{jaeger-operator}
+    kind: Pod
+    name: jaeger-operator-7c8984f44c-qnjsw
+    namespace: openshift-operators
+    resourceVersion: "32624"
+    uid: 8167ef2b-7871-472b-971f-86cf5e74af0c
+  kind: Event
+  lastTimestamp: "2023-03-03T20:02:02Z"
+  message: Successfully pulled image "registry.redhat.io/rhosdt/jaeger-rhel8-operator@sha256:454a40d442bd9fc9c5a0fc1d55cb9f51a5b360a034be72d71f7e961c68b9e985"
+    in 20.66539772s
+  metadata:
+    creationTimestamp: "2023-03-03T20:02:02Z"
+    name: jaeger-operator-7c8984f44c-qnjsw.17490142b33c7d9f
+    namespace: openshift-operators
+    resourceVersion: "33164"
+    uid: 1d46e790-8910-4f06-aad3-7fc4ce3f5e1b
+  reason: Pulled
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-worker-c-szhjg
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:02:02Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{jaeger-operator}
+    kind: Pod
+    name: jaeger-operator-7c8984f44c-qnjsw
+    namespace: openshift-operators
+    resourceVersion: "32624"
+    uid: 8167ef2b-7871-472b-971f-86cf5e74af0c
+  kind: Event
+  lastTimestamp: "2023-03-03T20:02:02Z"
+  message: Created container jaeger-operator
+  metadata:
+    creationTimestamp: "2023-03-03T20:02:02Z"
+    name: jaeger-operator-7c8984f44c-qnjsw.17490142c7fabe61
+    namespace: openshift-operators
+    resourceVersion: "33176"
+    uid: d66cb39b-4244-43b4-9516-ad13aac85252
+  reason: Created
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-worker-c-szhjg
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:02:02Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{jaeger-operator}
+    kind: Pod
+    name: jaeger-operator-7c8984f44c-qnjsw
+    namespace: openshift-operators
+    resourceVersion: "32624"
+    uid: 8167ef2b-7871-472b-971f-86cf5e74af0c
+  kind: Event
+  lastTimestamp: "2023-03-03T20:02:02Z"
+  message: Started container jaeger-operator
+  metadata:
+    creationTimestamp: "2023-03-03T20:02:02Z"
+    name: jaeger-operator-7c8984f44c-qnjsw.17490142cb1621f2
+    namespace: openshift-operators
+    resourceVersion: "33178"
+    uid: 3e50ff4c-6169-4a14-9673-271e4d11c8b5
+  reason: Started
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-worker-c-szhjg
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:02:02Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-rbac-proxy}
+    kind: Pod
+    name: jaeger-operator-7c8984f44c-qnjsw
+    namespace: openshift-operators
+    resourceVersion: "32624"
+    uid: 8167ef2b-7871-472b-971f-86cf5e74af0c
+  kind: Event
+  lastTimestamp: "2023-03-03T20:02:02Z"
+  message: Pulling image "registry.redhat.io/openshift4/ose-kube-rbac-proxy@sha256:f7993b7a5458679621f6686bdc4ab818659e051ef6cdf6a8e107f627adf5f178"
+  metadata:
+    creationTimestamp: "2023-03-03T20:02:02Z"
+    name: jaeger-operator-7c8984f44c-qnjsw.17490142cb4660b3
+    namespace: openshift-operators
+    resourceVersion: "33179"
+    uid: 43f2af0f-b47d-4150-a77c-4e0a4a9cc671
+  reason: Pulling
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-worker-c-szhjg
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:02:07Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-rbac-proxy}
+    kind: Pod
+    name: jaeger-operator-7c8984f44c-qnjsw
+    namespace: openshift-operators
+    resourceVersion: "32624"
+    uid: 8167ef2b-7871-472b-971f-86cf5e74af0c
+  kind: Event
+  lastTimestamp: "2023-03-03T20:02:07Z"
+  message: Successfully pulled image "registry.redhat.io/openshift4/ose-kube-rbac-proxy@sha256:f7993b7a5458679621f6686bdc4ab818659e051ef6cdf6a8e107f627adf5f178"
+    in 4.870831339s
+  metadata:
+    creationTimestamp: "2023-03-03T20:02:07Z"
+    name: jaeger-operator-7c8984f44c-qnjsw.17490143ed99a031
+    namespace: openshift-operators
+    resourceVersion: "33423"
+    uid: 95ca1270-3b64-409f-83fd-688ed18283d4
+  reason: Pulled
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-worker-c-szhjg
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:02:07Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-rbac-proxy}
+    kind: Pod
+    name: jaeger-operator-7c8984f44c-qnjsw
+    namespace: openshift-operators
+    resourceVersion: "32624"
+    uid: 8167ef2b-7871-472b-971f-86cf5e74af0c
+  kind: Event
+  lastTimestamp: "2023-03-03T20:02:07Z"
+  message: Created container kube-rbac-proxy
+  metadata:
+    creationTimestamp: "2023-03-03T20:02:07Z"
+    name: jaeger-operator-7c8984f44c-qnjsw.17490143fa1d6887
+    namespace: openshift-operators
+    resourceVersion: "33426"
+    uid: 8711f2d4-afd7-4d8e-b4b5-640d5e2fd945
+  reason: Created
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-worker-c-szhjg
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:02:07Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-rbac-proxy}
+    kind: Pod
+    name: jaeger-operator-7c8984f44c-qnjsw
+    namespace: openshift-operators
+    resourceVersion: "32624"
+    uid: 8167ef2b-7871-472b-971f-86cf5e74af0c
+  kind: Event
+  lastTimestamp: "2023-03-03T20:02:07Z"
+  message: Started container kube-rbac-proxy
+  metadata:
+    creationTimestamp: "2023-03-03T20:02:07Z"
+    name: jaeger-operator-7c8984f44c-qnjsw.17490143fbf0284d
+    namespace: openshift-operators
+    resourceVersion: "33430"
+    uid: d3f1c39f-fb36-4468-a3a3-1213cf6d39b4
+  reason: Started
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-worker-c-szhjg
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:01:38Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: ReplicaSet
+    name: jaeger-operator-7c8984f44c
+    namespace: openshift-operators
+    resourceVersion: "32602"
+    uid: 5c511167-f51e-41e6-88cb-e7d95a477820
+  kind: Event
+  lastTimestamp: "2023-03-03T20:01:38Z"
+  message: 'Created pod: jaeger-operator-7c8984f44c-qnjsw'
+  metadata:
+    creationTimestamp: "2023-03-03T20:01:38Z"
+    name: jaeger-operator-7c8984f44c.1749013d3f3ddaad
+    namespace: openshift-operators
+    resourceVersion: "32625"
+    uid: 18e5b19f-4cf8-49c3-987f-c1d75c49418c
+  reason: SuccessfulCreate
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: replicaset-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:01:38Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: jaeger-operator
+    namespace: openshift-operators
+    resourceVersion: "32596"
+    uid: 7ee5b5e2-0c86-419c-b6a5-6e08c57fecd2
+  kind: Event
+  lastTimestamp: "2023-03-03T20:01:38Z"
+  message: Scaled up replica set jaeger-operator-7c8984f44c to 1
+  metadata:
+    creationTimestamp: "2023-03-03T20:01:38Z"
+    name: jaeger-operator.1749013d153cdd30
+    namespace: openshift-operators
+    resourceVersion: "32604"
+    uid: 4afdd7c0-8b8e-4f5d-b913-909527c76b6a
+  reason: ScalingReplicaSet
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: deployment-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:01:29Z"
+  involvedObject:
+    apiVersion: operators.coreos.com/v1alpha1
+    kind: ClusterServiceVersion
+    name: jaeger-operator.v1.39.0-3
+    namespace: openshift-operators
+    resourceVersion: "32332"
+    uid: 0556b7c9-94bf-4a34-ae09-4216dc0a639e
+  kind: Event
+  lastTimestamp: "2023-03-03T20:01:29Z"
+  message: requirements not yet checked
+  metadata:
+    creationTimestamp: "2023-03-03T20:01:29Z"
+    name: jaeger-operator.v1.39.0-3.1749013b31612bdf
+    namespace: openshift-operators
+    resourceVersion: "32340"
+    uid: fe77b2cc-429a-49d1-8593-8634557f5a58
+  reason: RequirementsUnknown
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: operator-lifecycle-manager
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:01:30Z"
+  involvedObject:
+    apiVersion: operators.coreos.com/v1alpha1
+    kind: ClusterServiceVersion
+    name: jaeger-operator.v1.39.0-3
+    namespace: openshift-operators
+    resourceVersion: "32342"
+    uid: 0556b7c9-94bf-4a34-ae09-4216dc0a639e
+  kind: Event
+  lastTimestamp: "2023-03-03T20:01:30Z"
+  message: one or more requirements couldn't be found
+  metadata:
+    creationTimestamp: "2023-03-03T20:01:30Z"
+    name: jaeger-operator.v1.39.0-3.1749013b3a1d16f7
+    namespace: openshift-operators
+    resourceVersion: "32346"
+    uid: 73843974-c3ea-4bae-a0c9-6d8bbad2222e
+  reason: RequirementsNotMet
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: operator-lifecycle-manager
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:01:36Z"
+  involvedObject:
+    apiVersion: operators.coreos.com/v1alpha1
+    kind: ClusterServiceVersion
+    name: jaeger-operator.v1.39.0-3
+    namespace: openshift-operators
+    resourceVersion: "32421"
+    uid: 0556b7c9-94bf-4a34-ae09-4216dc0a639e
+  kind: Event
+  lastTimestamp: "2023-03-03T20:01:36Z"
+  message: all requirements found, attempting install
+  metadata:
+    creationTimestamp: "2023-03-03T20:01:36Z"
+    name: jaeger-operator.v1.39.0-3.1749013ca788a683
+    namespace: openshift-operators
+    resourceVersion: "32533"
+    uid: 38671f6a-18af-45c8-b312-bd55dd6b5ad7
+  reason: AllRequirementsMet
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: operator-lifecycle-manager
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:01:40Z"
+  involvedObject:
+    apiVersion: operators.coreos.com/v1alpha1
+    kind: ClusterServiceVersion
+    name: jaeger-operator.v1.39.0-3
+    namespace: openshift-operators
+    resourceVersion: "32538"
+    uid: 0556b7c9-94bf-4a34-ae09-4216dc0a639e
+  kind: Event
+  lastTimestamp: "2023-03-03T20:01:40Z"
+  message: waiting for install components to report healthy
+  metadata:
+    creationTimestamp: "2023-03-03T20:01:40Z"
+    name: jaeger-operator.v1.39.0-3.1749013d8dc6ac4f
+    namespace: openshift-operators
+    resourceVersion: "32664"
+    uid: f96f4af8-e28b-432d-83a8-9ccb26cc7e16
+  reason: InstallSucceeded
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: operator-lifecycle-manager
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:01:41Z"
+  involvedObject:
+    apiVersion: operators.coreos.com/v1alpha1
+    kind: ClusterServiceVersion
+    name: jaeger-operator.v1.39.0-3
+    namespace: openshift-operators
+    resourceVersion: "32668"
+    uid: 0556b7c9-94bf-4a34-ae09-4216dc0a639e
+  kind: Event
+  lastTimestamp: "2023-03-03T20:01:41Z"
+  message: 'installing: waiting for deployment jaeger-operator to become ready: deployment
+    "jaeger-operator" not available: Deployment does not have minimum availability.'
+  metadata:
+    creationTimestamp: "2023-03-03T20:01:41Z"
+    name: jaeger-operator.v1.39.0-3.1749013dfc4eb3bb
+    namespace: openshift-operators
+    resourceVersion: "32735"
+    uid: dcbd6502-d478-4d95-b15f-d111b939ad0d
+  reason: InstallWaiting
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: operator-lifecycle-manager
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:02:09Z"
+  involvedObject:
+    apiVersion: operators.coreos.com/v1alpha1
+    kind: ClusterServiceVersion
+    name: jaeger-operator.v1.39.0-3
+    namespace: openshift-operators
+    resourceVersion: "32734"
+    uid: 0556b7c9-94bf-4a34-ae09-4216dc0a639e
+  kind: Event
+  lastTimestamp: "2023-03-03T20:02:09Z"
+  message: install strategy completed with no errors
+  metadata:
+    creationTimestamp: "2023-03-03T20:02:09Z"
+    name: jaeger-operator.v1.39.0-3.174901444df705eb
+    namespace: openshift-operators
+    resourceVersion: "33491"
+    uid: 501db3c2-0e79-4753-ba39-d88e3662150d
+  reason: InstallSucceeded
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: operator-lifecycle-manager
+  type: Normal
+- action: Binding
+  apiVersion: v1
+  eventTime: "2023-03-03T20:01:41.350767Z"
+  firstTimestamp: null
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: kiali-operator-768df5b998-9k9rt
+    namespace: openshift-operators
+    resourceVersion: "32700"
+    uid: 1fb5cb07-a338-445f-a1a7-c74b0fa60d74
+  kind: Event
+  lastTimestamp: null
+  message: Successfully assigned openshift-operators/kiali-operator-768df5b998-9k9rt
+    to ci-ln-4zhdf4b-72292-lw57b-worker-c-szhjg
+  metadata:
+    creationTimestamp: "2023-03-03T20:01:41Z"
+    name: kiali-operator-768df5b998-9k9rt.1749013ddafbab0b
+    namespace: openshift-operators
+    resourceVersion: "32711"
+    uid: a9788817-8f52-4f1b-966b-c84fb109affb
+  reason: Scheduled
+  reportingComponent: default-scheduler
+  reportingInstance: default-scheduler-ci-ln-4zhdf4b-72292-lw57b-master-1
+  source: {}
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:01:42Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: kiali-operator-768df5b998-9k9rt
+    namespace: openshift-operators
+    resourceVersion: "32722"
+    uid: 1fb5cb07-a338-445f-a1a7-c74b0fa60d74
+  kind: Event
+  lastTimestamp: "2023-03-03T20:01:42Z"
+  message: Add eth0 [10.129.2.16/23] from ovn-kubernetes
+  metadata:
+    creationTimestamp: "2023-03-03T20:01:42Z"
+    name: kiali-operator-768df5b998-9k9rt.1749013e062710de
+    namespace: openshift-operators
+    resourceVersion: "32737"
+    uid: 7f12bfef-d671-4f3e-92bc-31433139f6ba
+  reason: AddedInterface
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: multus
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:01:42Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{operator}
+    kind: Pod
+    name: kiali-operator-768df5b998-9k9rt
+    namespace: openshift-operators
+    resourceVersion: "32707"
+    uid: 1fb5cb07-a338-445f-a1a7-c74b0fa60d74
+  kind: Event
+  lastTimestamp: "2023-03-03T20:01:42Z"
+  message: Pulling image "registry.redhat.io/openshift-service-mesh/kiali-rhel8-operator@sha256:3970fa54d293274c61b8832fa9cfef4a1dd38c08e21890be85195e629ac3aa1e"
+  metadata:
+    creationTimestamp: "2023-03-03T20:01:42Z"
+    name: kiali-operator-768df5b998-9k9rt.1749013e0cb7c70c
+    namespace: openshift-operators
+    resourceVersion: "32739"
+    uid: a768f104-a015-4492-8c98-76eaaba05895
+  reason: Pulling
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-worker-c-szhjg
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:02:02Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{operator}
+    kind: Pod
+    name: kiali-operator-768df5b998-9k9rt
+    namespace: openshift-operators
+    resourceVersion: "32707"
+    uid: 1fb5cb07-a338-445f-a1a7-c74b0fa60d74
+  kind: Event
+  lastTimestamp: "2023-03-03T20:02:02Z"
+  message: Successfully pulled image "registry.redhat.io/openshift-service-mesh/kiali-rhel8-operator@sha256:3970fa54d293274c61b8832fa9cfef4a1dd38c08e21890be85195e629ac3aa1e"
+    in 20.07866223s
+  metadata:
+    creationTimestamp: "2023-03-03T20:02:02Z"
+    name: kiali-operator-768df5b998-9k9rt.17490142b98029b7
+    namespace: openshift-operators
+    resourceVersion: "33169"
+    uid: e9c05806-c76c-432b-92f4-e37ff3ece8e3
+  reason: Pulled
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-worker-c-szhjg
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:02:02Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{operator}
+    kind: Pod
+    name: kiali-operator-768df5b998-9k9rt
+    namespace: openshift-operators
+    resourceVersion: "32707"
+    uid: 1fb5cb07-a338-445f-a1a7-c74b0fa60d74
+  kind: Event
+  lastTimestamp: "2023-03-03T20:02:02Z"
+  message: Created container operator
+  metadata:
+    creationTimestamp: "2023-03-03T20:02:02Z"
+    name: kiali-operator-768df5b998-9k9rt.17490142ccac7450
+    namespace: openshift-operators
+    resourceVersion: "33182"
+    uid: c529dd26-08d6-438d-af12-a7ba2cdc253c
+  reason: Created
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-worker-c-szhjg
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:02:02Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{operator}
+    kind: Pod
+    name: kiali-operator-768df5b998-9k9rt
+    namespace: openshift-operators
+    resourceVersion: "32707"
+    uid: 1fb5cb07-a338-445f-a1a7-c74b0fa60d74
+  kind: Event
+  lastTimestamp: "2023-03-03T20:02:02Z"
+  message: Started container operator
+  metadata:
+    creationTimestamp: "2023-03-03T20:02:02Z"
+    name: kiali-operator-768df5b998-9k9rt.17490142cfa9dc4b
+    namespace: openshift-operators
+    resourceVersion: "33185"
+    uid: 5ea8033a-fac1-415e-85af-2eef0a189e00
+  reason: Started
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-worker-c-szhjg
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:01:41Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: ReplicaSet
+    name: kiali-operator-768df5b998
+    namespace: openshift-operators
+    resourceVersion: "32691"
+    uid: a615a666-ab40-4df5-b6f1-669798b2831e
+  kind: Event
+  lastTimestamp: "2023-03-03T20:01:41Z"
+  message: 'Created pod: kiali-operator-768df5b998-9k9rt'
+  metadata:
+    creationTimestamp: "2023-03-03T20:01:41Z"
+    name: kiali-operator-768df5b998.1749013dd5ee7b6f
+    namespace: openshift-operators
+    resourceVersion: "32704"
+    uid: 74982917-40ed-46b7-b871-ec44b0d7fcaa
+  reason: SuccessfulCreate
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: replicaset-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:01:41Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: kiali-operator
+    namespace: openshift-operators
+    resourceVersion: "32690"
+    uid: 9c779adb-b0c2-46c4-b103-20035cf1b225
+  kind: Event
+  lastTimestamp: "2023-03-03T20:01:41Z"
+  message: Scaled up replica set kiali-operator-768df5b998 to 1
+  metadata:
+    creationTimestamp: "2023-03-03T20:01:41Z"
+    name: kiali-operator.1749013dcdb3224f
+    namespace: openshift-operators
+    resourceVersion: "32696"
+    uid: ba101c62-b51f-49b9-8350-84b4546b65d4
+  reason: ScalingReplicaSet
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: deployment-controller
+  type: Normal
+- apiVersion: v1
+  count: 2
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:01:36Z"
+  involvedObject:
+    apiVersion: operators.coreos.com/v1alpha1
+    kind: ClusterServiceVersion
+    name: kiali-operator.v1.57.5
+    namespace: openshift-operators
+    resourceVersion: "32509"
+    uid: b9162646-9523-4aae-bb17-f3fb30e55978
+  kind: Event
+  lastTimestamp: "2023-03-03T20:01:36Z"
+  message: requirements not yet checked
+  metadata:
+    creationTimestamp: "2023-03-03T20:01:36Z"
+    name: kiali-operator.v1.57.5.1749013cae3a72ba
+    namespace: openshift-operators
+    resourceVersion: "32557"
+    uid: 854f27c5-ce7c-4b2a-8360-54e404384162
+  reason: RequirementsUnknown
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: operator-lifecycle-manager
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:01:38Z"
+  involvedObject:
+    apiVersion: operators.coreos.com/v1alpha1
+    kind: ClusterServiceVersion
+    name: kiali-operator.v1.57.5
+    namespace: openshift-operators
+    resourceVersion: "32558"
+    uid: b9162646-9523-4aae-bb17-f3fb30e55978
+  kind: Event
+  lastTimestamp: "2023-03-03T20:01:38Z"
+  message: all requirements found, attempting install
+  metadata:
+    creationTimestamp: "2023-03-03T20:01:38Z"
+    name: kiali-operator.v1.57.5.1749013d1bcb23dd
+    namespace: openshift-operators
+    resourceVersion: "32605"
+    uid: 4b22d352-5694-4fb5-9033-578ae7647f2e
+  reason: AllRequirementsMet
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: operator-lifecycle-manager
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:01:41Z"
+  involvedObject:
+    apiVersion: operators.coreos.com/v1alpha1
+    kind: ClusterServiceVersion
+    name: kiali-operator.v1.57.5
+    namespace: openshift-operators
+    resourceVersion: "32609"
+    uid: b9162646-9523-4aae-bb17-f3fb30e55978
+  kind: Event
+  lastTimestamp: "2023-03-03T20:01:41Z"
+  message: waiting for install components to report healthy
+  metadata:
+    creationTimestamp: "2023-03-03T20:01:41Z"
+    name: kiali-operator.v1.57.5.1749013dca414605
+    namespace: openshift-operators
+    resourceVersion: "32692"
+    uid: 2924fdde-b670-434b-9b74-e04b6d7c3bd2
+  reason: InstallSucceeded
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: operator-lifecycle-manager
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:01:42Z"
+  involvedObject:
+    apiVersion: operators.coreos.com/v1alpha1
+    kind: ClusterServiceVersion
+    name: kiali-operator.v1.57.5
+    namespace: openshift-operators
+    resourceVersion: "32694"
+    uid: b9162646-9523-4aae-bb17-f3fb30e55978
+  kind: Event
+  lastTimestamp: "2023-03-03T20:01:42Z"
+  message: 'installing: waiting for deployment kiali-operator to become ready: deployment
+    "kiali-operator" not available: Deployment does not have minimum availability.'
+  metadata:
+    creationTimestamp: "2023-03-03T20:01:42Z"
+    name: kiali-operator.v1.57.5.1749013e32ab8ae8
+    namespace: openshift-operators
+    resourceVersion: "32748"
+    uid: d661becb-5c25-44b9-82c2-db160488b3d8
+  reason: InstallWaiting
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: operator-lifecycle-manager
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:02:03Z"
+  involvedObject:
+    apiVersion: operators.coreos.com/v1alpha1
+    kind: ClusterServiceVersion
+    name: kiali-operator.v1.57.5
+    namespace: openshift-operators
+    resourceVersion: "32749"
+    uid: b9162646-9523-4aae-bb17-f3fb30e55978
+  kind: Event
+  lastTimestamp: "2023-03-03T20:02:03Z"
+  message: install strategy completed with no errors
+  metadata:
+    creationTimestamp: "2023-03-03T20:02:03Z"
+    name: kiali-operator.v1.57.5.17490142f506ac04
+    namespace: openshift-operators
+    resourceVersion: "33201"
+    uid: 63379618-4ff5-46d7-a661-935570ed668b
+  reason: InstallSucceeded
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: operator-lifecycle-manager
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:01:40Z"
+  involvedObject:
+    apiVersion: operators.coreos.com/v1alpha1
+    kind: ClusterServiceVersion
+    name: servicemeshoperator.v2.3.1
+    namespace: openshift-operators
+    resourceVersion: "32595"
+    uid: 6bebf210-3f7a-49e0-bb35-7cbae648fc88
+  kind: Event
+  lastTimestamp: "2023-03-03T20:01:40Z"
+  message: requirements not yet checked
+  metadata:
+    creationTimestamp: "2023-03-03T20:01:41Z"
+    name: servicemeshoperator.v2.3.1.1749013dc5e0c141
+    namespace: openshift-operators
+    resourceVersion: "32687"
+    uid: ae9b2ca3-573d-48bc-a886-65d364cd90de
+  reason: RequirementsUnknown
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: operator-lifecycle-manager
+  type: Normal
+- apiVersion: v1
+  count: 2
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:01:41Z"
+  involvedObject:
+    apiVersion: operators.coreos.com/v1alpha1
+    kind: ClusterServiceVersion
+    name: servicemeshoperator.v2.3.1
+    namespace: openshift-operators
+    resourceVersion: "32688"
+    uid: 6bebf210-3f7a-49e0-bb35-7cbae648fc88
+  kind: Event
+  lastTimestamp: "2023-03-03T20:02:43Z"
+  message: all requirements found, attempting install
+  metadata:
+    creationTimestamp: "2023-03-03T20:01:41Z"
+    name: servicemeshoperator.v2.3.1.1749013defb9eac0
+    namespace: openshift-operators
+    resourceVersion: "34041"
+    uid: 6e578045-1fe1-4977-8ecc-a4035f013c46
+  reason: AllRequirementsMet
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: operator-lifecycle-manager
+  type: Normal
+- apiVersion: v1
+  count: 2
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:01:44Z"
+  involvedObject:
+    apiVersion: operators.coreos.com/v1alpha1
+    kind: ClusterServiceVersion
+    name: servicemeshoperator.v2.3.1
+    namespace: openshift-operators
+    resourceVersion: "32727"
+    uid: 6bebf210-3f7a-49e0-bb35-7cbae648fc88
+  kind: Event
+  lastTimestamp: "2023-03-03T20:02:43Z"
+  message: waiting for install components to report healthy
+  metadata:
+    creationTimestamp: "2023-03-03T20:01:44Z"
+    name: servicemeshoperator.v2.3.1.1749013e97057c22
+    namespace: openshift-operators
+    resourceVersion: "34049"
+    uid: 5e1f3714-23ed-4367-9cf9-c9c13a7e1089
+  reason: InstallSucceeded
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: operator-lifecycle-manager
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:01:46Z"
+  involvedObject:
+    apiVersion: operators.coreos.com/v1alpha1
+    kind: ClusterServiceVersion
+    name: servicemeshoperator.v2.3.1
+    namespace: openshift-operators
+    resourceVersion: "32797"
+    uid: 6bebf210-3f7a-49e0-bb35-7cbae648fc88
+  kind: Event
+  lastTimestamp: "2023-03-03T20:01:46Z"
+  message: 'installing: waiting for deployment istio-operator to become ready: deployment
+    "istio-operator" not available: Deployment does not have minimum availability.'
+  metadata:
+    creationTimestamp: "2023-03-03T20:01:46Z"
+    name: servicemeshoperator.v2.3.1.1749013ef0bdce26
+    namespace: openshift-operators
+    resourceVersion: "32840"
+    uid: fca465f6-ef88-4491-b7a2-71b01162e511
+  reason: InstallWaiting
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: operator-lifecycle-manager
+  type: Normal
+- apiVersion: v1
+  count: 2
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:02:03Z"
+  involvedObject:
+    apiVersion: operators.coreos.com/v1alpha1
+    kind: ClusterServiceVersion
+    name: servicemeshoperator.v2.3.1
+    namespace: openshift-operators
+    resourceVersion: "32842"
+    uid: 6bebf210-3f7a-49e0-bb35-7cbae648fc88
+  kind: Event
+  lastTimestamp: "2023-03-03T20:02:44Z"
+  message: install strategy completed with no errors
+  metadata:
+    creationTimestamp: "2023-03-03T20:02:03Z"
+    name: servicemeshoperator.v2.3.1.1749014317919e38
+    namespace: openshift-operators
+    resourceVersion: "34060"
+    uid: 09bce619-4c2d-4524-9755-a961cfa80bec
+  reason: InstallSucceeded
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: operator-lifecycle-manager
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:02:43Z"
+  involvedObject:
+    apiVersion: operators.coreos.com/v1alpha1
+    kind: ClusterServiceVersion
+    name: servicemeshoperator.v2.3.1
+    namespace: openshift-operators
+    resourceVersion: "33225"
+    uid: 6bebf210-3f7a-49e0-bb35-7cbae648fc88
+  kind: Event
+  lastTimestamp: "2023-03-03T20:02:43Z"
+  message: 'installing: waiting for deployment istio-operator to become ready: deployment
+    "istio-operator" not available: Deployment does not have minimum availability.'
+  metadata:
+    creationTimestamp: "2023-03-03T20:02:43Z"
+    name: servicemeshoperator.v2.3.1.1749014c3ded223d
+    namespace: openshift-operators
+    resourceVersion: "34024"
+    uid: 652e0076-f4e3-456b-a445-320fbdbbe2cc
+  reason: ComponentUnhealthy
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: operator-lifecycle-manager
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:02:43Z"
+  involvedObject:
+    apiVersion: operators.coreos.com/v1alpha1
+    kind: ClusterServiceVersion
+    name: servicemeshoperator.v2.3.1
+    namespace: openshift-operators
+    resourceVersion: "34023"
+    uid: 6bebf210-3f7a-49e0-bb35-7cbae648fc88
+  kind: Event
+  lastTimestamp: "2023-03-03T20:02:43Z"
+  message: 'installing: waiting for deployment istio-operator to become ready: deployment
+    "istio-operator" not available: Deployment does not have minimum availability.'
+  metadata:
+    creationTimestamp: "2023-03-03T20:02:43Z"
+    name: servicemeshoperator.v2.3.1.1749014c4dfb418e
+    namespace: openshift-operators
+    resourceVersion: "34030"
+    uid: e4c12985-5f28-4409-9e8b-b291fc224bb1
+  reason: NeedsReinstall
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: operator-lifecycle-manager
+  type: Normal
+kind: EventList
+metadata:
+  resourceVersion: "61037"

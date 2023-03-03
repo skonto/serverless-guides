@@ -1,0 +1,435 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    alm-examples: |-
+      [
+        {
+          "apiVersion": "operator.knative.dev/v1beta1",
+          "kind": "KnativeServing",
+          "metadata": {
+            "name": "knative-serving"
+          },
+          "spec": {
+          }
+        },
+        {
+          "apiVersion": "operator.knative.dev/v1beta1",
+          "kind": "KnativeEventing",
+          "metadata": {
+            "name": "knative-eventing"
+          },
+          "spec": {
+          }
+        },
+        {
+          "apiVersion": "operator.serverless.openshift.io/v1alpha1",
+          "kind": "KnativeKafka",
+          "metadata": {
+            "name": "knative-kafka"
+          },
+          "spec": {
+            "broker": {
+              "enabled": false,
+              "defaultConfig": {
+                "numPartitions": 10,
+                "replicationFactor": 3,
+                "bootstrapServers": "REPLACE_WITH_COMMA_SEPARATED_KAFKA_BOOTSTRAP_SERVERS"
+              }
+            },
+            "source": {
+              "enabled": false
+            },
+            "sink": {
+              "enabled": false
+            },
+            "channel": {
+              "enabled": false,
+              "bootstrapServers": "REPLACE_WITH_COMMA_SEPARATED_KAFKA_BOOTSTRAP_SERVERS"
+            }
+          }
+        }
+      ]
+    capabilities: Full Lifecycle
+    categories: Networking,Integration & Delivery,Cloud Provider,Developer Tools
+    certified: "false"
+    createdAt: "2022-12-01T16:39:45Z"
+    description: Deploy and manage event-driven serverless applications and functions
+      using Knative.
+    k8s.ovn.org/pod-networks: '{"default":{"ip_addresses":["10.128.2.20/23"],"mac_address":"0a:58:0a:80:02:14","gateway_ips":["10.128.2.1"],"ip_address":"10.128.2.20/23","gateway_ip":"10.128.2.1"}}'
+    k8s.v1.cni.cncf.io/network-status: |-
+      [{
+          "name": "ovn-kubernetes",
+          "interface": "eth0",
+          "ips": [
+              "10.128.2.20"
+          ],
+          "mac": "0a:58:0a:80:02:14",
+          "default": true,
+          "dns": {}
+      }]
+    k8s.v1.cni.cncf.io/networks-status: |-
+      [{
+          "name": "ovn-kubernetes",
+          "interface": "eth0",
+          "ips": [
+              "10.128.2.20"
+          ],
+          "mac": "0a:58:0a:80:02:14",
+          "default": true,
+          "dns": {}
+      }]
+    olm.operatorGroup: serverless-operators
+    olm.operatorNamespace: openshift-serverless
+    olm.skipRange: '>=1.25.0 <1.26.0'
+    olm.targetNamespaces: ""
+    olmcahash: 428b911bf3049fa59804877aecc5fd511358cb1b1898db301c1f9807097170b2
+    openshift.io/scc: restricted-v2
+    operatorframework.io/properties: '{"properties":[{"type":"olm.gvk","value":{"group":"operator.knative.dev","kind":"KnativeEventing","version":"v1alpha1"}},{"type":"olm.gvk","value":{"group":"operator.knative.dev","kind":"KnativeEventing","version":"v1beta1"}},{"type":"olm.gvk","value":{"group":"operator.knative.dev","kind":"KnativeServing","version":"v1alpha1"}},{"type":"olm.gvk","value":{"group":"operator.knative.dev","kind":"KnativeServing","version":"v1beta1"}},{"type":"olm.gvk","value":{"group":"operator.serverless.openshift.io","kind":"KnativeKafka","version":"v1alpha1"}},{"type":"olm.package","value":{"packageName":"serverless-operator","version":"1.26.0"}}]}'
+    operatorframework.io/suggested-namespace: openshift-serverless
+    operators.openshift.io/infrastructure-features: '["disconnected", "fips", "proxy-aware"]'
+    operators.openshift.io/valid-subscription: '["OpenShift Container Platform", "OpenShift
+      Platform Plus"]'
+    repository: https://github.com/openshift-knative/serverless-operator
+    seccomp.security.alpha.kubernetes.io/pod: runtime/default
+    support: Red Hat
+  creationTimestamp: "2023-03-03T20:07:50Z"
+  generateName: knative-openshift-78f7d944d7-
+  labels:
+    name: knative-openshift
+    pod-template-hash: 78f7d944d7
+  name: knative-openshift-78f7d944d7-z5dm6
+  namespace: openshift-serverless
+  ownerReferences:
+  - apiVersion: apps/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: ReplicaSet
+    name: knative-openshift-78f7d944d7
+    uid: d63a8850-462b-4556-a12b-ac8c4ccb2375
+  resourceVersion: "38539"
+  uid: c6c16bfa-d950-4e07-947d-d209c4ad5e7f
+spec:
+  containers:
+  - env:
+    - name: WATCH_NAMESPACE
+    - name: NAMESPACE
+      valueFrom:
+        fieldRef:
+          apiVersion: v1
+          fieldPath: metadata.namespace
+    - name: DEPLOYMENT_NAME
+      value: knative-openshift
+    - name: POD_NAME
+      valueFrom:
+        fieldRef:
+          apiVersion: v1
+          fieldPath: metadata.name
+    - name: OPERATOR_NAME
+      value: knative-openshift
+    - name: REQUIRED_SERVING_NAMESPACE
+      value: knative-serving
+    - name: REQUIRED_EVENTING_NAMESPACE
+      value: knative-eventing
+    - name: REQUIRED_KAFKA_NAMESPACE
+      value: knative-eventing
+    - name: KAFKACHANNEL_MANIFEST_PATH
+      value: deploy/resources/knativekafka/channel
+    - name: KAFKASOURCE_MANIFEST_PATH
+      value: deploy/resources/knativekafka/source
+    - name: KAFKACONTROLLER_MANIFEST_PATH
+      value: deploy/resources/knativekafka/controller
+    - name: KAFKABROKER_MANIFEST_PATH
+      value: deploy/resources/knativekafka/broker
+    - name: KAFKASINK_MANIFEST_PATH
+      value: deploy/resources/knativekafka/sink
+    - name: QUICKSTART_MANIFEST_PATH
+      value: deploy/resources/quickstart/serverless-application-quickstart.yaml
+    - name: DASHBOARDS_ROOT_MANIFEST_PATH
+      value: deploy/resources/dashboards
+    - name: SOURCES_USE_CLUSTER_MONITORING
+      value: "true"
+    - name: SOURCES_GENERATE_SERVICE_MONITORS
+      value: "true"
+    - name: IMAGE_queue-proxy
+      value: registry.redhat.io/openshift-serverless-1/serving-queue-rhel8@sha256:8c34803cb97f69f51d92987f06ffcf14c4bd5f47a81b7fb3f6d9d11eba0bba96
+    - name: IMAGE_activator
+      value: registry.redhat.io/openshift-serverless-1/serving-activator-rhel8@sha256:aa6a3ee558c19b9dc2b13bbd351843a7bdb12b40c6b94b9e5312578e0e4db6b4
+    - name: IMAGE_autoscaler
+      value: registry.redhat.io/openshift-serverless-1/serving-autoscaler-rhel8@sha256:010bbd4fd08f134f7971c56c5c47d6eff487949bf4f7bb60cd4e511a65ae7c9c
+    - name: IMAGE_autoscaler-hpa
+      value: registry.redhat.io/openshift-serverless-1/serving-autoscaler-hpa-rhel8@sha256:507798c908336173ab0d302e37edf48f39ebb827f42d3e8ee0932d0bf7f07fa3
+    - name: IMAGE_controller__controller
+      value: registry.redhat.io/openshift-serverless-1/serving-controller-rhel8@sha256:bbe6d81eb3ce97d961d686a077e49f69ea26f8fa9746c2f04c9e6cfd3100ac67
+    - name: IMAGE_webhook__webhook
+      value: registry.redhat.io/openshift-serverless-1/serving-webhook-rhel8@sha256:d619de7f9a0c63905a6073f9a508082084be1930ee110afc274438ad949af499
+    - name: IMAGE_domain-mapping
+      value: registry.redhat.io/openshift-serverless-1/serving-domain-mapping-rhel8@sha256:787657127dbde83cfcfd97c013743cafda13601af72546d3afd43e0492e0c280
+    - name: IMAGE_domainmapping-webhook
+      value: registry.redhat.io/openshift-serverless-1/serving-domain-mapping-webhook-rhel8@sha256:b8e97763348ac558178247c67c7fd8e84f0e6ddd5d324f3a6927d1436b85c3f7
+    - name: IMAGE_storage-version-migration-serving-serving-1.5.0__migrate
+      value: registry.redhat.io/openshift-serverless-1/serving-storage-version-migration-rhel8@sha256:8304e4aad026ccef7151a69e70482ade0d75b0fdfbb3854617b30443ddd437c9
+    - name: IMAGE_kourier-gateway
+      value: registry.redhat.io/openshift-service-mesh/proxyv2-rhel8@sha256:e6d403896601c748075ef9849a799ff63a44f0a80ddc1e7070055061e2608004
+    - name: IMAGE_kourier-control
+      value: registry.redhat.io/openshift-serverless-1/kourier-control-rhel8@sha256:b4c680970661373b003e15a5c5f899041a4dface6079395b3c90334027630f92
+    - name: IMAGE_net-kourier-controller__controller
+      value: registry.redhat.io/openshift-serverless-1/kourier-control-rhel8@sha256:b4c680970661373b003e15a5c5f899041a4dface6079395b3c90334027630f92
+    - name: IMAGE_net-istio-controller__controller
+      value: registry.redhat.io/openshift-serverless-1/net-istio-controller-rhel8@sha256:6509429d95956bac73bd2531b262136bc121780aa245200f986b3437f061cb93
+    - name: IMAGE_net-istio-webhook__webhook
+      value: registry.redhat.io/openshift-serverless-1/net-istio-webhook-rhel8@sha256:c317e8815afc35c8e8a800bd1c9a127126359b954beddf54a196db66c7f1a8f3
+    - name: IMAGE_eventing-controller__eventing-controller
+      value: registry.redhat.io/openshift-serverless-1/eventing-controller-rhel8@sha256:8d2da1c16df8766618cf7e6ca49f017272591c97f1d88c639aab6de77c757333
+    - name: IMAGE_eventing-webhook__eventing-webhook
+      value: registry.redhat.io/openshift-serverless-1/eventing-webhook-rhel8@sha256:7cbdcafe8ade1f4f656081bc2f62faa78f1d75328d6db7946b421f534889db51
+    - name: IMAGE_storage-version-migration-eventing-eventing-1.5__migrate
+      value: registry.redhat.io/openshift-serverless-1/eventing-storage-version-migration-rhel8@sha256:29349cbf4f5716933fcc86e7dea1e70fb08afa0c35a436253229e367caf325cc
+    - name: IMAGE_mt-broker-controller__mt-broker-controller
+      value: registry.redhat.io/openshift-serverless-1/eventing-mtchannel-broker-rhel8@sha256:9bda943aa7b34206990a48f51694a5cb386a99eb730037ce6350f8c681566702
+    - name: IMAGE_mt-broker-filter__filter
+      value: registry.redhat.io/openshift-serverless-1/eventing-mtbroker-filter-rhel8@sha256:b0416d01035debe4c528580b92cb5d94adb2b16007dda3d818b24f798e7e2892
+    - name: IMAGE_mt-broker-ingress__ingress
+      value: registry.redhat.io/openshift-serverless-1/eventing-mtbroker-ingress-rhel8@sha256:57236a569f76f6a3b17e6867c5d3dea31eb0ab017f4dbc01042681cb6f4e5ca2
+    - name: IMAGE_imc-controller__controller
+      value: registry.redhat.io/openshift-serverless-1/eventing-in-memory-channel-controller-rhel8@sha256:7feef3d3ec3ac5072d41f7ba93ee666ab1a20b84e034cddf56e0f3e9de31622a
+    - name: IMAGE_imc-dispatcher__dispatcher
+      value: registry.redhat.io/openshift-serverless-1/eventing-in-memory-channel-dispatcher-rhel8@sha256:23df9575999bf3fd29f278595ae2f36a31a87b5c4a58b61627cf8f717da8673f
+    - name: IMAGE_pingsource-mt-adapter__dispatcher
+      value: registry.redhat.io/openshift-serverless-1/eventing-mtping-rhel8@sha256:d0576e3ce7c50efd708c7d46fb05d050d7756cd8e95f6a12e1b62fb8cc6ab8c6
+    - name: IMAGE_APISERVER_RA_IMAGE
+      value: registry.redhat.io/openshift-serverless-1/eventing-apiserver-receive-adapter-rhel8@sha256:3391e74bd8a9337f553726039869c1ae24a861ecb8337eabbb5c3844a0cbc52b
+    - name: IMAGE_DISPATCHER_IMAGE
+      value: registry.redhat.io/openshift-serverless-1/eventing-in-memory-channel-dispatcher-rhel8@sha256:23df9575999bf3fd29f278595ae2f36a31a87b5c4a58b61627cf8f717da8673f
+    - name: IMAGE_KUBE_RBAC_PROXY
+      value: registry.redhat.io/openshift4/ose-kube-rbac-proxy@sha256:f7993b7a5458679621f6686bdc4ab818659e051ef6cdf6a8e107f627adf5f178
+    - name: IMAGE_KN_PLUGIN_EVENT_SENDER
+      value: registry.redhat.io/openshift-serverless-1-tech-preview/knative-client-plugin-event-sender-rhel8@sha256:b1b1f4e0306297dbc5c1e87abbd9892bfd800d23d148651209db2f09ed30d9ca
+    - name: IMAGE_KN_CLIENT
+      value: registry.redhat.io/openshift-serverless-1/client-kn-rhel8@sha256:89fb53858bb93ada958faff761915f45d01e3364b5e5df4ba05b01c4b8cde587
+    - name: IMAGE_KN_PLUGIN_FUNC_UTIL
+      value: registry.redhat.io/openshift-serverless-1/func-utils-rhel8@sha256:3ab4b3b60e5818eb46ea28a3d649c1fbde86d9d23b727ba96da717b83164a49f
+    - name: IMAGE_KN_PLUGIN_FUNC_TEKTON_S2I
+      value: registry.redhat.io/ocp-tools-4-tech-preview/source-to-image-rhel8@sha256:98d8cb3a255641ca6a1bce854e5e2460c20de9fb9b28e3cc67eb459f122873dd
+    - name: IMAGE_KN_PLUGIN_FUNC_TEKTON_BUILDAH
+      value: registry.redhat.io/rhel8/buildah@sha256:a1e5cc0fb334e333e5eab69689223e8bd1f0c060810d260603b26cf8c0da2023
+    - name: KAFKA_IMAGE_kafka-broker-receiver__kafka-broker-receiver
+      value: registry.redhat.io/openshift-serverless-1/eventing-kafka-broker-receiver-rhel8@sha256:9caecb2e4066bf88acceb73f87d1b17ac1dffdb4264a3b358abf4b563c4e9b67
+    - name: KAFKA_IMAGE_kafka-broker-dispatcher__kafka-broker-dispatcher
+      value: registry.redhat.io/openshift-serverless-1/eventing-kafka-broker-dispatcher-rhel8@sha256:eea487578add89cd52a31f3a7913fc6c03cd03f0cc0aa285df01a00d2525c38e
+    - name: KAFKA_IMAGE_kafka-channel-receiver__kafka-channel-receiver
+      value: registry.redhat.io/openshift-serverless-1/eventing-kafka-broker-receiver-rhel8@sha256:9caecb2e4066bf88acceb73f87d1b17ac1dffdb4264a3b358abf4b563c4e9b67
+    - name: KAFKA_IMAGE_kafka-channel-dispatcher__kafka-channel-dispatcher
+      value: registry.redhat.io/openshift-serverless-1/eventing-kafka-broker-dispatcher-rhel8@sha256:eea487578add89cd52a31f3a7913fc6c03cd03f0cc0aa285df01a00d2525c38e
+    - name: KAFKA_IMAGE_kafka-controller__controller
+      value: registry.redhat.io/openshift-serverless-1/eventing-kafka-broker-controller-rhel8@sha256:3e12866ab3c8e521cd31349a7e592e23c45f5e0433fb31849ed73d2c341842b5
+    - name: KAFKA_IMAGE_kafka-sink-receiver__kafka-sink-receiver
+      value: registry.redhat.io/openshift-serverless-1/eventing-kafka-broker-receiver-rhel8@sha256:9caecb2e4066bf88acceb73f87d1b17ac1dffdb4264a3b358abf4b563c4e9b67
+    - name: KAFKA_IMAGE_kafka-source-dispatcher__kafka-source-dispatcher
+      value: registry.redhat.io/openshift-serverless-1/eventing-kafka-broker-dispatcher-rhel8@sha256:eea487578add89cd52a31f3a7913fc6c03cd03f0cc0aa285df01a00d2525c38e
+    - name: KAFKA_IMAGE_kafka-webhook-eventing__kafka-webhook-eventing
+      value: registry.redhat.io/openshift-serverless-1/eventing-kafka-broker-webhook-rhel8@sha256:b4eeaaef3d99f9d4f597152065fa19184c76c49642fef693093bba9f13c0f36a
+    - name: KAFKA_IMAGE_kafka-controller-post-install__post-install
+      value: registry.redhat.io/openshift-serverless-1/eventing-kafka-broker-post-install-rhel8@sha256:427c142384a4820bb7c46fc47631b8b6eb99b26194e6ac3e5331bed8330aacd2
+    - name: KAFKA_IMAGE_knative-kafka-storage-version-migrator__migrate
+      value: registry.redhat.io/openshift-serverless-1/eventing-storage-version-migration-rhel8@sha256:29349cbf4f5716933fcc86e7dea1e70fb08afa0c35a436253229e367caf325cc
+    - name: CURRENT_VERSION
+      value: 1.26.0
+    - name: KNATIVE_EVENTING_KAFKA_BROKER_VERSION
+      value: "1.5"
+    - name: OPERATOR_CONDITION_NAME
+      value: serverless-operator.v1.26.0
+    image: registry.redhat.io/openshift-serverless-1/knative-rhel8-operator@sha256:b7fc21abe0ead718056af5d6da041ac6de0d3e6dff88b962861392dc6d026dc9
+    imagePullPolicy: Always
+    livenessProbe:
+      failureThreshold: 3
+      httpGet:
+        path: /healthz
+        port: 8687
+        scheme: HTTP
+      periodSeconds: 10
+      successThreshold: 1
+      timeoutSeconds: 1
+    name: knative-openshift
+    ports:
+    - containerPort: 8080
+      name: http-cli
+      protocol: TCP
+    readinessProbe:
+      failureThreshold: 3
+      httpGet:
+        path: /readyz
+        port: 8687
+        scheme: HTTP
+      periodSeconds: 10
+      successThreshold: 1
+      timeoutSeconds: 1
+    resources: {}
+    securityContext:
+      allowPrivilegeEscalation: false
+      capabilities:
+        drop:
+        - ALL
+      readOnlyRootFilesystem: true
+      runAsNonRoot: true
+      runAsUser: 1000720000
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /cli-artifacts
+      name: cli-artifacts
+    - mountPath: /apiserver.local.config/certificates
+      name: apiservice-cert
+    - mountPath: /tmp/k8s-webhook-server/serving-certs
+      name: webhook-cert
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-5rvgg
+      readOnly: true
+  dnsPolicy: ClusterFirst
+  enableServiceLinks: true
+  imagePullSecrets:
+  - name: knative-operator-dockercfg-f9tr2
+  initContainers:
+  - command:
+    - sh
+    - -c
+    - rm -rf /cli-artifacts/* && cp /usr/share/kn/**/* /cli-artifacts && chmod 444
+      /cli-artifacts/*
+    image: registry.redhat.io/openshift-serverless-1/kn-cli-artifacts-rhel8@sha256:39b7b9449a82e04ed49fd6fe5e31f91a79b7b9cd3e7c01340953ecc334da33f3
+    imagePullPolicy: Always
+    name: cli-artifacts
+    resources: {}
+    securityContext:
+      allowPrivilegeEscalation: false
+      capabilities:
+        drop:
+        - ALL
+      runAsNonRoot: true
+      runAsUser: 1000720000
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /cli-artifacts
+      name: cli-artifacts
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-5rvgg
+      readOnly: true
+  nodeName: ci-ln-4zhdf4b-72292-lw57b-worker-b-wtt2s
+  preemptionPolicy: PreemptLowerPriority
+  priority: 0
+  restartPolicy: Always
+  schedulerName: default-scheduler
+  securityContext:
+    fsGroup: 1000720000
+    seLinuxOptions:
+      level: s0:c27,c9
+    seccompProfile:
+      type: RuntimeDefault
+  serviceAccount: knative-operator
+  serviceAccountName: knative-operator
+  terminationGracePeriodSeconds: 30
+  tolerations:
+  - effect: NoExecute
+    key: node.kubernetes.io/not-ready
+    operator: Exists
+    tolerationSeconds: 300
+  - effect: NoExecute
+    key: node.kubernetes.io/unreachable
+    operator: Exists
+    tolerationSeconds: 300
+  volumes:
+  - emptyDir: {}
+    name: cli-artifacts
+  - name: apiservice-cert
+    secret:
+      defaultMode: 420
+      items:
+      - key: tls.crt
+        path: apiserver.crt
+      - key: tls.key
+        path: apiserver.key
+      secretName: knative-openshift-service-cert
+  - name: webhook-cert
+    secret:
+      defaultMode: 420
+      items:
+      - key: tls.crt
+        path: tls.crt
+      - key: tls.key
+        path: tls.key
+      secretName: knative-openshift-service-cert
+  - name: kube-api-access-5rvgg
+    projected:
+      defaultMode: 420
+      sources:
+      - serviceAccountToken:
+          expirationSeconds: 3607
+          path: token
+      - configMap:
+          items:
+          - key: ca.crt
+            path: ca.crt
+          name: kube-root-ca.crt
+      - downwardAPI:
+          items:
+          - fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.namespace
+            path: namespace
+      - configMap:
+          items:
+          - key: service-ca.crt
+            path: service-ca.crt
+          name: openshift-service-ca.crt
+status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-03T20:08:16Z"
+    status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-03T20:08:31Z"
+    status: "True"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-03T20:08:31Z"
+    status: "True"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-03T20:07:51Z"
+    status: "True"
+    type: PodScheduled
+  containerStatuses:
+  - containerID: cri-o://0fec66a358d6cb7eec4bd89c2b11dd23e1eac87eee6bdfd6e018a0513e94802b
+    image: registry.redhat.io/openshift-serverless-1/knative-rhel8-operator@sha256:b7fc21abe0ead718056af5d6da041ac6de0d3e6dff88b962861392dc6d026dc9
+    imageID: registry.redhat.io/openshift-serverless-1/knative-rhel8-operator@sha256:7196afc3d2aeec6b22c5cf0073108fed19196234f3ca947bba680613b5830008
+    lastState: {}
+    name: knative-openshift
+    ready: true
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2023-03-03T20:08:24Z"
+  hostIP: 10.0.128.3
+  initContainerStatuses:
+  - containerID: cri-o://a1bf322dd116fc20d7cb17a742566b2957de905ebeaa8e07c0deae49c7bfa231
+    image: registry.redhat.io/openshift-serverless-1/kn-cli-artifacts-rhel8@sha256:39b7b9449a82e04ed49fd6fe5e31f91a79b7b9cd3e7c01340953ecc334da33f3
+    imageID: registry.redhat.io/openshift-serverless-1/kn-cli-artifacts-rhel8@sha256:39b7b9449a82e04ed49fd6fe5e31f91a79b7b9cd3e7c01340953ecc334da33f3
+    lastState: {}
+    name: cli-artifacts
+    ready: true
+    restartCount: 0
+    state:
+      terminated:
+        containerID: cri-o://a1bf322dd116fc20d7cb17a742566b2957de905ebeaa8e07c0deae49c7bfa231
+        exitCode: 0
+        finishedAt: "2023-03-03T20:08:15Z"
+        reason: Completed
+        startedAt: "2023-03-03T20:08:15Z"
+  phase: Running
+  podIP: 10.128.2.20
+  podIPs:
+  - ip: 10.128.2.20
+  qosClass: BestEffort
+  startTime: "2023-03-03T20:07:51Z"

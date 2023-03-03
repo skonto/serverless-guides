@@ -1,0 +1,42 @@
+---
+apiVersion: security.istio.io/v1beta1
+kind: PeerAuthentication
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"security.istio.io/v1beta1","kind":"PeerAuthentication","metadata":{"annotations":{"maistra.io/mesh-generation":"2.3.1-1-2"},"labels":{"app":"grafana","app.kubernetes.io/component":"grafana","app.kubernetes.io/instance":"istio-system","app.kubernetes.io/managed-by":"maistra-istio-operator","app.kubernetes.io/name":"grafana","app.kubernetes.io/part-of":"istio","app.kubernetes.io/version":"2.3.1-1-2","maistra-version":"2.1.6","maistra.io/owner":"istio-system","maistra.io/owner-name":"basic","release":"istio"},"name":"grafana-ports-mtls-disabled","namespace":"istio-system","ownerReferences":[{"apiVersion":"maistra.io/v2","blockOwnerDeletion":true,"controller":true,"kind":"ServiceMeshControlPlane","name":"basic","uid":"0c79eb74-854c-4f98-85c6-5955e78fd93e"}]},"spec":{"mtls":{"mode":"PERMISSIVE"},"portLevelMtls":{"3000":{"mode":"DISABLE"}},"selector":{"matchLabels":{"app":"grafana"}}}}
+    maistra.io/mesh-generation: 2.3.1-1-2
+  creationTimestamp: "2023-03-03T20:03:21Z"
+  generation: 1
+  labels:
+    app: grafana
+    app.kubernetes.io/component: grafana
+    app.kubernetes.io/instance: istio-system
+    app.kubernetes.io/managed-by: maistra-istio-operator
+    app.kubernetes.io/name: grafana
+    app.kubernetes.io/part-of: istio
+    app.kubernetes.io/version: 2.3.1-1-2
+    maistra-version: 2.1.6
+    maistra.io/owner: istio-system
+    maistra.io/owner-name: basic
+    release: istio
+  name: grafana-ports-mtls-disabled
+  namespace: istio-system
+  ownerReferences:
+  - apiVersion: maistra.io/v2
+    blockOwnerDeletion: true
+    controller: true
+    kind: ServiceMeshControlPlane
+    name: basic
+    uid: 0c79eb74-854c-4f98-85c6-5955e78fd93e
+  resourceVersion: "34905"
+  uid: b398a063-84b0-4def-b0fd-81094ad20300
+spec:
+  mtls:
+    mode: PERMISSIVE
+  portLevelMtls:
+    "3000":
+      mode: DISABLE
+  selector:
+    matchLabels:
+      app: grafana

@@ -1,0 +1,35 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  annotations:
+    include.release.openshift.io/ibm-cloud-managed: "true"
+    include.release.openshift.io/self-managed-high-availability: "true"
+    openshift.io/node-selector: ""
+    openshift.io/sa.scc.mcs: s0:c20,c15
+    openshift.io/sa.scc.supplemental-groups: 1000410000/10000
+    openshift.io/sa.scc.uid-range: 1000410000/10000
+    workload.openshift.io/allowed: management
+  creationTimestamp: "2023-03-03T19:33:01Z"
+  labels:
+    kubernetes.io/metadata.name: openshift-operators
+    openshift.io/scc: anyuid
+    pod-security.kubernetes.io/audit: privileged
+    pod-security.kubernetes.io/audit-version: v1.24
+    pod-security.kubernetes.io/enforce: privileged
+    pod-security.kubernetes.io/enforce-version: v1.24
+    pod-security.kubernetes.io/warn: privileged
+    pod-security.kubernetes.io/warn-version: v1.24
+    security.openshift.io/scc.podSecurityLabelSync: "true"
+  name: openshift-operators
+  ownerReferences:
+  - apiVersion: config.openshift.io/v1
+    kind: ClusterVersion
+    name: version
+    uid: f94aa017-c80d-4634-b5f4-9a5482e17f41
+  resourceVersion: "32633"
+  uid: d574bcc3-473a-4955-b0ca-d10149526635
+spec:
+  finalizers:
+  - kubernetes
+status:
+  phase: Active

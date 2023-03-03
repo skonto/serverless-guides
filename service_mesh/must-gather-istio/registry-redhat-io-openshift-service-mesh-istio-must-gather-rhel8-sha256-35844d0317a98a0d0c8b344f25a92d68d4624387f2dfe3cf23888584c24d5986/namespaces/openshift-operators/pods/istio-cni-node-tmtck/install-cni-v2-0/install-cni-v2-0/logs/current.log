@@ -1,0 +1,18 @@
+2023-03-03T20:03:06.986580311Z Removing existing binaries
+2023-03-03T20:03:07.041316816Z Wrote Istio CNI binaries to /host/opt/cni/bin
+2023-03-03T20:03:07.041455134Z /host/secondary-bin-dir is non-writeable, skipping
+2023-03-03T20:03:07.041746869Z Using CNI config template from CNI_NETWORK_CONFIG environment variable.
+2023-03-03T20:03:07.091227888Z CNI config: {
+2023-03-03T20:03:07.091227888Z   "cniVersion": "0.3.0",
+2023-03-03T20:03:07.091227888Z   "name": "v2-0-istio-cni",
+2023-03-03T20:03:07.091227888Z   "type": "v2-0-istio-cni",
+2023-03-03T20:03:07.091227888Z   "log_level": "info",
+2023-03-03T20:03:07.091227888Z   "kubernetes": {
+2023-03-03T20:03:07.091227888Z       "kubeconfig": "/etc/cni/multus/net.d/v2-0-istio-cni.kubeconfig",
+2023-03-03T20:03:07.091227888Z       "cni_bin_dir": "/opt/multus/bin",
+2023-03-03T20:03:07.091227888Z       "iptables_script": "v2-0-istio-iptables.sh",
+2023-03-03T20:03:07.091227888Z       "exclude_namespaces": [ "openshift-operators" ]
+2023-03-03T20:03:07.091227888Z   }
+2023-03-03T20:03:07.091291952Z }
+2023-03-03T20:03:07.100816319Z Created CNI config v2-0-istio-cni.conf
+2023-03-03T20:03:07.100816319Z Done configuring CNI.  Sleep=true

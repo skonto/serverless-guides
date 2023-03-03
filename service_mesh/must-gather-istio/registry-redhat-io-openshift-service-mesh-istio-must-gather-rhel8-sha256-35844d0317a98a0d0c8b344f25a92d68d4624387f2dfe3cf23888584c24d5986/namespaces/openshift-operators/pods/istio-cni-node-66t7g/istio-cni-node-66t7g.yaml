@@ -1,0 +1,315 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    k8s.ovn.org/pod-networks: '{"default":{"ip_addresses":["10.131.0.21/23"],"mac_address":"0a:58:0a:83:00:15","gateway_ips":["10.131.0.1"],"ip_address":"10.131.0.21/23","gateway_ip":"10.131.0.1"}}'
+    k8s.v1.cni.cncf.io/network-status: |-
+      [{
+          "name": "ovn-kubernetes",
+          "interface": "eth0",
+          "ips": [
+              "10.131.0.21"
+          ],
+          "mac": "0a:58:0a:83:00:15",
+          "default": true,
+          "dns": {}
+      }]
+    k8s.v1.cni.cncf.io/networks-status: |-
+      [{
+          "name": "ovn-kubernetes",
+          "interface": "eth0",
+          "ips": [
+              "10.131.0.21"
+          ],
+          "mac": "0a:58:0a:83:00:15",
+          "default": true,
+          "dns": {}
+      }]
+    openshift.io/scc: privileged
+    sidecar.istio.io/inject: "false"
+  creationTimestamp: "2023-03-03T20:02:56Z"
+  generateName: istio-cni-node-
+  labels:
+    controller-revision-hash: d6c8594f8
+    k8s-app: istio-cni-node
+    pod-template-generation: "1"
+    release: istio
+  name: istio-cni-node-66t7g
+  namespace: openshift-operators
+  ownerReferences:
+  - apiVersion: apps/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: DaemonSet
+    name: istio-cni-node
+    uid: 4ceb4c0a-b0b6-4cb5-898b-ad0c25f55004
+  resourceVersion: "34682"
+  uid: e8a541bd-1452-476d-a24f-07556dcb9318
+spec:
+  affinity:
+    nodeAffinity:
+      requiredDuringSchedulingIgnoredDuringExecution:
+        nodeSelectorTerms:
+        - matchFields:
+          - key: metadata.name
+            operator: In
+            values:
+            - ci-ln-4zhdf4b-72292-lw57b-worker-a-z86r5
+  containers:
+  - command:
+    - /install-cni.sh
+    env:
+    - name: CNI_CONF_NAME
+      value: v2-0-istio-cni.conf
+    - name: CNI_NETWORK_CONFIG
+      valueFrom:
+        configMapKeyRef:
+          key: cni_network_config_v2_0
+          name: istio-cni-config
+    - name: CNI_NET_DIR
+      value: /etc/cni/multus/net.d
+    - name: CHAINED_CNI_PLUGIN
+      value: "false"
+    - name: MOUNTED_CNI_NET_DIR
+      value: /host/etc/cni/multus/net.d
+    - name: KUBECFG_FILE_NAME
+      value: v2-0-istio-cni.kubeconfig
+    - name: CNI_BINARIES_PREFIX
+      value: v2-0-
+    image: registry.redhat.io/openshift-service-mesh/istio-cni-rhel8@sha256:161b3438a666469b230602b85d5c207f0f225210b5ba18c6ee7b9ae08127af23
+    imagePullPolicy: IfNotPresent
+    name: install-cni-v2-0
+    resources:
+      requests:
+        cpu: 10m
+        memory: 100Mi
+    securityContext:
+      privileged: true
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /host/opt/cni/bin
+      name: cni-bin-dir
+    - mountPath: /host/etc/cni/
+      name: etc-cni-dir
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-4k42q
+      readOnly: true
+  - command:
+    - install-cni
+    env:
+    - name: CNI_CONF_NAME
+      value: v2-1-istio-cni.conf
+    - name: CNI_NETWORK_CONFIG
+      valueFrom:
+        configMapKeyRef:
+          key: cni_network_config_v2_1
+          name: istio-cni-config
+    - name: CNI_NET_DIR
+      value: /etc/cni/multus/net.d
+    - name: CHAINED_CNI_PLUGIN
+      value: "false"
+    - name: MOUNTED_CNI_NET_DIR
+      value: /host/etc/cni/multus/net.d
+    - name: KUBECFG_FILE_NAME
+      value: v2-1-istio-cni.kubeconfig
+    - name: CNI_BINARIES_PREFIX
+      value: v2-1-
+    image: registry.redhat.io/openshift-service-mesh/istio-cni-rhel8@sha256:5c0eacb3024dab93e376c2edc60a02b066b62de5f40d81628d80ecd4f4a7dc4b
+    imagePullPolicy: IfNotPresent
+    name: install-cni-v2-1
+    resources:
+      requests:
+        cpu: 10m
+        memory: 100Mi
+    securityContext:
+      privileged: true
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /host/opt/cni/bin
+      name: cni-bin-dir
+    - mountPath: /host/etc/cni/
+      name: etc-cni-dir
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-4k42q
+      readOnly: true
+  - command:
+    - install-cni
+    env:
+    - name: CNI_CONF_NAME
+      value: v2-2-istio-cni.conf
+    - name: CNI_NETWORK_CONFIG
+      valueFrom:
+        configMapKeyRef:
+          key: cni_network_config_v2_2
+          name: istio-cni-config
+    - name: CNI_NET_DIR
+      value: /etc/cni/multus/net.d
+    - name: CHAINED_CNI_PLUGIN
+      value: "false"
+    - name: MOUNTED_CNI_NET_DIR
+      value: /host/etc/cni/multus/net.d
+    - name: KUBECFG_FILE_NAME
+      value: v2-2-istio-cni.kubeconfig
+    - name: CNI_BINARIES_PREFIX
+      value: v2-2-
+    image: registry.redhat.io/openshift-service-mesh/istio-cni-rhel8@sha256:a3f23302c832e418e55821328d859396f3fa79c5b8b08623251b33c0841ba892
+    imagePullPolicy: IfNotPresent
+    livenessProbe:
+      failureThreshold: 3
+      httpGet:
+        path: /healthz
+        port: 8000
+        scheme: HTTP
+      initialDelaySeconds: 5
+      periodSeconds: 10
+      successThreshold: 1
+      timeoutSeconds: 1
+    name: install-cni-v2-2
+    readinessProbe:
+      failureThreshold: 3
+      httpGet:
+        path: /readyz
+        port: 8000
+        scheme: HTTP
+      periodSeconds: 10
+      successThreshold: 1
+      timeoutSeconds: 1
+    resources:
+      requests:
+        cpu: 10m
+        memory: 100Mi
+    securityContext:
+      privileged: true
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /host/opt/cni/bin
+      name: cni-bin-dir
+    - mountPath: /host/etc/cni/
+      name: etc-cni-dir
+    - mountPath: /var/run/istio-cni
+      name: cni-log-dir
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-4k42q
+      readOnly: true
+  dnsPolicy: ClusterFirst
+  enableServiceLinks: true
+  imagePullSecrets:
+  - name: istio-cni-dockercfg-s4v5n
+  nodeName: ci-ln-4zhdf4b-72292-lw57b-worker-a-z86r5
+  nodeSelector:
+    kubernetes.io/os: linux
+  preemptionPolicy: PreemptLowerPriority
+  priority: 2000001000
+  priorityClassName: system-node-critical
+  restartPolicy: Always
+  schedulerName: default-scheduler
+  securityContext: {}
+  serviceAccount: istio-cni
+  serviceAccountName: istio-cni
+  terminationGracePeriodSeconds: 5
+  tolerations:
+  - effect: NoSchedule
+    operator: Exists
+  - key: CriticalAddonsOnly
+    operator: Exists
+  - effect: NoExecute
+    operator: Exists
+  volumes:
+  - hostPath:
+      path: /opt/multus/bin
+      type: ""
+    name: cni-bin-dir
+  - hostPath:
+      path: /etc/cni
+      type: ""
+    name: etc-cni-dir
+  - hostPath:
+      path: /var/run/istio-cni
+      type: ""
+    name: cni-log-dir
+  - name: kube-api-access-4k42q
+    projected:
+      defaultMode: 420
+      sources:
+      - serviceAccountToken:
+          expirationSeconds: 3607
+          path: token
+      - configMap:
+          items:
+          - key: ca.crt
+            path: ca.crt
+          name: kube-root-ca.crt
+      - downwardAPI:
+          items:
+          - fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.namespace
+            path: namespace
+      - configMap:
+          items:
+          - key: service-ca.crt
+            path: service-ca.crt
+          name: openshift-service-ca.crt
+status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-03T20:02:56Z"
+    status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-03T20:03:12Z"
+    status: "True"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-03T20:03:12Z"
+    status: "True"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-03T20:02:56Z"
+    status: "True"
+    type: PodScheduled
+  containerStatuses:
+  - containerID: cri-o://a03b0bd3cea1266dc4518ca7f9ffff4bfc3b3f0d9a537830c7fd8005bb555a9f
+    image: registry.redhat.io/openshift-service-mesh/istio-cni-rhel8@sha256:161b3438a666469b230602b85d5c207f0f225210b5ba18c6ee7b9ae08127af23
+    imageID: registry.redhat.io/openshift-service-mesh/istio-cni-rhel8@sha256:161b3438a666469b230602b85d5c207f0f225210b5ba18c6ee7b9ae08127af23
+    lastState: {}
+    name: install-cni-v2-0
+    ready: true
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2023-03-03T20:03:02Z"
+  - containerID: cri-o://b8e13465236b7a9dcf0ee9db79ebd95a022831ea5b168938aafd7dbc4c07d05d
+    image: registry.redhat.io/openshift-service-mesh/istio-cni-rhel8@sha256:5c0eacb3024dab93e376c2edc60a02b066b62de5f40d81628d80ecd4f4a7dc4b
+    imageID: registry.redhat.io/openshift-service-mesh/istio-cni-rhel8@sha256:5c0eacb3024dab93e376c2edc60a02b066b62de5f40d81628d80ecd4f4a7dc4b
+    lastState: {}
+    name: install-cni-v2-1
+    ready: true
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2023-03-03T20:03:06Z"
+  - containerID: cri-o://e749e28e0531f1d10b11261dfc777b53f37f2627728a88476682e93ae5c7b0bb
+    image: registry.redhat.io/openshift-service-mesh/istio-cni-rhel8@sha256:a3f23302c832e418e55821328d859396f3fa79c5b8b08623251b33c0841ba892
+    imageID: registry.redhat.io/openshift-service-mesh/istio-cni-rhel8@sha256:965f33b4213b6e347e57ddf2432c10ee02432810e65bd915d696c9b875b10e5b
+    lastState: {}
+    name: install-cni-v2-2
+    ready: true
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2023-03-03T20:03:12Z"
+  hostIP: 10.0.128.2
+  phase: Running
+  podIP: 10.131.0.21
+  podIPs:
+  - ip: 10.131.0.21
+  qosClass: Burstable
+  startTime: "2023-03-03T20:02:56Z"

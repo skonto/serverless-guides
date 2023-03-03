@@ -1,0 +1,8 @@
+Name:         knativekafkas.operator.serverless.openshift.io-v1alpha1-crdview
+Labels:       olm.opgroup.permissions/aggregate-to-bcd12f4466e2f513-view=true
+              rbac.authorization.k8s.io/aggregate-to-view=true
+Annotations:  <none>
+PolicyRule:
+  Resources                                       Non-Resource URLs  Resource Names                                    Verbs
+  ---------                                       -----------------  --------------                                    -----
+  customresourcedefinitions.apiextensions.k8s.io  []                 [knativekafkas.operator.serverless.openshift.io]  [get]

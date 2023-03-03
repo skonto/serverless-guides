@@ -1,0 +1,99 @@
+Name:         helloworld-go
+Namespace:    user-ns
+Labels:       serving.knative.dev/service=helloworld-go
+Annotations:  serving.knative.dev/creator: system:admin
+              serving.knative.dev/lastModifier: system:admin
+              serving.knative.openshift.io/enablePassthrough: true
+API Version:  serving.knative.dev/v1
+Kind:         Route
+Metadata:
+  Creation Timestamp:  2023-03-03T20:11:48Z
+  Finalizers:
+    routes.serving.knative.dev
+  Generation:  1
+  Managed Fields:
+    API Version:  serving.knative.dev/v1
+    Fields Type:  FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .:
+          f:serving.knative.dev/creator:
+          f:serving.knative.dev/lastModifier:
+          f:serving.knative.openshift.io/enablePassthrough:
+        f:finalizers:
+          .:
+          v:"routes.serving.knative.dev":
+        f:labels:
+          .:
+          f:serving.knative.dev/service:
+        f:ownerReferences:
+          .:
+          k:{"uid":"d558b282-1662-40cf-9923-df98602a2224"}:
+      f:spec:
+        .:
+        f:traffic:
+    Manager:      Go-http-client
+    Operation:    Update
+    Time:         2023-03-03T20:11:48Z
+    API Version:  serving.knative.dev/v1
+    Fields Type:  FieldsV1
+    fieldsV1:
+      f:status:
+        .:
+        f:address:
+          .:
+          f:url:
+        f:conditions:
+        f:observedGeneration:
+        f:traffic:
+        f:url:
+    Manager:      Go-http-client
+    Operation:    Update
+    Subresource:  status
+    Time:         2023-03-03T20:12:09Z
+  Owner References:
+    API Version:           serving.knative.dev/v1
+    Block Owner Deletion:  true
+    Controller:            true
+    Kind:                  Service
+    Name:                  helloworld-go
+    UID:                   d558b282-1662-40cf-9923-df98602a2224
+  Resource Version:        42052
+  UID:                     cc382a7b-a535-4792-bde8-f9be2865b474
+Spec:
+  Traffic:
+    Configuration Name:  helloworld-go
+    Latest Revision:     true
+    Percent:             100
+Status:
+  Address:
+    URL:  http://helloworld-go.user-ns.svc.cluster.local
+  Conditions:
+    Last Transition Time:  2023-03-03T20:12:09Z
+    Status:                True
+    Type:                  AllTrafficAssigned
+    Last Transition Time:  2023-03-03T20:12:09Z
+    Message:               autoTLS is not enabled
+    Reason:                TLSNotEnabled
+    Status:                True
+    Type:                  CertificateProvisioned
+    Last Transition Time:  2023-03-03T20:12:09Z
+    Status:                True
+    Type:                  IngressReady
+    Last Transition Time:  2023-03-03T20:12:09Z
+    Status:                True
+    Type:                  Ready
+  Observed Generation:     1
+  Traffic:
+    Latest Revision:  true
+    Percent:          100
+    Revision Name:    helloworld-go-00001
+  URL:                https://helloworld-go-user-ns.apps.ci-ln-4zhdf4b-72292.origin-ci-int-gce.dev.rhcloud.com
+Events:
+  Type     Reason                 Age                From              Message
+  ----     ------                 ----               ----              -------
+  Warning  FinalizerUpdateFailed  12m (x2 over 12m)  route-controller  Failed to update finalizers for "helloworld-go": Operation cannot be fulfilled on routes.serving.knative.dev "helloworld-go": the object has been modified; please apply your changes to the latest version and try again
+  Normal   FinalizerUpdate        12m                route-controller  Updated "helloworld-go" finalizers
+  Normal   Created                12m                route-controller  Created placeholder service "helloworld-go"
+  Normal   Created                12m                route-controller  Created Ingress "helloworld-go"

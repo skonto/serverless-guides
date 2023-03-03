@@ -1,0 +1,38 @@
+2023-03-03T20:03:10.493296741Z 2023-03-03T20:03:10.493184Z	info	Copied istio-cni to /host/opt/cni/bin/v2-1-istio-cni.
+2023-03-03T20:03:10.520313320Z 2023-03-03T20:03:10.520219Z	info	Copied istio-iptables to /host/opt/cni/bin/v2-1-istio-iptables.
+2023-03-03T20:03:10.520313320Z 2023-03-03T20:03:10.520288Z	info	Directory /host/secondary-bin-dir is not writable, skipping.
+2023-03-03T20:03:10.521295588Z 2023-03-03T20:03:10.520882Z	info	Using CNI config template from CNI_NETWORK_CONFIG environment variable.
+2023-03-03T20:03:10.521408205Z 2023-03-03T20:03:10.521384Z	info	CNI config: {
+2023-03-03T20:03:10.521408205Z   "cniVersion": "0.3.0",
+2023-03-03T20:03:10.521408205Z   "name": "v2-1-istio-cni",
+2023-03-03T20:03:10.521408205Z   "type": "v2-1-istio-cni",
+2023-03-03T20:03:10.521408205Z   "log_level": "info",
+2023-03-03T20:03:10.521408205Z   "kubernetes": {
+2023-03-03T20:03:10.521408205Z       "kubeconfig": "/etc/cni/multus/net.d/v2-1-istio-cni.kubeconfig",
+2023-03-03T20:03:10.521408205Z       "cni_bin_dir": "/opt/multus/bin",
+2023-03-03T20:03:10.521408205Z       "netns_setup_executable": "v2-1-istio-iptables",
+2023-03-03T20:03:10.521408205Z       "exclude_namespaces": [ "openshift-operators" ]
+2023-03-03T20:03:10.521408205Z   }
+2023-03-03T20:03:10.521408205Z }
+2023-03-03T20:03:10.521734677Z 2023-03-03T20:03:10.521594Z	info	Created CNI config /host/etc/cni/multus/net.d/v2-1-istio-cni.conf
+2023-03-03T20:03:10.522569799Z 2023-03-03T20:03:10.522502Z	warn	CNI config file /host/etc/cni/multus/net.d/v2-1-istio-cni.conf preempted by /host/etc/cni/multus/net.d/v2-0-istio-cni.conf
+2023-03-03T20:03:17.269933605Z 2023-03-03T20:03:17.269878Z	warn	CNI config file /host/etc/cni/multus/net.d/v2-1-istio-cni.conf preempted by /host/etc/cni/multus/net.d/v2-0-istio-cni.conf
+2023-03-03T20:03:17.274789293Z 2023-03-03T20:03:17.274734Z	info	Restarting...
+2023-03-03T20:03:17.344970808Z 2023-03-03T20:03:17.344888Z	info	Copied istio-cni to /host/opt/cni/bin/v2-1-istio-cni.
+2023-03-03T20:03:17.352189568Z 2023-03-03T20:03:17.352134Z	info	Copied istio-iptables to /host/opt/cni/bin/v2-1-istio-iptables.
+2023-03-03T20:03:17.352309459Z 2023-03-03T20:03:17.352246Z	info	Directory /host/secondary-bin-dir is not writable, skipping.
+2023-03-03T20:03:17.352790320Z 2023-03-03T20:03:17.352741Z	info	Using CNI config template from CNI_NETWORK_CONFIG environment variable.
+2023-03-03T20:03:17.352790320Z 2023-03-03T20:03:17.352775Z	info	CNI config: {
+2023-03-03T20:03:17.352790320Z   "cniVersion": "0.3.0",
+2023-03-03T20:03:17.352790320Z   "name": "v2-1-istio-cni",
+2023-03-03T20:03:17.352790320Z   "type": "v2-1-istio-cni",
+2023-03-03T20:03:17.352790320Z   "log_level": "info",
+2023-03-03T20:03:17.352790320Z   "kubernetes": {
+2023-03-03T20:03:17.352790320Z       "kubeconfig": "/etc/cni/multus/net.d/v2-1-istio-cni.kubeconfig",
+2023-03-03T20:03:17.352790320Z       "cni_bin_dir": "/opt/multus/bin",
+2023-03-03T20:03:17.352790320Z       "netns_setup_executable": "v2-1-istio-iptables",
+2023-03-03T20:03:17.352790320Z       "exclude_namespaces": [ "openshift-operators" ]
+2023-03-03T20:03:17.352790320Z   }
+2023-03-03T20:03:17.352790320Z }
+2023-03-03T20:03:17.352943705Z 2023-03-03T20:03:17.352921Z	info	Created CNI config /host/etc/cni/multus/net.d/v2-1-istio-cni.conf
+2023-03-03T20:03:17.353202336Z 2023-03-03T20:03:17.353174Z	warn	CNI config file /host/etc/cni/multus/net.d/v2-1-istio-cni.conf preempted by /host/etc/cni/multus/net.d/v2-0-istio-cni.conf

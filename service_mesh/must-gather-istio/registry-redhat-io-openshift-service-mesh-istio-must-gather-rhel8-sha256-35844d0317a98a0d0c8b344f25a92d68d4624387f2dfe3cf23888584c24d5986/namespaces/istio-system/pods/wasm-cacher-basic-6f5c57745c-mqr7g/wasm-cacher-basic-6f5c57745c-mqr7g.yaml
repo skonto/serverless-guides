@@ -1,0 +1,188 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    k8s.ovn.org/pod-networks: '{"default":{"ip_addresses":["10.129.2.25/23"],"mac_address":"0a:58:0a:81:02:19","gateway_ips":["10.129.2.1"],"ip_address":"10.129.2.25/23","gateway_ip":"10.129.2.1"}}'
+    k8s.v1.cni.cncf.io/network-status: |-
+      [{
+          "name": "ovn-kubernetes",
+          "interface": "eth0",
+          "ips": [
+              "10.129.2.25"
+          ],
+          "mac": "0a:58:0a:81:02:19",
+          "default": true,
+          "dns": {}
+      }]
+    k8s.v1.cni.cncf.io/networks-status: |-
+      [{
+          "name": "ovn-kubernetes",
+          "interface": "eth0",
+          "ips": [
+              "10.129.2.25"
+          ],
+          "mac": "0a:58:0a:81:02:19",
+          "default": true,
+          "dns": {}
+      }]
+    openshift.io/scc: restricted-v2
+    seccomp.security.alpha.kubernetes.io/pod: runtime/default
+  creationTimestamp: "2023-03-03T20:03:50Z"
+  generateName: wasm-cacher-basic-6f5c57745c-
+  labels:
+    app: wasm-cacher
+    heritage: Tiller
+    istio.io/rev: basic
+    maistra-control-plane: istio-system
+    pod-template-hash: 6f5c57745c
+    release: istio
+  name: wasm-cacher-basic-6f5c57745c-mqr7g
+  namespace: istio-system
+  ownerReferences:
+  - apiVersion: apps/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: ReplicaSet
+    name: wasm-cacher-basic-6f5c57745c
+    uid: 0d72f2bf-fee9-417f-a49b-2e67e7979235
+  resourceVersion: "35393"
+  uid: 3bd5ba65-2035-4c94-8db6-c924ac2076d9
+spec:
+  containers:
+  - command:
+    - mec
+    - --namespace
+    - istio-system
+    - --baseURL
+    - http://wasm-cacher-basic.istio-system.svc.cluster.local
+    env:
+    - name: HOME
+      value: /podman
+    image: registry.redhat.io/openshift-service-mesh/pilot-rhel8@sha256:1be67785c051c48313a88e5e1ed5ee2de0d90169d5845457adad7c58dfc659fa
+    imagePullPolicy: Always
+    name: wasm-cacher
+    ports:
+    - containerPort: 8080
+      protocol: TCP
+    resources:
+      requests:
+        cpu: 10m
+        memory: 128Mi
+    securityContext:
+      allowPrivilegeEscalation: false
+      capabilities:
+        drop:
+        - ALL
+      runAsNonRoot: true
+      runAsUser: 1000680000
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /podman
+      name: home
+    - mountPath: /srv
+      name: servedir
+    - mountPath: /var/lib/containers
+      name: graph
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-5gjnk
+      readOnly: true
+    workingDir: /
+  dnsPolicy: ClusterFirst
+  enableServiceLinks: true
+  imagePullSecrets:
+  - name: wasm-cacher-basic-dockercfg-gtx4v
+  nodeName: ci-ln-4zhdf4b-72292-lw57b-worker-c-szhjg
+  preemptionPolicy: PreemptLowerPriority
+  priority: 0
+  restartPolicy: Always
+  schedulerName: default-scheduler
+  securityContext:
+    fsGroup: 1000680000
+    seLinuxOptions:
+      level: s0:c26,c15
+    seccompProfile:
+      type: RuntimeDefault
+  serviceAccount: wasm-cacher-basic
+  serviceAccountName: wasm-cacher-basic
+  terminationGracePeriodSeconds: 30
+  tolerations:
+  - effect: NoExecute
+    key: node.kubernetes.io/not-ready
+    operator: Exists
+    tolerationSeconds: 300
+  - effect: NoExecute
+    key: node.kubernetes.io/unreachable
+    operator: Exists
+    tolerationSeconds: 300
+  - effect: NoSchedule
+    key: node.kubernetes.io/memory-pressure
+    operator: Exists
+  volumes:
+  - emptyDir: {}
+    name: home
+  - emptyDir: {}
+    name: servedir
+  - emptyDir: {}
+    name: graph
+  - name: kube-api-access-5gjnk
+    projected:
+      defaultMode: 420
+      sources:
+      - serviceAccountToken:
+          expirationSeconds: 3607
+          path: token
+      - configMap:
+          items:
+          - key: ca.crt
+            path: ca.crt
+          name: kube-root-ca.crt
+      - downwardAPI:
+          items:
+          - fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.namespace
+            path: namespace
+      - configMap:
+          items:
+          - key: service-ca.crt
+            path: service-ca.crt
+          name: openshift-service-ca.crt
+status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-03T20:03:50Z"
+    status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-03T20:03:53Z"
+    status: "True"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-03T20:03:53Z"
+    status: "True"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-03T20:03:50Z"
+    status: "True"
+    type: PodScheduled
+  containerStatuses:
+  - containerID: cri-o://e8b75b2e2f4eb8bfe4005c848849f4bf0254050746279a08e6d6dcc9235f4c31
+    image: registry.redhat.io/openshift-service-mesh/pilot-rhel8@sha256:1be67785c051c48313a88e5e1ed5ee2de0d90169d5845457adad7c58dfc659fa
+    imageID: registry.redhat.io/openshift-service-mesh/pilot-rhel8@sha256:1be67785c051c48313a88e5e1ed5ee2de0d90169d5845457adad7c58dfc659fa
+    lastState: {}
+    name: wasm-cacher
+    ready: true
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2023-03-03T20:03:52Z"
+  hostIP: 10.0.128.4
+  phase: Running
+  podIP: 10.129.2.25
+  podIPs:
+  - ip: 10.129.2.25
+  qosClass: Burstable
+  startTime: "2023-03-03T20:03:50Z"

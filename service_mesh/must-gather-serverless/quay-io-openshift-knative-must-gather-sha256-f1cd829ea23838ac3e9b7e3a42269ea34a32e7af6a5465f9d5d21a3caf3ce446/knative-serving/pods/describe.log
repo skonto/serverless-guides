@@ -1,0 +1,2287 @@
+Name:         activator-fc9fcf778-9dxbs
+Namespace:    knative-serving
+Priority:     0
+Node:         ci-ln-4zhdf4b-72292-lw57b-worker-a-z86r5/10.0.128.2
+Start Time:   Fri, 03 Mar 2023 20:09:39 +0000
+Labels:       app=activator
+              app.kubernetes.io/component=activator
+              app.kubernetes.io/name=knative-serving
+              app.kubernetes.io/version=1.5.0
+              istio.io/rev=basic
+              maistra-version=2.1.6
+              pod-template-hash=fc9fcf778
+              role=activator
+              security.istio.io/tlsMode=istio
+              service.istio.io/canonical-name=knative-serving
+              service.istio.io/canonical-revision=1.5.0
+Annotations:  cluster-autoscaler.kubernetes.io/safe-to-evict: false
+              k8s.ovn.org/pod-networks:
+                {"default":{"ip_addresses":["10.131.0.25/23"],"mac_address":"0a:58:0a:83:00:19","gateway_ips":["10.131.0.1"],"ip_address":"10.131.0.25/23"...
+              k8s.v1.cni.cncf.io/network-status:
+                [{
+                    "name": "ovn-kubernetes",
+                    "interface": "eth0",
+                    "ips": [
+                        "10.131.0.25"
+                    ],
+                    "mac": "0a:58:0a:83:00:19",
+                    "default": true,
+                    "dns": {}
+                },{
+                    "name": "knative-serving/v2-1-istio-cni",
+                    "dns": {}
+                }]
+              k8s.v1.cni.cncf.io/networks: v2-1-istio-cni
+              k8s.v1.cni.cncf.io/networks-status:
+                [{
+                    "name": "ovn-kubernetes",
+                    "interface": "eth0",
+                    "ips": [
+                        "10.131.0.25"
+                    ],
+                    "mac": "0a:58:0a:83:00:19",
+                    "default": true,
+                    "dns": {}
+                },{
+                    "name": "knative-serving/v2-1-istio-cni",
+                    "dns": {}
+                }]
+              kubectl.kubernetes.io/default-logs-container: activator
+              openshift.io/scc: restricted-v2
+              prometheus.io/path: /stats/prometheus
+              prometheus.io/port: 15020
+              prometheus.io/scrape: true
+              seccomp.security.alpha.kubernetes.io/pod: runtime/default
+              sidecar.istio.io/inject: true
+              sidecar.istio.io/interceptionMode: REDIRECT
+              sidecar.istio.io/rewriteAppHTTPProbers: true
+              sidecar.istio.io/status:
+                {"initContainers":null,"containers":["istio-proxy"],"volumes":["istio-envoy","istio-data","istio-podinfo","istiod-ca-cert"],"imagePullSecr...
+              traffic.sidecar.istio.io/excludeInboundPorts: 15090,8444,15021
+              traffic.sidecar.istio.io/includeInboundPorts: *
+              traffic.sidecar.istio.io/includeOutboundIPRanges: *
+Status:       Running
+IP:           10.131.0.25
+IPs:
+  IP:           10.131.0.25
+Controlled By:  ReplicaSet/activator-fc9fcf778
+Containers:
+  activator:
+    Container ID:   cri-o://fc0cc9248b7fb283d983dc3377eb2755d89449a6f9fbc60ac7675914fd1aa912
+    Image:          registry.redhat.io/openshift-serverless-1/serving-activator-rhel8@sha256:aa6a3ee558c19b9dc2b13bbd351843a7bdb12b40c6b94b9e5312578e0e4db6b4
+    Image ID:       registry.redhat.io/openshift-serverless-1/serving-activator-rhel8@sha256:aa6a3ee558c19b9dc2b13bbd351843a7bdb12b40c6b94b9e5312578e0e4db6b4
+    Ports:          9090/TCP, 8008/TCP, 8012/TCP, 8013/TCP
+    Host Ports:     0/TCP, 0/TCP, 0/TCP, 0/TCP
+    State:          Running
+      Started:      Fri, 03 Mar 2023 20:09:46 +0000
+    Ready:          True
+    Restart Count:  0
+    Limits:
+      cpu:     1
+      memory:  600Mi
+    Requests:
+      cpu:      300m
+      memory:   60Mi
+    Liveness:   http-get http://:15020/app-health/activator/livez delay=15s timeout=1s period=10s #success=1 #failure=12
+    Readiness:  http-get http://:15020/app-health/activator/readyz delay=0s timeout=1s period=5s #success=1 #failure=5
+    Environment:
+      GOGC:                       500
+      POD_NAME:                   activator-fc9fcf778-9dxbs (v1:metadata.name)
+      POD_IP:                      (v1:status.podIP)
+      SYSTEM_NAMESPACE:           knative-serving (v1:metadata.namespace)
+      CONFIG_LOGGING_NAME:        config-logging
+      CONFIG_OBSERVABILITY_NAME:  config-observability
+      METRICS_DOMAIN:             knative.dev/internal/serving
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-bzkxp (ro)
+  istio-proxy:
+    Container ID:  cri-o://b7a2473feee548029a3ca497efd22d7e592378798622958c6c18227a355d499e
+    Image:         registry.redhat.io/openshift-service-mesh/proxyv2-rhel8@sha256:e7acaa5d4a7f265cba1ad4f53859833390c5da1af31bb8546a5ae19f064a7dde
+    Image ID:      registry.redhat.io/openshift-service-mesh/proxyv2-rhel8@sha256:05f2263746254aca2a2c20cf91f4d8540fada9dfa807c7bafec13d50f0df8f40
+    Port:          15090/TCP
+    Host Port:     0/TCP
+    Args:
+      proxy
+      sidecar
+      --domain
+      $(POD_NAMESPACE).svc.cluster.local
+      --serviceCluster
+      activator.$(POD_NAMESPACE)
+      --proxyLogLevel=warning
+      --proxyComponentLogLevel=misc:error
+      --log_output_level=default:warn
+      --concurrency
+      2
+    State:          Running
+      Started:      Fri, 03 Mar 2023 20:09:59 +0000
+    Ready:          True
+    Restart Count:  0
+    Limits:
+      cpu:     2
+      memory:  1Gi
+    Requests:
+      cpu:      10m
+      memory:   128Mi
+    Readiness:  http-get http://:15021/healthz/ready delay=1s timeout=3s period=2s #success=1 #failure=30
+    Environment:
+      JWT_POLICY:                    first-party-jwt
+      PILOT_CERT_PROVIDER:           istiod
+      CA_ADDR:                       istiod-basic.istio-system.svc:15012
+      POD_NAME:                      activator-fc9fcf778-9dxbs (v1:metadata.name)
+      POD_NAMESPACE:                 knative-serving (v1:metadata.namespace)
+      INSTANCE_IP:                    (v1:status.podIP)
+      SERVICE_ACCOUNT:                (v1:spec.serviceAccountName)
+      HOST_IP:                        (v1:status.hostIP)
+      CANONICAL_SERVICE:              (v1:metadata.labels['service.istio.io/canonical-name'])
+      CANONICAL_REVISION:             (v1:metadata.labels['service.istio.io/canonical-revision'])
+      PROXY_CONFIG:                  {"discoveryAddress":"istiod-basic.istio-system.svc:15012","tracing":{"zipkin":{"address":"jaeger-collector.istio-system.svc:9411"}},"proxyMetadata":{"ISTIO_META_DNS_AUTO_ALLOCATE":"true","ISTIO_META_DNS_CAPTURE":"true","PROXY_XDS_VIA_AGENT":"true"}}
+                                     
+      ISTIO_META_POD_PORTS:          [
+                                         {"name":"metrics","containerPort":9090,"protocol":"TCP"}
+                                         ,{"name":"profiling","containerPort":8008,"protocol":"TCP"}
+                                         ,{"name":"http1","containerPort":8012,"protocol":"TCP"}
+                                         ,{"name":"h2c","containerPort":8013,"protocol":"TCP"}
+                                     ]
+      ISTIO_META_APP_CONTAINERS:     activator
+      ISTIO_META_CLUSTER_ID:         Kubernetes
+      ISTIO_META_INTERCEPTION_MODE:  REDIRECT
+      ISTIO_METAJSON_ANNOTATIONS:    {"cluster-autoscaler.kubernetes.io/safe-to-evict":"false","openshift.io/scc":"restricted-v2","seccomp.security.alpha.kubernetes.io/pod":"runtime/default","sidecar.istio.io/inject":"true","sidecar.istio.io/rewriteAppHTTPProbers":"true"}
+                                     
+      ISTIO_META_WORKLOAD_NAME:      activator
+      ISTIO_META_OWNER:              kubernetes://apis/apps/v1/namespaces/knative-serving/deployments/activator
+      ISTIO_META_MESH_ID:            cluster.local
+      TRUST_DOMAIN:                  cluster.local
+      ISTIO_META_DNS_AUTO_ALLOCATE:  true
+      ISTIO_META_DNS_CAPTURE:        true
+      PROXY_XDS_VIA_AGENT:           true
+      ISTIO_KUBE_APP_PROBERS:        {"/app-health/activator/livez":{"httpGet":{"path":"/","port":8012,"scheme":"HTTP","httpHeaders":[{"name":"k-kubelet-probe","value":"activator"}]},"timeoutSeconds":1},"/app-health/activator/readyz":{"httpGet":{"path":"/","port":8012,"scheme":"HTTP","httpHeaders":[{"name":"k-kubelet-probe","value":"activator"}]},"timeoutSeconds":1}}
+    Mounts:
+      /etc/istio/pod from istio-podinfo (rw)
+      /etc/istio/proxy from istio-envoy (rw)
+      /var/lib/istio/data from istio-data (rw)
+      /var/run/secrets/istio from istiod-ca-cert (rw)
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-bzkxp (ro)
+Conditions:
+  Type              Status
+  Initialized       True 
+  Ready             True 
+  ContainersReady   True 
+  PodScheduled      True 
+Volumes:
+  istio-envoy:
+    Type:       EmptyDir (a temporary directory that shares a pod's lifetime)
+    Medium:     Memory
+    SizeLimit:  <unset>
+  istio-data:
+    Type:       EmptyDir (a temporary directory that shares a pod's lifetime)
+    Medium:     
+    SizeLimit:  <unset>
+  istio-podinfo:
+    Type:  DownwardAPI (a volume populated by information about the pod)
+    Items:
+      metadata.labels -> labels
+      metadata.annotations -> annotations
+      limits.cpu -> cpu-limit
+      requests.cpu -> cpu-request
+  istiod-ca-cert:
+    Type:      ConfigMap (a volume populated by a ConfigMap)
+    Name:      istio-ca-root-cert
+    Optional:  false
+  kube-api-access-bzkxp:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    ConfigMapOptional:       <nil>
+    DownwardAPI:             true
+    ConfigMapName:           openshift-service-ca.crt
+    ConfigMapOptional:       <nil>
+QoS Class:                   Burstable
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/memory-pressure:NoSchedule op=Exists
+                             node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type     Reason          Age                From               Message
+  ----     ------          ----               ----               -------
+  Normal   Scheduled       15m                default-scheduler  Successfully assigned knative-serving/activator-fc9fcf778-9dxbs to ci-ln-4zhdf4b-72292-lw57b-worker-a-z86r5
+  Warning  FailedMount     15m                kubelet            MountVolume.SetUp failed for volume "istiod-ca-cert" : failed to sync configmap cache: timed out waiting for the condition
+  Normal   AddedInterface  15m                multus             Add eth0 [10.131.0.25/23] from ovn-kubernetes
+  Normal   AddedInterface  15m                multus             Add net1 [] from knative-serving/v2-1-istio-cni
+  Normal   Pulling         15m                kubelet            Pulling image "registry.redhat.io/openshift-serverless-1/serving-activator-rhel8@sha256:aa6a3ee558c19b9dc2b13bbd351843a7bdb12b40c6b94b9e5312578e0e4db6b4"
+  Normal   Pulling         15m                kubelet            Pulling image "registry.redhat.io/openshift-service-mesh/proxyv2-rhel8@sha256:e7acaa5d4a7f265cba1ad4f53859833390c5da1af31bb8546a5ae19f064a7dde"
+  Normal   Pulled          15m                kubelet            Successfully pulled image "registry.redhat.io/openshift-serverless-1/serving-activator-rhel8@sha256:aa6a3ee558c19b9dc2b13bbd351843a7bdb12b40c6b94b9e5312578e0e4db6b4" in 3.968453455s
+  Normal   Created         15m                kubelet            Created container activator
+  Normal   Started         15m                kubelet            Started container activator
+  Normal   Pulled          14m                kubelet            Successfully pulled image "registry.redhat.io/openshift-service-mesh/proxyv2-rhel8@sha256:e7acaa5d4a7f265cba1ad4f53859833390c5da1af31bb8546a5ae19f064a7dde" in 12.191751842s
+  Normal   Created         14m                kubelet            Created container istio-proxy
+  Normal   Started         14m                kubelet            Started container istio-proxy
+  Warning  Unhealthy       14m (x8 over 14m)  kubelet            Readiness probe failed: Get "http://10.131.0.25:15021/healthz/ready": dial tcp 10.131.0.25:15021: connect: connection refused
+  Warning  Unhealthy       14m                kubelet            Liveness probe failed: HTTP probe failed with statuscode: 500
+  Warning  Unhealthy       14m (x6 over 14m)  kubelet            Readiness probe failed: HTTP probe failed with statuscode: 500
+
+
+Name:         activator-fc9fcf778-dl9r2
+Namespace:    knative-serving
+Priority:     0
+Node:         ci-ln-4zhdf4b-72292-lw57b-worker-b-wtt2s/10.0.128.3
+Start Time:   Fri, 03 Mar 2023 20:09:38 +0000
+Labels:       app=activator
+              app.kubernetes.io/component=activator
+              app.kubernetes.io/name=knative-serving
+              app.kubernetes.io/version=1.5.0
+              istio.io/rev=basic
+              maistra-version=2.1.6
+              pod-template-hash=fc9fcf778
+              role=activator
+              security.istio.io/tlsMode=istio
+              service.istio.io/canonical-name=knative-serving
+              service.istio.io/canonical-revision=1.5.0
+Annotations:  cluster-autoscaler.kubernetes.io/safe-to-evict: false
+              k8s.ovn.org/pod-networks:
+                {"default":{"ip_addresses":["10.128.2.21/23"],"mac_address":"0a:58:0a:80:02:15","gateway_ips":["10.128.2.1"],"ip_address":"10.128.2.21/23"...
+              k8s.v1.cni.cncf.io/network-status:
+                [{
+                    "name": "ovn-kubernetes",
+                    "interface": "eth0",
+                    "ips": [
+                        "10.128.2.21"
+                    ],
+                    "mac": "0a:58:0a:80:02:15",
+                    "default": true,
+                    "dns": {}
+                },{
+                    "name": "knative-serving/v2-1-istio-cni",
+                    "dns": {}
+                }]
+              k8s.v1.cni.cncf.io/networks: v2-1-istio-cni
+              k8s.v1.cni.cncf.io/networks-status:
+                [{
+                    "name": "ovn-kubernetes",
+                    "interface": "eth0",
+                    "ips": [
+                        "10.128.2.21"
+                    ],
+                    "mac": "0a:58:0a:80:02:15",
+                    "default": true,
+                    "dns": {}
+                },{
+                    "name": "knative-serving/v2-1-istio-cni",
+                    "dns": {}
+                }]
+              kubectl.kubernetes.io/default-logs-container: activator
+              openshift.io/scc: restricted-v2
+              prometheus.io/path: /stats/prometheus
+              prometheus.io/port: 15020
+              prometheus.io/scrape: true
+              seccomp.security.alpha.kubernetes.io/pod: runtime/default
+              sidecar.istio.io/inject: true
+              sidecar.istio.io/interceptionMode: REDIRECT
+              sidecar.istio.io/rewriteAppHTTPProbers: true
+              sidecar.istio.io/status:
+                {"initContainers":null,"containers":["istio-proxy"],"volumes":["istio-envoy","istio-data","istio-podinfo","istiod-ca-cert"],"imagePullSecr...
+              traffic.sidecar.istio.io/excludeInboundPorts: 15090,8444,15021
+              traffic.sidecar.istio.io/includeInboundPorts: *
+              traffic.sidecar.istio.io/includeOutboundIPRanges: *
+Status:       Running
+IP:           10.128.2.21
+IPs:
+  IP:           10.128.2.21
+Controlled By:  ReplicaSet/activator-fc9fcf778
+Containers:
+  activator:
+    Container ID:   cri-o://9412f6f2b5c8b820bea7774da6d06eb33bea316eab3ae1a13f23a39b51312a89
+    Image:          registry.redhat.io/openshift-serverless-1/serving-activator-rhel8@sha256:aa6a3ee558c19b9dc2b13bbd351843a7bdb12b40c6b94b9e5312578e0e4db6b4
+    Image ID:       registry.redhat.io/openshift-serverless-1/serving-activator-rhel8@sha256:aa6a3ee558c19b9dc2b13bbd351843a7bdb12b40c6b94b9e5312578e0e4db6b4
+    Ports:          9090/TCP, 8008/TCP, 8012/TCP, 8013/TCP
+    Host Ports:     0/TCP, 0/TCP, 0/TCP, 0/TCP
+    State:          Running
+      Started:      Fri, 03 Mar 2023 20:09:45 +0000
+    Ready:          True
+    Restart Count:  0
+    Limits:
+      cpu:     1
+      memory:  600Mi
+    Requests:
+      cpu:      300m
+      memory:   60Mi
+    Liveness:   http-get http://:15020/app-health/activator/livez delay=15s timeout=1s period=10s #success=1 #failure=12
+    Readiness:  http-get http://:15020/app-health/activator/readyz delay=0s timeout=1s period=5s #success=1 #failure=5
+    Environment:
+      GOGC:                       500
+      POD_NAME:                   activator-fc9fcf778-dl9r2 (v1:metadata.name)
+      POD_IP:                      (v1:status.podIP)
+      SYSTEM_NAMESPACE:           knative-serving (v1:metadata.namespace)
+      CONFIG_LOGGING_NAME:        config-logging
+      CONFIG_OBSERVABILITY_NAME:  config-observability
+      METRICS_DOMAIN:             knative.dev/internal/serving
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-p9jgf (ro)
+  istio-proxy:
+    Container ID:  cri-o://6a2d6f72214416405c334560e06bd15c9ffbe08ccabc6465f1c5e6ab5f3bb183
+    Image:         registry.redhat.io/openshift-service-mesh/proxyv2-rhel8@sha256:e7acaa5d4a7f265cba1ad4f53859833390c5da1af31bb8546a5ae19f064a7dde
+    Image ID:      registry.redhat.io/openshift-service-mesh/proxyv2-rhel8@sha256:05f2263746254aca2a2c20cf91f4d8540fada9dfa807c7bafec13d50f0df8f40
+    Port:          15090/TCP
+    Host Port:     0/TCP
+    Args:
+      proxy
+      sidecar
+      --domain
+      $(POD_NAMESPACE).svc.cluster.local
+      --serviceCluster
+      activator.$(POD_NAMESPACE)
+      --proxyLogLevel=warning
+      --proxyComponentLogLevel=misc:error
+      --log_output_level=default:warn
+      --concurrency
+      2
+    State:          Running
+      Started:      Fri, 03 Mar 2023 20:10:03 +0000
+    Ready:          True
+    Restart Count:  0
+    Limits:
+      cpu:     2
+      memory:  1Gi
+    Requests:
+      cpu:      10m
+      memory:   128Mi
+    Readiness:  http-get http://:15021/healthz/ready delay=1s timeout=3s period=2s #success=1 #failure=30
+    Environment:
+      JWT_POLICY:                    first-party-jwt
+      PILOT_CERT_PROVIDER:           istiod
+      CA_ADDR:                       istiod-basic.istio-system.svc:15012
+      POD_NAME:                      activator-fc9fcf778-dl9r2 (v1:metadata.name)
+      POD_NAMESPACE:                 knative-serving (v1:metadata.namespace)
+      INSTANCE_IP:                    (v1:status.podIP)
+      SERVICE_ACCOUNT:                (v1:spec.serviceAccountName)
+      HOST_IP:                        (v1:status.hostIP)
+      CANONICAL_SERVICE:              (v1:metadata.labels['service.istio.io/canonical-name'])
+      CANONICAL_REVISION:             (v1:metadata.labels['service.istio.io/canonical-revision'])
+      PROXY_CONFIG:                  {"discoveryAddress":"istiod-basic.istio-system.svc:15012","tracing":{"zipkin":{"address":"jaeger-collector.istio-system.svc:9411"}},"proxyMetadata":{"ISTIO_META_DNS_AUTO_ALLOCATE":"true","ISTIO_META_DNS_CAPTURE":"true","PROXY_XDS_VIA_AGENT":"true"}}
+                                     
+      ISTIO_META_POD_PORTS:          [
+                                         {"name":"metrics","containerPort":9090,"protocol":"TCP"}
+                                         ,{"name":"profiling","containerPort":8008,"protocol":"TCP"}
+                                         ,{"name":"http1","containerPort":8012,"protocol":"TCP"}
+                                         ,{"name":"h2c","containerPort":8013,"protocol":"TCP"}
+                                     ]
+      ISTIO_META_APP_CONTAINERS:     activator
+      ISTIO_META_CLUSTER_ID:         Kubernetes
+      ISTIO_META_INTERCEPTION_MODE:  REDIRECT
+      ISTIO_METAJSON_ANNOTATIONS:    {"cluster-autoscaler.kubernetes.io/safe-to-evict":"false","openshift.io/scc":"restricted-v2","seccomp.security.alpha.kubernetes.io/pod":"runtime/default","sidecar.istio.io/inject":"true","sidecar.istio.io/rewriteAppHTTPProbers":"true"}
+                                     
+      ISTIO_META_WORKLOAD_NAME:      activator
+      ISTIO_META_OWNER:              kubernetes://apis/apps/v1/namespaces/knative-serving/deployments/activator
+      ISTIO_META_MESH_ID:            cluster.local
+      TRUST_DOMAIN:                  cluster.local
+      ISTIO_META_DNS_AUTO_ALLOCATE:  true
+      ISTIO_META_DNS_CAPTURE:        true
+      PROXY_XDS_VIA_AGENT:           true
+      ISTIO_KUBE_APP_PROBERS:        {"/app-health/activator/livez":{"httpGet":{"path":"/","port":8012,"scheme":"HTTP","httpHeaders":[{"name":"k-kubelet-probe","value":"activator"}]},"timeoutSeconds":1},"/app-health/activator/readyz":{"httpGet":{"path":"/","port":8012,"scheme":"HTTP","httpHeaders":[{"name":"k-kubelet-probe","value":"activator"}]},"timeoutSeconds":1}}
+    Mounts:
+      /etc/istio/pod from istio-podinfo (rw)
+      /etc/istio/proxy from istio-envoy (rw)
+      /var/lib/istio/data from istio-data (rw)
+      /var/run/secrets/istio from istiod-ca-cert (rw)
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-p9jgf (ro)
+Conditions:
+  Type              Status
+  Initialized       True 
+  Ready             True 
+  ContainersReady   True 
+  PodScheduled      True 
+Volumes:
+  istio-envoy:
+    Type:       EmptyDir (a temporary directory that shares a pod's lifetime)
+    Medium:     Memory
+    SizeLimit:  <unset>
+  istio-data:
+    Type:       EmptyDir (a temporary directory that shares a pod's lifetime)
+    Medium:     
+    SizeLimit:  <unset>
+  istio-podinfo:
+    Type:  DownwardAPI (a volume populated by information about the pod)
+    Items:
+      metadata.labels -> labels
+      metadata.annotations -> annotations
+      limits.cpu -> cpu-limit
+      requests.cpu -> cpu-request
+  istiod-ca-cert:
+    Type:      ConfigMap (a volume populated by a ConfigMap)
+    Name:      istio-ca-root-cert
+    Optional:  false
+  kube-api-access-p9jgf:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    ConfigMapOptional:       <nil>
+    DownwardAPI:             true
+    ConfigMapName:           openshift-service-ca.crt
+    ConfigMapOptional:       <nil>
+QoS Class:                   Burstable
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/memory-pressure:NoSchedule op=Exists
+                             node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type     Reason          Age                From               Message
+  ----     ------          ----               ----               -------
+  Normal   Scheduled       15m                default-scheduler  Successfully assigned knative-serving/activator-fc9fcf778-dl9r2 to ci-ln-4zhdf4b-72292-lw57b-worker-b-wtt2s
+  Normal   AddedInterface  15m                multus             Add eth0 [10.128.2.21/23] from ovn-kubernetes
+  Normal   AddedInterface  15m                multus             Add net1 [] from knative-serving/v2-1-istio-cni
+  Normal   Pulling         15m                kubelet            Pulling image "registry.redhat.io/openshift-serverless-1/serving-activator-rhel8@sha256:aa6a3ee558c19b9dc2b13bbd351843a7bdb12b40c6b94b9e5312578e0e4db6b4"
+  Normal   Pulled          15m                kubelet            Successfully pulled image "registry.redhat.io/openshift-serverless-1/serving-activator-rhel8@sha256:aa6a3ee558c19b9dc2b13bbd351843a7bdb12b40c6b94b9e5312578e0e4db6b4" in 4.446014504s
+  Normal   Created         15m                kubelet            Created container activator
+  Normal   Started         15m                kubelet            Started container activator
+  Normal   Pulling         15m                kubelet            Pulling image "registry.redhat.io/openshift-service-mesh/proxyv2-rhel8@sha256:e7acaa5d4a7f265cba1ad4f53859833390c5da1af31bb8546a5ae19f064a7dde"
+  Normal   Pulled          14m                kubelet            Successfully pulled image "registry.redhat.io/openshift-service-mesh/proxyv2-rhel8@sha256:e7acaa5d4a7f265cba1ad4f53859833390c5da1af31bb8546a5ae19f064a7dde" in 18.092695982s
+  Normal   Created         14m                kubelet            Created container istio-proxy
+  Normal   Started         14m                kubelet            Started container istio-proxy
+  Warning  Unhealthy       14m                kubelet            Liveness probe failed: HTTP probe failed with statuscode: 500
+  Warning  Unhealthy       14m (x7 over 14m)  kubelet            Readiness probe failed: Get "http://10.128.2.21:15021/healthz/ready": dial tcp 10.128.2.21:15021: connect: connection refused
+  Warning  Unhealthy       14m (x6 over 14m)  kubelet            Readiness probe failed: HTTP probe failed with statuscode: 500
+
+
+Name:         autoscaler-67df785744-m8k8c
+Namespace:    knative-serving
+Priority:     0
+Node:         ci-ln-4zhdf4b-72292-lw57b-worker-b-wtt2s/10.0.128.3
+Start Time:   Fri, 03 Mar 2023 20:09:39 +0000
+Labels:       app=autoscaler
+              app.kubernetes.io/component=autoscaler
+              app.kubernetes.io/name=knative-serving
+              app.kubernetes.io/version=1.5.0
+              istio.io/rev=basic
+              maistra-version=2.1.6
+              pod-template-hash=67df785744
+              security.istio.io/tlsMode=istio
+              service.istio.io/canonical-name=knative-serving
+              service.istio.io/canonical-revision=1.5.0
+Annotations:  cluster-autoscaler.kubernetes.io/safe-to-evict: false
+              k8s.ovn.org/pod-networks:
+                {"default":{"ip_addresses":["10.128.2.22/23"],"mac_address":"0a:58:0a:80:02:16","gateway_ips":["10.128.2.1"],"ip_address":"10.128.2.22/23"...
+              k8s.v1.cni.cncf.io/network-status:
+                [{
+                    "name": "ovn-kubernetes",
+                    "interface": "eth0",
+                    "ips": [
+                        "10.128.2.22"
+                    ],
+                    "mac": "0a:58:0a:80:02:16",
+                    "default": true,
+                    "dns": {}
+                },{
+                    "name": "knative-serving/v2-1-istio-cni",
+                    "dns": {}
+                }]
+              k8s.v1.cni.cncf.io/networks: v2-1-istio-cni
+              k8s.v1.cni.cncf.io/networks-status:
+                [{
+                    "name": "ovn-kubernetes",
+                    "interface": "eth0",
+                    "ips": [
+                        "10.128.2.22"
+                    ],
+                    "mac": "0a:58:0a:80:02:16",
+                    "default": true,
+                    "dns": {}
+                },{
+                    "name": "knative-serving/v2-1-istio-cni",
+                    "dns": {}
+                }]
+              kubectl.kubernetes.io/default-logs-container: autoscaler
+              openshift.io/scc: restricted-v2
+              prometheus.io/path: /stats/prometheus
+              prometheus.io/port: 15020
+              prometheus.io/scrape: true
+              seccomp.security.alpha.kubernetes.io/pod: runtime/default
+              sidecar.istio.io/inject: true
+              sidecar.istio.io/interceptionMode: REDIRECT
+              sidecar.istio.io/rewriteAppHTTPProbers: true
+              sidecar.istio.io/status:
+                {"initContainers":null,"containers":["istio-proxy"],"volumes":["istio-envoy","istio-data","istio-podinfo","istiod-ca-cert"],"imagePullSecr...
+              traffic.sidecar.istio.io/excludeInboundPorts: 15090,8444,15021
+              traffic.sidecar.istio.io/includeInboundPorts: *
+              traffic.sidecar.istio.io/includeOutboundIPRanges: *
+Status:       Running
+IP:           10.128.2.22
+IPs:
+  IP:           10.128.2.22
+Controlled By:  ReplicaSet/autoscaler-67df785744
+Containers:
+  autoscaler:
+    Container ID:   cri-o://86b4e3a3253248baf352f391caecea5229662f6e1bb5ea3edd9c71bdae179634
+    Image:          registry.redhat.io/openshift-serverless-1/serving-autoscaler-rhel8@sha256:010bbd4fd08f134f7971c56c5c47d6eff487949bf4f7bb60cd4e511a65ae7c9c
+    Image ID:       registry.redhat.io/openshift-serverless-1/serving-autoscaler-rhel8@sha256:010bbd4fd08f134f7971c56c5c47d6eff487949bf4f7bb60cd4e511a65ae7c9c
+    Ports:          9090/TCP, 8008/TCP, 8080/TCP
+    Host Ports:     0/TCP, 0/TCP, 0/TCP
+    State:          Running
+      Started:      Fri, 03 Mar 2023 20:09:53 +0000
+    Ready:          True
+    Restart Count:  0
+    Limits:
+      cpu:     1
+      memory:  1000Mi
+    Requests:
+      cpu:      100m
+      memory:   100Mi
+    Liveness:   http-get http://:15020/app-health/autoscaler/livez delay=0s timeout=1s period=10s #success=1 #failure=6
+    Readiness:  http-get http://:15020/app-health/autoscaler/readyz delay=0s timeout=1s period=10s #success=1 #failure=3
+    Environment:
+      POD_NAME:                   autoscaler-67df785744-m8k8c (v1:metadata.name)
+      POD_IP:                      (v1:status.podIP)
+      SYSTEM_NAMESPACE:           knative-serving (v1:metadata.namespace)
+      CONFIG_LOGGING_NAME:        config-logging
+      CONFIG_OBSERVABILITY_NAME:  config-observability
+      METRICS_DOMAIN:             knative.dev/serving
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-9zwrz (ro)
+  istio-proxy:
+    Container ID:  cri-o://d50fd3b84a9ad590523d6c4c897e333f21e1f3742f337edd4aecb6bec9f0897c
+    Image:         registry.redhat.io/openshift-service-mesh/proxyv2-rhel8@sha256:e7acaa5d4a7f265cba1ad4f53859833390c5da1af31bb8546a5ae19f064a7dde
+    Image ID:      registry.redhat.io/openshift-service-mesh/proxyv2-rhel8@sha256:05f2263746254aca2a2c20cf91f4d8540fada9dfa807c7bafec13d50f0df8f40
+    Port:          15090/TCP
+    Host Port:     0/TCP
+    Args:
+      proxy
+      sidecar
+      --domain
+      $(POD_NAMESPACE).svc.cluster.local
+      --serviceCluster
+      autoscaler.$(POD_NAMESPACE)
+      --proxyLogLevel=warning
+      --proxyComponentLogLevel=misc:error
+      --log_output_level=default:warn
+      --concurrency
+      2
+    State:          Running
+      Started:      Fri, 03 Mar 2023 20:10:03 +0000
+    Ready:          True
+    Restart Count:  0
+    Limits:
+      cpu:     2
+      memory:  1Gi
+    Requests:
+      cpu:      10m
+      memory:   128Mi
+    Readiness:  http-get http://:15021/healthz/ready delay=1s timeout=3s period=2s #success=1 #failure=30
+    Environment:
+      JWT_POLICY:                    first-party-jwt
+      PILOT_CERT_PROVIDER:           istiod
+      CA_ADDR:                       istiod-basic.istio-system.svc:15012
+      POD_NAME:                      autoscaler-67df785744-m8k8c (v1:metadata.name)
+      POD_NAMESPACE:                 knative-serving (v1:metadata.namespace)
+      INSTANCE_IP:                    (v1:status.podIP)
+      SERVICE_ACCOUNT:                (v1:spec.serviceAccountName)
+      HOST_IP:                        (v1:status.hostIP)
+      CANONICAL_SERVICE:              (v1:metadata.labels['service.istio.io/canonical-name'])
+      CANONICAL_REVISION:             (v1:metadata.labels['service.istio.io/canonical-revision'])
+      PROXY_CONFIG:                  {"discoveryAddress":"istiod-basic.istio-system.svc:15012","tracing":{"zipkin":{"address":"jaeger-collector.istio-system.svc:9411"}},"proxyMetadata":{"ISTIO_META_DNS_AUTO_ALLOCATE":"true","ISTIO_META_DNS_CAPTURE":"true","PROXY_XDS_VIA_AGENT":"true"}}
+                                     
+      ISTIO_META_POD_PORTS:          [
+                                         {"name":"metrics","containerPort":9090,"protocol":"TCP"}
+                                         ,{"name":"profiling","containerPort":8008,"protocol":"TCP"}
+                                         ,{"name":"websocket","containerPort":8080,"protocol":"TCP"}
+                                     ]
+      ISTIO_META_APP_CONTAINERS:     autoscaler
+      ISTIO_META_CLUSTER_ID:         Kubernetes
+      ISTIO_META_INTERCEPTION_MODE:  REDIRECT
+      ISTIO_METAJSON_ANNOTATIONS:    {"cluster-autoscaler.kubernetes.io/safe-to-evict":"false","openshift.io/scc":"restricted-v2","seccomp.security.alpha.kubernetes.io/pod":"runtime/default","sidecar.istio.io/inject":"true","sidecar.istio.io/rewriteAppHTTPProbers":"true"}
+                                     
+      ISTIO_META_WORKLOAD_NAME:      autoscaler
+      ISTIO_META_OWNER:              kubernetes://apis/apps/v1/namespaces/knative-serving/deployments/autoscaler
+      ISTIO_META_MESH_ID:            cluster.local
+      TRUST_DOMAIN:                  cluster.local
+      ISTIO_META_DNS_AUTO_ALLOCATE:  true
+      ISTIO_META_DNS_CAPTURE:        true
+      PROXY_XDS_VIA_AGENT:           true
+      ISTIO_KUBE_APP_PROBERS:        {"/app-health/autoscaler/livez":{"httpGet":{"path":"/","port":8080,"scheme":"HTTP","httpHeaders":[{"name":"k-kubelet-probe","value":"autoscaler"}]},"timeoutSeconds":1},"/app-health/autoscaler/readyz":{"httpGet":{"path":"/","port":8080,"scheme":"HTTP","httpHeaders":[{"name":"k-kubelet-probe","value":"autoscaler"}]},"timeoutSeconds":1}}
+    Mounts:
+      /etc/istio/pod from istio-podinfo (rw)
+      /etc/istio/proxy from istio-envoy (rw)
+      /var/lib/istio/data from istio-data (rw)
+      /var/run/secrets/istio from istiod-ca-cert (rw)
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-9zwrz (ro)
+Conditions:
+  Type              Status
+  Initialized       True 
+  Ready             True 
+  ContainersReady   True 
+  PodScheduled      True 
+Volumes:
+  istio-envoy:
+    Type:       EmptyDir (a temporary directory that shares a pod's lifetime)
+    Medium:     Memory
+    SizeLimit:  <unset>
+  istio-data:
+    Type:       EmptyDir (a temporary directory that shares a pod's lifetime)
+    Medium:     
+    SizeLimit:  <unset>
+  istio-podinfo:
+    Type:  DownwardAPI (a volume populated by information about the pod)
+    Items:
+      metadata.labels -> labels
+      metadata.annotations -> annotations
+      limits.cpu -> cpu-limit
+      requests.cpu -> cpu-request
+  istiod-ca-cert:
+    Type:      ConfigMap (a volume populated by a ConfigMap)
+    Name:      istio-ca-root-cert
+    Optional:  false
+  kube-api-access-9zwrz:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    ConfigMapOptional:       <nil>
+    DownwardAPI:             true
+    ConfigMapName:           openshift-service-ca.crt
+    ConfigMapOptional:       <nil>
+QoS Class:                   Burstable
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/memory-pressure:NoSchedule op=Exists
+                             node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type     Reason          Age                From               Message
+  ----     ------          ----               ----               -------
+  Normal   Scheduled       15m                default-scheduler  Successfully assigned knative-serving/autoscaler-67df785744-m8k8c to ci-ln-4zhdf4b-72292-lw57b-worker-b-wtt2s
+  Normal   AddedInterface  15m                multus             Add eth0 [10.128.2.22/23] from ovn-kubernetes
+  Normal   AddedInterface  15m                multus             Add net1 [] from knative-serving/v2-1-istio-cni
+  Normal   Pulling         15m                kubelet            Pulling image "registry.redhat.io/openshift-serverless-1/serving-autoscaler-rhel8@sha256:010bbd4fd08f134f7971c56c5c47d6eff487949bf4f7bb60cd4e511a65ae7c9c"
+  Normal   Pulled          15m                kubelet            Successfully pulled image "registry.redhat.io/openshift-serverless-1/serving-autoscaler-rhel8@sha256:010bbd4fd08f134f7971c56c5c47d6eff487949bf4f7bb60cd4e511a65ae7c9c" in 12.672897854s
+  Normal   Created         15m                kubelet            Created container autoscaler
+  Normal   Started         15m                kubelet            Started container autoscaler
+  Normal   Pulling         15m                kubelet            Pulling image "registry.redhat.io/openshift-service-mesh/proxyv2-rhel8@sha256:e7acaa5d4a7f265cba1ad4f53859833390c5da1af31bb8546a5ae19f064a7dde"
+  Normal   Pulled          14m                kubelet            Successfully pulled image "registry.redhat.io/openshift-service-mesh/proxyv2-rhel8@sha256:e7acaa5d4a7f265cba1ad4f53859833390c5da1af31bb8546a5ae19f064a7dde" in 9.34392907s
+  Normal   Created         14m                kubelet            Created container istio-proxy
+  Normal   Started         14m                kubelet            Started container istio-proxy
+  Warning  Unhealthy       14m (x4 over 14m)  kubelet            Readiness probe failed: HTTP probe failed with statuscode: 500
+  Warning  Unhealthy       14m                kubelet            Liveness probe failed: HTTP probe failed with statuscode: 500
+  Warning  Unhealthy       14m (x8 over 14m)  kubelet            Readiness probe failed: Get "http://10.128.2.22:15021/healthz/ready": dial tcp 10.128.2.22:15021: connect: connection refused
+
+
+Name:         autoscaler-67df785744-x2ph9
+Namespace:    knative-serving
+Priority:     0
+Node:         ci-ln-4zhdf4b-72292-lw57b-worker-c-szhjg/10.0.128.4
+Start Time:   Fri, 03 Mar 2023 20:09:38 +0000
+Labels:       app=autoscaler
+              app.kubernetes.io/component=autoscaler
+              app.kubernetes.io/name=knative-serving
+              app.kubernetes.io/version=1.5.0
+              istio.io/rev=basic
+              maistra-version=2.1.6
+              pod-template-hash=67df785744
+              security.istio.io/tlsMode=istio
+              service.istio.io/canonical-name=knative-serving
+              service.istio.io/canonical-revision=1.5.0
+Annotations:  cluster-autoscaler.kubernetes.io/safe-to-evict: false
+              k8s.ovn.org/pod-networks:
+                {"default":{"ip_addresses":["10.129.2.29/23"],"mac_address":"0a:58:0a:81:02:1d","gateway_ips":["10.129.2.1"],"ip_address":"10.129.2.29/23"...
+              k8s.v1.cni.cncf.io/network-status:
+                [{
+                    "name": "ovn-kubernetes",
+                    "interface": "eth0",
+                    "ips": [
+                        "10.129.2.29"
+                    ],
+                    "mac": "0a:58:0a:81:02:1d",
+                    "default": true,
+                    "dns": {}
+                },{
+                    "name": "knative-serving/v2-1-istio-cni",
+                    "dns": {}
+                }]
+              k8s.v1.cni.cncf.io/networks: v2-1-istio-cni
+              k8s.v1.cni.cncf.io/networks-status:
+                [{
+                    "name": "ovn-kubernetes",
+                    "interface": "eth0",
+                    "ips": [
+                        "10.129.2.29"
+                    ],
+                    "mac": "0a:58:0a:81:02:1d",
+                    "default": true,
+                    "dns": {}
+                },{
+                    "name": "knative-serving/v2-1-istio-cni",
+                    "dns": {}
+                }]
+              kubectl.kubernetes.io/default-logs-container: autoscaler
+              openshift.io/scc: restricted-v2
+              prometheus.io/path: /stats/prometheus
+              prometheus.io/port: 15020
+              prometheus.io/scrape: true
+              seccomp.security.alpha.kubernetes.io/pod: runtime/default
+              sidecar.istio.io/inject: true
+              sidecar.istio.io/interceptionMode: REDIRECT
+              sidecar.istio.io/rewriteAppHTTPProbers: true
+              sidecar.istio.io/status:
+                {"initContainers":null,"containers":["istio-proxy"],"volumes":["istio-envoy","istio-data","istio-podinfo","istiod-ca-cert"],"imagePullSecr...
+              traffic.sidecar.istio.io/excludeInboundPorts: 15090,8444,15021
+              traffic.sidecar.istio.io/includeInboundPorts: *
+              traffic.sidecar.istio.io/includeOutboundIPRanges: *
+Status:       Running
+IP:           10.129.2.29
+IPs:
+  IP:           10.129.2.29
+Controlled By:  ReplicaSet/autoscaler-67df785744
+Containers:
+  autoscaler:
+    Container ID:   cri-o://eee7ba0372966d99819ba7703b90897d03a03a7ab677898bfcd098be794a5ab1
+    Image:          registry.redhat.io/openshift-serverless-1/serving-autoscaler-rhel8@sha256:010bbd4fd08f134f7971c56c5c47d6eff487949bf4f7bb60cd4e511a65ae7c9c
+    Image ID:       registry.redhat.io/openshift-serverless-1/serving-autoscaler-rhel8@sha256:010bbd4fd08f134f7971c56c5c47d6eff487949bf4f7bb60cd4e511a65ae7c9c
+    Ports:          9090/TCP, 8008/TCP, 8080/TCP
+    Host Ports:     0/TCP, 0/TCP, 0/TCP
+    State:          Running
+      Started:      Fri, 03 Mar 2023 20:09:56 +0000
+    Ready:          True
+    Restart Count:  0
+    Limits:
+      cpu:     1
+      memory:  1000Mi
+    Requests:
+      cpu:      100m
+      memory:   100Mi
+    Liveness:   http-get http://:15020/app-health/autoscaler/livez delay=0s timeout=1s period=10s #success=1 #failure=6
+    Readiness:  http-get http://:15020/app-health/autoscaler/readyz delay=0s timeout=1s period=10s #success=1 #failure=3
+    Environment:
+      POD_NAME:                   autoscaler-67df785744-x2ph9 (v1:metadata.name)
+      POD_IP:                      (v1:status.podIP)
+      SYSTEM_NAMESPACE:           knative-serving (v1:metadata.namespace)
+      CONFIG_LOGGING_NAME:        config-logging
+      CONFIG_OBSERVABILITY_NAME:  config-observability
+      METRICS_DOMAIN:             knative.dev/serving
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-nntgk (ro)
+  istio-proxy:
+    Container ID:  cri-o://32470de3e0b4327ea29b71724e5bf2ba73bf0066a735139b2ee5980f978154d9
+    Image:         registry.redhat.io/openshift-service-mesh/proxyv2-rhel8@sha256:e7acaa5d4a7f265cba1ad4f53859833390c5da1af31bb8546a5ae19f064a7dde
+    Image ID:      registry.redhat.io/openshift-service-mesh/proxyv2-rhel8@sha256:05f2263746254aca2a2c20cf91f4d8540fada9dfa807c7bafec13d50f0df8f40
+    Port:          15090/TCP
+    Host Port:     0/TCP
+    Args:
+      proxy
+      sidecar
+      --domain
+      $(POD_NAMESPACE).svc.cluster.local
+      --serviceCluster
+      autoscaler.$(POD_NAMESPACE)
+      --proxyLogLevel=warning
+      --proxyComponentLogLevel=misc:error
+      --log_output_level=default:warn
+      --concurrency
+      2
+    State:          Running
+      Started:      Fri, 03 Mar 2023 20:09:57 +0000
+    Ready:          True
+    Restart Count:  0
+    Limits:
+      cpu:     2
+      memory:  1Gi
+    Requests:
+      cpu:      10m
+      memory:   128Mi
+    Readiness:  http-get http://:15021/healthz/ready delay=1s timeout=3s period=2s #success=1 #failure=30
+    Environment:
+      JWT_POLICY:                    first-party-jwt
+      PILOT_CERT_PROVIDER:           istiod
+      CA_ADDR:                       istiod-basic.istio-system.svc:15012
+      POD_NAME:                      autoscaler-67df785744-x2ph9 (v1:metadata.name)
+      POD_NAMESPACE:                 knative-serving (v1:metadata.namespace)
+      INSTANCE_IP:                    (v1:status.podIP)
+      SERVICE_ACCOUNT:                (v1:spec.serviceAccountName)
+      HOST_IP:                        (v1:status.hostIP)
+      CANONICAL_SERVICE:              (v1:metadata.labels['service.istio.io/canonical-name'])
+      CANONICAL_REVISION:             (v1:metadata.labels['service.istio.io/canonical-revision'])
+      PROXY_CONFIG:                  {"discoveryAddress":"istiod-basic.istio-system.svc:15012","tracing":{"zipkin":{"address":"jaeger-collector.istio-system.svc:9411"}},"proxyMetadata":{"ISTIO_META_DNS_AUTO_ALLOCATE":"true","ISTIO_META_DNS_CAPTURE":"true","PROXY_XDS_VIA_AGENT":"true"}}
+                                     
+      ISTIO_META_POD_PORTS:          [
+                                         {"name":"metrics","containerPort":9090,"protocol":"TCP"}
+                                         ,{"name":"profiling","containerPort":8008,"protocol":"TCP"}
+                                         ,{"name":"websocket","containerPort":8080,"protocol":"TCP"}
+                                     ]
+      ISTIO_META_APP_CONTAINERS:     autoscaler
+      ISTIO_META_CLUSTER_ID:         Kubernetes
+      ISTIO_META_INTERCEPTION_MODE:  REDIRECT
+      ISTIO_METAJSON_ANNOTATIONS:    {"cluster-autoscaler.kubernetes.io/safe-to-evict":"false","openshift.io/scc":"restricted-v2","seccomp.security.alpha.kubernetes.io/pod":"runtime/default","sidecar.istio.io/inject":"true","sidecar.istio.io/rewriteAppHTTPProbers":"true"}
+                                     
+      ISTIO_META_WORKLOAD_NAME:      autoscaler
+      ISTIO_META_OWNER:              kubernetes://apis/apps/v1/namespaces/knative-serving/deployments/autoscaler
+      ISTIO_META_MESH_ID:            cluster.local
+      TRUST_DOMAIN:                  cluster.local
+      ISTIO_META_DNS_AUTO_ALLOCATE:  true
+      ISTIO_META_DNS_CAPTURE:        true
+      PROXY_XDS_VIA_AGENT:           true
+      ISTIO_KUBE_APP_PROBERS:        {"/app-health/autoscaler/livez":{"httpGet":{"path":"/","port":8080,"scheme":"HTTP","httpHeaders":[{"name":"k-kubelet-probe","value":"autoscaler"}]},"timeoutSeconds":1},"/app-health/autoscaler/readyz":{"httpGet":{"path":"/","port":8080,"scheme":"HTTP","httpHeaders":[{"name":"k-kubelet-probe","value":"autoscaler"}]},"timeoutSeconds":1}}
+    Mounts:
+      /etc/istio/pod from istio-podinfo (rw)
+      /etc/istio/proxy from istio-envoy (rw)
+      /var/lib/istio/data from istio-data (rw)
+      /var/run/secrets/istio from istiod-ca-cert (rw)
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-nntgk (ro)
+Conditions:
+  Type              Status
+  Initialized       True 
+  Ready             True 
+  ContainersReady   True 
+  PodScheduled      True 
+Volumes:
+  istio-envoy:
+    Type:       EmptyDir (a temporary directory that shares a pod's lifetime)
+    Medium:     Memory
+    SizeLimit:  <unset>
+  istio-data:
+    Type:       EmptyDir (a temporary directory that shares a pod's lifetime)
+    Medium:     
+    SizeLimit:  <unset>
+  istio-podinfo:
+    Type:  DownwardAPI (a volume populated by information about the pod)
+    Items:
+      metadata.labels -> labels
+      metadata.annotations -> annotations
+      limits.cpu -> cpu-limit
+      requests.cpu -> cpu-request
+  istiod-ca-cert:
+    Type:      ConfigMap (a volume populated by a ConfigMap)
+    Name:      istio-ca-root-cert
+    Optional:  false
+  kube-api-access-nntgk:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    ConfigMapOptional:       <nil>
+    DownwardAPI:             true
+    ConfigMapName:           openshift-service-ca.crt
+    ConfigMapOptional:       <nil>
+QoS Class:                   Burstable
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/memory-pressure:NoSchedule op=Exists
+                             node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type     Reason          Age                From               Message
+  ----     ------          ----               ----               -------
+  Normal   Scheduled       15m                default-scheduler  Successfully assigned knative-serving/autoscaler-67df785744-x2ph9 to ci-ln-4zhdf4b-72292-lw57b-worker-c-szhjg
+  Warning  FailedMount     15m                kubelet            MountVolume.SetUp failed for volume "istiod-ca-cert" : failed to sync configmap cache: timed out waiting for the condition
+  Normal   AddedInterface  15m                multus             Add eth0 [10.129.2.29/23] from ovn-kubernetes
+  Normal   AddedInterface  15m                multus             Add net1 [] from knative-serving/v2-1-istio-cni
+  Normal   Pulling         15m                kubelet            Pulling image "registry.redhat.io/openshift-serverless-1/serving-autoscaler-rhel8@sha256:010bbd4fd08f134f7971c56c5c47d6eff487949bf4f7bb60cd4e511a65ae7c9c"
+  Normal   Pulled          15m                kubelet            Successfully pulled image "registry.redhat.io/openshift-serverless-1/serving-autoscaler-rhel8@sha256:010bbd4fd08f134f7971c56c5c47d6eff487949bf4f7bb60cd4e511a65ae7c9c" in 12.817867594s
+  Normal   Pulling         15m                kubelet            Pulling image "registry.redhat.io/openshift-service-mesh/proxyv2-rhel8@sha256:e7acaa5d4a7f265cba1ad4f53859833390c5da1af31bb8546a5ae19f064a7dde"
+  Normal   Created         15m                kubelet            Created container autoscaler
+  Normal   Started         15m                kubelet            Started container autoscaler
+  Normal   Pulled          14m                kubelet            Successfully pulled image "registry.redhat.io/openshift-service-mesh/proxyv2-rhel8@sha256:e7acaa5d4a7f265cba1ad4f53859833390c5da1af31bb8546a5ae19f064a7dde" in 1.012299679s
+  Normal   Created         14m                kubelet            Created container istio-proxy
+  Normal   Started         14m                kubelet            Started container istio-proxy
+  Warning  Unhealthy       14m (x4 over 14m)  kubelet            Readiness probe failed: HTTP probe failed with statuscode: 500
+  Warning  Unhealthy       14m                kubelet            Liveness probe failed: HTTP probe failed with statuscode: 500
+  Warning  Unhealthy       14m (x8 over 14m)  kubelet            Readiness probe failed: Get "http://10.129.2.29:15021/healthz/ready": dial tcp 10.129.2.29:15021: connect: connection refused
+
+
+Name:         autoscaler-hpa-d45bfc87b-fwtwq
+Namespace:    knative-serving
+Priority:     0
+Node:         ci-ln-4zhdf4b-72292-lw57b-worker-b-wtt2s/10.0.128.3
+Start Time:   Fri, 03 Mar 2023 20:09:40 +0000
+Labels:       app=autoscaler-hpa
+              app.kubernetes.io/component=autoscaler-hpa
+              app.kubernetes.io/name=knative-serving
+              app.kubernetes.io/version=1.5.0
+              pod-template-hash=d45bfc87b
+Annotations:  cluster-autoscaler.kubernetes.io/safe-to-evict: true
+              k8s.ovn.org/pod-networks:
+                {"default":{"ip_addresses":["10.128.2.24/23"],"mac_address":"0a:58:0a:80:02:18","gateway_ips":["10.128.2.1"],"ip_address":"10.128.2.24/23"...
+              k8s.v1.cni.cncf.io/network-status:
+                [{
+                    "name": "ovn-kubernetes",
+                    "interface": "eth0",
+                    "ips": [
+                        "10.128.2.24"
+                    ],
+                    "mac": "0a:58:0a:80:02:18",
+                    "default": true,
+                    "dns": {}
+                }]
+              k8s.v1.cni.cncf.io/networks-status:
+                [{
+                    "name": "ovn-kubernetes",
+                    "interface": "eth0",
+                    "ips": [
+                        "10.128.2.24"
+                    ],
+                    "mac": "0a:58:0a:80:02:18",
+                    "default": true,
+                    "dns": {}
+                }]
+              openshift.io/scc: restricted-v2
+              seccomp.security.alpha.kubernetes.io/pod: runtime/default
+Status:       Running
+IP:           10.128.2.24
+IPs:
+  IP:           10.128.2.24
+Controlled By:  ReplicaSet/autoscaler-hpa-d45bfc87b
+Containers:
+  autoscaler-hpa:
+    Container ID:   cri-o://d1bf03ca6602a7e7f994181f9be410dbc047859e5c73a6269632efd0a8920416
+    Image:          registry.redhat.io/openshift-serverless-1/serving-autoscaler-hpa-rhel8@sha256:507798c908336173ab0d302e37edf48f39ebb827f42d3e8ee0932d0bf7f07fa3
+    Image ID:       registry.redhat.io/openshift-serverless-1/serving-autoscaler-hpa-rhel8@sha256:507798c908336173ab0d302e37edf48f39ebb827f42d3e8ee0932d0bf7f07fa3
+    Ports:          9090/TCP, 8008/TCP
+    Host Ports:     0/TCP, 0/TCP
+    State:          Running
+      Started:      Fri, 03 Mar 2023 20:09:53 +0000
+    Ready:          True
+    Restart Count:  0
+    Limits:
+      cpu:     300m
+      memory:  400Mi
+    Requests:
+      cpu:     30m
+      memory:  40Mi
+    Environment:
+      SYSTEM_NAMESPACE:           knative-serving (v1:metadata.namespace)
+      CONFIG_LOGGING_NAME:        config-logging
+      CONFIG_OBSERVABILITY_NAME:  config-observability
+      METRICS_DOMAIN:             knative.dev/serving
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-4fd8r (ro)
+Conditions:
+  Type              Status
+  Initialized       True 
+  Ready             True 
+  ContainersReady   True 
+  PodScheduled      True 
+Volumes:
+  kube-api-access-4fd8r:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    ConfigMapOptional:       <nil>
+    DownwardAPI:             true
+    ConfigMapName:           openshift-service-ca.crt
+    ConfigMapOptional:       <nil>
+QoS Class:                   Burstable
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/memory-pressure:NoSchedule op=Exists
+                             node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type    Reason          Age   From               Message
+  ----    ------          ----  ----               -------
+  Normal  Scheduled       15m   default-scheduler  Successfully assigned knative-serving/autoscaler-hpa-d45bfc87b-fwtwq to ci-ln-4zhdf4b-72292-lw57b-worker-b-wtt2s
+  Normal  AddedInterface  15m   multus             Add eth0 [10.128.2.24/23] from ovn-kubernetes
+  Normal  Pulling         15m   kubelet            Pulling image "registry.redhat.io/openshift-serverless-1/serving-autoscaler-hpa-rhel8@sha256:507798c908336173ab0d302e37edf48f39ebb827f42d3e8ee0932d0bf7f07fa3"
+  Normal  Pulled          15m   kubelet            Successfully pulled image "registry.redhat.io/openshift-serverless-1/serving-autoscaler-hpa-rhel8@sha256:507798c908336173ab0d302e37edf48f39ebb827f42d3e8ee0932d0bf7f07fa3" in 10.310745661s
+  Normal  Created         15m   kubelet            Created container autoscaler-hpa
+  Normal  Started         15m   kubelet            Started container autoscaler-hpa
+
+
+Name:         autoscaler-hpa-d45bfc87b-wd9bd
+Namespace:    knative-serving
+Priority:     0
+Node:         ci-ln-4zhdf4b-72292-lw57b-worker-c-szhjg/10.0.128.4
+Start Time:   Fri, 03 Mar 2023 20:09:40 +0000
+Labels:       app=autoscaler-hpa
+              app.kubernetes.io/component=autoscaler-hpa
+              app.kubernetes.io/name=knative-serving
+              app.kubernetes.io/version=1.5.0
+              pod-template-hash=d45bfc87b
+Annotations:  cluster-autoscaler.kubernetes.io/safe-to-evict: true
+              k8s.ovn.org/pod-networks:
+                {"default":{"ip_addresses":["10.129.2.34/23"],"mac_address":"0a:58:0a:81:02:22","gateway_ips":["10.129.2.1"],"ip_address":"10.129.2.34/23"...
+              k8s.v1.cni.cncf.io/network-status:
+                [{
+                    "name": "ovn-kubernetes",
+                    "interface": "eth0",
+                    "ips": [
+                        "10.129.2.34"
+                    ],
+                    "mac": "0a:58:0a:81:02:22",
+                    "default": true,
+                    "dns": {}
+                }]
+              k8s.v1.cni.cncf.io/networks-status:
+                [{
+                    "name": "ovn-kubernetes",
+                    "interface": "eth0",
+                    "ips": [
+                        "10.129.2.34"
+                    ],
+                    "mac": "0a:58:0a:81:02:22",
+                    "default": true,
+                    "dns": {}
+                }]
+              openshift.io/scc: restricted-v2
+              seccomp.security.alpha.kubernetes.io/pod: runtime/default
+Status:       Running
+IP:           10.129.2.34
+IPs:
+  IP:           10.129.2.34
+Controlled By:  ReplicaSet/autoscaler-hpa-d45bfc87b
+Containers:
+  autoscaler-hpa:
+    Container ID:   cri-o://e0d9b91338de9e88b72fad94fe7fe35248e0d6f8d8bb5359fb0d1295bb0d33ff
+    Image:          registry.redhat.io/openshift-serverless-1/serving-autoscaler-hpa-rhel8@sha256:507798c908336173ab0d302e37edf48f39ebb827f42d3e8ee0932d0bf7f07fa3
+    Image ID:       registry.redhat.io/openshift-serverless-1/serving-autoscaler-hpa-rhel8@sha256:507798c908336173ab0d302e37edf48f39ebb827f42d3e8ee0932d0bf7f07fa3
+    Ports:          9090/TCP, 8008/TCP
+    Host Ports:     0/TCP, 0/TCP
+    State:          Running
+      Started:      Fri, 03 Mar 2023 20:09:56 +0000
+    Ready:          True
+    Restart Count:  0
+    Limits:
+      cpu:     300m
+      memory:  400Mi
+    Requests:
+      cpu:     30m
+      memory:  40Mi
+    Environment:
+      SYSTEM_NAMESPACE:           knative-serving (v1:metadata.namespace)
+      CONFIG_LOGGING_NAME:        config-logging
+      CONFIG_OBSERVABILITY_NAME:  config-observability
+      METRICS_DOMAIN:             knative.dev/serving
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-f92fk (ro)
+Conditions:
+  Type              Status
+  Initialized       True 
+  Ready             True 
+  ContainersReady   True 
+  PodScheduled      True 
+Volumes:
+  kube-api-access-f92fk:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    ConfigMapOptional:       <nil>
+    DownwardAPI:             true
+    ConfigMapName:           openshift-service-ca.crt
+    ConfigMapOptional:       <nil>
+QoS Class:                   Burstable
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/memory-pressure:NoSchedule op=Exists
+                             node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type    Reason          Age   From               Message
+  ----    ------          ----  ----               -------
+  Normal  Scheduled       15m   default-scheduler  Successfully assigned knative-serving/autoscaler-hpa-d45bfc87b-wd9bd to ci-ln-4zhdf4b-72292-lw57b-worker-c-szhjg
+  Normal  AddedInterface  15m   multus             Add eth0 [10.129.2.34/23] from ovn-kubernetes
+  Normal  Pulling         15m   kubelet            Pulling image "registry.redhat.io/openshift-serverless-1/serving-autoscaler-hpa-rhel8@sha256:507798c908336173ab0d302e37edf48f39ebb827f42d3e8ee0932d0bf7f07fa3"
+  Normal  Pulled          15m   kubelet            Successfully pulled image "registry.redhat.io/openshift-serverless-1/serving-autoscaler-hpa-rhel8@sha256:507798c908336173ab0d302e37edf48f39ebb827f42d3e8ee0932d0bf7f07fa3" in 12.818950236s
+  Normal  Created         15m   kubelet            Created container autoscaler-hpa
+  Normal  Started         15m   kubelet            Started container autoscaler-hpa
+
+
+Name:         controller-65bcd69f-9hs8n
+Namespace:    knative-serving
+Priority:     0
+Node:         ci-ln-4zhdf4b-72292-lw57b-worker-b-wtt2s/10.0.128.3
+Start Time:   Fri, 03 Mar 2023 20:09:41 +0000
+Labels:       app=controller
+              app.kubernetes.io/component=controller
+              app.kubernetes.io/name=knative-serving
+              app.kubernetes.io/version=1.5.0
+              pod-template-hash=65bcd69f
+Annotations:  cluster-autoscaler.kubernetes.io/safe-to-evict: true
+              k8s.ovn.org/pod-networks:
+                {"default":{"ip_addresses":["10.128.2.25/23"],"mac_address":"0a:58:0a:80:02:19","gateway_ips":["10.128.2.1"],"ip_address":"10.128.2.25/23"...
+              k8s.v1.cni.cncf.io/network-status:
+                [{
+                    "name": "ovn-kubernetes",
+                    "interface": "eth0",
+                    "ips": [
+                        "10.128.2.25"
+                    ],
+                    "mac": "0a:58:0a:80:02:19",
+                    "default": true,
+                    "dns": {}
+                }]
+              k8s.v1.cni.cncf.io/networks-status:
+                [{
+                    "name": "ovn-kubernetes",
+                    "interface": "eth0",
+                    "ips": [
+                        "10.128.2.25"
+                    ],
+                    "mac": "0a:58:0a:80:02:19",
+                    "default": true,
+                    "dns": {}
+                }]
+              openshift.io/scc: restricted-v2
+              seccomp.security.alpha.kubernetes.io/pod: runtime/default
+              serving.knative.openshift.io/mounted-cert-version: 39157
+Status:       Running
+IP:           10.128.2.25
+IPs:
+  IP:           10.128.2.25
+Controlled By:  ReplicaSet/controller-65bcd69f
+Containers:
+  controller:
+    Container ID:   cri-o://18114912f912115a7c04cdd6fc53b9119247b08f9a9042e2797263172b6e097f
+    Image:          registry.redhat.io/openshift-serverless-1/serving-controller-rhel8@sha256:bbe6d81eb3ce97d961d686a077e49f69ea26f8fa9746c2f04c9e6cfd3100ac67
+    Image ID:       registry.redhat.io/openshift-serverless-1/serving-controller-rhel8@sha256:3c483ae079ae847f7484768394671bd25c0c1e84264eb4166a22761f4a3c8663
+    Ports:          9090/TCP, 8008/TCP
+    Host Ports:     0/TCP, 0/TCP
+    State:          Running
+      Started:      Fri, 03 Mar 2023 20:09:47 +0000
+    Ready:          True
+    Restart Count:  0
+    Limits:
+      cpu:     1
+      memory:  1000Mi
+    Requests:
+      cpu:     100m
+      memory:  100Mi
+    Environment:
+      POD_NAME:                   controller-65bcd69f-9hs8n (v1:metadata.name)
+      SYSTEM_NAMESPACE:           knative-serving (v1:metadata.namespace)
+      CONFIG_LOGGING_NAME:        config-logging
+      CONFIG_OBSERVABILITY_NAME:  config-observability
+      METRICS_DOMAIN:             knative.dev/internal/serving
+      SSL_CERT_DIR:               /custom-certs
+      HTTP_PROXY:                 
+      HTTPS_PROXY:                
+      NO_PROXY:                   
+    Mounts:
+      /custom-certs from custom-certs-config-service-ca (rw)
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-9x6xd (ro)
+Conditions:
+  Type              Status
+  Initialized       True 
+  Ready             True 
+  ContainersReady   True 
+  PodScheduled      True 
+Volumes:
+  custom-certs-config-service-ca:
+    Type:      ConfigMap (a volume populated by a ConfigMap)
+    Name:      config-service-ca
+    Optional:  false
+  kube-api-access-9x6xd:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    ConfigMapOptional:       <nil>
+    DownwardAPI:             true
+    ConfigMapName:           openshift-service-ca.crt
+    ConfigMapOptional:       <nil>
+QoS Class:                   Burstable
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/memory-pressure:NoSchedule op=Exists
+                             node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type     Reason          Age   From               Message
+  ----     ------          ----  ----               -------
+  Normal   Scheduled       15m   default-scheduler  Successfully assigned knative-serving/controller-65bcd69f-9hs8n to ci-ln-4zhdf4b-72292-lw57b-worker-b-wtt2s
+  Warning  FailedMount     15m   kubelet            MountVolume.SetUp failed for volume "custom-certs-config-service-ca" : failed to sync configmap cache: timed out waiting for the condition
+  Normal   AddedInterface  15m   multus             Add eth0 [10.128.2.25/23] from ovn-kubernetes
+  Normal   Pulling         15m   kubelet            Pulling image "registry.redhat.io/openshift-serverless-1/serving-controller-rhel8@sha256:bbe6d81eb3ce97d961d686a077e49f69ea26f8fa9746c2f04c9e6cfd3100ac67"
+  Normal   Pulled          15m   kubelet            Successfully pulled image "registry.redhat.io/openshift-serverless-1/serving-controller-rhel8@sha256:bbe6d81eb3ce97d961d686a077e49f69ea26f8fa9746c2f04c9e6cfd3100ac67" in 3.740542632s
+  Normal   Created         15m   kubelet            Created container controller
+  Normal   Started         15m   kubelet            Started container controller
+
+
+Name:         controller-65bcd69f-sfjlw
+Namespace:    knative-serving
+Priority:     0
+Node:         ci-ln-4zhdf4b-72292-lw57b-worker-a-z86r5/10.0.128.2
+Start Time:   Fri, 03 Mar 2023 20:09:48 +0000
+Labels:       app=controller
+              app.kubernetes.io/component=controller
+              app.kubernetes.io/name=knative-serving
+              app.kubernetes.io/version=1.5.0
+              pod-template-hash=65bcd69f
+Annotations:  cluster-autoscaler.kubernetes.io/safe-to-evict: true
+              k8s.ovn.org/pod-networks:
+                {"default":{"ip_addresses":["10.131.0.30/23"],"mac_address":"0a:58:0a:83:00:1e","gateway_ips":["10.131.0.1"],"ip_address":"10.131.0.30/23"...
+              k8s.v1.cni.cncf.io/network-status:
+                [{
+                    "name": "ovn-kubernetes",
+                    "interface": "eth0",
+                    "ips": [
+                        "10.131.0.30"
+                    ],
+                    "mac": "0a:58:0a:83:00:1e",
+                    "default": true,
+                    "dns": {}
+                }]
+              k8s.v1.cni.cncf.io/networks-status:
+                [{
+                    "name": "ovn-kubernetes",
+                    "interface": "eth0",
+                    "ips": [
+                        "10.131.0.30"
+                    ],
+                    "mac": "0a:58:0a:83:00:1e",
+                    "default": true,
+                    "dns": {}
+                }]
+              openshift.io/scc: restricted-v2
+              seccomp.security.alpha.kubernetes.io/pod: runtime/default
+              serving.knative.openshift.io/mounted-cert-version: 39157
+Status:       Running
+IP:           10.131.0.30
+IPs:
+  IP:           10.131.0.30
+Controlled By:  ReplicaSet/controller-65bcd69f
+Containers:
+  controller:
+    Container ID:   cri-o://f8675e5d4590f421422f2bc37c03c3c74c69fe11994d6b3590af46c1f8969ef3
+    Image:          registry.redhat.io/openshift-serverless-1/serving-controller-rhel8@sha256:bbe6d81eb3ce97d961d686a077e49f69ea26f8fa9746c2f04c9e6cfd3100ac67
+    Image ID:       registry.redhat.io/openshift-serverless-1/serving-controller-rhel8@sha256:3c483ae079ae847f7484768394671bd25c0c1e84264eb4166a22761f4a3c8663
+    Ports:          9090/TCP, 8008/TCP
+    Host Ports:     0/TCP, 0/TCP
+    State:          Running
+      Started:      Fri, 03 Mar 2023 20:09:49 +0000
+    Ready:          True
+    Restart Count:  0
+    Limits:
+      cpu:     1
+      memory:  1000Mi
+    Requests:
+      cpu:     100m
+      memory:  100Mi
+    Environment:
+      POD_NAME:                   controller-65bcd69f-sfjlw (v1:metadata.name)
+      SYSTEM_NAMESPACE:           knative-serving (v1:metadata.namespace)
+      CONFIG_LOGGING_NAME:        config-logging
+      CONFIG_OBSERVABILITY_NAME:  config-observability
+      METRICS_DOMAIN:             knative.dev/internal/serving
+      SSL_CERT_DIR:               /custom-certs
+      HTTP_PROXY:                 
+      HTTPS_PROXY:                
+      NO_PROXY:                   
+    Mounts:
+      /custom-certs from custom-certs-config-service-ca (rw)
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-dpdbl (ro)
+Conditions:
+  Type              Status
+  Initialized       True 
+  Ready             True 
+  ContainersReady   True 
+  PodScheduled      True 
+Volumes:
+  custom-certs-config-service-ca:
+    Type:      ConfigMap (a volume populated by a ConfigMap)
+    Name:      config-service-ca
+    Optional:  false
+  kube-api-access-dpdbl:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    ConfigMapOptional:       <nil>
+    DownwardAPI:             true
+    ConfigMapName:           openshift-service-ca.crt
+    ConfigMapOptional:       <nil>
+QoS Class:                   Burstable
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/memory-pressure:NoSchedule op=Exists
+                             node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type    Reason          Age   From               Message
+  ----    ------          ----  ----               -------
+  Normal  Scheduled       15m   default-scheduler  Successfully assigned knative-serving/controller-65bcd69f-sfjlw to ci-ln-4zhdf4b-72292-lw57b-worker-a-z86r5
+  Normal  AddedInterface  15m   multus             Add eth0 [10.131.0.30/23] from ovn-kubernetes
+  Normal  Pulled          15m   kubelet            Container image "registry.redhat.io/openshift-serverless-1/serving-controller-rhel8@sha256:bbe6d81eb3ce97d961d686a077e49f69ea26f8fa9746c2f04c9e6cfd3100ac67" already present on machine
+  Normal  Created         15m   kubelet            Created container controller
+  Normal  Started         15m   kubelet            Started container controller
+
+
+Name:         domain-mapping-579474f678-rl2nb
+Namespace:    knative-serving
+Priority:     0
+Node:         ci-ln-4zhdf4b-72292-lw57b-worker-c-szhjg/10.0.128.4
+Start Time:   Fri, 03 Mar 2023 20:09:39 +0000
+Labels:       app=domain-mapping
+              app.kubernetes.io/component=domain-mapping
+              app.kubernetes.io/name=knative-serving
+              app.kubernetes.io/version=1.5.0
+              pod-template-hash=579474f678
+Annotations:  cluster-autoscaler.kubernetes.io/safe-to-evict: true
+              k8s.ovn.org/pod-networks:
+                {"default":{"ip_addresses":["10.129.2.31/23"],"mac_address":"0a:58:0a:81:02:1f","gateway_ips":["10.129.2.1"],"ip_address":"10.129.2.31/23"...
+              k8s.v1.cni.cncf.io/network-status:
+                [{
+                    "name": "ovn-kubernetes",
+                    "interface": "eth0",
+                    "ips": [
+                        "10.129.2.31"
+                    ],
+                    "mac": "0a:58:0a:81:02:1f",
+                    "default": true,
+                    "dns": {}
+                }]
+              k8s.v1.cni.cncf.io/networks-status:
+                [{
+                    "name": "ovn-kubernetes",
+                    "interface": "eth0",
+                    "ips": [
+                        "10.129.2.31"
+                    ],
+                    "mac": "0a:58:0a:81:02:1f",
+                    "default": true,
+                    "dns": {}
+                }]
+              openshift.io/scc: restricted-v2
+              seccomp.security.alpha.kubernetes.io/pod: runtime/default
+Status:       Running
+IP:           10.129.2.31
+IPs:
+  IP:           10.129.2.31
+Controlled By:  ReplicaSet/domain-mapping-579474f678
+Containers:
+  domain-mapping:
+    Container ID:   cri-o://f1aff10bb2588396271af23ad64b4ebea07c54b56e67da1cabd583a783c316dd
+    Image:          registry.redhat.io/openshift-serverless-1/serving-domain-mapping-rhel8@sha256:787657127dbde83cfcfd97c013743cafda13601af72546d3afd43e0492e0c280
+    Image ID:       registry.redhat.io/openshift-serverless-1/serving-domain-mapping-rhel8@sha256:787657127dbde83cfcfd97c013743cafda13601af72546d3afd43e0492e0c280
+    Ports:          9090/TCP, 8008/TCP
+    Host Ports:     0/TCP, 0/TCP
+    State:          Running
+      Started:      Fri, 03 Mar 2023 20:09:50 +0000
+    Ready:          True
+    Restart Count:  0
+    Limits:
+      cpu:     300m
+      memory:  400Mi
+    Requests:
+      cpu:     30m
+      memory:  40Mi
+    Environment:
+      SYSTEM_NAMESPACE:           knative-serving (v1:metadata.namespace)
+      CONFIG_LOGGING_NAME:        config-logging
+      CONFIG_OBSERVABILITY_NAME:  config-observability
+      METRICS_DOMAIN:             knative.dev/serving
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-scq4v (ro)
+Conditions:
+  Type              Status
+  Initialized       True 
+  Ready             True 
+  ContainersReady   True 
+  PodScheduled      True 
+Volumes:
+  kube-api-access-scq4v:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    ConfigMapOptional:       <nil>
+    DownwardAPI:             true
+    ConfigMapName:           openshift-service-ca.crt
+    ConfigMapOptional:       <nil>
+QoS Class:                   Burstable
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/memory-pressure:NoSchedule op=Exists
+                             node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type    Reason          Age   From               Message
+  ----    ------          ----  ----               -------
+  Normal  Scheduled       15m   default-scheduler  Successfully assigned knative-serving/domain-mapping-579474f678-rl2nb to ci-ln-4zhdf4b-72292-lw57b-worker-c-szhjg
+  Normal  AddedInterface  15m   multus             Add eth0 [10.129.2.31/23] from ovn-kubernetes
+  Normal  Pulling         15m   kubelet            Pulling image "registry.redhat.io/openshift-serverless-1/serving-domain-mapping-rhel8@sha256:787657127dbde83cfcfd97c013743cafda13601af72546d3afd43e0492e0c280"
+  Normal  Pulled          15m   kubelet            Successfully pulled image "registry.redhat.io/openshift-serverless-1/serving-domain-mapping-rhel8@sha256:787657127dbde83cfcfd97c013743cafda13601af72546d3afd43e0492e0c280" in 7.681559509s
+  Normal  Created         15m   kubelet            Created container domain-mapping
+  Normal  Started         15m   kubelet            Started container domain-mapping
+
+
+Name:         domain-mapping-579474f678-vl9bc
+Namespace:    knative-serving
+Priority:     0
+Node:         ci-ln-4zhdf4b-72292-lw57b-worker-a-z86r5/10.0.128.2
+Start Time:   Fri, 03 Mar 2023 20:09:39 +0000
+Labels:       app=domain-mapping
+              app.kubernetes.io/component=domain-mapping
+              app.kubernetes.io/name=knative-serving
+              app.kubernetes.io/version=1.5.0
+              pod-template-hash=579474f678
+Annotations:  cluster-autoscaler.kubernetes.io/safe-to-evict: true
+              k8s.ovn.org/pod-networks:
+                {"default":{"ip_addresses":["10.131.0.26/23"],"mac_address":"0a:58:0a:83:00:1a","gateway_ips":["10.131.0.1"],"ip_address":"10.131.0.26/23"...
+              k8s.v1.cni.cncf.io/network-status:
+                [{
+                    "name": "ovn-kubernetes",
+                    "interface": "eth0",
+                    "ips": [
+                        "10.131.0.26"
+                    ],
+                    "mac": "0a:58:0a:83:00:1a",
+                    "default": true,
+                    "dns": {}
+                }]
+              k8s.v1.cni.cncf.io/networks-status:
+                [{
+                    "name": "ovn-kubernetes",
+                    "interface": "eth0",
+                    "ips": [
+                        "10.131.0.26"
+                    ],
+                    "mac": "0a:58:0a:83:00:1a",
+                    "default": true,
+                    "dns": {}
+                }]
+              openshift.io/scc: restricted-v2
+              seccomp.security.alpha.kubernetes.io/pod: runtime/default
+Status:       Running
+IP:           10.131.0.26
+IPs:
+  IP:           10.131.0.26
+Controlled By:  ReplicaSet/domain-mapping-579474f678
+Containers:
+  domain-mapping:
+    Container ID:   cri-o://e4cecad2e5dca86a0e78e165ab42fd97637b070a2bf03acf06b4f7cf6e8e522d
+    Image:          registry.redhat.io/openshift-serverless-1/serving-domain-mapping-rhel8@sha256:787657127dbde83cfcfd97c013743cafda13601af72546d3afd43e0492e0c280
+    Image ID:       registry.redhat.io/openshift-serverless-1/serving-domain-mapping-rhel8@sha256:787657127dbde83cfcfd97c013743cafda13601af72546d3afd43e0492e0c280
+    Ports:          9090/TCP, 8008/TCP
+    Host Ports:     0/TCP, 0/TCP
+    State:          Running
+      Started:      Fri, 03 Mar 2023 20:09:59 +0000
+    Ready:          True
+    Restart Count:  0
+    Limits:
+      cpu:     300m
+      memory:  400Mi
+    Requests:
+      cpu:     30m
+      memory:  40Mi
+    Environment:
+      SYSTEM_NAMESPACE:           knative-serving (v1:metadata.namespace)
+      CONFIG_LOGGING_NAME:        config-logging
+      CONFIG_OBSERVABILITY_NAME:  config-observability
+      METRICS_DOMAIN:             knative.dev/serving
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-t9j8n (ro)
+Conditions:
+  Type              Status
+  Initialized       True 
+  Ready             True 
+  ContainersReady   True 
+  PodScheduled      True 
+Volumes:
+  kube-api-access-t9j8n:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    ConfigMapOptional:       <nil>
+    DownwardAPI:             true
+    ConfigMapName:           openshift-service-ca.crt
+    ConfigMapOptional:       <nil>
+QoS Class:                   Burstable
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/memory-pressure:NoSchedule op=Exists
+                             node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type    Reason          Age   From               Message
+  ----    ------          ----  ----               -------
+  Normal  Scheduled       15m   default-scheduler  Successfully assigned knative-serving/domain-mapping-579474f678-vl9bc to ci-ln-4zhdf4b-72292-lw57b-worker-a-z86r5
+  Normal  AddedInterface  15m   multus             Add eth0 [10.131.0.26/23] from ovn-kubernetes
+  Normal  Pulling         15m   kubelet            Pulling image "registry.redhat.io/openshift-serverless-1/serving-domain-mapping-rhel8@sha256:787657127dbde83cfcfd97c013743cafda13601af72546d3afd43e0492e0c280"
+  Normal  Pulled          14m   kubelet            Successfully pulled image "registry.redhat.io/openshift-serverless-1/serving-domain-mapping-rhel8@sha256:787657127dbde83cfcfd97c013743cafda13601af72546d3afd43e0492e0c280" in 17.897843256s
+  Normal  Created         14m   kubelet            Created container domain-mapping
+  Normal  Started         14m   kubelet            Started container domain-mapping
+
+
+Name:         domainmapping-webhook-79986f7545-mrbqk
+Namespace:    knative-serving
+Priority:     0
+Node:         ci-ln-4zhdf4b-72292-lw57b-worker-b-wtt2s/10.0.128.3
+Start Time:   Fri, 03 Mar 2023 20:09:40 +0000
+Labels:       app=domainmapping-webhook
+              app.kubernetes.io/component=domain-mapping
+              app.kubernetes.io/name=knative-serving
+              app.kubernetes.io/version=1.5.0
+              pod-template-hash=79986f7545
+              role=domainmapping-webhook
+Annotations:  cluster-autoscaler.kubernetes.io/safe-to-evict: false
+              k8s.ovn.org/pod-networks:
+                {"default":{"ip_addresses":["10.128.2.23/23"],"mac_address":"0a:58:0a:80:02:17","gateway_ips":["10.128.2.1"],"ip_address":"10.128.2.23/23"...
+              k8s.v1.cni.cncf.io/network-status:
+                [{
+                    "name": "ovn-kubernetes",
+                    "interface": "eth0",
+                    "ips": [
+                        "10.128.2.23"
+                    ],
+                    "mac": "0a:58:0a:80:02:17",
+                    "default": true,
+                    "dns": {}
+                }]
+              k8s.v1.cni.cncf.io/networks-status:
+                [{
+                    "name": "ovn-kubernetes",
+                    "interface": "eth0",
+                    "ips": [
+                        "10.128.2.23"
+                    ],
+                    "mac": "0a:58:0a:80:02:17",
+                    "default": true,
+                    "dns": {}
+                }]
+              openshift.io/scc: restricted-v2
+              seccomp.security.alpha.kubernetes.io/pod: runtime/default
+Status:       Running
+IP:           10.128.2.23
+IPs:
+  IP:           10.128.2.23
+Controlled By:  ReplicaSet/domainmapping-webhook-79986f7545
+Containers:
+  domainmapping-webhook:
+    Container ID:   cri-o://0c5d5875be743d4d6aa120962c21c7d48472316786f211e6f702ee9bfe4d8d74
+    Image:          registry.redhat.io/openshift-serverless-1/serving-domain-mapping-webhook-rhel8@sha256:b8e97763348ac558178247c67c7fd8e84f0e6ddd5d324f3a6927d1436b85c3f7
+    Image ID:       registry.redhat.io/openshift-serverless-1/serving-domain-mapping-webhook-rhel8@sha256:3ae6388545eee2882f20cb2db083b966ea24c4312667d6f35ef9f16a83f73c64
+    Ports:          9090/TCP, 8008/TCP, 8443/TCP
+    Host Ports:     0/TCP, 0/TCP, 0/TCP
+    State:          Running
+      Started:      Fri, 03 Mar 2023 20:09:53 +0000
+    Ready:          True
+    Restart Count:  0
+    Limits:
+      cpu:     500m
+      memory:  500Mi
+    Requests:
+      cpu:      100m
+      memory:   100Mi
+    Liveness:   http-get https://:8443/ delay=20s timeout=1s period=1s #success=1 #failure=6
+    Readiness:  http-get https://:8443/ delay=0s timeout=1s period=1s #success=1 #failure=3
+    Environment:
+      POD_NAME:                   domainmapping-webhook-79986f7545-mrbqk (v1:metadata.name)
+      SYSTEM_NAMESPACE:           knative-serving (v1:metadata.namespace)
+      CONFIG_LOGGING_NAME:        config-logging
+      CONFIG_OBSERVABILITY_NAME:  config-observability
+      WEBHOOK_PORT:               8443
+      METRICS_DOMAIN:             knative.dev/serving
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-k5zm8 (ro)
+Conditions:
+  Type              Status
+  Initialized       True 
+  Ready             True 
+  ContainersReady   True 
+  PodScheduled      True 
+Volumes:
+  kube-api-access-k5zm8:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    ConfigMapOptional:       <nil>
+    DownwardAPI:             true
+    ConfigMapName:           openshift-service-ca.crt
+    ConfigMapOptional:       <nil>
+QoS Class:                   Burstable
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/memory-pressure:NoSchedule op=Exists
+                             node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type    Reason          Age   From               Message
+  ----    ------          ----  ----               -------
+  Normal  Scheduled       15m   default-scheduler  Successfully assigned knative-serving/domainmapping-webhook-79986f7545-mrbqk to ci-ln-4zhdf4b-72292-lw57b-worker-b-wtt2s
+  Normal  AddedInterface  15m   multus             Add eth0 [10.128.2.23/23] from ovn-kubernetes
+  Normal  Pulling         15m   kubelet            Pulling image "registry.redhat.io/openshift-serverless-1/serving-domain-mapping-webhook-rhel8@sha256:b8e97763348ac558178247c67c7fd8e84f0e6ddd5d324f3a6927d1436b85c3f7"
+  Normal  Pulled          15m   kubelet            Successfully pulled image "registry.redhat.io/openshift-serverless-1/serving-domain-mapping-webhook-rhel8@sha256:b8e97763348ac558178247c67c7fd8e84f0e6ddd5d324f3a6927d1436b85c3f7" in 11.758651238s
+  Normal  Created         15m   kubelet            Created container domainmapping-webhook
+  Normal  Started         15m   kubelet            Started container domainmapping-webhook
+
+
+Name:         domainmapping-webhook-79986f7545-qkpcv
+Namespace:    knative-serving
+Priority:     0
+Node:         ci-ln-4zhdf4b-72292-lw57b-worker-c-szhjg/10.0.128.4
+Start Time:   Fri, 03 Mar 2023 20:09:39 +0000
+Labels:       app=domainmapping-webhook
+              app.kubernetes.io/component=domain-mapping
+              app.kubernetes.io/name=knative-serving
+              app.kubernetes.io/version=1.5.0
+              pod-template-hash=79986f7545
+              role=domainmapping-webhook
+Annotations:  cluster-autoscaler.kubernetes.io/safe-to-evict: false
+              k8s.ovn.org/pod-networks:
+                {"default":{"ip_addresses":["10.129.2.32/23"],"mac_address":"0a:58:0a:81:02:20","gateway_ips":["10.129.2.1"],"ip_address":"10.129.2.32/23"...
+              k8s.v1.cni.cncf.io/network-status:
+                [{
+                    "name": "ovn-kubernetes",
+                    "interface": "eth0",
+                    "ips": [
+                        "10.129.2.32"
+                    ],
+                    "mac": "0a:58:0a:81:02:20",
+                    "default": true,
+                    "dns": {}
+                }]
+              k8s.v1.cni.cncf.io/networks-status:
+                [{
+                    "name": "ovn-kubernetes",
+                    "interface": "eth0",
+                    "ips": [
+                        "10.129.2.32"
+                    ],
+                    "mac": "0a:58:0a:81:02:20",
+                    "default": true,
+                    "dns": {}
+                }]
+              openshift.io/scc: restricted-v2
+              seccomp.security.alpha.kubernetes.io/pod: runtime/default
+Status:       Running
+IP:           10.129.2.32
+IPs:
+  IP:           10.129.2.32
+Controlled By:  ReplicaSet/domainmapping-webhook-79986f7545
+Containers:
+  domainmapping-webhook:
+    Container ID:   cri-o://944dd21009f779a6cb3ea32a5ac669444afb99bffbc508985b74238fd487197e
+    Image:          registry.redhat.io/openshift-serverless-1/serving-domain-mapping-webhook-rhel8@sha256:b8e97763348ac558178247c67c7fd8e84f0e6ddd5d324f3a6927d1436b85c3f7
+    Image ID:       registry.redhat.io/openshift-serverless-1/serving-domain-mapping-webhook-rhel8@sha256:3ae6388545eee2882f20cb2db083b966ea24c4312667d6f35ef9f16a83f73c64
+    Ports:          9090/TCP, 8008/TCP, 8443/TCP
+    Host Ports:     0/TCP, 0/TCP, 0/TCP
+    State:          Running
+      Started:      Fri, 03 Mar 2023 20:09:56 +0000
+    Ready:          True
+    Restart Count:  0
+    Limits:
+      cpu:     500m
+      memory:  500Mi
+    Requests:
+      cpu:      100m
+      memory:   100Mi
+    Liveness:   http-get https://:8443/ delay=20s timeout=1s period=1s #success=1 #failure=6
+    Readiness:  http-get https://:8443/ delay=0s timeout=1s period=1s #success=1 #failure=3
+    Environment:
+      POD_NAME:                   domainmapping-webhook-79986f7545-qkpcv (v1:metadata.name)
+      SYSTEM_NAMESPACE:           knative-serving (v1:metadata.namespace)
+      CONFIG_LOGGING_NAME:        config-logging
+      CONFIG_OBSERVABILITY_NAME:  config-observability
+      WEBHOOK_PORT:               8443
+      METRICS_DOMAIN:             knative.dev/serving
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-57hnd (ro)
+Conditions:
+  Type              Status
+  Initialized       True 
+  Ready             True 
+  ContainersReady   True 
+  PodScheduled      True 
+Volumes:
+  kube-api-access-57hnd:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    ConfigMapOptional:       <nil>
+    DownwardAPI:             true
+    ConfigMapName:           openshift-service-ca.crt
+    ConfigMapOptional:       <nil>
+QoS Class:                   Burstable
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/memory-pressure:NoSchedule op=Exists
+                             node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type     Reason          Age   From               Message
+  ----     ------          ----  ----               -------
+  Normal   Scheduled       15m   default-scheduler  Successfully assigned knative-serving/domainmapping-webhook-79986f7545-qkpcv to ci-ln-4zhdf4b-72292-lw57b-worker-c-szhjg
+  Normal   AddedInterface  15m   multus             Add eth0 [10.129.2.32/23] from ovn-kubernetes
+  Normal   Pulling         15m   kubelet            Pulling image "registry.redhat.io/openshift-serverless-1/serving-domain-mapping-webhook-rhel8@sha256:b8e97763348ac558178247c67c7fd8e84f0e6ddd5d324f3a6927d1436b85c3f7"
+  Normal   Pulled          15m   kubelet            Successfully pulled image "registry.redhat.io/openshift-serverless-1/serving-domain-mapping-webhook-rhel8@sha256:b8e97763348ac558178247c67c7fd8e84f0e6ddd5d324f3a6927d1436b85c3f7" in 13.862859221s
+  Normal   Created         15m   kubelet            Created container domainmapping-webhook
+  Normal   Started         15m   kubelet            Started container domainmapping-webhook
+  Warning  Unhealthy       15m   kubelet            Readiness probe failed: Get "https://10.129.2.32:8443/": dial tcp 10.129.2.32:8443: connect: connection refused
+
+
+Name:         net-istio-controller-65dd6945cc-h59zp
+Namespace:    knative-serving
+Priority:     0
+Node:         ci-ln-4zhdf4b-72292-lw57b-worker-c-szhjg/10.0.128.4
+Start Time:   Fri, 03 Mar 2023 20:09:42 +0000
+Labels:       app=net-istio-controller
+              app.kubernetes.io/component=net-istio
+              app.kubernetes.io/name=knative-serving
+              app.kubernetes.io/version=devel
+              pod-template-hash=65dd6945cc
+Annotations:  cluster-autoscaler.kubernetes.io/safe-to-evict: true
+              k8s.ovn.org/pod-networks:
+                {"default":{"ip_addresses":["10.129.2.36/23"],"mac_address":"0a:58:0a:81:02:24","gateway_ips":["10.129.2.1"],"ip_address":"10.129.2.36/23"...
+              k8s.v1.cni.cncf.io/network-status:
+                [{
+                    "name": "ovn-kubernetes",
+                    "interface": "eth0",
+                    "ips": [
+                        "10.129.2.36"
+                    ],
+                    "mac": "0a:58:0a:81:02:24",
+                    "default": true,
+                    "dns": {}
+                }]
+              k8s.v1.cni.cncf.io/networks-status:
+                [{
+                    "name": "ovn-kubernetes",
+                    "interface": "eth0",
+                    "ips": [
+                        "10.129.2.36"
+                    ],
+                    "mac": "0a:58:0a:81:02:24",
+                    "default": true,
+                    "dns": {}
+                }]
+              openshift.io/scc: restricted-v2
+              seccomp.security.alpha.kubernetes.io/pod: runtime/default
+              sidecar.istio.io/inject: false
+Status:       Running
+IP:           10.129.2.36
+IPs:
+  IP:           10.129.2.36
+Controlled By:  ReplicaSet/net-istio-controller-65dd6945cc
+Containers:
+  controller:
+    Container ID:   cri-o://92857987c3ca3e66dc9bcc6c09ce18ad441f76ab5021e9a52efa10969c923953
+    Image:          registry.redhat.io/openshift-serverless-1/net-istio-controller-rhel8@sha256:6509429d95956bac73bd2531b262136bc121780aa245200f986b3437f061cb93
+    Image ID:       registry.redhat.io/openshift-serverless-1/net-istio-controller-rhel8@sha256:0d33d73301b0696f8c5d510ca9bec1402ae71f2bc2bfa2af7dc532a106d82829
+    Ports:          9090/TCP, 8008/TCP
+    Host Ports:     0/TCP, 0/TCP
+    State:          Running
+      Started:      Fri, 03 Mar 2023 20:09:56 +0000
+    Ready:          True
+    Restart Count:  0
+    Limits:
+      cpu:     300m
+      memory:  400Mi
+    Requests:
+      cpu:     30m
+      memory:  40Mi
+    Environment:
+      SYSTEM_NAMESPACE:                              knative-serving (v1:metadata.namespace)
+      CONFIG_LOGGING_NAME:                           config-logging
+      CONFIG_OBSERVABILITY_NAME:                     config-observability
+      ENABLE_SECRET_INFORMER_FILTERING_BY_CERT_UID:  false
+      METRICS_DOMAIN:                                knative.dev/net-istio
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-tmpsd (ro)
+Conditions:
+  Type              Status
+  Initialized       True 
+  Ready             True 
+  ContainersReady   True 
+  PodScheduled      True 
+Volumes:
+  kube-api-access-tmpsd:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    ConfigMapOptional:       <nil>
+    DownwardAPI:             true
+    ConfigMapName:           openshift-service-ca.crt
+    ConfigMapOptional:       <nil>
+QoS Class:                   Burstable
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/memory-pressure:NoSchedule op=Exists
+                             node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type    Reason          Age   From               Message
+  ----    ------          ----  ----               -------
+  Normal  Scheduled       15m   default-scheduler  Successfully assigned knative-serving/net-istio-controller-65dd6945cc-h59zp to ci-ln-4zhdf4b-72292-lw57b-worker-c-szhjg
+  Normal  AddedInterface  15m   multus             Add eth0 [10.129.2.36/23] from ovn-kubernetes
+  Normal  Pulling         15m   kubelet            Pulling image "registry.redhat.io/openshift-serverless-1/net-istio-controller-rhel8@sha256:6509429d95956bac73bd2531b262136bc121780aa245200f986b3437f061cb93"
+  Normal  Pulled          15m   kubelet            Successfully pulled image "registry.redhat.io/openshift-serverless-1/net-istio-controller-rhel8@sha256:6509429d95956bac73bd2531b262136bc121780aa245200f986b3437f061cb93" in 11.8080593s
+  Normal  Created         15m   kubelet            Created container controller
+  Normal  Started         15m   kubelet            Started container controller
+
+
+Name:         net-istio-controller-65dd6945cc-rsx42
+Namespace:    knative-serving
+Priority:     0
+Node:         ci-ln-4zhdf4b-72292-lw57b-worker-a-z86r5/10.0.128.2
+Start Time:   Fri, 03 Mar 2023 20:09:41 +0000
+Labels:       app=net-istio-controller
+              app.kubernetes.io/component=net-istio
+              app.kubernetes.io/name=knative-serving
+              app.kubernetes.io/version=devel
+              pod-template-hash=65dd6945cc
+Annotations:  cluster-autoscaler.kubernetes.io/safe-to-evict: true
+              k8s.ovn.org/pod-networks:
+                {"default":{"ip_addresses":["10.131.0.28/23"],"mac_address":"0a:58:0a:83:00:1c","gateway_ips":["10.131.0.1"],"ip_address":"10.131.0.28/23"...
+              k8s.v1.cni.cncf.io/network-status:
+                [{
+                    "name": "ovn-kubernetes",
+                    "interface": "eth0",
+                    "ips": [
+                        "10.131.0.28"
+                    ],
+                    "mac": "0a:58:0a:83:00:1c",
+                    "default": true,
+                    "dns": {}
+                }]
+              k8s.v1.cni.cncf.io/networks-status:
+                [{
+                    "name": "ovn-kubernetes",
+                    "interface": "eth0",
+                    "ips": [
+                        "10.131.0.28"
+                    ],
+                    "mac": "0a:58:0a:83:00:1c",
+                    "default": true,
+                    "dns": {}
+                }]
+              openshift.io/scc: restricted-v2
+              seccomp.security.alpha.kubernetes.io/pod: runtime/default
+              sidecar.istio.io/inject: false
+Status:       Running
+IP:           10.131.0.28
+IPs:
+  IP:           10.131.0.28
+Controlled By:  ReplicaSet/net-istio-controller-65dd6945cc
+Containers:
+  controller:
+    Container ID:   cri-o://c2cce0d03ff90c1c03967640e4da959d559e1bb4f58f819998e900b7382596cf
+    Image:          registry.redhat.io/openshift-serverless-1/net-istio-controller-rhel8@sha256:6509429d95956bac73bd2531b262136bc121780aa245200f986b3437f061cb93
+    Image ID:       registry.redhat.io/openshift-serverless-1/net-istio-controller-rhel8@sha256:0d33d73301b0696f8c5d510ca9bec1402ae71f2bc2bfa2af7dc532a106d82829
+    Ports:          9090/TCP, 8008/TCP
+    Host Ports:     0/TCP, 0/TCP
+    State:          Running
+      Started:      Fri, 03 Mar 2023 20:09:59 +0000
+    Ready:          True
+    Restart Count:  0
+    Limits:
+      cpu:     300m
+      memory:  400Mi
+    Requests:
+      cpu:     30m
+      memory:  40Mi
+    Environment:
+      SYSTEM_NAMESPACE:                              knative-serving (v1:metadata.namespace)
+      CONFIG_LOGGING_NAME:                           config-logging
+      CONFIG_OBSERVABILITY_NAME:                     config-observability
+      ENABLE_SECRET_INFORMER_FILTERING_BY_CERT_UID:  false
+      METRICS_DOMAIN:                                knative.dev/net-istio
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-qhh6f (ro)
+Conditions:
+  Type              Status
+  Initialized       True 
+  Ready             True 
+  ContainersReady   True 
+  PodScheduled      True 
+Volumes:
+  kube-api-access-qhh6f:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    ConfigMapOptional:       <nil>
+    DownwardAPI:             true
+    ConfigMapName:           openshift-service-ca.crt
+    ConfigMapOptional:       <nil>
+QoS Class:                   Burstable
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/memory-pressure:NoSchedule op=Exists
+                             node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type    Reason          Age   From               Message
+  ----    ------          ----  ----               -------
+  Normal  Scheduled       15m   default-scheduler  Successfully assigned knative-serving/net-istio-controller-65dd6945cc-rsx42 to ci-ln-4zhdf4b-72292-lw57b-worker-a-z86r5
+  Normal  AddedInterface  15m   multus             Add eth0 [10.131.0.28/23] from ovn-kubernetes
+  Normal  Pulling         15m   kubelet            Pulling image "registry.redhat.io/openshift-serverless-1/net-istio-controller-rhel8@sha256:6509429d95956bac73bd2531b262136bc121780aa245200f986b3437f061cb93"
+  Normal  Pulled          14m   kubelet            Successfully pulled image "registry.redhat.io/openshift-serverless-1/net-istio-controller-rhel8@sha256:6509429d95956bac73bd2531b262136bc121780aa245200f986b3437f061cb93" in 15.49511394s
+  Normal  Created         14m   kubelet            Created container controller
+  Normal  Started         14m   kubelet            Started container controller
+
+
+Name:         net-istio-webhook-5784f45744-7rnhq
+Namespace:    knative-serving
+Priority:     0
+Node:         ci-ln-4zhdf4b-72292-lw57b-worker-c-szhjg/10.0.128.4
+Start Time:   Fri, 03 Mar 2023 20:09:42 +0000
+Labels:       app=net-istio-webhook
+              app.kubernetes.io/component=net-istio
+              app.kubernetes.io/name=knative-serving
+              app.kubernetes.io/version=devel
+              pod-template-hash=5784f45744
+              role=net-istio-webhook
+Annotations:  cluster-autoscaler.kubernetes.io/safe-to-evict: false
+              k8s.ovn.org/pod-networks:
+                {"default":{"ip_addresses":["10.129.2.37/23"],"mac_address":"0a:58:0a:81:02:25","gateway_ips":["10.129.2.1"],"ip_address":"10.129.2.37/23"...
+              k8s.v1.cni.cncf.io/network-status:
+                [{
+                    "name": "ovn-kubernetes",
+                    "interface": "eth0",
+                    "ips": [
+                        "10.129.2.37"
+                    ],
+                    "mac": "0a:58:0a:81:02:25",
+                    "default": true,
+                    "dns": {}
+                }]
+              k8s.v1.cni.cncf.io/networks-status:
+                [{
+                    "name": "ovn-kubernetes",
+                    "interface": "eth0",
+                    "ips": [
+                        "10.129.2.37"
+                    ],
+                    "mac": "0a:58:0a:81:02:25",
+                    "default": true,
+                    "dns": {}
+                }]
+              openshift.io/scc: restricted-v2
+              seccomp.security.alpha.kubernetes.io/pod: runtime/default
+Status:       Running
+IP:           10.129.2.37
+IPs:
+  IP:           10.129.2.37
+Controlled By:  ReplicaSet/net-istio-webhook-5784f45744
+Containers:
+  webhook:
+    Container ID:   cri-o://33f264de4e31fa06c0f0d618b4c6ba04b63547ca86a9b7c4a4854194ab314804
+    Image:          registry.redhat.io/openshift-serverless-1/net-istio-webhook-rhel8@sha256:c317e8815afc35c8e8a800bd1c9a127126359b954beddf54a196db66c7f1a8f3
+    Image ID:       registry.redhat.io/openshift-serverless-1/net-istio-webhook-rhel8@sha256:729d6e4a11c727107df48845c44da3122f33c719635c608cccb188ebc02dfddf
+    Ports:          9090/TCP, 8008/TCP, 8443/TCP
+    Host Ports:     0/TCP, 0/TCP, 0/TCP
+    State:          Running
+      Started:      Fri, 03 Mar 2023 20:09:57 +0000
+    Ready:          True
+    Restart Count:  0
+    Limits:
+      cpu:     200m
+      memory:  1Gi
+    Requests:
+      cpu:     20m
+      memory:  20Mi
+    Environment:
+      SYSTEM_NAMESPACE:           knative-serving (v1:metadata.namespace)
+      CONFIG_LOGGING_NAME:        config-logging
+      CONFIG_OBSERVABILITY_NAME:  config-observability
+      METRICS_DOMAIN:             knative.dev/net-istio
+      WEBHOOK_NAME:               net-istio-webhook
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-spff6 (ro)
+Conditions:
+  Type              Status
+  Initialized       True 
+  Ready             True 
+  ContainersReady   True 
+  PodScheduled      True 
+Volumes:
+  kube-api-access-spff6:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    ConfigMapOptional:       <nil>
+    DownwardAPI:             true
+    ConfigMapName:           openshift-service-ca.crt
+    ConfigMapOptional:       <nil>
+QoS Class:                   Burstable
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/memory-pressure:NoSchedule op=Exists
+                             node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type    Reason          Age   From               Message
+  ----    ------          ----  ----               -------
+  Normal  Scheduled       15m   default-scheduler  Successfully assigned knative-serving/net-istio-webhook-5784f45744-7rnhq to ci-ln-4zhdf4b-72292-lw57b-worker-c-szhjg
+  Normal  AddedInterface  15m   multus             Add eth0 [10.129.2.37/23] from ovn-kubernetes
+  Normal  Pulling         15m   kubelet            Pulling image "registry.redhat.io/openshift-serverless-1/net-istio-webhook-rhel8@sha256:c317e8815afc35c8e8a800bd1c9a127126359b954beddf54a196db66c7f1a8f3"
+  Normal  Pulled          15m   kubelet            Successfully pulled image "registry.redhat.io/openshift-serverless-1/net-istio-webhook-rhel8@sha256:c317e8815afc35c8e8a800bd1c9a127126359b954beddf54a196db66c7f1a8f3" in 11.827862502s
+  Normal  Created         15m   kubelet            Created container webhook
+  Normal  Started         15m   kubelet            Started container webhook
+
+
+Name:         net-istio-webhook-5784f45744-lt4zd
+Namespace:    knative-serving
+Priority:     0
+Node:         ci-ln-4zhdf4b-72292-lw57b-worker-a-z86r5/10.0.128.2
+Start Time:   Fri, 03 Mar 2023 20:09:42 +0000
+Labels:       app=net-istio-webhook
+              app.kubernetes.io/component=net-istio
+              app.kubernetes.io/name=knative-serving
+              app.kubernetes.io/version=devel
+              pod-template-hash=5784f45744
+              role=net-istio-webhook
+Annotations:  cluster-autoscaler.kubernetes.io/safe-to-evict: false
+              k8s.ovn.org/pod-networks:
+                {"default":{"ip_addresses":["10.131.0.29/23"],"mac_address":"0a:58:0a:83:00:1d","gateway_ips":["10.131.0.1"],"ip_address":"10.131.0.29/23"...
+              k8s.v1.cni.cncf.io/network-status:
+                [{
+                    "name": "ovn-kubernetes",
+                    "interface": "eth0",
+                    "ips": [
+                        "10.131.0.29"
+                    ],
+                    "mac": "0a:58:0a:83:00:1d",
+                    "default": true,
+                    "dns": {}
+                }]
+              k8s.v1.cni.cncf.io/networks-status:
+                [{
+                    "name": "ovn-kubernetes",
+                    "interface": "eth0",
+                    "ips": [
+                        "10.131.0.29"
+                    ],
+                    "mac": "0a:58:0a:83:00:1d",
+                    "default": true,
+                    "dns": {}
+                }]
+              openshift.io/scc: restricted-v2
+              seccomp.security.alpha.kubernetes.io/pod: runtime/default
+Status:       Running
+IP:           10.131.0.29
+IPs:
+  IP:           10.131.0.29
+Controlled By:  ReplicaSet/net-istio-webhook-5784f45744
+Containers:
+  webhook:
+    Container ID:   cri-o://ff86406f1e4b42a6f9deb1ebbaffedc3eadeeee64adbfafc713db65398e4ea22
+    Image:          registry.redhat.io/openshift-serverless-1/net-istio-webhook-rhel8@sha256:c317e8815afc35c8e8a800bd1c9a127126359b954beddf54a196db66c7f1a8f3
+    Image ID:       registry.redhat.io/openshift-serverless-1/net-istio-webhook-rhel8@sha256:729d6e4a11c727107df48845c44da3122f33c719635c608cccb188ebc02dfddf
+    Ports:          9090/TCP, 8008/TCP, 8443/TCP
+    Host Ports:     0/TCP, 0/TCP, 0/TCP
+    State:          Running
+      Started:      Fri, 03 Mar 2023 20:09:59 +0000
+    Ready:          True
+    Restart Count:  0
+    Limits:
+      cpu:     200m
+      memory:  1Gi
+    Requests:
+      cpu:     20m
+      memory:  20Mi
+    Environment:
+      SYSTEM_NAMESPACE:           knative-serving (v1:metadata.namespace)
+      CONFIG_LOGGING_NAME:        config-logging
+      CONFIG_OBSERVABILITY_NAME:  config-observability
+      METRICS_DOMAIN:             knative.dev/net-istio
+      WEBHOOK_NAME:               net-istio-webhook
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-vvdbs (ro)
+Conditions:
+  Type              Status
+  Initialized       True 
+  Ready             True 
+  ContainersReady   True 
+  PodScheduled      True 
+Volumes:
+  kube-api-access-vvdbs:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    ConfigMapOptional:       <nil>
+    DownwardAPI:             true
+    ConfigMapName:           openshift-service-ca.crt
+    ConfigMapOptional:       <nil>
+QoS Class:                   Burstable
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/memory-pressure:NoSchedule op=Exists
+                             node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type    Reason          Age   From               Message
+  ----    ------          ----  ----               -------
+  Normal  Scheduled       15m   default-scheduler  Successfully assigned knative-serving/net-istio-webhook-5784f45744-lt4zd to ci-ln-4zhdf4b-72292-lw57b-worker-a-z86r5
+  Normal  AddedInterface  15m   multus             Add eth0 [10.131.0.29/23] from ovn-kubernetes
+  Normal  Pulling         15m   kubelet            Pulling image "registry.redhat.io/openshift-serverless-1/net-istio-webhook-rhel8@sha256:c317e8815afc35c8e8a800bd1c9a127126359b954beddf54a196db66c7f1a8f3"
+  Normal  Pulled          14m   kubelet            Successfully pulled image "registry.redhat.io/openshift-serverless-1/net-istio-webhook-rhel8@sha256:c317e8815afc35c8e8a800bd1c9a127126359b954beddf54a196db66c7f1a8f3" in 15.090949847s
+  Normal  Created         14m   kubelet            Created container webhook
+  Normal  Started         14m   kubelet            Started container webhook
+
+
+Name:         webhook-778d5987b7-dvxnm
+Namespace:    knative-serving
+Priority:     0
+Node:         ci-ln-4zhdf4b-72292-lw57b-worker-c-szhjg/10.0.128.4
+Start Time:   Fri, 03 Mar 2023 20:09:40 +0000
+Labels:       app=webhook
+              app.kubernetes.io/name=knative-serving
+              app.kubernetes.io/version=1.5.0
+              pod-template-hash=778d5987b7
+              role=webhook
+Annotations:  cluster-autoscaler.kubernetes.io/safe-to-evict: false
+              k8s.ovn.org/pod-networks:
+                {"default":{"ip_addresses":["10.129.2.33/23"],"mac_address":"0a:58:0a:81:02:21","gateway_ips":["10.129.2.1"],"ip_address":"10.129.2.33/23"...
+              k8s.v1.cni.cncf.io/network-status:
+                [{
+                    "name": "ovn-kubernetes",
+                    "interface": "eth0",
+                    "ips": [
+                        "10.129.2.33"
+                    ],
+                    "mac": "0a:58:0a:81:02:21",
+                    "default": true,
+                    "dns": {}
+                }]
+              k8s.v1.cni.cncf.io/networks-status:
+                [{
+                    "name": "ovn-kubernetes",
+                    "interface": "eth0",
+                    "ips": [
+                        "10.129.2.33"
+                    ],
+                    "mac": "0a:58:0a:81:02:21",
+                    "default": true,
+                    "dns": {}
+                }]
+              openshift.io/scc: restricted-v2
+              seccomp.security.alpha.kubernetes.io/pod: runtime/default
+Status:       Running
+IP:           10.129.2.33
+IPs:
+  IP:           10.129.2.33
+Controlled By:  ReplicaSet/webhook-778d5987b7
+Containers:
+  webhook:
+    Container ID:   cri-o://dd013102c16a8a14711b1a4392e7224c36eb2e5c0bf38cd5a3cbb85fe3b012a3
+    Image:          registry.redhat.io/openshift-serverless-1/serving-webhook-rhel8@sha256:d619de7f9a0c63905a6073f9a508082084be1930ee110afc274438ad949af499
+    Image ID:       registry.redhat.io/openshift-serverless-1/serving-webhook-rhel8@sha256:9e19e287b29807388ab1893a169334ea242e0443b70fd499dd42b2da7d93fb75
+    Ports:          9090/TCP, 8008/TCP, 8443/TCP
+    Host Ports:     0/TCP, 0/TCP, 0/TCP
+    State:          Running
+      Started:      Fri, 03 Mar 2023 20:09:56 +0000
+    Ready:          True
+    Restart Count:  0
+    Limits:
+      cpu:     500m
+      memory:  1Gi
+    Requests:
+      cpu:      100m
+      memory:   100Mi
+    Liveness:   http-get https://:8443/ delay=20s timeout=1s period=1s #success=1 #failure=6
+    Readiness:  http-get https://:8443/ delay=0s timeout=1s period=1s #success=1 #failure=3
+    Environment:
+      POD_NAME:                   webhook-778d5987b7-dvxnm (v1:metadata.name)
+      SYSTEM_NAMESPACE:           knative-serving (v1:metadata.namespace)
+      CONFIG_LOGGING_NAME:        config-logging
+      CONFIG_OBSERVABILITY_NAME:  config-observability
+      WEBHOOK_NAME:               webhook
+      WEBHOOK_PORT:               8443
+      METRICS_DOMAIN:             knative.dev/internal/serving
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-5gp88 (ro)
+Conditions:
+  Type              Status
+  Initialized       True 
+  Ready             True 
+  ContainersReady   True 
+  PodScheduled      True 
+Volumes:
+  kube-api-access-5gp88:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    ConfigMapOptional:       <nil>
+    DownwardAPI:             true
+    ConfigMapName:           openshift-service-ca.crt
+    ConfigMapOptional:       <nil>
+QoS Class:                   Burstable
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/memory-pressure:NoSchedule op=Exists
+                             node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type    Reason          Age   From               Message
+  ----    ------          ----  ----               -------
+  Normal  Scheduled       15m   default-scheduler  Successfully assigned knative-serving/webhook-778d5987b7-dvxnm to ci-ln-4zhdf4b-72292-lw57b-worker-c-szhjg
+  Normal  AddedInterface  15m   multus             Add eth0 [10.129.2.33/23] from ovn-kubernetes
+  Normal  Pulling         15m   kubelet            Pulling image "registry.redhat.io/openshift-serverless-1/serving-webhook-rhel8@sha256:d619de7f9a0c63905a6073f9a508082084be1930ee110afc274438ad949af499"
+  Normal  Pulled          15m   kubelet            Successfully pulled image "registry.redhat.io/openshift-serverless-1/serving-webhook-rhel8@sha256:d619de7f9a0c63905a6073f9a508082084be1930ee110afc274438ad949af499" in 14.048165643s
+  Normal  Created         15m   kubelet            Created container webhook
+  Normal  Started         15m   kubelet            Started container webhook
+
+
+Name:         webhook-778d5987b7-q7nvk
+Namespace:    knative-serving
+Priority:     0
+Node:         ci-ln-4zhdf4b-72292-lw57b-worker-a-z86r5/10.0.128.2
+Start Time:   Fri, 03 Mar 2023 20:09:40 +0000
+Labels:       app=webhook
+              app.kubernetes.io/name=knative-serving
+              app.kubernetes.io/version=1.5.0
+              pod-template-hash=778d5987b7
+              role=webhook
+Annotations:  cluster-autoscaler.kubernetes.io/safe-to-evict: false
+              k8s.ovn.org/pod-networks:
+                {"default":{"ip_addresses":["10.131.0.27/23"],"mac_address":"0a:58:0a:83:00:1b","gateway_ips":["10.131.0.1"],"ip_address":"10.131.0.27/23"...
+              k8s.v1.cni.cncf.io/network-status:
+                [{
+                    "name": "ovn-kubernetes",
+                    "interface": "eth0",
+                    "ips": [
+                        "10.131.0.27"
+                    ],
+                    "mac": "0a:58:0a:83:00:1b",
+                    "default": true,
+                    "dns": {}
+                }]
+              k8s.v1.cni.cncf.io/networks-status:
+                [{
+                    "name": "ovn-kubernetes",
+                    "interface": "eth0",
+                    "ips": [
+                        "10.131.0.27"
+                    ],
+                    "mac": "0a:58:0a:83:00:1b",
+                    "default": true,
+                    "dns": {}
+                }]
+              openshift.io/scc: restricted-v2
+              seccomp.security.alpha.kubernetes.io/pod: runtime/default
+Status:       Running
+IP:           10.131.0.27
+IPs:
+  IP:           10.131.0.27
+Controlled By:  ReplicaSet/webhook-778d5987b7
+Containers:
+  webhook:
+    Container ID:   cri-o://65ef00a2e3d58ca5d019c886652b8736b1fd4dc0fbc9656bd2d9c89d11eeed64
+    Image:          registry.redhat.io/openshift-serverless-1/serving-webhook-rhel8@sha256:d619de7f9a0c63905a6073f9a508082084be1930ee110afc274438ad949af499
+    Image ID:       registry.redhat.io/openshift-serverless-1/serving-webhook-rhel8@sha256:9e19e287b29807388ab1893a169334ea242e0443b70fd499dd42b2da7d93fb75
+    Ports:          9090/TCP, 8008/TCP, 8443/TCP
+    Host Ports:     0/TCP, 0/TCP, 0/TCP
+    State:          Running
+      Started:      Fri, 03 Mar 2023 20:09:59 +0000
+    Ready:          True
+    Restart Count:  0
+    Limits:
+      cpu:     500m
+      memory:  1Gi
+    Requests:
+      cpu:      100m
+      memory:   100Mi
+    Liveness:   http-get https://:8443/ delay=20s timeout=1s period=1s #success=1 #failure=6
+    Readiness:  http-get https://:8443/ delay=0s timeout=1s period=1s #success=1 #failure=3
+    Environment:
+      POD_NAME:                   webhook-778d5987b7-q7nvk (v1:metadata.name)
+      SYSTEM_NAMESPACE:           knative-serving (v1:metadata.namespace)
+      CONFIG_LOGGING_NAME:        config-logging
+      CONFIG_OBSERVABILITY_NAME:  config-observability
+      WEBHOOK_NAME:               webhook
+      WEBHOOK_PORT:               8443
+      METRICS_DOMAIN:             knative.dev/internal/serving
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-2mc96 (ro)
+Conditions:
+  Type              Status
+  Initialized       True 
+  Ready             True 
+  ContainersReady   True 
+  PodScheduled      True 
+Volumes:
+  kube-api-access-2mc96:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    ConfigMapOptional:       <nil>
+    DownwardAPI:             true
+    ConfigMapName:           openshift-service-ca.crt
+    ConfigMapOptional:       <nil>
+QoS Class:                   Burstable
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/memory-pressure:NoSchedule op=Exists
+                             node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type    Reason          Age   From               Message
+  ----    ------          ----  ----               -------
+  Normal  Scheduled       15m   default-scheduler  Successfully assigned knative-serving/webhook-778d5987b7-q7nvk to ci-ln-4zhdf4b-72292-lw57b-worker-a-z86r5
+  Normal  AddedInterface  15m   multus             Add eth0 [10.131.0.27/23] from ovn-kubernetes
+  Normal  Pulling         15m   kubelet            Pulling image "registry.redhat.io/openshift-serverless-1/serving-webhook-rhel8@sha256:d619de7f9a0c63905a6073f9a508082084be1930ee110afc274438ad949af499"
+  Normal  Pulled          14m   kubelet            Successfully pulled image "registry.redhat.io/openshift-serverless-1/serving-webhook-rhel8@sha256:d619de7f9a0c63905a6073f9a508082084be1930ee110afc274438ad949af499" in 17.469092552s
+  Normal  Created         14m   kubelet            Created container webhook
+  Normal  Started         14m   kubelet            Started container webhook

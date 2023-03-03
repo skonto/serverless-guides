@@ -1,0 +1,40 @@
+---
+apiVersion: security.istio.io/v1beta1
+kind: PeerAuthentication
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"security.istio.io/v1beta1","kind":"PeerAuthentication","metadata":{"annotations":{"maistra.io/mesh-generation":"2.3.1-1-2"},"labels":{"app":"jaeger","app.kubernetes.io/component":"tracing","app.kubernetes.io/instance":"istio-system","app.kubernetes.io/managed-by":"maistra-istio-operator","app.kubernetes.io/name":"tracing","app.kubernetes.io/part-of":"istio","app.kubernetes.io/version":"2.3.1-1-2","maistra-version":"2.1.6","maistra.io/owner":"istio-system","maistra.io/owner-name":"basic","release":"istio"},"name":"disable-mtls-jaeger-collector","namespace":"istio-system","ownerReferences":[{"apiVersion":"maistra.io/v2","blockOwnerDeletion":true,"controller":true,"kind":"ServiceMeshControlPlane","name":"basic","uid":"0c79eb74-854c-4f98-85c6-5955e78fd93e"}]},"spec":{"mtls":{"mode":"DISABLE"},"selector":{"matchLabels":{"app.kubernetes.io/component":"all-in-one","app.kubernetes.io/instance":"jaeger"}}}}
+    maistra.io/mesh-generation: 2.3.1-1-2
+  creationTimestamp: "2023-03-03T20:03:20Z"
+  generation: 1
+  labels:
+    app: jaeger
+    app.kubernetes.io/component: tracing
+    app.kubernetes.io/instance: istio-system
+    app.kubernetes.io/managed-by: maistra-istio-operator
+    app.kubernetes.io/name: tracing
+    app.kubernetes.io/part-of: istio
+    app.kubernetes.io/version: 2.3.1-1-2
+    maistra-version: 2.1.6
+    maistra.io/owner: istio-system
+    maistra.io/owner-name: basic
+    release: istio
+  name: disable-mtls-jaeger-collector
+  namespace: istio-system
+  ownerReferences:
+  - apiVersion: maistra.io/v2
+    blockOwnerDeletion: true
+    controller: true
+    kind: ServiceMeshControlPlane
+    name: basic
+    uid: 0c79eb74-854c-4f98-85c6-5955e78fd93e
+  resourceVersion: "34815"
+  uid: 48fa2eb4-c9bf-4e06-a22c-0bc1856297f4
+spec:
+  mtls:
+    mode: DISABLE
+  selector:
+    matchLabels:
+      app.kubernetes.io/component: all-in-one
+      app.kubernetes.io/instance: jaeger

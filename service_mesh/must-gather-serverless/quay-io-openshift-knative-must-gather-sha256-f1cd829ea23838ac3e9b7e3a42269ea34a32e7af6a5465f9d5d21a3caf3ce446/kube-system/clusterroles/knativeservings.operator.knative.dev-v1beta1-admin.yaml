@@ -1,0 +1,24 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  creationTimestamp: "2023-03-03T20:08:36Z"
+  labels:
+    olm.opgroup.permissions/aggregate-to-b6479d235c1f930e-admin: "true"
+    rbac.authorization.k8s.io/aggregate-to-admin: "true"
+  name: knativeservings.operator.knative.dev-v1beta1-admin
+  ownerReferences:
+  - apiVersion: apiextensions.k8s.io/v1
+    blockOwnerDeletion: false
+    controller: false
+    kind: CustomResourceDefinition
+    name: knativeservings.operator.knative.dev
+    uid: 454f9b10-fd50-42d7-9dcb-27eae6f0544a
+  resourceVersion: "38603"
+  uid: 19693b05-f6bc-40e1-a606-a4837a39f384
+rules:
+- apiGroups:
+  - operator.knative.dev
+  resources:
+  - knativeservings
+  verbs:
+  - '*'

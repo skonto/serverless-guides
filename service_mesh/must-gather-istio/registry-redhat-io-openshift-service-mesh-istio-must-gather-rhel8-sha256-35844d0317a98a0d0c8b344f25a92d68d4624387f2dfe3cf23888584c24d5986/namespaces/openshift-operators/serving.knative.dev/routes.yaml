@@ -1,0 +1,7 @@
+---
+apiVersion: serving.knative.dev/v1
+items: []
+kind: RouteList
+metadata:
+  continue: ""
+  resourceVersion: "61037"

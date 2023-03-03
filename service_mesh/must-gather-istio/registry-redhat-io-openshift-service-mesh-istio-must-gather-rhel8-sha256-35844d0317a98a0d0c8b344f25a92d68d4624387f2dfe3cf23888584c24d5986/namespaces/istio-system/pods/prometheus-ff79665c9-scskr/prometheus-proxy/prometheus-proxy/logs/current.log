@@ -1,0 +1,8 @@
+2023-03-03T20:03:14.376531911Z 2023/03/03 20:03:14 provider.go:129: Defaulting client-id to system:serviceaccount:istio-system:prometheus
+2023-03-03T20:03:14.376531911Z 2023/03/03 20:03:14 provider.go:134: Defaulting client-secret to service account token /var/run/secrets/kubernetes.io/serviceaccount/token
+2023-03-03T20:03:14.380072380Z 2023/03/03 20:03:14 oauthproxy.go:203: mapping path "/" => upstream "http://localhost:9090/"
+2023-03-03T20:03:14.380072380Z 2023/03/03 20:03:14 oauthproxy.go:230: OAuthProxy configured for  Client ID: system:serviceaccount:istio-system:prometheus
+2023-03-03T20:03:14.380072380Z 2023/03/03 20:03:14 oauthproxy.go:240: Cookie settings: name:_oauth_proxy secure(https):true httponly:true expiry:168h0m0s domain:<default> samesite: refresh:disabled
+2023-03-03T20:03:14.381431239Z 2023/03/03 20:03:14 main.go:156: using htpasswd file /etc/proxy/htpasswd/auth
+2023-03-03T20:03:14.381431239Z I0303 20:03:14.381122       1 dynamic_serving_content.go:130] Starting serving::/etc/tls/private/tls.crt::/etc/tls/private/tls.key
+2023-03-03T20:03:14.381431239Z 2023/03/03 20:03:14 http.go:107: HTTPS: listening on [::]:3001

@@ -1,0 +1,90 @@
+2023-03-03T20:03:26.116842994Z 2023-03-03T20:03:26.116765Z	info	CNI install configuration: 
+2023-03-03T20:03:26.116842994Z CNINetDir: /etc/cni/multus/net.d
+2023-03-03T20:03:26.116842994Z MountedCNINetDir: /host/etc/cni/multus/net.d
+2023-03-03T20:03:26.116842994Z CNIConfName: v2-2-istio-cni.conf
+2023-03-03T20:03:26.116842994Z ChainedCNIPlugin: false
+2023-03-03T20:03:26.116842994Z CNINetworkConfigFile: 
+2023-03-03T20:03:26.116842994Z CNINetworkConfig: {
+2023-03-03T20:03:26.116842994Z   "cniVersion": "0.3.0",
+2023-03-03T20:03:26.116842994Z   "name": "v2-2-istio-cni",
+2023-03-03T20:03:26.116842994Z   "type": "v2-2-istio-cni",
+2023-03-03T20:03:26.116842994Z   "log_level": "",
+2023-03-03T20:03:26.116842994Z   "log_uds_address": "__LOG_UDS_ADDRESS__", 
+2023-03-03T20:03:26.116842994Z   "kubernetes": {
+2023-03-03T20:03:26.116842994Z       "kubeconfig": "__KUBECONFIG_FILEPATH__",
+2023-03-03T20:03:26.116842994Z       "cni_bin_dir": "/opt/multus/bin",
+2023-03-03T20:03:26.116842994Z       "exclude_namespaces": [ "openshift-operators" ]
+2023-03-03T20:03:26.116842994Z   }
+2023-03-03T20:03:26.116842994Z }
+2023-03-03T20:03:26.116842994Z CNIEnableInstall: true
+2023-03-03T20:03:26.116842994Z CNIEnableReinstall: true
+2023-03-03T20:03:26.116842994Z LogLevel: warn
+2023-03-03T20:03:26.116842994Z KubeconfigFilename: v2-2-istio-cni.kubeconfig
+2023-03-03T20:03:26.116842994Z KubeconfigMode: 0600
+2023-03-03T20:03:26.116842994Z KubeCAFile: 
+2023-03-03T20:03:26.116842994Z SkipTLSVerify: false
+2023-03-03T20:03:26.116842994Z K8sServiceProtocol: 
+2023-03-03T20:03:26.116842994Z K8sServiceHost: 172.30.0.1
+2023-03-03T20:03:26.116842994Z K8sServicePort: 443
+2023-03-03T20:03:26.116842994Z K8sNodeName: istio-cni-node-tmtck
+2023-03-03T20:03:26.116842994Z UpdateCNIBinaries: true
+2023-03-03T20:03:26.116842994Z SkipCNIBinaries: [[]]
+2023-03-03T20:03:26.116842994Z MonitoringPort: 15014
+2023-03-03T20:03:26.116842994Z LogUDSAddress: /var/run/istio-cni/log.sock
+2023-03-03T20:03:26.116842994Z 
+2023-03-03T20:03:26.117062905Z 2023-03-03T20:03:26.116990Z	info	CNI race repair configuration: 
+2023-03-03T20:03:26.117062905Z Enabled: true
+2023-03-03T20:03:26.117062905Z RunAsDaemon: false
+2023-03-03T20:03:26.117062905Z NodeName: 
+2023-03-03T20:03:26.117062905Z LabelKey: cni.istio.io/uninitialized
+2023-03-03T20:03:26.117062905Z LabelValue: true
+2023-03-03T20:03:26.117062905Z DeletePods: false
+2023-03-03T20:03:26.117062905Z LabelPods: false
+2023-03-03T20:03:26.117062905Z SidecarAnnotation: sidecar.istio.io/status
+2023-03-03T20:03:26.117062905Z InitContainerName: istio-validation
+2023-03-03T20:03:26.117062905Z InitTerminationMsg: 
+2023-03-03T20:03:26.117062905Z InitExitCode: 126
+2023-03-03T20:03:26.117062905Z LabelSelectors: 
+2023-03-03T20:03:26.117062905Z FieldSelectors: 
+2023-03-03T20:03:26.117062905Z 
+2023-03-03T20:03:26.117281989Z 2023-03-03T20:03:26.117255Z	info	Start a UDS server for CNI plugin logs
+2023-03-03T20:03:26.117437732Z 2023-03-03T20:03:26.117404Z	info	repair	Start CNI race condition repair.
+2023-03-03T20:03:26.117651346Z 2023-03-03T20:03:26.117574Z	info	ControlZ available at 127.0.0.1:9876
+2023-03-03T20:03:27.233639562Z 2023-03-03T20:03:27.233526Z	info	install	Copied istio-cni to /host/opt/cni/bin/v2-2-istio-cni.
+2023-03-03T20:03:27.233796189Z 2023-03-03T20:03:27.233753Z	info	install	Directory /host/secondary-bin-dir is not writable, skipping.
+2023-03-03T20:03:27.235548849Z 2023-03-03T20:03:27.235481Z	info	install	write kubeconfig file /host/etc/cni/multus/net.d/v2-2-istio-cni.kubeconfig with: 
+2023-03-03T20:03:27.235548849Z # Kubeconfig file for Istio CNI plugin.
+2023-03-03T20:03:27.235548849Z apiVersion: v1
+2023-03-03T20:03:27.235548849Z kind: Config
+2023-03-03T20:03:27.235548849Z clusters:
+2023-03-03T20:03:27.235548849Z - name: local
+2023-03-03T20:03:27.235548849Z   cluster:
+2023-03-03T20:03:27.235548849Z     server: https://[172.30.0.1]:443
+2023-03-03T20:03:27.235548849Z     certificate-authority-data: <CA cert from /var/run/secrets/kubernetes.io/serviceaccount/ca.crt>
+2023-03-03T20:03:27.235548849Z users:
+2023-03-03T20:03:27.235548849Z - name: istio-cni
+2023-03-03T20:03:27.235548849Z   user:
+2023-03-03T20:03:27.235548849Z     token: "<redacted>"
+2023-03-03T20:03:27.235548849Z contexts:
+2023-03-03T20:03:27.235548849Z - name: istio-cni-context
+2023-03-03T20:03:27.235548849Z   context:
+2023-03-03T20:03:27.235548849Z     cluster: local
+2023-03-03T20:03:27.235548849Z     user: istio-cni
+2023-03-03T20:03:27.235548849Z current-context: istio-cni-context
+2023-03-03T20:03:27.235548849Z 
+2023-03-03T20:03:27.236647127Z 2023-03-03T20:03:27.236061Z	info	install	Using CNI config template from CNI_NETWORK_CONFIG environment variable.
+2023-03-03T20:03:27.236835745Z 2023-03-03T20:03:27.236807Z	info	install	CNI config: {
+2023-03-03T20:03:27.236835745Z   "cniVersion": "0.3.0",
+2023-03-03T20:03:27.236835745Z   "name": "v2-2-istio-cni",
+2023-03-03T20:03:27.236835745Z   "type": "v2-2-istio-cni",
+2023-03-03T20:03:27.236835745Z   "log_level": "",
+2023-03-03T20:03:27.236835745Z   "log_uds_address": "/var/run/istio-cni/log.sock", 
+2023-03-03T20:03:27.236835745Z   "kubernetes": {
+2023-03-03T20:03:27.236835745Z       "kubeconfig": "/etc/cni/multus/net.d/v2-2-istio-cni.kubeconfig",
+2023-03-03T20:03:27.236835745Z       "cni_bin_dir": "/opt/multus/bin",
+2023-03-03T20:03:27.236835745Z       "exclude_namespaces": [ "openshift-operators" ]
+2023-03-03T20:03:27.236835745Z   }
+2023-03-03T20:03:27.236835745Z }
+2023-03-03T20:03:27.237201805Z 2023-03-03T20:03:27.237171Z	info	install	Created CNI config /host/etc/cni/multus/net.d/v2-2-istio-cni.conf
+2023-03-03T20:03:27.237268305Z 2023-03-03T20:03:27.237251Z	info	install	Installation succeed, start watching for re-installation.
+2023-03-03T20:03:27.239355385Z 2023-03-03T20:03:27.239299Z	warn	install	CNI config file /host/etc/cni/multus/net.d/v2-2-istio-cni.conf preempted by /host/etc/cni/multus/net.d/v2-0-istio-cni.conf

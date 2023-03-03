@@ -1,0 +1,34 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"rbac.authorization.k8s.io/v1","kind":"ClusterRole","metadata":{"labels":{"app.kubernetes.io/name":"knative-serving","app.kubernetes.io/version":"1.5.0","rbac.authorization.k8s.io/aggregate-to-edit":"true"},"name":"knative-serving-namespaced-edit"},"rules":[{"apiGroups":["serving.knative.dev"],"resources":["*"],"verbs":["create","update","patch","delete"]},{"apiGroups":["networking.internal.knative.dev","autoscaling.internal.knative.dev","caching.internal.knative.dev"],"resources":["*"],"verbs":["get","list","watch"]}]}
+  creationTimestamp: "2023-03-03T20:09:29Z"
+  labels:
+    app.kubernetes.io/name: knative-serving
+    app.kubernetes.io/version: 1.5.0
+    rbac.authorization.k8s.io/aggregate-to-edit: "true"
+  name: knative-serving-namespaced-edit
+  resourceVersion: "39751"
+  uid: a5ec0f28-4bc8-4610-aa6b-96046cd93ba9
+rules:
+- apiGroups:
+  - serving.knative.dev
+  resources:
+  - '*'
+  verbs:
+  - create
+  - update
+  - patch
+  - delete
+- apiGroups:
+  - networking.internal.knative.dev
+  - autoscaling.internal.knative.dev
+  - caching.internal.knative.dev
+  resources:
+  - '*'
+  verbs:
+  - get
+  - list
+  - watch

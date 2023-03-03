@@ -1,0 +1,240 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    alm-examples: |-
+      [
+        {
+          "apiVersion": "operator.knative.dev/v1beta1",
+          "kind": "KnativeServing",
+          "metadata": {
+            "name": "knative-serving"
+          },
+          "spec": {
+          }
+        },
+        {
+          "apiVersion": "operator.knative.dev/v1beta1",
+          "kind": "KnativeEventing",
+          "metadata": {
+            "name": "knative-eventing"
+          },
+          "spec": {
+          }
+        },
+        {
+          "apiVersion": "operator.serverless.openshift.io/v1alpha1",
+          "kind": "KnativeKafka",
+          "metadata": {
+            "name": "knative-kafka"
+          },
+          "spec": {
+            "broker": {
+              "enabled": false,
+              "defaultConfig": {
+                "numPartitions": 10,
+                "replicationFactor": 3,
+                "bootstrapServers": "REPLACE_WITH_COMMA_SEPARATED_KAFKA_BOOTSTRAP_SERVERS"
+              }
+            },
+            "source": {
+              "enabled": false
+            },
+            "sink": {
+              "enabled": false
+            },
+            "channel": {
+              "enabled": false,
+              "bootstrapServers": "REPLACE_WITH_COMMA_SEPARATED_KAFKA_BOOTSTRAP_SERVERS"
+            }
+          }
+        }
+      ]
+    capabilities: Full Lifecycle
+    categories: Networking,Integration & Delivery,Cloud Provider,Developer Tools
+    certified: "false"
+    createdAt: "2022-12-01T16:39:45Z"
+    description: Deploy and manage event-driven serverless applications and functions
+      using Knative.
+    k8s.ovn.org/pod-networks: '{"default":{"ip_addresses":["10.129.2.28/23"],"mac_address":"0a:58:0a:81:02:1c","gateway_ips":["10.129.2.1"],"ip_address":"10.129.2.28/23","gateway_ip":"10.129.2.1"}}'
+    k8s.v1.cni.cncf.io/network-status: |-
+      [{
+          "name": "ovn-kubernetes",
+          "interface": "eth0",
+          "ips": [
+              "10.129.2.28"
+          ],
+          "mac": "0a:58:0a:81:02:1c",
+          "default": true,
+          "dns": {}
+      }]
+    k8s.v1.cni.cncf.io/networks-status: |-
+      [{
+          "name": "ovn-kubernetes",
+          "interface": "eth0",
+          "ips": [
+              "10.129.2.28"
+          ],
+          "mac": "0a:58:0a:81:02:1c",
+          "default": true,
+          "dns": {}
+      }]
+    olm.operatorGroup: serverless-operators
+    olm.operatorNamespace: openshift-serverless
+    olm.skipRange: '>=1.25.0 <1.26.0'
+    olm.targetNamespaces: ""
+    openshift.io/scc: restricted-v2
+    operatorframework.io/properties: '{"properties":[{"type":"olm.gvk","value":{"group":"operator.knative.dev","kind":"KnativeEventing","version":"v1alpha1"}},{"type":"olm.gvk","value":{"group":"operator.knative.dev","kind":"KnativeEventing","version":"v1beta1"}},{"type":"olm.gvk","value":{"group":"operator.knative.dev","kind":"KnativeServing","version":"v1alpha1"}},{"type":"olm.gvk","value":{"group":"operator.knative.dev","kind":"KnativeServing","version":"v1beta1"}},{"type":"olm.gvk","value":{"group":"operator.serverless.openshift.io","kind":"KnativeKafka","version":"v1alpha1"}},{"type":"olm.package","value":{"packageName":"serverless-operator","version":"1.26.0"}}]}'
+    operatorframework.io/suggested-namespace: openshift-serverless
+    operators.openshift.io/infrastructure-features: '["disconnected", "fips", "proxy-aware"]'
+    operators.openshift.io/valid-subscription: '["OpenShift Container Platform", "OpenShift
+      Platform Plus"]'
+    repository: https://github.com/openshift-knative/serverless-operator
+    seccomp.security.alpha.kubernetes.io/pod: runtime/default
+    support: Red Hat
+  creationTimestamp: "2023-03-03T20:07:53Z"
+  generateName: knative-openshift-ingress-69dd8bc4cb-
+  labels:
+    name: knative-openshift-ingress
+    pod-template-hash: 69dd8bc4cb
+  name: knative-openshift-ingress-69dd8bc4cb-8djmp
+  namespace: openshift-serverless
+  ownerReferences:
+  - apiVersion: apps/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: ReplicaSet
+    name: knative-openshift-ingress-69dd8bc4cb
+    uid: 93075da7-9386-4149-8ddc-d9792b4a7bb7
+  resourceVersion: "38094"
+  uid: 95518a17-4d9a-4092-a9e9-ea3edc7f8071
+spec:
+  containers:
+  - env:
+    - name: METRICS_DOMAIN
+      value: knative.dev/serving
+    - name: WATCH_NAMESPACE
+    - name: POD_NAME
+      valueFrom:
+        fieldRef:
+          apiVersion: v1
+          fieldPath: metadata.name
+    - name: OPERATOR_NAME
+      value: knative-openshift-ingress
+    - name: SYSTEM_NAMESPACE
+      valueFrom:
+        fieldRef:
+          apiVersion: v1
+          fieldPath: metadata.namespace
+    - name: OPERATOR_CONDITION_NAME
+      value: serverless-operator.v1.26.0
+    image: registry.redhat.io/openshift-serverless-1/ingress-rhel8-operator@sha256:20d49ca2d48e0f5d12dedc042fa6791d5b05fb6d5dec3e1b72788391d1b6368f
+    imagePullPolicy: Always
+    name: knative-openshift-ingress
+    ports:
+    - containerPort: 9090
+      name: metrics
+      protocol: TCP
+    resources: {}
+    securityContext:
+      allowPrivilegeEscalation: false
+      capabilities:
+        drop:
+        - ALL
+      readOnlyRootFilesystem: true
+      runAsNonRoot: true
+      runAsUser: 1000720000
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-kjpl8
+      readOnly: true
+  dnsPolicy: ClusterFirst
+  enableServiceLinks: true
+  imagePullSecrets:
+  - name: knative-openshift-ingress-dockercfg-5stpx
+  nodeName: ci-ln-4zhdf4b-72292-lw57b-worker-c-szhjg
+  preemptionPolicy: PreemptLowerPriority
+  priority: 0
+  restartPolicy: Always
+  schedulerName: default-scheduler
+  securityContext:
+    fsGroup: 1000720000
+    seLinuxOptions:
+      level: s0:c27,c9
+    seccompProfile:
+      type: RuntimeDefault
+  serviceAccount: knative-openshift-ingress
+  serviceAccountName: knative-openshift-ingress
+  terminationGracePeriodSeconds: 30
+  tolerations:
+  - effect: NoExecute
+    key: node.kubernetes.io/not-ready
+    operator: Exists
+    tolerationSeconds: 300
+  - effect: NoExecute
+    key: node.kubernetes.io/unreachable
+    operator: Exists
+    tolerationSeconds: 300
+  volumes:
+  - name: kube-api-access-kjpl8
+    projected:
+      defaultMode: 420
+      sources:
+      - serviceAccountToken:
+          expirationSeconds: 3607
+          path: token
+      - configMap:
+          items:
+          - key: ca.crt
+            path: ca.crt
+          name: kube-root-ca.crt
+      - downwardAPI:
+          items:
+          - fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.namespace
+            path: namespace
+      - configMap:
+          items:
+          - key: service-ca.crt
+            path: service-ca.crt
+          name: openshift-service-ca.crt
+status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-03T20:07:53Z"
+    status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-03T20:08:05Z"
+    status: "True"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-03T20:08:05Z"
+    status: "True"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-03T20:07:53Z"
+    status: "True"
+    type: PodScheduled
+  containerStatuses:
+  - containerID: cri-o://6f899c1608a47e31856baf14beab619de3f17ec543105379eedfd10f5897687f
+    image: registry.redhat.io/openshift-serverless-1/ingress-rhel8-operator@sha256:20d49ca2d48e0f5d12dedc042fa6791d5b05fb6d5dec3e1b72788391d1b6368f
+    imageID: registry.redhat.io/openshift-serverless-1/ingress-rhel8-operator@sha256:20d49ca2d48e0f5d12dedc042fa6791d5b05fb6d5dec3e1b72788391d1b6368f
+    lastState: {}
+    name: knative-openshift-ingress
+    ready: true
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2023-03-03T20:08:04Z"
+  hostIP: 10.0.128.4
+  phase: Running
+  podIP: 10.129.2.28
+  podIPs:
+  - ip: 10.129.2.28
+  qosClass: BestEffort
+  startTime: "2023-03-03T20:07:53Z"

@@ -1,0 +1,8 @@
+Name:         knativeeventings.operator.knative.dev-v1beta1-edit
+Labels:       olm.opgroup.permissions/aggregate-to-e7e16f558a6aac4c-edit=true
+              rbac.authorization.k8s.io/aggregate-to-edit=true
+Annotations:  <none>
+PolicyRule:
+  Resources                              Non-Resource URLs  Resource Names  Verbs
+  ---------                              -----------------  --------------  -----
+  knativeeventings.operator.knative.dev  []                 []              [create update patch delete]

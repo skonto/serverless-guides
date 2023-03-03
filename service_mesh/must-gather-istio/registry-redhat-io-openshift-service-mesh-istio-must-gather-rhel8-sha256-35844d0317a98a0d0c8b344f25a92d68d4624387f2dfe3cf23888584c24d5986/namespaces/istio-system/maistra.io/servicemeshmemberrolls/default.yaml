@@ -1,0 +1,50 @@
+apiVersion: maistra.io/v1
+kind: ServiceMeshMemberRoll
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"maistra.io/v1","kind":"ServiceMeshMemberRoll","metadata":{"annotations":{},"name":"default","namespace":"istio-system"},"spec":{"members":["knative-serving","user-ns"]}}
+  creationTimestamp: "2023-03-03T20:04:06Z"
+  finalizers:
+  - maistra.io/istio-operator
+  generation: 1
+  name: default
+  namespace: istio-system
+  resourceVersion: "35738"
+  uid: 9384d42f-ff10-4c42-bec3-a7d8d677a476
+spec:
+  members:
+  - knative-serving
+  - user-ns
+status:
+  annotations:
+    configuredMemberCount: 2/2
+    kialiName: kiali
+  conditions:
+  - lastTransitionTime: "2023-03-03T20:04:21Z"
+    message: All namespaces have been configured successfully
+    reason: Configured
+    status: "True"
+    type: Ready
+  configuredMembers:
+  - knative-serving
+  - user-ns
+  memberStatuses:
+  - conditions:
+    - lastTransitionTime: "2023-03-03T20:04:21Z"
+      status: "True"
+      type: Reconciled
+    namespace: knative-serving
+  - conditions:
+    - lastTransitionTime: "2023-03-03T20:04:07Z"
+      status: "True"
+      type: Reconciled
+    namespace: user-ns
+  members:
+  - knative-serving
+  - user-ns
+  meshGeneration: 2
+  meshReconciledVersion: 2.3.1-1-2
+  observedGeneration: 1
+  pendingMembers: []
+  terminatingMembers: []

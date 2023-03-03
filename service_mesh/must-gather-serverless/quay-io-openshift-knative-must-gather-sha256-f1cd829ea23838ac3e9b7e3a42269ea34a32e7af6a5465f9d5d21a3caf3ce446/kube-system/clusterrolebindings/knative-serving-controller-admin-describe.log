@@ -1,0 +1,12 @@
+Name:         knative-serving-controller-admin
+Labels:       app.kubernetes.io/component=controller
+              app.kubernetes.io/name=knative-serving
+              app.kubernetes.io/version=1.5.0
+Annotations:  <none>
+Role:
+  Kind:  ClusterRole
+  Name:  knative-serving-admin
+Subjects:
+  Kind            Name        Namespace
+  ----            ----        ---------
+  ServiceAccount  controller  knative-serving

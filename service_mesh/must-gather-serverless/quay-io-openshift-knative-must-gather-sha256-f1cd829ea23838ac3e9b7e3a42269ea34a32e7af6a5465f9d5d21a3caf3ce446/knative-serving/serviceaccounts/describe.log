@@ -1,0 +1,40 @@
+Name:                builder
+Namespace:           knative-serving
+Labels:              <none>
+Annotations:         <none>
+Image pull secrets:  builder-dockercfg-fcqb6
+Mountable secrets:   builder-dockercfg-fcqb6
+Tokens:              builder-token-gmwbb
+Events:              <none>
+
+
+Name:                controller
+Namespace:           knative-serving
+Labels:              app.kubernetes.io/component=controller
+                     app.kubernetes.io/name=knative-serving
+                     app.kubernetes.io/version=1.5.0
+Annotations:         <none>
+Image pull secrets:  controller-dockercfg-cwxbr
+Mountable secrets:   controller-dockercfg-cwxbr
+Tokens:              controller-token-dbbk2
+Events:              <none>
+
+
+Name:                default
+Namespace:           knative-serving
+Labels:              <none>
+Annotations:         <none>
+Image pull secrets:  default-dockercfg-gwhnv
+Mountable secrets:   default-dockercfg-gwhnv
+Tokens:              default-token-dfr9w
+Events:              <none>
+
+
+Name:                deployer
+Namespace:           knative-serving
+Labels:              <none>
+Annotations:         <none>
+Image pull secrets:  deployer-dockercfg-gctg4
+Mountable secrets:   deployer-dockercfg-gctg4
+Tokens:              deployer-token-mcb4f
+Events:              <none>

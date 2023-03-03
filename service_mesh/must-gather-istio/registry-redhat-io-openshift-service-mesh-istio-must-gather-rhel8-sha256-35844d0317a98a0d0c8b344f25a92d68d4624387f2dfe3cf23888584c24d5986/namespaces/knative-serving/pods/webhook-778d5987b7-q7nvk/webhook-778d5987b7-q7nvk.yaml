@@ -1,0 +1,234 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    cluster-autoscaler.kubernetes.io/safe-to-evict: "false"
+    k8s.ovn.org/pod-networks: '{"default":{"ip_addresses":["10.131.0.27/23"],"mac_address":"0a:58:0a:83:00:1b","gateway_ips":["10.131.0.1"],"ip_address":"10.131.0.27/23","gateway_ip":"10.131.0.1"}}'
+    k8s.v1.cni.cncf.io/network-status: |-
+      [{
+          "name": "ovn-kubernetes",
+          "interface": "eth0",
+          "ips": [
+              "10.131.0.27"
+          ],
+          "mac": "0a:58:0a:83:00:1b",
+          "default": true,
+          "dns": {}
+      }]
+    k8s.v1.cni.cncf.io/networks-status: |-
+      [{
+          "name": "ovn-kubernetes",
+          "interface": "eth0",
+          "ips": [
+              "10.131.0.27"
+          ],
+          "mac": "0a:58:0a:83:00:1b",
+          "default": true,
+          "dns": {}
+      }]
+    openshift.io/scc: restricted-v2
+    seccomp.security.alpha.kubernetes.io/pod: runtime/default
+  creationTimestamp: "2023-03-03T20:09:40Z"
+  generateName: webhook-778d5987b7-
+  labels:
+    app: webhook
+    app.kubernetes.io/name: knative-serving
+    app.kubernetes.io/version: 1.5.0
+    pod-template-hash: 778d5987b7
+    role: webhook
+  name: webhook-778d5987b7-q7nvk
+  namespace: knative-serving
+  ownerReferences:
+  - apiVersion: apps/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: ReplicaSet
+    name: webhook-778d5987b7
+    uid: 5eddc99a-3810-455d-a319-965bdd1b7e05
+  resourceVersion: "40284"
+  uid: 0eef6ab4-8953-4faa-b5c9-f9e99b959c2b
+spec:
+  affinity:
+    podAntiAffinity:
+      preferredDuringSchedulingIgnoredDuringExecution:
+      - podAffinityTerm:
+          labelSelector:
+            matchLabels:
+              app: webhook
+          topologyKey: kubernetes.io/hostname
+        weight: 100
+  containers:
+  - env:
+    - name: POD_NAME
+      valueFrom:
+        fieldRef:
+          apiVersion: v1
+          fieldPath: metadata.name
+    - name: SYSTEM_NAMESPACE
+      valueFrom:
+        fieldRef:
+          apiVersion: v1
+          fieldPath: metadata.namespace
+    - name: CONFIG_LOGGING_NAME
+      value: config-logging
+    - name: CONFIG_OBSERVABILITY_NAME
+      value: config-observability
+    - name: WEBHOOK_NAME
+      value: webhook
+    - name: WEBHOOK_PORT
+      value: "8443"
+    - name: METRICS_DOMAIN
+      value: knative.dev/internal/serving
+    image: registry.redhat.io/openshift-serverless-1/serving-webhook-rhel8@sha256:d619de7f9a0c63905a6073f9a508082084be1930ee110afc274438ad949af499
+    imagePullPolicy: IfNotPresent
+    livenessProbe:
+      failureThreshold: 6
+      httpGet:
+        httpHeaders:
+        - name: k-kubelet-probe
+          value: webhook
+        path: /
+        port: 8443
+        scheme: HTTPS
+      initialDelaySeconds: 20
+      periodSeconds: 1
+      successThreshold: 1
+      timeoutSeconds: 1
+    name: webhook
+    ports:
+    - containerPort: 9090
+      name: metrics
+      protocol: TCP
+    - containerPort: 8008
+      name: profiling
+      protocol: TCP
+    - containerPort: 8443
+      name: https-webhook
+      protocol: TCP
+    readinessProbe:
+      failureThreshold: 3
+      httpGet:
+        httpHeaders:
+        - name: k-kubelet-probe
+          value: webhook
+        path: /
+        port: 8443
+        scheme: HTTPS
+      periodSeconds: 1
+      successThreshold: 1
+      timeoutSeconds: 1
+    resources:
+      limits:
+        cpu: 500m
+        memory: 1Gi
+      requests:
+        cpu: 100m
+        memory: 100Mi
+    securityContext:
+      allowPrivilegeEscalation: false
+      capabilities:
+        drop:
+        - ALL
+      readOnlyRootFilesystem: true
+      runAsNonRoot: true
+      runAsUser: 1000710000
+      seccompProfile:
+        type: RuntimeDefault
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-2mc96
+      readOnly: true
+  dnsPolicy: ClusterFirst
+  enableServiceLinks: true
+  imagePullSecrets:
+  - name: controller-dockercfg-cwxbr
+  nodeName: ci-ln-4zhdf4b-72292-lw57b-worker-a-z86r5
+  preemptionPolicy: PreemptLowerPriority
+  priority: 0
+  restartPolicy: Always
+  schedulerName: default-scheduler
+  securityContext:
+    fsGroup: 1000710000
+    seLinuxOptions:
+      level: s0:c27,c4
+    seccompProfile:
+      type: RuntimeDefault
+  serviceAccount: controller
+  serviceAccountName: controller
+  terminationGracePeriodSeconds: 300
+  tolerations:
+  - effect: NoExecute
+    key: node.kubernetes.io/not-ready
+    operator: Exists
+    tolerationSeconds: 300
+  - effect: NoExecute
+    key: node.kubernetes.io/unreachable
+    operator: Exists
+    tolerationSeconds: 300
+  - effect: NoSchedule
+    key: node.kubernetes.io/memory-pressure
+    operator: Exists
+  volumes:
+  - name: kube-api-access-2mc96
+    projected:
+      defaultMode: 420
+      sources:
+      - serviceAccountToken:
+          expirationSeconds: 3607
+          path: token
+      - configMap:
+          items:
+          - key: ca.crt
+            path: ca.crt
+          name: kube-root-ca.crt
+      - downwardAPI:
+          items:
+          - fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.namespace
+            path: namespace
+      - configMap:
+          items:
+          - key: service-ca.crt
+            path: service-ca.crt
+          name: openshift-service-ca.crt
+status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-03T20:09:40Z"
+    status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-03T20:10:00Z"
+    status: "True"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-03T20:10:00Z"
+    status: "True"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-03T20:09:40Z"
+    status: "True"
+    type: PodScheduled
+  containerStatuses:
+  - containerID: cri-o://65ef00a2e3d58ca5d019c886652b8736b1fd4dc0fbc9656bd2d9c89d11eeed64
+    image: registry.redhat.io/openshift-serverless-1/serving-webhook-rhel8@sha256:d619de7f9a0c63905a6073f9a508082084be1930ee110afc274438ad949af499
+    imageID: registry.redhat.io/openshift-serverless-1/serving-webhook-rhel8@sha256:9e19e287b29807388ab1893a169334ea242e0443b70fd499dd42b2da7d93fb75
+    lastState: {}
+    name: webhook
+    ready: true
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2023-03-03T20:09:59Z"
+  hostIP: 10.0.128.2
+  phase: Running
+  podIP: 10.131.0.27
+  podIPs:
+  - ip: 10.131.0.27
+  qosClass: Burstable
+  startTime: "2023-03-03T20:09:40Z"

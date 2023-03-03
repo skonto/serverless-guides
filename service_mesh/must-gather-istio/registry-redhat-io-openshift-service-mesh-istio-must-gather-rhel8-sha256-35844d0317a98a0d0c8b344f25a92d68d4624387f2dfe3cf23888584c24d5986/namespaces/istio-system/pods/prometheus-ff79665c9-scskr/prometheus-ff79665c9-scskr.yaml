@@ -1,0 +1,323 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    k8s.ovn.org/pod-networks: '{"default":{"ip_addresses":["10.129.2.20/23"],"mac_address":"0a:58:0a:81:02:14","gateway_ips":["10.129.2.1"],"ip_address":"10.129.2.20/23","gateway_ip":"10.129.2.1"}}'
+    k8s.v1.cni.cncf.io/network-status: |-
+      [{
+          "name": "ovn-kubernetes",
+          "interface": "eth0",
+          "ips": [
+              "10.129.2.20"
+          ],
+          "mac": "0a:58:0a:81:02:14",
+          "default": true,
+          "dns": {}
+      }]
+    k8s.v1.cni.cncf.io/networks-status: |-
+      [{
+          "name": "ovn-kubernetes",
+          "interface": "eth0",
+          "ips": [
+              "10.129.2.20"
+          ],
+          "mac": "0a:58:0a:81:02:14",
+          "default": true,
+          "dns": {}
+      }]
+    openshift.io/scc: restricted-v2
+    seccomp.security.alpha.kubernetes.io/pod: runtime/default
+    sidecar.istio.io/inject: "false"
+  creationTimestamp: "2023-03-03T20:03:12Z"
+  generateName: prometheus-ff79665c9-
+  labels:
+    app: prometheus
+    maistra-control-plane: istio-system
+    pod-template-hash: ff79665c9
+    release: istio
+  name: prometheus-ff79665c9-scskr
+  namespace: istio-system
+  ownerReferences:
+  - apiVersion: apps/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: ReplicaSet
+    name: prometheus-ff79665c9
+    uid: 710c32e7-fd7b-454a-a2d5-ce408436b726
+  resourceVersion: "34803"
+  uid: b02d53f8-a4ab-4c32-af41-c3d5d7a005fd
+spec:
+  affinity:
+    nodeAffinity:
+      preferredDuringSchedulingIgnoredDuringExecution:
+      - preference:
+          matchExpressions:
+          - key: beta.kubernetes.io/arch
+            operator: In
+            values:
+            - amd64
+        weight: 2
+      - preference:
+          matchExpressions:
+          - key: beta.kubernetes.io/arch
+            operator: In
+            values:
+            - ppc64le
+        weight: 2
+      - preference:
+          matchExpressions:
+          - key: beta.kubernetes.io/arch
+            operator: In
+            values:
+            - s390x
+        weight: 2
+      requiredDuringSchedulingIgnoredDuringExecution:
+        nodeSelectorTerms:
+        - matchExpressions:
+          - key: beta.kubernetes.io/arch
+            operator: In
+            values:
+            - amd64
+            - ppc64le
+            - s390x
+  containers:
+  - args:
+    - -provider=openshift
+    - -https-address=:3001
+    - -http-address=
+    - -email-domain=*
+    - -upstream=http://localhost:9090
+    - -htpasswd-file=/etc/proxy/htpasswd/auth
+    - -display-htpasswd-form=false
+    - '-openshift-sar={"namespace": "istio-system", "resource": "pods", "verb": "get"}'
+    - -client-secret-file=/var/run/secrets/kubernetes.io/serviceaccount/token
+    - -openshift-service-account=prometheus
+    - -cookie-secret-file=/etc/proxy/secrets/session_secret
+    - -tls-cert=/etc/tls/private/tls.crt
+    - -tls-key=/etc/tls/private/tls.key
+    - -openshift-ca=/etc/pki/tls/cert.pem
+    - -openshift-ca=/var/run/secrets/kubernetes.io/serviceaccount/ca.crt
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:ce1de860b639d4831bb74b0271aed6882b45febb37f60bcf8a31157b87ce0495
+    imagePullPolicy: IfNotPresent
+    name: prometheus-proxy
+    ports:
+    - containerPort: 3001
+      name: https
+      protocol: TCP
+    readinessProbe:
+      failureThreshold: 3
+      httpGet:
+        path: /oauth/healthz
+        port: https
+        scheme: HTTPS
+      periodSeconds: 10
+      successThreshold: 1
+      timeoutSeconds: 1
+    resources:
+      requests:
+        cpu: 10m
+        memory: 128Mi
+    securityContext:
+      allowPrivilegeEscalation: false
+      capabilities:
+        drop:
+        - ALL
+      runAsNonRoot: true
+      runAsUser: 1000680000
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /etc/tls/private
+      name: secret-prometheus-tls
+    - mountPath: /etc/proxy/htpasswd
+      name: secret-htpasswd
+    - mountPath: /etc/proxy/secrets
+      name: secret-prometheus-proxy
+    - mountPath: /etc/pki/ca-trust/extracted/pem/
+      name: trusted-ca-bundle
+      readOnly: true
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-5l964
+      readOnly: true
+  - args:
+    - --storage.tsdb.retention=6h
+    - --storage.tsdb.path=/prometheus
+    - --config.file=/etc/prometheus/prometheus.yml
+    - --discovery.member-roll-name=default
+    - --discovery.member-roll-namespace=istio-system
+    image: registry.redhat.io/openshift-service-mesh/prometheus-rhel8@sha256:e1638e9b1c36b48220ac8bbe208ef0f2d59d184b89e0388a2b73d8c0da11946c
+    imagePullPolicy: IfNotPresent
+    livenessProbe:
+      failureThreshold: 3
+      httpGet:
+        path: /-/healthy
+        port: 9090
+        scheme: HTTP
+      periodSeconds: 10
+      successThreshold: 1
+      timeoutSeconds: 1
+    name: prometheus
+    ports:
+    - containerPort: 9090
+      name: http
+      protocol: TCP
+    readinessProbe:
+      failureThreshold: 3
+      httpGet:
+        path: /-/ready
+        port: 9090
+        scheme: HTTP
+      periodSeconds: 10
+      successThreshold: 1
+      timeoutSeconds: 1
+    resources:
+      requests:
+        cpu: 10m
+        memory: 128Mi
+    securityContext:
+      allowPrivilegeEscalation: false
+      capabilities:
+        drop:
+        - ALL
+      runAsNonRoot: true
+      runAsUser: 1000680000
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /etc/prometheus
+      name: config-volume
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-5l964
+      readOnly: true
+  dnsPolicy: ClusterFirst
+  enableServiceLinks: true
+  imagePullSecrets:
+  - name: prometheus-dockercfg-tdhsp
+  nodeName: ci-ln-4zhdf4b-72292-lw57b-worker-c-szhjg
+  preemptionPolicy: PreemptLowerPriority
+  priority: 0
+  restartPolicy: Always
+  schedulerName: default-scheduler
+  securityContext:
+    fsGroup: 1000680000
+    seLinuxOptions:
+      level: s0:c26,c15
+    seccompProfile:
+      type: RuntimeDefault
+  serviceAccount: prometheus
+  serviceAccountName: prometheus
+  terminationGracePeriodSeconds: 30
+  tolerations:
+  - effect: NoExecute
+    key: node.kubernetes.io/not-ready
+    operator: Exists
+    tolerationSeconds: 300
+  - effect: NoExecute
+    key: node.kubernetes.io/unreachable
+    operator: Exists
+    tolerationSeconds: 300
+  - effect: NoSchedule
+    key: node.kubernetes.io/memory-pressure
+    operator: Exists
+  volumes:
+  - name: secret-prometheus-tls
+    secret:
+      defaultMode: 420
+      secretName: prometheus-tls
+  - name: secret-htpasswd
+    secret:
+      defaultMode: 420
+      secretName: htpasswd
+  - name: secret-prometheus-proxy
+    secret:
+      defaultMode: 420
+      secretName: prometheus-proxy
+  - configMap:
+      defaultMode: 420
+      items:
+      - key: ca-bundle.crt
+        path: tls-ca-bundle.pem
+      name: trusted-ca-bundle
+      optional: true
+    name: trusted-ca-bundle
+  - configMap:
+      defaultMode: 420
+      name: istio-basic
+      optional: true
+    name: istio-config-volume
+  - configMap:
+      defaultMode: 420
+      name: prometheus
+    name: config-volume
+  - name: kube-api-access-5l964
+    projected:
+      defaultMode: 420
+      sources:
+      - serviceAccountToken:
+          expirationSeconds: 3607
+          path: token
+      - configMap:
+          items:
+          - key: ca.crt
+            path: ca.crt
+          name: kube-root-ca.crt
+      - downwardAPI:
+          items:
+          - fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.namespace
+            path: namespace
+      - configMap:
+          items:
+          - key: service-ca.crt
+            path: service-ca.crt
+          name: openshift-service-ca.crt
+status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-03T20:03:12Z"
+    status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-03T20:03:19Z"
+    status: "True"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-03T20:03:19Z"
+    status: "True"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2023-03-03T20:03:12Z"
+    status: "True"
+    type: PodScheduled
+  containerStatuses:
+  - containerID: cri-o://72a7253dee9c2582acaadd1bc29ca23bed282ca9bb4778621478670d58f96a91
+    image: registry.redhat.io/openshift-service-mesh/prometheus-rhel8@sha256:e1638e9b1c36b48220ac8bbe208ef0f2d59d184b89e0388a2b73d8c0da11946c
+    imageID: registry.redhat.io/openshift-service-mesh/prometheus-rhel8@sha256:39914c73026c7dee64742bde9aeb2f6bdb4605172b293af17bc4780e5a6c94e5
+    lastState: {}
+    name: prometheus
+    ready: true
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2023-03-03T20:03:19Z"
+  - containerID: cri-o://c05d409f80dc0e643995cb9c65fc01cb7df9b7737fdb156739edd63a76d6512b
+    image: registry.redhat.io/openshift4/ose-oauth-proxy:latest
+    imageID: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:20507ebcaa06a2f027c7f7eb37a549b548f1d47b0335efa2be17813472acbdae
+    lastState: {}
+    name: prometheus-proxy
+    ready: true
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2023-03-03T20:03:14Z"
+  hostIP: 10.0.128.4
+  phase: Running
+  podIP: 10.129.2.20
+  podIPs:
+  - ip: 10.129.2.20
+  qosClass: Burstable
+  startTime: "2023-03-03T20:03:12Z"

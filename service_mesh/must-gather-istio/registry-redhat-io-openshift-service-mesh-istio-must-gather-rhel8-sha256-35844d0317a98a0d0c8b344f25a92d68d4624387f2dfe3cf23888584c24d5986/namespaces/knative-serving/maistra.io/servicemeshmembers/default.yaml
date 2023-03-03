@@ -1,0 +1,30 @@
+apiVersion: maistra.io/v1
+kind: ServiceMeshMember
+metadata:
+  annotations:
+    maistra.io/created-by: servicemeshmemberroll-controller
+  creationTimestamp: "2023-03-03T20:04:21Z"
+  finalizers:
+  - maistra.io/istio-operator
+  generation: 1
+  name: default
+  namespace: knative-serving
+  resourceVersion: "35736"
+  uid: 2a6108c5-f808-4877-90c1-a1f9d4bdd5d1
+spec:
+  controlPlaneRef:
+    name: basic
+    namespace: istio-system
+status:
+  annotations:
+    controlPlaneRef: istio-system/basic
+  conditions:
+  - lastTransitionTime: "2023-03-03T20:04:21Z"
+    status: "True"
+    type: Reconciled
+  - lastTransitionTime: "2023-03-03T20:04:21Z"
+    status: "True"
+    type: Ready
+  meshGeneration: 2
+  meshReconciledVersion: 2.3.1-1-2
+  observedGeneration: 1

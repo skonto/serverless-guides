@@ -1,0 +1,2719 @@
+---
+apiVersion: v1
+items:
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:02:53Z"
+  involvedObject:
+    apiVersion: maistra.io/v2
+    kind: ServiceMeshControlPlane
+    name: basic
+    namespace: istio-system
+    resourceVersion: "34288"
+    uid: 0c79eb74-854c-4f98-85c6-5955e78fd93e
+  kind: Event
+  lastTimestamp: "2023-03-03T20:02:53Z"
+  message: Installing mesh generation 2
+  metadata:
+    creationTimestamp: "2023-03-03T20:02:53Z"
+    name: basic.1749014ec0e53579
+    namespace: istio-system
+    resourceVersion: "34290"
+    uid: 51425520-5397-4326-8d0a-be7041749fd5
+  reason: Installing
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: servicemeshcontrolplane-controller
+  type: Normal
+- apiVersion: v1
+  count: 2
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:03:01Z"
+  involvedObject:
+    apiVersion: maistra.io/v2
+    kind: ServiceMeshControlPlane
+    name: basic
+    namespace: istio-system
+    resourceVersion: "34492"
+    uid: 0c79eb74-854c-4f98-85c6-5955e78fd93e
+  kind: Event
+  lastTimestamp: "2023-03-03T20:03:01Z"
+  message: 'Paused until the following components become ready: [istio-discovery]'
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:01Z"
+    name: basic.1749015077ba64dc
+    namespace: istio-system
+    resourceVersion: "34509"
+    uid: a94906ce-1a76-46f9-9a2a-543487f50d2a
+  reason: PausingInstall
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: servicemeshcontrolplane-controller
+  type: Normal
+- apiVersion: v1
+  count: 5
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:03:14Z"
+  involvedObject:
+    apiVersion: maistra.io/v2
+    kind: ServiceMeshControlPlane
+    name: basic
+    namespace: istio-system
+    resourceVersion: "34667"
+    uid: 0c79eb74-854c-4f98-85c6-5955e78fd93e
+  kind: Event
+  lastTimestamp: "2023-03-03T20:03:17Z"
+  message: 'Paused until the following components become ready: [prometheus]'
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:14Z"
+    name: basic.17490153874feb59
+    namespace: istio-system
+    resourceVersion: "34768"
+    uid: 2bc1bc91-8bf4-4d1f-827a-fdf02d41acf0
+  reason: PausingInstall
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: servicemeshcontrolplane-controller
+  type: Normal
+- apiVersion: v1
+  count: 4
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:03:23Z"
+  involvedObject:
+    apiVersion: maistra.io/v2
+    kind: ServiceMeshControlPlane
+    name: basic
+    namespace: istio-system
+    resourceVersion: "34910"
+    uid: 0c79eb74-854c-4f98-85c6-5955e78fd93e
+  kind: Event
+  lastTimestamp: "2023-03-03T20:03:27Z"
+  message: 'Paused until the following components become ready: [grafana istio-egress
+    istio-ingress]'
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:23Z"
+    name: basic.174901559a9f3aa7
+    namespace: istio-system
+    resourceVersion: "35048"
+    uid: d488311c-bd19-4adf-92fe-2c32edf6b68f
+  reason: PausingInstall
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: servicemeshcontrolplane-controller
+  type: Normal
+- apiVersion: v1
+  count: 2
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:03:39Z"
+  involvedObject:
+    apiVersion: maistra.io/v2
+    kind: ServiceMeshControlPlane
+    name: basic
+    namespace: istio-system
+    resourceVersion: "34968"
+    uid: 0c79eb74-854c-4f98-85c6-5955e78fd93e
+  kind: Event
+  lastTimestamp: "2023-03-03T20:03:39Z"
+  message: 'Paused until the following components become ready: [istio-egress istio-ingress]'
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:39Z"
+    name: basic.174901595c183ff5
+    namespace: istio-system
+    resourceVersion: "35202"
+    uid: 351a690b-5ea2-4424-ac02-bbb5674c9983
+  reason: PausingInstall
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: servicemeshcontrolplane-controller
+  type: Normal
+- apiVersion: v1
+  count: 2
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:03:47Z"
+  involvedObject:
+    apiVersion: maistra.io/v2
+    kind: ServiceMeshControlPlane
+    name: basic
+    namespace: istio-system
+    resourceVersion: "35200"
+    uid: 0c79eb74-854c-4f98-85c6-5955e78fd93e
+  kind: Event
+  lastTimestamp: "2023-03-03T20:03:47Z"
+  message: 'Paused until the following components become ready: [istio-ingress]'
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:47Z"
+    name: basic.1749015b29e971e7
+    namespace: istio-system
+    resourceVersion: "35306"
+    uid: b51c64b5-2376-4292-8401-19e62130c68e
+  reason: PausingInstall
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: servicemeshcontrolplane-controller
+  type: Normal
+- apiVersion: v1
+  count: 2
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:03:52Z"
+  involvedObject:
+    apiVersion: maistra.io/v2
+    kind: ServiceMeshControlPlane
+    name: basic
+    namespace: istio-system
+    resourceVersion: "35360"
+    uid: 0c79eb74-854c-4f98-85c6-5955e78fd93e
+  kind: Event
+  lastTimestamp: "2023-03-03T20:03:52Z"
+  message: 'Paused until the following components become ready: [wasm-extensions]'
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:52Z"
+    name: basic.1749015c608939df
+    namespace: istio-system
+    resourceVersion: "35381"
+    uid: f8549547-4fd7-4ad1-89ea-ef76bb423fa6
+  reason: PausingInstall
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: servicemeshcontrolplane-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:03:53Z"
+  involvedObject:
+    apiVersion: maistra.io/v2
+    kind: ServiceMeshControlPlane
+    name: basic
+    namespace: istio-system
+    resourceVersion: "35380"
+    uid: 0c79eb74-854c-4f98-85c6-5955e78fd93e
+  kind: Event
+  lastTimestamp: "2023-03-03T20:03:53Z"
+  message: Pruning obsolete resources
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:53Z"
+    name: basic.1749015cac397a3a
+    namespace: istio-system
+    resourceVersion: "35398"
+    uid: e64a7ec0-c845-4e49-9831-c84f23d1b4bf
+  reason: Pruning
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: servicemeshcontrolplane-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:04:00Z"
+  involvedObject:
+    apiVersion: maistra.io/v2
+    kind: ServiceMeshControlPlane
+    name: basic
+    namespace: istio-system
+    resourceVersion: "35380"
+    uid: 0c79eb74-854c-4f98-85c6-5955e78fd93e
+  kind: Event
+  lastTimestamp: "2023-03-03T20:04:00Z"
+  message: Successfully installed version 2.3.1-1-2
+  metadata:
+    creationTimestamp: "2023-03-03T20:04:00Z"
+    name: basic.1749015e3cf2f63f
+    namespace: istio-system
+    resourceVersion: "35432"
+    uid: 31f87797-db29-408c-a745-af6e9da0727a
+  reason: Installed
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: servicemeshcontrolplane-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:04:00Z"
+  involvedObject:
+    apiVersion: maistra.io/v2
+    kind: ServiceMeshControlPlane
+    name: basic
+    namespace: istio-system
+    resourceVersion: "35380"
+    uid: 0c79eb74-854c-4f98-85c6-5955e78fd93e
+  kind: Event
+  lastTimestamp: "2023-03-03T20:04:00Z"
+  message: All component deployments are Available
+  metadata:
+    creationTimestamp: "2023-03-03T20:04:00Z"
+    name: basic.1749015e3cf95f90
+    namespace: istio-system
+    resourceVersion: "35433"
+    uid: 8e721c80-13cb-4114-bb97-ed6f77b40f6f
+  reason: Ready
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: servicemeshcontrolplane-controller
+  type: Normal
+- action: Binding
+  apiVersion: v1
+  eventTime: "2023-03-03T20:03:21.459958Z"
+  firstTimestamp: null
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: grafana-5bf9788595-56tp4
+    namespace: istio-system
+    resourceVersion: "34908"
+    uid: 2a3f07ee-9962-4f24-83c0-f15461118ea5
+  kind: Event
+  lastTimestamp: null
+  message: Successfully assigned istio-system/grafana-5bf9788595-56tp4 to ci-ln-4zhdf4b-72292-lw57b-worker-c-szhjg
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:21Z"
+    name: grafana-5bf9788595-56tp4.1749015529f4b5ff
+    namespace: istio-system
+    resourceVersion: "34914"
+    uid: ccd3e00b-4c00-4c7d-8bb8-d11cd0002ed5
+  reason: Scheduled
+  reportingComponent: default-scheduler
+  reportingInstance: default-scheduler-ci-ln-4zhdf4b-72292-lw57b-master-1
+  source: {}
+  type: Normal
+- apiVersion: v1
+  count: 2
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:03:21Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: grafana-5bf9788595-56tp4
+    namespace: istio-system
+    resourceVersion: "34912"
+    uid: 2a3f07ee-9962-4f24-83c0-f15461118ea5
+  kind: Event
+  lastTimestamp: "2023-03-03T20:03:22Z"
+  message: 'MountVolume.SetUp failed for volume "secret-grafana-tls" : secret "grafana-tls"
+    not found'
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:21Z"
+    name: grafana-5bf9788595-56tp4.1749015539ebfdaa
+    namespace: istio-system
+    resourceVersion: "34937"
+    uid: 6693683f-0267-408b-80e2-b8f2035ccb02
+  reason: FailedMount
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-worker-c-szhjg
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:03:23Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: grafana-5bf9788595-56tp4
+    namespace: istio-system
+    resourceVersion: "34917"
+    uid: 2a3f07ee-9962-4f24-83c0-f15461118ea5
+  kind: Event
+  lastTimestamp: "2023-03-03T20:03:23Z"
+  message: Add eth0 [10.129.2.23/23] from ovn-kubernetes
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:23Z"
+    name: grafana-5bf9788595-56tp4.17490155b9371a55
+    namespace: istio-system
+    resourceVersion: "34998"
+    uid: ea04f701-5d77-4b6d-a71a-4531d753d300
+  reason: AddedInterface
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: multus
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:03:24Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{grafana-proxy}
+    kind: Pod
+    name: grafana-5bf9788595-56tp4
+    namespace: istio-system
+    resourceVersion: "34912"
+    uid: 2a3f07ee-9962-4f24-83c0-f15461118ea5
+  kind: Event
+  lastTimestamp: "2023-03-03T20:03:24Z"
+  message: Container image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:ce1de860b639d4831bb74b0271aed6882b45febb37f60bcf8a31157b87ce0495"
+    already present on machine
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:24Z"
+    name: grafana-5bf9788595-56tp4.17490155cda29af1
+    namespace: istio-system
+    resourceVersion: "35008"
+    uid: a71f3c51-c65f-42e6-afd5-8c83d94cf1c3
+  reason: Pulled
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-worker-c-szhjg
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:03:25Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{grafana-proxy}
+    kind: Pod
+    name: grafana-5bf9788595-56tp4
+    namespace: istio-system
+    resourceVersion: "34912"
+    uid: 2a3f07ee-9962-4f24-83c0-f15461118ea5
+  kind: Event
+  lastTimestamp: "2023-03-03T20:03:25Z"
+  message: Created container grafana-proxy
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:25Z"
+    name: grafana-5bf9788595-56tp4.1749015602c8a56f
+    namespace: istio-system
+    resourceVersion: "35016"
+    uid: 01e17c4c-50f2-4030-9f59-768ff2846597
+  reason: Created
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-worker-c-szhjg
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:03:25Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{grafana-proxy}
+    kind: Pod
+    name: grafana-5bf9788595-56tp4
+    namespace: istio-system
+    resourceVersion: "34912"
+    uid: 2a3f07ee-9962-4f24-83c0-f15461118ea5
+  kind: Event
+  lastTimestamp: "2023-03-03T20:03:25Z"
+  message: Started container grafana-proxy
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:25Z"
+    name: grafana-5bf9788595-56tp4.174901560e6a7b5c
+    namespace: istio-system
+    resourceVersion: "35020"
+    uid: 9cf7d9a2-f5f8-495d-a9af-7cf0edd579e1
+  reason: Started
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-worker-c-szhjg
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:03:25Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{grafana}
+    kind: Pod
+    name: grafana-5bf9788595-56tp4
+    namespace: istio-system
+    resourceVersion: "34912"
+    uid: 2a3f07ee-9962-4f24-83c0-f15461118ea5
+  kind: Event
+  lastTimestamp: "2023-03-03T20:03:25Z"
+  message: Pulling image "registry.redhat.io/openshift-service-mesh/grafana-rhel8@sha256:12a2436fa98384cc7dd054c1ed586742f623a11c9bbc47e7fd67aab847dc8430"
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:25Z"
+    name: grafana-5bf9788595-56tp4.17490156103469f8
+    namespace: istio-system
+    resourceVersion: "35022"
+    uid: 0b3e61f4-c3bd-483c-8046-47e54619e970
+  reason: Pulling
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-worker-c-szhjg
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:03:37Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{grafana}
+    kind: Pod
+    name: grafana-5bf9788595-56tp4
+    namespace: istio-system
+    resourceVersion: "34912"
+    uid: 2a3f07ee-9962-4f24-83c0-f15461118ea5
+  kind: Event
+  lastTimestamp: "2023-03-03T20:03:37Z"
+  message: Successfully pulled image "registry.redhat.io/openshift-service-mesh/grafana-rhel8@sha256:12a2436fa98384cc7dd054c1ed586742f623a11c9bbc47e7fd67aab847dc8430"
+    in 12.337248122s
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:37Z"
+    name: grafana-5bf9788595-56tp4.17490158ef903446
+    namespace: istio-system
+    resourceVersion: "35129"
+    uid: 8fc4128e-77e7-4d0e-a3d3-a780e6f0e648
+  reason: Pulled
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-worker-c-szhjg
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:03:38Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{grafana}
+    kind: Pod
+    name: grafana-5bf9788595-56tp4
+    namespace: istio-system
+    resourceVersion: "34912"
+    uid: 2a3f07ee-9962-4f24-83c0-f15461118ea5
+  kind: Event
+  lastTimestamp: "2023-03-03T20:03:38Z"
+  message: Created container grafana
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:38Z"
+    name: grafana-5bf9788595-56tp4.174901590e8fbd7b
+    namespace: istio-system
+    resourceVersion: "35140"
+    uid: f6702d02-8f06-4bc6-9e61-fc8838dfc238
+  reason: Created
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-worker-c-szhjg
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:03:38Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{grafana}
+    kind: Pod
+    name: grafana-5bf9788595-56tp4
+    namespace: istio-system
+    resourceVersion: "34912"
+    uid: 2a3f07ee-9962-4f24-83c0-f15461118ea5
+  kind: Event
+  lastTimestamp: "2023-03-03T20:03:38Z"
+  message: Started container grafana
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:38Z"
+    name: grafana-5bf9788595-56tp4.17490159171f4c5c
+    namespace: istio-system
+    resourceVersion: "35149"
+    uid: e15003fd-38e7-4c2a-8cdd-8480974be965
+  reason: Started
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-worker-c-szhjg
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:03:21Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: ReplicaSet
+    name: grafana-5bf9788595
+    namespace: istio-system
+    resourceVersion: "34904"
+    uid: c777555c-0790-4add-b70e-ae746d4a3665
+  kind: Event
+  lastTimestamp: "2023-03-03T20:03:21Z"
+  message: 'Created pod: grafana-5bf9788595-56tp4'
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:21Z"
+    name: grafana-5bf9788595.17490155267f26a1
+    namespace: istio-system
+    resourceVersion: "34911"
+    uid: 0e8aad85-e66f-40d3-9b4d-5f9689a477dc
+  reason: SuccessfulCreate
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: replicaset-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:03:21Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: grafana
+    namespace: istio-system
+    resourceVersion: "34903"
+    uid: 32b7a590-e4ea-4d55-aa4f-7f319e7eebd1
+  kind: Event
+  lastTimestamp: "2023-03-03T20:03:21Z"
+  message: Scaled up replica set grafana-5bf9788595 to 1
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:21Z"
+    name: grafana.1749015522b34c8d
+    namespace: istio-system
+    resourceVersion: "34907"
+    uid: f42bcb36-c09f-46ca-bbe5-bd8df85e9b06
+  reason: ScalingReplicaSet
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: deployment-controller
+  type: Normal
+- action: Binding
+  apiVersion: v1
+  eventTime: "2023-03-03T20:03:20.835330Z"
+  firstTimestamp: null
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: istio-egressgateway-757d5fb65d-d2hcz
+    namespace: istio-system
+    resourceVersion: "34869"
+    uid: 1febecbe-2671-4c71-aee9-edc35eac7f36
+  kind: Event
+  lastTimestamp: null
+  message: Successfully assigned istio-system/istio-egressgateway-757d5fb65d-d2hcz
+    to ci-ln-4zhdf4b-72292-lw57b-worker-c-szhjg
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:20Z"
+    name: istio-egressgateway-757d5fb65d-d2hcz.1749015504b98d74
+    namespace: istio-system
+    resourceVersion: "34876"
+    uid: 466bc039-2aec-485e-bb1a-3be128fcef35
+  reason: Scheduled
+  reportingComponent: default-scheduler
+  reportingInstance: default-scheduler-ci-ln-4zhdf4b-72292-lw57b-master-1
+  source: {}
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:03:21Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: istio-egressgateway-757d5fb65d-d2hcz
+    namespace: istio-system
+    resourceVersion: "34883"
+    uid: 1febecbe-2671-4c71-aee9-edc35eac7f36
+  kind: Event
+  lastTimestamp: "2023-03-03T20:03:21Z"
+  message: Add eth0 [10.129.2.22/23] from ovn-kubernetes
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:21Z"
+    name: istio-egressgateway-757d5fb65d-d2hcz.174901553976021e
+    namespace: istio-system
+    resourceVersion: "34925"
+    uid: 4dfccfba-3bae-4d15-ba19-9f8c434ac893
+  reason: AddedInterface
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: multus
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:03:21Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{istio-proxy}
+    kind: Pod
+    name: istio-egressgateway-757d5fb65d-d2hcz
+    namespace: istio-system
+    resourceVersion: "34872"
+    uid: 1febecbe-2671-4c71-aee9-edc35eac7f36
+  kind: Event
+  lastTimestamp: "2023-03-03T20:03:21Z"
+  message: Pulling image "registry.redhat.io/openshift-service-mesh/proxyv2-rhel8@sha256:e7acaa5d4a7f265cba1ad4f53859833390c5da1af31bb8546a5ae19f064a7dde"
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:21Z"
+    name: istio-egressgateway-757d5fb65d-d2hcz.174901553dab1043
+    namespace: istio-system
+    resourceVersion: "34928"
+    uid: f6a0cb5a-24ba-4789-b3de-f51cd12e0c68
+  reason: Pulling
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-worker-c-szhjg
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:03:37Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{istio-proxy}
+    kind: Pod
+    name: istio-egressgateway-757d5fb65d-d2hcz
+    namespace: istio-system
+    resourceVersion: "34872"
+    uid: 1febecbe-2671-4c71-aee9-edc35eac7f36
+  kind: Event
+  lastTimestamp: "2023-03-03T20:03:37Z"
+  message: Successfully pulled image "registry.redhat.io/openshift-service-mesh/proxyv2-rhel8@sha256:e7acaa5d4a7f265cba1ad4f53859833390c5da1af31bb8546a5ae19f064a7dde"
+    in 15.850270245s
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:37Z"
+    name: istio-egressgateway-757d5fb65d-d2hcz.17490158ee6b3ea3
+    namespace: istio-system
+    resourceVersion: "35128"
+    uid: 21404122-a91f-4a30-8259-ddc9f683d8e7
+  reason: Pulled
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-worker-c-szhjg
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:03:38Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{istio-proxy}
+    kind: Pod
+    name: istio-egressgateway-757d5fb65d-d2hcz
+    namespace: istio-system
+    resourceVersion: "34872"
+    uid: 1febecbe-2671-4c71-aee9-edc35eac7f36
+  kind: Event
+  lastTimestamp: "2023-03-03T20:03:38Z"
+  message: Created container istio-proxy
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:38Z"
+    name: istio-egressgateway-757d5fb65d-d2hcz.17490159091f2952
+    namespace: istio-system
+    resourceVersion: "35135"
+    uid: acbe13e8-2aa7-4fba-84e5-fa3519483f1d
+  reason: Created
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-worker-c-szhjg
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:03:38Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{istio-proxy}
+    kind: Pod
+    name: istio-egressgateway-757d5fb65d-d2hcz
+    namespace: istio-system
+    resourceVersion: "34872"
+    uid: 1febecbe-2671-4c71-aee9-edc35eac7f36
+  kind: Event
+  lastTimestamp: "2023-03-03T20:03:38Z"
+  message: Started container istio-proxy
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:38Z"
+    name: istio-egressgateway-757d5fb65d-d2hcz.174901590c950478
+    namespace: istio-system
+    resourceVersion: "35138"
+    uid: b2351459-6fb7-4b1f-97d7-c00b6e494291
+  reason: Started
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-worker-c-szhjg
+  type: Normal
+- apiVersion: v1
+  count: 6
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:03:39Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{istio-proxy}
+    kind: Pod
+    name: istio-egressgateway-757d5fb65d-d2hcz
+    namespace: istio-system
+    resourceVersion: "34872"
+    uid: 1febecbe-2671-4c71-aee9-edc35eac7f36
+  kind: Event
+  lastTimestamp: "2023-03-03T20:03:45Z"
+  message: 'Readiness probe failed: Get "http://10.129.2.22:15021/healthz/ready":
+    dial tcp 10.129.2.22:15021: connect: connection refused'
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:39Z"
+    name: istio-egressgateway-757d5fb65d-d2hcz.174901594a0d634d
+    namespace: istio-system
+    resourceVersion: "35283"
+    uid: c7cfa5d9-5a4c-418f-83dd-17b07801fa4c
+  reason: Unhealthy
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-worker-c-szhjg
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:03:20Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: ReplicaSet
+    name: istio-egressgateway-757d5fb65d
+    namespace: istio-system
+    resourceVersion: "34863"
+    uid: 8d0c93cf-eb29-4cef-a0c9-115f4937d4be
+  kind: Event
+  lastTimestamp: "2023-03-03T20:03:20Z"
+  message: 'Created pod: istio-egressgateway-757d5fb65d-d2hcz'
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:20Z"
+    name: istio-egressgateway-757d5fb65d.1749015503095c74
+    namespace: istio-system
+    resourceVersion: "34873"
+    uid: 9de29f0d-e444-4d23-8892-f6ee2a6a1fbf
+  reason: SuccessfulCreate
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: replicaset-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:03:20Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: istio-egressgateway
+    namespace: istio-system
+    resourceVersion: "34856"
+    uid: 276eb2db-fe5b-43e0-a964-c6c172e973a5
+  kind: Event
+  lastTimestamp: "2023-03-03T20:03:20Z"
+  message: Scaled up replica set istio-egressgateway-757d5fb65d to 1
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:20Z"
+    name: istio-egressgateway.17490154feddc49d
+    namespace: istio-system
+    resourceVersion: "34866"
+    uid: b836f0c5-4970-47eb-a7c7-0f25a058cce6
+  reason: ScalingReplicaSet
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: deployment-controller
+  type: Normal
+- action: Binding
+  apiVersion: v1
+  eventTime: "2023-03-03T20:03:20.662780Z"
+  firstTimestamp: null
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: istio-ingressgateway-9d96c6789-mvjmw
+    namespace: istio-system
+    resourceVersion: "34847"
+    uid: f3489ddb-bfaa-49b5-8fc6-8d8abcd55733
+  kind: Event
+  lastTimestamp: null
+  message: Successfully assigned istio-system/istio-ingressgateway-9d96c6789-mvjmw
+    to ci-ln-4zhdf4b-72292-lw57b-worker-c-szhjg
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:20Z"
+    name: istio-ingressgateway-9d96c6789-mvjmw.17490154fa70ace3
+    namespace: istio-system
+    resourceVersion: "34860"
+    uid: 1014b478-2ad0-464c-80a9-023e86b02ff6
+  reason: Scheduled
+  reportingComponent: default-scheduler
+  reportingInstance: default-scheduler-ci-ln-4zhdf4b-72292-lw57b-master-1
+  source: {}
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:03:21Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: istio-ingressgateway-9d96c6789-mvjmw
+    namespace: istio-system
+    resourceVersion: "34868"
+    uid: f3489ddb-bfaa-49b5-8fc6-8d8abcd55733
+  kind: Event
+  lastTimestamp: "2023-03-03T20:03:21Z"
+  message: Add eth0 [10.129.2.21/23] from ovn-kubernetes
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:21Z"
+    name: istio-ingressgateway-9d96c6789-mvjmw.174901552d477a4a
+    namespace: istio-system
+    resourceVersion: "34918"
+    uid: 58277b8a-1571-486f-9e7e-ed4080c3a9f0
+  reason: AddedInterface
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: multus
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:03:21Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{istio-proxy}
+    kind: Pod
+    name: istio-ingressgateway-9d96c6789-mvjmw
+    namespace: istio-system
+    resourceVersion: "34854"
+    uid: f3489ddb-bfaa-49b5-8fc6-8d8abcd55733
+  kind: Event
+  lastTimestamp: "2023-03-03T20:03:21Z"
+  message: Pulling image "registry.redhat.io/openshift-service-mesh/proxyv2-rhel8@sha256:e7acaa5d4a7f265cba1ad4f53859833390c5da1af31bb8546a5ae19f064a7dde"
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:21Z"
+    name: istio-ingressgateway-9d96c6789-mvjmw.17490155321d6613
+    namespace: istio-system
+    resourceVersion: "34922"
+    uid: 86f27160-d0cb-40e6-9392-275ff9039895
+  reason: Pulling
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-worker-c-szhjg
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:03:37Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{istio-proxy}
+    kind: Pod
+    name: istio-ingressgateway-9d96c6789-mvjmw
+    namespace: istio-system
+    resourceVersion: "34854"
+    uid: f3489ddb-bfaa-49b5-8fc6-8d8abcd55733
+  kind: Event
+  lastTimestamp: "2023-03-03T20:03:37Z"
+  message: Successfully pulled image "registry.redhat.io/openshift-service-mesh/proxyv2-rhel8@sha256:e7acaa5d4a7f265cba1ad4f53859833390c5da1af31bb8546a5ae19f064a7dde"
+    in 16.043483104s
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:37Z"
+    name: istio-ingressgateway-9d96c6789-mvjmw.17490158ee61d62e
+    namespace: istio-system
+    resourceVersion: "35127"
+    uid: bb832230-e2c8-42dc-b88c-56a0640a6bdb
+  reason: Pulled
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-worker-c-szhjg
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:03:38Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{istio-proxy}
+    kind: Pod
+    name: istio-ingressgateway-9d96c6789-mvjmw
+    namespace: istio-system
+    resourceVersion: "34854"
+    uid: f3489ddb-bfaa-49b5-8fc6-8d8abcd55733
+  kind: Event
+  lastTimestamp: "2023-03-03T20:03:38Z"
+  message: Created container istio-proxy
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:38Z"
+    name: istio-ingressgateway-9d96c6789-mvjmw.1749015909226878
+    namespace: istio-system
+    resourceVersion: "35136"
+    uid: fe9cf05f-c003-4109-b1cb-8c115a77b1de
+  reason: Created
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-worker-c-szhjg
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:03:38Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{istio-proxy}
+    kind: Pod
+    name: istio-ingressgateway-9d96c6789-mvjmw
+    namespace: istio-system
+    resourceVersion: "34854"
+    uid: f3489ddb-bfaa-49b5-8fc6-8d8abcd55733
+  kind: Event
+  lastTimestamp: "2023-03-03T20:03:38Z"
+  message: Started container istio-proxy
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:38Z"
+    name: istio-ingressgateway-9d96c6789-mvjmw.174901590e955e2d
+    namespace: istio-system
+    resourceVersion: "35142"
+    uid: bf923d84-44b2-4c8c-a9ac-8a65843e39b6
+  reason: Started
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-worker-c-szhjg
+  type: Normal
+- apiVersion: v1
+  count: 6
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:03:39Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{istio-proxy}
+    kind: Pod
+    name: istio-ingressgateway-9d96c6789-mvjmw
+    namespace: istio-system
+    resourceVersion: "34854"
+    uid: f3489ddb-bfaa-49b5-8fc6-8d8abcd55733
+  kind: Event
+  lastTimestamp: "2023-03-03T20:03:47Z"
+  message: 'Readiness probe failed: Get "http://10.129.2.21:15021/healthz/ready":
+    dial tcp 10.129.2.21:15021: connect: connection refused'
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:39Z"
+    name: istio-ingressgateway-9d96c6789-mvjmw.174901594b9b46a1
+    namespace: istio-system
+    resourceVersion: "35295"
+    uid: d951f722-8307-4a6b-9996-80421becb4ae
+  reason: Unhealthy
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-worker-c-szhjg
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:03:20Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: ReplicaSet
+    name: istio-ingressgateway-9d96c6789
+    namespace: istio-system
+    resourceVersion: "34838"
+    uid: dee2eddc-9c03-4b68-b5d0-0aa0cd99b2c0
+  kind: Event
+  lastTimestamp: "2023-03-03T20:03:20Z"
+  message: 'Created pod: istio-ingressgateway-9d96c6789-mvjmw'
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:20Z"
+    name: istio-ingressgateway-9d96c6789.17490154f76c1ba0
+    namespace: istio-system
+    resourceVersion: "34852"
+    uid: 1c864907-ce36-4d7e-a032-7d418230faa7
+  reason: SuccessfulCreate
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: replicaset-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:03:20Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: istio-ingressgateway
+    namespace: istio-system
+    resourceVersion: "34834"
+    uid: ffafffd9-d64c-42bd-891c-f3f5dac677f2
+  kind: Event
+  lastTimestamp: "2023-03-03T20:03:20Z"
+  message: Scaled up replica set istio-ingressgateway-9d96c6789 to 1
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:20Z"
+    name: istio-ingressgateway.17490154f298099b
+    namespace: istio-system
+    resourceVersion: "34843"
+    uid: da537ecd-c81e-4e43-81a2-b3918d3bb4a5
+  reason: ScalingReplicaSet
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: deployment-controller
+  type: Normal
+- action: Binding
+  apiVersion: v1
+  eventTime: "2023-03-03T20:02:58.165107Z"
+  firstTimestamp: null
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: istiod-basic-544d455f65-7qpmd
+    namespace: istio-system
+    resourceVersion: "34469"
+    uid: 909597fa-9ebf-4130-b7ab-22ca7fd26f28
+  kind: Event
+  lastTimestamp: null
+  message: Successfully assigned istio-system/istiod-basic-544d455f65-7qpmd to ci-ln-4zhdf4b-72292-lw57b-worker-c-szhjg
+  metadata:
+    creationTimestamp: "2023-03-03T20:02:58Z"
+    name: istiod-basic-544d455f65-7qpmd.1749014fbd797e9d
+    namespace: istio-system
+    resourceVersion: "34474"
+    uid: 89441dd9-3404-438e-bd2b-2a25c7c181e3
+  reason: Scheduled
+  reportingComponent: default-scheduler
+  reportingInstance: default-scheduler-ci-ln-4zhdf4b-72292-lw57b-master-1
+  source: {}
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:02:59Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: istiod-basic-544d455f65-7qpmd
+    namespace: istio-system
+    resourceVersion: "34481"
+    uid: 909597fa-9ebf-4130-b7ab-22ca7fd26f28
+  kind: Event
+  lastTimestamp: "2023-03-03T20:02:59Z"
+  message: Add eth0 [10.129.2.19/23] from ovn-kubernetes
+  metadata:
+    creationTimestamp: "2023-03-03T20:02:59Z"
+    name: istiod-basic-544d455f65-7qpmd.1749014ffbae111d
+    namespace: istio-system
+    resourceVersion: "34486"
+    uid: 72596775-1250-44d5-ac80-dfa71832d977
+  reason: AddedInterface
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: multus
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:02:59Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{discovery}
+    kind: Pod
+    name: istiod-basic-544d455f65-7qpmd
+    namespace: istio-system
+    resourceVersion: "34472"
+    uid: 909597fa-9ebf-4130-b7ab-22ca7fd26f28
+  kind: Event
+  lastTimestamp: "2023-03-03T20:02:59Z"
+  message: Pulling image "registry.redhat.io/openshift-service-mesh/pilot-rhel8@sha256:1be67785c051c48313a88e5e1ed5ee2de0d90169d5845457adad7c58dfc659fa"
+  metadata:
+    creationTimestamp: "2023-03-03T20:02:59Z"
+    name: istiod-basic-544d455f65-7qpmd.1749014ffefbbc00
+    namespace: istio-system
+    resourceVersion: "34491"
+    uid: a11a5ce0-31f5-4441-be50-347f2b6a9739
+  reason: Pulling
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-worker-c-szhjg
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:03:09Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{discovery}
+    kind: Pod
+    name: istiod-basic-544d455f65-7qpmd
+    namespace: istio-system
+    resourceVersion: "34472"
+    uid: 909597fa-9ebf-4130-b7ab-22ca7fd26f28
+  kind: Event
+  lastTimestamp: "2023-03-03T20:03:09Z"
+  message: Successfully pulled image "registry.redhat.io/openshift-service-mesh/pilot-rhel8@sha256:1be67785c051c48313a88e5e1ed5ee2de0d90169d5845457adad7c58dfc659fa"
+    in 9.739458862s
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:09Z"
+    name: istiod-basic-544d455f65-7qpmd.174901524380681d
+    namespace: istio-system
+    resourceVersion: "34584"
+    uid: 71274897-2cad-4150-b02c-ec7206d4d35e
+  reason: Pulled
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-worker-c-szhjg
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:03:09Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{discovery}
+    kind: Pod
+    name: istiod-basic-544d455f65-7qpmd
+    namespace: istio-system
+    resourceVersion: "34472"
+    uid: 909597fa-9ebf-4130-b7ab-22ca7fd26f28
+  kind: Event
+  lastTimestamp: "2023-03-03T20:03:09Z"
+  message: Created container discovery
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:09Z"
+    name: istiod-basic-544d455f65-7qpmd.1749015253aa97c0
+    namespace: istio-system
+    resourceVersion: "34586"
+    uid: 0809bbd6-e83c-4218-8914-8a0260d58e8c
+  reason: Created
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-worker-c-szhjg
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:03:09Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{discovery}
+    kind: Pod
+    name: istiod-basic-544d455f65-7qpmd
+    namespace: istio-system
+    resourceVersion: "34472"
+    uid: 909597fa-9ebf-4130-b7ab-22ca7fd26f28
+  kind: Event
+  lastTimestamp: "2023-03-03T20:03:09Z"
+  message: Started container discovery
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:09Z"
+    name: istiod-basic-544d455f65-7qpmd.1749015257e59648
+    namespace: istio-system
+    resourceVersion: "34587"
+    uid: 97bf0f48-7448-47a0-be76-007c1ecf5153
+  reason: Started
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-worker-c-szhjg
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:02:58Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: ReplicaSet
+    name: istiod-basic-544d455f65
+    namespace: istio-system
+    resourceVersion: "34456"
+    uid: 3bbb80da-aa3e-4cbf-8eb1-12db5ce8843f
+  kind: Event
+  lastTimestamp: "2023-03-03T20:02:58Z"
+  message: 'Created pod: istiod-basic-544d455f65-7qpmd'
+  metadata:
+    creationTimestamp: "2023-03-03T20:02:58Z"
+    name: istiod-basic-544d455f65.1749014fba41ab19
+    namespace: istio-system
+    resourceVersion: "34471"
+    uid: 894f33f9-d7ae-4fa6-84bb-2a27a05ba2f3
+  reason: SuccessfulCreate
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: replicaset-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:02:57Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: istiod-basic
+    namespace: istio-system
+    resourceVersion: "34450"
+    uid: d24658a7-9350-4fd1-a282-2e3837685314
+  kind: Event
+  lastTimestamp: "2023-03-03T20:02:57Z"
+  message: Scaled up replica set istiod-basic-544d455f65 to 1
+  metadata:
+    creationTimestamp: "2023-03-03T20:02:57Z"
+    name: istiod-basic.1749014fa9eb472e
+    namespace: istio-system
+    resourceVersion: "34463"
+    uid: 633f211b-a6b8-478d-8210-98edac832d58
+  reason: ScalingReplicaSet
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: deployment-controller
+  type: Normal
+- action: Binding
+  apiVersion: v1
+  eventTime: "2023-03-03T20:03:23.832806Z"
+  firstTimestamp: null
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: jaeger-7b7c8dc85b-fcncz
+    namespace: istio-system
+    resourceVersion: "34988"
+    uid: a3aa603f-a35f-4629-9eb2-e59fef077d61
+  kind: Event
+  lastTimestamp: null
+  message: Successfully assigned istio-system/jaeger-7b7c8dc85b-fcncz to ci-ln-4zhdf4b-72292-lw57b-worker-c-szhjg
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:23Z"
+    name: jaeger-7b7c8dc85b-fcncz.17490155b7638287
+    namespace: istio-system
+    resourceVersion: "34996"
+    uid: 59db074a-3a22-4f88-af6f-9166b103c6ef
+  reason: Scheduled
+  reportingComponent: default-scheduler
+  reportingInstance: default-scheduler-ci-ln-4zhdf4b-72292-lw57b-master-1
+  source: {}
+  type: Normal
+- apiVersion: v1
+  count: 2
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:03:24Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: jaeger-7b7c8dc85b-fcncz
+    namespace: istio-system
+    resourceVersion: "34993"
+    uid: a3aa603f-a35f-4629-9eb2-e59fef077d61
+  kind: Event
+  lastTimestamp: "2023-03-03T20:03:24Z"
+  message: 'MountVolume.SetUp failed for volume "jaeger-ui-oauth-proxy-tls" : secret
+    "jaeger-ui-oauth-proxy-tls" not found'
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:24Z"
+    name: jaeger-7b7c8dc85b-fcncz.17490155c5b294ca
+    namespace: istio-system
+    resourceVersion: "35011"
+    uid: 8bf87de8-3771-4943-9afd-a504e1249500
+  reason: FailedMount
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-worker-c-szhjg
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:03:26Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: jaeger-7b7c8dc85b-fcncz
+    namespace: istio-system
+    resourceVersion: "35006"
+    uid: a3aa603f-a35f-4629-9eb2-e59fef077d61
+  kind: Event
+  lastTimestamp: "2023-03-03T20:03:26Z"
+  message: Add eth0 [10.129.2.24/23] from ovn-kubernetes
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:26Z"
+    name: jaeger-7b7c8dc85b-fcncz.1749015652ee3fde
+    namespace: istio-system
+    resourceVersion: "35034"
+    uid: 513dcffa-4f5c-4cc7-b6cf-a32b8c6484b8
+  reason: AddedInterface
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: multus
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:03:26Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{jaeger}
+    kind: Pod
+    name: jaeger-7b7c8dc85b-fcncz
+    namespace: istio-system
+    resourceVersion: "34993"
+    uid: a3aa603f-a35f-4629-9eb2-e59fef077d61
+  kind: Event
+  lastTimestamp: "2023-03-03T20:03:26Z"
+  message: Pulling image "registry.redhat.io/rhosdt/jaeger-all-in-one-rhel8@sha256:833b64936a1035187fef2b26c439900af33f5ad8678e117f866987801b1bfb88"
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:26Z"
+    name: jaeger-7b7c8dc85b-fcncz.174901565c3c2ed0
+    namespace: istio-system
+    resourceVersion: "35038"
+    uid: 5a30a663-ad4b-47ef-9db5-dec2c12478bb
+  reason: Pulling
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-worker-c-szhjg
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:03:37Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{jaeger}
+    kind: Pod
+    name: jaeger-7b7c8dc85b-fcncz
+    namespace: istio-system
+    resourceVersion: "34993"
+    uid: a3aa603f-a35f-4629-9eb2-e59fef077d61
+  kind: Event
+  lastTimestamp: "2023-03-03T20:03:37Z"
+  message: Successfully pulled image "registry.redhat.io/rhosdt/jaeger-all-in-one-rhel8@sha256:833b64936a1035187fef2b26c439900af33f5ad8678e117f866987801b1bfb88"
+    in 11.065153024s
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:37Z"
+    name: jaeger-7b7c8dc85b-fcncz.17490158efc5542d
+    namespace: istio-system
+    resourceVersion: "35130"
+    uid: 1215ed8f-afa1-4e80-a3dd-10f82d163fcc
+  reason: Pulled
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-worker-c-szhjg
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:03:38Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{jaeger}
+    kind: Pod
+    name: jaeger-7b7c8dc85b-fcncz
+    namespace: istio-system
+    resourceVersion: "34993"
+    uid: a3aa603f-a35f-4629-9eb2-e59fef077d61
+  kind: Event
+  lastTimestamp: "2023-03-03T20:03:38Z"
+  message: Created container jaeger
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:38Z"
+    name: jaeger-7b7c8dc85b-fcncz.174901590c86bf4d
+    namespace: istio-system
+    resourceVersion: "35137"
+    uid: 21093406-add9-4fd8-a977-816b43356d4a
+  reason: Created
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-worker-c-szhjg
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:03:38Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{jaeger}
+    kind: Pod
+    name: jaeger-7b7c8dc85b-fcncz
+    namespace: istio-system
+    resourceVersion: "34993"
+    uid: a3aa603f-a35f-4629-9eb2-e59fef077d61
+  kind: Event
+  lastTimestamp: "2023-03-03T20:03:38Z"
+  message: Started container jaeger
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:38Z"
+    name: jaeger-7b7c8dc85b-fcncz.17490159125f16b8
+    namespace: istio-system
+    resourceVersion: "35145"
+    uid: 44e5a759-bf6a-489b-8fb4-5089c2492991
+  reason: Started
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-worker-c-szhjg
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:03:38Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{oauth-proxy}
+    kind: Pod
+    name: jaeger-7b7c8dc85b-fcncz
+    namespace: istio-system
+    resourceVersion: "34993"
+    uid: a3aa603f-a35f-4629-9eb2-e59fef077d61
+  kind: Event
+  lastTimestamp: "2023-03-03T20:03:38Z"
+  message: Container image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:ce1de860b639d4831bb74b0271aed6882b45febb37f60bcf8a31157b87ce0495"
+    already present on machine
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:38Z"
+    name: jaeger-7b7c8dc85b-fcncz.1749015912726c7e
+    namespace: istio-system
+    resourceVersion: "35146"
+    uid: a7334f2f-6304-40a4-9542-d11305af91e9
+  reason: Pulled
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-worker-c-szhjg
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:03:38Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{oauth-proxy}
+    kind: Pod
+    name: jaeger-7b7c8dc85b-fcncz
+    namespace: istio-system
+    resourceVersion: "34993"
+    uid: a3aa603f-a35f-4629-9eb2-e59fef077d61
+  kind: Event
+  lastTimestamp: "2023-03-03T20:03:38Z"
+  message: Created container oauth-proxy
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:38Z"
+    name: jaeger-7b7c8dc85b-fcncz.1749015936db160f
+    namespace: istio-system
+    resourceVersion: "35151"
+    uid: db8fde1d-b160-463f-bf54-abbb64e2a156
+  reason: Created
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-worker-c-szhjg
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:03:38Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{oauth-proxy}
+    kind: Pod
+    name: jaeger-7b7c8dc85b-fcncz
+    namespace: istio-system
+    resourceVersion: "34993"
+    uid: a3aa603f-a35f-4629-9eb2-e59fef077d61
+  kind: Event
+  lastTimestamp: "2023-03-03T20:03:38Z"
+  message: Started container oauth-proxy
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:38Z"
+    name: jaeger-7b7c8dc85b-fcncz.1749015939194d45
+    namespace: istio-system
+    resourceVersion: "35152"
+    uid: 01334814-51b0-4d60-ae22-1c94b6e7400d
+  reason: Started
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-worker-c-szhjg
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:03:23Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: ReplicaSet
+    name: jaeger-7b7c8dc85b
+    namespace: istio-system
+    resourceVersion: "34984"
+    uid: d35557d8-f892-4e31-b320-ef53256ff1c9
+  kind: Event
+  lastTimestamp: "2023-03-03T20:03:23Z"
+  message: 'Created pod: jaeger-7b7c8dc85b-fcncz'
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:23Z"
+    name: jaeger-7b7c8dc85b.17490155b48ba1a4
+    namespace: istio-system
+    resourceVersion: "34994"
+    uid: 26c2732f-a475-412d-b9bf-0ff96254a288
+  reason: SuccessfulCreate
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: replicaset-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:03:23Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: jaeger
+    namespace: istio-system
+    resourceVersion: "34983"
+    uid: bf8e11ee-9924-425e-93fe-559688c3fe92
+  kind: Event
+  lastTimestamp: "2023-03-03T20:03:23Z"
+  message: Scaled up replica set jaeger-7b7c8dc85b to 1
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:23Z"
+    name: jaeger.17490155abf36a14
+    namespace: istio-system
+    resourceVersion: "34986"
+    uid: 3e010570-87a4-4b8c-a0b3-1be041c4a88d
+  reason: ScalingReplicaSet
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: deployment-controller
+  type: Normal
+- action: Binding
+  apiVersion: v1
+  eventTime: "2023-03-03T20:05:27.512114Z"
+  firstTimestamp: null
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: kiali-74dd54dd5d-xz8hl
+    namespace: istio-system
+    resourceVersion: "36297"
+    uid: 0777e1cc-52b1-4c4e-94aa-a5b9b5137d69
+  kind: Event
+  lastTimestamp: null
+  message: Successfully assigned istio-system/kiali-74dd54dd5d-xz8hl to ci-ln-4zhdf4b-72292-lw57b-worker-b-wtt2s
+  metadata:
+    creationTimestamp: "2023-03-03T20:05:27Z"
+    name: kiali-74dd54dd5d-xz8hl.17490172833fe481
+    namespace: istio-system
+    resourceVersion: "36302"
+    uid: 9c903961-abc3-43de-8469-5452b69dd6d1
+  reason: Scheduled
+  reportingComponent: default-scheduler
+  reportingInstance: default-scheduler-ci-ln-4zhdf4b-72292-lw57b-master-1
+  source: {}
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:05:28Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: kiali-74dd54dd5d-xz8hl
+    namespace: istio-system
+    resourceVersion: "36306"
+    uid: 0777e1cc-52b1-4c4e-94aa-a5b9b5137d69
+  kind: Event
+  lastTimestamp: "2023-03-03T20:05:28Z"
+  message: Add eth0 [10.128.2.19/23] from ovn-kubernetes
+  metadata:
+    creationTimestamp: "2023-03-03T20:05:28Z"
+    name: kiali-74dd54dd5d-xz8hl.17490172ba4f593b
+    namespace: istio-system
+    resourceVersion: "36316"
+    uid: 7b5c9bb5-f818-4c49-997c-54075193a633
+  reason: AddedInterface
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: multus
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:05:28Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{kiali}
+    kind: Pod
+    name: kiali-74dd54dd5d-xz8hl
+    namespace: istio-system
+    resourceVersion: "36299"
+    uid: 0777e1cc-52b1-4c4e-94aa-a5b9b5137d69
+  kind: Event
+  lastTimestamp: "2023-03-03T20:05:28Z"
+  message: Pulling image "registry.redhat.io/openshift-service-mesh/kiali-rhel8@sha256:13442c85948c6ef194b3c0a5547f6deb44e6318b2326a563cd324b50ca75d9dd"
+  metadata:
+    creationTimestamp: "2023-03-03T20:05:28Z"
+    name: kiali-74dd54dd5d-xz8hl.17490172bd6af14f
+    namespace: istio-system
+    resourceVersion: "36319"
+    uid: ab6705c8-9600-418d-8b69-6b93be49427f
+  reason: Pulling
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-worker-b-wtt2s
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:05:35Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{kiali}
+    kind: Pod
+    name: kiali-74dd54dd5d-xz8hl
+    namespace: istio-system
+    resourceVersion: "36299"
+    uid: 0777e1cc-52b1-4c4e-94aa-a5b9b5137d69
+  kind: Event
+  lastTimestamp: "2023-03-03T20:05:35Z"
+  message: Successfully pulled image "registry.redhat.io/openshift-service-mesh/kiali-rhel8@sha256:13442c85948c6ef194b3c0a5547f6deb44e6318b2326a563cd324b50ca75d9dd"
+    in 6.60244771s
+  metadata:
+    creationTimestamp: "2023-03-03T20:05:35Z"
+    name: kiali-74dd54dd5d-xz8hl.1749017446f4f6f0
+    namespace: istio-system
+    resourceVersion: "36390"
+    uid: 4b62bc56-364a-435e-9f23-3fe1edec042c
+  reason: Pulled
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-worker-b-wtt2s
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:05:35Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{kiali}
+    kind: Pod
+    name: kiali-74dd54dd5d-xz8hl
+    namespace: istio-system
+    resourceVersion: "36299"
+    uid: 0777e1cc-52b1-4c4e-94aa-a5b9b5137d69
+  kind: Event
+  lastTimestamp: "2023-03-03T20:05:35Z"
+  message: Created container kiali
+  metadata:
+    creationTimestamp: "2023-03-03T20:05:35Z"
+    name: kiali-74dd54dd5d-xz8hl.174901745f691025
+    namespace: istio-system
+    resourceVersion: "36392"
+    uid: a01d9763-6e34-4418-af05-e8e53aace3c4
+  reason: Created
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-worker-b-wtt2s
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:05:35Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{kiali}
+    kind: Pod
+    name: kiali-74dd54dd5d-xz8hl
+    namespace: istio-system
+    resourceVersion: "36299"
+    uid: 0777e1cc-52b1-4c4e-94aa-a5b9b5137d69
+  kind: Event
+  lastTimestamp: "2023-03-03T20:05:35Z"
+  message: Started container kiali
+  metadata:
+    creationTimestamp: "2023-03-03T20:05:35Z"
+    name: kiali-74dd54dd5d-xz8hl.17490174623c6139
+    namespace: istio-system
+    resourceVersion: "36393"
+    uid: 62b023ab-4c38-4fff-a674-a226a565601c
+  reason: Started
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-worker-b-wtt2s
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:05:27Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: ReplicaSet
+    name: kiali-74dd54dd5d
+    namespace: istio-system
+    resourceVersion: "36294"
+    uid: 3d992c3a-7871-465e-9b5e-bc5b78aa2f50
+  kind: Event
+  lastTimestamp: "2023-03-03T20:05:27Z"
+  message: 'Created pod: kiali-74dd54dd5d-xz8hl'
+  metadata:
+    creationTimestamp: "2023-03-03T20:05:27Z"
+    name: kiali-74dd54dd5d.1749017281a0bc9a
+    namespace: istio-system
+    resourceVersion: "36298"
+    uid: b8e34652-baf1-4c67-9392-fd8cccfbf7b0
+  reason: SuccessfulCreate
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: replicaset-controller
+  type: Normal
+- action: Binding
+  apiVersion: v1
+  eventTime: "2023-03-03T20:04:28.723207Z"
+  firstTimestamp: null
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: kiali-bb84b5c4f-l4rzk
+    namespace: istio-system
+    resourceVersion: "35804"
+    uid: 82908340-91cd-44de-85e4-cc81939966c1
+  kind: Event
+  lastTimestamp: null
+  message: Successfully assigned istio-system/kiali-bb84b5c4f-l4rzk to ci-ln-4zhdf4b-72292-lw57b-worker-a-z86r5
+  metadata:
+    creationTimestamp: "2023-03-03T20:04:28Z"
+    name: kiali-bb84b5c4f-l4rzk.17490164d328660e
+    namespace: istio-system
+    resourceVersion: "35809"
+    uid: 0349249c-49e0-4d47-8306-82271942a260
+  reason: Scheduled
+  reportingComponent: default-scheduler
+  reportingInstance: default-scheduler-ci-ln-4zhdf4b-72292-lw57b-master-1
+  source: {}
+  type: Normal
+- apiVersion: v1
+  count: 2
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:04:28Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: kiali-bb84b5c4f-l4rzk
+    namespace: istio-system
+    resourceVersion: "35807"
+    uid: 82908340-91cd-44de-85e4-cc81939966c1
+  kind: Event
+  lastTimestamp: "2023-03-03T20:04:29Z"
+  message: 'MountVolume.SetUp failed for volume "kiali-cert" : secret "kiali-cert-secret"
+    not found'
+  metadata:
+    creationTimestamp: "2023-03-03T20:04:28Z"
+    name: kiali-bb84b5c4f-l4rzk.17490164e2a83d92
+    namespace: istio-system
+    resourceVersion: "35816"
+    uid: 45d00a90-b4bb-4698-80ca-abd71c2765d1
+  reason: FailedMount
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-worker-a-z86r5
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:04:30Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: kiali-bb84b5c4f-l4rzk
+    namespace: istio-system
+    resourceVersion: "35814"
+    uid: 82908340-91cd-44de-85e4-cc81939966c1
+  kind: Event
+  lastTimestamp: "2023-03-03T20:04:30Z"
+  message: Add eth0 [10.131.0.22/23] from ovn-kubernetes
+  metadata:
+    creationTimestamp: "2023-03-03T20:04:30Z"
+    name: kiali-bb84b5c4f-l4rzk.17490165589fe774
+    namespace: istio-system
+    resourceVersion: "35830"
+    uid: 37a2706f-7ff8-4094-bd95-960a72f018a1
+  reason: AddedInterface
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: multus
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:04:30Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{kiali}
+    kind: Pod
+    name: kiali-bb84b5c4f-l4rzk
+    namespace: istio-system
+    resourceVersion: "35807"
+    uid: 82908340-91cd-44de-85e4-cc81939966c1
+  kind: Event
+  lastTimestamp: "2023-03-03T20:04:30Z"
+  message: Pulling image "registry.redhat.io/openshift-service-mesh/kiali-rhel8@sha256:13442c85948c6ef194b3c0a5547f6deb44e6318b2326a563cd324b50ca75d9dd"
+  metadata:
+    creationTimestamp: "2023-03-03T20:04:31Z"
+    name: kiali-bb84b5c4f-l4rzk.174901655ac83afe
+    namespace: istio-system
+    resourceVersion: "35832"
+    uid: 80eab617-f6e6-4fd2-8793-15baa78c837c
+  reason: Pulling
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-worker-a-z86r5
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:04:36Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{kiali}
+    kind: Pod
+    name: kiali-bb84b5c4f-l4rzk
+    namespace: istio-system
+    resourceVersion: "35807"
+    uid: 82908340-91cd-44de-85e4-cc81939966c1
+  kind: Event
+  lastTimestamp: "2023-03-03T20:04:36Z"
+  message: Successfully pulled image "registry.redhat.io/openshift-service-mesh/kiali-rhel8@sha256:13442c85948c6ef194b3c0a5547f6deb44e6318b2326a563cd324b50ca75d9dd"
+    in 5.864971897s
+  metadata:
+    creationTimestamp: "2023-03-03T20:04:36Z"
+    name: kiali-bb84b5c4f-l4rzk.17490166b85ceffd
+    namespace: istio-system
+    resourceVersion: "35909"
+    uid: a09a3cf3-0a9b-46bb-9002-b455d8b32014
+  reason: Pulled
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-worker-a-z86r5
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:04:37Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{kiali}
+    kind: Pod
+    name: kiali-bb84b5c4f-l4rzk
+    namespace: istio-system
+    resourceVersion: "35807"
+    uid: 82908340-91cd-44de-85e4-cc81939966c1
+  kind: Event
+  lastTimestamp: "2023-03-03T20:04:37Z"
+  message: Created container kiali
+  metadata:
+    creationTimestamp: "2023-03-03T20:04:37Z"
+    name: kiali-bb84b5c4f-l4rzk.17490166c2ff4bc5
+    namespace: istio-system
+    resourceVersion: "35911"
+    uid: 350fea3c-484f-4d09-8d71-561e64247874
+  reason: Created
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-worker-a-z86r5
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:04:37Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{kiali}
+    kind: Pod
+    name: kiali-bb84b5c4f-l4rzk
+    namespace: istio-system
+    resourceVersion: "35807"
+    uid: 82908340-91cd-44de-85e4-cc81939966c1
+  kind: Event
+  lastTimestamp: "2023-03-03T20:04:37Z"
+  message: Started container kiali
+  metadata:
+    creationTimestamp: "2023-03-03T20:04:37Z"
+    name: kiali-bb84b5c4f-l4rzk.17490166c52853c6
+    namespace: istio-system
+    resourceVersion: "35913"
+    uid: b3141c32-052d-40d3-bba0-61405e65c959
+  reason: Started
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-worker-a-z86r5
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:05:57Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{kiali}
+    kind: Pod
+    name: kiali-bb84b5c4f-l4rzk
+    namespace: istio-system
+    resourceVersion: "35807"
+    uid: 82908340-91cd-44de-85e4-cc81939966c1
+  kind: Event
+  lastTimestamp: "2023-03-03T20:05:57Z"
+  message: Stopping container kiali
+  metadata:
+    creationTimestamp: "2023-03-03T20:05:57Z"
+    name: kiali-bb84b5c4f-l4rzk.174901799a40bf36
+    namespace: istio-system
+    resourceVersion: "36562"
+    uid: 3d4a662e-dc69-4f15-b6ba-61b16af981c6
+  reason: Killing
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-worker-a-z86r5
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:04:28Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: ReplicaSet
+    name: kiali-bb84b5c4f
+    namespace: istio-system
+    resourceVersion: "35801"
+    uid: 0794a4fa-606d-4e93-a031-f8622149fcbe
+  kind: Event
+  lastTimestamp: "2023-03-03T20:04:28Z"
+  message: 'Created pod: kiali-bb84b5c4f-l4rzk'
+  metadata:
+    creationTimestamp: "2023-03-03T20:04:28Z"
+    name: kiali-bb84b5c4f.17490164d2130c8d
+    namespace: istio-system
+    resourceVersion: "35806"
+    uid: 31469eeb-21dc-454b-aff1-52c6d916c490
+  reason: SuccessfulCreate
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: replicaset-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:05:57Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: ReplicaSet
+    name: kiali-bb84b5c4f
+    namespace: istio-system
+    resourceVersion: "36555"
+    uid: 0794a4fa-606d-4e93-a031-f8622149fcbe
+  kind: Event
+  lastTimestamp: "2023-03-03T20:05:57Z"
+  message: 'Deleted pod: kiali-bb84b5c4f-l4rzk'
+  metadata:
+    creationTimestamp: "2023-03-03T20:05:57Z"
+    name: kiali-bb84b5c4f.174901799a4470fe
+    namespace: istio-system
+    resourceVersion: "36561"
+    uid: ec2632c5-b67d-44fb-af19-ff44c322a6d6
+  reason: SuccessfulDelete
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: replicaset-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:04:28Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: kiali
+    namespace: istio-system
+    resourceVersion: "35800"
+    uid: e96d929a-f5fe-42a7-9a3d-711b752c945a
+  kind: Event
+  lastTimestamp: "2023-03-03T20:04:28Z"
+  message: Scaled up replica set kiali-bb84b5c4f to 1
+  metadata:
+    creationTimestamp: "2023-03-03T20:04:28Z"
+    name: kiali.17490164cee5dbee
+    namespace: istio-system
+    resourceVersion: "35802"
+    uid: d759694f-3cf4-4609-bb9d-4b1d6f85c125
+  reason: ScalingReplicaSet
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: deployment-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:05:27Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: kiali
+    namespace: istio-system
+    resourceVersion: "36293"
+    uid: e96d929a-f5fe-42a7-9a3d-711b752c945a
+  kind: Event
+  lastTimestamp: "2023-03-03T20:05:27Z"
+  message: Scaled up replica set kiali-74dd54dd5d to 1
+  metadata:
+    creationTimestamp: "2023-03-03T20:05:27Z"
+    name: kiali.174901727ef774b3
+    namespace: istio-system
+    resourceVersion: "36296"
+    uid: 9c837609-68ff-496a-8505-2a82d2810608
+  reason: ScalingReplicaSet
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: deployment-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:05:57Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: kiali
+    namespace: istio-system
+    resourceVersion: "36304"
+    uid: e96d929a-f5fe-42a7-9a3d-711b752c945a
+  kind: Event
+  lastTimestamp: "2023-03-03T20:05:57Z"
+  message: Scaled down replica set kiali-bb84b5c4f to 0 from 1
+  metadata:
+    creationTimestamp: "2023-03-03T20:05:57Z"
+    name: kiali.174901799821c13e
+    namespace: istio-system
+    resourceVersion: "36556"
+    uid: 4c081814-2b4e-4bcc-a6e0-d7c48bca1d51
+  reason: ScalingReplicaSet
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: deployment-controller
+  type: Normal
+- action: Binding
+  apiVersion: v1
+  eventTime: "2023-03-03T20:03:12.625710Z"
+  firstTimestamp: null
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: prometheus-ff79665c9-scskr
+    namespace: istio-system
+    resourceVersion: "34670"
+    uid: b02d53f8-a4ab-4c32-af41-c3d5d7a005fd
+  kind: Event
+  lastTimestamp: null
+  message: Successfully assigned istio-system/prometheus-ff79665c9-scskr to ci-ln-4zhdf4b-72292-lw57b-worker-c-szhjg
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:12Z"
+    name: prometheus-ff79665c9-scskr.174901531b64b89a
+    namespace: istio-system
+    resourceVersion: "34676"
+    uid: d51a83e8-0b16-4d20-b855-607818e14083
+  reason: Scheduled
+  reportingComponent: default-scheduler
+  reportingInstance: default-scheduler-ci-ln-4zhdf4b-72292-lw57b-master-1
+  source: {}
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:03:12Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: prometheus-ff79665c9-scskr
+    namespace: istio-system
+    resourceVersion: "34674"
+    uid: b02d53f8-a4ab-4c32-af41-c3d5d7a005fd
+  kind: Event
+  lastTimestamp: "2023-03-03T20:03:12Z"
+  message: 'MountVolume.SetUp failed for volume "secret-prometheus-tls" : secret "prometheus-tls"
+    not found'
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:12Z"
+    name: prometheus-ff79665c9-scskr.1749015325d5c53a
+    namespace: istio-system
+    resourceVersion: "34687"
+    uid: 023a8eb1-d10b-4ce1-aaa9-2206c4d81e04
+  reason: FailedMount
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-worker-c-szhjg
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:03:14Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: prometheus-ff79665c9-scskr
+    namespace: istio-system
+    resourceVersion: "34688"
+    uid: b02d53f8-a4ab-4c32-af41-c3d5d7a005fd
+  kind: Event
+  lastTimestamp: "2023-03-03T20:03:14Z"
+  message: Add eth0 [10.129.2.20/23] from ovn-kubernetes
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:14Z"
+    name: prometheus-ff79665c9-scskr.174901536ee79802
+    namespace: istio-system
+    resourceVersion: "34706"
+    uid: 938c2bdd-3076-4823-a032-4d9a5a173970
+  reason: AddedInterface
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: multus
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:03:14Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{prometheus-proxy}
+    kind: Pod
+    name: prometheus-ff79665c9-scskr
+    namespace: istio-system
+    resourceVersion: "34674"
+    uid: b02d53f8-a4ab-4c32-af41-c3d5d7a005fd
+  kind: Event
+  lastTimestamp: "2023-03-03T20:03:14Z"
+  message: Container image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:ce1de860b639d4831bb74b0271aed6882b45febb37f60bcf8a31157b87ce0495"
+    already present on machine
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:14Z"
+    name: prometheus-ff79665c9-scskr.17490153718bf0e3
+    namespace: istio-system
+    resourceVersion: "34708"
+    uid: 60883bab-4936-4dac-ae3b-f95a3c6ae9cc
+  reason: Pulled
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-worker-c-szhjg
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:03:14Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{prometheus-proxy}
+    kind: Pod
+    name: prometheus-ff79665c9-scskr
+    namespace: istio-system
+    resourceVersion: "34674"
+    uid: b02d53f8-a4ab-4c32-af41-c3d5d7a005fd
+  kind: Event
+  lastTimestamp: "2023-03-03T20:03:14Z"
+  message: Created container prometheus-proxy
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:14Z"
+    name: prometheus-ff79665c9-scskr.174901537f8a5672
+    namespace: istio-system
+    resourceVersion: "34715"
+    uid: 4bc3a64c-c2c3-479b-a69c-ea17d77dd2ed
+  reason: Created
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-worker-c-szhjg
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:03:14Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{prometheus-proxy}
+    kind: Pod
+    name: prometheus-ff79665c9-scskr
+    namespace: istio-system
+    resourceVersion: "34674"
+    uid: b02d53f8-a4ab-4c32-af41-c3d5d7a005fd
+  kind: Event
+  lastTimestamp: "2023-03-03T20:03:14Z"
+  message: Started container prometheus-proxy
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:14Z"
+    name: prometheus-ff79665c9-scskr.1749015381c77a94
+    namespace: istio-system
+    resourceVersion: "34716"
+    uid: cbd80838-543a-4f9f-87d2-b318d4206baa
+  reason: Started
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-worker-c-szhjg
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:03:14Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{prometheus}
+    kind: Pod
+    name: prometheus-ff79665c9-scskr
+    namespace: istio-system
+    resourceVersion: "34674"
+    uid: b02d53f8-a4ab-4c32-af41-c3d5d7a005fd
+  kind: Event
+  lastTimestamp: "2023-03-03T20:03:14Z"
+  message: Pulling image "registry.redhat.io/openshift-service-mesh/prometheus-rhel8@sha256:e1638e9b1c36b48220ac8bbe208ef0f2d59d184b89e0388a2b73d8c0da11946c"
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:14Z"
+    name: prometheus-ff79665c9-scskr.1749015381d90efe
+    namespace: istio-system
+    resourceVersion: "34717"
+    uid: fc6dacd5-a75a-4451-a86f-87ac910aa24c
+  reason: Pulling
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-worker-c-szhjg
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:03:18Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{prometheus}
+    kind: Pod
+    name: prometheus-ff79665c9-scskr
+    namespace: istio-system
+    resourceVersion: "34674"
+    uid: b02d53f8-a4ab-4c32-af41-c3d5d7a005fd
+  kind: Event
+  lastTimestamp: "2023-03-03T20:03:18Z"
+  message: Successfully pulled image "registry.redhat.io/openshift-service-mesh/prometheus-rhel8@sha256:e1638e9b1c36b48220ac8bbe208ef0f2d59d184b89e0388a2b73d8c0da11946c"
+    in 4.560200959s
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:18Z"
+    name: prometheus-ff79665c9-scskr.1749015491a8841b
+    namespace: istio-system
+    resourceVersion: "34789"
+    uid: eddd8fc6-711b-4c32-b303-0b0fb278c06a
+  reason: Pulled
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-worker-c-szhjg
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:03:19Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{prometheus}
+    kind: Pod
+    name: prometheus-ff79665c9-scskr
+    namespace: istio-system
+    resourceVersion: "34674"
+    uid: b02d53f8-a4ab-4c32-af41-c3d5d7a005fd
+  kind: Event
+  lastTimestamp: "2023-03-03T20:03:19Z"
+  message: Created container prometheus
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:19Z"
+    name: prometheus-ff79665c9-scskr.174901549f8bc923
+    namespace: istio-system
+    resourceVersion: "34792"
+    uid: e8b3181d-491a-4c1b-8a46-3133d2ff71fc
+  reason: Created
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-worker-c-szhjg
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:03:19Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{prometheus}
+    kind: Pod
+    name: prometheus-ff79665c9-scskr
+    namespace: istio-system
+    resourceVersion: "34674"
+    uid: b02d53f8-a4ab-4c32-af41-c3d5d7a005fd
+  kind: Event
+  lastTimestamp: "2023-03-03T20:03:19Z"
+  message: Started container prometheus
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:19Z"
+    name: prometheus-ff79665c9-scskr.17490154a1915441
+    namespace: istio-system
+    resourceVersion: "34794"
+    uid: 08068664-9e7c-4454-84c2-76048661932e
+  reason: Started
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-worker-c-szhjg
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:03:12Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: ReplicaSet
+    name: prometheus-ff79665c9
+    namespace: istio-system
+    resourceVersion: "34665"
+    uid: 710c32e7-fd7b-454a-a2d5-ce408436b726
+  kind: Event
+  lastTimestamp: "2023-03-03T20:03:12Z"
+  message: 'Created pod: prometheus-ff79665c9-scskr'
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:12Z"
+    name: prometheus-ff79665c9.17490153186e8177
+    namespace: istio-system
+    resourceVersion: "34672"
+    uid: 48d9e123-588a-4dee-a314-1167203ddd7b
+  reason: SuccessfulCreate
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: replicaset-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:03:12Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: prometheus
+    namespace: istio-system
+    resourceVersion: "34664"
+    uid: bc0cc73f-9444-4144-a2eb-4425919bfec8
+  kind: Event
+  lastTimestamp: "2023-03-03T20:03:12Z"
+  message: Scaled up replica set prometheus-ff79665c9 to 1
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:12Z"
+    name: prometheus.174901531265eaa4
+    namespace: istio-system
+    resourceVersion: "34668"
+    uid: ebacacd4-f013-4ea0-895a-cdba24bcc7d7
+  reason: ScalingReplicaSet
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: deployment-controller
+  type: Normal
+- action: Binding
+  apiVersion: v1
+  eventTime: "2023-03-03T20:03:50.485487Z"
+  firstTimestamp: null
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: wasm-cacher-basic-6f5c57745c-mqr7g
+    namespace: istio-system
+    resourceVersion: "35354"
+    uid: 3bd5ba65-2035-4c94-8db6-c924ac2076d9
+  kind: Event
+  lastTimestamp: null
+  message: Successfully assigned istio-system/wasm-cacher-basic-6f5c57745c-mqr7g to
+    ci-ln-4zhdf4b-72292-lw57b-worker-c-szhjg
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:50Z"
+    name: wasm-cacher-basic-6f5c57745c-mqr7g.1749015bec03289e
+    namespace: istio-system
+    resourceVersion: "35359"
+    uid: 915c1cbc-5f6c-4a70-9cf4-2a3f75fe1431
+  reason: Scheduled
+  reportingComponent: default-scheduler
+  reportingInstance: default-scheduler-ci-ln-4zhdf4b-72292-lw57b-master-1
+  source: {}
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:03:51Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: wasm-cacher-basic-6f5c57745c-mqr7g
+    namespace: istio-system
+    resourceVersion: "35364"
+    uid: 3bd5ba65-2035-4c94-8db6-c924ac2076d9
+  kind: Event
+  lastTimestamp: "2023-03-03T20:03:51Z"
+  message: Add eth0 [10.129.2.25/23] from ovn-kubernetes
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:51Z"
+    name: wasm-cacher-basic-6f5c57745c-mqr7g.1749015c1ac20f0f
+    namespace: istio-system
+    resourceVersion: "35367"
+    uid: 92e75b74-aa0b-41f5-98b5-0f300355df36
+  reason: AddedInterface
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: multus
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:03:51Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{wasm-cacher}
+    kind: Pod
+    name: wasm-cacher-basic-6f5c57745c-mqr7g
+    namespace: istio-system
+    resourceVersion: "35357"
+    uid: 3bd5ba65-2035-4c94-8db6-c924ac2076d9
+  kind: Event
+  lastTimestamp: "2023-03-03T20:03:51Z"
+  message: Pulling image "registry.redhat.io/openshift-service-mesh/pilot-rhel8@sha256:1be67785c051c48313a88e5e1ed5ee2de0d90169d5845457adad7c58dfc659fa"
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:51Z"
+    name: wasm-cacher-basic-6f5c57745c-mqr7g.1749015c1d44a47a
+    namespace: istio-system
+    resourceVersion: "35369"
+    uid: 8dce2271-e0ca-4b7b-b1d2-c09f419ba501
+  reason: Pulling
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-worker-c-szhjg
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:03:52Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{wasm-cacher}
+    kind: Pod
+    name: wasm-cacher-basic-6f5c57745c-mqr7g
+    namespace: istio-system
+    resourceVersion: "35357"
+    uid: 3bd5ba65-2035-4c94-8db6-c924ac2076d9
+  kind: Event
+  lastTimestamp: "2023-03-03T20:03:52Z"
+  message: Successfully pulled image "registry.redhat.io/openshift-service-mesh/pilot-rhel8@sha256:1be67785c051c48313a88e5e1ed5ee2de0d90169d5845457adad7c58dfc659fa"
+    in 740.79786ms
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:52Z"
+    name: wasm-cacher-basic-6f5c57745c-mqr7g.1749015c496ca1a4
+    namespace: istio-system
+    resourceVersion: "35371"
+    uid: 6edfc96f-f2c3-4d11-bcec-c99767e6f457
+  reason: Pulled
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-worker-c-szhjg
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:03:52Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{wasm-cacher}
+    kind: Pod
+    name: wasm-cacher-basic-6f5c57745c-mqr7g
+    namespace: istio-system
+    resourceVersion: "35357"
+    uid: 3bd5ba65-2035-4c94-8db6-c924ac2076d9
+  kind: Event
+  lastTimestamp: "2023-03-03T20:03:52Z"
+  message: Created container wasm-cacher
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:52Z"
+    name: wasm-cacher-basic-6f5c57745c-mqr7g.1749015c58bc4b27
+    namespace: istio-system
+    resourceVersion: "35374"
+    uid: 0d712349-3cdd-41ed-8737-c70369d9d756
+  reason: Created
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-worker-c-szhjg
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:03:52Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{wasm-cacher}
+    kind: Pod
+    name: wasm-cacher-basic-6f5c57745c-mqr7g
+    namespace: istio-system
+    resourceVersion: "35357"
+    uid: 3bd5ba65-2035-4c94-8db6-c924ac2076d9
+  kind: Event
+  lastTimestamp: "2023-03-03T20:03:52Z"
+  message: Started container wasm-cacher
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:52Z"
+    name: wasm-cacher-basic-6f5c57745c-mqr7g.1749015c5bb7caf3
+    namespace: istio-system
+    resourceVersion: "35376"
+    uid: 859713ed-cb87-49be-b939-0b78e3e9d549
+  reason: Started
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: ci-ln-4zhdf4b-72292-lw57b-worker-c-szhjg
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:03:50Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: ReplicaSet
+    name: wasm-cacher-basic-6f5c57745c
+    namespace: istio-system
+    resourceVersion: "35350"
+    uid: 0d72f2bf-fee9-417f-a49b-2e67e7979235
+  kind: Event
+  lastTimestamp: "2023-03-03T20:03:50Z"
+  message: 'Created pod: wasm-cacher-basic-6f5c57745c-mqr7g'
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:50Z"
+    name: wasm-cacher-basic-6f5c57745c.1749015beab1525c
+    namespace: istio-system
+    resourceVersion: "35356"
+    uid: 33a2ee9e-c5d8-4791-8c5c-af9ceb73a12c
+  reason: SuccessfulCreate
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: replicaset-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-03-03T20:03:50Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: wasm-cacher-basic
+    namespace: istio-system
+    resourceVersion: "35348"
+    uid: 12ab579e-3aeb-4a35-8c2d-4d5609eb7681
+  kind: Event
+  lastTimestamp: "2023-03-03T20:03:50Z"
+  message: Scaled up replica set wasm-cacher-basic-6f5c57745c to 1
+  metadata:
+    creationTimestamp: "2023-03-03T20:03:50Z"
+    name: wasm-cacher-basic.1749015be656695a
+    namespace: istio-system
+    resourceVersion: "35351"
+    uid: 45e76166-cdd3-4703-9820-3fb7f0225a18
+  reason: ScalingReplicaSet
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: deployment-controller
+  type: Normal
+kind: EventList
+metadata:
+  resourceVersion: "61064"

@@ -1,0 +1,1271 @@
+---
+apiVersion: apps/v1
+items:
+- apiVersion: apps/v1
+  kind: ReplicaSet
+  metadata:
+    annotations:
+      deployment.kubernetes.io/desired-replicas: "2"
+      deployment.kubernetes.io/max-replicas: "3"
+      deployment.kubernetes.io/revision: "1"
+      manifestival: new
+      sidecar.istio.io/inject: "true"
+      sidecar.istio.io/rewriteAppHTTPProbers: "true"
+    creationTimestamp: "2023-03-03T20:09:38Z"
+    generation: 1
+    labels:
+      app: activator
+      app.kubernetes.io/component: activator
+      app.kubernetes.io/name: knative-serving
+      app.kubernetes.io/version: 1.5.0
+      pod-template-hash: fc9fcf778
+      role: activator
+    name: activator-fc9fcf778
+    namespace: knative-serving
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Deployment
+      name: activator
+      uid: a88815ff-802f-49a7-aa94-cbea188d9999
+    resourceVersion: "40670"
+    uid: d640cf46-d0a2-4347-9b19-90d5c4fe4514
+  spec:
+    replicas: 2
+    selector:
+      matchLabels:
+        app: activator
+        pod-template-hash: fc9fcf778
+        role: activator
+    template:
+      metadata:
+        annotations:
+          cluster-autoscaler.kubernetes.io/safe-to-evict: "false"
+          sidecar.istio.io/inject: "true"
+          sidecar.istio.io/rewriteAppHTTPProbers: "true"
+        creationTimestamp: null
+        labels:
+          app: activator
+          app.kubernetes.io/component: activator
+          app.kubernetes.io/name: knative-serving
+          app.kubernetes.io/version: 1.5.0
+          pod-template-hash: fc9fcf778
+          role: activator
+      spec:
+        containers:
+        - env:
+          - name: GOGC
+            value: "500"
+          - name: POD_NAME
+            valueFrom:
+              fieldRef:
+                apiVersion: v1
+                fieldPath: metadata.name
+          - name: POD_IP
+            valueFrom:
+              fieldRef:
+                apiVersion: v1
+                fieldPath: status.podIP
+          - name: SYSTEM_NAMESPACE
+            valueFrom:
+              fieldRef:
+                apiVersion: v1
+                fieldPath: metadata.namespace
+          - name: CONFIG_LOGGING_NAME
+            value: config-logging
+          - name: CONFIG_OBSERVABILITY_NAME
+            value: config-observability
+          - name: METRICS_DOMAIN
+            value: knative.dev/internal/serving
+          image: registry.redhat.io/openshift-serverless-1/serving-activator-rhel8@sha256:aa6a3ee558c19b9dc2b13bbd351843a7bdb12b40c6b94b9e5312578e0e4db6b4
+          imagePullPolicy: IfNotPresent
+          livenessProbe:
+            failureThreshold: 12
+            httpGet:
+              httpHeaders:
+              - name: k-kubelet-probe
+                value: activator
+              path: /
+              port: 8012
+              scheme: HTTP
+            initialDelaySeconds: 15
+            periodSeconds: 10
+            successThreshold: 1
+            timeoutSeconds: 1
+          name: activator
+          ports:
+          - containerPort: 9090
+            name: metrics
+            protocol: TCP
+          - containerPort: 8008
+            name: profiling
+            protocol: TCP
+          - containerPort: 8012
+            name: http1
+            protocol: TCP
+          - containerPort: 8013
+            name: h2c
+            protocol: TCP
+          readinessProbe:
+            failureThreshold: 5
+            httpGet:
+              httpHeaders:
+              - name: k-kubelet-probe
+                value: activator
+              path: /
+              port: 8012
+              scheme: HTTP
+            periodSeconds: 5
+            successThreshold: 1
+            timeoutSeconds: 1
+          resources:
+            limits:
+              cpu: "1"
+              memory: 600Mi
+            requests:
+              cpu: 300m
+              memory: 60Mi
+          securityContext:
+            allowPrivilegeEscalation: false
+            capabilities:
+              drop:
+              - ALL
+            readOnlyRootFilesystem: true
+            runAsNonRoot: true
+            seccompProfile:
+              type: RuntimeDefault
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+        dnsPolicy: ClusterFirst
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        securityContext: {}
+        serviceAccount: controller
+        serviceAccountName: controller
+        terminationGracePeriodSeconds: 600
+  status:
+    availableReplicas: 2
+    fullyLabeledReplicas: 2
+    observedGeneration: 1
+    readyReplicas: 2
+    replicas: 2
+- apiVersion: apps/v1
+  kind: ReplicaSet
+  metadata:
+    annotations:
+      deployment.kubernetes.io/desired-replicas: "2"
+      deployment.kubernetes.io/max-replicas: "3"
+      deployment.kubernetes.io/revision: "1"
+      manifestival: new
+      sidecar.istio.io/inject: "true"
+      sidecar.istio.io/rewriteAppHTTPProbers: "true"
+    creationTimestamp: "2023-03-03T20:09:38Z"
+    generation: 1
+    labels:
+      app: autoscaler
+      app.kubernetes.io/component: autoscaler
+      app.kubernetes.io/name: knative-serving
+      app.kubernetes.io/version: 1.5.0
+      pod-template-hash: 67df785744
+    name: autoscaler-67df785744
+    namespace: knative-serving
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Deployment
+      name: autoscaler
+      uid: 28f33294-0080-495a-81f0-2d3b2b8995a4
+    resourceVersion: "40615"
+    uid: 08538405-e472-4ea8-abfa-8a543b0aa53a
+  spec:
+    replicas: 2
+    selector:
+      matchLabels:
+        app: autoscaler
+        pod-template-hash: 67df785744
+    template:
+      metadata:
+        annotations:
+          cluster-autoscaler.kubernetes.io/safe-to-evict: "false"
+          sidecar.istio.io/inject: "true"
+          sidecar.istio.io/rewriteAppHTTPProbers: "true"
+        creationTimestamp: null
+        labels:
+          app: autoscaler
+          app.kubernetes.io/component: autoscaler
+          app.kubernetes.io/name: knative-serving
+          app.kubernetes.io/version: 1.5.0
+          pod-template-hash: 67df785744
+      spec:
+        affinity:
+          podAntiAffinity:
+            preferredDuringSchedulingIgnoredDuringExecution:
+            - podAffinityTerm:
+                labelSelector:
+                  matchLabels:
+                    app: autoscaler
+                topologyKey: kubernetes.io/hostname
+              weight: 100
+        containers:
+        - env:
+          - name: POD_NAME
+            valueFrom:
+              fieldRef:
+                apiVersion: v1
+                fieldPath: metadata.name
+          - name: POD_IP
+            valueFrom:
+              fieldRef:
+                apiVersion: v1
+                fieldPath: status.podIP
+          - name: SYSTEM_NAMESPACE
+            valueFrom:
+              fieldRef:
+                apiVersion: v1
+                fieldPath: metadata.namespace
+          - name: CONFIG_LOGGING_NAME
+            value: config-logging
+          - name: CONFIG_OBSERVABILITY_NAME
+            value: config-observability
+          - name: METRICS_DOMAIN
+            value: knative.dev/serving
+          image: registry.redhat.io/openshift-serverless-1/serving-autoscaler-rhel8@sha256:010bbd4fd08f134f7971c56c5c47d6eff487949bf4f7bb60cd4e511a65ae7c9c
+          imagePullPolicy: IfNotPresent
+          livenessProbe:
+            failureThreshold: 6
+            httpGet:
+              httpHeaders:
+              - name: k-kubelet-probe
+                value: autoscaler
+              path: /
+              port: 8080
+              scheme: HTTP
+            periodSeconds: 10
+            successThreshold: 1
+            timeoutSeconds: 1
+          name: autoscaler
+          ports:
+          - containerPort: 9090
+            name: metrics
+            protocol: TCP
+          - containerPort: 8008
+            name: profiling
+            protocol: TCP
+          - containerPort: 8080
+            name: websocket
+            protocol: TCP
+          readinessProbe:
+            failureThreshold: 3
+            httpGet:
+              httpHeaders:
+              - name: k-kubelet-probe
+                value: autoscaler
+              path: /
+              port: 8080
+              scheme: HTTP
+            periodSeconds: 10
+            successThreshold: 1
+            timeoutSeconds: 1
+          resources:
+            limits:
+              cpu: "1"
+              memory: 1000Mi
+            requests:
+              cpu: 100m
+              memory: 100Mi
+          securityContext:
+            allowPrivilegeEscalation: false
+            capabilities:
+              drop:
+              - ALL
+            readOnlyRootFilesystem: true
+            runAsNonRoot: true
+            seccompProfile:
+              type: RuntimeDefault
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+        dnsPolicy: ClusterFirst
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        securityContext: {}
+        serviceAccount: controller
+        serviceAccountName: controller
+        terminationGracePeriodSeconds: 30
+  status:
+    availableReplicas: 2
+    fullyLabeledReplicas: 2
+    observedGeneration: 1
+    readyReplicas: 2
+    replicas: 2
+- apiVersion: apps/v1
+  kind: ReplicaSet
+  metadata:
+    annotations:
+      deployment.kubernetes.io/desired-replicas: "2"
+      deployment.kubernetes.io/max-replicas: "3"
+      deployment.kubernetes.io/revision: "1"
+      manifestival: new
+    creationTimestamp: "2023-03-03T20:09:40Z"
+    generation: 1
+    labels:
+      app: autoscaler-hpa
+      app.kubernetes.io/component: autoscaler-hpa
+      app.kubernetes.io/name: knative-serving
+      app.kubernetes.io/version: 1.5.0
+      pod-template-hash: d45bfc87b
+    name: autoscaler-hpa-d45bfc87b
+    namespace: knative-serving
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Deployment
+      name: autoscaler-hpa
+      uid: 15805a5c-0cce-4719-a8c1-a37db1f13ef7
+    resourceVersion: "40140"
+    uid: 947ccc9a-11e4-4d45-a025-c85ccd5ca23d
+  spec:
+    replicas: 2
+    selector:
+      matchLabels:
+        app: autoscaler-hpa
+        pod-template-hash: d45bfc87b
+    template:
+      metadata:
+        annotations:
+          cluster-autoscaler.kubernetes.io/safe-to-evict: "true"
+        creationTimestamp: null
+        labels:
+          app: autoscaler-hpa
+          app.kubernetes.io/component: autoscaler-hpa
+          app.kubernetes.io/name: knative-serving
+          app.kubernetes.io/version: 1.5.0
+          pod-template-hash: d45bfc87b
+      spec:
+        affinity:
+          podAntiAffinity:
+            preferredDuringSchedulingIgnoredDuringExecution:
+            - podAffinityTerm:
+                labelSelector:
+                  matchLabels:
+                    app: autoscaler-hpa
+                topologyKey: kubernetes.io/hostname
+              weight: 100
+        containers:
+        - env:
+          - name: SYSTEM_NAMESPACE
+            valueFrom:
+              fieldRef:
+                apiVersion: v1
+                fieldPath: metadata.namespace
+          - name: CONFIG_LOGGING_NAME
+            value: config-logging
+          - name: CONFIG_OBSERVABILITY_NAME
+            value: config-observability
+          - name: METRICS_DOMAIN
+            value: knative.dev/serving
+          image: registry.redhat.io/openshift-serverless-1/serving-autoscaler-hpa-rhel8@sha256:507798c908336173ab0d302e37edf48f39ebb827f42d3e8ee0932d0bf7f07fa3
+          imagePullPolicy: IfNotPresent
+          name: autoscaler-hpa
+          ports:
+          - containerPort: 9090
+            name: metrics
+            protocol: TCP
+          - containerPort: 8008
+            name: profiling
+            protocol: TCP
+          resources:
+            limits:
+              cpu: 300m
+              memory: 400Mi
+            requests:
+              cpu: 30m
+              memory: 40Mi
+          securityContext:
+            allowPrivilegeEscalation: false
+            capabilities:
+              drop:
+              - ALL
+            readOnlyRootFilesystem: true
+            runAsNonRoot: true
+            seccompProfile:
+              type: RuntimeDefault
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+        dnsPolicy: ClusterFirst
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        securityContext: {}
+        serviceAccount: controller
+        serviceAccountName: controller
+        terminationGracePeriodSeconds: 30
+  status:
+    availableReplicas: 2
+    fullyLabeledReplicas: 2
+    observedGeneration: 1
+    readyReplicas: 2
+    replicas: 2
+- apiVersion: apps/v1
+  kind: ReplicaSet
+  metadata:
+    annotations:
+      deployment.kubernetes.io/desired-replicas: "2"
+      deployment.kubernetes.io/max-replicas: "3"
+      deployment.kubernetes.io/revision: "2"
+      manifestival: new
+    creationTimestamp: "2023-03-03T20:09:40Z"
+    generation: 2
+    labels:
+      app: controller
+      app.kubernetes.io/component: controller
+      app.kubernetes.io/name: knative-serving
+      app.kubernetes.io/version: 1.5.0
+      pod-template-hash: 65bcd69f
+    name: controller-65bcd69f
+    namespace: knative-serving
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Deployment
+      name: controller
+      uid: 3c7c8fab-e93e-497b-8e82-53386b7503c1
+    resourceVersion: "39908"
+    uid: cacdd0c7-c2bd-4cbb-89a7-bf3662914783
+  spec:
+    replicas: 2
+    selector:
+      matchLabels:
+        app: controller
+        pod-template-hash: 65bcd69f
+    template:
+      metadata:
+        annotations:
+          cluster-autoscaler.kubernetes.io/safe-to-evict: "true"
+          serving.knative.openshift.io/mounted-cert-version: "39157"
+        creationTimestamp: null
+        labels:
+          app: controller
+          app.kubernetes.io/component: controller
+          app.kubernetes.io/name: knative-serving
+          app.kubernetes.io/version: 1.5.0
+          pod-template-hash: 65bcd69f
+      spec:
+        affinity:
+          podAntiAffinity:
+            preferredDuringSchedulingIgnoredDuringExecution:
+            - podAffinityTerm:
+                labelSelector:
+                  matchLabels:
+                    app: controller
+                topologyKey: kubernetes.io/hostname
+              weight: 100
+        containers:
+        - env:
+          - name: POD_NAME
+            valueFrom:
+              fieldRef:
+                apiVersion: v1
+                fieldPath: metadata.name
+          - name: SYSTEM_NAMESPACE
+            valueFrom:
+              fieldRef:
+                apiVersion: v1
+                fieldPath: metadata.namespace
+          - name: CONFIG_LOGGING_NAME
+            value: config-logging
+          - name: CONFIG_OBSERVABILITY_NAME
+            value: config-observability
+          - name: METRICS_DOMAIN
+            value: knative.dev/internal/serving
+          - name: SSL_CERT_DIR
+            value: /custom-certs
+          - name: HTTP_PROXY
+          - name: HTTPS_PROXY
+          - name: NO_PROXY
+          image: registry.redhat.io/openshift-serverless-1/serving-controller-rhel8@sha256:bbe6d81eb3ce97d961d686a077e49f69ea26f8fa9746c2f04c9e6cfd3100ac67
+          imagePullPolicy: IfNotPresent
+          name: controller
+          ports:
+          - containerPort: 9090
+            name: metrics
+            protocol: TCP
+          - containerPort: 8008
+            name: profiling
+            protocol: TCP
+          resources:
+            limits:
+              cpu: "1"
+              memory: 1000Mi
+            requests:
+              cpu: 100m
+              memory: 100Mi
+          securityContext:
+            allowPrivilegeEscalation: false
+            capabilities:
+              drop:
+              - ALL
+            readOnlyRootFilesystem: true
+            runAsNonRoot: true
+            seccompProfile:
+              type: RuntimeDefault
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+          volumeMounts:
+          - mountPath: /custom-certs
+            name: custom-certs-config-service-ca
+        dnsPolicy: ClusterFirst
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        securityContext: {}
+        serviceAccount: controller
+        serviceAccountName: controller
+        terminationGracePeriodSeconds: 30
+        volumes:
+        - configMap:
+            defaultMode: 420
+            name: config-service-ca
+          name: custom-certs-config-service-ca
+  status:
+    availableReplicas: 2
+    fullyLabeledReplicas: 2
+    observedGeneration: 2
+    readyReplicas: 2
+    replicas: 2
+- apiVersion: apps/v1
+  kind: ReplicaSet
+  metadata:
+    annotations:
+      deployment.kubernetes.io/desired-replicas: "2"
+      deployment.kubernetes.io/max-replicas: "3"
+      deployment.kubernetes.io/revision: "1"
+      manifestival: new
+    creationTimestamp: "2023-03-03T20:09:38Z"
+    generation: 3
+    labels:
+      app: controller
+      app.kubernetes.io/component: controller
+      app.kubernetes.io/name: knative-serving
+      app.kubernetes.io/version: 1.5.0
+      pod-template-hash: 846594d6c5
+    name: controller-846594d6c5
+    namespace: knative-serving
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Deployment
+      name: controller
+      uid: 3c7c8fab-e93e-497b-8e82-53386b7503c1
+    resourceVersion: "39929"
+    uid: 06ff3eb4-79cd-491a-aee6-816dc2b6b53c
+  spec:
+    replicas: 0
+    selector:
+      matchLabels:
+        app: controller
+        pod-template-hash: 846594d6c5
+    template:
+      metadata:
+        annotations:
+          cluster-autoscaler.kubernetes.io/safe-to-evict: "true"
+        creationTimestamp: null
+        labels:
+          app: controller
+          app.kubernetes.io/component: controller
+          app.kubernetes.io/name: knative-serving
+          app.kubernetes.io/version: 1.5.0
+          pod-template-hash: 846594d6c5
+      spec:
+        affinity:
+          podAntiAffinity:
+            preferredDuringSchedulingIgnoredDuringExecution:
+            - podAffinityTerm:
+                labelSelector:
+                  matchLabels:
+                    app: controller
+                topologyKey: kubernetes.io/hostname
+              weight: 100
+        containers:
+        - env:
+          - name: POD_NAME
+            valueFrom:
+              fieldRef:
+                apiVersion: v1
+                fieldPath: metadata.name
+          - name: SYSTEM_NAMESPACE
+            valueFrom:
+              fieldRef:
+                apiVersion: v1
+                fieldPath: metadata.namespace
+          - name: CONFIG_LOGGING_NAME
+            value: config-logging
+          - name: CONFIG_OBSERVABILITY_NAME
+            value: config-observability
+          - name: METRICS_DOMAIN
+            value: knative.dev/internal/serving
+          - name: SSL_CERT_DIR
+            value: /custom-certs
+          - name: HTTP_PROXY
+          - name: HTTPS_PROXY
+          - name: NO_PROXY
+          image: registry.redhat.io/openshift-serverless-1/serving-controller-rhel8@sha256:bbe6d81eb3ce97d961d686a077e49f69ea26f8fa9746c2f04c9e6cfd3100ac67
+          imagePullPolicy: IfNotPresent
+          name: controller
+          ports:
+          - containerPort: 9090
+            name: metrics
+            protocol: TCP
+          - containerPort: 8008
+            name: profiling
+            protocol: TCP
+          resources:
+            limits:
+              cpu: "1"
+              memory: 1000Mi
+            requests:
+              cpu: 100m
+              memory: 100Mi
+          securityContext:
+            allowPrivilegeEscalation: false
+            capabilities:
+              drop:
+              - ALL
+            readOnlyRootFilesystem: true
+            runAsNonRoot: true
+            seccompProfile:
+              type: RuntimeDefault
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+          volumeMounts:
+          - mountPath: /custom-certs
+            name: custom-certs-config-service-ca
+        dnsPolicy: ClusterFirst
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        securityContext: {}
+        serviceAccount: controller
+        serviceAccountName: controller
+        terminationGracePeriodSeconds: 30
+        volumes:
+        - configMap:
+            defaultMode: 420
+            name: config-service-ca
+          name: custom-certs-config-service-ca
+  status:
+    observedGeneration: 3
+    replicas: 0
+- apiVersion: apps/v1
+  kind: ReplicaSet
+  metadata:
+    annotations:
+      deployment.kubernetes.io/desired-replicas: "2"
+      deployment.kubernetes.io/max-replicas: "3"
+      deployment.kubernetes.io/revision: "1"
+      manifestival: new
+    creationTimestamp: "2023-03-03T20:09:38Z"
+    generation: 1
+    labels:
+      app: domain-mapping
+      app.kubernetes.io/component: domain-mapping
+      app.kubernetes.io/name: knative-serving
+      app.kubernetes.io/version: 1.5.0
+      pod-template-hash: 579474f678
+    name: domain-mapping-579474f678
+    namespace: knative-serving
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Deployment
+      name: domain-mapping
+      uid: 878510ec-c2d8-4720-a0b1-c9da92bdc193
+    resourceVersion: "40283"
+    uid: 4e86bf65-0126-40ff-8063-68b7a251db85
+  spec:
+    replicas: 2
+    selector:
+      matchLabels:
+        app: domain-mapping
+        pod-template-hash: 579474f678
+    template:
+      metadata:
+        annotations:
+          cluster-autoscaler.kubernetes.io/safe-to-evict: "true"
+        creationTimestamp: null
+        labels:
+          app: domain-mapping
+          app.kubernetes.io/component: domain-mapping
+          app.kubernetes.io/name: knative-serving
+          app.kubernetes.io/version: 1.5.0
+          pod-template-hash: 579474f678
+      spec:
+        affinity:
+          podAntiAffinity:
+            preferredDuringSchedulingIgnoredDuringExecution:
+            - podAffinityTerm:
+                labelSelector:
+                  matchLabels:
+                    app: domain-mapping
+                topologyKey: kubernetes.io/hostname
+              weight: 100
+        containers:
+        - env:
+          - name: SYSTEM_NAMESPACE
+            valueFrom:
+              fieldRef:
+                apiVersion: v1
+                fieldPath: metadata.namespace
+          - name: CONFIG_LOGGING_NAME
+            value: config-logging
+          - name: CONFIG_OBSERVABILITY_NAME
+            value: config-observability
+          - name: METRICS_DOMAIN
+            value: knative.dev/serving
+          image: registry.redhat.io/openshift-serverless-1/serving-domain-mapping-rhel8@sha256:787657127dbde83cfcfd97c013743cafda13601af72546d3afd43e0492e0c280
+          imagePullPolicy: IfNotPresent
+          name: domain-mapping
+          ports:
+          - containerPort: 9090
+            name: metrics
+            protocol: TCP
+          - containerPort: 8008
+            name: profiling
+            protocol: TCP
+          resources:
+            limits:
+              cpu: 300m
+              memory: 400Mi
+            requests:
+              cpu: 30m
+              memory: 40Mi
+          securityContext:
+            allowPrivilegeEscalation: false
+            capabilities:
+              drop:
+              - ALL
+            readOnlyRootFilesystem: true
+            runAsNonRoot: true
+            seccompProfile:
+              type: RuntimeDefault
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+        dnsPolicy: ClusterFirst
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        securityContext: {}
+        serviceAccount: controller
+        serviceAccountName: controller
+        terminationGracePeriodSeconds: 30
+  status:
+    availableReplicas: 2
+    fullyLabeledReplicas: 2
+    observedGeneration: 1
+    readyReplicas: 2
+    replicas: 2
+- apiVersion: apps/v1
+  kind: ReplicaSet
+  metadata:
+    annotations:
+      deployment.kubernetes.io/desired-replicas: "2"
+      deployment.kubernetes.io/max-replicas: "3"
+      deployment.kubernetes.io/revision: "1"
+      manifestival: new
+    creationTimestamp: "2023-03-03T20:09:38Z"
+    generation: 1
+    labels:
+      app: domainmapping-webhook
+      app.kubernetes.io/component: domain-mapping
+      app.kubernetes.io/name: knative-serving
+      app.kubernetes.io/version: 1.5.0
+      pod-template-hash: 79986f7545
+      role: domainmapping-webhook
+    name: domainmapping-webhook-79986f7545
+    namespace: knative-serving
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Deployment
+      name: domainmapping-webhook
+      uid: acd0d3b8-2e70-4757-be9d-14ba61e1cdfb
+    resourceVersion: "40174"
+    uid: 61192060-6bcc-41f8-94c5-ee1b789cc74a
+  spec:
+    replicas: 2
+    selector:
+      matchLabels:
+        app: domainmapping-webhook
+        pod-template-hash: 79986f7545
+        role: domainmapping-webhook
+    template:
+      metadata:
+        annotations:
+          cluster-autoscaler.kubernetes.io/safe-to-evict: "false"
+        creationTimestamp: null
+        labels:
+          app: domainmapping-webhook
+          app.kubernetes.io/component: domain-mapping
+          app.kubernetes.io/name: knative-serving
+          app.kubernetes.io/version: 1.5.0
+          pod-template-hash: 79986f7545
+          role: domainmapping-webhook
+      spec:
+        affinity:
+          podAntiAffinity:
+            preferredDuringSchedulingIgnoredDuringExecution:
+            - podAffinityTerm:
+                labelSelector:
+                  matchLabels:
+                    app: domainmapping-webhook
+                topologyKey: kubernetes.io/hostname
+              weight: 100
+        containers:
+        - env:
+          - name: POD_NAME
+            valueFrom:
+              fieldRef:
+                apiVersion: v1
+                fieldPath: metadata.name
+          - name: SYSTEM_NAMESPACE
+            valueFrom:
+              fieldRef:
+                apiVersion: v1
+                fieldPath: metadata.namespace
+          - name: CONFIG_LOGGING_NAME
+            value: config-logging
+          - name: CONFIG_OBSERVABILITY_NAME
+            value: config-observability
+          - name: WEBHOOK_PORT
+            value: "8443"
+          - name: METRICS_DOMAIN
+            value: knative.dev/serving
+          image: registry.redhat.io/openshift-serverless-1/serving-domain-mapping-webhook-rhel8@sha256:b8e97763348ac558178247c67c7fd8e84f0e6ddd5d324f3a6927d1436b85c3f7
+          imagePullPolicy: IfNotPresent
+          livenessProbe:
+            failureThreshold: 6
+            httpGet:
+              httpHeaders:
+              - name: k-kubelet-probe
+                value: webhook
+              path: /
+              port: 8443
+              scheme: HTTPS
+            initialDelaySeconds: 20
+            periodSeconds: 1
+            successThreshold: 1
+            timeoutSeconds: 1
+          name: domainmapping-webhook
+          ports:
+          - containerPort: 9090
+            name: metrics
+            protocol: TCP
+          - containerPort: 8008
+            name: profiling
+            protocol: TCP
+          - containerPort: 8443
+            name: https-webhook
+            protocol: TCP
+          readinessProbe:
+            failureThreshold: 3
+            httpGet:
+              httpHeaders:
+              - name: k-kubelet-probe
+                value: webhook
+              path: /
+              port: 8443
+              scheme: HTTPS
+            periodSeconds: 1
+            successThreshold: 1
+            timeoutSeconds: 1
+          resources:
+            limits:
+              cpu: 500m
+              memory: 500Mi
+            requests:
+              cpu: 100m
+              memory: 100Mi
+          securityContext:
+            allowPrivilegeEscalation: false
+            capabilities:
+              drop:
+              - ALL
+            readOnlyRootFilesystem: true
+            runAsNonRoot: true
+            seccompProfile:
+              type: RuntimeDefault
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+        dnsPolicy: ClusterFirst
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        securityContext: {}
+        serviceAccount: controller
+        serviceAccountName: controller
+        terminationGracePeriodSeconds: 300
+  status:
+    availableReplicas: 2
+    fullyLabeledReplicas: 2
+    observedGeneration: 1
+    readyReplicas: 2
+    replicas: 2
+- apiVersion: apps/v1
+  kind: ReplicaSet
+  metadata:
+    annotations:
+      deployment.kubernetes.io/desired-replicas: "2"
+      deployment.kubernetes.io/max-replicas: "3"
+      deployment.kubernetes.io/revision: "1"
+      manifestival: new
+    creationTimestamp: "2023-03-03T20:09:41Z"
+    generation: 1
+    labels:
+      app: net-istio-controller
+      app.kubernetes.io/component: net-istio
+      app.kubernetes.io/name: knative-serving
+      app.kubernetes.io/version: devel
+      pod-template-hash: 65dd6945cc
+    name: net-istio-controller-65dd6945cc
+    namespace: knative-serving
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Deployment
+      name: net-istio-controller
+      uid: 1181de83-745b-4f4b-8f2d-5ef4e6ddcda7
+    resourceVersion: "40295"
+    uid: ecc24419-26af-497d-90b9-e7a6e66731b6
+  spec:
+    replicas: 2
+    selector:
+      matchLabels:
+        app: net-istio-controller
+        pod-template-hash: 65dd6945cc
+    template:
+      metadata:
+        annotations:
+          cluster-autoscaler.kubernetes.io/safe-to-evict: "true"
+          sidecar.istio.io/inject: "false"
+        creationTimestamp: null
+        labels:
+          app: net-istio-controller
+          app.kubernetes.io/component: net-istio
+          app.kubernetes.io/name: knative-serving
+          app.kubernetes.io/version: devel
+          pod-template-hash: 65dd6945cc
+      spec:
+        containers:
+        - env:
+          - name: SYSTEM_NAMESPACE
+            valueFrom:
+              fieldRef:
+                apiVersion: v1
+                fieldPath: metadata.namespace
+          - name: CONFIG_LOGGING_NAME
+            value: config-logging
+          - name: CONFIG_OBSERVABILITY_NAME
+            value: config-observability
+          - name: ENABLE_SECRET_INFORMER_FILTERING_BY_CERT_UID
+            value: "false"
+          - name: METRICS_DOMAIN
+            value: knative.dev/net-istio
+          image: registry.redhat.io/openshift-serverless-1/net-istio-controller-rhel8@sha256:6509429d95956bac73bd2531b262136bc121780aa245200f986b3437f061cb93
+          imagePullPolicy: IfNotPresent
+          name: controller
+          ports:
+          - containerPort: 9090
+            name: metrics
+            protocol: TCP
+          - containerPort: 8008
+            name: profiling
+            protocol: TCP
+          resources:
+            limits:
+              cpu: 300m
+              memory: 400Mi
+            requests:
+              cpu: 30m
+              memory: 40Mi
+          securityContext:
+            allowPrivilegeEscalation: false
+            capabilities:
+              drop:
+              - ALL
+            readOnlyRootFilesystem: true
+            runAsNonRoot: true
+            seccompProfile:
+              type: RuntimeDefault
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+        dnsPolicy: ClusterFirst
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        securityContext: {}
+        serviceAccount: controller
+        serviceAccountName: controller
+        terminationGracePeriodSeconds: 30
+  status:
+    availableReplicas: 2
+    fullyLabeledReplicas: 2
+    observedGeneration: 1
+    readyReplicas: 2
+    replicas: 2
+- apiVersion: apps/v1
+  kind: ReplicaSet
+  metadata:
+    annotations:
+      deployment.kubernetes.io/desired-replicas: "2"
+      deployment.kubernetes.io/max-replicas: "3"
+      deployment.kubernetes.io/revision: "1"
+      manifestival: new
+    creationTimestamp: "2023-03-03T20:09:41Z"
+    generation: 1
+    labels:
+      app: net-istio-webhook
+      app.kubernetes.io/component: net-istio
+      app.kubernetes.io/name: knative-serving
+      app.kubernetes.io/version: devel
+      pod-template-hash: 5784f45744
+      role: net-istio-webhook
+    name: net-istio-webhook-5784f45744
+    namespace: knative-serving
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Deployment
+      name: net-istio-webhook
+      uid: 95a733fc-9d00-4436-9b11-8e918860ff67
+    resourceVersion: "40305"
+    uid: 35e04b18-c5db-4303-930a-4c1ede6d0300
+  spec:
+    replicas: 2
+    selector:
+      matchLabels:
+        app: net-istio-webhook
+        pod-template-hash: 5784f45744
+        role: net-istio-webhook
+    template:
+      metadata:
+        annotations:
+          cluster-autoscaler.kubernetes.io/safe-to-evict: "false"
+        creationTimestamp: null
+        labels:
+          app: net-istio-webhook
+          app.kubernetes.io/component: net-istio
+          app.kubernetes.io/name: knative-serving
+          app.kubernetes.io/version: devel
+          pod-template-hash: 5784f45744
+          role: net-istio-webhook
+      spec:
+        containers:
+        - env:
+          - name: SYSTEM_NAMESPACE
+            valueFrom:
+              fieldRef:
+                apiVersion: v1
+                fieldPath: metadata.namespace
+          - name: CONFIG_LOGGING_NAME
+            value: config-logging
+          - name: CONFIG_OBSERVABILITY_NAME
+            value: config-observability
+          - name: METRICS_DOMAIN
+            value: knative.dev/net-istio
+          - name: WEBHOOK_NAME
+            value: net-istio-webhook
+          image: registry.redhat.io/openshift-serverless-1/net-istio-webhook-rhel8@sha256:c317e8815afc35c8e8a800bd1c9a127126359b954beddf54a196db66c7f1a8f3
+          imagePullPolicy: IfNotPresent
+          name: webhook
+          ports:
+          - containerPort: 9090
+            name: metrics
+            protocol: TCP
+          - containerPort: 8008
+            name: profiling
+            protocol: TCP
+          - containerPort: 8443
+            name: https-webhook
+            protocol: TCP
+          resources:
+            limits:
+              cpu: 200m
+              memory: 1Gi
+            requests:
+              cpu: 20m
+              memory: 20Mi
+          securityContext:
+            allowPrivilegeEscalation: false
+            capabilities:
+              drop:
+              - ALL
+            readOnlyRootFilesystem: true
+            runAsNonRoot: true
+            seccompProfile:
+              type: RuntimeDefault
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+        dnsPolicy: ClusterFirst
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        securityContext: {}
+        serviceAccount: controller
+        serviceAccountName: controller
+        terminationGracePeriodSeconds: 30
+  status:
+    availableReplicas: 2
+    fullyLabeledReplicas: 2
+    observedGeneration: 1
+    readyReplicas: 2
+    replicas: 2
+- apiVersion: apps/v1
+  kind: ReplicaSet
+  metadata:
+    annotations:
+      deployment.kubernetes.io/desired-replicas: "2"
+      deployment.kubernetes.io/max-replicas: "3"
+      deployment.kubernetes.io/revision: "1"
+      manifestival: new
+    creationTimestamp: "2023-03-03T20:09:39Z"
+    generation: 1
+    labels:
+      app: webhook
+      app.kubernetes.io/name: knative-serving
+      app.kubernetes.io/version: 1.5.0
+      pod-template-hash: 778d5987b7
+      role: webhook
+    name: webhook-778d5987b7
+    namespace: knative-serving
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Deployment
+      name: webhook
+      uid: 65182012-d3c8-4660-b706-b85194ef39db
+    resourceVersion: "40289"
+    uid: 5eddc99a-3810-455d-a319-965bdd1b7e05
+  spec:
+    replicas: 2
+    selector:
+      matchLabels:
+        app: webhook
+        pod-template-hash: 778d5987b7
+        role: webhook
+    template:
+      metadata:
+        annotations:
+          cluster-autoscaler.kubernetes.io/safe-to-evict: "false"
+        creationTimestamp: null
+        labels:
+          app: webhook
+          app.kubernetes.io/name: knative-serving
+          app.kubernetes.io/version: 1.5.0
+          pod-template-hash: 778d5987b7
+          role: webhook
+      spec:
+        affinity:
+          podAntiAffinity:
+            preferredDuringSchedulingIgnoredDuringExecution:
+            - podAffinityTerm:
+                labelSelector:
+                  matchLabels:
+                    app: webhook
+                topologyKey: kubernetes.io/hostname
+              weight: 100
+        containers:
+        - env:
+          - name: POD_NAME
+            valueFrom:
+              fieldRef:
+                apiVersion: v1
+                fieldPath: metadata.name
+          - name: SYSTEM_NAMESPACE
+            valueFrom:
+              fieldRef:
+                apiVersion: v1
+                fieldPath: metadata.namespace
+          - name: CONFIG_LOGGING_NAME
+            value: config-logging
+          - name: CONFIG_OBSERVABILITY_NAME
+            value: config-observability
+          - name: WEBHOOK_NAME
+            value: webhook
+          - name: WEBHOOK_PORT
+            value: "8443"
+          - name: METRICS_DOMAIN
+            value: knative.dev/internal/serving
+          image: registry.redhat.io/openshift-serverless-1/serving-webhook-rhel8@sha256:d619de7f9a0c63905a6073f9a508082084be1930ee110afc274438ad949af499
+          imagePullPolicy: IfNotPresent
+          livenessProbe:
+            failureThreshold: 6
+            httpGet:
+              httpHeaders:
+              - name: k-kubelet-probe
+                value: webhook
+              path: /
+              port: 8443
+              scheme: HTTPS
+            initialDelaySeconds: 20
+            periodSeconds: 1
+            successThreshold: 1
+            timeoutSeconds: 1
+          name: webhook
+          ports:
+          - containerPort: 9090
+            name: metrics
+            protocol: TCP
+          - containerPort: 8008
+            name: profiling
+            protocol: TCP
+          - containerPort: 8443
+            name: https-webhook
+            protocol: TCP
+          readinessProbe:
+            failureThreshold: 3
+            httpGet:
+              httpHeaders:
+              - name: k-kubelet-probe
+                value: webhook
+              path: /
+              port: 8443
+              scheme: HTTPS
+            periodSeconds: 1
+            successThreshold: 1
+            timeoutSeconds: 1
+          resources:
+            limits:
+              cpu: 500m
+              memory: 1Gi
+            requests:
+              cpu: 100m
+              memory: 100Mi
+          securityContext:
+            allowPrivilegeEscalation: false
+            capabilities:
+              drop:
+              - ALL
+            readOnlyRootFilesystem: true
+            runAsNonRoot: true
+            seccompProfile:
+              type: RuntimeDefault
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+        dnsPolicy: ClusterFirst
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        securityContext: {}
+        serviceAccount: controller
+        serviceAccountName: controller
+        terminationGracePeriodSeconds: 300
+  status:
+    availableReplicas: 2
+    fullyLabeledReplicas: 2
+    observedGeneration: 1
+    readyReplicas: 2
+    replicas: 2
+kind: ReplicaSetList
+metadata:
+  resourceVersion: "61084"

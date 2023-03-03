@@ -1,0 +1,33 @@
+2023-03-03T20:03:19.234481197Z level=warn ts=2023-03-03T20:03:19.233Z caller=main.go:322 deprecation_notice="'storage.tsdb.retention' flag is deprecated use 'storage.tsdb.retention.time' instead."
+2023-03-03T20:03:19.234481197Z level=info ts=2023-03-03T20:03:19.233Z caller=main.go:371 msg="Starting Prometheus" version="(version=2.23.0, branch=non-git, revision=non-git)"
+2023-03-03T20:03:19.234481197Z level=info ts=2023-03-03T20:03:19.233Z caller=main.go:376 build_context="(go=go1.17.12, user=prometheus-build@redhat, date=20230112-19:08:40)"
+2023-03-03T20:03:19.234481197Z level=info ts=2023-03-03T20:03:19.233Z caller=main.go:377 host_details="(Linux 4.18.0-372.43.1.el8_6.x86_64 #1 SMP Fri Jan 27 00:24:08 EST 2023 x86_64 prometheus-ff79665c9-scskr (none))"
+2023-03-03T20:03:19.234481197Z level=info ts=2023-03-03T20:03:19.233Z caller=main.go:378 fd_limits="(soft=1048576, hard=1048576)"
+2023-03-03T20:03:19.234481197Z level=info ts=2023-03-03T20:03:19.233Z caller=main.go:379 vm_limits="(soft=unlimited, hard=unlimited)"
+2023-03-03T20:03:19.236826784Z level=info ts=2023-03-03T20:03:19.236Z caller=main.go:734 msg="Starting TSDB ..."
+2023-03-03T20:03:19.236826784Z level=info ts=2023-03-03T20:03:19.236Z caller=web.go:528 component=web msg="Start listening for connections" address=0.0.0.0:9090
+2023-03-03T20:03:19.241057419Z level=info ts=2023-03-03T20:03:19.240Z caller=head.go:645 component=tsdb msg="Replaying on-disk memory mappable chunks if any"
+2023-03-03T20:03:19.241057419Z level=info ts=2023-03-03T20:03:19.241Z caller=head.go:659 component=tsdb msg="On-disk memory mappable chunks replay completed" duration=2.78µs
+2023-03-03T20:03:19.241057419Z level=info ts=2023-03-03T20:03:19.241Z caller=head.go:665 component=tsdb msg="Replaying WAL, this may take a while"
+2023-03-03T20:03:19.241380975Z level=info ts=2023-03-03T20:03:19.241Z caller=head.go:717 component=tsdb msg="WAL segment loaded" segment=0 maxSegment=0
+2023-03-03T20:03:19.241380975Z level=info ts=2023-03-03T20:03:19.241Z caller=head.go:722 component=tsdb msg="WAL replay completed" checkpoint_replay_duration=44.935µs wal_replay_duration=206.198µs total_replay_duration=276.354µs
+2023-03-03T20:03:19.244659922Z level=info ts=2023-03-03T20:03:19.243Z caller=main.go:754 fs_type=794c7630
+2023-03-03T20:03:19.244659922Z level=info ts=2023-03-03T20:03:19.243Z caller=main.go:757 msg="TSDB started"
+2023-03-03T20:03:19.244659922Z level=info ts=2023-03-03T20:03:19.243Z caller=main.go:883 msg="Loading configuration file" filename=/etc/prometheus/prometheus.yml
+2023-03-03T20:03:19.246824134Z level=info ts=2023-03-03T20:03:19.246Z caller=kubernetes.go:268 component="discovery manager scrape" discovery=kubernetes msg="Using pod service account via in-cluster config"
+2023-03-03T20:03:19.247338106Z level=info ts=2023-03-03T20:03:19.247Z caller=logWrapper.go:56 component=k8s_client_runtime Waitingforcachestosyncforsmmr=(MISSING)
+2023-03-03T20:03:19.252631594Z level=info ts=2023-03-03T20:03:19.250Z caller=kubernetes.go:268 component="discovery manager scrape" discovery=kubernetes msg="Using pod service account via in-cluster config"
+2023-03-03T20:03:19.252631594Z level=info ts=2023-03-03T20:03:19.252Z caller=logWrapper.go:56 component=k8s_client_runtime Waitingforcachestosyncforsmmr=(MISSING)
+2023-03-03T20:03:19.257021234Z level=info ts=2023-03-03T20:03:19.255Z caller=kubernetes.go:268 component="discovery manager scrape" discovery=kubernetes msg="Using pod service account via in-cluster config"
+2023-03-03T20:03:19.257021234Z level=info ts=2023-03-03T20:03:19.256Z caller=logWrapper.go:56 component=k8s_client_runtime Waitingforcachestosyncforsmmr=(MISSING)
+2023-03-03T20:03:19.258065148Z level=info ts=2023-03-03T20:03:19.257Z caller=main.go:914 msg="Completed loading of configuration file" filename=/etc/prometheus/prometheus.yml totalDuration=13.947092ms remote_storage=2.922µs web_handler=850ns query_engine=1.685µs scrape=685.86µs scrape_sd=11.8568ms notify=1.614µs notify_sd=3.561µs rules=47.743µs
+2023-03-03T20:03:19.258065148Z level=info ts=2023-03-03T20:03:19.257Z caller=main.go:706 msg="Server is ready to receive web requests."
+2023-03-03T20:03:19.348439667Z level=info ts=2023-03-03T20:03:19.348Z caller=logWrapper.go:56 component=k8s_client_runtime Cachesaresyncedforsmmr=(MISSING)
+2023-03-03T20:03:19.352695805Z level=info ts=2023-03-03T20:03:19.352Z caller=logWrapper.go:56 component=k8s_client_runtime Cachesaresyncedforsmmr=(MISSING)
+2023-03-03T20:03:19.357000559Z level=info ts=2023-03-03T20:03:19.356Z caller=logWrapper.go:56 component=k8s_client_runtime Cachesaresyncedforsmmr=(MISSING)
+2023-03-03T20:03:19.358278528Z 2023-03-03T20:03:19.358163Z	info	smmr	Cache synced for listener "kubernetes-informers"
+2023-03-03T20:03:19.358278528Z 2023-03-03T20:03:19.358260Z	info	smmr	Seeding listener "kubernetes-informers" with system namespace.
+2023-03-03T20:03:19.359076363Z 2023-03-03T20:03:19.358393Z	info	smmr	Cache synced for listener "kubernetes-informers"
+2023-03-03T20:03:19.359076363Z 2023-03-03T20:03:19.358427Z	info	smmr	Seeding listener "kubernetes-informers" with system namespace.
+2023-03-03T20:03:19.359076363Z 2023-03-03T20:03:19.358441Z	info	smmr	Cache synced for listener "kubernetes-informers"
+2023-03-03T20:03:19.359076363Z 2023-03-03T20:03:19.358491Z	info	smmr	Seeding listener "kubernetes-informers" with system namespace.

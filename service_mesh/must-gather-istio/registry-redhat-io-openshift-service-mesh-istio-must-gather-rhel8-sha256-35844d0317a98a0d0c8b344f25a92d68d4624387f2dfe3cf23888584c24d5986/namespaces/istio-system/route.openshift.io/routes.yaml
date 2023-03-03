@@ -1,0 +1,294 @@
+---
+apiVersion: route.openshift.io/v1
+items:
+- apiVersion: route.openshift.io/v1
+  kind: Route
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"route.openshift.io/v1","kind":"Route","metadata":{"annotations":{"maistra.io/mesh-generation":"2.3.1-1-2"},"labels":{"app":"grafana","app.kubernetes.io/component":"grafana","app.kubernetes.io/instance":"istio-system","app.kubernetes.io/managed-by":"maistra-istio-operator","app.kubernetes.io/name":"grafana","app.kubernetes.io/part-of":"istio","app.kubernetes.io/version":"2.3.1-1-2","maistra-version":"2.1.6","maistra.io/owner":"istio-system","maistra.io/owner-name":"basic","release":"istio"},"name":"grafana","namespace":"istio-system","ownerReferences":[{"apiVersion":"maistra.io/v2","blockOwnerDeletion":true,"controller":true,"kind":"ServiceMeshControlPlane","name":"basic","uid":"0c79eb74-854c-4f98-85c6-5955e78fd93e"}]},"spec":{"tls":{"insecureEdgeTerminationPolicy":"Redirect","termination":"reencrypt"},"to":{"kind":"Service","name":"grafana"}}}
+      maistra.io/mesh-generation: 2.3.1-1-2
+      openshift.io/host.generated: "true"
+    creationTimestamp: "2023-03-03T20:03:21Z"
+    labels:
+      app: grafana
+      app.kubernetes.io/component: grafana
+      app.kubernetes.io/instance: istio-system
+      app.kubernetes.io/managed-by: maistra-istio-operator
+      app.kubernetes.io/name: grafana
+      app.kubernetes.io/part-of: istio
+      app.kubernetes.io/version: 2.3.1-1-2
+      maistra-version: 2.1.6
+      maistra.io/owner: istio-system
+      maistra.io/owner-name: basic
+      release: istio
+    name: grafana
+    namespace: istio-system
+    ownerReferences:
+    - apiVersion: maistra.io/v2
+      blockOwnerDeletion: true
+      controller: true
+      kind: ServiceMeshControlPlane
+      name: basic
+      uid: 0c79eb74-854c-4f98-85c6-5955e78fd93e
+    resourceVersion: "34895"
+    uid: 6169fc3a-7bc0-4e6b-83bc-b5399ba9fbc3
+  spec:
+    host: grafana-istio-system.apps.ci-ln-4zhdf4b-72292.origin-ci-int-gce.dev.rhcloud.com
+    tls:
+      insecureEdgeTerminationPolicy: Redirect
+      termination: reencrypt
+    to:
+      kind: Service
+      name: grafana
+      weight: 100
+    wildcardPolicy: None
+  status:
+    ingress:
+    - conditions:
+      - lastTransitionTime: "2023-03-03T20:03:21Z"
+        status: "True"
+        type: Admitted
+      host: grafana-istio-system.apps.ci-ln-4zhdf4b-72292.origin-ci-int-gce.dev.rhcloud.com
+      routerCanonicalHostname: router-default.apps.ci-ln-4zhdf4b-72292.origin-ci-int-gce.dev.rhcloud.com
+      routerName: default
+      wildcardPolicy: None
+- apiVersion: route.openshift.io/v1
+  kind: Route
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"route.openshift.io/v1","kind":"Route","metadata":{"annotations":{"maistra.io/mesh-generation":"2.3.1-1-2"},"labels":{"app":"istio-ingressgateway","app.kubernetes.io/component":"istio-ingress","app.kubernetes.io/instance":"istio-system","app.kubernetes.io/managed-by":"maistra-istio-operator","app.kubernetes.io/name":"istio-ingress","app.kubernetes.io/part-of":"istio","app.kubernetes.io/version":"2.3.1-1-2","istio":"ingressgateway","maistra-version":"2.1.6","maistra.io/owner":"istio-system","maistra.io/owner-name":"basic","release":"istio"},"name":"istio-ingressgateway","namespace":"istio-system","ownerReferences":[{"apiVersion":"maistra.io/v2","blockOwnerDeletion":true,"controller":true,"kind":"ServiceMeshControlPlane","name":"basic","uid":"0c79eb74-854c-4f98-85c6-5955e78fd93e"}]},"spec":{"port":{"targetPort":8080},"to":{"kind":"Service","name":"istio-ingressgateway"}}}
+      maistra.io/mesh-generation: 2.3.1-1-2
+      openshift.io/host.generated: "true"
+    creationTimestamp: "2023-03-03T20:03:20Z"
+    labels:
+      app: istio-ingressgateway
+      app.kubernetes.io/component: istio-ingress
+      app.kubernetes.io/instance: istio-system
+      app.kubernetes.io/managed-by: maistra-istio-operator
+      app.kubernetes.io/name: istio-ingress
+      app.kubernetes.io/part-of: istio
+      app.kubernetes.io/version: 2.3.1-1-2
+      istio: ingressgateway
+      maistra-version: 2.1.6
+      maistra.io/owner: istio-system
+      maistra.io/owner-name: basic
+      release: istio
+    name: istio-ingressgateway
+    namespace: istio-system
+    ownerReferences:
+    - apiVersion: maistra.io/v2
+      blockOwnerDeletion: true
+      controller: true
+      kind: ServiceMeshControlPlane
+      name: basic
+      uid: 0c79eb74-854c-4f98-85c6-5955e78fd93e
+    resourceVersion: "34829"
+    uid: fbe3a847-89c3-4858-8b94-787f96b37d2a
+  spec:
+    host: istio-ingressgateway-istio-system.apps.ci-ln-4zhdf4b-72292.origin-ci-int-gce.dev.rhcloud.com
+    port:
+      targetPort: 8080
+    to:
+      kind: Service
+      name: istio-ingressgateway
+      weight: 100
+    wildcardPolicy: None
+  status:
+    ingress:
+    - conditions:
+      - lastTransitionTime: "2023-03-03T20:03:20Z"
+        status: "True"
+        type: Admitted
+      host: istio-ingressgateway-istio-system.apps.ci-ln-4zhdf4b-72292.origin-ci-int-gce.dev.rhcloud.com
+      routerCanonicalHostname: router-default.apps.ci-ln-4zhdf4b-72292.origin-ci-int-gce.dev.rhcloud.com
+      routerName: default
+      wildcardPolicy: None
+- apiVersion: route.openshift.io/v1
+  kind: Route
+  metadata:
+    annotations:
+      openshift.io/host.generated: "true"
+    creationTimestamp: "2023-03-03T20:03:23Z"
+    labels:
+      app: jaeger
+      app.kubernetes.io/component: query-route
+      app.kubernetes.io/instance: jaeger
+      app.kubernetes.io/managed-by: jaeger-operator
+      app.kubernetes.io/name: jaeger
+      app.kubernetes.io/part-of: jaeger
+    name: jaeger
+    namespace: istio-system
+    ownerReferences:
+    - apiVersion: jaegertracing.io/v1
+      controller: true
+      kind: Jaeger
+      name: jaeger
+      uid: 2e9a1b7a-585c-4524-8ba7-534195634a88
+    resourceVersion: "34997"
+    uid: c444834d-8816-4da1-a6bd-edd840a964f4
+  spec:
+    host: jaeger-istio-system.apps.ci-ln-4zhdf4b-72292.origin-ci-int-gce.dev.rhcloud.com
+    port:
+      targetPort: https-query
+    tls:
+      termination: reencrypt
+    to:
+      kind: Service
+      name: jaeger-query
+      weight: 100
+    wildcardPolicy: None
+  status:
+    ingress:
+    - conditions:
+      - lastTransitionTime: "2023-03-03T20:03:23Z"
+        status: "True"
+        type: Admitted
+      host: jaeger-istio-system.apps.ci-ln-4zhdf4b-72292.origin-ci-int-gce.dev.rhcloud.com
+      routerCanonicalHostname: router-default.apps.ci-ln-4zhdf4b-72292.origin-ci-int-gce.dev.rhcloud.com
+      routerName: default
+      wildcardPolicy: None
+- apiVersion: route.openshift.io/v1
+  kind: Route
+  metadata:
+    annotations:
+      openshift.io/host.generated: "true"
+    creationTimestamp: "2023-03-03T20:04:32Z"
+    labels:
+      app: kiali
+      app.kubernetes.io/instance: kiali
+      app.kubernetes.io/name: kiali
+      app.kubernetes.io/part-of: kiali
+      app.kubernetes.io/version: 13442c85948c6ef194b3c0a5547f6deb44e6318b2326a563cd324b50ca75XXX
+      version: 13442c85948c6ef194b3c0a5547f6deb44e6318b2326a563cd324b50ca75XXX
+    name: kiali
+    namespace: istio-system
+    ownerReferences:
+    - apiVersion: kiali.io/v1alpha1
+      kind: Kiali
+      name: kiali
+      uid: 6d4caa5f-fa28-4919-aedf-25634891cb1c
+    resourceVersion: "35842"
+    uid: 683b28c9-4522-46b0-9447-18b9b91a9717
+  spec:
+    host: kiali-istio-system.apps.ci-ln-4zhdf4b-72292.origin-ci-int-gce.dev.rhcloud.com
+    port:
+      targetPort: 20001
+    tls:
+      insecureEdgeTerminationPolicy: Redirect
+      termination: reencrypt
+    to:
+      kind: Service
+      name: kiali
+      weight: 100
+    wildcardPolicy: None
+  status:
+    ingress:
+    - conditions:
+      - lastTransitionTime: "2023-03-03T20:04:32Z"
+        status: "True"
+        type: Admitted
+      host: kiali-istio-system.apps.ci-ln-4zhdf4b-72292.origin-ci-int-gce.dev.rhcloud.com
+      routerCanonicalHostname: router-default.apps.ci-ln-4zhdf4b-72292.origin-ci-int-gce.dev.rhcloud.com
+      routerName: default
+      wildcardPolicy: None
+- apiVersion: route.openshift.io/v1
+  kind: Route
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"route.openshift.io/v1","kind":"Route","metadata":{"annotations":{"maistra.io/mesh-generation":"2.3.1-1-2"},"labels":{"app":"prometheus","app.kubernetes.io/component":"prometheus","app.kubernetes.io/instance":"istio-system","app.kubernetes.io/managed-by":"maistra-istio-operator","app.kubernetes.io/name":"prometheus","app.kubernetes.io/part-of":"istio","app.kubernetes.io/version":"2.3.1-1-2","maistra-version":"2.1.6","maistra.io/owner":"istio-system","maistra.io/owner-name":"basic","release":"istio"},"name":"prometheus","namespace":"istio-system","ownerReferences":[{"apiVersion":"maistra.io/v2","blockOwnerDeletion":true,"controller":true,"kind":"ServiceMeshControlPlane","name":"basic","uid":"0c79eb74-854c-4f98-85c6-5955e78fd93e"}]},"spec":{"tls":{"insecureEdgeTerminationPolicy":"Redirect","termination":"reencrypt"},"to":{"kind":"Service","name":"prometheus"}}}
+      maistra.io/mesh-generation: 2.3.1-1-2
+      openshift.io/host.generated: "true"
+    creationTimestamp: "2023-03-03T20:03:12Z"
+    labels:
+      app: prometheus
+      app.kubernetes.io/component: prometheus
+      app.kubernetes.io/instance: istio-system
+      app.kubernetes.io/managed-by: maistra-istio-operator
+      app.kubernetes.io/name: prometheus
+      app.kubernetes.io/part-of: istio
+      app.kubernetes.io/version: 2.3.1-1-2
+      maistra-version: 2.1.6
+      maistra.io/owner: istio-system
+      maistra.io/owner-name: basic
+      release: istio
+    name: prometheus
+    namespace: istio-system
+    ownerReferences:
+    - apiVersion: maistra.io/v2
+      blockOwnerDeletion: true
+      controller: true
+      kind: ServiceMeshControlPlane
+      name: basic
+      uid: 0c79eb74-854c-4f98-85c6-5955e78fd93e
+    resourceVersion: "34659"
+    uid: 45791539-8f3f-4a39-8651-053b62c050cf
+  spec:
+    host: prometheus-istio-system.apps.ci-ln-4zhdf4b-72292.origin-ci-int-gce.dev.rhcloud.com
+    tls:
+      insecureEdgeTerminationPolicy: Redirect
+      termination: reencrypt
+    to:
+      kind: Service
+      name: prometheus
+      weight: 100
+    wildcardPolicy: None
+  status:
+    ingress:
+    - conditions:
+      - lastTransitionTime: "2023-03-03T20:03:12Z"
+        status: "True"
+        type: Admitted
+      host: prometheus-istio-system.apps.ci-ln-4zhdf4b-72292.origin-ci-int-gce.dev.rhcloud.com
+      routerCanonicalHostname: router-default.apps.ci-ln-4zhdf4b-72292.origin-ci-int-gce.dev.rhcloud.com
+      routerName: default
+      wildcardPolicy: None
+- apiVersion: route.openshift.io/v1
+  kind: Route
+  metadata:
+    annotations:
+      haproxy.router.openshift.io/timeout: 600s
+      networking.internal.knative.dev/rollout: '{"configurations":[{"configurationName":"helloworld-go","percent":100,"revisions":[{"revisionName":"helloworld-go-00001","percent":100}],"stepParams":{}}]}'
+      networking.knative.dev/ingress.class: istio.ingress.networking.knative.dev
+      serving.knative.dev/creator: system:admin
+      serving.knative.dev/lastModifier: system:admin
+      serving.knative.openshift.io/enablePassthrough: "true"
+    creationTimestamp: "2023-03-03T20:12:09Z"
+    labels:
+      networking.internal.knative.dev/ingress: helloworld-go
+      serving.knative.dev/route: helloworld-go
+      serving.knative.dev/routeNamespace: user-ns
+      serving.knative.dev/service: helloworld-go
+      serving.knative.openshift.io/ingressName: helloworld-go
+      serving.knative.openshift.io/ingressNamespace: user-ns
+    name: route-d2ba8638-1c3e-4aad-a540-4cadff8e1f9a-376436376534
+    namespace: istio-system
+    resourceVersion: "42053"
+    uid: 2d1f0073-046e-4e67-a8bc-694a7902c45d
+  spec:
+    host: helloworld-go-user-ns.apps.ci-ln-4zhdf4b-72292.origin-ci-int-gce.dev.rhcloud.com
+    port:
+      targetPort: https
+    tls:
+      insecureEdgeTerminationPolicy: Redirect
+      termination: passthrough
+    to:
+      kind: Service
+      name: istio-ingressgateway
+      weight: 100
+    wildcardPolicy: None
+  status:
+    ingress:
+    - conditions:
+      - lastTransitionTime: "2023-03-03T20:12:09Z"
+        status: "True"
+        type: Admitted
+      host: helloworld-go-user-ns.apps.ci-ln-4zhdf4b-72292.origin-ci-int-gce.dev.rhcloud.com
+      routerCanonicalHostname: router-default.apps.ci-ln-4zhdf4b-72292.origin-ci-int-gce.dev.rhcloud.com
+      routerName: default
+      wildcardPolicy: None
+kind: RouteList
+metadata:
+  resourceVersion: "61057"
