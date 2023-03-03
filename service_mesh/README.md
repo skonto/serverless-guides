@@ -143,6 +143,13 @@ NAME                          TYPE           CLUSTER-IP       EXTERNAL-IP       
 helloworld-go                 ExternalName   <none>           knative-local-gateway.istio-system.svc.cluster.local   80/TCP                                               21m
 helloworld-go-00001           ClusterIP      172.30.135.211   <none>                                                 80/TCP,443/TCP                                       21m
 helloworld-go-00001-private   ClusterIP      172.30.23.80     <none>     
+
+$ oc get virtualservices.networking.istio.io -n user-ns
+NAME                    GATEWAYS                                                                              HOSTS                                                                                                                                                                                AGE
+helloworld-go-ingress   ["knative-serving/knative-ingress-gateway","knative-serving/knative-local-gateway"]   ["helloworld-go-user-ns.apps.ci-ln-4zhdf4b-72292.origin-ci-int-gce.dev.rhcloud.com","helloworld-go.user-ns","helloworld-go.user-ns.svc","helloworld-go.user-ns.svc.cluster.local"]   72m
+helloworld-go-mesh      ["mesh"]                                                                              ["helloworld-go.user-ns","helloworld-go.user-ns.svc","helloworld-go.user-ns.svc.cluster.local"]                                                                                      72m
+
+
 ```
 
 To get must-gather for serverless:
