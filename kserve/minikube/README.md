@@ -1,6 +1,7 @@
 # Minikube Setup
 
 ```
+# This depends on the host machine, here being probably more generous than we should
 MEMORY=${MEMORY:-40000}
 CPUS=${CPUS:-6}
 
@@ -20,18 +21,21 @@ minikube start --driver=kvm2 --memory=$MEMORY --cpus=$CPUS \
   --extra-config=kubelet.authentication-token-webhook=true
 ```
 
-\# In a seperate terminal run
-
 ```
-$ minikube tunnel
+# In a seperate terminal run
+
+minikube tunnel
 ```
 
 # Istio Setup
 
 ```
 $ curl -L https://istio.io/downloadIstio | ISTIO_VERSION=1.17.1 TARGET_ARCH=x86_64 sh -
-$ export PATH="$PATH:.../istio-1.17.1/bin"
 
+$ export PATH="$PATH:.../istio-1.17.1/bin"
+```
+
+```
 $ istioctl manifest generate > ./generated-manifest.yaml
 
 $ istioctl profile dump default --config-path values.global.proxy.resources
@@ -41,9 +45,11 @@ limits:
 requests:
   cpu: 100m
   memory: 128Mi
-
+```
+```
 $ istioctl install -y
-
+```
+```
 $ istioctl verify-install -f ./generated-manifest.yaml
 ✔ CustomResourceDefinition: authorizationpolicies.security.istio.io.istio-system checked successfully
 ..
@@ -68,7 +74,7 @@ $ kubectl patch configmap/config-domain \
   --type merge \
   --patch '{"data":{"example.com":""}}'
 
-# This restricts (among otheres) app monitoring, check istio docs for more on how to setup Prometheus.
+# This restricts (among others) app monitoring, check istio docs for more on how to setup Prometheus.
 
 $ kubectl apply -f - <<EOF
 apiVersion: security.istio.io/v1beta1
@@ -80,17 +86,34 @@ spec:
   mtls:
     mode: STRICT
 EOF
+```
 
+```
 $ kubectl label namespace knative-serving istio-injection=enabled
 ```
+```
+# Alternatively to avoid adding all pods in the mesh injection can be disabled
+# at the pod level by editing only the activator, autoscaler deployments and by adding the annotation:
+spec:
+  template:
+    metadata:
+      annotations:
+        sidecar.istio.io/inject: "false"
+For more check: https://stackoverflow.com/questions/65807748/disable-istio-sidecar-injection-to-the-job-pod
 
+Also it might be useful to add (depending on your setup eg disabled globally):
+      "sidecar.istio.io/rewriteAppHTTPProbers": "true"
 
-\# restart pods to get side-car injected
+For more check here: https://istio.io/latest/docs/ops/configuration/mesh/app-health-check/
 
 ```
-$ kubectl delete pods --all -n knative-serving
 
-$ kubectl get pods -n knative-serving
+```
+# restart pods to get side-car injected
+
+kubectl delete pods --all -n knative-serving
+
+kubectl get pods -n knative-serving
 NAME                                     READY   STATUS    RESTARTS   AGE
 activator-556dc846dd-fnl48               2/2     Running   0          57m
 autoscaler-57c75556d6-bpcf4              2/2     Running   0          57m
@@ -105,8 +128,8 @@ webhook-6f67fd848c-r7fn8                 2/2     Running   0          57m
 ## Verify Knative with Istio setup
 
 ```
-$ kubectl create ns test
-$ kubectl label namespace test istio-injection=enabled
+kubectl create ns test
+kubectl label namespace test istio-injection=enabled
 
 kubectl apply -n test -f - <<EOF
 apiVersion: serving.knative.dev/v1
@@ -123,26 +146,28 @@ spec:
               value: "Go Sample v1"
 EOF
 
-$ curl -H "Host: helloworld-go.test.example.com" http://192.168.39.224:31940
+curl -H "Host: helloworld-go.test.example.com" http://192.168.39.224:31940
 Hello Go Sample v1!
 ```
 
 # KServe
 
 ```
-$ kubectl apply -f https://github.com/cert-manager/cert-manager/releases/download/v1.10.1/cert-manager.yaml
+kubectl apply -f https://github.com/cert-manager/cert-manager/releases/download/v1.10.1/cert-manager.yaml
 
-$ kubectl get pods -n cert-manager
+kubectl get pods -n cert-manager
 NAME                                       READY   STATUS    RESTARTS   AGE
 cert-manager-7fb78674d7-vlfkx              1/1     Running   0          36m
 cert-manager-cainjector-5dfc946d84-j8pkt   1/1     Running   0          36m
 cert-manager-webhook-8744b7588-82fln       1/1     Running   0          36m
 
 
-$ kubectl apply -f  https://github.com/kserve/kserve/releases/download/v0.10.1/kserve.yaml
-$ kubectl apply -f  https://github.com/kserve/kserve/releases/download/v0.10.1/kserve-runtimes.yaml
+kubectl apply -f  https://github.com/kserve/kserve/releases/download/v0.10.1/kserve.yaml
+kubectl apply -f  https://github.com/kserve/kserve/releases/download/v0.10.1/kserve-runtimes.yaml
+```
 
-$ kubectl get pods -n kserve
+```
+kubectl get pods -n kserve
 NAME                                         READY   STATUS    RESTARTS   AGE
 kserve-controller-manager-59867d7d9f-7fnml   2/2     Running   0          34m
 ```
@@ -160,7 +185,8 @@ spec:
     pmml:
       storageUri: gs://kfserving-examples/models/pmml
 EOF
-
+```
+```
 cat <<EOF > "./pmml.json"
 {
   "instances": [
@@ -169,18 +195,26 @@ cat <<EOF > "./pmml.json"
 }
 EOF
 
-$ kubectl get pods -n test
+```
+
+```
+kubectl get pods -n test
 NAME                                                            READY   STATUS    RESTARTS   AGE
 pmml-demo-predictor-default-00001-deployment-5b57887d98-vlpfl   3/3     Running   0          37m
+```
 
-$ curl -H "Host: pmml-demo-predictor-default.test.example.com" http://192.168.39.224:31940/v1/models/pmml-demo:predict -d @./pmml.json
+```
+curl -H "Host: pmml-demo-predictor-default.test.example.com" http://192.168.39.224:31940/v1/models/pmml-demo:predict -d @./pmml.json
 {"predictions": [{"Species": "setosa", "Probability_setosa": 1.0, "Probability_versicolor": 0.0, "Probability_virginica": 0.0, "Node_Id": "2"}]}[
 
-$ kubectl get inferenceservices.serving.kserve.io
+```
+
+```
+kubectl get inferenceservices.serving.kserve.io
 NAME        URL                                 READY   PREV   LATEST   PREVROLLEDOUTREVISION   LATESTREADYREVISION                 AGE
 pmml-demo   http://pmml-demo.test.example.com   True           100                              pmml-demo-predictor-default-00001   124m
 
-$ kubectl get inferenceservices.serving.kserve.io -ojson
+kubectl get inferenceservices.serving.kserve.io -ojson
 {
     "apiVersion": "v1",
     "items": [
@@ -286,12 +320,12 @@ $ kubectl get inferenceservices.serving.kserve.io -ojson
     }
 }
 
-$ kubectl get sks -n test
+kubectl get sks -n test
 NAME                                MODE    ACTIVATORS   SERVICENAME                         PRIVATESERVICENAME                          READY     REASON
 helloworld-go-00001                 Proxy   3            helloworld-go-00001                 helloworld-go-00001-private                 Unknown   NoHealthyBackends
 pmml-demo-predictor-default-00001   Proxy   4            pmml-demo-predictor-default-00001   pmml-demo-predictor-default-00001-private   True      
 
-$ kubectl get services -n test
+kubectl get services -n test
 NAME                                        TYPE           CLUSTER-IP       EXTERNAL-IP                                            PORT(S)                                              AGE
 helloworld-go                               ExternalName   <none>           knative-local-gateway.istio-system.svc.cluster.local   80/TCP                                               77m
 helloworld-go-00001                         ClusterIP      10.109.202.173   <none>                                                 80/TCP,443/TCP                                       78m
@@ -301,13 +335,13 @@ pmml-demo-predictor-default                 ExternalName   <none>           knat
 pmml-demo-predictor-default-00001           ClusterIP      10.97.2.235      <none>                                                 80/TCP,443/TCP                                       57m
 pmml-demo-predictor-default-00001-private   ClusterIP      10.97.12.86      <none>                                                 80/TCP,443/TCP,9090/TCP,9091/TCP,8022/TCP,8012/TCP   57m
 
-$ kubectl get ksvc -n test
+kubectl get ksvc -n test
 NAME                          URL                                                   LATESTCREATED                       LATESTREADY                         READY   REASON
 helloworld-go                 http://helloworld-go.test.example.com                 helloworld-go-00001                 helloworld-go-00001                 True    
 pmml-demo-predictor-default   http://pmml-demo-predictor-default.test.example.com   pmml-demo-predictor-default-00001   pmml-demo-predictor-default-00001   True    
 
 
-$ kubectl get ksvc pmml-demo-predictor-default -n test -ojson
+kubectl get ksvc pmml-demo-predictor-default -n test -ojson
 {
     "apiVersion": "serving.knative.dev/v1",
     "kind": "Service",
@@ -427,8 +461,8 @@ $ kubectl get ksvc pmml-demo-predictor-default -n test -ojson
         "url": "http://pmml-demo-predictor-default.test.example.com"
     }
 }
-
 ```
+
 
 # Kiali Setup
 
@@ -456,5 +490,7 @@ $ iter8 k launch \
 --set assess.SLOs.upper.http/latency-mean=50 \
 --set assess.SLOs.upper.http/error-count=0 \
 --set runner=job
+
+# Alternatively `hey` can be used with -m POST, -D <path_to_json> and -host arguments as in the curl command.
 
 ```
