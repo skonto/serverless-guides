@@ -2,7 +2,7 @@
 
 ```
 # This depends on the host machine, here being probably more generous than we should
-MEMORY=${MEMORY:-40000}
+MEMORY=${MEMORY:-16000}
 CPUS=${CPUS:-6}
 
 EXTRA_CONFIG="apiserver.enable-admission-plugins=\
@@ -463,18 +463,297 @@ kubectl get ksvc pmml-demo-predictor-default -n test -ojson
 }
 ```
 
+# Observability
 
-# Kiali Setup
+## Prometheus, Grafana Setup
+
+A quick way to setup Prometheus is to run:
+
+```
+kubectl apply -f https://raw.githubusercontent.com/istio/istio/release-1.17/samples/addons/prometheus.yaml
+```
+
+Alternatively you can setup Prometheus Operator that allows more advanced features such as servicemonitor support:
+
+```
+helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
+helm repo update
+helm install prometheus prometheus-community/kube-prometheus-stack -n istio-system -f values.yaml
+# values.yaml contains at minimum the configuration below
+
+values.yaml
+kube-state-metrics:
+  metricLabelsAllowlist:
+    - pods=[*]
+    - deployments=[app.kubernetes.io/name,app.kubernetes.io/component,app.kubernetes.io/instance]
+prometheus:
+  prometheusSpec:
+    serviceMonitorSelectorNilUsesHelmValues: false
+    podMonitorSelectorNilUsesHelmValues: false
+```
+
+Edit PeerAuthentication default in istio-system namespace and set it to
+PERMISSIVE. Otherwise, you will need to [set certificates for Prometheus](https://istio.io/latest/docs/ops/integrations/prometheus/#tls-settings) to be able to scrape metrics for pods in the service mesh.
+
+Then apply the following podmonitor from the istio samples:
+
+```
+kubectl apply -f https://raw.githubusercontent.com/istio/istio/master/samples/addons/extras/prometheus-operator.yaml
+
+```
+
+After stting up Kiali in the next step edit its config in the istio-namespace and add:
+
+```
+external-services:
+  prometheus:
+    url: http://prometheus-operated.istio-system:9090
+```
+Restart the kiali pod.
+
+
+```
+$ kubectl port-forward svc/prometheus-operated -n istio-system 9090:9090
+
+# Access Prometheus at http://localhost:9090, user:admin, password: prom-operator
+
+$ kubectl port-forward svc/prometheus-grafana  -n istio-system 8080:80
+
+# Access Grafana at http://localhost:8080, user:admin, password: prom-operator
+
+$ kubectl port-forward svc/kiali 20001:20001 -n istio-system
+
+Access Kiali at http://localhost:20001
+```
+
+## Kiali Setup
 
 
 ```
 $ kubectl apply -f https://raw.githubusercontent.com/istio/istio/release-1.17/samples/addons/kiali.yaml
 ```
 
-# Prometheus Setup
+To get the metrics from KServe 8080 port into PRometheus if you have installed PRometheus operator you can use:
 
 ```
-kubectl apply -f https://raw.githubusercontent.com/istio/istio/release-1.17/samples/addons/prometheus.yaml
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  labels:
+  name: pmml-demo-predictor-default-sm
+spec:
+  endpoints:
+  - port: model-metrics
+    scheme: http
+  namespaceSelector: {}
+  selector:
+    matchLabels:
+       name:  pmml-demo-predictor-default-sm
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    name:  pmml-demo-predictor-default-sm
+  name:  pmml-demo-predictor-default-sm
+spec:
+  ports:
+  - name: model-metrics
+    port: 8080
+    protocol: TCP
+    targetPort: 8080
+  selector:
+    serving.knative.dev/service: pmml-demo-predictor-default
+  type: ClusterIP
+
+```
+
+# GRPC support
+
+Deploy the inference service:
+
+```
+kubectl apply -n test -f - <<EOF
+apiVersion: serving.kserve.io/v1beta1
+kind: InferenceService
+metadata:
+  name: torchscript-cifar10
+spec:
+  predictor:
+    triton:
+      storageUri: gs://kfserving-examples/models/torchscript
+      runtimeVersion: 20.10-py3
+      ports:
+      - containerPort: 9000
+        name: h2c
+        protocol: TCP
+      env:
+      - name: OMP_NUM_THREADS
+        value: "1"
+EOF
+```
+
+Run:
+
+```
+out_dir="$(mktemp -d /tmp/certs-XXX)"
+
+openssl req -x509 -sha256 -nodes -days 365 -newkey rsa:2048 \
+  -subj "/O=Example Inc./CN=Example" \
+  -keyout "${out_dir}"/root.key \
+  -out "${out_dir}"/root.crt
+
+subdomain="*.test.example.com"
+openssl req -nodes -newkey rsa:2048 \
+    -subj "/O=Example Inc./CN=Example" \
+    -reqexts san \
+    -config <(printf "[req]\ndistinguished_name=req\n[san]\nsubjectAltName=DNS:*.%s" "$subdomain") \
+    -keyout "${out_dir}"/wildcard.key \
+    -out "${out_dir}"/wildcard.csr
+
+openssl x509 -req -days 365 -set_serial 0 \
+    -extfile <(printf "subjectAltName=DNS:*.%s" "$subdomain") \
+    -CA "${out_dir}"/root.crt \
+    -CAkey "${out_dir}"/root.key \
+    -in "${out_dir}"/wildcard.csr \
+    -out "${out_dir}"/wildcard.crt
+
+kubectl create -n istio-system secret tls wildcard-certs \
+    --key="${out_dir}"/wildcard.key \
+    --cert="${out_dir}"/wildcard.crt --dry-run=client -o yaml | kubectl apply -f -
+```
+
+Update the knative-ingress-gateway:
+
+
+
+```
+$ kubectl edit  gateways.networking.istio.io  knative-ingress-gateway -n knative-serving
+
+You should have:
+
+apiVersion: networking.istio.io/v1alpha3
+kind: Gateway
+metadata:
+  name: knative-ingress-gateway
+  namespace: knative-serving
+spec:
+  selector:
+    istio: ingressgateway
+  servers:
+    - port:
+        number: 443
+        name: https
+        protocol: HTTPS
+      hosts:
+        - "*"
+      tls:
+        mode: SIMPLE
+        credentialName: wildcard-certs
+```    
+
+
+```
+$  ~/.local/bin/grpcurl  -insecure  -proto ${PROTO_FILE} -authority "torchscript-cifar10.test.example.com" 192.168.39.222:31260   inference.GRPCInferenceService.ServerReady
+{
+  "ready": true
+}
+
+$ ~/.local/bin/grpcurl -insecure -d @ -proto ${PROTO_FILE} -authority "torchscript-cifar10.test.example.com" 192.168.39.222:31260  inference.GRPCInferenceService.ModelInfer <<< $(cat input-grpc.json)
+{
+  "modelName": "cifar10",
+  "modelVersion": "1",
+  "outputs": [
+    {
+      "name": "OUTPUT__0",
+      "datatype": "FP32",
+      "shape": [
+        "1",
+        "10"
+      ]
+    }
+  ],
+  "rawOutputContents": [
+    "vywGwLZLDL7ncgK/dusyQBaAD799KP8/In2QP43As7+UuRk/1uoHwA=="
+  ]
+}
+```
+
+
+# Canary deployment
+
+
+```
+kubectl apply -n test -f - <<EOF
+apiVersion: "serving.kserve.io/v1beta1"
+kind: "InferenceService"
+metadata:
+  name: "sklearn-iris"
+spec:
+  predictor:
+    model:
+      modelFormat:
+        name: sklearn
+      storageUri: "gs://kfserving-examples/models/sklearn/1.0/model"
+EOF
+
+cat <<EOF > "./iris-input.json"
+{
+  "instances": [
+    [6.8,  2.8,  4.8,  1.4],
+    [6.0,  3.4,  4.5,  1.6]
+  ]
+}
+EOF
+
+
+kubectl apply -n test -f - <<EOF
+apiVersion: "serving.kserve.io/v1beta1"
+kind: "InferenceService"
+metadata:
+  name: "sklearn-iris"
+spec:
+  predictor:
+    canaryTrafficPercent: 10
+    model:
+      modelFormat:
+        name: sklearn
+      storageUri: "gs://kfserving-examples/models/sklearn/1.0/model-2"
+EOF
+
+```
+
+# Logger dumper
+
+
+```
+kubectl apply -n test -f - <<EOF
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: message-dumper
+spec:
+  template:
+    spec:
+      containers:
+      - image: gcr.io/knative-releases/knative.dev/eventing-contrib/cmd/event_display
+EOF
+
+kubectl apply -n test -f - <<EOF
+apiVersion: "serving.kserve.io/v1beta1"
+kind: "InferenceService"
+metadata:
+ name: "pmml-demo"
+ namespace: "test"
+spec:
+ predictor:
+   logger:
+     mode: all
+     url:  http://message-dumper.test
+   pmml:
+     storageUri:
+  gs://kfserving-examples/models/pmml
+EOF      
 ```
 
 # Load Testing with iter8
