@@ -502,7 +502,7 @@ kubectl apply -f https://raw.githubusercontent.com/istio/istio/master/samples/ad
 
 ```
 
-After stting up Kiali in the next step edit its config in the istio-namespace and add:
+After setting up Kiali in the next step edit its config in the istio-namespace and add:
 
 ```
 external-services:
