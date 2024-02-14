@@ -1,0 +1,17 @@
+apiVersion: keda.sh/v1alpha1
+kind: ScaledObject
+metadata:
+  name: sample
+spec:
+  scaleTargetRef:
+    name: sample-app # must be in the same namespace as the ScaledObject
+  minReplicaCount: 0   # Optional. Default: 0
+  maxReplicaCount: 1 # Optional. Default: 100
+  cooldownPeriod: 30
+  triggers:
+  - type: prometheus
+    metadata:
+      # Required fields:
+      serverAddress: http://prometheus-operated.default.svc:9090
+      query: my_gauge{namespace="test-zero"}
+      threshold: '2'

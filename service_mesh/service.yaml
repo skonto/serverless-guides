@@ -10,11 +10,12 @@ spec:
       labels:
         app: helloworld-go
       annotations:
-        autoscaling.knative.dev/minScale: "1"
+        autoscaling.knative.dev/minScale: "2"
         autoscaling.knative.dev/target: "10"
         autoscaling.knative.dev/targetBurstCapacity: "0"
         sidecar.istio.io/inject: "true"
         sidecar.istio.io/rewriteAppHTTPProbers: "true"
+        queue.sidecar.serving.knative.dev/resourcePercentage: "0.3"
     spec:
       containers:
       - image: docker.io/skonto/helloworld-go

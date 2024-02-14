@@ -130,6 +130,12 @@ metrics-test-00001-deployment-59579b768d-r8dfm   1/2     Running             0  
 metrics-test-00001-deployment-59579b768d-r8dfm   2/2     Running             0          4s
 ```
 
+Note that an important difference of Knative compared to Keda is that initially Knative will scale the deployment from 0 to 1 in order to make sure it works. 
+This also makes metrics available to Knative since it scrapes the pods directly. With KEDA since metrics for this scenario here come from the pod itself (not an external service) a pod instance must exist to emmit metrics in the first place.
+Then KEDA can decide when to set a scaledObject as active. Thus, if we start with minReplicaCount=0 Keda will not be able to scale the deployment automatically.
+In order to set the scaledObject as active we need to initial start with minReplicaCount=1, then scaledObject will become active (assumming certain criteria are met such as metric goes beyond the threshold) and then  if the custom metric gets to zero it will scale down to zero the deployment and the scaledObject will become inactive.
+For more check the example [here](./keda/README.md).
+
 # Knative HPA on OCP
 
 ## Install Serverless
