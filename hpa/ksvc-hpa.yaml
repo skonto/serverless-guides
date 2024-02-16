@@ -12,8 +12,7 @@ spec:
         autoscaling.knative.dev/maxScale: "10"
         autoscaling.knative.dev/target: "5"
         autoscaling.knative.dev/class: "hpa.autoscaling.knative.dev"
-        autoscaling.knative.dev/metric: "http_requests_total"
-        autoscaling.knative.dev/query: "sum(rate(http_requests_total{}[1m]))"
+        autoscaling.knative.dev/metric: "http_requests"
     spec:
       containers:
         - image: luxas/autoscale-demo:v0.1.2

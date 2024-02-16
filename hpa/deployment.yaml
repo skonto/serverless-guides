@@ -58,7 +58,7 @@ spec:
       pods:
         # use the metric that you used above: pods/http_requests
         metric:
-          name: http_requests_total
+          name: http_requests
         # target 500 milli-requests per second,
         # which is 1 request every two seconds
         target:

@@ -3,8 +3,6 @@ kind: KnativeServing
 metadata:
   name: knative-serving
   namespace: knative-serving
-  annotations:
-    serverless.openshift.io/default-enable-http2: "true"
 spec:
   ingress:
     kourier:
