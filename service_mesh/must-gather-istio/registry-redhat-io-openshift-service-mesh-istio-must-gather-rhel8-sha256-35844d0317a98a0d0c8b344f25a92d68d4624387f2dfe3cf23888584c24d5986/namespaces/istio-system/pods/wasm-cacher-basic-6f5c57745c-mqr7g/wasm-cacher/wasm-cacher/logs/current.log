@@ -1,7 +1,0 @@
-2023-03-03T20:03:52.387888864Z 2023-03-03T20:03:52.387474Z	info	main	Token file updated. Logging in to registry
-2023-03-03T20:03:52.388411898Z 2023-03-03T20:03:52.388232Z	info	worker	Starting worker
-2023-03-03T20:03:52.389506249Z 2023-03-03T20:03:52.389118Z	info	klog	Waiting for caches to sync for smmr
-2023-03-03T20:03:52.491899046Z 2023-03-03T20:03:52.490990Z	info	klog	Caches are synced for smmr 
-2023-03-03T20:03:52.491899046Z 2023-03-03T20:03:52.491074Z	info	smmr	Cache synced for listener "extensions-controller"
-2023-03-03T20:03:52.491899046Z 2023-03-03T20:03:52.491110Z	info	smmr	Seeding listener "extensions-controller" with system namespace.
-2023-03-03T20:03:52.779392723Z 2023-03-03T20:03:52.779288Z	info	main	Login Succeeded!

@@ -1,8 +1,0 @@
-Name:         knativeservings.operator.knative.dev-v1alpha1-admin
-Labels:       olm.opgroup.permissions/aggregate-to-fceaacb4e1c6ac8c-admin=true
-              rbac.authorization.k8s.io/aggregate-to-admin=true
-Annotations:  <none>
-PolicyRule:
-  Resources                             Non-Resource URLs  Resource Names  Verbs
-  ---------                             -----------------  --------------  -----
-  knativeservings.operator.knative.dev  []                 []              [*]

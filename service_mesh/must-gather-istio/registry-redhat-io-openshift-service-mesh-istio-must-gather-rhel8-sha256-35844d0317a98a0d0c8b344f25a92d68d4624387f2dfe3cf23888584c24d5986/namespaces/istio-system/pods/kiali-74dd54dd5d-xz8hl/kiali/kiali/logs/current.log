@@ -1,9 +1,0 @@
-2023-03-03T20:05:35.566761718Z 2023-03-03T20:05:35Z INF Kiali: Version: 1.36.14, Commit: 7c6d84d3a4bf5944dd05b1755a0f39183d033ba2
-2023-03-03T20:05:35.566761718Z 
-2023-03-03T20:05:35.572848306Z 2023-03-03T20:05:35Z INF Using authentication strategy [openshift]
-2023-03-03T20:05:35.572901586Z 2023-03-03T20:05:35Z ERR Failed to determine console version from file [/opt/kiali/console/version.txt]. error=open /opt/kiali/console/version.txt: no such file or directory
-2023-03-03T20:05:35.572931205Z 2023-03-03T20:05:35Z INF Kiali: Console version: unknown
-2023-03-03T20:05:35.580716658Z 2023-03-03T20:05:35Z INF Server endpoint will start at [:20001/]
-2023-03-03T20:05:35.580716658Z 2023-03-03T20:05:35Z INF Server endpoint will serve static content from [/opt/kiali/console]
-2023-03-03T20:05:35.580716658Z 2023-03-03T20:05:35Z INF Starting Metrics Server on [:9090]
-2023-03-03T20:05:35.580891452Z 2023-03-03T20:05:35Z INF Server endpoint will require https

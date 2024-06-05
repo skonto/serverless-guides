@@ -1,8 +1,0 @@
-Name:         knativeservings.operator.knative.dev-v1beta1-view
-Labels:       olm.opgroup.permissions/aggregate-to-b6479d235c1f930e-view=true
-              rbac.authorization.k8s.io/aggregate-to-view=true
-Annotations:  <none>
-PolicyRule:
-  Resources                             Non-Resource URLs  Resource Names  Verbs
-  ---------                             -----------------  --------------  -----
-  knativeservings.operator.knative.dev  []                 []              [get list watch]

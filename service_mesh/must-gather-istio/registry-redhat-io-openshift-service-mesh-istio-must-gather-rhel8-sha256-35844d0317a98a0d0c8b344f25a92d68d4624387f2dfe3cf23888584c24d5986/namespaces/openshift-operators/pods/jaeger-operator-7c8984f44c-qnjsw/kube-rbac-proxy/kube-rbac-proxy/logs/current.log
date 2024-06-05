@@ -1,4 +1,0 @@
-2023-03-03T20:02:07.714297671Z I0303 20:02:07.713652       1 main.go:181] Valid token audiences: 
-2023-03-03T20:02:07.714297671Z I0303 20:02:07.713825       1 main.go:289] Generating self signed cert as no cert is provided
-2023-03-03T20:02:08.495628828Z I0303 20:02:08.495138       1 main.go:339] Starting TCP socket on 0.0.0.0:8443
-2023-03-03T20:02:08.497316413Z I0303 20:02:08.497201       1 main.go:346] Listening securely on 0.0.0.0:8443

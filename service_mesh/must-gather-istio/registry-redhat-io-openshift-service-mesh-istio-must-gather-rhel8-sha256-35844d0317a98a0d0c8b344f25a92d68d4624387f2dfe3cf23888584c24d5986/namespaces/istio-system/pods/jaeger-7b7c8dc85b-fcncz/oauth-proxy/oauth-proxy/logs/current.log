@@ -1,9 +1,0 @@
-2023-03-03T20:03:38.922885328Z 2023/03/03 20:03:38 provider.go:129: Defaulting client-id to system:serviceaccount:istio-system:jaeger-ui-proxy
-2023-03-03T20:03:38.923068192Z 2023/03/03 20:03:38 provider.go:134: Defaulting client-secret to service account token /var/run/secrets/kubernetes.io/serviceaccount/token
-2023-03-03T20:03:38.926511449Z 2023/03/03 20:03:38 oauthproxy.go:203: mapping path "/" => upstream "http://localhost:16686/"
-2023-03-03T20:03:38.926511449Z 2023/03/03 20:03:38 oauthproxy.go:230: OAuthProxy configured for  Client ID: system:serviceaccount:istio-system:jaeger-ui-proxy
-2023-03-03T20:03:38.926570007Z 2023/03/03 20:03:38 oauthproxy.go:240: Cookie settings: name:_oauth_proxy secure(https):true httponly:true expiry:168h0m0s domain:<default> samesite: refresh:disabled
-2023-03-03T20:03:38.926892604Z 2023/03/03 20:03:38 main.go:156: using htpasswd file /etc/proxy/htpasswd/auth
-2023-03-03T20:03:38.927229877Z 2023/03/03 20:03:38 http.go:61: HTTP: listening on 127.0.0.1:4180
-2023-03-03T20:03:38.927746663Z 2023/03/03 20:03:38 http.go:107: HTTPS: listening on [::]:8443
-2023-03-03T20:03:38.927782556Z I0303 20:03:38.927758       1 dynamic_serving_content.go:130] Starting serving::/etc/tls/private/tls.crt::/etc/tls/private/tls.key

@@ -1,7 +1,0 @@
----
-apiVersion: serving.knative.dev/v1
-items: []
-kind: ServiceList
-metadata:
-  continue: ""
-  resourceVersion: "61085"
