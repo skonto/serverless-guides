@@ -119,11 +119,9 @@ function deploy_gateways {
   oc apply -f "${resources_dir}"/namespace.yaml || return $?
   oc apply -f "${resources_dir}"/smmr.yaml || return $?
   oc apply -f "${resources_dir}"/gateway.yaml || return $?
-  oc apply -f "${resources_dir}"/destination-rules.yaml || return $?
 }
 
 function undeploy_gateways {
-  oc delete -f "${resources_dir}"/destination-rules.yaml --ignore-not-found || return $?
   oc delete -f "${resources_dir}"/gateway.yaml --ignore-not-found || return $?
   oc delete -f "${resources_dir}"/smmr.yaml --ignore-not-found || return $?
   oc delete -n istio-system secret wildcard-certs --ignore-not-found || return $?
