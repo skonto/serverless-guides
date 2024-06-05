@@ -1,7 +1,7 @@
 # Instructions
 
 ```
-# install service mess and knative related resources
+# install service mesh and knative related resources
 $ ./1_32/mesh.sh
 
 # verify the setup
