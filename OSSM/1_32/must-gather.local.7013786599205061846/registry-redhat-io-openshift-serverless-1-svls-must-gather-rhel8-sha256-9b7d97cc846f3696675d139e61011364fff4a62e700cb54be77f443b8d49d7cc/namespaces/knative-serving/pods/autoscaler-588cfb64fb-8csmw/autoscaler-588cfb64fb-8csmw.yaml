@@ -1,0 +1,632 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    k8s.ovn.org/pod-networks: '{"default":{"ip_addresses":["10.128.2.25/23"],"mac_address":"0a:58:0a:80:02:19","gateway_ips":["10.128.2.1"],"routes":[{"dest":"10.128.0.0/14","nextHop":"10.128.2.1"},{"dest":"172.30.0.0/16","nextHop":"10.128.2.1"},{"dest":"100.64.0.0/16","nextHop":"10.128.2.1"}],"ip_address":"10.128.2.25/23","gateway_ip":"10.128.2.1"}}'
+    k8s.v1.cni.cncf.io/network-status: |-
+      [{
+          "name": "ovn-kubernetes",
+          "interface": "eth0",
+          "ips": [
+              "10.128.2.25"
+          ],
+          "mac": "0a:58:0a:80:02:19",
+          "default": true,
+          "dns": {}
+      },{
+          "name": "knative-serving/v2-4-istio-cni",
+          "dns": {}
+      }]
+    k8s.v1.cni.cncf.io/networks: v2-4-istio-cni
+    kubectl.kubernetes.io/default-container: autoscaler
+    kubectl.kubernetes.io/default-logs-container: autoscaler
+    openshift.io/scc: restricted-v2
+    prometheus.io/path: /stats/prometheus
+    prometheus.io/port: "15020"
+    prometheus.io/scrape: "true"
+    seccomp.security.alpha.kubernetes.io/pod: runtime/default
+    sidecar.istio.io/inject: "true"
+    sidecar.istio.io/interceptionMode: REDIRECT
+    sidecar.istio.io/rewriteAppHTTPProbers: "true"
+    sidecar.istio.io/status: '{"initContainers":null,"containers":["istio-proxy"],"volumes":["workload-socket","credential-socket","workload-certs","istio-envoy","istio-data","istio-podinfo","istiod-ca-cert"],"imagePullSecrets":null,"revision":"basic"}'
+    traffic.sidecar.istio.io/excludeInboundPorts: 15090,8444,8022,15021
+    traffic.sidecar.istio.io/includeInboundPorts: '*'
+    traffic.sidecar.istio.io/includeOutboundIPRanges: '*'
+  creationTimestamp: "2024-06-05T10:55:56Z"
+  generateName: autoscaler-588cfb64fb-
+  labels:
+    app: autoscaler
+    app.kubernetes.io/component: autoscaler
+    app.kubernetes.io/name: knative-serving
+    app.kubernetes.io/version: release-v1.11
+    failure-domain.beta.kubernetes.io/region: us-east-1
+    failure-domain.beta.kubernetes.io/zone: us-east-1f
+    maistra-version: 2.4.7
+    pod-template-hash: 588cfb64fb
+    security.istio.io/tlsMode: istio
+    service.istio.io/canonical-name: knative-serving
+    service.istio.io/canonical-revision: release-v1.11
+    topology.istio.io/subzone: ""
+    topology.kubernetes.io/region: us-east-1
+    topology.kubernetes.io/zone: us-east-1f
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.ovn.org/pod-networks: {}
+    manager: ip-10-0-91-247
+    operation: Update
+    subresource: status
+    time: "2024-06-05T10:55:56Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:labels:
+          f:failure-domain.beta.kubernetes.io/region: {}
+          f:failure-domain.beta.kubernetes.io/zone: {}
+          f:topology.istio.io/subzone: {}
+          f:topology.kubernetes.io/region: {}
+          f:topology.kubernetes.io/zone: {}
+    manager: istio-operator
+    operation: Update
+    time: "2024-06-05T10:55:56Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:sidecar.istio.io/inject: {}
+          f:sidecar.istio.io/rewriteAppHTTPProbers: {}
+        f:generateName: {}
+        f:labels:
+          .: {}
+          f:app: {}
+          f:app.kubernetes.io/component: {}
+          f:app.kubernetes.io/name: {}
+          f:app.kubernetes.io/version: {}
+          f:pod-template-hash: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"832d5439-5749-42c5-959a-a0bdb96e69fb"}: {}
+      f:spec:
+        f:affinity:
+          .: {}
+          f:podAntiAffinity:
+            .: {}
+            f:preferredDuringSchedulingIgnoredDuringExecution: {}
+        f:containers:
+          k:{"name":"autoscaler"}:
+            .: {}
+            f:env:
+              .: {}
+              k:{"name":"CONFIG_LOGGING_NAME"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"CONFIG_OBSERVABILITY_NAME"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"KUBERNETES_MIN_VERSION"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"METRICS_DOMAIN"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"POD_IP"}:
+                .: {}
+                f:name: {}
+                f:valueFrom:
+                  .: {}
+                  f:fieldRef: {}
+              k:{"name":"POD_NAME"}:
+                .: {}
+                f:name: {}
+                f:valueFrom:
+                  .: {}
+                  f:fieldRef: {}
+              k:{"name":"SYSTEM_NAMESPACE"}:
+                .: {}
+                f:name: {}
+                f:valueFrom:
+                  .: {}
+                  f:fieldRef: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:livenessProbe:
+              .: {}
+              f:failureThreshold: {}
+              f:httpGet:
+                .: {}
+                f:httpHeaders: {}
+                f:path: {}
+                f:port: {}
+                f:scheme: {}
+              f:periodSeconds: {}
+              f:successThreshold: {}
+              f:timeoutSeconds: {}
+            f:name: {}
+            f:ports:
+              .: {}
+              k:{"containerPort":8008,"protocol":"TCP"}:
+                .: {}
+                f:containerPort: {}
+                f:name: {}
+                f:protocol: {}
+              k:{"containerPort":8080,"protocol":"TCP"}:
+                .: {}
+                f:containerPort: {}
+                f:name: {}
+                f:protocol: {}
+              k:{"containerPort":9090,"protocol":"TCP"}:
+                .: {}
+                f:containerPort: {}
+                f:name: {}
+                f:protocol: {}
+            f:readinessProbe:
+              .: {}
+              f:failureThreshold: {}
+              f:httpGet:
+                .: {}
+                f:httpHeaders: {}
+                f:path: {}
+                f:port: {}
+                f:scheme: {}
+              f:periodSeconds: {}
+              f:successThreshold: {}
+              f:timeoutSeconds: {}
+            f:resources:
+              .: {}
+              f:limits:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:securityContext:
+              .: {}
+              f:allowPrivilegeEscalation: {}
+              f:capabilities:
+                .: {}
+                f:drop: {}
+              f:readOnlyRootFilesystem: {}
+              f:runAsNonRoot: {}
+              f:seccompProfile:
+                .: {}
+                f:type: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+        f:dnsPolicy: {}
+        f:enableServiceLinks: {}
+        f:restartPolicy: {}
+        f:schedulerName: {}
+        f:securityContext: {}
+        f:serviceAccount: {}
+        f:serviceAccountName: {}
+        f:terminationGracePeriodSeconds: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2024-06-05T10:55:56Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.v1.cni.cncf.io/network-status: {}
+    manager: multus-daemon
+    operation: Update
+    subresource: status
+    time: "2024-06-05T10:55:56Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"ContainersReady"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Initialized"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Ready"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+        f:containerStatuses: {}
+        f:hostIP: {}
+        f:phase: {}
+        f:podIP: {}
+        f:podIPs:
+          .: {}
+          k:{"ip":"10.128.2.25"}:
+            .: {}
+            f:ip: {}
+        f:startTime: {}
+    manager: kubelet
+    operation: Update
+    subresource: status
+    time: "2024-06-05T10:56:00Z"
+  name: autoscaler-588cfb64fb-8csmw
+  namespace: knative-serving
+  ownerReferences:
+  - apiVersion: apps/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: ReplicaSet
+    name: autoscaler-588cfb64fb
+    uid: 832d5439-5749-42c5-959a-a0bdb96e69fb
+  resourceVersion: "41460"
+  uid: efd1357a-d803-4fba-a158-43b6d9b9462d
+spec:
+  affinity:
+    podAntiAffinity:
+      preferredDuringSchedulingIgnoredDuringExecution:
+      - podAffinityTerm:
+          labelSelector:
+            matchLabels:
+              app: autoscaler
+          topologyKey: kubernetes.io/hostname
+        weight: 100
+  containers:
+  - env:
+    - name: POD_NAME
+      valueFrom:
+        fieldRef:
+          apiVersion: v1
+          fieldPath: metadata.name
+    - name: POD_IP
+      valueFrom:
+        fieldRef:
+          apiVersion: v1
+          fieldPath: status.podIP
+    - name: SYSTEM_NAMESPACE
+      valueFrom:
+        fieldRef:
+          apiVersion: v1
+          fieldPath: metadata.namespace
+    - name: CONFIG_LOGGING_NAME
+      value: config-logging
+    - name: CONFIG_OBSERVABILITY_NAME
+      value: config-observability
+    - name: METRICS_DOMAIN
+      value: knative.dev/serving
+    - name: KUBERNETES_MIN_VERSION
+      value: v1.0.0
+    image: registry.redhat.io/openshift-serverless-1/serving-autoscaler-rhel8@sha256:260f1d34c34857bbde21a5a4ffb271baa13ac20deb4bc951f79a75f2d4825722
+    imagePullPolicy: IfNotPresent
+    livenessProbe:
+      failureThreshold: 6
+      httpGet:
+        httpHeaders:
+        - name: k-kubelet-probe
+          value: autoscaler
+        path: /app-health/autoscaler/livez
+        port: 15020
+        scheme: HTTP
+      periodSeconds: 10
+      successThreshold: 1
+      timeoutSeconds: 1
+    name: autoscaler
+    ports:
+    - containerPort: 9090
+      name: metrics
+      protocol: TCP
+    - containerPort: 8008
+      name: profiling
+      protocol: TCP
+    - containerPort: 8080
+      name: websocket
+      protocol: TCP
+    readinessProbe:
+      failureThreshold: 3
+      httpGet:
+        httpHeaders:
+        - name: k-kubelet-probe
+          value: autoscaler
+        path: /app-health/autoscaler/readyz
+        port: 15020
+        scheme: HTTP
+      periodSeconds: 10
+      successThreshold: 1
+      timeoutSeconds: 1
+    resources:
+      limits:
+        cpu: "1"
+        memory: 1000Mi
+      requests:
+        cpu: 100m
+        memory: 100Mi
+    securityContext:
+      allowPrivilegeEscalation: false
+      capabilities:
+        drop:
+        - ALL
+      readOnlyRootFilesystem: true
+      runAsNonRoot: true
+      runAsUser: 1000720000
+      seccompProfile:
+        type: RuntimeDefault
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-rjp7f
+      readOnly: true
+  - args:
+    - proxy
+    - sidecar
+    - --domain
+    - $(POD_NAMESPACE).svc.cluster.local
+    - --proxyLogLevel=warning
+    - --proxyComponentLogLevel=misc:error
+    - --log_output_level=default:warn
+    - --concurrency
+    - "2"
+    env:
+    - name: JWT_POLICY
+      value: first-party-jwt
+    - name: PILOT_CERT_PROVIDER
+      value: istiod
+    - name: CA_ADDR
+      value: istiod-basic.istio-system.svc:15012
+    - name: POD_NAME
+      valueFrom:
+        fieldRef:
+          apiVersion: v1
+          fieldPath: metadata.name
+    - name: POD_NAMESPACE
+      valueFrom:
+        fieldRef:
+          apiVersion: v1
+          fieldPath: metadata.namespace
+    - name: INSTANCE_IP
+      valueFrom:
+        fieldRef:
+          apiVersion: v1
+          fieldPath: status.podIP
+    - name: SERVICE_ACCOUNT
+      valueFrom:
+        fieldRef:
+          apiVersion: v1
+          fieldPath: spec.serviceAccountName
+    - name: HOST_IP
+      valueFrom:
+        fieldRef:
+          apiVersion: v1
+          fieldPath: status.hostIP
+    - name: PROXY_CONFIG
+      value: |
+        {"discoveryAddress":"istiod-basic.istio-system.svc:15012","proxyMetadata":{"ISTIO_META_DNS_AUTO_ALLOCATE":"true","ISTIO_META_DNS_CAPTURE":"true","PROXY_XDS_VIA_AGENT":"true"},"terminationDrainDuration":"35s"}
+    - name: ISTIO_META_POD_PORTS
+      value: |-
+        [
+            {"name":"metrics","containerPort":9090,"protocol":"TCP"}
+            ,{"name":"profiling","containerPort":8008,"protocol":"TCP"}
+            ,{"name":"websocket","containerPort":8080,"protocol":"TCP"}
+        ]
+    - name: ISTIO_META_APP_CONTAINERS
+      value: autoscaler
+    - name: ISTIO_META_CLUSTER_ID
+      value: Kubernetes
+    - name: ISTIO_META_INTERCEPTION_MODE
+      value: REDIRECT
+    - name: ISTIO_META_WORKLOAD_NAME
+      value: autoscaler
+    - name: ISTIO_META_OWNER
+      value: kubernetes://apis/apps/v1/namespaces/knative-serving/deployments/autoscaler
+    - name: ISTIO_META_MESH_ID
+      value: cluster.local
+    - name: TRUST_DOMAIN
+      value: cluster.local
+    - name: ISTIO_META_DNS_AUTO_ALLOCATE
+      value: "true"
+    - name: ISTIO_META_DNS_CAPTURE
+      value: "true"
+    - name: PROXY_XDS_VIA_AGENT
+      value: "true"
+    - name: ISTIO_KUBE_APP_PROBERS
+      value: '{"/app-health/autoscaler/livez":{"httpGet":{"path":"/","port":8080,"scheme":"HTTP","httpHeaders":[{"name":"k-kubelet-probe","value":"autoscaler"}]},"timeoutSeconds":1},"/app-health/autoscaler/readyz":{"httpGet":{"path":"/","port":8080,"scheme":"HTTP","httpHeaders":[{"name":"k-kubelet-probe","value":"autoscaler"}]},"timeoutSeconds":1}}'
+    image: registry.redhat.io/openshift-service-mesh/proxyv2-rhel8@sha256:186619a888331a58729e27e67fbcee236875c1998b6714565238db53e9a1f8bd
+    imagePullPolicy: IfNotPresent
+    name: istio-proxy
+    ports:
+    - containerPort: 15090
+      name: http-envoy-prom
+      protocol: TCP
+    readinessProbe:
+      failureThreshold: 30
+      httpGet:
+        path: /healthz/ready
+        port: 15021
+        scheme: HTTP
+      initialDelaySeconds: 1
+      periodSeconds: 2
+      successThreshold: 1
+      timeoutSeconds: 3
+    resources:
+      limits:
+        cpu: "2"
+        memory: 1Gi
+      requests:
+        cpu: 10m
+        memory: 128Mi
+    securityContext:
+      allowPrivilegeEscalation: false
+      capabilities:
+        drop:
+        - ALL
+        - KILL
+        - MKNOD
+        - SETGID
+        - SETUID
+      privileged: false
+      readOnlyRootFilesystem: true
+      runAsGroup: 1000720001
+      runAsNonRoot: true
+      runAsUser: 1000720001
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /var/run/secrets/workload-spiffe-uds
+      name: workload-socket
+    - mountPath: /var/run/secrets/credential-uds
+      name: credential-socket
+    - mountPath: /var/run/secrets/workload-spiffe-credentials
+      name: workload-certs
+    - mountPath: /var/run/secrets/istio
+      name: istiod-ca-cert
+    - mountPath: /var/lib/istio/data
+      name: istio-data
+    - mountPath: /etc/istio/proxy
+      name: istio-envoy
+    - mountPath: /etc/istio/pod
+      name: istio-podinfo
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-rjp7f
+      readOnly: true
+  dnsPolicy: ClusterFirst
+  enableServiceLinks: true
+  imagePullSecrets:
+  - name: controller-dockercfg-tv7hw
+  nodeName: ip-10-0-91-247.ec2.internal
+  preemptionPolicy: PreemptLowerPriority
+  priority: 0
+  restartPolicy: Always
+  schedulerName: default-scheduler
+  securityContext:
+    fsGroup: 1000720000
+    seLinuxOptions:
+      level: s0:c27,c9
+    seccompProfile:
+      type: RuntimeDefault
+  serviceAccount: controller
+  serviceAccountName: controller
+  terminationGracePeriodSeconds: 30
+  tolerations:
+  - effect: NoExecute
+    key: node.kubernetes.io/not-ready
+    operator: Exists
+    tolerationSeconds: 300
+  - effect: NoExecute
+    key: node.kubernetes.io/unreachable
+    operator: Exists
+    tolerationSeconds: 300
+  - effect: NoSchedule
+    key: node.kubernetes.io/memory-pressure
+    operator: Exists
+  volumes:
+  - emptyDir: {}
+    name: workload-socket
+  - emptyDir: {}
+    name: credential-socket
+  - emptyDir: {}
+    name: workload-certs
+  - emptyDir:
+      medium: Memory
+    name: istio-envoy
+  - emptyDir: {}
+    name: istio-data
+  - downwardAPI:
+      defaultMode: 420
+      items:
+      - fieldRef:
+          apiVersion: v1
+          fieldPath: metadata.labels
+        path: labels
+      - fieldRef:
+          apiVersion: v1
+          fieldPath: metadata.annotations
+        path: annotations
+    name: istio-podinfo
+  - configMap:
+      defaultMode: 420
+      name: istio-ca-root-cert
+    name: istiod-ca-cert
+  - name: kube-api-access-rjp7f
+    projected:
+      defaultMode: 420
+      sources:
+      - serviceAccountToken:
+          expirationSeconds: 3607
+          path: token
+      - configMap:
+          items:
+          - key: ca.crt
+            path: ca.crt
+          name: kube-root-ca.crt
+      - downwardAPI:
+          items:
+          - fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.namespace
+            path: namespace
+      - configMap:
+          items:
+          - key: service-ca.crt
+            path: service-ca.crt
+          name: openshift-service-ca.crt
+status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2024-06-05T10:55:56Z"
+    status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2024-06-05T10:56:00Z"
+    status: "True"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2024-06-05T10:56:00Z"
+    status: "True"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2024-06-05T10:55:56Z"
+    status: "True"
+    type: PodScheduled
+  containerStatuses:
+  - containerID: cri-o://1383ceb6ac35049530e5d702c4f2483f3aeb5b236c7391739d682762b5aa2fa9
+    image: registry.redhat.io/openshift-serverless-1/serving-autoscaler-rhel8@sha256:260f1d34c34857bbde21a5a4ffb271baa13ac20deb4bc951f79a75f2d4825722
+    imageID: registry.redhat.io/openshift-serverless-1/serving-autoscaler-rhel8@sha256:260f1d34c34857bbde21a5a4ffb271baa13ac20deb4bc951f79a75f2d4825722
+    lastState: {}
+    name: autoscaler
+    ready: true
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2024-06-05T10:55:59Z"
+  - containerID: cri-o://25d0ae4023ecc772147e1e7268e68d9d8d0bfddd0a98a5c18e6f4355b897f105
+    image: registry.redhat.io/openshift-service-mesh/proxyv2-rhel8@sha256:186619a888331a58729e27e67fbcee236875c1998b6714565238db53e9a1f8bd
+    imageID: registry.redhat.io/openshift-service-mesh/proxyv2-rhel8@sha256:186619a888331a58729e27e67fbcee236875c1998b6714565238db53e9a1f8bd
+    lastState: {}
+    name: istio-proxy
+    ready: true
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2024-06-05T10:55:59Z"
+  hostIP: 10.0.91.247
+  phase: Running
+  podIP: 10.128.2.25
+  podIPs:
+  - ip: 10.128.2.25
+  qosClass: Burstable
+  startTime: "2024-06-05T10:55:56Z"

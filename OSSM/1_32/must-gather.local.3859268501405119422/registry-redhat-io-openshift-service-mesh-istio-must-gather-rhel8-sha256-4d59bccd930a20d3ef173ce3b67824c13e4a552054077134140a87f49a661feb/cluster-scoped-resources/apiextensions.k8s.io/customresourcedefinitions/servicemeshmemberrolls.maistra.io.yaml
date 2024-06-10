@@ -1,0 +1,270 @@
+apiVersion: apiextensions.k8s.io/v1
+kind: CustomResourceDefinition
+metadata:
+  annotations:
+    controller-gen.kubebuilder.io/version: v0.4.1
+    operatorframework.io/installed-alongside-e02215f7304a403c: openshift-operators/servicemeshoperator.v2.5.1
+  creationTimestamp: "2024-06-05T10:44:56Z"
+  generation: 1
+  labels:
+    maistra-version: 2.5.1
+    olm.managed: "true"
+    operators.coreos.com/servicemeshoperator.openshift-operators: ""
+  managedFields:
+  - apiVersion: apiextensions.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:controller-gen.kubebuilder.io/version: {}
+          f:operatorframework.io/installed-alongside-e02215f7304a403c: {}
+        f:labels:
+          .: {}
+          f:maistra-version: {}
+          f:olm.managed: {}
+      f:spec:
+        f:conversion:
+          .: {}
+          f:strategy: {}
+        f:group: {}
+        f:names:
+          f:categories: {}
+          f:kind: {}
+          f:listKind: {}
+          f:plural: {}
+          f:shortNames: {}
+          f:singular: {}
+        f:scope: {}
+        f:versions: {}
+    manager: catalog
+    operation: Update
+    time: "2024-06-05T10:44:56Z"
+  - apiVersion: apiextensions.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:acceptedNames:
+          f:categories: {}
+          f:kind: {}
+          f:listKind: {}
+          f:plural: {}
+          f:shortNames: {}
+          f:singular: {}
+        f:conditions:
+          k:{"type":"Established"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"NamesAccepted"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+    manager: kube-apiserver
+    operation: Update
+    subresource: status
+    time: "2024-06-05T10:44:56Z"
+  - apiVersion: apiextensions.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:labels:
+          f:operators.coreos.com/servicemeshoperator.openshift-operators: {}
+    manager: Go-http-client
+    operation: Update
+    time: "2024-06-05T10:45:14Z"
+  name: servicemeshmemberrolls.maistra.io
+  resourceVersion: "34218"
+  uid: 20104b74-1ae9-4300-96b6-9e0c0089f8be
+spec:
+  conversion:
+    strategy: None
+  group: maistra.io
+  names:
+    categories:
+    - maistra-io
+    kind: ServiceMeshMemberRoll
+    listKind: ServiceMeshMemberRollList
+    plural: servicemeshmemberrolls
+    shortNames:
+    - smmr
+    singular: servicemeshmemberroll
+  scope: Namespaced
+  versions:
+  - additionalPrinterColumns:
+    - description: How many of the total number of member namespaces are configured
+      jsonPath: .status.annotations.configuredMemberCount
+      name: Ready
+      type: string
+    - description: Whether all member namespaces have been configured or why that's
+        not the case
+      jsonPath: .status.conditions[?(@.type=="Ready")].reason
+      name: Status
+      type: string
+    - description: The age of the object
+      jsonPath: .metadata.creationTimestamp
+      name: Age
+      type: date
+    - description: Namespaces that are members of this Control Plane
+      jsonPath: .status.members
+      name: Members
+      priority: 1
+      type: string
+    name: v1
+    schema:
+      openAPIV3Schema:
+        properties:
+          apiVersion:
+            type: string
+          kind:
+            type: string
+          metadata:
+            type: object
+          spec:
+            properties:
+              memberSelectors:
+                items:
+                  properties:
+                    matchExpressions:
+                      items:
+                        properties:
+                          key:
+                            type: string
+                          operator:
+                            type: string
+                          values:
+                            items:
+                              type: string
+                            type: array
+                        required:
+                        - key
+                        - operator
+                        type: object
+                      type: array
+                    matchLabels:
+                      additionalProperties:
+                        type: string
+                      type: object
+                  type: object
+                type: array
+              members:
+                items:
+                  type: string
+                nullable: true
+                type: array
+            type: object
+          status:
+            properties:
+              annotations:
+                additionalProperties:
+                  type: string
+                type: object
+              conditions:
+                items:
+                  properties:
+                    lastTransitionTime:
+                      format: date-time
+                      type: string
+                    message:
+                      type: string
+                    reason:
+                      type: string
+                    status:
+                      type: string
+                    type:
+                      type: string
+                  type: object
+                nullable: true
+                type: array
+              configuredMembers:
+                items:
+                  type: string
+                nullable: true
+                type: array
+              memberStatuses:
+                items:
+                  properties:
+                    conditions:
+                      items:
+                        properties:
+                          lastTransitionTime:
+                            format: date-time
+                            type: string
+                          message:
+                            type: string
+                          reason:
+                            type: string
+                          status:
+                            type: string
+                          type:
+                            type: string
+                        type: object
+                      type: array
+                    namespace:
+                      type: string
+                  required:
+                  - conditions
+                  - namespace
+                  type: object
+                nullable: true
+                type: array
+              members:
+                items:
+                  type: string
+                nullable: true
+                type: array
+              meshGeneration:
+                format: int64
+                type: integer
+              meshReconciledVersion:
+                type: string
+              observedGeneration:
+                format: int64
+                type: integer
+              pendingMembers:
+                items:
+                  type: string
+                nullable: true
+                type: array
+              terminatingMembers:
+                items:
+                  type: string
+                nullable: true
+                type: array
+            type: object
+        required:
+        - spec
+        type: object
+    served: true
+    storage: true
+    subresources:
+      status: {}
+status:
+  acceptedNames:
+    categories:
+    - maistra-io
+    kind: ServiceMeshMemberRoll
+    listKind: ServiceMeshMemberRollList
+    plural: servicemeshmemberrolls
+    shortNames:
+    - smmr
+    singular: servicemeshmemberroll
+  conditions:
+  - lastTransitionTime: "2024-06-05T10:44:56Z"
+    message: no conflicts found
+    reason: NoConflicts
+    status: "True"
+    type: NamesAccepted
+  - lastTransitionTime: "2024-06-05T10:44:56Z"
+    message: the initial names have been accepted
+    reason: InitialNamesAccepted
+    status: "True"
+    type: Established
+  storedVersions:
+  - v1

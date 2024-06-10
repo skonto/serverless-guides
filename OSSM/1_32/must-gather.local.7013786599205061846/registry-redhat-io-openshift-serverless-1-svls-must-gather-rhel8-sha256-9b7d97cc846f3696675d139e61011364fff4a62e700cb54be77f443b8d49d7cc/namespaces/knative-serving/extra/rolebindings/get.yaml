@@ -1,0 +1,201 @@
+apiVersion: v1
+items:
+- apiVersion: rbac.authorization.k8s.io/v1
+  kind: RoleBinding
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"rbac.authorization.k8s.io/v1","kind":"RoleBinding","metadata":{"annotations":{"maistra.io/mesh-generation":"2.5.1-1-2"},"labels":{"app":"istiod","app.kubernetes.io/component":"istio-discovery","app.kubernetes.io/instance":"istio-system","app.kubernetes.io/managed-by":"maistra-istio-operator","app.kubernetes.io/name":"istio-discovery","app.kubernetes.io/part-of":"istio","app.kubernetes.io/version":"2.5.1-1-2","maistra-version":"2.4.7","maistra.io/owner":"istio-system","maistra.io/owner-name":"basic","release":"istio"},"name":"istiod-clusterrole-basic-istio-system","namespace":"istio-system","ownerReferences":[{"apiVersion":"maistra.io/v2","blockOwnerDeletion":true,"controller":true,"kind":"ServiceMeshControlPlane","name":"basic","uid":"b5faf99f-8aeb-4477-aa3e-3f2e4796ec3c"}]},"roleRef":{"apiGroup":"rbac.authorization.k8s.io","kind":"ClusterRole","name":"istiod-clusterrole-basic-istio-system"},"subjects":[{"kind":"ServiceAccount","name":"istiod-basic","namespace":"istio-system"}]}
+      maistra.io/mesh-generation: 2.5.1-1-2
+    creationTimestamp: "2024-06-05T10:46:23Z"
+    labels:
+      app: istiod
+      app.kubernetes.io/component: istio-discovery
+      app.kubernetes.io/instance: istio-system
+      app.kubernetes.io/managed-by: maistra-istio-operator
+      app.kubernetes.io/name: istio-discovery
+      app.kubernetes.io/part-of: istio
+      maistra-version: 2.4.7
+      maistra.io/member-of: istio-system
+      release: istio
+    name: istiod-clusterrole-basic-istio-system
+    namespace: knative-serving
+    resourceVersion: "35750"
+    uid: 15af452a-541c-4f93-9e48-d82f6963f176
+  roleRef:
+    apiGroup: rbac.authorization.k8s.io
+    kind: ClusterRole
+    name: istiod-clusterrole-basic-istio-system
+  subjects:
+  - kind: ServiceAccount
+    name: istiod-basic
+    namespace: istio-system
+- apiVersion: rbac.authorization.k8s.io/v1
+  kind: RoleBinding
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"rbac.authorization.k8s.io/v1","kind":"RoleBinding","metadata":{"annotations":{"maistra.io/mesh-generation":"2.5.1-1-2"},"labels":{"app":"istiod","app.kubernetes.io/component":"istio-discovery","app.kubernetes.io/instance":"istio-system","app.kubernetes.io/managed-by":"maistra-istio-operator","app.kubernetes.io/name":"istio-discovery","app.kubernetes.io/part-of":"istio","app.kubernetes.io/version":"2.5.1-1-2","maistra-version":"2.4.7","maistra.io/owner":"istio-system","maistra.io/owner-name":"basic","release":"istio"},"name":"istiod-gateway-controller-basic-istio-system","namespace":"istio-system","ownerReferences":[{"apiVersion":"maistra.io/v2","blockOwnerDeletion":true,"controller":true,"kind":"ServiceMeshControlPlane","name":"basic","uid":"b5faf99f-8aeb-4477-aa3e-3f2e4796ec3c"}]},"roleRef":{"apiGroup":"rbac.authorization.k8s.io","kind":"ClusterRole","name":"istiod-gateway-controller-basic-istio-system"},"subjects":[{"kind":"ServiceAccount","name":"istiod-basic","namespace":"istio-system"}]}
+      maistra.io/mesh-generation: 2.5.1-1-2
+    creationTimestamp: "2024-06-05T10:46:23Z"
+    labels:
+      app: istiod
+      app.kubernetes.io/component: istio-discovery
+      app.kubernetes.io/instance: istio-system
+      app.kubernetes.io/managed-by: maistra-istio-operator
+      app.kubernetes.io/name: istio-discovery
+      app.kubernetes.io/part-of: istio
+      maistra-version: 2.4.7
+      maistra.io/member-of: istio-system
+      release: istio
+    name: istiod-gateway-controller-basic-istio-system
+    namespace: knative-serving
+    resourceVersion: "35749"
+    uid: 05269d7a-f2b5-4d82-b8e3-99600c1275b1
+  roleRef:
+    apiGroup: rbac.authorization.k8s.io
+    kind: ClusterRole
+    name: istiod-gateway-controller-basic-istio-system
+  subjects:
+  - kind: ServiceAccount
+    name: istiod-basic
+    namespace: istio-system
+- apiVersion: rbac.authorization.k8s.io/v1
+  kind: RoleBinding
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"rbac.authorization.k8s.io/v1","kind":"RoleBinding","metadata":{"name":"knative-prometheus-k8s","namespace":"knative-serving"},"roleRef":{"apiGroup":"rbac.authorization.k8s.io","kind":"Role","name":"knative-prometheus-k8s"},"subjects":[{"kind":"ServiceAccount","name":"prometheus-k8s","namespace":"openshift-monitoring"}]}
+      manifestival: new
+    creationTimestamp: "2024-06-05T10:55:46Z"
+    name: knative-prometheus-k8s
+    namespace: knative-serving
+    resourceVersion: "41602"
+    uid: aaec8f02-9780-4831-9b8f-45523b429f3c
+  roleRef:
+    apiGroup: rbac.authorization.k8s.io
+    kind: Role
+    name: knative-prometheus-k8s
+  subjects:
+  - kind: ServiceAccount
+    name: prometheus-k8s
+    namespace: openshift-monitoring
+- apiVersion: rbac.authorization.k8s.io/v1
+  kind: RoleBinding
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"rbac.authorization.k8s.io/v1","kind":"RoleBinding","metadata":{"labels":{"app.kubernetes.io/component":"activator","app.kubernetes.io/name":"knative-serving","app.kubernetes.io/version":"release-v1.11"},"name":"knative-serving-activator","namespace":"knative-serving","ownerReferences":[{"apiVersion":"operator.knative.dev/v1beta1","blockOwnerDeletion":true,"controller":true,"kind":"KnativeServing","name":"knative-serving","uid":"af223c8b-7d90-440e-8659-7268e406b26c"}]},"roleRef":{"apiGroup":"rbac.authorization.k8s.io","kind":"Role","name":"knative-serving-activator"},"subjects":[{"kind":"ServiceAccount","name":"activator","namespace":"knative-serving"}]}
+      manifestival: new
+    creationTimestamp: "2024-06-05T10:55:46Z"
+    labels:
+      app.kubernetes.io/component: activator
+      app.kubernetes.io/name: knative-serving
+      app.kubernetes.io/version: release-v1.11
+    name: knative-serving-activator
+    namespace: knative-serving
+    ownerReferences:
+    - apiVersion: operator.knative.dev/v1beta1
+      blockOwnerDeletion: true
+      controller: true
+      kind: KnativeServing
+      name: knative-serving
+      uid: af223c8b-7d90-440e-8659-7268e406b26c
+    resourceVersion: "41597"
+    uid: 69141562-0211-45e8-a16f-3102608846ac
+  roleRef:
+    apiGroup: rbac.authorization.k8s.io
+    kind: Role
+    name: knative-serving-activator
+  subjects:
+  - kind: ServiceAccount
+    name: activator
+    namespace: knative-serving
+- apiVersion: rbac.authorization.k8s.io/v1
+  kind: RoleBinding
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"rbac.authorization.k8s.io/v1","kind":"RoleBinding","metadata":{"name":"openshift-serverless-view-serving-configmaps","namespace":"knative-serving","ownerReferences":[{"apiVersion":"operator.knative.dev/v1beta1","blockOwnerDeletion":true,"controller":true,"kind":"KnativeServing","name":"knative-serving","uid":"af223c8b-7d90-440e-8659-7268e406b26c"}]},"roleRef":{"apiGroup":"rbac.authorization.k8s.io","kind":"Role","name":"openshift-serverless-view-serving-configmaps"},"subjects":[{"apiGroup":"rbac.authorization.k8s.io","kind":"Group","name":"system:authenticated"}]}
+      manifestival: new
+    creationTimestamp: "2024-06-05T10:55:46Z"
+    name: openshift-serverless-view-serving-configmaps
+    namespace: knative-serving
+    ownerReferences:
+    - apiVersion: operator.knative.dev/v1beta1
+      blockOwnerDeletion: true
+      controller: true
+      kind: KnativeServing
+      name: knative-serving
+      uid: af223c8b-7d90-440e-8659-7268e406b26c
+    resourceVersion: "41591"
+    uid: 787a4477-70f8-4859-b508-724008b32c07
+  roleRef:
+    apiGroup: rbac.authorization.k8s.io
+    kind: Role
+    name: openshift-serverless-view-serving-configmaps
+  subjects:
+  - apiGroup: rbac.authorization.k8s.io
+    kind: Group
+    name: system:authenticated
+- apiVersion: rbac.authorization.k8s.io/v1
+  kind: RoleBinding
+  metadata:
+    annotations:
+      openshift.io/description: Allows deploymentconfigs in this namespace to rollout
+        pods in this namespace.  It is auto-managed by a controller; remove subjects
+        to disable.
+    creationTimestamp: "2024-06-05T10:46:22Z"
+    name: system:deployers
+    namespace: knative-serving
+    resourceVersion: "35745"
+    uid: 265d6df2-8740-45ce-927b-aa10219f8815
+  roleRef:
+    apiGroup: rbac.authorization.k8s.io
+    kind: ClusterRole
+    name: system:deployer
+  subjects:
+  - kind: ServiceAccount
+    name: deployer
+    namespace: knative-serving
+- apiVersion: rbac.authorization.k8s.io/v1
+  kind: RoleBinding
+  metadata:
+    annotations:
+      openshift.io/description: Allows builds in this namespace to push images to
+        this namespace.  It is auto-managed by a controller; remove subjects to disable.
+    creationTimestamp: "2024-06-05T10:46:22Z"
+    name: system:image-builders
+    namespace: knative-serving
+    resourceVersion: "35741"
+    uid: 17fb6c82-3b55-4964-8d47-403da9afc9d7
+  roleRef:
+    apiGroup: rbac.authorization.k8s.io
+    kind: ClusterRole
+    name: system:image-builder
+  subjects:
+  - kind: ServiceAccount
+    name: builder
+    namespace: knative-serving
+- apiVersion: rbac.authorization.k8s.io/v1
+  kind: RoleBinding
+  metadata:
+    annotations:
+      openshift.io/description: Allows all pods in this namespace to pull images from
+        this namespace.  It is auto-managed by a controller; remove subjects to disable.
+    creationTimestamp: "2024-06-05T10:46:22Z"
+    name: system:image-pullers
+    namespace: knative-serving
+    resourceVersion: "35740"
+    uid: cf7987c6-25fa-412b-8db2-5537f47262ae
+  roleRef:
+    apiGroup: rbac.authorization.k8s.io
+    kind: ClusterRole
+    name: system:image-puller
+  subjects:
+  - apiGroup: rbac.authorization.k8s.io
+    kind: Group
+    name: system:serviceaccounts:knative-serving
+kind: List
+metadata:
+  resourceVersion: ""

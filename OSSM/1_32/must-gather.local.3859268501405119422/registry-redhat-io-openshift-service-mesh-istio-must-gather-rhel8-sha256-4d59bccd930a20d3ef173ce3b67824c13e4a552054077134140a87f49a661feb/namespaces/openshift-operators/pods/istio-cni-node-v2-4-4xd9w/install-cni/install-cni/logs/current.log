@@ -1,0 +1,133 @@
+2024-06-05T10:45:48.971694286Z 2024-06-05T10:45:48.971616Z	info	FLAG: --chained-cni-plugin="true"
+2024-06-05T10:45:48.971694286Z 2024-06-05T10:45:48.971641Z	info	FLAG: --cni-binaries-prefix=""
+2024-06-05T10:45:48.971694286Z 2024-06-05T10:45:48.971646Z	info	FLAG: --cni-conf-name=""
+2024-06-05T10:45:48.971694286Z 2024-06-05T10:45:48.971650Z	info	FLAG: --cni-enable-install="true"
+2024-06-05T10:45:48.971694286Z 2024-06-05T10:45:48.971653Z	info	FLAG: --cni-enable-reinstall="true"
+2024-06-05T10:45:48.971694286Z 2024-06-05T10:45:48.971656Z	info	FLAG: --cni-net-dir="/etc/cni/net.d"
+2024-06-05T10:45:48.971694286Z 2024-06-05T10:45:48.971659Z	info	FLAG: --cni-network-config=""
+2024-06-05T10:45:48.971694286Z 2024-06-05T10:45:48.971661Z	info	FLAG: --cni-network-config-file=""
+2024-06-05T10:45:48.971694286Z 2024-06-05T10:45:48.971664Z	info	FLAG: --ctrlz_address="localhost"
+2024-06-05T10:45:48.971694286Z 2024-06-05T10:45:48.971669Z	info	FLAG: --ctrlz_port="9876"
+2024-06-05T10:45:48.971822809Z 2024-06-05T10:45:48.971672Z	info	FLAG: --help="false"
+2024-06-05T10:45:48.971822809Z 2024-06-05T10:45:48.971700Z	info	FLAG: --kube-ca-file=""
+2024-06-05T10:45:48.971822809Z 2024-06-05T10:45:48.971704Z	info	FLAG: --kubecfg-file-name="ZZZ-istio-cni-kubeconfig"
+2024-06-05T10:45:48.971822809Z 2024-06-05T10:45:48.971708Z	info	FLAG: --kubeconfig-mode="384"
+2024-06-05T10:45:48.971822809Z 2024-06-05T10:45:48.971711Z	info	FLAG: --log-level="warn"
+2024-06-05T10:45:48.971822809Z 2024-06-05T10:45:48.971715Z	info	FLAG: --log-uds-address="/var/run/istio-cni/log.sock"
+2024-06-05T10:45:48.971822809Z 2024-06-05T10:45:48.971718Z	info	FLAG: --log_as_json="false"
+2024-06-05T10:45:48.971822809Z 2024-06-05T10:45:48.971721Z	info	FLAG: --log_caller=""
+2024-06-05T10:45:48.971822809Z 2024-06-05T10:45:48.971724Z	info	FLAG: --log_output_level="default:info"
+2024-06-05T10:45:48.971822809Z 2024-06-05T10:45:48.971727Z	info	FLAG: --log_rotate=""
+2024-06-05T10:45:48.971822809Z 2024-06-05T10:45:48.971730Z	info	FLAG: --log_rotate_max_age="30"
+2024-06-05T10:45:48.971822809Z 2024-06-05T10:45:48.971734Z	info	FLAG: --log_rotate_max_backups="1000"
+2024-06-05T10:45:48.971822809Z 2024-06-05T10:45:48.971737Z	info	FLAG: --log_rotate_max_size="104857600"
+2024-06-05T10:45:48.971822809Z 2024-06-05T10:45:48.971741Z	info	FLAG: --log_stacktrace_level="default:none"
+2024-06-05T10:45:48.971822809Z 2024-06-05T10:45:48.971749Z	info	FLAG: --log_target="[stdout]"
+2024-06-05T10:45:48.971822809Z 2024-06-05T10:45:48.971752Z	info	FLAG: --monitoring-port="15014"
+2024-06-05T10:45:48.971822809Z 2024-06-05T10:45:48.971756Z	info	FLAG: --mounted-cni-net-dir="/host/etc/cni/net.d"
+2024-06-05T10:45:48.971822809Z 2024-06-05T10:45:48.971760Z	info	FLAG: --repair-broken-pod-label-key="cni.istio.io/uninitialized"
+2024-06-05T10:45:48.971822809Z 2024-06-05T10:45:48.971763Z	info	FLAG: --repair-broken-pod-label-value="true"
+2024-06-05T10:45:48.971822809Z 2024-06-05T10:45:48.971766Z	info	FLAG: --repair-delete-pods="false"
+2024-06-05T10:45:48.971822809Z 2024-06-05T10:45:48.971769Z	info	FLAG: --repair-enabled="true"
+2024-06-05T10:45:48.971822809Z 2024-06-05T10:45:48.971772Z	info	FLAG: --repair-field-selectors=""
+2024-06-05T10:45:48.971822809Z 2024-06-05T10:45:48.971775Z	info	FLAG: --repair-init-container-exit-code="126"
+2024-06-05T10:45:48.971822809Z 2024-06-05T10:45:48.971779Z	info	FLAG: --repair-init-container-name="istio-validation"
+2024-06-05T10:45:48.971822809Z 2024-06-05T10:45:48.971782Z	info	FLAG: --repair-init-container-termination-message=""
+2024-06-05T10:45:48.971822809Z 2024-06-05T10:45:48.971785Z	info	FLAG: --repair-label-pods="false"
+2024-06-05T10:45:48.971822809Z 2024-06-05T10:45:48.971788Z	info	FLAG: --repair-label-selectors=""
+2024-06-05T10:45:48.971822809Z 2024-06-05T10:45:48.971792Z	info	FLAG: --repair-node-name=""
+2024-06-05T10:45:48.971822809Z 2024-06-05T10:45:48.971795Z	info	FLAG: --repair-run-as-daemon="false"
+2024-06-05T10:45:48.971822809Z 2024-06-05T10:45:48.971798Z	info	FLAG: --repair-sidecar-annotation="sidecar.istio.io/status"
+2024-06-05T10:45:48.971822809Z 2024-06-05T10:45:48.971803Z	info	FLAG: --skip-cni-binaries="[]"
+2024-06-05T10:45:48.971822809Z 2024-06-05T10:45:48.971806Z	info	FLAG: --skip-tls-verify="false"
+2024-06-05T10:45:48.971822809Z 2024-06-05T10:45:48.971809Z	info	FLAG: --update-cni-binaries="true"
+2024-06-05T10:45:48.974105237Z 2024-06-05T10:45:48.974063Z	info	CNI install configuration: 
+2024-06-05T10:45:48.974105237Z CNINetDir: /etc/cni/multus/net.d
+2024-06-05T10:45:48.974105237Z MountedCNINetDir: /host/etc/cni/multus/net.d
+2024-06-05T10:45:48.974105237Z CNIConfName: v2-4-istio-cni.conf
+2024-06-05T10:45:48.974105237Z ChainedCNIPlugin: false
+2024-06-05T10:45:48.974105237Z CNINetworkConfigFile: 
+2024-06-05T10:45:48.974105237Z CNINetworkConfig: {
+2024-06-05T10:45:48.974105237Z   "cniVersion": "0.3.1",
+2024-06-05T10:45:48.974105237Z   "name": "v2-4-istio-cni",
+2024-06-05T10:45:48.974105237Z   "type": "v2-4-istio-cni",
+2024-06-05T10:45:48.974105237Z   "log_level": "",
+2024-06-05T10:45:48.974105237Z   "log_uds_address": "__LOG_UDS_ADDRESS__",
+2024-06-05T10:45:48.974105237Z   "kubernetes": {
+2024-06-05T10:45:48.974105237Z       "kubeconfig": "__KUBECONFIG_FILEPATH__",
+2024-06-05T10:45:48.974105237Z       "cni_bin_dir": "/var/lib/cni/bin",
+2024-06-05T10:45:48.974105237Z       "exclude_namespaces": [ "openshift-operators" ]
+2024-06-05T10:45:48.974105237Z   }
+2024-06-05T10:45:48.974105237Z }
+2024-06-05T10:45:48.974105237Z CNIEnableInstall: true
+2024-06-05T10:45:48.974105237Z CNIEnableReinstall: true
+2024-06-05T10:45:48.974105237Z LogLevel: warn
+2024-06-05T10:45:48.974105237Z KubeconfigFilename: v2-4-istio-cni.kubeconfig
+2024-06-05T10:45:48.974105237Z KubeconfigMode: 0600
+2024-06-05T10:45:48.974105237Z KubeCAFile: 
+2024-06-05T10:45:48.974105237Z SkipTLSVerify: false
+2024-06-05T10:45:48.974105237Z K8sServiceProtocol: 
+2024-06-05T10:45:48.974105237Z K8sServiceHost: 172.30.0.1
+2024-06-05T10:45:48.974105237Z K8sServicePort: 443
+2024-06-05T10:45:48.974105237Z K8sNodeName: istio-cni-node-v2-4-4xd9w
+2024-06-05T10:45:48.974105237Z UpdateCNIBinaries: true
+2024-06-05T10:45:48.974105237Z SkipCNIBinaries: []
+2024-06-05T10:45:48.974105237Z MonitoringPort: 15014
+2024-06-05T10:45:48.974105237Z LogUDSAddress: /var/run/istio-cni/log.sock
+2024-06-05T10:45:48.974105237Z HostNSEnterExec: false
+2024-06-05T10:45:48.974105237Z 
+2024-06-05T10:45:48.974105237Z 2024-06-05T10:45:48.974088Z	info	CNI race repair configuration: 
+2024-06-05T10:45:48.974105237Z Enabled: true
+2024-06-05T10:45:48.974105237Z RunAsDaemon: false
+2024-06-05T10:45:48.974105237Z NodeName: 
+2024-06-05T10:45:48.974105237Z LabelKey: cni.istio.io/uninitialized
+2024-06-05T10:45:48.974105237Z LabelValue: true
+2024-06-05T10:45:48.974105237Z DeletePods: false
+2024-06-05T10:45:48.974105237Z LabelPods: false
+2024-06-05T10:45:48.974105237Z SidecarAnnotation: sidecar.istio.io/status
+2024-06-05T10:45:48.974105237Z InitContainerName: istio-validation
+2024-06-05T10:45:48.974105237Z InitTerminationMsg: 
+2024-06-05T10:45:48.974105237Z InitExitCode: 126
+2024-06-05T10:45:48.974105237Z LabelSelectors: 
+2024-06-05T10:45:48.974105237Z FieldSelectors: 
+2024-06-05T10:45:48.974105237Z 
+2024-06-05T10:45:48.974241291Z 2024-06-05T10:45:48.974178Z	info	ControlZ available at 127.0.0.1:9876
+2024-06-05T10:45:48.974274492Z 2024-06-05T10:45:48.974258Z	info	Start a UDS server for CNI plugin logs
+2024-06-05T10:45:48.974392884Z 2024-06-05T10:45:48.974372Z	info	repair	Start CNI race condition repair.
+2024-06-05T10:45:49.178620336Z 2024-06-05T10:45:49.178561Z	info	install	Copied istio-cni to /host/opt/cni/bin/v2-4-istio-cni.
+2024-06-05T10:45:49.178854022Z 2024-06-05T10:45:49.178830Z	info	install	Directory /host/secondary-bin-dir is not writable, skipping.
+2024-06-05T10:45:49.179179700Z 2024-06-05T10:45:49.179153Z	info	install	write kubeconfig file /host/etc/cni/multus/net.d/v2-4-istio-cni.kubeconfig with: 
+2024-06-05T10:45:49.179179700Z # Kubeconfig file for Istio CNI plugin.
+2024-06-05T10:45:49.179179700Z apiVersion: v1
+2024-06-05T10:45:49.179179700Z kind: Config
+2024-06-05T10:45:49.179179700Z clusters:
+2024-06-05T10:45:49.179179700Z - name: local
+2024-06-05T10:45:49.179179700Z   cluster:
+2024-06-05T10:45:49.179179700Z     server: https://[172.30.0.1]:443
+2024-06-05T10:45:49.179179700Z     certificate-authority-data: <CA cert from /var/run/secrets/kubernetes.io/serviceaccount/ca.crt>
+2024-06-05T10:45:49.179179700Z users:
+2024-06-05T10:45:49.179179700Z - name: istio-cni
+2024-06-05T10:45:49.179179700Z   user:
+2024-06-05T10:45:49.179179700Z     token: "<redacted>"
+2024-06-05T10:45:49.179179700Z contexts:
+2024-06-05T10:45:49.179179700Z - name: istio-cni-context
+2024-06-05T10:45:49.179179700Z   context:
+2024-06-05T10:45:49.179179700Z     cluster: local
+2024-06-05T10:45:49.179179700Z     user: istio-cni
+2024-06-05T10:45:49.179179700Z current-context: istio-cni-context
+2024-06-05T10:45:49.179179700Z 
+2024-06-05T10:45:49.179378995Z 2024-06-05T10:45:49.179360Z	info	install	Using CNI config template from CNI_NETWORK_CONFIG environment variable.
+2024-06-05T10:45:49.179433087Z 2024-06-05T10:45:49.179406Z	info	install	CNI config: {
+2024-06-05T10:45:49.179433087Z   "cniVersion": "0.3.1",
+2024-06-05T10:45:49.179433087Z   "name": "v2-4-istio-cni",
+2024-06-05T10:45:49.179433087Z   "type": "v2-4-istio-cni",
+2024-06-05T10:45:49.179433087Z   "log_level": "",
+2024-06-05T10:45:49.179433087Z   "log_uds_address": "/var/run/istio-cni/log.sock",
+2024-06-05T10:45:49.179433087Z   "kubernetes": {
+2024-06-05T10:45:49.179433087Z       "kubeconfig": "/etc/cni/multus/net.d/v2-4-istio-cni.kubeconfig",
+2024-06-05T10:45:49.179433087Z       "cni_bin_dir": "/var/lib/cni/bin",
+2024-06-05T10:45:49.179433087Z       "exclude_namespaces": [ "openshift-operators" ]
+2024-06-05T10:45:49.179433087Z   }
+2024-06-05T10:45:49.179433087Z }
+2024-06-05T10:45:49.179536890Z 2024-06-05T10:45:49.179520Z	info	install	Created CNI config /host/etc/cni/multus/net.d/v2-4-istio-cni.conf
+2024-06-05T10:45:49.179566900Z 2024-06-05T10:45:49.179555Z	info	install	Installation succeed, start watching for re-installation.

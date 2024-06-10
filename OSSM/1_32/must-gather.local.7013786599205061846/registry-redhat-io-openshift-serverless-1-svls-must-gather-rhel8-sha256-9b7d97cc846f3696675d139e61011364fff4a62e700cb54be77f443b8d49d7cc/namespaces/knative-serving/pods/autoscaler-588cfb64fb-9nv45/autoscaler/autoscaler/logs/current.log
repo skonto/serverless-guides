@@ -1,0 +1,27 @@
+2024-06-05T10:56:07.771022629Z 2024/06/05 10:56:07 Registering 4 clients
+2024-06-05T10:56:07.771022629Z 2024/06/05 10:56:07 Registering 5 informer factories
+2024-06-05T10:56:07.771022629Z 2024/06/05 10:56:07 Registering 5 informers
+2024-06-05T10:56:07.771022629Z 2024/06/05 10:56:07 Registering 1 filtered informers
+2024-06-05T10:56:07.771022629Z 2024/06/05 10:56:07 Registering 2 controllers
+2024-06-05T10:56:07.771947283Z 2024/06/05 10:56:07 Failed to get k8s version Get "https://172.30.0.1:443/version": dial tcp 172.30.0.1:443: connect: connection refused
+2024-06-05T10:56:08.772421575Z 2024/06/05 10:56:08 Failed to get k8s version Get "https://172.30.0.1:443/version": dial tcp 172.30.0.1:443: connect: connection refused
+2024-06-05T10:56:09.772910608Z 2024/06/05 10:56:09 Failed to get k8s version Get "https://172.30.0.1:443/version": dial tcp 172.30.0.1:443: connect: connection refused
+2024-06-05T10:56:10.772789894Z 2024/06/05 10:56:10 Failed to get k8s version Get "https://172.30.0.1:443/version": dial tcp 172.30.0.1:443: connect: connection refused
+2024-06-05T10:56:11.772862666Z 2024/06/05 10:56:11 Failed to get k8s version Get "https://172.30.0.1:443/version": dial tcp 172.30.0.1:443: connect: connection refused
+2024-06-05T10:56:12.772809536Z 2024/06/05 10:56:12 Failed to get k8s version Get "https://172.30.0.1:443/version": dial tcp 172.30.0.1:443: connect: connection refused
+2024-06-05T10:56:13.772850927Z 2024/06/05 10:56:13 Failed to get k8s version Get "https://172.30.0.1:443/version": dial tcp 172.30.0.1:443: connect: connection refused
+2024-06-05T10:56:14.772805866Z 2024/06/05 10:56:14 Failed to get k8s version Get "https://172.30.0.1:443/version": dial tcp 172.30.0.1:443: connect: connection refused
+2024-06-05T10:56:15.772793526Z 2024/06/05 10:56:15 Failed to get k8s version Get "https://172.30.0.1:443/version": dial tcp 172.30.0.1:443: connect: connection refused
+2024-06-05T10:56:16.772840998Z 2024/06/05 10:56:16 Failed to get k8s version Get "https://172.30.0.1:443/version": dial tcp 172.30.0.1:443: connect: connection refused
+2024-06-05T10:56:17.782860279Z {"severity":"INFO","timestamp":"2024-06-05T10:56:17.782807267Z","caller":"logging/config.go:80","message":"Unable to read vcs.revision from binary"}
+2024-06-05T10:56:17.782905220Z {"severity":"INFO","timestamp":"2024-06-05T10:56:17.782848168Z","logger":"autoscaler","caller":"profiling/server.go:65","message":"Profiling enabled: false"}
+2024-06-05T10:56:17.787840237Z {"severity":"INFO","timestamp":"2024-06-05T10:56:17.787799096Z","logger":"autoscaler","caller":"kpa/controller.go:75","message":"Setting up ConfigMap receivers"}
+2024-06-05T10:56:17.787962270Z {"severity":"INFO","timestamp":"2024-06-05T10:56:17.78793287Z","logger":"autoscaler","caller":"kpa/controller.go:89","message":"Setting up KPA-Class event handlers"}
+2024-06-05T10:56:17.994949470Z {"severity":"INFO","timestamp":"2024-06-05T10:56:17.994873799Z","logger":"autoscaler","caller":"autoscaler/main.go:181","message":"Running with Standard leader election"}
+2024-06-05T10:56:17.995124735Z {"severity":"INFO","timestamp":"2024-06-05T10:56:17.995065684Z","logger":"autoscaler","caller":"leaderelection/context.go:149","message":"autoscaler-bucket-00-of-01 will run in leader-elected mode with id \"autoscaler-588cfb64fb-9nv45_10.131.0.23\""}
+2024-06-05T10:56:17.995236748Z {"severity":"INFO","timestamp":"2024-06-05T10:56:17.995200957Z","logger":"autoscaler","caller":"controller/controller.go:486","message":"Starting controller and workers","knative.dev/controller":"knative.dev.serving.pkg.reconciler.metric.reconciler","knative.dev/kind":"autoscaling.internal.knative.dev.Metric"}
+2024-06-05T10:56:17.995282039Z {"severity":"INFO","timestamp":"2024-06-05T10:56:17.995264009Z","logger":"autoscaler","caller":"controller/controller.go:496","message":"Started workers","knative.dev/controller":"knative.dev.serving.pkg.reconciler.metric.reconciler","knative.dev/kind":"autoscaling.internal.knative.dev.Metric"}
+2024-06-05T10:56:17.995323790Z {"severity":"INFO","timestamp":"2024-06-05T10:56:17.995279999Z","logger":"autoscaler","caller":"controller/controller.go:486","message":"Starting controller and workers","knative.dev/controller":"knative.dev.serving.pkg.reconciler.autoscaling.kpa.Reconciler","knative.dev/kind":"autoscaling.internal.knative.dev.PodAutoscaler"}
+2024-06-05T10:56:17.995374241Z {"severity":"INFO","timestamp":"2024-06-05T10:56:17.995358501Z","logger":"autoscaler","caller":"controller/controller.go:496","message":"Started workers","knative.dev/controller":"knative.dev.serving.pkg.reconciler.autoscaling.kpa.Reconciler","knative.dev/kind":"autoscaling.internal.knative.dev.PodAutoscaler"}
+2024-06-05T10:56:17.995399162Z I0605 10:56:17.995248       1 leaderelection.go:248] attempting to acquire leader lease knative-serving/autoscaler-bucket-00-of-01...
+2024-06-05T10:56:17.995612968Z {"severity":"INFO","timestamp":"2024-06-05T10:56:17.995295009Z","logger":"autoscaler.stats-websocket-server","caller":"statserver/server.go:98","message":"Starting","address":":8080"}

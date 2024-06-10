@@ -1,0 +1,79 @@
+---
+apiVersion: networking.istio.io/v1beta1
+kind: DestinationRule
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"networking.istio.io/v1beta1","kind":"DestinationRule","metadata":{"annotations":{"maistra.io/mesh-generation":"2.5.1-1-2"},"labels":{"app":"istiod","app.kubernetes.io/component":"istio-discovery","app.kubernetes.io/instance":"istio-system","app.kubernetes.io/managed-by":"maistra-istio-operator","app.kubernetes.io/name":"istio-discovery","app.kubernetes.io/part-of":"istio","app.kubernetes.io/version":"2.5.1-1-2","istio":"pilot","istio.io/rev":"basic","maistra-version":"2.4.7","maistra.io/owner":"istio-system","maistra.io/owner-name":"basic","release":"istio"},"name":"istiod-basic","namespace":"istio-system","ownerReferences":[{"apiVersion":"maistra.io/v2","blockOwnerDeletion":true,"controller":true,"kind":"ServiceMeshControlPlane","name":"basic","uid":"b5faf99f-8aeb-4477-aa3e-3f2e4796ec3c"}]},"spec":{"host":"istiod-basic.istio-system.svc.cluster.local","trafficPolicy":{"portLevelSettings":[{"port":{"number":8188},"tls":{"mode":"SIMPLE"}}]}}}
+    maistra.io/mesh-generation: 2.5.1-1-2
+  creationTimestamp: "2024-06-05T10:45:42Z"
+  generation: 1
+  labels:
+    app: istiod
+    app.kubernetes.io/component: istio-discovery
+    app.kubernetes.io/instance: istio-system
+    app.kubernetes.io/managed-by: maistra-istio-operator
+    app.kubernetes.io/name: istio-discovery
+    app.kubernetes.io/part-of: istio
+    app.kubernetes.io/version: 2.5.1-1-2
+    istio: pilot
+    istio.io/rev: basic
+    maistra-version: 2.4.7
+    maistra.io/owner: istio-system
+    maistra.io/owner-name: basic
+    release: istio
+  managedFields:
+  - apiVersion: networking.istio.io/v1beta1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:kubectl.kubernetes.io/last-applied-configuration: {}
+          f:maistra.io/mesh-generation: {}
+        f:labels:
+          .: {}
+          f:app: {}
+          f:app.kubernetes.io/component: {}
+          f:app.kubernetes.io/instance: {}
+          f:app.kubernetes.io/managed-by: {}
+          f:app.kubernetes.io/name: {}
+          f:app.kubernetes.io/part-of: {}
+          f:app.kubernetes.io/version: {}
+          f:istio: {}
+          f:istio.io/rev: {}
+          f:maistra-version: {}
+          f:maistra.io/owner: {}
+          f:maistra.io/owner-name: {}
+          f:release: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"b5faf99f-8aeb-4477-aa3e-3f2e4796ec3c"}: {}
+      f:spec:
+        .: {}
+        f:host: {}
+        f:trafficPolicy:
+          .: {}
+          f:portLevelSettings: {}
+    manager: istio-operator
+    operation: Update
+    time: "2024-06-05T10:45:42Z"
+  name: istiod-basic
+  namespace: istio-system
+  ownerReferences:
+  - apiVersion: maistra.io/v2
+    blockOwnerDeletion: true
+    controller: true
+    kind: ServiceMeshControlPlane
+    name: basic
+    uid: b5faf99f-8aeb-4477-aa3e-3f2e4796ec3c
+  resourceVersion: "35088"
+  uid: 2f7c6cbf-0ee9-4012-ad9c-c7b08feb41b7
+spec:
+  host: istiod-basic.istio-system.svc.cluster.local
+  trafficPolicy:
+    portLevelSettings:
+    - port:
+        number: 8188
+      tls:
+        mode: SIMPLE

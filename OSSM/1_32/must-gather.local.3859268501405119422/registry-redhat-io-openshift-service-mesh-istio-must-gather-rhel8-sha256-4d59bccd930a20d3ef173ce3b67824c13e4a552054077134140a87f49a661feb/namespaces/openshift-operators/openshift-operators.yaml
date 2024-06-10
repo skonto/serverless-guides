@@ -1,0 +1,93 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  annotations:
+    capability.openshift.io/name: OperatorLifecycleManager
+    include.release.openshift.io/ibm-cloud-managed: "true"
+    include.release.openshift.io/self-managed-high-availability: "true"
+    openshift.io/node-selector: ""
+    openshift.io/sa.scc.mcs: s0:c21,c0
+    openshift.io/sa.scc.supplemental-groups: 1000420000/10000
+    openshift.io/sa.scc.uid-range: 1000420000/10000
+    workload.openshift.io/allowed: management
+  creationTimestamp: "2024-06-05T10:13:10Z"
+  labels:
+    kubernetes.io/metadata.name: openshift-operators
+    openshift.io/scc: ""
+    pod-security.kubernetes.io/audit: privileged
+    pod-security.kubernetes.io/audit-version: v1.24
+    pod-security.kubernetes.io/enforce: privileged
+    pod-security.kubernetes.io/enforce-version: v1.24
+    pod-security.kubernetes.io/warn: privileged
+    pod-security.kubernetes.io/warn-version: v1.24
+    security.openshift.io/scc.podSecurityLabelSync: "true"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:labels:
+          f:pod-security.kubernetes.io/audit: {}
+          f:pod-security.kubernetes.io/audit-version: {}
+          f:pod-security.kubernetes.io/warn: {}
+          f:pod-security.kubernetes.io/warn-version: {}
+    manager: pod-security-admission-label-synchronization-controller
+    operation: Apply
+    time: "2024-06-05T10:44:56Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:openshift.io/sa.scc.mcs: {}
+          f:openshift.io/sa.scc.supplemental-groups: {}
+          f:openshift.io/sa.scc.uid-range: {}
+    manager: cluster-policy-controller
+    operation: Update
+    time: "2024-06-05T10:13:10Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:capability.openshift.io/name: {}
+          f:include.release.openshift.io/ibm-cloud-managed: {}
+          f:include.release.openshift.io/self-managed-high-availability: {}
+          f:openshift.io/node-selector: {}
+          f:workload.openshift.io/allowed: {}
+        f:labels:
+          .: {}
+          f:kubernetes.io/metadata.name: {}
+          f:openshift.io/scc: {}
+          f:pod-security.kubernetes.io/enforce: {}
+          f:pod-security.kubernetes.io/enforce-version: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"bd5ef02f-11bd-4629-b432-74ce89af40cd"}: {}
+    manager: cluster-version-operator
+    operation: Update
+    time: "2024-06-05T10:13:10Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:labels:
+          f:security.openshift.io/scc.podSecurityLabelSync: {}
+    manager: olm
+    operation: Update
+    time: "2024-06-05T10:44:51Z"
+  name: openshift-operators
+  ownerReferences:
+  - apiVersion: config.openshift.io/v1
+    controller: true
+    kind: ClusterVersion
+    name: version
+    uid: bd5ef02f-11bd-4629-b432-74ce89af40cd
+  resourceVersion: "33602"
+  uid: ab98b4db-d2ee-421f-a1da-e4c2c9e364cf
+spec:
+  finalizers:
+  - kubernetes
+status:
+  phase: Active

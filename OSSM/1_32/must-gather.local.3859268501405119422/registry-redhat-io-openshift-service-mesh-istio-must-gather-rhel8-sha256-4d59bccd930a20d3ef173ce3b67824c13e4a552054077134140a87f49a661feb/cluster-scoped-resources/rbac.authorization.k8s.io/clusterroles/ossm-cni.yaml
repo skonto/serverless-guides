@@ -1,0 +1,58 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"rbac.authorization.k8s.io/v1","kind":"ClusterRole","metadata":{"annotations":{},"labels":{"app.kubernetes.io/component":"istio_cni","app.kubernetes.io/instance":"istio_cni","app.kubernetes.io/managed-by":"maistra-istio-operator","app.kubernetes.io/name":"istio_cni","app.kubernetes.io/part-of":"istio","app.kubernetes.io/version":"TODO","maistra-version":"2.5.1","maistra.io/owner":"","maistra.io/owner-name":""},"name":"ossm-cni"},"rules":[{"apiGroups":[""],"resources":["pods"],"verbs":["get"]},{"apiGroups":["security.openshift.io"],"resourceNames":["privileged"],"resources":["securitycontextconstraints"],"verbs":["use"]}]}
+  creationTimestamp: "2024-06-05T10:45:39Z"
+  labels:
+    app.kubernetes.io/component: istio_cni
+    app.kubernetes.io/instance: istio_cni
+    app.kubernetes.io/managed-by: maistra-istio-operator
+    app.kubernetes.io/name: istio_cni
+    app.kubernetes.io/part-of: istio
+    app.kubernetes.io/version: TODO
+    maistra-version: 2.5.1
+    maistra.io/owner: ""
+    maistra.io/owner-name: ""
+  managedFields:
+  - apiVersion: rbac.authorization.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:kubectl.kubernetes.io/last-applied-configuration: {}
+        f:labels:
+          .: {}
+          f:app.kubernetes.io/component: {}
+          f:app.kubernetes.io/instance: {}
+          f:app.kubernetes.io/managed-by: {}
+          f:app.kubernetes.io/name: {}
+          f:app.kubernetes.io/part-of: {}
+          f:app.kubernetes.io/version: {}
+          f:maistra-version: {}
+          f:maistra.io/owner: {}
+          f:maistra.io/owner-name: {}
+      f:rules: {}
+    manager: istio-operator
+    operation: Update
+    time: "2024-06-05T10:45:39Z"
+  name: ossm-cni
+  resourceVersion: "34937"
+  uid: a649b91d-2dcc-4b13-bd70-db1e4c606f1e
+rules:
+- apiGroups:
+  - ""
+  resources:
+  - pods
+  verbs:
+  - get
+- apiGroups:
+  - security.openshift.io
+  resourceNames:
+  - privileged
+  resources:
+  - securitycontextconstraints
+  verbs:
+  - use

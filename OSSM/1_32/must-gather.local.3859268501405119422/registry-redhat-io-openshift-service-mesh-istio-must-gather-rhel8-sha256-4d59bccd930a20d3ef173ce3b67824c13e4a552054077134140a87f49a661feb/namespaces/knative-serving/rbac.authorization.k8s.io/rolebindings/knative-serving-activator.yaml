@@ -1,0 +1,54 @@
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"rbac.authorization.k8s.io/v1","kind":"RoleBinding","metadata":{"labels":{"app.kubernetes.io/component":"activator","app.kubernetes.io/name":"knative-serving","app.kubernetes.io/version":"release-v1.11"},"name":"knative-serving-activator","namespace":"knative-serving","ownerReferences":[{"apiVersion":"operator.knative.dev/v1beta1","blockOwnerDeletion":true,"controller":true,"kind":"KnativeServing","name":"knative-serving","uid":"af223c8b-7d90-440e-8659-7268e406b26c"}]},"roleRef":{"apiGroup":"rbac.authorization.k8s.io","kind":"Role","name":"knative-serving-activator"},"subjects":[{"kind":"ServiceAccount","name":"activator","namespace":"knative-serving"}]}
+    manifestival: new
+  creationTimestamp: "2024-06-05T10:55:46Z"
+  labels:
+    app.kubernetes.io/component: activator
+    app.kubernetes.io/name: knative-serving
+    app.kubernetes.io/version: release-v1.11
+  managedFields:
+  - apiVersion: rbac.authorization.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:kubectl.kubernetes.io/last-applied-configuration: {}
+          f:manifestival: {}
+        f:labels:
+          .: {}
+          f:app.kubernetes.io/component: {}
+          f:app.kubernetes.io/name: {}
+          f:app.kubernetes.io/version: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"af223c8b-7d90-440e-8659-7268e406b26c"}: {}
+      f:roleRef: {}
+      f:subjects: {}
+    manager: manifestival
+    operation: Update
+    time: "2024-06-05T10:56:03Z"
+  name: knative-serving-activator
+  namespace: knative-serving
+  ownerReferences:
+  - apiVersion: operator.knative.dev/v1beta1
+    blockOwnerDeletion: true
+    controller: true
+    kind: KnativeServing
+    name: knative-serving
+    uid: af223c8b-7d90-440e-8659-7268e406b26c
+  resourceVersion: "41597"
+  uid: 69141562-0211-45e8-a16f-3102608846ac
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: knative-serving-activator
+subjects:
+- kind: ServiceAccount
+  name: activator
+  namespace: knative-serving

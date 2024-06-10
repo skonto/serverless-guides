@@ -1,0 +1,21 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  creationTimestamp: "2024-06-05T10:54:10Z"
+  labels:
+    olm.managed: "true"
+    olm.owner: serverless-operator.v1.32.1
+    olm.owner.kind: ClusterServiceVersion
+    olm.owner.namespace: openshift-serverless
+    operators.coreos.com/serverless-operator.openshift-serverless: ""
+  name: knative-operator-webhook-service-system:auth-delegator
+  resourceVersion: "39544"
+  uid: ab9d3123-294e-4add-aea9-f7d242b4db16
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: system:auth-delegator
+subjects:
+- kind: ServiceAccount
+  name: knative-operator
+  namespace: openshift-serverless

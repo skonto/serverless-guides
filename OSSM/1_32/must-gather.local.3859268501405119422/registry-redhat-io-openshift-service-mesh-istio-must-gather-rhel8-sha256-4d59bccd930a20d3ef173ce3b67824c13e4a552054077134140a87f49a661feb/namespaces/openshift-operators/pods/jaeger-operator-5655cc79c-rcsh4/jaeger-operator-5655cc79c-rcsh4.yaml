@@ -1,0 +1,657 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    alm-examples: |-
+      [
+        {
+          "apiVersion": "jaegertracing.io/v1",
+          "kind": "Jaeger",
+          "metadata": {
+            "name": "jaeger-all-in-one-inmemory"
+          },
+          "spec": {
+            "strategy": "allInOne"
+          },
+          "status":{
+            "phase":"Running"
+          }
+        }
+      ]
+    capabilities: Deep Insights
+    categories: Logging & Tracing
+    certified: "false"
+    containerImage: registry.redhat.io/rhosdt/jaeger-rhel8-operator@sha256:0d5bab1b26572942eef72f8068dcc1eb219b67896ddc216905c650724f3e45fa
+    createdAt: "2024-05-30 13:37:02.722571"
+    description: Provides tracing, monitoring and troubleshooting for microservices-based
+      distributed systems
+    features.operators.openshift.io/disconnected: "true"
+    features.operators.openshift.io/fips-compliant: "false"
+    features.operators.openshift.io/proxy-aware: "true"
+    features.operators.openshift.io/tls-profiles: "false"
+    features.operators.openshift.io/token-auth-aws: "false"
+    features.operators.openshift.io/token-auth-azure: "false"
+    features.operators.openshift.io/token-auth-gcp: "false"
+    k8s.ovn.org/pod-networks: '{"default":{"ip_addresses":["10.128.2.14/23"],"mac_address":"0a:58:0a:80:02:0e","gateway_ips":["10.128.2.1"],"routes":[{"dest":"10.128.0.0/14","nextHop":"10.128.2.1"},{"dest":"172.30.0.0/16","nextHop":"10.128.2.1"},{"dest":"100.64.0.0/16","nextHop":"10.128.2.1"}],"ip_address":"10.128.2.14/23","gateway_ip":"10.128.2.1"}}'
+    k8s.v1.cni.cncf.io/network-status: |-
+      [{
+          "name": "ovn-kubernetes",
+          "interface": "eth0",
+          "ips": [
+              "10.128.2.14"
+          ],
+          "mac": "0a:58:0a:80:02:0e",
+          "default": true,
+          "dns": {}
+      }]
+    olm.operatorGroup: global-operators
+    olm.operatorNamespace: openshift-operators
+    olm.skipRange: '>=1.13.0 <1.57.0-5'
+    olm.targetNamespaces: ""
+    olmcahash: 11cd494d64009afc544a330322088f78c1bf39580674c68f0ddfdd14c0ecacde
+    openshift.io/scc: restricted-v2
+    operatorframework.io/cluster-monitoring: "true"
+    operatorframework.io/properties: '{"properties":[{"type":"olm.gvk","value":{"group":"jaegertracing.io","kind":"Jaeger","version":"v1"}},{"type":"olm.package","value":{"packageName":"jaeger-product","version":"1.57.0-5"}}]}'
+    operatorframework.io/suggested-namespace: openshift-distributed-tracing
+    operators.openshift.io/infrastructure-features: '["disconnected"]'
+    operators.openshift.io/valid-subscription: '["OpenShift Container Platform", "OpenShift
+      Platform Plus"]'
+    repository: https://github.com/jaegertracing/jaeger-operator
+    seccomp.security.alpha.kubernetes.io/pod: runtime/default
+    support: Red Hat
+  creationTimestamp: "2024-06-05T10:44:56Z"
+  generateName: jaeger-operator-5655cc79c-
+  labels:
+    name: jaeger-operator
+    pod-template-hash: 5655cc79c
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.ovn.org/pod-networks: {}
+    manager: ip-10-0-91-247
+    operation: Update
+    subresource: status
+    time: "2024-06-05T10:44:56Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:alm-examples: {}
+          f:capabilities: {}
+          f:categories: {}
+          f:certified: {}
+          f:containerImage: {}
+          f:createdAt: {}
+          f:description: {}
+          f:features.operators.openshift.io/disconnected: {}
+          f:features.operators.openshift.io/fips-compliant: {}
+          f:features.operators.openshift.io/proxy-aware: {}
+          f:features.operators.openshift.io/tls-profiles: {}
+          f:features.operators.openshift.io/token-auth-aws: {}
+          f:features.operators.openshift.io/token-auth-azure: {}
+          f:features.operators.openshift.io/token-auth-gcp: {}
+          f:olm.operatorGroup: {}
+          f:olm.operatorNamespace: {}
+          f:olm.skipRange: {}
+          f:olm.targetNamespaces: {}
+          f:olmcahash: {}
+          f:operatorframework.io/cluster-monitoring: {}
+          f:operatorframework.io/properties: {}
+          f:operatorframework.io/suggested-namespace: {}
+          f:operators.openshift.io/infrastructure-features: {}
+          f:operators.openshift.io/valid-subscription: {}
+          f:repository: {}
+          f:support: {}
+        f:generateName: {}
+        f:labels:
+          .: {}
+          f:name: {}
+          f:pod-template-hash: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"30586e2e-6f73-4659-aa0f-43063682258f"}: {}
+      f:spec:
+        f:containers:
+          k:{"name":"jaeger-operator"}:
+            .: {}
+            f:args: {}
+            f:env:
+              .: {}
+              k:{"name":"KAFKA-PROVISIONING-MINIMAL"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"LOG-LEVEL"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"OPERATOR_CONDITION_NAME"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"OPERATOR_NAME"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"POD_NAME"}:
+                .: {}
+                f:name: {}
+                f:valueFrom:
+                  .: {}
+                  f:fieldRef: {}
+              k:{"name":"POD_NAMESPACE"}:
+                .: {}
+                f:name: {}
+                f:valueFrom:
+                  .: {}
+                  f:fieldRef: {}
+              k:{"name":"RELATED_IMAGE_JAEGER_AGENT"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"RELATED_IMAGE_JAEGER_ALL_IN_ONE"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"RELATED_IMAGE_JAEGER_COLLECTOR"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"RELATED_IMAGE_JAEGER_ES_INDEX_CLEANER"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"RELATED_IMAGE_JAEGER_ES_ROLLOVER"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"RELATED_IMAGE_JAEGER_INGESTER"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"RELATED_IMAGE_JAEGER_QUERY"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"RELATED_IMAGE_OPENSHIFT_OAUTH_PROXY"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"RELATED_IMAGE_OSE_KUBE_RBAC_PROXY"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"WATCH_NAMESPACE"}:
+                .: {}
+                f:name: {}
+                f:valueFrom:
+                  .: {}
+                  f:fieldRef: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:livenessProbe:
+              .: {}
+              f:failureThreshold: {}
+              f:httpGet:
+                .: {}
+                f:path: {}
+                f:port: {}
+                f:scheme: {}
+              f:initialDelaySeconds: {}
+              f:periodSeconds: {}
+              f:successThreshold: {}
+              f:timeoutSeconds: {}
+            f:name: {}
+            f:ports:
+              .: {}
+              k:{"containerPort":8383,"protocol":"TCP"}:
+                .: {}
+                f:containerPort: {}
+                f:name: {}
+                f:protocol: {}
+              k:{"containerPort":9443,"protocol":"TCP"}:
+                .: {}
+                f:containerPort: {}
+                f:name: {}
+                f:protocol: {}
+            f:readinessProbe:
+              .: {}
+              f:failureThreshold: {}
+              f:httpGet:
+                .: {}
+                f:path: {}
+                f:port: {}
+                f:scheme: {}
+              f:initialDelaySeconds: {}
+              f:periodSeconds: {}
+              f:successThreshold: {}
+              f:timeoutSeconds: {}
+            f:resources:
+              .: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:securityContext:
+              .: {}
+              f:allowPrivilegeEscalation: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/apiserver.local.config/certificates"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+              k:{"mountPath":"/tmp/k8s-webhook-server/serving-certs"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+          k:{"name":"kube-rbac-proxy"}:
+            .: {}
+            f:args: {}
+            f:env:
+              .: {}
+              k:{"name":"OPERATOR_CONDITION_NAME"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:name: {}
+            f:ports:
+              .: {}
+              k:{"containerPort":8443,"protocol":"TCP"}:
+                .: {}
+                f:containerPort: {}
+                f:name: {}
+                f:protocol: {}
+            f:resources:
+              .: {}
+              f:limits:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/apiserver.local.config/certificates"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+              k:{"mountPath":"/tmp/k8s-webhook-server/serving-certs"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+        f:dnsPolicy: {}
+        f:enableServiceLinks: {}
+        f:restartPolicy: {}
+        f:schedulerName: {}
+        f:securityContext:
+          .: {}
+          f:runAsNonRoot: {}
+        f:serviceAccount: {}
+        f:serviceAccountName: {}
+        f:terminationGracePeriodSeconds: {}
+        f:volumes:
+          .: {}
+          k:{"name":"apiservice-cert"}:
+            .: {}
+            f:name: {}
+            f:secret:
+              .: {}
+              f:defaultMode: {}
+              f:items: {}
+              f:secretName: {}
+          k:{"name":"cert"}:
+            .: {}
+            f:name: {}
+            f:secret:
+              .: {}
+              f:defaultMode: {}
+              f:secretName: {}
+          k:{"name":"webhook-cert"}:
+            .: {}
+            f:name: {}
+            f:secret:
+              .: {}
+              f:defaultMode: {}
+              f:items: {}
+              f:secretName: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2024-06-05T10:44:56Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.v1.cni.cncf.io/network-status: {}
+    manager: multus-daemon
+    operation: Update
+    subresource: status
+    time: "2024-06-05T10:44:58Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"ContainersReady"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Initialized"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Ready"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+        f:containerStatuses: {}
+        f:hostIP: {}
+        f:phase: {}
+        f:podIP: {}
+        f:podIPs:
+          .: {}
+          k:{"ip":"10.128.2.14"}:
+            .: {}
+            f:ip: {}
+        f:startTime: {}
+    manager: kubelet
+    operation: Update
+    subresource: status
+    time: "2024-06-05T10:45:16Z"
+  name: jaeger-operator-5655cc79c-rcsh4
+  namespace: openshift-operators
+  ownerReferences:
+  - apiVersion: apps/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: ReplicaSet
+    name: jaeger-operator-5655cc79c
+    uid: 30586e2e-6f73-4659-aa0f-43063682258f
+  resourceVersion: "34299"
+  uid: 4a62e50e-9718-4cf3-800d-26dad341d994
+spec:
+  containers:
+  - args:
+    - start
+    - --health-probe-bind-address=:8081
+    - --leader-elect
+    - --platform=openshift
+    - --openshift-oauth-proxy-imagestream-ns=openshift
+    - --openshift-oauth-proxy-imagestream-name=oauth-proxy
+    - --documentation-url=https://access.redhat.com/documentation/en-us/openshift_container_platform/4.14/html/distributed_tracing/index
+    env:
+    - name: WATCH_NAMESPACE
+      valueFrom:
+        fieldRef:
+          apiVersion: v1
+          fieldPath: metadata.annotations['olm.targetNamespaces']
+    - name: POD_NAMESPACE
+      valueFrom:
+        fieldRef:
+          apiVersion: v1
+          fieldPath: metadata.namespace
+    - name: OPERATOR_NAME
+      value: jaeger-operator
+    - name: LOG-LEVEL
+      value: DEBUG
+    - name: KAFKA-PROVISIONING-MINIMAL
+      value: "true"
+    - name: RELATED_IMAGE_JAEGER_AGENT
+      value: registry.redhat.io/rhosdt/jaeger-agent-rhel8@sha256:5783e9fd32d80d78ed8b6842eb6362b730b13f2ff098cf305e8887dd22e13477
+    - name: RELATED_IMAGE_JAEGER_QUERY
+      value: registry.redhat.io/rhosdt/jaeger-query-rhel8@sha256:95615560040a62e07fac86b347b68d9b5b449f293184e87c260e4edc00f918b4
+    - name: RELATED_IMAGE_JAEGER_COLLECTOR
+      value: registry.redhat.io/rhosdt/jaeger-collector-rhel8@sha256:c545b5167d63ae3e3ff7f16eed02b51172332e7b28ea4634ad7045f7cbe95f45
+    - name: RELATED_IMAGE_JAEGER_INGESTER
+      value: registry.redhat.io/rhosdt/jaeger-ingester-rhel8@sha256:d6c1f6133afac3376b8318c5f67e78b6f0434ec271ab7b4890e4c784af61cfb6
+    - name: RELATED_IMAGE_JAEGER_ALL_IN_ONE
+      value: registry.redhat.io/rhosdt/jaeger-all-in-one-rhel8@sha256:c166f01cff83b0c65c571abaf502d26defcf35c75ff9d0d9d95f895340b64db6
+    - name: RELATED_IMAGE_JAEGER_ES_INDEX_CLEANER
+      value: registry.redhat.io/rhosdt/jaeger-es-index-cleaner-rhel8@sha256:653b08f538b57d550cfe1c49acd65a6a807b0e511ce1f039dc7498a416e5ae6d
+    - name: RELATED_IMAGE_JAEGER_ES_ROLLOVER
+      value: registry.redhat.io/rhosdt/jaeger-es-rollover-rhel8@sha256:caa92aa8c84ecb5e1740a4d41bd4204f134a6a0e86d0f1888b9b0bd59f6d4614
+    - name: RELATED_IMAGE_OPENSHIFT_OAUTH_PROXY
+      value: registry.redhat.io/openshift4/ose-oauth-proxy@sha256:9dd175ddce0d481b120665bf15c5946fdc4111617e37401995e8292e865f6ebf
+    - name: RELATED_IMAGE_OSE_KUBE_RBAC_PROXY
+      value: registry.redhat.io/openshift4/ose-kube-rbac-proxy@sha256:6b33793126e32e75f4fa02dbb014eaa7458f36c70f316a7383171a02c38509f1
+    - name: POD_NAME
+      valueFrom:
+        fieldRef:
+          apiVersion: v1
+          fieldPath: metadata.name
+    - name: OPERATOR_CONDITION_NAME
+      value: jaeger-operator.v1.57.0-5
+    image: registry.redhat.io/rhosdt/jaeger-rhel8-operator@sha256:0d5bab1b26572942eef72f8068dcc1eb219b67896ddc216905c650724f3e45fa
+    imagePullPolicy: Always
+    livenessProbe:
+      failureThreshold: 3
+      httpGet:
+        path: /healthz
+        port: 8081
+        scheme: HTTP
+      initialDelaySeconds: 15
+      periodSeconds: 20
+      successThreshold: 1
+      timeoutSeconds: 1
+    name: jaeger-operator
+    ports:
+    - containerPort: 9443
+      name: webhook-server
+      protocol: TCP
+    - containerPort: 8383
+      name: http-metrics
+      protocol: TCP
+    readinessProbe:
+      failureThreshold: 3
+      httpGet:
+        path: /readyz
+        port: 8081
+        scheme: HTTP
+      initialDelaySeconds: 5
+      periodSeconds: 10
+      successThreshold: 1
+      timeoutSeconds: 1
+    resources:
+      requests:
+        cpu: 100m
+        memory: 128Mi
+    securityContext:
+      allowPrivilegeEscalation: false
+      capabilities:
+        drop:
+        - ALL
+      runAsUser: 1000420000
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /tmp/k8s-webhook-server/serving-certs
+      name: webhook-cert
+    - mountPath: /apiserver.local.config/certificates
+      name: apiservice-cert
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-4dt6f
+      readOnly: true
+  - args:
+    - --secure-listen-address=0.0.0.0:8443
+    - --upstream=http://127.0.0.1:8383/
+    - --logtostderr=true
+    - --v=0
+    env:
+    - name: OPERATOR_CONDITION_NAME
+      value: jaeger-operator.v1.57.0-5
+    image: registry.redhat.io/openshift4/ose-kube-rbac-proxy@sha256:6b33793126e32e75f4fa02dbb014eaa7458f36c70f316a7383171a02c38509f1
+    imagePullPolicy: IfNotPresent
+    name: kube-rbac-proxy
+    ports:
+    - containerPort: 8443
+      name: https
+      protocol: TCP
+    resources:
+      limits:
+        cpu: 500m
+        memory: 128Mi
+      requests:
+        cpu: 5m
+        memory: 64Mi
+    securityContext:
+      allowPrivilegeEscalation: false
+      capabilities:
+        drop:
+        - ALL
+      runAsUser: 1000420000
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /apiserver.local.config/certificates
+      name: apiservice-cert
+    - mountPath: /tmp/k8s-webhook-server/serving-certs
+      name: webhook-cert
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-4dt6f
+      readOnly: true
+  dnsPolicy: ClusterFirst
+  enableServiceLinks: true
+  imagePullSecrets:
+  - name: jaeger-operator-dockercfg-5dd5x
+  nodeName: ip-10-0-91-247.ec2.internal
+  preemptionPolicy: PreemptLowerPriority
+  priority: 0
+  restartPolicy: Always
+  schedulerName: default-scheduler
+  securityContext:
+    fsGroup: 1000420000
+    runAsNonRoot: true
+    seLinuxOptions:
+      level: s0:c21,c0
+    seccompProfile:
+      type: RuntimeDefault
+  serviceAccount: jaeger-operator
+  serviceAccountName: jaeger-operator
+  terminationGracePeriodSeconds: 10
+  tolerations:
+  - effect: NoExecute
+    key: node.kubernetes.io/not-ready
+    operator: Exists
+    tolerationSeconds: 300
+  - effect: NoExecute
+    key: node.kubernetes.io/unreachable
+    operator: Exists
+    tolerationSeconds: 300
+  - effect: NoSchedule
+    key: node.kubernetes.io/memory-pressure
+    operator: Exists
+  volumes:
+  - name: cert
+    secret:
+      defaultMode: 420
+      secretName: jaeger-operator-service-cert
+  - name: apiservice-cert
+    secret:
+      defaultMode: 420
+      items:
+      - key: tls.crt
+        path: apiserver.crt
+      - key: tls.key
+        path: apiserver.key
+      secretName: jaeger-operator-service-cert
+  - name: webhook-cert
+    secret:
+      defaultMode: 420
+      items:
+      - key: tls.crt
+        path: tls.crt
+      - key: tls.key
+        path: tls.key
+      secretName: jaeger-operator-service-cert
+  - name: kube-api-access-4dt6f
+    projected:
+      defaultMode: 420
+      sources:
+      - serviceAccountToken:
+          expirationSeconds: 3607
+          path: token
+      - configMap:
+          items:
+          - key: ca.crt
+            path: ca.crt
+          name: kube-root-ca.crt
+      - downwardAPI:
+          items:
+          - fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.namespace
+            path: namespace
+      - configMap:
+          items:
+          - key: service-ca.crt
+            path: service-ca.crt
+          name: openshift-service-ca.crt
+status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2024-06-05T10:44:56Z"
+    status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2024-06-05T10:45:16Z"
+    status: "True"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2024-06-05T10:45:16Z"
+    status: "True"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2024-06-05T10:44:56Z"
+    status: "True"
+    type: PodScheduled
+  containerStatuses:
+  - containerID: cri-o://244acc2edcab13a9d67e7408fe3797a4efbed7ab4684dfca89a36af249d2675b
+    image: registry.redhat.io/rhosdt/jaeger-rhel8-operator@sha256:0d5bab1b26572942eef72f8068dcc1eb219b67896ddc216905c650724f3e45fa
+    imageID: registry.redhat.io/rhosdt/jaeger-rhel8-operator@sha256:0d5bab1b26572942eef72f8068dcc1eb219b67896ddc216905c650724f3e45fa
+    lastState: {}
+    name: jaeger-operator
+    ready: true
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2024-06-05T10:45:05Z"
+  - containerID: cri-o://b610157470717183b892aacfaf4d774befdd456aac044d6b82ce469c1b538416
+    image: registry.redhat.io/openshift4/ose-kube-rbac-proxy@sha256:6b33793126e32e75f4fa02dbb014eaa7458f36c70f316a7383171a02c38509f1
+    imageID: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:6b33793126e32e75f4fa02dbb014eaa7458f36c70f316a7383171a02c38509f1
+    lastState: {}
+    name: kube-rbac-proxy
+    ready: true
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2024-06-05T10:45:15Z"
+  hostIP: 10.0.91.247
+  phase: Running
+  podIP: 10.128.2.14
+  podIPs:
+  - ip: 10.128.2.14
+  qosClass: Burstable
+  startTime: "2024-06-05T10:44:56Z"

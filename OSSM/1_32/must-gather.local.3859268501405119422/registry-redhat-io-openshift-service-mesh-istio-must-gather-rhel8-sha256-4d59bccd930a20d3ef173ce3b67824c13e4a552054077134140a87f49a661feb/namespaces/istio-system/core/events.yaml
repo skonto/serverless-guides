@@ -1,0 +1,1420 @@
+---
+apiVersion: v1
+items:
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-06-05T10:45:37Z"
+  involvedObject:
+    apiVersion: maistra.io/v2
+    kind: ServiceMeshControlPlane
+    name: basic
+    namespace: istio-system
+    resourceVersion: "34828"
+    uid: b5faf99f-8aeb-4477-aa3e-3f2e4796ec3c
+  kind: Event
+  lastTimestamp: "2024-06-05T10:45:37Z"
+  message: Installing mesh generation 2
+  metadata:
+    creationTimestamp: "2024-06-05T10:45:37Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: istio-operator
+      operation: Update
+      time: "2024-06-05T10:45:37Z"
+    name: basic.17d615dad9de194e
+    namespace: istio-system
+    resourceVersion: "34829"
+    uid: d36c07ab-d7a6-49e3-94bd-7bf3a538fca7
+  reason: Installing
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: servicemeshcontrolplane-controller
+  type: Normal
+- apiVersion: v1
+  count: 10
+  eventTime: null
+  firstTimestamp: "2024-06-05T10:45:44Z"
+  involvedObject:
+    apiVersion: maistra.io/v2
+    kind: ServiceMeshControlPlane
+    name: basic
+    namespace: istio-system
+    resourceVersion: "35092"
+    uid: b5faf99f-8aeb-4477-aa3e-3f2e4796ec3c
+  kind: Event
+  lastTimestamp: "2024-06-05T10:45:53Z"
+  message: 'Paused until the following components become ready: [istio-discovery]'
+  metadata:
+    creationTimestamp: "2024-06-05T10:45:44Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: istio-operator
+      operation: Update
+      time: "2024-06-05T10:45:53Z"
+    name: basic.17d615dc6df570df
+    namespace: istio-system
+    resourceVersion: "35295"
+    uid: 3c30ca71-fca8-444b-ab4a-dce3ae7d61d7
+  reason: PausingInstall
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: servicemeshcontrolplane-controller
+  type: Normal
+- apiVersion: v1
+  count: 2
+  eventTime: null
+  firstTimestamp: "2024-06-05T10:45:58Z"
+  involvedObject:
+    apiVersion: maistra.io/v2
+    kind: ServiceMeshControlPlane
+    name: basic
+    namespace: istio-system
+    resourceVersion: "35402"
+    uid: b5faf99f-8aeb-4477-aa3e-3f2e4796ec3c
+  kind: Event
+  lastTimestamp: "2024-06-05T10:45:58Z"
+  message: 'Paused until the following components become ready: [istio-egress istio-ingress]'
+  metadata:
+    creationTimestamp: "2024-06-05T10:45:58Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: istio-operator
+      operation: Update
+      time: "2024-06-05T10:45:58Z"
+    name: basic.17d615dfb2ab1acd
+    namespace: istio-system
+    resourceVersion: "35439"
+    uid: f8c48825-8fed-49f4-ae28-3bca3babbb65
+  reason: PausingInstall
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: servicemeshcontrolplane-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-06-05T10:46:08Z"
+  involvedObject:
+    apiVersion: maistra.io/v2
+    kind: ServiceMeshControlPlane
+    name: basic
+    namespace: istio-system
+    resourceVersion: "35438"
+    uid: b5faf99f-8aeb-4477-aa3e-3f2e4796ec3c
+  kind: Event
+  lastTimestamp: "2024-06-05T10:46:08Z"
+  message: 'Paused until the following components become ready: [istio-ingress]'
+  metadata:
+    creationTimestamp: "2024-06-05T10:46:08Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: istio-operator
+      operation: Update
+      time: "2024-06-05T10:46:08Z"
+    name: basic.17d615e20d20f0c8
+    namespace: istio-system
+    resourceVersion: "35563"
+    uid: 82a0c0db-a2d7-4089-81bc-550c2fdae1dd
+  reason: PausingInstall
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: servicemeshcontrolplane-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-06-05T10:46:08Z"
+  involvedObject:
+    apiVersion: maistra.io/v2
+    kind: ServiceMeshControlPlane
+    name: basic
+    namespace: istio-system
+    resourceVersion: "35438"
+    uid: b5faf99f-8aeb-4477-aa3e-3f2e4796ec3c
+  kind: Event
+  lastTimestamp: "2024-06-05T10:46:08Z"
+  message: Pruning obsolete resources
+  metadata:
+    creationTimestamp: "2024-06-05T10:46:08Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: istio-operator
+      operation: Update
+      time: "2024-06-05T10:46:08Z"
+    name: basic.17d615e20f6eef27
+    namespace: istio-system
+    resourceVersion: "35567"
+    uid: 62175abc-e532-465f-a895-442ddc84fce0
+  reason: Pruning
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: servicemeshcontrolplane-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-06-05T10:46:08Z"
+  involvedObject:
+    apiVersion: maistra.io/v2
+    kind: ServiceMeshControlPlane
+    name: basic
+    namespace: istio-system
+    resourceVersion: "35438"
+    uid: b5faf99f-8aeb-4477-aa3e-3f2e4796ec3c
+  kind: Event
+  lastTimestamp: "2024-06-05T10:46:08Z"
+  message: Successfully installed version 2.5.1-1-2
+  metadata:
+    creationTimestamp: "2024-06-05T10:46:08Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: istio-operator
+      operation: Update
+      time: "2024-06-05T10:46:08Z"
+    name: basic.17d615e22220b0fc
+    namespace: istio-system
+    resourceVersion: "35570"
+    uid: 585a9763-ee88-4455-969a-74758621c041
+  reason: Installed
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: servicemeshcontrolplane-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-06-05T10:46:08Z"
+  involvedObject:
+    apiVersion: maistra.io/v2
+    kind: ServiceMeshControlPlane
+    name: basic
+    namespace: istio-system
+    resourceVersion: "35438"
+    uid: b5faf99f-8aeb-4477-aa3e-3f2e4796ec3c
+  kind: Event
+  lastTimestamp: "2024-06-05T10:46:08Z"
+  message: All component deployments are Available
+  metadata:
+    creationTimestamp: "2024-06-05T10:46:08Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: istio-operator
+      operation: Update
+      time: "2024-06-05T10:46:08Z"
+    name: basic.17d615e222234cc5
+    namespace: istio-system
+    resourceVersion: "35571"
+    uid: 7250acf1-ca87-4a41-adeb-1e8d31f3b97e
+  reason: Ready
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: servicemeshcontrolplane-controller
+  type: Normal
+- action: Binding
+  apiVersion: v1
+  eventTime: "2024-06-05T10:45:56.363263Z"
+  firstTimestamp: null
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: istio-egressgateway-856fbd6dfc-t5xwv
+    namespace: istio-system
+    resourceVersion: "35390"
+    uid: 54f1e3c0-082f-44d1-b785-5487f51a882a
+  kind: Event
+  lastTimestamp: null
+  message: Successfully assigned istio-system/istio-egressgateway-856fbd6dfc-t5xwv
+    to ip-10-0-91-247.ec2.internal
+  metadata:
+    creationTimestamp: "2024-06-05T10:45:56Z"
+    managedFields:
+    - apiVersion: events.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:action: {}
+        f:eventTime: {}
+        f:note: {}
+        f:reason: {}
+        f:regarding: {}
+        f:reportingController: {}
+        f:reportingInstance: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2024-06-05T10:45:56Z"
+    name: istio-egressgateway-856fbd6dfc-t5xwv.17d615df38ccf3d5
+    namespace: istio-system
+    resourceVersion: "35396"
+    uid: 6839a45c-6429-4b23-b87d-55412c728d87
+  reason: Scheduled
+  reportingComponent: default-scheduler
+  reportingInstance: default-scheduler-ip-10-0-116-204
+  source: {}
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-06-05T10:45:56Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: istio-egressgateway-856fbd6dfc-t5xwv
+    namespace: istio-system
+    resourceVersion: "35404"
+    uid: 54f1e3c0-082f-44d1-b785-5487f51a882a
+  kind: Event
+  lastTimestamp: "2024-06-05T10:45:56Z"
+  message: Add eth0 [10.128.2.21/23] from ovn-kubernetes
+  metadata:
+    creationTimestamp: "2024-06-05T10:45:56Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: multus-daemon
+      operation: Update
+      time: "2024-06-05T10:45:56Z"
+    name: istio-egressgateway-856fbd6dfc-t5xwv.17d615df5b58f45e
+    namespace: istio-system
+    resourceVersion: "35416"
+    uid: a1c1b2ce-35ad-4300-aae7-22cc69fb94cd
+  reason: AddedInterface
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: multus
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-06-05T10:45:56Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{istio-proxy}
+    kind: Pod
+    name: istio-egressgateway-856fbd6dfc-t5xwv
+    namespace: istio-system
+    resourceVersion: "35393"
+    uid: 54f1e3c0-082f-44d1-b785-5487f51a882a
+  kind: Event
+  lastTimestamp: "2024-06-05T10:45:56Z"
+  message: Pulling image "registry.redhat.io/openshift-service-mesh/proxyv2-rhel8@sha256:186619a888331a58729e27e67fbcee236875c1998b6714565238db53e9a1f8bd"
+  metadata:
+    creationTimestamp: "2024-06-05T10:45:56Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-06-05T10:45:56Z"
+    name: istio-egressgateway-856fbd6dfc-t5xwv.17d615df5e27c0be
+    namespace: istio-system
+    resourceVersion: "35419"
+    uid: 52947c20-9905-480a-a859-c1f9d810befe
+  reason: Pulling
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-91-247.ec2.internal
+  source:
+    component: kubelet
+    host: ip-10-0-91-247.ec2.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-06-05T10:46:06Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{istio-proxy}
+    kind: Pod
+    name: istio-egressgateway-856fbd6dfc-t5xwv
+    namespace: istio-system
+    resourceVersion: "35393"
+    uid: 54f1e3c0-082f-44d1-b785-5487f51a882a
+  kind: Event
+  lastTimestamp: "2024-06-05T10:46:06Z"
+  message: Successfully pulled image "registry.redhat.io/openshift-service-mesh/proxyv2-rhel8@sha256:186619a888331a58729e27e67fbcee236875c1998b6714565238db53e9a1f8bd"
+    in 9.993s (9.993s including waiting)
+  metadata:
+    creationTimestamp: "2024-06-05T10:46:06Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-06-05T10:46:06Z"
+    name: istio-egressgateway-856fbd6dfc-t5xwv.17d615e1b1cdd5f8
+    namespace: istio-system
+    resourceVersion: "35527"
+    uid: c750f3a9-018e-4065-8339-bbb7f76c24d7
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-91-247.ec2.internal
+  source:
+    component: kubelet
+    host: ip-10-0-91-247.ec2.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-06-05T10:46:07Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{istio-proxy}
+    kind: Pod
+    name: istio-egressgateway-856fbd6dfc-t5xwv
+    namespace: istio-system
+    resourceVersion: "35393"
+    uid: 54f1e3c0-082f-44d1-b785-5487f51a882a
+  kind: Event
+  lastTimestamp: "2024-06-05T10:46:07Z"
+  message: Created container istio-proxy
+  metadata:
+    creationTimestamp: "2024-06-05T10:46:07Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-06-05T10:46:07Z"
+    name: istio-egressgateway-856fbd6dfc-t5xwv.17d615e1b86128e4
+    namespace: istio-system
+    resourceVersion: "35532"
+    uid: 783906f4-ea39-4eb0-be59-e9687c0296e8
+  reason: Created
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-91-247.ec2.internal
+  source:
+    component: kubelet
+    host: ip-10-0-91-247.ec2.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-06-05T10:46:07Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{istio-proxy}
+    kind: Pod
+    name: istio-egressgateway-856fbd6dfc-t5xwv
+    namespace: istio-system
+    resourceVersion: "35393"
+    uid: 54f1e3c0-082f-44d1-b785-5487f51a882a
+  kind: Event
+  lastTimestamp: "2024-06-05T10:46:07Z"
+  message: Started container istio-proxy
+  metadata:
+    creationTimestamp: "2024-06-05T10:46:07Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-06-05T10:46:07Z"
+    name: istio-egressgateway-856fbd6dfc-t5xwv.17d615e1b983a60d
+    namespace: istio-system
+    resourceVersion: "35535"
+    uid: d24e73c3-5872-4ccd-8ff6-e2a35ed90d3c
+  reason: Started
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-91-247.ec2.internal
+  source:
+    component: kubelet
+    host: ip-10-0-91-247.ec2.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-06-05T10:45:56Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: ReplicaSet
+    name: istio-egressgateway-856fbd6dfc
+    namespace: istio-system
+    resourceVersion: "35387"
+    uid: f91b0f81-210e-4253-8d6d-24653120d777
+  kind: Event
+  lastTimestamp: "2024-06-05T10:45:56Z"
+  message: 'Created pod: istio-egressgateway-856fbd6dfc-t5xwv'
+  metadata:
+    creationTimestamp: "2024-06-05T10:45:56Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2024-06-05T10:45:56Z"
+    name: istio-egressgateway-856fbd6dfc.17d615df38233a30
+    namespace: istio-system
+    resourceVersion: "35392"
+    uid: 2340f99d-60b6-4f96-9696-b409c368ed90
+  reason: SuccessfulCreate
+  reportingComponent: replicaset-controller
+  reportingInstance: ""
+  source:
+    component: replicaset-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-06-05T10:45:56Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: istio-egressgateway
+    namespace: istio-system
+    resourceVersion: "35386"
+    uid: 154da676-1508-4db8-81c0-25348c740104
+  kind: Event
+  lastTimestamp: "2024-06-05T10:45:56Z"
+  message: Scaled up replica set istio-egressgateway-856fbd6dfc to 1
+  metadata:
+    creationTimestamp: "2024-06-05T10:45:56Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2024-06-05T10:45:56Z"
+    name: istio-egressgateway.17d615df36ef9eda
+    namespace: istio-system
+    resourceVersion: "35388"
+    uid: 6b3b62ab-207b-4659-aaaf-7f937e6258a8
+  reason: ScalingReplicaSet
+  reportingComponent: deployment-controller
+  reportingInstance: ""
+  source:
+    component: deployment-controller
+  type: Normal
+- action: Binding
+  apiVersion: v1
+  eventTime: "2024-06-05T10:45:56.167152Z"
+  firstTimestamp: null
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: istio-ingressgateway-7b6954747-qqhbw
+    namespace: istio-system
+    resourceVersion: "35361"
+    uid: 6a9cc9ad-827f-4fc4-acff-64a86db77330
+  kind: Event
+  lastTimestamp: null
+  message: Successfully assigned istio-system/istio-ingressgateway-7b6954747-qqhbw
+    to ip-10-0-91-247.ec2.internal
+  metadata:
+    creationTimestamp: "2024-06-05T10:45:56Z"
+    managedFields:
+    - apiVersion: events.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:action: {}
+        f:eventTime: {}
+        f:note: {}
+        f:reason: {}
+        f:regarding: {}
+        f:reportingController: {}
+        f:reportingInstance: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2024-06-05T10:45:56Z"
+    name: istio-ingressgateway-7b6954747-qqhbw.17d615df2d1ca7f8
+    namespace: istio-system
+    resourceVersion: "35370"
+    uid: 25e40f7e-75c1-438b-b0fd-1249b83f362e
+  reason: Scheduled
+  reportingComponent: default-scheduler
+  reportingInstance: default-scheduler-ip-10-0-116-204
+  source: {}
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-06-05T10:45:56Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: istio-ingressgateway-7b6954747-qqhbw
+    namespace: istio-system
+    resourceVersion: "35376"
+    uid: 6a9cc9ad-827f-4fc4-acff-64a86db77330
+  kind: Event
+  lastTimestamp: "2024-06-05T10:45:56Z"
+  message: Add eth0 [10.128.2.20/23] from ovn-kubernetes
+  metadata:
+    creationTimestamp: "2024-06-05T10:45:56Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: multus-daemon
+      operation: Update
+      time: "2024-06-05T10:45:56Z"
+    name: istio-ingressgateway-7b6954747-qqhbw.17d615df570bee44
+    namespace: istio-system
+    resourceVersion: "35411"
+    uid: c5d9848c-0e55-4ca6-814c-1166ade1f0bc
+  reason: AddedInterface
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: multus
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-06-05T10:45:56Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{istio-proxy}
+    kind: Pod
+    name: istio-ingressgateway-7b6954747-qqhbw
+    namespace: istio-system
+    resourceVersion: "35364"
+    uid: 6a9cc9ad-827f-4fc4-acff-64a86db77330
+  kind: Event
+  lastTimestamp: "2024-06-05T10:45:56Z"
+  message: Pulling image "registry.redhat.io/openshift-service-mesh/proxyv2-rhel8@sha256:186619a888331a58729e27e67fbcee236875c1998b6714565238db53e9a1f8bd"
+  metadata:
+    creationTimestamp: "2024-06-05T10:45:56Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-06-05T10:45:56Z"
+    name: istio-ingressgateway-7b6954747-qqhbw.17d615df5a9594a5
+    namespace: istio-system
+    resourceVersion: "35414"
+    uid: 4f999994-9cc3-4583-901e-69163b45327b
+  reason: Pulling
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-91-247.ec2.internal
+  source:
+    component: kubelet
+    host: ip-10-0-91-247.ec2.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-06-05T10:46:06Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{istio-proxy}
+    kind: Pod
+    name: istio-ingressgateway-7b6954747-qqhbw
+    namespace: istio-system
+    resourceVersion: "35364"
+    uid: 6a9cc9ad-827f-4fc4-acff-64a86db77330
+  kind: Event
+  lastTimestamp: "2024-06-05T10:46:06Z"
+  message: Successfully pulled image "registry.redhat.io/openshift-service-mesh/proxyv2-rhel8@sha256:186619a888331a58729e27e67fbcee236875c1998b6714565238db53e9a1f8bd"
+    in 10.06s (10.06s including waiting)
+  metadata:
+    creationTimestamp: "2024-06-05T10:46:06Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-06-05T10:46:06Z"
+    name: istio-ingressgateway-7b6954747-qqhbw.17d615e1b23dbc67
+    namespace: istio-system
+    resourceVersion: "35529"
+    uid: 2589b41b-1489-44c5-a2be-46b417956796
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-91-247.ec2.internal
+  source:
+    component: kubelet
+    host: ip-10-0-91-247.ec2.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-06-05T10:46:07Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{istio-proxy}
+    kind: Pod
+    name: istio-ingressgateway-7b6954747-qqhbw
+    namespace: istio-system
+    resourceVersion: "35364"
+    uid: 6a9cc9ad-827f-4fc4-acff-64a86db77330
+  kind: Event
+  lastTimestamp: "2024-06-05T10:46:07Z"
+  message: Created container istio-proxy
+  metadata:
+    creationTimestamp: "2024-06-05T10:46:07Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-06-05T10:46:07Z"
+    name: istio-ingressgateway-7b6954747-qqhbw.17d615e1b86e2e8d
+    namespace: istio-system
+    resourceVersion: "35533"
+    uid: f5d180ef-8360-4d86-bfbe-02f7c6f3fb20
+  reason: Created
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-91-247.ec2.internal
+  source:
+    component: kubelet
+    host: ip-10-0-91-247.ec2.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-06-05T10:46:07Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{istio-proxy}
+    kind: Pod
+    name: istio-ingressgateway-7b6954747-qqhbw
+    namespace: istio-system
+    resourceVersion: "35364"
+    uid: 6a9cc9ad-827f-4fc4-acff-64a86db77330
+  kind: Event
+  lastTimestamp: "2024-06-05T10:46:07Z"
+  message: Started container istio-proxy
+  metadata:
+    creationTimestamp: "2024-06-05T10:46:07Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-06-05T10:46:07Z"
+    name: istio-ingressgateway-7b6954747-qqhbw.17d615e1b97d2770
+    namespace: istio-system
+    resourceVersion: "35534"
+    uid: 60fe17ec-c20a-4668-8c8a-c7abdc155ce5
+  reason: Started
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-91-247.ec2.internal
+  source:
+    component: kubelet
+    host: ip-10-0-91-247.ec2.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-06-05T10:45:56Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: ReplicaSet
+    name: istio-ingressgateway-7b6954747
+    namespace: istio-system
+    resourceVersion: "35357"
+    uid: a24fad32-1d14-4cb1-a6f1-490e3811f489
+  kind: Event
+  lastTimestamp: "2024-06-05T10:45:56Z"
+  message: 'Created pod: istio-ingressgateway-7b6954747-qqhbw'
+  metadata:
+    creationTimestamp: "2024-06-05T10:45:56Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2024-06-05T10:45:56Z"
+    name: istio-ingressgateway-7b6954747.17d615df2c4a82ff
+    namespace: istio-system
+    resourceVersion: "35365"
+    uid: 5c564f92-5c9c-4778-bc21-ee9ced467ea2
+  reason: SuccessfulCreate
+  reportingComponent: replicaset-controller
+  reportingInstance: ""
+  source:
+    component: replicaset-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-06-05T10:45:56Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: istio-ingressgateway
+    namespace: istio-system
+    resourceVersion: "35355"
+    uid: 2939c602-b1f1-4782-9f67-e6691f2a44ce
+  kind: Event
+  lastTimestamp: "2024-06-05T10:45:56Z"
+  message: Scaled up replica set istio-ingressgateway-7b6954747 to 1
+  metadata:
+    creationTimestamp: "2024-06-05T10:45:56Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2024-06-05T10:45:56Z"
+    name: istio-ingressgateway.17d615df29ddd10d
+    namespace: istio-system
+    resourceVersion: "35359"
+    uid: 10ac9c27-16a9-46a5-ab7f-df86dc68bd21
+  reason: ScalingReplicaSet
+  reportingComponent: deployment-controller
+  reportingInstance: ""
+  source:
+    component: deployment-controller
+  type: Normal
+- action: Binding
+  apiVersion: v1
+  eventTime: "2024-06-05T10:45:40.716318Z"
+  firstTimestamp: null
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: istiod-basic-d6d4fdc9f-wczvv
+    namespace: istio-system
+    resourceVersion: "35053"
+    uid: 26be2c16-319d-488c-a8bd-d7982888b795
+  kind: Event
+  lastTimestamp: null
+  message: Successfully assigned istio-system/istiod-basic-d6d4fdc9f-wczvv to ip-10-0-91-247.ec2.internal
+  metadata:
+    creationTimestamp: "2024-06-05T10:45:40Z"
+    managedFields:
+    - apiVersion: events.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:action: {}
+        f:eventTime: {}
+        f:note: {}
+        f:reason: {}
+        f:regarding: {}
+        f:reportingController: {}
+        f:reportingInstance: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2024-06-05T10:45:40Z"
+    name: istiod-basic-d6d4fdc9f-wczvv.17d615db942b8e70
+    namespace: istio-system
+    resourceVersion: "35057"
+    uid: c39c94e7-09a8-485c-961e-b0b98377a698
+  reason: Scheduled
+  reportingComponent: default-scheduler
+  reportingInstance: default-scheduler-ip-10-0-116-204
+  source: {}
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-06-05T10:45:41Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: istiod-basic-d6d4fdc9f-wczvv
+    namespace: istio-system
+    resourceVersion: "35064"
+    uid: 26be2c16-319d-488c-a8bd-d7982888b795
+  kind: Event
+  lastTimestamp: "2024-06-05T10:45:41Z"
+  message: Add eth0 [10.128.2.19/23] from ovn-kubernetes
+  metadata:
+    creationTimestamp: "2024-06-05T10:45:41Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: multus-daemon
+      operation: Update
+      time: "2024-06-05T10:45:41Z"
+    name: istiod-basic-d6d4fdc9f-wczvv.17d615dbbf0053eb
+    namespace: istio-system
+    resourceVersion: "35078"
+    uid: 9f69289f-14e8-4e24-b8e9-4d3db676d2d8
+  reason: AddedInterface
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: multus
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-06-05T10:45:41Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{discovery}
+    kind: Pod
+    name: istiod-basic-d6d4fdc9f-wczvv
+    namespace: istio-system
+    resourceVersion: "35054"
+    uid: 26be2c16-319d-488c-a8bd-d7982888b795
+  kind: Event
+  lastTimestamp: "2024-06-05T10:45:41Z"
+  message: Pulling image "registry.redhat.io/openshift-service-mesh/pilot-rhel8@sha256:1a8882f482044b38e6d75e322db6d6b80d21525f56fdd08f7f2ee9a58897e742"
+  metadata:
+    creationTimestamp: "2024-06-05T10:45:41Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-06-05T10:45:41Z"
+    name: istiod-basic-d6d4fdc9f-wczvv.17d615dbc15872e6
+    namespace: istio-system
+    resourceVersion: "35081"
+    uid: eae8bed2-d54e-4952-a6a5-1c90a7d9c692
+  reason: Pulling
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-91-247.ec2.internal
+  source:
+    component: kubelet
+    host: ip-10-0-91-247.ec2.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-06-05T10:45:51Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{discovery}
+    kind: Pod
+    name: istiod-basic-d6d4fdc9f-wczvv
+    namespace: istio-system
+    resourceVersion: "35054"
+    uid: 26be2c16-319d-488c-a8bd-d7982888b795
+  kind: Event
+  lastTimestamp: "2024-06-05T10:45:51Z"
+  message: Successfully pulled image "registry.redhat.io/openshift-service-mesh/pilot-rhel8@sha256:1a8882f482044b38e6d75e322db6d6b80d21525f56fdd08f7f2ee9a58897e742"
+    in 10.278s (10.278s including waiting)
+  metadata:
+    creationTimestamp: "2024-06-05T10:45:51Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-06-05T10:45:51Z"
+    name: istiod-basic-d6d4fdc9f-wczvv.17d615de25fc5691
+    namespace: istio-system
+    resourceVersion: "35255"
+    uid: 08e3914b-7a97-423a-87fc-004af7be7d98
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-91-247.ec2.internal
+  source:
+    component: kubelet
+    host: ip-10-0-91-247.ec2.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-06-05T10:45:51Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{discovery}
+    kind: Pod
+    name: istiod-basic-d6d4fdc9f-wczvv
+    namespace: istio-system
+    resourceVersion: "35054"
+    uid: 26be2c16-319d-488c-a8bd-d7982888b795
+  kind: Event
+  lastTimestamp: "2024-06-05T10:45:51Z"
+  message: Created container discovery
+  metadata:
+    creationTimestamp: "2024-06-05T10:45:51Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-06-05T10:45:51Z"
+    name: istiod-basic-d6d4fdc9f-wczvv.17d615de3367c983
+    namespace: istio-system
+    resourceVersion: "35258"
+    uid: 0231e7cc-0446-449d-8d68-25c1d4571bc4
+  reason: Created
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-91-247.ec2.internal
+  source:
+    component: kubelet
+    host: ip-10-0-91-247.ec2.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-06-05T10:45:52Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{discovery}
+    kind: Pod
+    name: istiod-basic-d6d4fdc9f-wczvv
+    namespace: istio-system
+    resourceVersion: "35054"
+    uid: 26be2c16-319d-488c-a8bd-d7982888b795
+  kind: Event
+  lastTimestamp: "2024-06-05T10:45:52Z"
+  message: Started container discovery
+  metadata:
+    creationTimestamp: "2024-06-05T10:45:52Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-06-05T10:45:52Z"
+    name: istiod-basic-d6d4fdc9f-wczvv.17d615de35f23161
+    namespace: istio-system
+    resourceVersion: "35260"
+    uid: af02a011-833e-416d-b915-77ff144e8c52
+  reason: Started
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-91-247.ec2.internal
+  source:
+    component: kubelet
+    host: ip-10-0-91-247.ec2.internal
+  type: Normal
+- apiVersion: v1
+  count: 3
+  eventTime: null
+  firstTimestamp: "2024-06-05T10:45:52Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{discovery}
+    kind: Pod
+    name: istiod-basic-d6d4fdc9f-wczvv
+    namespace: istio-system
+    resourceVersion: "35054"
+    uid: 26be2c16-319d-488c-a8bd-d7982888b795
+  kind: Event
+  lastTimestamp: "2024-06-05T10:45:53Z"
+  message: 'Readiness probe failed: HTTP probe failed with statuscode: 503'
+  metadata:
+    creationTimestamp: "2024-06-05T10:45:52Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-06-05T10:45:53Z"
+    name: istiod-basic-d6d4fdc9f-wczvv.17d615de41feb667
+    namespace: istio-system
+    resourceVersion: "35288"
+    uid: c5b3470b-391b-4d5c-9bc8-b403ba64cecd
+  reason: Unhealthy
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-91-247.ec2.internal
+  source:
+    component: kubelet
+    host: ip-10-0-91-247.ec2.internal
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-06-05T10:45:40Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: ReplicaSet
+    name: istiod-basic-d6d4fdc9f
+    namespace: istio-system
+    resourceVersion: "35046"
+    uid: 57510479-575d-4911-aadb-453c12e25f67
+  kind: Event
+  lastTimestamp: "2024-06-05T10:45:40Z"
+  message: 'Created pod: istiod-basic-d6d4fdc9f-wczvv'
+  metadata:
+    creationTimestamp: "2024-06-05T10:45:40Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2024-06-05T10:45:40Z"
+    name: istiod-basic-d6d4fdc9f.17d615db93bad902
+    namespace: istio-system
+    resourceVersion: "35055"
+    uid: ee94d82f-d834-4173-8e18-cca8ea480ee5
+  reason: SuccessfulCreate
+  reportingComponent: replicaset-controller
+  reportingInstance: ""
+  source:
+    component: replicaset-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-06-05T10:45:40Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: istiod-basic
+    namespace: istio-system
+    resourceVersion: "35041"
+    uid: 68743491-be3a-4252-bf0f-ef7b9c7d033d
+  kind: Event
+  lastTimestamp: "2024-06-05T10:45:40Z"
+  message: Scaled up replica set istiod-basic-d6d4fdc9f to 1
+  metadata:
+    creationTimestamp: "2024-06-05T10:45:40Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2024-06-05T10:45:40Z"
+    name: istiod-basic.17d615db8d6b0350
+    namespace: istio-system
+    resourceVersion: "35052"
+    uid: 690b559a-0574-49c1-8847-38be19540feb
+  reason: ScalingReplicaSet
+  reportingComponent: deployment-controller
+  reportingInstance: ""
+  source:
+    component: deployment-controller
+  type: Normal
+kind: EventList
+metadata:
+  resourceVersion: "54668"

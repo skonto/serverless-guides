@@ -1,0 +1,182 @@
+---
+apiVersion: policy/v1
+items:
+- apiVersion: policy/v1
+  kind: PodDisruptionBudget
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"policy/v1","kind":"PodDisruptionBudget","metadata":{"labels":{"app.kubernetes.io/component":"activator","app.kubernetes.io/name":"knative-serving","app.kubernetes.io/version":"release-v1.11"},"name":"activator-pdb","namespace":"knative-serving","ownerReferences":[{"apiVersion":"operator.knative.dev/v1beta1","blockOwnerDeletion":true,"controller":true,"kind":"KnativeServing","name":"knative-serving","uid":"af223c8b-7d90-440e-8659-7268e406b26c"}]},"spec":{"minAvailable":1,"selector":{"matchLabels":{"app":"activator"}}}}
+      manifestival: new
+    creationTimestamp: "2024-06-05T10:55:55Z"
+    generation: 1
+    labels:
+      app.kubernetes.io/component: activator
+      app.kubernetes.io/name: knative-serving
+      app.kubernetes.io/version: release-v1.11
+    managedFields:
+    - apiVersion: policy/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:kubectl.kubernetes.io/last-applied-configuration: {}
+            f:manifestival: {}
+          f:labels:
+            .: {}
+            f:app.kubernetes.io/component: {}
+            f:app.kubernetes.io/name: {}
+            f:app.kubernetes.io/version: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"af223c8b-7d90-440e-8659-7268e406b26c"}: {}
+        f:spec:
+          f:minAvailable: {}
+          f:selector: {}
+      manager: manifestival
+      operation: Update
+      time: "2024-06-05T10:56:13Z"
+    - apiVersion: policy/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          f:conditions:
+            .: {}
+            k:{"type":"DisruptionAllowed"}:
+              .: {}
+              f:lastTransitionTime: {}
+              f:message: {}
+              f:observedGeneration: {}
+              f:reason: {}
+              f:status: {}
+              f:type: {}
+          f:currentHealthy: {}
+          f:desiredHealthy: {}
+          f:disruptionsAllowed: {}
+          f:expectedPods: {}
+          f:observedGeneration: {}
+      manager: kube-controller-manager
+      operation: Update
+      subresource: status
+      time: "2024-06-05T10:56:20Z"
+    name: activator-pdb
+    namespace: knative-serving
+    ownerReferences:
+    - apiVersion: operator.knative.dev/v1beta1
+      blockOwnerDeletion: true
+      controller: true
+      kind: KnativeServing
+      name: knative-serving
+      uid: af223c8b-7d90-440e-8659-7268e406b26c
+    resourceVersion: "42074"
+    uid: 312bef07-cf55-450a-a47f-d5e718346607
+  spec:
+    minAvailable: 1
+    selector:
+      matchLabels:
+        app: activator
+  status:
+    conditions:
+    - lastTransitionTime: "2024-06-05T10:56:20Z"
+      message: ""
+      observedGeneration: 1
+      reason: SufficientPods
+      status: "True"
+      type: DisruptionAllowed
+    currentHealthy: 2
+    desiredHealthy: 1
+    disruptionsAllowed: 1
+    expectedPods: 2
+    observedGeneration: 1
+- apiVersion: policy/v1
+  kind: PodDisruptionBudget
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"policy/v1","kind":"PodDisruptionBudget","metadata":{"labels":{"app.kubernetes.io/component":"webhook","app.kubernetes.io/name":"knative-serving","app.kubernetes.io/version":"release-v1.11"},"name":"webhook-pdb","namespace":"knative-serving","ownerReferences":[{"apiVersion":"operator.knative.dev/v1beta1","blockOwnerDeletion":true,"controller":true,"kind":"KnativeServing","name":"knative-serving","uid":"af223c8b-7d90-440e-8659-7268e406b26c"}]},"spec":{"minAvailable":1,"selector":{"matchLabels":{"app":"webhook"}}}}
+      manifestival: new
+    creationTimestamp: "2024-06-05T10:55:56Z"
+    generation: 1
+    labels:
+      app.kubernetes.io/component: webhook
+      app.kubernetes.io/name: knative-serving
+      app.kubernetes.io/version: release-v1.11
+    managedFields:
+    - apiVersion: policy/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          f:conditions:
+            .: {}
+            k:{"type":"DisruptionAllowed"}:
+              .: {}
+              f:lastTransitionTime: {}
+              f:message: {}
+              f:observedGeneration: {}
+              f:reason: {}
+              f:status: {}
+              f:type: {}
+          f:currentHealthy: {}
+          f:desiredHealthy: {}
+          f:disruptionsAllowed: {}
+          f:expectedPods: {}
+          f:observedGeneration: {}
+      manager: kube-controller-manager
+      operation: Update
+      subresource: status
+      time: "2024-06-05T10:56:14Z"
+    - apiVersion: policy/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:kubectl.kubernetes.io/last-applied-configuration: {}
+            f:manifestival: {}
+          f:labels:
+            .: {}
+            f:app.kubernetes.io/component: {}
+            f:app.kubernetes.io/name: {}
+            f:app.kubernetes.io/version: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"af223c8b-7d90-440e-8659-7268e406b26c"}: {}
+        f:spec:
+          f:minAvailable: {}
+          f:selector: {}
+      manager: manifestival
+      operation: Update
+      time: "2024-06-05T10:56:14Z"
+    name: webhook-pdb
+    namespace: knative-serving
+    ownerReferences:
+    - apiVersion: operator.knative.dev/v1beta1
+      blockOwnerDeletion: true
+      controller: true
+      kind: KnativeServing
+      name: knative-serving
+      uid: af223c8b-7d90-440e-8659-7268e406b26c
+    resourceVersion: "41944"
+    uid: 9c627680-9528-45ae-80cb-2969bdb0c2b7
+  spec:
+    minAvailable: 1
+    selector:
+      matchLabels:
+        app: webhook
+  status:
+    conditions:
+    - lastTransitionTime: "2024-06-05T10:56:14Z"
+      message: ""
+      observedGeneration: 1
+      reason: SufficientPods
+      status: "True"
+      type: DisruptionAllowed
+    currentHealthy: 2
+    desiredHealthy: 1
+    disruptionsAllowed: 1
+    expectedPods: 2
+    observedGeneration: 1
+kind: PodDisruptionBudgetList
+metadata:
+  resourceVersion: "54738"

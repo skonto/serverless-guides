@@ -1,0 +1,307 @@
+---
+apiVersion: monitoring.coreos.com/v1
+items:
+- apiVersion: monitoring.coreos.com/v1
+  kind: ServiceMonitor
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"monitoring.coreos.com/v1","kind":"ServiceMonitor","metadata":{"creationTimestamp":null,"name":"activator-sm","namespace":"knative-serving","ownerReferences":[{"apiVersion":"operator.knative.dev/v1beta1","blockOwnerDeletion":true,"controller":true,"kind":"KnativeServing","name":"knative-serving","uid":"af223c8b-7d90-440e-8659-7268e406b26c"}]},"spec":{"endpoints":[{"bearerTokenFile":"/var/run/secrets/kubernetes.io/serviceaccount/token","bearerTokenSecret":{"key":""},"port":"https","scheme":"https","tlsConfig":{"ca":{},"caFile":"/etc/prometheus/configmaps/serving-certs-ca-bundle/service-ca.crt","cert":{},"serverName":"activator-sm-service.knative-serving.svc"}}],"namespaceSelector":{"matchNames":["knative-serving"]},"selector":{"matchLabels":{"name":"activator-sm-service"}}}}
+      manifestival: new
+    creationTimestamp: "2024-06-05T10:55:58Z"
+    generation: 1
+    managedFields:
+    - apiVersion: monitoring.coreos.com/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:kubectl.kubernetes.io/last-applied-configuration: {}
+            f:manifestival: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"af223c8b-7d90-440e-8659-7268e406b26c"}: {}
+        f:spec:
+          .: {}
+          f:endpoints: {}
+          f:namespaceSelector:
+            .: {}
+            f:matchNames: {}
+          f:selector: {}
+      manager: manifestival
+      operation: Update
+      time: "2024-06-05T10:56:16Z"
+    name: activator-sm
+    namespace: knative-serving
+    ownerReferences:
+    - apiVersion: operator.knative.dev/v1beta1
+      blockOwnerDeletion: true
+      controller: true
+      kind: KnativeServing
+      name: knative-serving
+      uid: af223c8b-7d90-440e-8659-7268e406b26c
+    resourceVersion: "41973"
+    uid: 1da67d1d-799f-4331-9a7e-e25a28983412
+  spec:
+    endpoints:
+    - bearerTokenFile: /var/run/secrets/kubernetes.io/serviceaccount/token
+      bearerTokenSecret:
+        key: ""
+      port: https
+      scheme: https
+      tlsConfig:
+        ca: {}
+        caFile: /etc/prometheus/configmaps/serving-certs-ca-bundle/service-ca.crt
+        cert: {}
+        serverName: activator-sm-service.knative-serving.svc
+    namespaceSelector:
+      matchNames:
+      - knative-serving
+    selector:
+      matchLabels:
+        name: activator-sm-service
+- apiVersion: monitoring.coreos.com/v1
+  kind: ServiceMonitor
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"monitoring.coreos.com/v1","kind":"ServiceMonitor","metadata":{"creationTimestamp":null,"name":"autoscaler-hpa-sm","namespace":"knative-serving","ownerReferences":[{"apiVersion":"operator.knative.dev/v1beta1","blockOwnerDeletion":true,"controller":true,"kind":"KnativeServing","name":"knative-serving","uid":"af223c8b-7d90-440e-8659-7268e406b26c"}]},"spec":{"endpoints":[{"bearerTokenFile":"/var/run/secrets/kubernetes.io/serviceaccount/token","bearerTokenSecret":{"key":""},"port":"https","scheme":"https","tlsConfig":{"ca":{},"caFile":"/etc/prometheus/configmaps/serving-certs-ca-bundle/service-ca.crt","cert":{},"serverName":"autoscaler-hpa-sm-service.knative-serving.svc"}}],"namespaceSelector":{"matchNames":["knative-serving"]},"selector":{"matchLabels":{"name":"autoscaler-hpa-sm-service"}}}}
+      manifestival: new
+    creationTimestamp: "2024-06-05T10:55:58Z"
+    generation: 1
+    managedFields:
+    - apiVersion: monitoring.coreos.com/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:kubectl.kubernetes.io/last-applied-configuration: {}
+            f:manifestival: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"af223c8b-7d90-440e-8659-7268e406b26c"}: {}
+        f:spec:
+          .: {}
+          f:endpoints: {}
+          f:namespaceSelector:
+            .: {}
+            f:matchNames: {}
+          f:selector: {}
+      manager: manifestival
+      operation: Update
+      time: "2024-06-05T10:56:16Z"
+    name: autoscaler-hpa-sm
+    namespace: knative-serving
+    ownerReferences:
+    - apiVersion: operator.knative.dev/v1beta1
+      blockOwnerDeletion: true
+      controller: true
+      kind: KnativeServing
+      name: knative-serving
+      uid: af223c8b-7d90-440e-8659-7268e406b26c
+    resourceVersion: "41992"
+    uid: 5ebbe6f6-0efe-4033-ba88-27aef11591af
+  spec:
+    endpoints:
+    - bearerTokenFile: /var/run/secrets/kubernetes.io/serviceaccount/token
+      bearerTokenSecret:
+        key: ""
+      port: https
+      scheme: https
+      tlsConfig:
+        ca: {}
+        caFile: /etc/prometheus/configmaps/serving-certs-ca-bundle/service-ca.crt
+        cert: {}
+        serverName: autoscaler-hpa-sm-service.knative-serving.svc
+    namespaceSelector:
+      matchNames:
+      - knative-serving
+    selector:
+      matchLabels:
+        name: autoscaler-hpa-sm-service
+- apiVersion: monitoring.coreos.com/v1
+  kind: ServiceMonitor
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"monitoring.coreos.com/v1","kind":"ServiceMonitor","metadata":{"creationTimestamp":null,"name":"autoscaler-sm","namespace":"knative-serving","ownerReferences":[{"apiVersion":"operator.knative.dev/v1beta1","blockOwnerDeletion":true,"controller":true,"kind":"KnativeServing","name":"knative-serving","uid":"af223c8b-7d90-440e-8659-7268e406b26c"}]},"spec":{"endpoints":[{"bearerTokenFile":"/var/run/secrets/kubernetes.io/serviceaccount/token","bearerTokenSecret":{"key":""},"port":"https","scheme":"https","tlsConfig":{"ca":{},"caFile":"/etc/prometheus/configmaps/serving-certs-ca-bundle/service-ca.crt","cert":{},"serverName":"autoscaler-sm-service.knative-serving.svc"}}],"namespaceSelector":{"matchNames":["knative-serving"]},"selector":{"matchLabels":{"name":"autoscaler-sm-service"}}}}
+      manifestival: new
+    creationTimestamp: "2024-06-05T10:55:58Z"
+    generation: 1
+    managedFields:
+    - apiVersion: monitoring.coreos.com/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:kubectl.kubernetes.io/last-applied-configuration: {}
+            f:manifestival: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"af223c8b-7d90-440e-8659-7268e406b26c"}: {}
+        f:spec:
+          .: {}
+          f:endpoints: {}
+          f:namespaceSelector:
+            .: {}
+            f:matchNames: {}
+          f:selector: {}
+      manager: manifestival
+      operation: Update
+      time: "2024-06-05T10:56:16Z"
+    name: autoscaler-sm
+    namespace: knative-serving
+    ownerReferences:
+    - apiVersion: operator.knative.dev/v1beta1
+      blockOwnerDeletion: true
+      controller: true
+      kind: KnativeServing
+      name: knative-serving
+      uid: af223c8b-7d90-440e-8659-7268e406b26c
+    resourceVersion: "41985"
+    uid: 1ae9256e-eb45-4faf-9d6a-b566d91413c0
+  spec:
+    endpoints:
+    - bearerTokenFile: /var/run/secrets/kubernetes.io/serviceaccount/token
+      bearerTokenSecret:
+        key: ""
+      port: https
+      scheme: https
+      tlsConfig:
+        ca: {}
+        caFile: /etc/prometheus/configmaps/serving-certs-ca-bundle/service-ca.crt
+        cert: {}
+        serverName: autoscaler-sm-service.knative-serving.svc
+    namespaceSelector:
+      matchNames:
+      - knative-serving
+    selector:
+      matchLabels:
+        name: autoscaler-sm-service
+- apiVersion: monitoring.coreos.com/v1
+  kind: ServiceMonitor
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"monitoring.coreos.com/v1","kind":"ServiceMonitor","metadata":{"creationTimestamp":null,"name":"controller-sm","namespace":"knative-serving","ownerReferences":[{"apiVersion":"operator.knative.dev/v1beta1","blockOwnerDeletion":true,"controller":true,"kind":"KnativeServing","name":"knative-serving","uid":"af223c8b-7d90-440e-8659-7268e406b26c"}]},"spec":{"endpoints":[{"bearerTokenFile":"/var/run/secrets/kubernetes.io/serviceaccount/token","bearerTokenSecret":{"key":""},"port":"https","scheme":"https","tlsConfig":{"ca":{},"caFile":"/etc/prometheus/configmaps/serving-certs-ca-bundle/service-ca.crt","cert":{},"serverName":"controller-sm-service.knative-serving.svc"}}],"namespaceSelector":{"matchNames":["knative-serving"]},"selector":{"matchLabels":{"name":"controller-sm-service"}}}}
+      manifestival: new
+    creationTimestamp: "2024-06-05T10:55:59Z"
+    generation: 1
+    managedFields:
+    - apiVersion: monitoring.coreos.com/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:kubectl.kubernetes.io/last-applied-configuration: {}
+            f:manifestival: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"af223c8b-7d90-440e-8659-7268e406b26c"}: {}
+        f:spec:
+          .: {}
+          f:endpoints: {}
+          f:namespaceSelector:
+            .: {}
+            f:matchNames: {}
+          f:selector: {}
+      manager: manifestival
+      operation: Update
+      time: "2024-06-05T10:56:16Z"
+    name: controller-sm
+    namespace: knative-serving
+    ownerReferences:
+    - apiVersion: operator.knative.dev/v1beta1
+      blockOwnerDeletion: true
+      controller: true
+      kind: KnativeServing
+      name: knative-serving
+      uid: af223c8b-7d90-440e-8659-7268e406b26c
+    resourceVersion: "41999"
+    uid: be269a10-1491-44b4-a6e3-e702769c1f69
+  spec:
+    endpoints:
+    - bearerTokenFile: /var/run/secrets/kubernetes.io/serviceaccount/token
+      bearerTokenSecret:
+        key: ""
+      port: https
+      scheme: https
+      tlsConfig:
+        ca: {}
+        caFile: /etc/prometheus/configmaps/serving-certs-ca-bundle/service-ca.crt
+        cert: {}
+        serverName: controller-sm-service.knative-serving.svc
+    namespaceSelector:
+      matchNames:
+      - knative-serving
+    selector:
+      matchLabels:
+        name: controller-sm-service
+- apiVersion: monitoring.coreos.com/v1
+  kind: ServiceMonitor
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"monitoring.coreos.com/v1","kind":"ServiceMonitor","metadata":{"creationTimestamp":null,"name":"webhook-sm","namespace":"knative-serving","ownerReferences":[{"apiVersion":"operator.knative.dev/v1beta1","blockOwnerDeletion":true,"controller":true,"kind":"KnativeServing","name":"knative-serving","uid":"af223c8b-7d90-440e-8659-7268e406b26c"}]},"spec":{"endpoints":[{"bearerTokenFile":"/var/run/secrets/kubernetes.io/serviceaccount/token","bearerTokenSecret":{"key":""},"port":"https","scheme":"https","tlsConfig":{"ca":{},"caFile":"/etc/prometheus/configmaps/serving-certs-ca-bundle/service-ca.crt","cert":{},"serverName":"webhook-sm-service.knative-serving.svc"}}],"namespaceSelector":{"matchNames":["knative-serving"]},"selector":{"matchLabels":{"name":"webhook-sm-service"}}}}
+      manifestival: new
+    creationTimestamp: "2024-06-05T10:55:59Z"
+    generation: 1
+    managedFields:
+    - apiVersion: monitoring.coreos.com/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:kubectl.kubernetes.io/last-applied-configuration: {}
+            f:manifestival: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"af223c8b-7d90-440e-8659-7268e406b26c"}: {}
+        f:spec:
+          .: {}
+          f:endpoints: {}
+          f:namespaceSelector:
+            .: {}
+            f:matchNames: {}
+          f:selector: {}
+      manager: manifestival
+      operation: Update
+      time: "2024-06-05T10:56:15Z"
+    name: webhook-sm
+    namespace: knative-serving
+    ownerReferences:
+    - apiVersion: operator.knative.dev/v1beta1
+      blockOwnerDeletion: true
+      controller: true
+      kind: KnativeServing
+      name: knative-serving
+      uid: af223c8b-7d90-440e-8659-7268e406b26c
+    resourceVersion: "41968"
+    uid: fe8c7245-f660-4256-b9fb-1d36ae8e5eef
+  spec:
+    endpoints:
+    - bearerTokenFile: /var/run/secrets/kubernetes.io/serviceaccount/token
+      bearerTokenSecret:
+        key: ""
+      port: https
+      scheme: https
+      tlsConfig:
+        ca: {}
+        caFile: /etc/prometheus/configmaps/serving-certs-ca-bundle/service-ca.crt
+        cert: {}
+        serverName: webhook-sm-service.knative-serving.svc
+    namespaceSelector:
+      matchNames:
+      - knative-serving
+    selector:
+      matchLabels:
+        name: webhook-sm-service
+kind: ServiceMonitorList
+metadata:
+  continue: ""
+  resourceVersion: "53942"

@@ -1,0 +1,328 @@
+---
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      serving.knative.dev/creator: system:admin
+      serving.knative.dev/lastModifier: system:admin
+      serving.knative.openshift.io/enablePassthrough: "true"
+    creationTimestamp: "2024-06-05T10:59:19Z"
+    labels:
+      serving.knative.dev/route: helloworld-go
+      serving.knative.dev/service: helloworld-go
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:serving.knative.dev/creator: {}
+            f:serving.knative.dev/lastModifier: {}
+            f:serving.knative.openshift.io/enablePassthrough: {}
+          f:labels:
+            .: {}
+            f:serving.knative.dev/route: {}
+            f:serving.knative.dev/service: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"b11e4c8e-b322-4022-a8b8-00e0ad27c3e9"}: {}
+        f:spec:
+          f:externalName: {}
+          f:ports:
+            .: {}
+            k:{"port":80,"protocol":"TCP"}:
+              .: {}
+              f:name: {}
+              f:port: {}
+              f:protocol: {}
+              f:targetPort: {}
+          f:sessionAffinity: {}
+          f:type: {}
+      manager: controller
+      operation: Update
+      time: "2024-06-05T10:59:20Z"
+    name: helloworld-go
+    namespace: user-ns
+    ownerReferences:
+    - apiVersion: serving.knative.dev/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Route
+      name: helloworld-go
+      uid: b11e4c8e-b322-4022-a8b8-00e0ad27c3e9
+    resourceVersion: "44055"
+    uid: e9f145b2-aa05-4854-ade1-287dcf9872a1
+  spec:
+    externalName: knative-local-gateway.istio-system.svc.cluster.local
+    ports:
+    - name: http2
+      port: 80
+      protocol: TCP
+      targetPort: 80
+    sessionAffinity: None
+    type: ExternalName
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      autoscaling.knative.dev/class: kpa.autoscaling.knative.dev
+      autoscaling.knative.dev/minScale: "2"
+      autoscaling.knative.dev/target: "10"
+      autoscaling.knative.dev/targetBurstCapacity: "0"
+      queue.sidecar.serving.knative.dev/resourcePercentage: "0.3"
+      serving.knative.dev/creator: system:admin
+      sidecar.istio.io/inject: "true"
+      sidecar.istio.io/rewriteAppHTTPProbers: "true"
+    creationTimestamp: "2024-06-05T10:59:13Z"
+    labels:
+      app: helloworld-go
+      networking.internal.knative.dev/serverlessservice: helloworld-go-00001
+      networking.internal.knative.dev/serviceType: Public
+      serving.knative.dev/configuration: helloworld-go
+      serving.knative.dev/configurationGeneration: "1"
+      serving.knative.dev/configurationUID: 6402ac10-ce56-4a74-a207-9167495600f6
+      serving.knative.dev/revision: helloworld-go-00001
+      serving.knative.dev/revisionUID: fe3dcdf0-fd1b-42cc-b546-73a365a8bae7
+      serving.knative.dev/service: helloworld-go
+      serving.knative.dev/serviceUID: d30abd09-975d-4327-a440-ef03bb5a8d6e
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:autoscaling.knative.dev/class: {}
+            f:autoscaling.knative.dev/minScale: {}
+            f:autoscaling.knative.dev/target: {}
+            f:autoscaling.knative.dev/targetBurstCapacity: {}
+            f:queue.sidecar.serving.knative.dev/resourcePercentage: {}
+            f:serving.knative.dev/creator: {}
+            f:sidecar.istio.io/inject: {}
+            f:sidecar.istio.io/rewriteAppHTTPProbers: {}
+          f:labels:
+            .: {}
+            f:app: {}
+            f:networking.internal.knative.dev/serverlessservice: {}
+            f:networking.internal.knative.dev/serviceType: {}
+            f:serving.knative.dev/configuration: {}
+            f:serving.knative.dev/configurationGeneration: {}
+            f:serving.knative.dev/configurationUID: {}
+            f:serving.knative.dev/revision: {}
+            f:serving.knative.dev/revisionUID: {}
+            f:serving.knative.dev/service: {}
+            f:serving.knative.dev/serviceUID: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"274c2e6d-ce48-4944-97fa-d9da4ed9ed50"}: {}
+        f:spec:
+          f:internalTrafficPolicy: {}
+          f:ports:
+            .: {}
+            k:{"port":80,"protocol":"TCP"}:
+              .: {}
+              f:name: {}
+              f:port: {}
+              f:protocol: {}
+              f:targetPort: {}
+            k:{"port":443,"protocol":"TCP"}:
+              .: {}
+              f:name: {}
+              f:port: {}
+              f:protocol: {}
+              f:targetPort: {}
+          f:sessionAffinity: {}
+          f:type: {}
+      manager: controller
+      operation: Update
+      time: "2024-06-05T10:59:13Z"
+    name: helloworld-go-00001
+    namespace: user-ns
+    ownerReferences:
+    - apiVersion: networking.internal.knative.dev/v1alpha1
+      blockOwnerDeletion: true
+      controller: true
+      kind: ServerlessService
+      name: helloworld-go-00001
+      uid: 274c2e6d-ce48-4944-97fa-d9da4ed9ed50
+    resourceVersion: "43891"
+    uid: 34737ca7-7a3b-425a-bb2d-f04ab6eeb85e
+  spec:
+    clusterIP: 172.30.61.176
+    clusterIPs:
+    - 172.30.61.176
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - name: http
+      port: 80
+      protocol: TCP
+      targetPort: 8012
+    - name: https
+      port: 443
+      protocol: TCP
+      targetPort: 8112
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      autoscaling.knative.dev/class: kpa.autoscaling.knative.dev
+      autoscaling.knative.dev/minScale: "2"
+      autoscaling.knative.dev/target: "10"
+      autoscaling.knative.dev/targetBurstCapacity: "0"
+      queue.sidecar.serving.knative.dev/resourcePercentage: "0.3"
+      serving.knative.dev/creator: system:admin
+      sidecar.istio.io/inject: "true"
+      sidecar.istio.io/rewriteAppHTTPProbers: "true"
+    creationTimestamp: "2024-06-05T10:59:13Z"
+    labels:
+      app: helloworld-go
+      networking.internal.knative.dev/serverlessservice: helloworld-go-00001
+      networking.internal.knative.dev/serviceType: Private
+      serving.knative.dev/configuration: helloworld-go
+      serving.knative.dev/configurationGeneration: "1"
+      serving.knative.dev/configurationUID: 6402ac10-ce56-4a74-a207-9167495600f6
+      serving.knative.dev/revision: helloworld-go-00001
+      serving.knative.dev/revisionUID: fe3dcdf0-fd1b-42cc-b546-73a365a8bae7
+      serving.knative.dev/service: helloworld-go
+      serving.knative.dev/serviceUID: d30abd09-975d-4327-a440-ef03bb5a8d6e
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:autoscaling.knative.dev/class: {}
+            f:autoscaling.knative.dev/minScale: {}
+            f:autoscaling.knative.dev/target: {}
+            f:autoscaling.knative.dev/targetBurstCapacity: {}
+            f:queue.sidecar.serving.knative.dev/resourcePercentage: {}
+            f:serving.knative.dev/creator: {}
+            f:sidecar.istio.io/inject: {}
+            f:sidecar.istio.io/rewriteAppHTTPProbers: {}
+          f:labels:
+            .: {}
+            f:app: {}
+            f:networking.internal.knative.dev/serverlessservice: {}
+            f:networking.internal.knative.dev/serviceType: {}
+            f:serving.knative.dev/configuration: {}
+            f:serving.knative.dev/configurationGeneration: {}
+            f:serving.knative.dev/configurationUID: {}
+            f:serving.knative.dev/revision: {}
+            f:serving.knative.dev/revisionUID: {}
+            f:serving.knative.dev/service: {}
+            f:serving.knative.dev/serviceUID: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"274c2e6d-ce48-4944-97fa-d9da4ed9ed50"}: {}
+        f:spec:
+          f:internalTrafficPolicy: {}
+          f:ports:
+            .: {}
+            k:{"port":80,"protocol":"TCP"}:
+              .: {}
+              f:name: {}
+              f:port: {}
+              f:protocol: {}
+              f:targetPort: {}
+            k:{"port":443,"protocol":"TCP"}:
+              .: {}
+              f:name: {}
+              f:port: {}
+              f:protocol: {}
+              f:targetPort: {}
+            k:{"port":8012,"protocol":"TCP"}:
+              .: {}
+              f:name: {}
+              f:port: {}
+              f:protocol: {}
+              f:targetPort: {}
+            k:{"port":8022,"protocol":"TCP"}:
+              .: {}
+              f:name: {}
+              f:port: {}
+              f:protocol: {}
+              f:targetPort: {}
+            k:{"port":9090,"protocol":"TCP"}:
+              .: {}
+              f:name: {}
+              f:port: {}
+              f:protocol: {}
+              f:targetPort: {}
+            k:{"port":9091,"protocol":"TCP"}:
+              .: {}
+              f:name: {}
+              f:port: {}
+              f:protocol: {}
+              f:targetPort: {}
+          f:selector: {}
+          f:sessionAffinity: {}
+          f:type: {}
+      manager: controller
+      operation: Update
+      time: "2024-06-05T10:59:13Z"
+    name: helloworld-go-00001-private
+    namespace: user-ns
+    ownerReferences:
+    - apiVersion: networking.internal.knative.dev/v1alpha1
+      blockOwnerDeletion: true
+      controller: true
+      kind: ServerlessService
+      name: helloworld-go-00001
+      uid: 274c2e6d-ce48-4944-97fa-d9da4ed9ed50
+    resourceVersion: "43887"
+    uid: 848f29a3-0854-4882-b478-e750c59389b2
+  spec:
+    clusterIP: 172.30.201.0
+    clusterIPs:
+    - 172.30.201.0
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - name: http
+      port: 80
+      protocol: TCP
+      targetPort: 8012
+    - name: https
+      port: 443
+      protocol: TCP
+      targetPort: 8112
+    - name: http-autometric
+      port: 9090
+      protocol: TCP
+      targetPort: http-autometric
+    - name: http-usermetric
+      port: 9091
+      protocol: TCP
+      targetPort: http-usermetric
+    - name: http-queueadm
+      port: 8022
+      protocol: TCP
+      targetPort: 8022
+    - name: http-istio
+      port: 8012
+      protocol: TCP
+      targetPort: 8012
+    selector:
+      serving.knative.dev/revisionUID: fe3dcdf0-fd1b-42cc-b546-73a365a8bae7
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+kind: ServiceList
+metadata:
+  resourceVersion: "54810"

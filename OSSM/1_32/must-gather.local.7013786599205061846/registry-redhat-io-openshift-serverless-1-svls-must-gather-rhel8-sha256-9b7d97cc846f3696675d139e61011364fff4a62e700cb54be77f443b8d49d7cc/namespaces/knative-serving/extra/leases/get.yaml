@@ -1,0 +1,299 @@
+apiVersion: v1
+items:
+- apiVersion: coordination.k8s.io/v1
+  kind: Lease
+  metadata:
+    creationTimestamp: "2024-06-05T10:56:00Z"
+    name: autoscaler-bucket-00-of-01
+    namespace: knative-serving
+    resourceVersion: "53919"
+    uid: 132e98c0-6f50-4aac-a541-3d335fcb8b3a
+  spec:
+    acquireTime: "2024-06-05T10:56:00.417256Z"
+    holderIdentity: autoscaler-588cfb64fb-8csmw_10.128.2.25
+    leaseDurationSeconds: 60
+    leaseTransitions: 0
+    renewTime: "2024-06-05T11:16:21.953991Z"
+- apiVersion: coordination.k8s.io/v1
+  kind: Lease
+  metadata:
+    creationTimestamp: "2024-06-05T10:56:00Z"
+    name: controller.knative.dev.networking.pkg.certificates.reconciler.reconciler.00-of-01
+    namespace: knative-serving
+    resourceVersion: "53878"
+    uid: 551e1654-7fbf-4e8e-b0bb-287c2603ddb8
+  spec:
+    acquireTime: "2024-06-05T10:56:16.407277Z"
+    holderIdentity: controller-c85f6bb7-wxvch_4c32413a-1e59-4f27-b3e8-2d4500b720e8
+    leaseDurationSeconds: 60
+    leaseTransitions: 1
+    renewTime: "2024-06-05T11:16:17.492965Z"
+- apiVersion: coordination.k8s.io/v1
+  kind: Lease
+  metadata:
+    creationTimestamp: "2024-06-05T10:56:00Z"
+    name: controller.knative.dev.serving.pkg.reconciler.configuration.reconciler.00-of-01
+    namespace: knative-serving
+    resourceVersion: "53873"
+    uid: b5bef239-2ab9-48c2-831a-29f19ff54774
+  spec:
+    acquireTime: "2024-06-05T10:56:16.111475Z"
+    holderIdentity: controller-c85f6bb7-wxvch_516c03cb-929f-46a7-8590-739b56e80b4d
+    leaseDurationSeconds: 60
+    leaseTransitions: 1
+    renewTime: "2024-06-05T11:16:17.181165Z"
+- apiVersion: coordination.k8s.io/v1
+  kind: Lease
+  metadata:
+    creationTimestamp: "2024-06-05T10:56:00Z"
+    name: controller.knative.dev.serving.pkg.reconciler.domainmapping.reconciler.00-of-01
+    namespace: knative-serving
+    resourceVersion: "53940"
+    uid: de12337b-82eb-44ab-b04c-442afce8218b
+  spec:
+    acquireTime: "2024-06-05T10:56:12.743451Z"
+    holderIdentity: controller-c85f6bb7-wxvch_19b730a8-7fd6-4f79-b5fb-469d2a031fd3
+    leaseDurationSeconds: 60
+    leaseTransitions: 1
+    renewTime: "2024-06-05T11:16:24.107631Z"
+- apiVersion: coordination.k8s.io/v1
+  kind: Lease
+  metadata:
+    creationTimestamp: "2024-06-05T10:56:00Z"
+    name: controller.knative.dev.serving.pkg.reconciler.gc.reconciler.00-of-01
+    namespace: knative-serving
+    resourceVersion: "53905"
+    uid: 40883151-a9d8-4595-a556-ff5c0eff441f
+  spec:
+    acquireTime: "2024-06-05T10:56:19.236695Z"
+    holderIdentity: controller-c85f6bb7-wxvch_85f0112b-468f-4c8c-ad46-a7580603c5a6
+    leaseDurationSeconds: 60
+    leaseTransitions: 1
+    renewTime: "2024-06-05T11:16:20.335693Z"
+- apiVersion: coordination.k8s.io/v1
+  kind: Lease
+  metadata:
+    creationTimestamp: "2024-06-05T10:56:00Z"
+    name: controller.knative.dev.serving.pkg.reconciler.labeler.reconciler.00-of-01
+    namespace: knative-serving
+    resourceVersion: "53913"
+    uid: 31787cee-7ea5-4b8c-9e31-b57c9ac05b24
+  spec:
+    acquireTime: "2024-06-05T10:56:20.298750Z"
+    holderIdentity: controller-c85f6bb7-wxvch_af072a64-0fbe-45a3-a6c9-be6316d8f3fd
+    leaseDurationSeconds: 60
+    leaseTransitions: 1
+    renewTime: "2024-06-05T11:16:21.389292Z"
+- apiVersion: coordination.k8s.io/v1
+  kind: Lease
+  metadata:
+    creationTimestamp: "2024-06-05T10:56:00Z"
+    name: controller.knative.dev.serving.pkg.reconciler.nscert.reconciler.00-of-01
+    namespace: knative-serving
+    resourceVersion: "53897"
+    uid: 8bb4553d-ccac-4e3a-9623-df206378148b
+  spec:
+    acquireTime: "2024-06-05T10:56:18.328801Z"
+    holderIdentity: controller-c85f6bb7-wxvch_7f0a131c-7b43-4e7a-affe-2630dc41753a
+    leaseDurationSeconds: 60
+    leaseTransitions: 1
+    renewTime: "2024-06-05T11:16:19.426905Z"
+- apiVersion: coordination.k8s.io/v1
+  kind: Lease
+  metadata:
+    creationTimestamp: "2024-06-05T10:56:00Z"
+    name: controller.knative.dev.serving.pkg.reconciler.revision.reconciler.00-of-01
+    namespace: knative-serving
+    resourceVersion: "53861"
+    uid: 7c4e7640-09ad-4401-8bc0-9a35615096d4
+  spec:
+    acquireTime: "2024-06-05T10:56:14.950909Z"
+    holderIdentity: controller-c85f6bb7-wxvch_3a86453a-c0ba-42fc-8fba-6eff51283c2d
+    leaseDurationSeconds: 60
+    leaseTransitions: 1
+    renewTime: "2024-06-05T11:16:16.149805Z"
+- apiVersion: coordination.k8s.io/v1
+  kind: Lease
+  metadata:
+    creationTimestamp: "2024-06-05T10:56:00Z"
+    name: controller.knative.dev.serving.pkg.reconciler.route.reconciler.00-of-01
+    namespace: knative-serving
+    resourceVersion: "53911"
+    uid: 5ea69e6b-419b-4444-8888-322272c283a6
+  spec:
+    acquireTime: "2024-06-05T10:56:19.940017Z"
+    holderIdentity: controller-c85f6bb7-8wsmt_5d71d43e-a015-4c29-a856-ec73b6f435fc
+    leaseDurationSeconds: 60
+    leaseTransitions: 1
+    renewTime: "2024-06-05T11:16:20.970673Z"
+- apiVersion: coordination.k8s.io/v1
+  kind: Lease
+  metadata:
+    creationTimestamp: "2024-06-05T10:56:00Z"
+    name: controller.knative.dev.serving.pkg.reconciler.serverlessservice.reconciler.00-of-01
+    namespace: knative-serving
+    resourceVersion: "53884"
+    uid: d1ac870f-97ee-4f08-8d8e-26c6d29ede5d
+  spec:
+    acquireTime: "2024-06-05T10:56:16.935599Z"
+    holderIdentity: controller-c85f6bb7-wxvch_adec0ba5-d15d-4fd7-9e2c-4b190b1b82c3
+    leaseDurationSeconds: 60
+    leaseTransitions: 1
+    renewTime: "2024-06-05T11:16:17.992051Z"
+- apiVersion: coordination.k8s.io/v1
+  kind: Lease
+  metadata:
+    creationTimestamp: "2024-06-05T10:56:00Z"
+    name: controller.knative.dev.serving.pkg.reconciler.service.reconciler.00-of-01
+    namespace: knative-serving
+    resourceVersion: "53910"
+    uid: 723892d4-0fe2-466f-8b8b-c4c9968e9c9d
+  spec:
+    acquireTime: "2024-06-05T10:56:19.568102Z"
+    holderIdentity: controller-c85f6bb7-8wsmt_3843121d-0335-47c4-8c4d-86d3f1f110c1
+    leaseDurationSeconds: 60
+    leaseTransitions: 1
+    renewTime: "2024-06-05T11:16:20.871492Z"
+- apiVersion: coordination.k8s.io/v1
+  kind: Lease
+  metadata:
+    creationTimestamp: "2024-06-05T10:56:01Z"
+    name: hpaautoscaler.knative.dev.serving.pkg.reconciler.autoscaling.hpa.reconciler.00-of-01
+    namespace: knative-serving
+    resourceVersion: "53923"
+    uid: 3865cd43-2581-4fc9-b328-68dad6e8302d
+  spec:
+    acquireTime: "2024-06-05T10:56:01.004900Z"
+    holderIdentity: autoscaler-hpa-684ccf4558-c6grm_93f6ac45-de89-4c13-9e20-327521350259
+    leaseDurationSeconds: 60
+    leaseTransitions: 0
+    renewTime: "2024-06-05T11:16:22.468322Z"
+- apiVersion: coordination.k8s.io/v1
+  kind: Lease
+  metadata:
+    creationTimestamp: "2024-06-05T10:56:02Z"
+    name: net-istio-controller.knative.dev.net-istio.pkg.reconciler.ingress.reconciler.00-of-01
+    namespace: knative-serving
+    resourceVersion: "53938"
+    uid: 2061a69a-14e6-43e1-a52b-41b46d892319
+  spec:
+    acquireTime: "2024-06-05T10:56:02.534846Z"
+    holderIdentity: net-istio-controller-96d4b96dd-r5tcz_c88a020c-6466-4d0b-bf95-bad3239c22a1
+    leaseDurationSeconds: 60
+    leaseTransitions: 0
+    renewTime: "2024-06-05T11:16:23.963547Z"
+- apiVersion: coordination.k8s.io/v1
+  kind: Lease
+  metadata:
+    creationTimestamp: "2024-06-05T10:56:02Z"
+    name: net-istio-controller.knative.dev.net-istio.pkg.reconciler.serverlessservice.reconciler.00-of-01
+    namespace: knative-serving
+    resourceVersion: "53937"
+    uid: 3c9426ee-4864-4e46-b43f-367fea3d2aa9
+  spec:
+    acquireTime: "2024-06-05T10:56:02.534635Z"
+    holderIdentity: net-istio-controller-96d4b96dd-r5tcz_0233bbe9-a5d7-4680-aac3-42751dfe09b1
+    leaseDurationSeconds: 60
+    leaseTransitions: 0
+    renewTime: "2024-06-05T11:16:23.962478Z"
+- apiVersion: coordination.k8s.io/v1
+  kind: Lease
+  metadata:
+    creationTimestamp: "2024-06-05T10:56:02Z"
+    name: net-istio-webhook.configmapwebhook.00-of-01
+    namespace: knative-serving
+    resourceVersion: "53934"
+    uid: 4ff791f8-e9db-4fd5-8340-9266122b56f0
+  spec:
+    acquireTime: "2024-06-05T10:56:02.308607Z"
+    holderIdentity: net-istio-webhook-5dfc9b8d7c-l8gx9_77fd5523-6215-4ea6-ad28-8ddad482e5af
+    leaseDurationSeconds: 60
+    leaseTransitions: 0
+    renewTime: "2024-06-05T11:16:23.726721Z"
+- apiVersion: coordination.k8s.io/v1
+  kind: Lease
+  metadata:
+    creationTimestamp: "2024-06-05T10:56:02Z"
+    name: net-istio-webhook.defaultingwebhook.00-of-01
+    namespace: knative-serving
+    resourceVersion: "53936"
+    uid: 9bd1c0a8-75a3-4034-a65e-e75a9af0df3c
+  spec:
+    acquireTime: "2024-06-05T10:56:02.309061Z"
+    holderIdentity: net-istio-webhook-5dfc9b8d7c-l8gx9_3f6e9ccf-a5a8-49bd-8439-2275d05de112
+    leaseDurationSeconds: 60
+    leaseTransitions: 0
+    renewTime: "2024-06-05T11:16:23.770027Z"
+- apiVersion: coordination.k8s.io/v1
+  kind: Lease
+  metadata:
+    creationTimestamp: "2024-06-05T10:56:02Z"
+    name: net-istio-webhook.webhookcertificates.00-of-01
+    namespace: knative-serving
+    resourceVersion: "53933"
+    uid: 15ba3774-2dbc-40ff-ab4c-b45d1376b23c
+  spec:
+    acquireTime: "2024-06-05T10:56:02.308831Z"
+    holderIdentity: net-istio-webhook-5dfc9b8d7c-l8gx9_60a08be1-5791-413c-a6fc-4055e6a080c9
+    leaseDurationSeconds: 60
+    leaseTransitions: 0
+    renewTime: "2024-06-05T11:16:23.727763Z"
+- apiVersion: coordination.k8s.io/v1
+  kind: Lease
+  metadata:
+    creationTimestamp: "2024-06-05T10:56:08Z"
+    name: webhook.configmapwebhook.00-of-01
+    namespace: knative-serving
+    resourceVersion: "53899"
+    uid: 5f230b64-7917-47dc-b8bb-4348c996f1ca
+  spec:
+    acquireTime: "2024-06-05T10:56:08.024113Z"
+    holderIdentity: webhook-5686f8c6f6-rs9n5_f0b74c65-bcf8-44e7-b825-0f895c3e7e3c
+    leaseDurationSeconds: 60
+    leaseTransitions: 0
+    renewTime: "2024-06-05T11:16:19.473101Z"
+- apiVersion: coordination.k8s.io/v1
+  kind: Lease
+  metadata:
+    creationTimestamp: "2024-06-05T10:56:08Z"
+    name: webhook.defaultingwebhook.00-of-01
+    namespace: knative-serving
+    resourceVersion: "53900"
+    uid: 03de079f-dcd2-4bc7-afc8-6b72aedbc53d
+  spec:
+    acquireTime: "2024-06-05T10:56:08.024777Z"
+    holderIdentity: webhook-5686f8c6f6-rs9n5_83bb12e2-a4a4-49d5-a3f8-fa86ab613e1f
+    leaseDurationSeconds: 60
+    leaseTransitions: 0
+    renewTime: "2024-06-05T11:16:19.473092Z"
+- apiVersion: coordination.k8s.io/v1
+  kind: Lease
+  metadata:
+    creationTimestamp: "2024-06-05T10:56:08Z"
+    name: webhook.validationwebhook.00-of-01
+    namespace: knative-serving
+    resourceVersion: "53898"
+    uid: 4d9a8470-6db4-47a1-9df7-c738b072baaf
+  spec:
+    acquireTime: "2024-06-05T10:56:08.025542Z"
+    holderIdentity: webhook-5686f8c6f6-rs9n5_7be4e7b8-0b02-48d0-8b6f-c494a6875f84
+    leaseDurationSeconds: 60
+    leaseTransitions: 0
+    renewTime: "2024-06-05T11:16:19.475252Z"
+- apiVersion: coordination.k8s.io/v1
+  kind: Lease
+  metadata:
+    creationTimestamp: "2024-06-05T10:56:08Z"
+    name: webhook.webhookcertificates.00-of-01
+    namespace: knative-serving
+    resourceVersion: "53901"
+    uid: 698940e7-2965-40dd-a137-a29dafd61313
+  spec:
+    acquireTime: "2024-06-05T10:56:08.024357Z"
+    holderIdentity: webhook-5686f8c6f6-rs9n5_6d9bee9c-60b3-452f-804d-6254233beb2e
+    leaseDurationSeconds: 60
+    leaseTransitions: 0
+    renewTime: "2024-06-05T11:16:19.480986Z"
+kind: List
+metadata:
+  resourceVersion: ""

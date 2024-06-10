@@ -1,0 +1,47 @@
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"rbac.authorization.k8s.io/v1","kind":"Role","metadata":{"name":"openshift-serverless-view-serving-configmaps","namespace":"knative-serving","ownerReferences":[{"apiVersion":"operator.knative.dev/v1beta1","blockOwnerDeletion":true,"controller":true,"kind":"KnativeServing","name":"knative-serving","uid":"af223c8b-7d90-440e-8659-7268e406b26c"}]},"rules":[{"apiGroups":[""],"resourceNames":["config-autoscaler"],"resources":["configmaps"],"verbs":["get","list","watch"]}]}
+    manifestival: new
+  creationTimestamp: "2024-06-05T10:55:46Z"
+  managedFields:
+  - apiVersion: rbac.authorization.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:kubectl.kubernetes.io/last-applied-configuration: {}
+          f:manifestival: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"af223c8b-7d90-440e-8659-7268e406b26c"}: {}
+      f:rules: {}
+    manager: manifestival
+    operation: Update
+    time: "2024-06-05T10:56:02Z"
+  name: openshift-serverless-view-serving-configmaps
+  namespace: knative-serving
+  ownerReferences:
+  - apiVersion: operator.knative.dev/v1beta1
+    blockOwnerDeletion: true
+    controller: true
+    kind: KnativeServing
+    name: knative-serving
+    uid: af223c8b-7d90-440e-8659-7268e406b26c
+  resourceVersion: "41561"
+  uid: d89742aa-a861-4d2f-8a9a-3c7a760c3d56
+rules:
+- apiGroups:
+  - ""
+  resourceNames:
+  - config-autoscaler
+  resources:
+  - configmaps
+  verbs:
+  - get
+  - list
+  - watch

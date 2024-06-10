@@ -1,0 +1,10 @@
+Name:         knative-serving-podspecable-binding
+Labels:       app.kubernetes.io/name=knative-serving
+              app.kubernetes.io/version=release-v1.11
+              duck.knative.dev/podspecable=true
+Annotations:  manifestival: new
+PolicyRule:
+  Resources                           Non-Resource URLs  Resource Names  Verbs
+  ---------                           -----------------  --------------  -----
+  configurations.serving.knative.dev  []                 []              [list watch patch]
+  services.serving.knative.dev        []                 []              [list watch patch]

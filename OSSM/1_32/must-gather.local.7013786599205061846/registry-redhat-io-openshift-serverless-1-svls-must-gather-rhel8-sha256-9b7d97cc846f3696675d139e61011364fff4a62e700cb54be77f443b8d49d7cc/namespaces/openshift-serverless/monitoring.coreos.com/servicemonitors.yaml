@@ -1,0 +1,145 @@
+---
+apiVersion: monitoring.coreos.com/v1
+items:
+- apiVersion: monitoring.coreos.com/v1
+  kind: ServiceMonitor
+  metadata:
+    creationTimestamp: "2024-06-05T10:54:05Z"
+    generation: 1
+    labels:
+      name: knative-openshift-ingress
+      olm.managed: "true"
+    managedFields:
+    - apiVersion: monitoring.coreos.com/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:labels:
+            .: {}
+            f:name: {}
+            f:olm.managed: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"45b99ce2-e457-4ed7-a4ec-bad80f9aa5e4"}: {}
+        f:spec:
+          .: {}
+          f:endpoints: {}
+          f:namespaceSelector: {}
+          f:selector: {}
+      manager: catalog
+      operation: Update
+      time: "2024-06-05T10:54:05Z"
+    name: knative-openshift-ingress-metrics
+    namespace: openshift-serverless
+    ownerReferences:
+    - apiVersion: operators.coreos.com/v1alpha1
+      blockOwnerDeletion: false
+      controller: false
+      kind: ClusterServiceVersion
+      name: serverless-operator.v1.32.1
+      uid: 45b99ce2-e457-4ed7-a4ec-bad80f9aa5e4
+    resourceVersion: "39399"
+    uid: 1560f529-0fee-43ac-9988-f7f77e201a6d
+  spec:
+    endpoints:
+    - port: metrics
+    namespaceSelector: {}
+    selector:
+      matchLabels:
+        name: knative-openshift-ingress
+- apiVersion: monitoring.coreos.com/v1
+  kind: ServiceMonitor
+  metadata:
+    creationTimestamp: "2024-06-05T10:54:06Z"
+    generation: 1
+    labels:
+      name: knative-openshift
+      olm.managed: "true"
+    managedFields:
+    - apiVersion: monitoring.coreos.com/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:labels:
+            .: {}
+            f:name: {}
+            f:olm.managed: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"45b99ce2-e457-4ed7-a4ec-bad80f9aa5e4"}: {}
+        f:spec:
+          .: {}
+          f:endpoints: {}
+          f:namespaceSelector: {}
+          f:selector: {}
+      manager: catalog
+      operation: Update
+      time: "2024-06-05T10:54:06Z"
+    name: knative-openshift-metrics-3
+    namespace: openshift-serverless
+    ownerReferences:
+    - apiVersion: operators.coreos.com/v1alpha1
+      blockOwnerDeletion: false
+      controller: false
+      kind: ClusterServiceVersion
+      name: serverless-operator.v1.32.1
+      uid: 45b99ce2-e457-4ed7-a4ec-bad80f9aa5e4
+    resourceVersion: "39424"
+    uid: 95695942-f1f4-411e-8e24-d06ad26bdd4c
+  spec:
+    endpoints:
+    - port: http-metrics
+    namespaceSelector: {}
+    selector:
+      matchLabels:
+        name: knative-openshift
+- apiVersion: monitoring.coreos.com/v1
+  kind: ServiceMonitor
+  metadata:
+    creationTimestamp: "2024-06-05T10:54:08Z"
+    generation: 1
+    labels:
+      name: knative-operator
+      olm.managed: "true"
+    managedFields:
+    - apiVersion: monitoring.coreos.com/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:labels:
+            .: {}
+            f:name: {}
+            f:olm.managed: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"45b99ce2-e457-4ed7-a4ec-bad80f9aa5e4"}: {}
+        f:spec:
+          .: {}
+          f:endpoints: {}
+          f:namespaceSelector: {}
+          f:selector: {}
+      manager: catalog
+      operation: Update
+      time: "2024-06-05T10:54:08Z"
+    name: knative-operator-metrics
+    namespace: openshift-serverless
+    ownerReferences:
+    - apiVersion: operators.coreos.com/v1alpha1
+      blockOwnerDeletion: false
+      controller: false
+      kind: ClusterServiceVersion
+      name: serverless-operator.v1.32.1
+      uid: 45b99ce2-e457-4ed7-a4ec-bad80f9aa5e4
+    resourceVersion: "39465"
+    uid: 63517286-043d-42fd-904f-875ce9079902
+  spec:
+    endpoints:
+    - port: metrics
+    namespaceSelector: {}
+    selector:
+      matchLabels:
+        name: knative-operator
+kind: ServiceMonitorList
+metadata:
+  continue: ""
+  resourceVersion: "54064"

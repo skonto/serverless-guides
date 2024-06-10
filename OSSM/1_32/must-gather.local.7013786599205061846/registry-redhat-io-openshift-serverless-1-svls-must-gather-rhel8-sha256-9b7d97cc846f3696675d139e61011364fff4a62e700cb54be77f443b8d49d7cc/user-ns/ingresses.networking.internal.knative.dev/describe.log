@@ -1,0 +1,141 @@
+Name:         helloworld-go
+Namespace:    user-ns
+Labels:       serving.knative.dev/route=helloworld-go
+              serving.knative.dev/routeNamespace=user-ns
+              serving.knative.dev/service=helloworld-go
+Annotations:  networking.internal.knative.dev/rollout:
+                {"configurations":[{"configurationName":"helloworld-go","percent":100,"revisions":[{"revisionName":"helloworld-go-00001","percent":100}],"...
+              networking.knative.dev/ingress.class: istio.ingress.networking.knative.dev
+              serving.knative.dev/creator: system:admin
+              serving.knative.dev/lastModifier: system:admin
+              serving.knative.openshift.io/enablePassthrough: true
+API Version:  networking.internal.knative.dev/v1alpha1
+Kind:         Ingress
+Metadata:
+  Creation Timestamp:  2024-06-05T10:59:19Z
+  Finalizers:
+    ingresses.networking.internal.knative.dev
+    ocp-ingress
+  Generation:  1
+  Managed Fields:
+    API Version:  networking.internal.knative.dev/v1alpha1
+    Fields Type:  FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .:
+          f:networking.internal.knative.dev/rollout:
+          f:networking.knative.dev/ingress.class:
+          f:serving.knative.dev/creator:
+          f:serving.knative.dev/lastModifier:
+          f:serving.knative.openshift.io/enablePassthrough:
+        f:finalizers:
+          .:
+          v:"ingresses.networking.internal.knative.dev":
+        f:labels:
+          .:
+          f:serving.knative.dev/route:
+          f:serving.knative.dev/routeNamespace:
+          f:serving.knative.dev/service:
+        f:ownerReferences:
+          .:
+          k:{"uid":"b11e4c8e-b322-4022-a8b8-00e0ad27c3e9"}:
+      f:spec:
+        .:
+        f:httpOption:
+        f:rules:
+    Manager:      controller
+    Operation:    Update
+    Time:         2024-06-05T10:59:19Z
+    API Version:  networking.internal.knative.dev/v1alpha1
+    Fields Type:  FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:finalizers:
+          v:"ocp-ingress":
+    Manager:      operator
+    Operation:    Update
+    Time:         2024-06-05T10:59:19Z
+    API Version:  networking.internal.knative.dev/v1alpha1
+    Fields Type:  FieldsV1
+    fieldsV1:
+      f:status:
+        .:
+        f:conditions:
+        f:observedGeneration:
+        f:privateLoadBalancer:
+          .:
+          f:ingress:
+        f:publicLoadBalancer:
+          .:
+          f:ingress:
+    Manager:      controller
+    Operation:    Update
+    Subresource:  status
+    Time:         2024-06-05T10:59:20Z
+  Owner References:
+    API Version:           serving.knative.dev/v1
+    Block Owner Deletion:  true
+    Controller:            true
+    Kind:                  Route
+    Name:                  helloworld-go
+    UID:                   b11e4c8e-b322-4022-a8b8-00e0ad27c3e9
+  Resource Version:        44054
+  UID:                     acbd3525-dae1-4f5f-b979-0093b802b28b
+Spec:
+  Http Option:  Enabled
+  Rules:
+    Hosts:
+      helloworld-go.user-ns
+      helloworld-go.user-ns.svc
+      helloworld-go.user-ns.svc.cluster.local
+    Http:
+      Paths:
+        Splits:
+          Append Headers:
+            Knative - Serving - Namespace:  user-ns
+            Knative - Serving - Revision:   helloworld-go-00001
+          Percent:                          100
+          Service Name:                     helloworld-go-00001
+          Service Namespace:                user-ns
+          Service Port:                     80
+    Visibility:                             ClusterLocal
+    Hosts:
+      helloworld-go-user-ns.apps.ci-ln-bxslict-76ef8.origin-ci-int-aws.dev.rhcloud.com
+    Http:
+      Paths:
+        Splits:
+          Append Headers:
+            Knative - Serving - Namespace:  user-ns
+            Knative - Serving - Revision:   helloworld-go-00001
+          Percent:                          100
+          Service Name:                     helloworld-go-00001
+          Service Namespace:                user-ns
+          Service Port:                     80
+    Visibility:                             ExternalIP
+Status:
+  Conditions:
+    Last Transition Time:  2024-06-05T10:59:20Z
+    Status:                True
+    Type:                  LoadBalancerReady
+    Last Transition Time:  2024-06-05T10:59:19Z
+    Status:                True
+    Type:                  NetworkConfigured
+    Last Transition Time:  2024-06-05T10:59:20Z
+    Status:                True
+    Type:                  Ready
+  Observed Generation:     1
+  Private Load Balancer:
+    Ingress:
+      Domain Internal:  knative-local-gateway.istio-system.svc.cluster.local
+  Public Load Balancer:
+    Ingress:
+      Domain Internal:  istio-ingressgateway.istio-system.svc.cluster.local
+Events:
+  Type     Reason                 Age   From                Message
+  ----     ------                 ----  ----                -------
+  Normal   FinalizerUpdate        17m   ingress-controller  Updated "helloworld-go" finalizers
+  Warning  FinalizerUpdateFailed  17m   ingress-controller  Failed to update finalizers for "helloworld-go": Operation cannot be fulfilled on ingresses.networking.internal.knative.dev "helloworld-go": the object has been modified; please apply your changes to the latest version and try again
+  Normal   Created                17m   ingress-controller  Created VirtualService "helloworld-go-mesh"
+  Normal   FinalizerUpdate        17m   ingress-controller  Updated "helloworld-go" finalizers
+  Normal   Created                17m   ingress-controller  Created VirtualService "helloworld-go-ingress"

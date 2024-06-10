@@ -1,0 +1,4166 @@
+---
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: Pod
+  metadata:
+    annotations:
+      k8s.ovn.org/pod-networks: '{"default":{"ip_addresses":["10.129.0.74/23"],"mac_address":"0a:58:0a:81:00:4a","gateway_ips":["10.129.0.1"],"routes":[{"dest":"10.128.0.0/14","nextHop":"10.129.0.1"},{"dest":"172.30.0.0/16","nextHop":"10.129.0.1"},{"dest":"100.64.0.0/16","nextHop":"10.129.0.1"}],"ip_address":"10.129.0.74/23","gateway_ip":"10.129.0.1"}}'
+      k8s.v1.cni.cncf.io/network-status: |-
+        [{
+            "name": "ovn-kubernetes",
+            "interface": "eth0",
+            "ips": [
+                "10.129.0.74"
+            ],
+            "mac": "0a:58:0a:81:00:4a",
+            "default": true,
+            "dns": {}
+        }]
+      openshift.io/scc: privileged
+      sidecar.istio.io/inject: "false"
+    creationTimestamp: "2024-06-05T10:45:39Z"
+    generateName: istio-cni-node-v2-4-
+    labels:
+      controller-revision-hash: 55546b5fc9
+      k8s-app: istio-cni-node-v2-4
+      pod-template-generation: "1"
+      release: istio
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            f:k8s.ovn.org/pod-networks: {}
+      manager: ip-10-0-87-81
+      operation: Update
+      subresource: status
+      time: "2024-06-05T10:45:39Z"
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:sidecar.istio.io/inject: {}
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:controller-revision-hash: {}
+            f:k8s-app: {}
+            f:pod-template-generation: {}
+            f:release: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"6b942067-8aec-45b0-82d4-3e0ab08caefe"}: {}
+        f:spec:
+          f:affinity:
+            .: {}
+            f:nodeAffinity:
+              .: {}
+              f:requiredDuringSchedulingIgnoredDuringExecution: {}
+          f:containers:
+            k:{"name":"install-cni"}:
+              .: {}
+              f:command: {}
+              f:env:
+                .: {}
+                k:{"name":"CHAINED_CNI_PLUGIN"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+                k:{"name":"CNI_BINARIES_PREFIX"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+                k:{"name":"CNI_CONF_NAME"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+                k:{"name":"CNI_NET_DIR"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+                k:{"name":"CNI_NETWORK_CONFIG"}:
+                  .: {}
+                  f:name: {}
+                  f:valueFrom:
+                    .: {}
+                    f:configMapKeyRef: {}
+                k:{"name":"KUBECFG_FILE_NAME"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+                k:{"name":"MOUNTED_CNI_NET_DIR"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+              f:image: {}
+              f:imagePullPolicy: {}
+              f:livenessProbe:
+                .: {}
+                f:failureThreshold: {}
+                f:httpGet:
+                  .: {}
+                  f:path: {}
+                  f:port: {}
+                  f:scheme: {}
+                f:periodSeconds: {}
+                f:successThreshold: {}
+                f:timeoutSeconds: {}
+              f:name: {}
+              f:readinessProbe:
+                .: {}
+                f:failureThreshold: {}
+                f:httpGet:
+                  .: {}
+                  f:path: {}
+                  f:port: {}
+                  f:scheme: {}
+                f:periodSeconds: {}
+                f:successThreshold: {}
+                f:timeoutSeconds: {}
+              f:resources:
+                .: {}
+                f:requests:
+                  .: {}
+                  f:cpu: {}
+                  f:memory: {}
+              f:securityContext:
+                .: {}
+                f:privileged: {}
+              f:terminationMessagePath: {}
+              f:terminationMessagePolicy: {}
+              f:volumeMounts:
+                .: {}
+                k:{"mountPath":"/host/etc/cni/"}:
+                  .: {}
+                  f:mountPath: {}
+                  f:name: {}
+                k:{"mountPath":"/host/opt/cni/bin"}:
+                  .: {}
+                  f:mountPath: {}
+                  f:name: {}
+                k:{"mountPath":"/var/run/istio-cni"}:
+                  .: {}
+                  f:mountPath: {}
+                  f:name: {}
+          f:dnsPolicy: {}
+          f:enableServiceLinks: {}
+          f:nodeSelector: {}
+          f:priorityClassName: {}
+          f:restartPolicy: {}
+          f:schedulerName: {}
+          f:securityContext: {}
+          f:serviceAccount: {}
+          f:serviceAccountName: {}
+          f:terminationGracePeriodSeconds: {}
+          f:tolerations: {}
+          f:volumes:
+            .: {}
+            k:{"name":"cni-bin-dir"}:
+              .: {}
+              f:hostPath:
+                .: {}
+                f:path: {}
+                f:type: {}
+              f:name: {}
+            k:{"name":"cni-log-dir"}:
+              .: {}
+              f:hostPath:
+                .: {}
+                f:path: {}
+                f:type: {}
+              f:name: {}
+            k:{"name":"etc-cni-dir"}:
+              .: {}
+              f:hostPath:
+                .: {}
+                f:path: {}
+                f:type: {}
+              f:name: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2024-06-05T10:45:39Z"
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            f:k8s.v1.cni.cncf.io/network-status: {}
+      manager: multus-daemon
+      operation: Update
+      subresource: status
+      time: "2024-06-05T10:45:40Z"
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          f:conditions:
+            k:{"type":"ContainersReady"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+            k:{"type":"Initialized"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+            k:{"type":"Ready"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+          f:containerStatuses: {}
+          f:hostIP: {}
+          f:phase: {}
+          f:podIP: {}
+          f:podIPs:
+            .: {}
+            k:{"ip":"10.129.0.74"}:
+              .: {}
+              f:ip: {}
+          f:startTime: {}
+      manager: kubelet
+      operation: Update
+      subresource: status
+      time: "2024-06-05T10:45:49Z"
+    name: istio-cni-node-v2-4-4xd9w
+    namespace: openshift-operators
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: DaemonSet
+      name: istio-cni-node-v2-4
+      uid: 6b942067-8aec-45b0-82d4-3e0ab08caefe
+    resourceVersion: "35231"
+    uid: 903a69a6-fac3-4c43-ba10-581d457bd983
+  spec:
+    affinity:
+      nodeAffinity:
+        requiredDuringSchedulingIgnoredDuringExecution:
+          nodeSelectorTerms:
+          - matchFields:
+            - key: metadata.name
+              operator: In
+              values:
+              - ip-10-0-87-81.ec2.internal
+    containers:
+    - command:
+      - install-cni
+      env:
+      - name: CNI_CONF_NAME
+        value: v2-4-istio-cni.conf
+      - name: CNI_NETWORK_CONFIG
+        valueFrom:
+          configMapKeyRef:
+            key: cni_network_config
+            name: ossm-cni-config-v2-4
+      - name: CNI_NET_DIR
+        value: /etc/cni/multus/net.d
+      - name: CHAINED_CNI_PLUGIN
+        value: "false"
+      - name: MOUNTED_CNI_NET_DIR
+        value: /host/etc/cni/multus/net.d
+      - name: KUBECFG_FILE_NAME
+        value: v2-4-istio-cni.kubeconfig
+      - name: CNI_BINARIES_PREFIX
+        value: v2-4-
+      image: registry.redhat.io/openshift-service-mesh/istio-cni-rhel8@sha256:8e36644dc0f6fe5018b6643cca057ded23aa9b8a026280b864f5f1cc1fa0f259
+      imagePullPolicy: IfNotPresent
+      livenessProbe:
+        failureThreshold: 3
+        httpGet:
+          path: /healthz
+          port: 8000
+          scheme: HTTP
+        periodSeconds: 10
+        successThreshold: 1
+        timeoutSeconds: 1
+      name: install-cni
+      readinessProbe:
+        failureThreshold: 3
+        httpGet:
+          path: /readyz
+          port: 8000
+          scheme: HTTP
+        periodSeconds: 10
+        successThreshold: 1
+        timeoutSeconds: 1
+      resources:
+        requests:
+          cpu: 10m
+          memory: 100Mi
+      securityContext:
+        privileged: true
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /host/opt/cni/bin
+        name: cni-bin-dir
+      - mountPath: /host/etc/cni/
+        name: etc-cni-dir
+      - mountPath: /var/run/istio-cni
+        name: cni-log-dir
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-qndnk
+        readOnly: true
+    dnsPolicy: ClusterFirst
+    enableServiceLinks: true
+    imagePullSecrets:
+    - name: ossm-cni-dockercfg-dkjjn
+    nodeName: ip-10-0-87-81.ec2.internal
+    nodeSelector:
+      kubernetes.io/os: linux
+    preemptionPolicy: PreemptLowerPriority
+    priority: 2000001000
+    priorityClassName: system-node-critical
+    restartPolicy: Always
+    schedulerName: default-scheduler
+    securityContext: {}
+    serviceAccount: ossm-cni
+    serviceAccountName: ossm-cni
+    terminationGracePeriodSeconds: 5
+    tolerations:
+    - effect: NoSchedule
+      operator: Exists
+    - key: CriticalAddonsOnly
+      operator: Exists
+    - effect: NoExecute
+      operator: Exists
+    volumes:
+    - hostPath:
+        path: /var/lib/cni/bin
+        type: ""
+      name: cni-bin-dir
+    - hostPath:
+        path: /etc/cni
+        type: ""
+      name: etc-cni-dir
+    - hostPath:
+        path: /var/run/istio-cni
+        type: ""
+      name: cni-log-dir
+    - name: kube-api-access-qndnk
+      projected:
+        defaultMode: 420
+        sources:
+        - serviceAccountToken:
+            expirationSeconds: 3607
+            path: token
+        - configMap:
+            items:
+            - key: ca.crt
+              path: ca.crt
+            name: kube-root-ca.crt
+        - downwardAPI:
+            items:
+            - fieldRef:
+                apiVersion: v1
+                fieldPath: metadata.namespace
+              path: namespace
+        - configMap:
+            items:
+            - key: service-ca.crt
+              path: service-ca.crt
+            name: openshift-service-ca.crt
+  status:
+    conditions:
+    - lastProbeTime: null
+      lastTransitionTime: "2024-06-05T10:45:39Z"
+      status: "True"
+      type: Initialized
+    - lastProbeTime: null
+      lastTransitionTime: "2024-06-05T10:45:49Z"
+      status: "True"
+      type: Ready
+    - lastProbeTime: null
+      lastTransitionTime: "2024-06-05T10:45:49Z"
+      status: "True"
+      type: ContainersReady
+    - lastProbeTime: null
+      lastTransitionTime: "2024-06-05T10:45:39Z"
+      status: "True"
+      type: PodScheduled
+    containerStatuses:
+    - containerID: cri-o://1398c3e0809fc8544b14664c063e033c7252e863d73276d1e7fabc768509687a
+      image: registry.redhat.io/openshift-service-mesh/istio-cni-rhel8@sha256:8e36644dc0f6fe5018b6643cca057ded23aa9b8a026280b864f5f1cc1fa0f259
+      imageID: registry.redhat.io/openshift-service-mesh/istio-cni-rhel8@sha256:2e95bb70438631316d4bf8c435fa1bd03c2edbcc178f5ad6128564e2444339cc
+      lastState: {}
+      name: install-cni
+      ready: true
+      restartCount: 0
+      started: true
+      state:
+        running:
+          startedAt: "2024-06-05T10:45:48Z"
+    hostIP: 10.0.87.81
+    phase: Running
+    podIP: 10.129.0.74
+    podIPs:
+    - ip: 10.129.0.74
+    qosClass: Burstable
+    startTime: "2024-06-05T10:45:39Z"
+- apiVersion: v1
+  kind: Pod
+  metadata:
+    annotations:
+      k8s.ovn.org/pod-networks: '{"default":{"ip_addresses":["10.128.2.18/23"],"mac_address":"0a:58:0a:80:02:12","gateway_ips":["10.128.2.1"],"routes":[{"dest":"10.128.0.0/14","nextHop":"10.128.2.1"},{"dest":"172.30.0.0/16","nextHop":"10.128.2.1"},{"dest":"100.64.0.0/16","nextHop":"10.128.2.1"}],"ip_address":"10.128.2.18/23","gateway_ip":"10.128.2.1"}}'
+      k8s.v1.cni.cncf.io/network-status: |-
+        [{
+            "name": "ovn-kubernetes",
+            "interface": "eth0",
+            "ips": [
+                "10.128.2.18"
+            ],
+            "mac": "0a:58:0a:80:02:12",
+            "default": true,
+            "dns": {}
+        }]
+      openshift.io/scc: privileged
+      sidecar.istio.io/inject: "false"
+    creationTimestamp: "2024-06-05T10:45:39Z"
+    generateName: istio-cni-node-v2-4-
+    labels:
+      controller-revision-hash: 55546b5fc9
+      k8s-app: istio-cni-node-v2-4
+      pod-template-generation: "1"
+      release: istio
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            f:k8s.ovn.org/pod-networks: {}
+      manager: ip-10-0-91-247
+      operation: Update
+      subresource: status
+      time: "2024-06-05T10:45:39Z"
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:sidecar.istio.io/inject: {}
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:controller-revision-hash: {}
+            f:k8s-app: {}
+            f:pod-template-generation: {}
+            f:release: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"6b942067-8aec-45b0-82d4-3e0ab08caefe"}: {}
+        f:spec:
+          f:affinity:
+            .: {}
+            f:nodeAffinity:
+              .: {}
+              f:requiredDuringSchedulingIgnoredDuringExecution: {}
+          f:containers:
+            k:{"name":"install-cni"}:
+              .: {}
+              f:command: {}
+              f:env:
+                .: {}
+                k:{"name":"CHAINED_CNI_PLUGIN"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+                k:{"name":"CNI_BINARIES_PREFIX"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+                k:{"name":"CNI_CONF_NAME"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+                k:{"name":"CNI_NET_DIR"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+                k:{"name":"CNI_NETWORK_CONFIG"}:
+                  .: {}
+                  f:name: {}
+                  f:valueFrom:
+                    .: {}
+                    f:configMapKeyRef: {}
+                k:{"name":"KUBECFG_FILE_NAME"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+                k:{"name":"MOUNTED_CNI_NET_DIR"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+              f:image: {}
+              f:imagePullPolicy: {}
+              f:livenessProbe:
+                .: {}
+                f:failureThreshold: {}
+                f:httpGet:
+                  .: {}
+                  f:path: {}
+                  f:port: {}
+                  f:scheme: {}
+                f:periodSeconds: {}
+                f:successThreshold: {}
+                f:timeoutSeconds: {}
+              f:name: {}
+              f:readinessProbe:
+                .: {}
+                f:failureThreshold: {}
+                f:httpGet:
+                  .: {}
+                  f:path: {}
+                  f:port: {}
+                  f:scheme: {}
+                f:periodSeconds: {}
+                f:successThreshold: {}
+                f:timeoutSeconds: {}
+              f:resources:
+                .: {}
+                f:requests:
+                  .: {}
+                  f:cpu: {}
+                  f:memory: {}
+              f:securityContext:
+                .: {}
+                f:privileged: {}
+              f:terminationMessagePath: {}
+              f:terminationMessagePolicy: {}
+              f:volumeMounts:
+                .: {}
+                k:{"mountPath":"/host/etc/cni/"}:
+                  .: {}
+                  f:mountPath: {}
+                  f:name: {}
+                k:{"mountPath":"/host/opt/cni/bin"}:
+                  .: {}
+                  f:mountPath: {}
+                  f:name: {}
+                k:{"mountPath":"/var/run/istio-cni"}:
+                  .: {}
+                  f:mountPath: {}
+                  f:name: {}
+          f:dnsPolicy: {}
+          f:enableServiceLinks: {}
+          f:nodeSelector: {}
+          f:priorityClassName: {}
+          f:restartPolicy: {}
+          f:schedulerName: {}
+          f:securityContext: {}
+          f:serviceAccount: {}
+          f:serviceAccountName: {}
+          f:terminationGracePeriodSeconds: {}
+          f:tolerations: {}
+          f:volumes:
+            .: {}
+            k:{"name":"cni-bin-dir"}:
+              .: {}
+              f:hostPath:
+                .: {}
+                f:path: {}
+                f:type: {}
+              f:name: {}
+            k:{"name":"cni-log-dir"}:
+              .: {}
+              f:hostPath:
+                .: {}
+                f:path: {}
+                f:type: {}
+              f:name: {}
+            k:{"name":"etc-cni-dir"}:
+              .: {}
+              f:hostPath:
+                .: {}
+                f:path: {}
+                f:type: {}
+              f:name: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2024-06-05T10:45:39Z"
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            f:k8s.v1.cni.cncf.io/network-status: {}
+      manager: multus-daemon
+      operation: Update
+      subresource: status
+      time: "2024-06-05T10:45:40Z"
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          f:conditions:
+            k:{"type":"ContainersReady"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+            k:{"type":"Initialized"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+            k:{"type":"Ready"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+          f:containerStatuses: {}
+          f:hostIP: {}
+          f:phase: {}
+          f:podIP: {}
+          f:podIPs:
+            .: {}
+            k:{"ip":"10.128.2.18"}:
+              .: {}
+              f:ip: {}
+          f:startTime: {}
+      manager: kubelet
+      operation: Update
+      subresource: status
+      time: "2024-06-05T10:45:53Z"
+    name: istio-cni-node-v2-4-9ct4z
+    namespace: openshift-operators
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: DaemonSet
+      name: istio-cni-node-v2-4
+      uid: 6b942067-8aec-45b0-82d4-3e0ab08caefe
+    resourceVersion: "35289"
+    uid: fc82635d-d68a-417c-802f-71fcfc5d655e
+  spec:
+    affinity:
+      nodeAffinity:
+        requiredDuringSchedulingIgnoredDuringExecution:
+          nodeSelectorTerms:
+          - matchFields:
+            - key: metadata.name
+              operator: In
+              values:
+              - ip-10-0-91-247.ec2.internal
+    containers:
+    - command:
+      - install-cni
+      env:
+      - name: CNI_CONF_NAME
+        value: v2-4-istio-cni.conf
+      - name: CNI_NETWORK_CONFIG
+        valueFrom:
+          configMapKeyRef:
+            key: cni_network_config
+            name: ossm-cni-config-v2-4
+      - name: CNI_NET_DIR
+        value: /etc/cni/multus/net.d
+      - name: CHAINED_CNI_PLUGIN
+        value: "false"
+      - name: MOUNTED_CNI_NET_DIR
+        value: /host/etc/cni/multus/net.d
+      - name: KUBECFG_FILE_NAME
+        value: v2-4-istio-cni.kubeconfig
+      - name: CNI_BINARIES_PREFIX
+        value: v2-4-
+      image: registry.redhat.io/openshift-service-mesh/istio-cni-rhel8@sha256:8e36644dc0f6fe5018b6643cca057ded23aa9b8a026280b864f5f1cc1fa0f259
+      imagePullPolicy: IfNotPresent
+      livenessProbe:
+        failureThreshold: 3
+        httpGet:
+          path: /healthz
+          port: 8000
+          scheme: HTTP
+        periodSeconds: 10
+        successThreshold: 1
+        timeoutSeconds: 1
+      name: install-cni
+      readinessProbe:
+        failureThreshold: 3
+        httpGet:
+          path: /readyz
+          port: 8000
+          scheme: HTTP
+        periodSeconds: 10
+        successThreshold: 1
+        timeoutSeconds: 1
+      resources:
+        requests:
+          cpu: 10m
+          memory: 100Mi
+      securityContext:
+        privileged: true
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /host/opt/cni/bin
+        name: cni-bin-dir
+      - mountPath: /host/etc/cni/
+        name: etc-cni-dir
+      - mountPath: /var/run/istio-cni
+        name: cni-log-dir
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-t96vg
+        readOnly: true
+    dnsPolicy: ClusterFirst
+    enableServiceLinks: true
+    imagePullSecrets:
+    - name: ossm-cni-dockercfg-dkjjn
+    nodeName: ip-10-0-91-247.ec2.internal
+    nodeSelector:
+      kubernetes.io/os: linux
+    preemptionPolicy: PreemptLowerPriority
+    priority: 2000001000
+    priorityClassName: system-node-critical
+    restartPolicy: Always
+    schedulerName: default-scheduler
+    securityContext: {}
+    serviceAccount: ossm-cni
+    serviceAccountName: ossm-cni
+    terminationGracePeriodSeconds: 5
+    tolerations:
+    - effect: NoSchedule
+      operator: Exists
+    - key: CriticalAddonsOnly
+      operator: Exists
+    - effect: NoExecute
+      operator: Exists
+    volumes:
+    - hostPath:
+        path: /var/lib/cni/bin
+        type: ""
+      name: cni-bin-dir
+    - hostPath:
+        path: /etc/cni
+        type: ""
+      name: etc-cni-dir
+    - hostPath:
+        path: /var/run/istio-cni
+        type: ""
+      name: cni-log-dir
+    - name: kube-api-access-t96vg
+      projected:
+        defaultMode: 420
+        sources:
+        - serviceAccountToken:
+            expirationSeconds: 3607
+            path: token
+        - configMap:
+            items:
+            - key: ca.crt
+              path: ca.crt
+            name: kube-root-ca.crt
+        - downwardAPI:
+            items:
+            - fieldRef:
+                apiVersion: v1
+                fieldPath: metadata.namespace
+              path: namespace
+        - configMap:
+            items:
+            - key: service-ca.crt
+              path: service-ca.crt
+            name: openshift-service-ca.crt
+  status:
+    conditions:
+    - lastProbeTime: null
+      lastTransitionTime: "2024-06-05T10:45:39Z"
+      status: "True"
+      type: Initialized
+    - lastProbeTime: null
+      lastTransitionTime: "2024-06-05T10:45:53Z"
+      status: "True"
+      type: Ready
+    - lastProbeTime: null
+      lastTransitionTime: "2024-06-05T10:45:53Z"
+      status: "True"
+      type: ContainersReady
+    - lastProbeTime: null
+      lastTransitionTime: "2024-06-05T10:45:39Z"
+      status: "True"
+      type: PodScheduled
+    containerStatuses:
+    - containerID: cri-o://4c7b16e59f278ff131edd7c5bb59538d3c5aa22c8c72c764e8dc8cbf92f2b2ae
+      image: registry.redhat.io/openshift-service-mesh/istio-cni-rhel8@sha256:8e36644dc0f6fe5018b6643cca057ded23aa9b8a026280b864f5f1cc1fa0f259
+      imageID: registry.redhat.io/openshift-service-mesh/istio-cni-rhel8@sha256:2e95bb70438631316d4bf8c435fa1bd03c2edbcc178f5ad6128564e2444339cc
+      lastState: {}
+      name: install-cni
+      ready: true
+      restartCount: 0
+      started: true
+      state:
+        running:
+          startedAt: "2024-06-05T10:45:52Z"
+    hostIP: 10.0.91.247
+    phase: Running
+    podIP: 10.128.2.18
+    podIPs:
+    - ip: 10.128.2.18
+    qosClass: Burstable
+    startTime: "2024-06-05T10:45:39Z"
+- apiVersion: v1
+  kind: Pod
+  metadata:
+    annotations:
+      k8s.ovn.org/pod-networks: '{"default":{"ip_addresses":["10.130.0.65/23"],"mac_address":"0a:58:0a:82:00:41","gateway_ips":["10.130.0.1"],"routes":[{"dest":"10.128.0.0/14","nextHop":"10.130.0.1"},{"dest":"172.30.0.0/16","nextHop":"10.130.0.1"},{"dest":"100.64.0.0/16","nextHop":"10.130.0.1"}],"ip_address":"10.130.0.65/23","gateway_ip":"10.130.0.1"}}'
+      k8s.v1.cni.cncf.io/network-status: |-
+        [{
+            "name": "ovn-kubernetes",
+            "interface": "eth0",
+            "ips": [
+                "10.130.0.65"
+            ],
+            "mac": "0a:58:0a:82:00:41",
+            "default": true,
+            "dns": {}
+        }]
+      openshift.io/scc: privileged
+      sidecar.istio.io/inject: "false"
+    creationTimestamp: "2024-06-05T10:45:39Z"
+    generateName: istio-cni-node-v2-4-
+    labels:
+      controller-revision-hash: 55546b5fc9
+      k8s-app: istio-cni-node-v2-4
+      pod-template-generation: "1"
+      release: istio
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            f:k8s.ovn.org/pod-networks: {}
+      manager: ip-10-0-116-204
+      operation: Update
+      subresource: status
+      time: "2024-06-05T10:45:39Z"
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:sidecar.istio.io/inject: {}
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:controller-revision-hash: {}
+            f:k8s-app: {}
+            f:pod-template-generation: {}
+            f:release: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"6b942067-8aec-45b0-82d4-3e0ab08caefe"}: {}
+        f:spec:
+          f:affinity:
+            .: {}
+            f:nodeAffinity:
+              .: {}
+              f:requiredDuringSchedulingIgnoredDuringExecution: {}
+          f:containers:
+            k:{"name":"install-cni"}:
+              .: {}
+              f:command: {}
+              f:env:
+                .: {}
+                k:{"name":"CHAINED_CNI_PLUGIN"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+                k:{"name":"CNI_BINARIES_PREFIX"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+                k:{"name":"CNI_CONF_NAME"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+                k:{"name":"CNI_NET_DIR"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+                k:{"name":"CNI_NETWORK_CONFIG"}:
+                  .: {}
+                  f:name: {}
+                  f:valueFrom:
+                    .: {}
+                    f:configMapKeyRef: {}
+                k:{"name":"KUBECFG_FILE_NAME"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+                k:{"name":"MOUNTED_CNI_NET_DIR"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+              f:image: {}
+              f:imagePullPolicy: {}
+              f:livenessProbe:
+                .: {}
+                f:failureThreshold: {}
+                f:httpGet:
+                  .: {}
+                  f:path: {}
+                  f:port: {}
+                  f:scheme: {}
+                f:periodSeconds: {}
+                f:successThreshold: {}
+                f:timeoutSeconds: {}
+              f:name: {}
+              f:readinessProbe:
+                .: {}
+                f:failureThreshold: {}
+                f:httpGet:
+                  .: {}
+                  f:path: {}
+                  f:port: {}
+                  f:scheme: {}
+                f:periodSeconds: {}
+                f:successThreshold: {}
+                f:timeoutSeconds: {}
+              f:resources:
+                .: {}
+                f:requests:
+                  .: {}
+                  f:cpu: {}
+                  f:memory: {}
+              f:securityContext:
+                .: {}
+                f:privileged: {}
+              f:terminationMessagePath: {}
+              f:terminationMessagePolicy: {}
+              f:volumeMounts:
+                .: {}
+                k:{"mountPath":"/host/etc/cni/"}:
+                  .: {}
+                  f:mountPath: {}
+                  f:name: {}
+                k:{"mountPath":"/host/opt/cni/bin"}:
+                  .: {}
+                  f:mountPath: {}
+                  f:name: {}
+                k:{"mountPath":"/var/run/istio-cni"}:
+                  .: {}
+                  f:mountPath: {}
+                  f:name: {}
+          f:dnsPolicy: {}
+          f:enableServiceLinks: {}
+          f:nodeSelector: {}
+          f:priorityClassName: {}
+          f:restartPolicy: {}
+          f:schedulerName: {}
+          f:securityContext: {}
+          f:serviceAccount: {}
+          f:serviceAccountName: {}
+          f:terminationGracePeriodSeconds: {}
+          f:tolerations: {}
+          f:volumes:
+            .: {}
+            k:{"name":"cni-bin-dir"}:
+              .: {}
+              f:hostPath:
+                .: {}
+                f:path: {}
+                f:type: {}
+              f:name: {}
+            k:{"name":"cni-log-dir"}:
+              .: {}
+              f:hostPath:
+                .: {}
+                f:path: {}
+                f:type: {}
+              f:name: {}
+            k:{"name":"etc-cni-dir"}:
+              .: {}
+              f:hostPath:
+                .: {}
+                f:path: {}
+                f:type: {}
+              f:name: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2024-06-05T10:45:39Z"
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            f:k8s.v1.cni.cncf.io/network-status: {}
+      manager: multus-daemon
+      operation: Update
+      subresource: status
+      time: "2024-06-05T10:45:40Z"
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          f:conditions:
+            k:{"type":"ContainersReady"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+            k:{"type":"Initialized"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+            k:{"type":"Ready"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+          f:containerStatuses: {}
+          f:hostIP: {}
+          f:phase: {}
+          f:podIP: {}
+          f:podIPs:
+            .: {}
+            k:{"ip":"10.130.0.65"}:
+              .: {}
+              f:ip: {}
+          f:startTime: {}
+      manager: kubelet
+      operation: Update
+      subresource: status
+      time: "2024-06-05T10:45:48Z"
+    name: istio-cni-node-v2-4-c5kc2
+    namespace: openshift-operators
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: DaemonSet
+      name: istio-cni-node-v2-4
+      uid: 6b942067-8aec-45b0-82d4-3e0ab08caefe
+    resourceVersion: "35222"
+    uid: d45bf63b-83fc-461d-8bce-d7f23db8fa13
+  spec:
+    affinity:
+      nodeAffinity:
+        requiredDuringSchedulingIgnoredDuringExecution:
+          nodeSelectorTerms:
+          - matchFields:
+            - key: metadata.name
+              operator: In
+              values:
+              - ip-10-0-116-204.ec2.internal
+    containers:
+    - command:
+      - install-cni
+      env:
+      - name: CNI_CONF_NAME
+        value: v2-4-istio-cni.conf
+      - name: CNI_NETWORK_CONFIG
+        valueFrom:
+          configMapKeyRef:
+            key: cni_network_config
+            name: ossm-cni-config-v2-4
+      - name: CNI_NET_DIR
+        value: /etc/cni/multus/net.d
+      - name: CHAINED_CNI_PLUGIN
+        value: "false"
+      - name: MOUNTED_CNI_NET_DIR
+        value: /host/etc/cni/multus/net.d
+      - name: KUBECFG_FILE_NAME
+        value: v2-4-istio-cni.kubeconfig
+      - name: CNI_BINARIES_PREFIX
+        value: v2-4-
+      image: registry.redhat.io/openshift-service-mesh/istio-cni-rhel8@sha256:8e36644dc0f6fe5018b6643cca057ded23aa9b8a026280b864f5f1cc1fa0f259
+      imagePullPolicy: IfNotPresent
+      livenessProbe:
+        failureThreshold: 3
+        httpGet:
+          path: /healthz
+          port: 8000
+          scheme: HTTP
+        periodSeconds: 10
+        successThreshold: 1
+        timeoutSeconds: 1
+      name: install-cni
+      readinessProbe:
+        failureThreshold: 3
+        httpGet:
+          path: /readyz
+          port: 8000
+          scheme: HTTP
+        periodSeconds: 10
+        successThreshold: 1
+        timeoutSeconds: 1
+      resources:
+        requests:
+          cpu: 10m
+          memory: 100Mi
+      securityContext:
+        privileged: true
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /host/opt/cni/bin
+        name: cni-bin-dir
+      - mountPath: /host/etc/cni/
+        name: etc-cni-dir
+      - mountPath: /var/run/istio-cni
+        name: cni-log-dir
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-xkgw9
+        readOnly: true
+    dnsPolicy: ClusterFirst
+    enableServiceLinks: true
+    imagePullSecrets:
+    - name: ossm-cni-dockercfg-dkjjn
+    nodeName: ip-10-0-116-204.ec2.internal
+    nodeSelector:
+      kubernetes.io/os: linux
+    preemptionPolicy: PreemptLowerPriority
+    priority: 2000001000
+    priorityClassName: system-node-critical
+    restartPolicy: Always
+    schedulerName: default-scheduler
+    securityContext: {}
+    serviceAccount: ossm-cni
+    serviceAccountName: ossm-cni
+    terminationGracePeriodSeconds: 5
+    tolerations:
+    - effect: NoSchedule
+      operator: Exists
+    - key: CriticalAddonsOnly
+      operator: Exists
+    - effect: NoExecute
+      operator: Exists
+    volumes:
+    - hostPath:
+        path: /var/lib/cni/bin
+        type: ""
+      name: cni-bin-dir
+    - hostPath:
+        path: /etc/cni
+        type: ""
+      name: etc-cni-dir
+    - hostPath:
+        path: /var/run/istio-cni
+        type: ""
+      name: cni-log-dir
+    - name: kube-api-access-xkgw9
+      projected:
+        defaultMode: 420
+        sources:
+        - serviceAccountToken:
+            expirationSeconds: 3607
+            path: token
+        - configMap:
+            items:
+            - key: ca.crt
+              path: ca.crt
+            name: kube-root-ca.crt
+        - downwardAPI:
+            items:
+            - fieldRef:
+                apiVersion: v1
+                fieldPath: metadata.namespace
+              path: namespace
+        - configMap:
+            items:
+            - key: service-ca.crt
+              path: service-ca.crt
+            name: openshift-service-ca.crt
+  status:
+    conditions:
+    - lastProbeTime: null
+      lastTransitionTime: "2024-06-05T10:45:39Z"
+      status: "True"
+      type: Initialized
+    - lastProbeTime: null
+      lastTransitionTime: "2024-06-05T10:45:48Z"
+      status: "True"
+      type: Ready
+    - lastProbeTime: null
+      lastTransitionTime: "2024-06-05T10:45:48Z"
+      status: "True"
+      type: ContainersReady
+    - lastProbeTime: null
+      lastTransitionTime: "2024-06-05T10:45:39Z"
+      status: "True"
+      type: PodScheduled
+    containerStatuses:
+    - containerID: cri-o://3949df4e53367e966dfb4fa7795d5f53d210848cc819969bb03fe5b4ae6d4406
+      image: registry.redhat.io/openshift-service-mesh/istio-cni-rhel8@sha256:8e36644dc0f6fe5018b6643cca057ded23aa9b8a026280b864f5f1cc1fa0f259
+      imageID: registry.redhat.io/openshift-service-mesh/istio-cni-rhel8@sha256:2e95bb70438631316d4bf8c435fa1bd03c2edbcc178f5ad6128564e2444339cc
+      lastState: {}
+      name: install-cni
+      ready: true
+      restartCount: 0
+      started: true
+      state:
+        running:
+          startedAt: "2024-06-05T10:45:48Z"
+    hostIP: 10.0.116.204
+    phase: Running
+    podIP: 10.130.0.65
+    podIPs:
+    - ip: 10.130.0.65
+    qosClass: Burstable
+    startTime: "2024-06-05T10:45:39Z"
+- apiVersion: v1
+  kind: Pod
+  metadata:
+    annotations:
+      k8s.ovn.org/pod-networks: '{"default":{"ip_addresses":["10.128.0.63/23"],"mac_address":"0a:58:0a:80:00:3f","gateway_ips":["10.128.0.1"],"routes":[{"dest":"10.128.0.0/14","nextHop":"10.128.0.1"},{"dest":"172.30.0.0/16","nextHop":"10.128.0.1"},{"dest":"100.64.0.0/16","nextHop":"10.128.0.1"}],"ip_address":"10.128.0.63/23","gateway_ip":"10.128.0.1"}}'
+      k8s.v1.cni.cncf.io/network-status: |-
+        [{
+            "name": "ovn-kubernetes",
+            "interface": "eth0",
+            "ips": [
+                "10.128.0.63"
+            ],
+            "mac": "0a:58:0a:80:00:3f",
+            "default": true,
+            "dns": {}
+        }]
+      openshift.io/scc: privileged
+      sidecar.istio.io/inject: "false"
+    creationTimestamp: "2024-06-05T10:45:39Z"
+    generateName: istio-cni-node-v2-4-
+    labels:
+      controller-revision-hash: 55546b5fc9
+      k8s-app: istio-cni-node-v2-4
+      pod-template-generation: "1"
+      release: istio
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            f:k8s.ovn.org/pod-networks: {}
+      manager: ip-10-0-59-50
+      operation: Update
+      subresource: status
+      time: "2024-06-05T10:45:39Z"
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:sidecar.istio.io/inject: {}
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:controller-revision-hash: {}
+            f:k8s-app: {}
+            f:pod-template-generation: {}
+            f:release: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"6b942067-8aec-45b0-82d4-3e0ab08caefe"}: {}
+        f:spec:
+          f:affinity:
+            .: {}
+            f:nodeAffinity:
+              .: {}
+              f:requiredDuringSchedulingIgnoredDuringExecution: {}
+          f:containers:
+            k:{"name":"install-cni"}:
+              .: {}
+              f:command: {}
+              f:env:
+                .: {}
+                k:{"name":"CHAINED_CNI_PLUGIN"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+                k:{"name":"CNI_BINARIES_PREFIX"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+                k:{"name":"CNI_CONF_NAME"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+                k:{"name":"CNI_NET_DIR"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+                k:{"name":"CNI_NETWORK_CONFIG"}:
+                  .: {}
+                  f:name: {}
+                  f:valueFrom:
+                    .: {}
+                    f:configMapKeyRef: {}
+                k:{"name":"KUBECFG_FILE_NAME"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+                k:{"name":"MOUNTED_CNI_NET_DIR"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+              f:image: {}
+              f:imagePullPolicy: {}
+              f:livenessProbe:
+                .: {}
+                f:failureThreshold: {}
+                f:httpGet:
+                  .: {}
+                  f:path: {}
+                  f:port: {}
+                  f:scheme: {}
+                f:periodSeconds: {}
+                f:successThreshold: {}
+                f:timeoutSeconds: {}
+              f:name: {}
+              f:readinessProbe:
+                .: {}
+                f:failureThreshold: {}
+                f:httpGet:
+                  .: {}
+                  f:path: {}
+                  f:port: {}
+                  f:scheme: {}
+                f:periodSeconds: {}
+                f:successThreshold: {}
+                f:timeoutSeconds: {}
+              f:resources:
+                .: {}
+                f:requests:
+                  .: {}
+                  f:cpu: {}
+                  f:memory: {}
+              f:securityContext:
+                .: {}
+                f:privileged: {}
+              f:terminationMessagePath: {}
+              f:terminationMessagePolicy: {}
+              f:volumeMounts:
+                .: {}
+                k:{"mountPath":"/host/etc/cni/"}:
+                  .: {}
+                  f:mountPath: {}
+                  f:name: {}
+                k:{"mountPath":"/host/opt/cni/bin"}:
+                  .: {}
+                  f:mountPath: {}
+                  f:name: {}
+                k:{"mountPath":"/var/run/istio-cni"}:
+                  .: {}
+                  f:mountPath: {}
+                  f:name: {}
+          f:dnsPolicy: {}
+          f:enableServiceLinks: {}
+          f:nodeSelector: {}
+          f:priorityClassName: {}
+          f:restartPolicy: {}
+          f:schedulerName: {}
+          f:securityContext: {}
+          f:serviceAccount: {}
+          f:serviceAccountName: {}
+          f:terminationGracePeriodSeconds: {}
+          f:tolerations: {}
+          f:volumes:
+            .: {}
+            k:{"name":"cni-bin-dir"}:
+              .: {}
+              f:hostPath:
+                .: {}
+                f:path: {}
+                f:type: {}
+              f:name: {}
+            k:{"name":"cni-log-dir"}:
+              .: {}
+              f:hostPath:
+                .: {}
+                f:path: {}
+                f:type: {}
+              f:name: {}
+            k:{"name":"etc-cni-dir"}:
+              .: {}
+              f:hostPath:
+                .: {}
+                f:path: {}
+                f:type: {}
+              f:name: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2024-06-05T10:45:39Z"
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            f:k8s.v1.cni.cncf.io/network-status: {}
+      manager: multus-daemon
+      operation: Update
+      subresource: status
+      time: "2024-06-05T10:45:40Z"
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          f:conditions:
+            k:{"type":"ContainersReady"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+            k:{"type":"Initialized"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+            k:{"type":"Ready"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+          f:containerStatuses: {}
+          f:hostIP: {}
+          f:phase: {}
+          f:podIP: {}
+          f:podIPs:
+            .: {}
+            k:{"ip":"10.128.0.63"}:
+              .: {}
+              f:ip: {}
+          f:startTime: {}
+      manager: kubelet
+      operation: Update
+      subresource: status
+      time: "2024-06-05T10:45:48Z"
+    name: istio-cni-node-v2-4-pkz2f
+    namespace: openshift-operators
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: DaemonSet
+      name: istio-cni-node-v2-4
+      uid: 6b942067-8aec-45b0-82d4-3e0ab08caefe
+    resourceVersion: "35208"
+    uid: 4a913ddd-1b82-4a20-aea1-bcbfe7900be9
+  spec:
+    affinity:
+      nodeAffinity:
+        requiredDuringSchedulingIgnoredDuringExecution:
+          nodeSelectorTerms:
+          - matchFields:
+            - key: metadata.name
+              operator: In
+              values:
+              - ip-10-0-59-50.ec2.internal
+    containers:
+    - command:
+      - install-cni
+      env:
+      - name: CNI_CONF_NAME
+        value: v2-4-istio-cni.conf
+      - name: CNI_NETWORK_CONFIG
+        valueFrom:
+          configMapKeyRef:
+            key: cni_network_config
+            name: ossm-cni-config-v2-4
+      - name: CNI_NET_DIR
+        value: /etc/cni/multus/net.d
+      - name: CHAINED_CNI_PLUGIN
+        value: "false"
+      - name: MOUNTED_CNI_NET_DIR
+        value: /host/etc/cni/multus/net.d
+      - name: KUBECFG_FILE_NAME
+        value: v2-4-istio-cni.kubeconfig
+      - name: CNI_BINARIES_PREFIX
+        value: v2-4-
+      image: registry.redhat.io/openshift-service-mesh/istio-cni-rhel8@sha256:8e36644dc0f6fe5018b6643cca057ded23aa9b8a026280b864f5f1cc1fa0f259
+      imagePullPolicy: IfNotPresent
+      livenessProbe:
+        failureThreshold: 3
+        httpGet:
+          path: /healthz
+          port: 8000
+          scheme: HTTP
+        periodSeconds: 10
+        successThreshold: 1
+        timeoutSeconds: 1
+      name: install-cni
+      readinessProbe:
+        failureThreshold: 3
+        httpGet:
+          path: /readyz
+          port: 8000
+          scheme: HTTP
+        periodSeconds: 10
+        successThreshold: 1
+        timeoutSeconds: 1
+      resources:
+        requests:
+          cpu: 10m
+          memory: 100Mi
+      securityContext:
+        privileged: true
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /host/opt/cni/bin
+        name: cni-bin-dir
+      - mountPath: /host/etc/cni/
+        name: etc-cni-dir
+      - mountPath: /var/run/istio-cni
+        name: cni-log-dir
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-r8njq
+        readOnly: true
+    dnsPolicy: ClusterFirst
+    enableServiceLinks: true
+    imagePullSecrets:
+    - name: ossm-cni-dockercfg-dkjjn
+    nodeName: ip-10-0-59-50.ec2.internal
+    nodeSelector:
+      kubernetes.io/os: linux
+    preemptionPolicy: PreemptLowerPriority
+    priority: 2000001000
+    priorityClassName: system-node-critical
+    restartPolicy: Always
+    schedulerName: default-scheduler
+    securityContext: {}
+    serviceAccount: ossm-cni
+    serviceAccountName: ossm-cni
+    terminationGracePeriodSeconds: 5
+    tolerations:
+    - effect: NoSchedule
+      operator: Exists
+    - key: CriticalAddonsOnly
+      operator: Exists
+    - effect: NoExecute
+      operator: Exists
+    volumes:
+    - hostPath:
+        path: /var/lib/cni/bin
+        type: ""
+      name: cni-bin-dir
+    - hostPath:
+        path: /etc/cni
+        type: ""
+      name: etc-cni-dir
+    - hostPath:
+        path: /var/run/istio-cni
+        type: ""
+      name: cni-log-dir
+    - name: kube-api-access-r8njq
+      projected:
+        defaultMode: 420
+        sources:
+        - serviceAccountToken:
+            expirationSeconds: 3607
+            path: token
+        - configMap:
+            items:
+            - key: ca.crt
+              path: ca.crt
+            name: kube-root-ca.crt
+        - downwardAPI:
+            items:
+            - fieldRef:
+                apiVersion: v1
+                fieldPath: metadata.namespace
+              path: namespace
+        - configMap:
+            items:
+            - key: service-ca.crt
+              path: service-ca.crt
+            name: openshift-service-ca.crt
+  status:
+    conditions:
+    - lastProbeTime: null
+      lastTransitionTime: "2024-06-05T10:45:39Z"
+      status: "True"
+      type: Initialized
+    - lastProbeTime: null
+      lastTransitionTime: "2024-06-05T10:45:48Z"
+      status: "True"
+      type: Ready
+    - lastProbeTime: null
+      lastTransitionTime: "2024-06-05T10:45:48Z"
+      status: "True"
+      type: ContainersReady
+    - lastProbeTime: null
+      lastTransitionTime: "2024-06-05T10:45:39Z"
+      status: "True"
+      type: PodScheduled
+    containerStatuses:
+    - containerID: cri-o://16ba3a366d5ef48a20d3bc94b385ba953a112929180804ac3840a4d61864e64b
+      image: registry.redhat.io/openshift-service-mesh/istio-cni-rhel8@sha256:8e36644dc0f6fe5018b6643cca057ded23aa9b8a026280b864f5f1cc1fa0f259
+      imageID: registry.redhat.io/openshift-service-mesh/istio-cni-rhel8@sha256:2e95bb70438631316d4bf8c435fa1bd03c2edbcc178f5ad6128564e2444339cc
+      lastState: {}
+      name: install-cni
+      ready: true
+      restartCount: 0
+      started: true
+      state:
+        running:
+          startedAt: "2024-06-05T10:45:47Z"
+    hostIP: 10.0.59.50
+    phase: Running
+    podIP: 10.128.0.63
+    podIPs:
+    - ip: 10.128.0.63
+    qosClass: Burstable
+    startTime: "2024-06-05T10:45:39Z"
+- apiVersion: v1
+  kind: Pod
+  metadata:
+    annotations:
+      k8s.ovn.org/pod-networks: '{"default":{"ip_addresses":["10.129.2.14/23"],"mac_address":"0a:58:0a:81:02:0e","gateway_ips":["10.129.2.1"],"routes":[{"dest":"10.128.0.0/14","nextHop":"10.129.2.1"},{"dest":"172.30.0.0/16","nextHop":"10.129.2.1"},{"dest":"100.64.0.0/16","nextHop":"10.129.2.1"}],"ip_address":"10.129.2.14/23","gateway_ip":"10.129.2.1"}}'
+      k8s.v1.cni.cncf.io/network-status: |-
+        [{
+            "name": "ovn-kubernetes",
+            "interface": "eth0",
+            "ips": [
+                "10.129.2.14"
+            ],
+            "mac": "0a:58:0a:81:02:0e",
+            "default": true,
+            "dns": {}
+        }]
+      openshift.io/scc: privileged
+      sidecar.istio.io/inject: "false"
+    creationTimestamp: "2024-06-05T10:45:39Z"
+    generateName: istio-cni-node-v2-4-
+    labels:
+      controller-revision-hash: 55546b5fc9
+      k8s-app: istio-cni-node-v2-4
+      pod-template-generation: "1"
+      release: istio
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            f:k8s.ovn.org/pod-networks: {}
+      manager: ip-10-0-105-86
+      operation: Update
+      subresource: status
+      time: "2024-06-05T10:45:39Z"
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:sidecar.istio.io/inject: {}
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:controller-revision-hash: {}
+            f:k8s-app: {}
+            f:pod-template-generation: {}
+            f:release: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"6b942067-8aec-45b0-82d4-3e0ab08caefe"}: {}
+        f:spec:
+          f:affinity:
+            .: {}
+            f:nodeAffinity:
+              .: {}
+              f:requiredDuringSchedulingIgnoredDuringExecution: {}
+          f:containers:
+            k:{"name":"install-cni"}:
+              .: {}
+              f:command: {}
+              f:env:
+                .: {}
+                k:{"name":"CHAINED_CNI_PLUGIN"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+                k:{"name":"CNI_BINARIES_PREFIX"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+                k:{"name":"CNI_CONF_NAME"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+                k:{"name":"CNI_NET_DIR"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+                k:{"name":"CNI_NETWORK_CONFIG"}:
+                  .: {}
+                  f:name: {}
+                  f:valueFrom:
+                    .: {}
+                    f:configMapKeyRef: {}
+                k:{"name":"KUBECFG_FILE_NAME"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+                k:{"name":"MOUNTED_CNI_NET_DIR"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+              f:image: {}
+              f:imagePullPolicy: {}
+              f:livenessProbe:
+                .: {}
+                f:failureThreshold: {}
+                f:httpGet:
+                  .: {}
+                  f:path: {}
+                  f:port: {}
+                  f:scheme: {}
+                f:periodSeconds: {}
+                f:successThreshold: {}
+                f:timeoutSeconds: {}
+              f:name: {}
+              f:readinessProbe:
+                .: {}
+                f:failureThreshold: {}
+                f:httpGet:
+                  .: {}
+                  f:path: {}
+                  f:port: {}
+                  f:scheme: {}
+                f:periodSeconds: {}
+                f:successThreshold: {}
+                f:timeoutSeconds: {}
+              f:resources:
+                .: {}
+                f:requests:
+                  .: {}
+                  f:cpu: {}
+                  f:memory: {}
+              f:securityContext:
+                .: {}
+                f:privileged: {}
+              f:terminationMessagePath: {}
+              f:terminationMessagePolicy: {}
+              f:volumeMounts:
+                .: {}
+                k:{"mountPath":"/host/etc/cni/"}:
+                  .: {}
+                  f:mountPath: {}
+                  f:name: {}
+                k:{"mountPath":"/host/opt/cni/bin"}:
+                  .: {}
+                  f:mountPath: {}
+                  f:name: {}
+                k:{"mountPath":"/var/run/istio-cni"}:
+                  .: {}
+                  f:mountPath: {}
+                  f:name: {}
+          f:dnsPolicy: {}
+          f:enableServiceLinks: {}
+          f:nodeSelector: {}
+          f:priorityClassName: {}
+          f:restartPolicy: {}
+          f:schedulerName: {}
+          f:securityContext: {}
+          f:serviceAccount: {}
+          f:serviceAccountName: {}
+          f:terminationGracePeriodSeconds: {}
+          f:tolerations: {}
+          f:volumes:
+            .: {}
+            k:{"name":"cni-bin-dir"}:
+              .: {}
+              f:hostPath:
+                .: {}
+                f:path: {}
+                f:type: {}
+              f:name: {}
+            k:{"name":"cni-log-dir"}:
+              .: {}
+              f:hostPath:
+                .: {}
+                f:path: {}
+                f:type: {}
+              f:name: {}
+            k:{"name":"etc-cni-dir"}:
+              .: {}
+              f:hostPath:
+                .: {}
+                f:path: {}
+                f:type: {}
+              f:name: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2024-06-05T10:45:39Z"
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            f:k8s.v1.cni.cncf.io/network-status: {}
+      manager: multus-daemon
+      operation: Update
+      subresource: status
+      time: "2024-06-05T10:45:40Z"
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          f:conditions:
+            k:{"type":"ContainersReady"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+            k:{"type":"Initialized"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+            k:{"type":"Ready"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+          f:containerStatuses: {}
+          f:hostIP: {}
+          f:phase: {}
+          f:podIP: {}
+          f:podIPs:
+            .: {}
+            k:{"ip":"10.129.2.14"}:
+              .: {}
+              f:ip: {}
+          f:startTime: {}
+      manager: kubelet
+      operation: Update
+      subresource: status
+      time: "2024-06-05T10:45:46Z"
+    name: istio-cni-node-v2-4-wrsw7
+    namespace: openshift-operators
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: DaemonSet
+      name: istio-cni-node-v2-4
+      uid: 6b942067-8aec-45b0-82d4-3e0ab08caefe
+    resourceVersion: "35169"
+    uid: e20505a2-2a61-4908-b1eb-4af754bfba24
+  spec:
+    affinity:
+      nodeAffinity:
+        requiredDuringSchedulingIgnoredDuringExecution:
+          nodeSelectorTerms:
+          - matchFields:
+            - key: metadata.name
+              operator: In
+              values:
+              - ip-10-0-105-86.ec2.internal
+    containers:
+    - command:
+      - install-cni
+      env:
+      - name: CNI_CONF_NAME
+        value: v2-4-istio-cni.conf
+      - name: CNI_NETWORK_CONFIG
+        valueFrom:
+          configMapKeyRef:
+            key: cni_network_config
+            name: ossm-cni-config-v2-4
+      - name: CNI_NET_DIR
+        value: /etc/cni/multus/net.d
+      - name: CHAINED_CNI_PLUGIN
+        value: "false"
+      - name: MOUNTED_CNI_NET_DIR
+        value: /host/etc/cni/multus/net.d
+      - name: KUBECFG_FILE_NAME
+        value: v2-4-istio-cni.kubeconfig
+      - name: CNI_BINARIES_PREFIX
+        value: v2-4-
+      image: registry.redhat.io/openshift-service-mesh/istio-cni-rhel8@sha256:8e36644dc0f6fe5018b6643cca057ded23aa9b8a026280b864f5f1cc1fa0f259
+      imagePullPolicy: IfNotPresent
+      livenessProbe:
+        failureThreshold: 3
+        httpGet:
+          path: /healthz
+          port: 8000
+          scheme: HTTP
+        periodSeconds: 10
+        successThreshold: 1
+        timeoutSeconds: 1
+      name: install-cni
+      readinessProbe:
+        failureThreshold: 3
+        httpGet:
+          path: /readyz
+          port: 8000
+          scheme: HTTP
+        periodSeconds: 10
+        successThreshold: 1
+        timeoutSeconds: 1
+      resources:
+        requests:
+          cpu: 10m
+          memory: 100Mi
+      securityContext:
+        privileged: true
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /host/opt/cni/bin
+        name: cni-bin-dir
+      - mountPath: /host/etc/cni/
+        name: etc-cni-dir
+      - mountPath: /var/run/istio-cni
+        name: cni-log-dir
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-62stk
+        readOnly: true
+    dnsPolicy: ClusterFirst
+    enableServiceLinks: true
+    imagePullSecrets:
+    - name: ossm-cni-dockercfg-dkjjn
+    nodeName: ip-10-0-105-86.ec2.internal
+    nodeSelector:
+      kubernetes.io/os: linux
+    preemptionPolicy: PreemptLowerPriority
+    priority: 2000001000
+    priorityClassName: system-node-critical
+    restartPolicy: Always
+    schedulerName: default-scheduler
+    securityContext: {}
+    serviceAccount: ossm-cni
+    serviceAccountName: ossm-cni
+    terminationGracePeriodSeconds: 5
+    tolerations:
+    - effect: NoSchedule
+      operator: Exists
+    - key: CriticalAddonsOnly
+      operator: Exists
+    - effect: NoExecute
+      operator: Exists
+    volumes:
+    - hostPath:
+        path: /var/lib/cni/bin
+        type: ""
+      name: cni-bin-dir
+    - hostPath:
+        path: /etc/cni
+        type: ""
+      name: etc-cni-dir
+    - hostPath:
+        path: /var/run/istio-cni
+        type: ""
+      name: cni-log-dir
+    - name: kube-api-access-62stk
+      projected:
+        defaultMode: 420
+        sources:
+        - serviceAccountToken:
+            expirationSeconds: 3607
+            path: token
+        - configMap:
+            items:
+            - key: ca.crt
+              path: ca.crt
+            name: kube-root-ca.crt
+        - downwardAPI:
+            items:
+            - fieldRef:
+                apiVersion: v1
+                fieldPath: metadata.namespace
+              path: namespace
+        - configMap:
+            items:
+            - key: service-ca.crt
+              path: service-ca.crt
+            name: openshift-service-ca.crt
+  status:
+    conditions:
+    - lastProbeTime: null
+      lastTransitionTime: "2024-06-05T10:45:39Z"
+      status: "True"
+      type: Initialized
+    - lastProbeTime: null
+      lastTransitionTime: "2024-06-05T10:45:46Z"
+      status: "True"
+      type: Ready
+    - lastProbeTime: null
+      lastTransitionTime: "2024-06-05T10:45:46Z"
+      status: "True"
+      type: ContainersReady
+    - lastProbeTime: null
+      lastTransitionTime: "2024-06-05T10:45:39Z"
+      status: "True"
+      type: PodScheduled
+    containerStatuses:
+    - containerID: cri-o://e8aa69f898459074f28efa98fc8559c4a1b24338e0629f67f9307ec8bbd773d8
+      image: registry.redhat.io/openshift-service-mesh/istio-cni-rhel8@sha256:8e36644dc0f6fe5018b6643cca057ded23aa9b8a026280b864f5f1cc1fa0f259
+      imageID: registry.redhat.io/openshift-service-mesh/istio-cni-rhel8@sha256:2e95bb70438631316d4bf8c435fa1bd03c2edbcc178f5ad6128564e2444339cc
+      lastState: {}
+      name: install-cni
+      ready: true
+      restartCount: 0
+      started: true
+      state:
+        running:
+          startedAt: "2024-06-05T10:45:45Z"
+    hostIP: 10.0.105.86
+    phase: Running
+    podIP: 10.129.2.14
+    podIPs:
+    - ip: 10.129.2.14
+    qosClass: Burstable
+    startTime: "2024-06-05T10:45:39Z"
+- apiVersion: v1
+  kind: Pod
+  metadata:
+    annotations:
+      k8s.ovn.org/pod-networks: '{"default":{"ip_addresses":["10.131.0.22/23"],"mac_address":"0a:58:0a:83:00:16","gateway_ips":["10.131.0.1"],"routes":[{"dest":"10.128.0.0/14","nextHop":"10.131.0.1"},{"dest":"172.30.0.0/16","nextHop":"10.131.0.1"},{"dest":"100.64.0.0/16","nextHop":"10.131.0.1"}],"ip_address":"10.131.0.22/23","gateway_ip":"10.131.0.1"}}'
+      k8s.v1.cni.cncf.io/network-status: |-
+        [{
+            "name": "ovn-kubernetes",
+            "interface": "eth0",
+            "ips": [
+                "10.131.0.22"
+            ],
+            "mac": "0a:58:0a:83:00:16",
+            "default": true,
+            "dns": {}
+        }]
+      openshift.io/scc: privileged
+      sidecar.istio.io/inject: "false"
+    creationTimestamp: "2024-06-05T10:45:39Z"
+    generateName: istio-cni-node-v2-4-
+    labels:
+      controller-revision-hash: 55546b5fc9
+      k8s-app: istio-cni-node-v2-4
+      pod-template-generation: "1"
+      release: istio
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            f:k8s.ovn.org/pod-networks: {}
+      manager: ip-10-0-53-229
+      operation: Update
+      subresource: status
+      time: "2024-06-05T10:45:39Z"
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:sidecar.istio.io/inject: {}
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:controller-revision-hash: {}
+            f:k8s-app: {}
+            f:pod-template-generation: {}
+            f:release: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"6b942067-8aec-45b0-82d4-3e0ab08caefe"}: {}
+        f:spec:
+          f:affinity:
+            .: {}
+            f:nodeAffinity:
+              .: {}
+              f:requiredDuringSchedulingIgnoredDuringExecution: {}
+          f:containers:
+            k:{"name":"install-cni"}:
+              .: {}
+              f:command: {}
+              f:env:
+                .: {}
+                k:{"name":"CHAINED_CNI_PLUGIN"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+                k:{"name":"CNI_BINARIES_PREFIX"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+                k:{"name":"CNI_CONF_NAME"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+                k:{"name":"CNI_NET_DIR"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+                k:{"name":"CNI_NETWORK_CONFIG"}:
+                  .: {}
+                  f:name: {}
+                  f:valueFrom:
+                    .: {}
+                    f:configMapKeyRef: {}
+                k:{"name":"KUBECFG_FILE_NAME"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+                k:{"name":"MOUNTED_CNI_NET_DIR"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+              f:image: {}
+              f:imagePullPolicy: {}
+              f:livenessProbe:
+                .: {}
+                f:failureThreshold: {}
+                f:httpGet:
+                  .: {}
+                  f:path: {}
+                  f:port: {}
+                  f:scheme: {}
+                f:periodSeconds: {}
+                f:successThreshold: {}
+                f:timeoutSeconds: {}
+              f:name: {}
+              f:readinessProbe:
+                .: {}
+                f:failureThreshold: {}
+                f:httpGet:
+                  .: {}
+                  f:path: {}
+                  f:port: {}
+                  f:scheme: {}
+                f:periodSeconds: {}
+                f:successThreshold: {}
+                f:timeoutSeconds: {}
+              f:resources:
+                .: {}
+                f:requests:
+                  .: {}
+                  f:cpu: {}
+                  f:memory: {}
+              f:securityContext:
+                .: {}
+                f:privileged: {}
+              f:terminationMessagePath: {}
+              f:terminationMessagePolicy: {}
+              f:volumeMounts:
+                .: {}
+                k:{"mountPath":"/host/etc/cni/"}:
+                  .: {}
+                  f:mountPath: {}
+                  f:name: {}
+                k:{"mountPath":"/host/opt/cni/bin"}:
+                  .: {}
+                  f:mountPath: {}
+                  f:name: {}
+                k:{"mountPath":"/var/run/istio-cni"}:
+                  .: {}
+                  f:mountPath: {}
+                  f:name: {}
+          f:dnsPolicy: {}
+          f:enableServiceLinks: {}
+          f:nodeSelector: {}
+          f:priorityClassName: {}
+          f:restartPolicy: {}
+          f:schedulerName: {}
+          f:securityContext: {}
+          f:serviceAccount: {}
+          f:serviceAccountName: {}
+          f:terminationGracePeriodSeconds: {}
+          f:tolerations: {}
+          f:volumes:
+            .: {}
+            k:{"name":"cni-bin-dir"}:
+              .: {}
+              f:hostPath:
+                .: {}
+                f:path: {}
+                f:type: {}
+              f:name: {}
+            k:{"name":"cni-log-dir"}:
+              .: {}
+              f:hostPath:
+                .: {}
+                f:path: {}
+                f:type: {}
+              f:name: {}
+            k:{"name":"etc-cni-dir"}:
+              .: {}
+              f:hostPath:
+                .: {}
+                f:path: {}
+                f:type: {}
+              f:name: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2024-06-05T10:45:39Z"
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            f:k8s.v1.cni.cncf.io/network-status: {}
+      manager: multus-daemon
+      operation: Update
+      subresource: status
+      time: "2024-06-05T10:45:40Z"
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          f:conditions:
+            k:{"type":"ContainersReady"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+            k:{"type":"Initialized"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+            k:{"type":"Ready"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+          f:containerStatuses: {}
+          f:hostIP: {}
+          f:phase: {}
+          f:podIP: {}
+          f:podIPs:
+            .: {}
+            k:{"ip":"10.131.0.22"}:
+              .: {}
+              f:ip: {}
+          f:startTime: {}
+      manager: kubelet
+      operation: Update
+      subresource: status
+      time: "2024-06-05T10:45:47Z"
+    name: istio-cni-node-v2-4-x9hlx
+    namespace: openshift-operators
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: DaemonSet
+      name: istio-cni-node-v2-4
+      uid: 6b942067-8aec-45b0-82d4-3e0ab08caefe
+    resourceVersion: "35190"
+    uid: b2cfe921-3c42-4d8c-92cb-1f76eb3990bd
+  spec:
+    affinity:
+      nodeAffinity:
+        requiredDuringSchedulingIgnoredDuringExecution:
+          nodeSelectorTerms:
+          - matchFields:
+            - key: metadata.name
+              operator: In
+              values:
+              - ip-10-0-53-229.ec2.internal
+    containers:
+    - command:
+      - install-cni
+      env:
+      - name: CNI_CONF_NAME
+        value: v2-4-istio-cni.conf
+      - name: CNI_NETWORK_CONFIG
+        valueFrom:
+          configMapKeyRef:
+            key: cni_network_config
+            name: ossm-cni-config-v2-4
+      - name: CNI_NET_DIR
+        value: /etc/cni/multus/net.d
+      - name: CHAINED_CNI_PLUGIN
+        value: "false"
+      - name: MOUNTED_CNI_NET_DIR
+        value: /host/etc/cni/multus/net.d
+      - name: KUBECFG_FILE_NAME
+        value: v2-4-istio-cni.kubeconfig
+      - name: CNI_BINARIES_PREFIX
+        value: v2-4-
+      image: registry.redhat.io/openshift-service-mesh/istio-cni-rhel8@sha256:8e36644dc0f6fe5018b6643cca057ded23aa9b8a026280b864f5f1cc1fa0f259
+      imagePullPolicy: IfNotPresent
+      livenessProbe:
+        failureThreshold: 3
+        httpGet:
+          path: /healthz
+          port: 8000
+          scheme: HTTP
+        periodSeconds: 10
+        successThreshold: 1
+        timeoutSeconds: 1
+      name: install-cni
+      readinessProbe:
+        failureThreshold: 3
+        httpGet:
+          path: /readyz
+          port: 8000
+          scheme: HTTP
+        periodSeconds: 10
+        successThreshold: 1
+        timeoutSeconds: 1
+      resources:
+        requests:
+          cpu: 10m
+          memory: 100Mi
+      securityContext:
+        privileged: true
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /host/opt/cni/bin
+        name: cni-bin-dir
+      - mountPath: /host/etc/cni/
+        name: etc-cni-dir
+      - mountPath: /var/run/istio-cni
+        name: cni-log-dir
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-g854h
+        readOnly: true
+    dnsPolicy: ClusterFirst
+    enableServiceLinks: true
+    imagePullSecrets:
+    - name: ossm-cni-dockercfg-dkjjn
+    nodeName: ip-10-0-53-229.ec2.internal
+    nodeSelector:
+      kubernetes.io/os: linux
+    preemptionPolicy: PreemptLowerPriority
+    priority: 2000001000
+    priorityClassName: system-node-critical
+    restartPolicy: Always
+    schedulerName: default-scheduler
+    securityContext: {}
+    serviceAccount: ossm-cni
+    serviceAccountName: ossm-cni
+    terminationGracePeriodSeconds: 5
+    tolerations:
+    - effect: NoSchedule
+      operator: Exists
+    - key: CriticalAddonsOnly
+      operator: Exists
+    - effect: NoExecute
+      operator: Exists
+    volumes:
+    - hostPath:
+        path: /var/lib/cni/bin
+        type: ""
+      name: cni-bin-dir
+    - hostPath:
+        path: /etc/cni
+        type: ""
+      name: etc-cni-dir
+    - hostPath:
+        path: /var/run/istio-cni
+        type: ""
+      name: cni-log-dir
+    - name: kube-api-access-g854h
+      projected:
+        defaultMode: 420
+        sources:
+        - serviceAccountToken:
+            expirationSeconds: 3607
+            path: token
+        - configMap:
+            items:
+            - key: ca.crt
+              path: ca.crt
+            name: kube-root-ca.crt
+        - downwardAPI:
+            items:
+            - fieldRef:
+                apiVersion: v1
+                fieldPath: metadata.namespace
+              path: namespace
+        - configMap:
+            items:
+            - key: service-ca.crt
+              path: service-ca.crt
+            name: openshift-service-ca.crt
+  status:
+    conditions:
+    - lastProbeTime: null
+      lastTransitionTime: "2024-06-05T10:45:39Z"
+      status: "True"
+      type: Initialized
+    - lastProbeTime: null
+      lastTransitionTime: "2024-06-05T10:45:47Z"
+      status: "True"
+      type: Ready
+    - lastProbeTime: null
+      lastTransitionTime: "2024-06-05T10:45:47Z"
+      status: "True"
+      type: ContainersReady
+    - lastProbeTime: null
+      lastTransitionTime: "2024-06-05T10:45:39Z"
+      status: "True"
+      type: PodScheduled
+    containerStatuses:
+    - containerID: cri-o://1ae32f1ae2ea71fb293537aa156e4ec1e33a60798a4e8f113cb1eb2cdfae40de
+      image: registry.redhat.io/openshift-service-mesh/istio-cni-rhel8@sha256:8e36644dc0f6fe5018b6643cca057ded23aa9b8a026280b864f5f1cc1fa0f259
+      imageID: registry.redhat.io/openshift-service-mesh/istio-cni-rhel8@sha256:2e95bb70438631316d4bf8c435fa1bd03c2edbcc178f5ad6128564e2444339cc
+      lastState: {}
+      name: install-cni
+      ready: true
+      restartCount: 0
+      started: true
+      state:
+        running:
+          startedAt: "2024-06-05T10:45:46Z"
+    hostIP: 10.0.53.229
+    phase: Running
+    podIP: 10.131.0.22
+    podIPs:
+    - ip: 10.131.0.22
+    qosClass: Burstable
+    startTime: "2024-06-05T10:45:39Z"
+- apiVersion: v1
+  kind: Pod
+  metadata:
+    annotations:
+      alm-examples: "[\n  {\n    \"apiVersion\": \"maistra.io/v2\",\n    \"kind\":
+        \"ServiceMeshControlPlane\",\n    \"metadata\": {\n      \"name\": \"basic\",\n
+        \     \"namespace\": \"control-plane-namespace\"\n    },\n    \"spec\": {\n
+        \     \"version\": \"v2.5\",\n      \"tracing\": {\n        \"type\": \"Jaeger\",\n
+        \       \"sampling\": 10000\n      },\n      \"policy\": {\n         \"type\":
+        \"Istiod\"\n      },\n      \"telemetry\": {\n         \"type\": \"Istiod\"\n
+        \     },\n      \"addons\": {\n        \"jaeger\": {\n          \"install\":
+        {\n            \"storage\": {\n              \"type\": \"Memory\"\n            }\n
+        \         }\n        },\n        \"prometheus\": {\n          \"enabled\":
+        true\n        },\n        \"kiali\": {\n          \"enabled\": true\n        },\n
+        \       \"grafana\": {\n          \"enabled\": true\n        }\n      }\n
+        \   }\n  },\n  {\n    \"apiVersion\": \"maistra.io/v1\",\n    \"kind\": \"ServiceMeshMemberRoll\",\n
+        \   \"metadata\": {\n      \"name\": \"default\",\n      \"namespace\": \"control-plane-namespace\"\n
+        \   },\n    \"spec\": {\n      \"members\": [\n        \"your-project\",\n
+        \       \"another-of-your-projects\" \n      ]\n    }\n  },\n  {\n    \"apiVersion\":
+        \"maistra.io/v1\",\n    \"kind\": \"ServiceMeshMember\",\n    \"metadata\":
+        {\n      \"name\": \"default\",\n      \"namespace\": \"application-namespace\"\n
+        \   },\n    \"spec\": {\n      \"controlPlaneRef\": {\n        \"name\": \"basic\",\n
+        \       \"namespace\": \"control-plane-namespace\"\n      }\n    }\n  }\n]"
+      capabilities: Seamless Upgrades
+      categories: OpenShift Optional, Integration & Delivery
+      certified: "false"
+      containerImage: registry.redhat.io/openshift-service-mesh/istio-rhel8-operator@sha256:d256a729a61e11dbba4d724612b23d4e5662dbb01f1567dec9fa13adab6287a5
+      createdAt: 2024-03-18T18:51:19CET
+      description: The OpenShift Service Mesh Operator enables you to install, configure,
+        and manage an instance of Red Hat OpenShift Service Mesh. OpenShift Service
+        Mesh is based on the open source Istio project.
+      features.operators.openshift.io/cnf: "false"
+      features.operators.openshift.io/cni: "true"
+      features.operators.openshift.io/csi: "false"
+      features.operators.openshift.io/disconnected: "true"
+      features.operators.openshift.io/fips-compliant: "true"
+      features.operators.openshift.io/proxy-aware: "true"
+      features.operators.openshift.io/tls-profiles: "false"
+      features.operators.openshift.io/token-auth-aws: "false"
+      features.operators.openshift.io/token-auth-azure: "false"
+      features.operators.openshift.io/token-auth-gcp: "false"
+      k8s.ovn.org/pod-networks: '{"default":{"ip_addresses":["10.128.2.15/23"],"mac_address":"0a:58:0a:80:02:0f","gateway_ips":["10.128.2.1"],"routes":[{"dest":"10.128.0.0/14","nextHop":"10.128.2.1"},{"dest":"172.30.0.0/16","nextHop":"10.128.2.1"},{"dest":"100.64.0.0/16","nextHop":"10.128.2.1"}],"ip_address":"10.128.2.15/23","gateway_ip":"10.128.2.1"}}'
+      k8s.v1.cni.cncf.io/network-status: |-
+        [{
+            "name": "ovn-kubernetes",
+            "interface": "eth0",
+            "ips": [
+                "10.128.2.15"
+            ],
+            "mac": "0a:58:0a:80:02:0f",
+            "default": true,
+            "dns": {}
+        }]
+      oauth-proxy.name: oauth-proxy
+      oauth-proxy.namespace: openshift
+      oauth-proxy.query: "true"
+      oauth-proxy.tag: v4.4
+      olm.operatorGroup: global-operators
+      olm.operatorNamespace: openshift-operators
+      olm.relatedImage.v2_2.cni: registry.redhat.io/openshift-service-mesh/istio-cni-rhel8@sha256:377c52c8907845335cd861ab73ae54a5e28399514254de8a1361f36f59d9387b
+      olm.relatedImage.v2_2.grafana: registry.redhat.io/openshift-service-mesh/grafana-rhel8@sha256:dff9810ee591b51ac25b93c9cd132d61771fa85888496f84a0da3d9d22831a79
+      olm.relatedImage.v2_2.pilot: registry.redhat.io/openshift-service-mesh/pilot-rhel8@sha256:2f141d3f9386d341addb9fc5aa91a39419af30cb0b53934b89e462aa73ca6143
+      olm.relatedImage.v2_2.prometheus: registry.redhat.io/openshift-service-mesh/prometheus-rhel8@sha256:02440db7428767eb5f4596219b633af0d015edb2b8e5ec85b147dcf8b6cff739
+      olm.relatedImage.v2_2.proxyv2: registry.redhat.io/openshift-service-mesh/proxyv2-rhel8@sha256:f12ac415a61985b7c8b1b1afa91dd52d35defbdbd8facbe5d35d423c62ca1575
+      olm.relatedImage.v2_2.rls: registry.redhat.io/openshift-service-mesh/ratelimit-rhel8@sha256:c098892b78720699a5465696c337dcc887d0aa0de35bfd8f0c03e7e8df6d5379
+      olm.relatedImage.v2_2.wasm-cacher: registry.redhat.io/openshift-service-mesh/pilot-rhel8@sha256:2f141d3f9386d341addb9fc5aa91a39419af30cb0b53934b89e462aa73ca6143
+      olm.relatedImage.v2_3.cni: registry.redhat.io/openshift-service-mesh/istio-cni-rhel8@sha256:d7576d94c50a1f18d5162d45ba9a628303211f64862c1507ad6d15e6bb830c01
+      olm.relatedImage.v2_3.grafana: registry.redhat.io/openshift-service-mesh/grafana-rhel8@sha256:9e30441691add3e43b9034b92fbc3163c2d03230503ced4a169cfe2ff9ad6d5c
+      olm.relatedImage.v2_3.pilot: registry.redhat.io/openshift-service-mesh/pilot-rhel8@sha256:a46c6e3553f38f3ef1ffec6e5f774e7038066ce7db11dc31cdf74bbee25baf6c
+      olm.relatedImage.v2_3.prometheus: registry.redhat.io/openshift-service-mesh/prometheus-rhel8@sha256:b7b9c1481e6a7f59ac31952b11eb01ee0f27047acd13dc673dc969341992bbb6
+      olm.relatedImage.v2_3.proxyv2: registry.redhat.io/openshift-service-mesh/proxyv2-rhel8@sha256:891cac1c03beb2ec60981ed0001add85f0084cda538562e0accc48893494de85
+      olm.relatedImage.v2_3.rls: registry.redhat.io/openshift-service-mesh/ratelimit-rhel8@sha256:666bfe25e4583efa71fa14e587365e63ba9baeb4359f691eb731725a4ad1b5a8
+      olm.relatedImage.v2_3.wasm-cacher: registry.redhat.io/openshift-service-mesh/pilot-rhel8@sha256:a46c6e3553f38f3ef1ffec6e5f774e7038066ce7db11dc31cdf74bbee25baf6c
+      olm.relatedImage.v2_4.cni: registry.redhat.io/openshift-service-mesh/istio-cni-rhel8@sha256:8e36644dc0f6fe5018b6643cca057ded23aa9b8a026280b864f5f1cc1fa0f259
+      olm.relatedImage.v2_4.grafana: registry.redhat.io/openshift-service-mesh/grafana-rhel8@sha256:2474d99af3378c05b26d298cd048895f87d78f6f7627f8f0b391eed299d1b649
+      olm.relatedImage.v2_4.pilot: registry.redhat.io/openshift-service-mesh/pilot-rhel8@sha256:1a8882f482044b38e6d75e322db6d6b80d21525f56fdd08f7f2ee9a58897e742
+      olm.relatedImage.v2_4.prometheus: registry.redhat.io/openshift4/ose-prometheus@sha256:f5654f60b945c6faa2f9d97e048521ae272434aad395db45f2b2f14dc5cece0f
+      olm.relatedImage.v2_4.prometheus-config-reloader: registry.redhat.io/openshift4/ose-prometheus-config-reloader@sha256:c0e4bf1a74d5db4dda67d02a4a7069e898d6a6bf91862846ab96c83b84695fa6
+      olm.relatedImage.v2_4.proxyv2: registry.redhat.io/openshift-service-mesh/proxyv2-rhel8@sha256:186619a888331a58729e27e67fbcee236875c1998b6714565238db53e9a1f8bd
+      olm.relatedImage.v2_4.rls: registry.redhat.io/openshift-service-mesh/ratelimit-rhel8@sha256:69232a0efae0517a33513582c8b088f6142314316a202b46de869df448494454
+      olm.relatedImage.v2_5.cni: registry.redhat.io/openshift-service-mesh/istio-cni-rhel8@sha256:205a39b2b48bff0d705c1879da7a2969c201eb319d38b2235ac1caff5bed4360
+      olm.relatedImage.v2_5.grafana: registry.redhat.io/openshift-service-mesh/grafana-rhel8@sha256:b2576fb445714ff8cd38f08967e7ff2af2b7431300be5281f73e5918fbb8acbb
+      olm.relatedImage.v2_5.pilot: registry.redhat.io/openshift-service-mesh/pilot-rhel8@sha256:f12207461e6613649d6c62eea7bdf00829715249068796d59ba2fe99c19948ae
+      olm.relatedImage.v2_5.prometheus: registry.redhat.io/openshift4/ose-prometheus@sha256:f5654f60b945c6faa2f9d97e048521ae272434aad395db45f2b2f14dc5cece0f
+      olm.relatedImage.v2_5.prometheus-config-reloader: registry.redhat.io/openshift4/ose-prometheus-config-reloader@sha256:c0e4bf1a74d5db4dda67d02a4a7069e898d6a6bf91862846ab96c83b84695fa6
+      olm.relatedImage.v2_5.proxyv2: registry.redhat.io/openshift-service-mesh/proxyv2-rhel8@sha256:7c413c4ec671f301ea71b6ad59d4673929f2d110e4e427beeb487c74b393e083
+      olm.relatedImage.v2_5.rls: registry.redhat.io/openshift-service-mesh/ratelimit-rhel8@sha256:89d092eb5d4a0452a6830d14e4972e33235e83ca8bc14ecacf47d7391bab3b8a
+      olm.skipRange: '>=1.0.2 <2.5.1-0'
+      olm.targetNamespaces: ""
+      openshift.io/scc: restricted-v2
+      operatorframework.io/properties: '{"properties":[{"type":"olm.gvk","value":{"group":"maistra.io","kind":"ServiceMeshControlPlane","version":"v1"}},{"type":"olm.gvk","value":{"group":"maistra.io","kind":"ServiceMeshControlPlane","version":"v2"}},{"type":"olm.gvk","value":{"group":"maistra.io","kind":"ServiceMeshMember","version":"v1"}},{"type":"olm.gvk","value":{"group":"maistra.io","kind":"ServiceMeshMemberRoll","version":"v1"}},{"type":"olm.package","value":{"packageName":"servicemeshoperator","version":"2.5.1-0"}}]}'
+      operators.openshift.io/infrastructure-features: '["Disconnected","fips"]'
+      operators.openshift.io/valid-subscription: '["OpenShift Container Platform",
+        "OpenShift Platform Plus"]'
+      repository: https://github.com/maistra/istio-operator
+      seccomp.security.alpha.kubernetes.io/pod: runtime/default
+      support: Red Hat, Inc.
+    creationTimestamp: "2024-06-05T10:44:58Z"
+    generateName: istio-operator-58c556c9df-
+    labels:
+      name: istio-operator
+      pod-template-hash: 58c556c9df
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            f:k8s.ovn.org/pod-networks: {}
+      manager: ip-10-0-91-247
+      operation: Update
+      subresource: status
+      time: "2024-06-05T10:44:58Z"
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:alm-examples: {}
+            f:capabilities: {}
+            f:categories: {}
+            f:certified: {}
+            f:containerImage: {}
+            f:createdAt: {}
+            f:description: {}
+            f:features.operators.openshift.io/cnf: {}
+            f:features.operators.openshift.io/cni: {}
+            f:features.operators.openshift.io/csi: {}
+            f:features.operators.openshift.io/disconnected: {}
+            f:features.operators.openshift.io/fips-compliant: {}
+            f:features.operators.openshift.io/proxy-aware: {}
+            f:features.operators.openshift.io/tls-profiles: {}
+            f:features.operators.openshift.io/token-auth-aws: {}
+            f:features.operators.openshift.io/token-auth-azure: {}
+            f:features.operators.openshift.io/token-auth-gcp: {}
+            f:oauth-proxy.name: {}
+            f:oauth-proxy.namespace: {}
+            f:oauth-proxy.query: {}
+            f:oauth-proxy.tag: {}
+            f:olm.operatorGroup: {}
+            f:olm.operatorNamespace: {}
+            f:olm.relatedImage.v2_2.cni: {}
+            f:olm.relatedImage.v2_2.grafana: {}
+            f:olm.relatedImage.v2_2.pilot: {}
+            f:olm.relatedImage.v2_2.prometheus: {}
+            f:olm.relatedImage.v2_2.proxyv2: {}
+            f:olm.relatedImage.v2_2.rls: {}
+            f:olm.relatedImage.v2_2.wasm-cacher: {}
+            f:olm.relatedImage.v2_3.cni: {}
+            f:olm.relatedImage.v2_3.grafana: {}
+            f:olm.relatedImage.v2_3.pilot: {}
+            f:olm.relatedImage.v2_3.prometheus: {}
+            f:olm.relatedImage.v2_3.proxyv2: {}
+            f:olm.relatedImage.v2_3.rls: {}
+            f:olm.relatedImage.v2_3.wasm-cacher: {}
+            f:olm.relatedImage.v2_4.cni: {}
+            f:olm.relatedImage.v2_4.grafana: {}
+            f:olm.relatedImage.v2_4.pilot: {}
+            f:olm.relatedImage.v2_4.prometheus: {}
+            f:olm.relatedImage.v2_4.prometheus-config-reloader: {}
+            f:olm.relatedImage.v2_4.proxyv2: {}
+            f:olm.relatedImage.v2_4.rls: {}
+            f:olm.relatedImage.v2_5.cni: {}
+            f:olm.relatedImage.v2_5.grafana: {}
+            f:olm.relatedImage.v2_5.pilot: {}
+            f:olm.relatedImage.v2_5.prometheus: {}
+            f:olm.relatedImage.v2_5.prometheus-config-reloader: {}
+            f:olm.relatedImage.v2_5.proxyv2: {}
+            f:olm.relatedImage.v2_5.rls: {}
+            f:olm.skipRange: {}
+            f:olm.targetNamespaces: {}
+            f:operatorframework.io/properties: {}
+            f:operators.openshift.io/infrastructure-features: {}
+            f:operators.openshift.io/valid-subscription: {}
+            f:repository: {}
+            f:support: {}
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:name: {}
+            f:pod-template-hash: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"6b5db3a3-4857-456d-85fc-f1696fcf6e18"}: {}
+        f:spec:
+          f:containers:
+            k:{"name":"istio-operator"}:
+              .: {}
+              f:command: {}
+              f:env:
+                .: {}
+                k:{"name":"OPERATOR_CONDITION_NAME"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+                k:{"name":"OPERATOR_NAME"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+                k:{"name":"POD_NAME"}:
+                  .: {}
+                  f:name: {}
+                  f:valueFrom:
+                    .: {}
+                    f:fieldRef: {}
+                k:{"name":"WATCH_NAMESPACE"}:
+                  .: {}
+                  f:name: {}
+              f:image: {}
+              f:imagePullPolicy: {}
+              f:name: {}
+              f:ports:
+                .: {}
+                k:{"containerPort":11200,"protocol":"TCP"}:
+                  .: {}
+                  f:containerPort: {}
+                  f:name: {}
+                  f:protocol: {}
+                k:{"containerPort":11999,"protocol":"TCP"}:
+                  .: {}
+                  f:containerPort: {}
+                  f:name: {}
+                  f:protocol: {}
+                k:{"containerPort":60000,"protocol":"TCP"}:
+                  .: {}
+                  f:containerPort: {}
+                  f:name: {}
+                  f:protocol: {}
+              f:readinessProbe:
+                .: {}
+                f:failureThreshold: {}
+                f:httpGet:
+                  .: {}
+                  f:path: {}
+                  f:port: {}
+                  f:scheme: {}
+                f:periodSeconds: {}
+                f:successThreshold: {}
+                f:timeoutSeconds: {}
+              f:resources: {}
+              f:terminationMessagePath: {}
+              f:terminationMessagePolicy: {}
+              f:volumeMounts:
+                .: {}
+                k:{"mountPath":"/etc/operator/olm"}:
+                  .: {}
+                  f:mountPath: {}
+                  f:name: {}
+                  f:readOnly: {}
+                k:{"mountPath":"/tmp/k8s-webhook-server/serving-certs"}:
+                  .: {}
+                  f:mountPath: {}
+                  f:name: {}
+                  f:readOnly: {}
+                k:{"mountPath":"/usr/local/share/istio-operator/templates/"}:
+                  .: {}
+                  f:mountPath: {}
+                  f:name: {}
+                  f:readOnly: {}
+          f:dnsPolicy: {}
+          f:enableServiceLinks: {}
+          f:restartPolicy: {}
+          f:schedulerName: {}
+          f:securityContext: {}
+          f:serviceAccount: {}
+          f:serviceAccountName: {}
+          f:terminationGracePeriodSeconds: {}
+          f:volumes:
+            .: {}
+            k:{"name":"operator-olm-config"}:
+              .: {}
+              f:downwardAPI:
+                .: {}
+                f:defaultMode: {}
+                f:items: {}
+              f:name: {}
+            k:{"name":"smcp-templates"}:
+              .: {}
+              f:configMap:
+                .: {}
+                f:defaultMode: {}
+                f:name: {}
+                f:optional: {}
+              f:name: {}
+            k:{"name":"webhook-tls-volume"}:
+              .: {}
+              f:name: {}
+              f:secret:
+                .: {}
+                f:defaultMode: {}
+                f:optional: {}
+                f:secretName: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2024-06-05T10:44:58Z"
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            f:k8s.v1.cni.cncf.io/network-status: {}
+      manager: multus-daemon
+      operation: Update
+      subresource: status
+      time: "2024-06-05T10:44:58Z"
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          f:conditions:
+            k:{"type":"ContainersReady"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+            k:{"type":"Initialized"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+            k:{"type":"Ready"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+          f:containerStatuses: {}
+          f:hostIP: {}
+          f:phase: {}
+          f:podIP: {}
+          f:podIPs:
+            .: {}
+            k:{"ip":"10.128.2.15"}:
+              .: {}
+              f:ip: {}
+          f:startTime: {}
+      manager: kubelet
+      operation: Update
+      subresource: status
+      time: "2024-06-05T10:45:28Z"
+    name: istio-operator-58c556c9df-wrl9h
+    namespace: openshift-operators
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: ReplicaSet
+      name: istio-operator-58c556c9df
+      uid: 6b5db3a3-4857-456d-85fc-f1696fcf6e18
+    resourceVersion: "34603"
+    uid: 460bab17-08d7-4c5e-8f19-55139b8db362
+  spec:
+    containers:
+    - command:
+      - istio-operator
+      - --config
+      - /etc/operator/olm/config.properties
+      env:
+      - name: WATCH_NAMESPACE
+      - name: POD_NAME
+        valueFrom:
+          fieldRef:
+            apiVersion: v1
+            fieldPath: metadata.name
+      - name: OPERATOR_NAME
+        value: istio-operator
+      - name: OPERATOR_CONDITION_NAME
+        value: servicemeshoperator.v2.5.1
+      image: registry.redhat.io/openshift-service-mesh/istio-rhel8-operator@sha256:d256a729a61e11dbba4d724612b23d4e5662dbb01f1567dec9fa13adab6287a5
+      imagePullPolicy: Always
+      name: istio-operator
+      ports:
+      - containerPort: 11999
+        name: validation
+        protocol: TCP
+      - containerPort: 11200
+        name: probes
+        protocol: TCP
+      - containerPort: 60000
+        name: metrics
+        protocol: TCP
+      readinessProbe:
+        failureThreshold: 3
+        httpGet:
+          path: /readyz
+          port: 11200
+          scheme: HTTP
+        periodSeconds: 10
+        successThreshold: 1
+        timeoutSeconds: 1
+      resources: {}
+      securityContext:
+        allowPrivilegeEscalation: false
+        capabilities:
+          drop:
+          - ALL
+        runAsNonRoot: true
+        runAsUser: 1000420000
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /etc/operator/olm
+        name: operator-olm-config
+        readOnly: true
+      - mountPath: /tmp/k8s-webhook-server/serving-certs
+        name: webhook-tls-volume
+        readOnly: true
+      - mountPath: /usr/local/share/istio-operator/templates/
+        name: smcp-templates
+        readOnly: true
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-c8rc4
+        readOnly: true
+    dnsPolicy: ClusterFirst
+    enableServiceLinks: true
+    imagePullSecrets:
+    - name: istio-operator-dockercfg-m4f48
+    nodeName: ip-10-0-91-247.ec2.internal
+    preemptionPolicy: PreemptLowerPriority
+    priority: 0
+    restartPolicy: Always
+    schedulerName: default-scheduler
+    securityContext:
+      fsGroup: 1000420000
+      seLinuxOptions:
+        level: s0:c21,c0
+      seccompProfile:
+        type: RuntimeDefault
+    serviceAccount: istio-operator
+    serviceAccountName: istio-operator
+    terminationGracePeriodSeconds: 30
+    tolerations:
+    - effect: NoExecute
+      key: node.kubernetes.io/not-ready
+      operator: Exists
+      tolerationSeconds: 300
+    - effect: NoExecute
+      key: node.kubernetes.io/unreachable
+      operator: Exists
+      tolerationSeconds: 300
+    volumes:
+    - downwardAPI:
+        defaultMode: 420
+        items:
+        - fieldRef:
+            apiVersion: v1
+            fieldPath: metadata.annotations
+          path: config.properties
+      name: operator-olm-config
+    - name: webhook-tls-volume
+      secret:
+        defaultMode: 420
+        optional: true
+        secretName: maistra-operator-serving-cert
+    - configMap:
+        defaultMode: 420
+        name: smcp-templates
+        optional: true
+      name: smcp-templates
+    - name: kube-api-access-c8rc4
+      projected:
+        defaultMode: 420
+        sources:
+        - serviceAccountToken:
+            expirationSeconds: 3607
+            path: token
+        - configMap:
+            items:
+            - key: ca.crt
+              path: ca.crt
+            name: kube-root-ca.crt
+        - downwardAPI:
+            items:
+            - fieldRef:
+                apiVersion: v1
+                fieldPath: metadata.namespace
+              path: namespace
+        - configMap:
+            items:
+            - key: service-ca.crt
+              path: service-ca.crt
+            name: openshift-service-ca.crt
+  status:
+    conditions:
+    - lastProbeTime: null
+      lastTransitionTime: "2024-06-05T10:44:58Z"
+      status: "True"
+      type: Initialized
+    - lastProbeTime: null
+      lastTransitionTime: "2024-06-05T10:45:28Z"
+      status: "True"
+      type: Ready
+    - lastProbeTime: null
+      lastTransitionTime: "2024-06-05T10:45:28Z"
+      status: "True"
+      type: ContainersReady
+    - lastProbeTime: null
+      lastTransitionTime: "2024-06-05T10:44:58Z"
+      status: "True"
+      type: PodScheduled
+    containerStatuses:
+    - containerID: cri-o://4cbf7d7c7b4eaded3e6403df519e1590358e0b36f81ab20a475373fd42841dbe
+      image: registry.redhat.io/openshift-service-mesh/istio-rhel8-operator@sha256:d256a729a61e11dbba4d724612b23d4e5662dbb01f1567dec9fa13adab6287a5
+      imageID: registry.redhat.io/openshift-service-mesh/istio-rhel8-operator@sha256:2cb94a0220ff8d69c17f2eee8db3c6f045776d63de4dc80e1a4ab31190d5c04f
+      lastState:
+        terminated:
+          containerID: cri-o://902a79f01accecc8343e2d96bc9b5f6771e0c1825b665ce39f79dd1a0b33dd7d
+          exitCode: 0
+          finishedAt: "2024-06-05T10:45:08Z"
+          reason: Completed
+          startedAt: "2024-06-05T10:45:05Z"
+      name: istio-operator
+      ready: true
+      restartCount: 1
+      started: true
+      state:
+        running:
+          startedAt: "2024-06-05T10:45:15Z"
+    hostIP: 10.0.91.247
+    phase: Running
+    podIP: 10.128.2.15
+    podIPs:
+    - ip: 10.128.2.15
+    qosClass: BestEffort
+    startTime: "2024-06-05T10:44:58Z"
+- apiVersion: v1
+  kind: Pod
+  metadata:
+    annotations:
+      alm-examples: |-
+        [
+          {
+            "apiVersion": "jaegertracing.io/v1",
+            "kind": "Jaeger",
+            "metadata": {
+              "name": "jaeger-all-in-one-inmemory"
+            },
+            "spec": {
+              "strategy": "allInOne"
+            },
+            "status":{
+              "phase":"Running"
+            }
+          }
+        ]
+      capabilities: Deep Insights
+      categories: Logging & Tracing
+      certified: "false"
+      containerImage: registry.redhat.io/rhosdt/jaeger-rhel8-operator@sha256:0d5bab1b26572942eef72f8068dcc1eb219b67896ddc216905c650724f3e45fa
+      createdAt: "2024-05-30 13:37:02.722571"
+      description: Provides tracing, monitoring and troubleshooting for microservices-based
+        distributed systems
+      features.operators.openshift.io/disconnected: "true"
+      features.operators.openshift.io/fips-compliant: "false"
+      features.operators.openshift.io/proxy-aware: "true"
+      features.operators.openshift.io/tls-profiles: "false"
+      features.operators.openshift.io/token-auth-aws: "false"
+      features.operators.openshift.io/token-auth-azure: "false"
+      features.operators.openshift.io/token-auth-gcp: "false"
+      k8s.ovn.org/pod-networks: '{"default":{"ip_addresses":["10.128.2.14/23"],"mac_address":"0a:58:0a:80:02:0e","gateway_ips":["10.128.2.1"],"routes":[{"dest":"10.128.0.0/14","nextHop":"10.128.2.1"},{"dest":"172.30.0.0/16","nextHop":"10.128.2.1"},{"dest":"100.64.0.0/16","nextHop":"10.128.2.1"}],"ip_address":"10.128.2.14/23","gateway_ip":"10.128.2.1"}}'
+      k8s.v1.cni.cncf.io/network-status: |-
+        [{
+            "name": "ovn-kubernetes",
+            "interface": "eth0",
+            "ips": [
+                "10.128.2.14"
+            ],
+            "mac": "0a:58:0a:80:02:0e",
+            "default": true,
+            "dns": {}
+        }]
+      olm.operatorGroup: global-operators
+      olm.operatorNamespace: openshift-operators
+      olm.skipRange: '>=1.13.0 <1.57.0-5'
+      olm.targetNamespaces: ""
+      olmcahash: 11cd494d64009afc544a330322088f78c1bf39580674c68f0ddfdd14c0ecacde
+      openshift.io/scc: restricted-v2
+      operatorframework.io/cluster-monitoring: "true"
+      operatorframework.io/properties: '{"properties":[{"type":"olm.gvk","value":{"group":"jaegertracing.io","kind":"Jaeger","version":"v1"}},{"type":"olm.package","value":{"packageName":"jaeger-product","version":"1.57.0-5"}}]}'
+      operatorframework.io/suggested-namespace: openshift-distributed-tracing
+      operators.openshift.io/infrastructure-features: '["disconnected"]'
+      operators.openshift.io/valid-subscription: '["OpenShift Container Platform",
+        "OpenShift Platform Plus"]'
+      repository: https://github.com/jaegertracing/jaeger-operator
+      seccomp.security.alpha.kubernetes.io/pod: runtime/default
+      support: Red Hat
+    creationTimestamp: "2024-06-05T10:44:56Z"
+    generateName: jaeger-operator-5655cc79c-
+    labels:
+      name: jaeger-operator
+      pod-template-hash: 5655cc79c
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            f:k8s.ovn.org/pod-networks: {}
+      manager: ip-10-0-91-247
+      operation: Update
+      subresource: status
+      time: "2024-06-05T10:44:56Z"
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:alm-examples: {}
+            f:capabilities: {}
+            f:categories: {}
+            f:certified: {}
+            f:containerImage: {}
+            f:createdAt: {}
+            f:description: {}
+            f:features.operators.openshift.io/disconnected: {}
+            f:features.operators.openshift.io/fips-compliant: {}
+            f:features.operators.openshift.io/proxy-aware: {}
+            f:features.operators.openshift.io/tls-profiles: {}
+            f:features.operators.openshift.io/token-auth-aws: {}
+            f:features.operators.openshift.io/token-auth-azure: {}
+            f:features.operators.openshift.io/token-auth-gcp: {}
+            f:olm.operatorGroup: {}
+            f:olm.operatorNamespace: {}
+            f:olm.skipRange: {}
+            f:olm.targetNamespaces: {}
+            f:olmcahash: {}
+            f:operatorframework.io/cluster-monitoring: {}
+            f:operatorframework.io/properties: {}
+            f:operatorframework.io/suggested-namespace: {}
+            f:operators.openshift.io/infrastructure-features: {}
+            f:operators.openshift.io/valid-subscription: {}
+            f:repository: {}
+            f:support: {}
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:name: {}
+            f:pod-template-hash: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"30586e2e-6f73-4659-aa0f-43063682258f"}: {}
+        f:spec:
+          f:containers:
+            k:{"name":"jaeger-operator"}:
+              .: {}
+              f:args: {}
+              f:env:
+                .: {}
+                k:{"name":"KAFKA-PROVISIONING-MINIMAL"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+                k:{"name":"LOG-LEVEL"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+                k:{"name":"OPERATOR_CONDITION_NAME"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+                k:{"name":"OPERATOR_NAME"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+                k:{"name":"POD_NAME"}:
+                  .: {}
+                  f:name: {}
+                  f:valueFrom:
+                    .: {}
+                    f:fieldRef: {}
+                k:{"name":"POD_NAMESPACE"}:
+                  .: {}
+                  f:name: {}
+                  f:valueFrom:
+                    .: {}
+                    f:fieldRef: {}
+                k:{"name":"RELATED_IMAGE_JAEGER_AGENT"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+                k:{"name":"RELATED_IMAGE_JAEGER_ALL_IN_ONE"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+                k:{"name":"RELATED_IMAGE_JAEGER_COLLECTOR"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+                k:{"name":"RELATED_IMAGE_JAEGER_ES_INDEX_CLEANER"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+                k:{"name":"RELATED_IMAGE_JAEGER_ES_ROLLOVER"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+                k:{"name":"RELATED_IMAGE_JAEGER_INGESTER"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+                k:{"name":"RELATED_IMAGE_JAEGER_QUERY"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+                k:{"name":"RELATED_IMAGE_OPENSHIFT_OAUTH_PROXY"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+                k:{"name":"RELATED_IMAGE_OSE_KUBE_RBAC_PROXY"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+                k:{"name":"WATCH_NAMESPACE"}:
+                  .: {}
+                  f:name: {}
+                  f:valueFrom:
+                    .: {}
+                    f:fieldRef: {}
+              f:image: {}
+              f:imagePullPolicy: {}
+              f:livenessProbe:
+                .: {}
+                f:failureThreshold: {}
+                f:httpGet:
+                  .: {}
+                  f:path: {}
+                  f:port: {}
+                  f:scheme: {}
+                f:initialDelaySeconds: {}
+                f:periodSeconds: {}
+                f:successThreshold: {}
+                f:timeoutSeconds: {}
+              f:name: {}
+              f:ports:
+                .: {}
+                k:{"containerPort":8383,"protocol":"TCP"}:
+                  .: {}
+                  f:containerPort: {}
+                  f:name: {}
+                  f:protocol: {}
+                k:{"containerPort":9443,"protocol":"TCP"}:
+                  .: {}
+                  f:containerPort: {}
+                  f:name: {}
+                  f:protocol: {}
+              f:readinessProbe:
+                .: {}
+                f:failureThreshold: {}
+                f:httpGet:
+                  .: {}
+                  f:path: {}
+                  f:port: {}
+                  f:scheme: {}
+                f:initialDelaySeconds: {}
+                f:periodSeconds: {}
+                f:successThreshold: {}
+                f:timeoutSeconds: {}
+              f:resources:
+                .: {}
+                f:requests:
+                  .: {}
+                  f:cpu: {}
+                  f:memory: {}
+              f:securityContext:
+                .: {}
+                f:allowPrivilegeEscalation: {}
+              f:terminationMessagePath: {}
+              f:terminationMessagePolicy: {}
+              f:volumeMounts:
+                .: {}
+                k:{"mountPath":"/apiserver.local.config/certificates"}:
+                  .: {}
+                  f:mountPath: {}
+                  f:name: {}
+                k:{"mountPath":"/tmp/k8s-webhook-server/serving-certs"}:
+                  .: {}
+                  f:mountPath: {}
+                  f:name: {}
+            k:{"name":"kube-rbac-proxy"}:
+              .: {}
+              f:args: {}
+              f:env:
+                .: {}
+                k:{"name":"OPERATOR_CONDITION_NAME"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+              f:image: {}
+              f:imagePullPolicy: {}
+              f:name: {}
+              f:ports:
+                .: {}
+                k:{"containerPort":8443,"protocol":"TCP"}:
+                  .: {}
+                  f:containerPort: {}
+                  f:name: {}
+                  f:protocol: {}
+              f:resources:
+                .: {}
+                f:limits:
+                  .: {}
+                  f:cpu: {}
+                  f:memory: {}
+                f:requests:
+                  .: {}
+                  f:cpu: {}
+                  f:memory: {}
+              f:terminationMessagePath: {}
+              f:terminationMessagePolicy: {}
+              f:volumeMounts:
+                .: {}
+                k:{"mountPath":"/apiserver.local.config/certificates"}:
+                  .: {}
+                  f:mountPath: {}
+                  f:name: {}
+                k:{"mountPath":"/tmp/k8s-webhook-server/serving-certs"}:
+                  .: {}
+                  f:mountPath: {}
+                  f:name: {}
+          f:dnsPolicy: {}
+          f:enableServiceLinks: {}
+          f:restartPolicy: {}
+          f:schedulerName: {}
+          f:securityContext:
+            .: {}
+            f:runAsNonRoot: {}
+          f:serviceAccount: {}
+          f:serviceAccountName: {}
+          f:terminationGracePeriodSeconds: {}
+          f:volumes:
+            .: {}
+            k:{"name":"apiservice-cert"}:
+              .: {}
+              f:name: {}
+              f:secret:
+                .: {}
+                f:defaultMode: {}
+                f:items: {}
+                f:secretName: {}
+            k:{"name":"cert"}:
+              .: {}
+              f:name: {}
+              f:secret:
+                .: {}
+                f:defaultMode: {}
+                f:secretName: {}
+            k:{"name":"webhook-cert"}:
+              .: {}
+              f:name: {}
+              f:secret:
+                .: {}
+                f:defaultMode: {}
+                f:items: {}
+                f:secretName: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2024-06-05T10:44:56Z"
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            f:k8s.v1.cni.cncf.io/network-status: {}
+      manager: multus-daemon
+      operation: Update
+      subresource: status
+      time: "2024-06-05T10:44:58Z"
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          f:conditions:
+            k:{"type":"ContainersReady"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+            k:{"type":"Initialized"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+            k:{"type":"Ready"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+          f:containerStatuses: {}
+          f:hostIP: {}
+          f:phase: {}
+          f:podIP: {}
+          f:podIPs:
+            .: {}
+            k:{"ip":"10.128.2.14"}:
+              .: {}
+              f:ip: {}
+          f:startTime: {}
+      manager: kubelet
+      operation: Update
+      subresource: status
+      time: "2024-06-05T10:45:16Z"
+    name: jaeger-operator-5655cc79c-rcsh4
+    namespace: openshift-operators
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: ReplicaSet
+      name: jaeger-operator-5655cc79c
+      uid: 30586e2e-6f73-4659-aa0f-43063682258f
+    resourceVersion: "34299"
+    uid: 4a62e50e-9718-4cf3-800d-26dad341d994
+  spec:
+    containers:
+    - args:
+      - start
+      - --health-probe-bind-address=:8081
+      - --leader-elect
+      - --platform=openshift
+      - --openshift-oauth-proxy-imagestream-ns=openshift
+      - --openshift-oauth-proxy-imagestream-name=oauth-proxy
+      - --documentation-url=https://access.redhat.com/documentation/en-us/openshift_container_platform/4.14/html/distributed_tracing/index
+      env:
+      - name: WATCH_NAMESPACE
+        valueFrom:
+          fieldRef:
+            apiVersion: v1
+            fieldPath: metadata.annotations['olm.targetNamespaces']
+      - name: POD_NAMESPACE
+        valueFrom:
+          fieldRef:
+            apiVersion: v1
+            fieldPath: metadata.namespace
+      - name: OPERATOR_NAME
+        value: jaeger-operator
+      - name: LOG-LEVEL
+        value: DEBUG
+      - name: KAFKA-PROVISIONING-MINIMAL
+        value: "true"
+      - name: RELATED_IMAGE_JAEGER_AGENT
+        value: registry.redhat.io/rhosdt/jaeger-agent-rhel8@sha256:5783e9fd32d80d78ed8b6842eb6362b730b13f2ff098cf305e8887dd22e13477
+      - name: RELATED_IMAGE_JAEGER_QUERY
+        value: registry.redhat.io/rhosdt/jaeger-query-rhel8@sha256:95615560040a62e07fac86b347b68d9b5b449f293184e87c260e4edc00f918b4
+      - name: RELATED_IMAGE_JAEGER_COLLECTOR
+        value: registry.redhat.io/rhosdt/jaeger-collector-rhel8@sha256:c545b5167d63ae3e3ff7f16eed02b51172332e7b28ea4634ad7045f7cbe95f45
+      - name: RELATED_IMAGE_JAEGER_INGESTER
+        value: registry.redhat.io/rhosdt/jaeger-ingester-rhel8@sha256:d6c1f6133afac3376b8318c5f67e78b6f0434ec271ab7b4890e4c784af61cfb6
+      - name: RELATED_IMAGE_JAEGER_ALL_IN_ONE
+        value: registry.redhat.io/rhosdt/jaeger-all-in-one-rhel8@sha256:c166f01cff83b0c65c571abaf502d26defcf35c75ff9d0d9d95f895340b64db6
+      - name: RELATED_IMAGE_JAEGER_ES_INDEX_CLEANER
+        value: registry.redhat.io/rhosdt/jaeger-es-index-cleaner-rhel8@sha256:653b08f538b57d550cfe1c49acd65a6a807b0e511ce1f039dc7498a416e5ae6d
+      - name: RELATED_IMAGE_JAEGER_ES_ROLLOVER
+        value: registry.redhat.io/rhosdt/jaeger-es-rollover-rhel8@sha256:caa92aa8c84ecb5e1740a4d41bd4204f134a6a0e86d0f1888b9b0bd59f6d4614
+      - name: RELATED_IMAGE_OPENSHIFT_OAUTH_PROXY
+        value: registry.redhat.io/openshift4/ose-oauth-proxy@sha256:9dd175ddce0d481b120665bf15c5946fdc4111617e37401995e8292e865f6ebf
+      - name: RELATED_IMAGE_OSE_KUBE_RBAC_PROXY
+        value: registry.redhat.io/openshift4/ose-kube-rbac-proxy@sha256:6b33793126e32e75f4fa02dbb014eaa7458f36c70f316a7383171a02c38509f1
+      - name: POD_NAME
+        valueFrom:
+          fieldRef:
+            apiVersion: v1
+            fieldPath: metadata.name
+      - name: OPERATOR_CONDITION_NAME
+        value: jaeger-operator.v1.57.0-5
+      image: registry.redhat.io/rhosdt/jaeger-rhel8-operator@sha256:0d5bab1b26572942eef72f8068dcc1eb219b67896ddc216905c650724f3e45fa
+      imagePullPolicy: Always
+      livenessProbe:
+        failureThreshold: 3
+        httpGet:
+          path: /healthz
+          port: 8081
+          scheme: HTTP
+        initialDelaySeconds: 15
+        periodSeconds: 20
+        successThreshold: 1
+        timeoutSeconds: 1
+      name: jaeger-operator
+      ports:
+      - containerPort: 9443
+        name: webhook-server
+        protocol: TCP
+      - containerPort: 8383
+        name: http-metrics
+        protocol: TCP
+      readinessProbe:
+        failureThreshold: 3
+        httpGet:
+          path: /readyz
+          port: 8081
+          scheme: HTTP
+        initialDelaySeconds: 5
+        periodSeconds: 10
+        successThreshold: 1
+        timeoutSeconds: 1
+      resources:
+        requests:
+          cpu: 100m
+          memory: 128Mi
+      securityContext:
+        allowPrivilegeEscalation: false
+        capabilities:
+          drop:
+          - ALL
+        runAsUser: 1000420000
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /tmp/k8s-webhook-server/serving-certs
+        name: webhook-cert
+      - mountPath: /apiserver.local.config/certificates
+        name: apiservice-cert
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-4dt6f
+        readOnly: true
+    - args:
+      - --secure-listen-address=0.0.0.0:8443
+      - --upstream=http://127.0.0.1:8383/
+      - --logtostderr=true
+      - --v=0
+      env:
+      - name: OPERATOR_CONDITION_NAME
+        value: jaeger-operator.v1.57.0-5
+      image: registry.redhat.io/openshift4/ose-kube-rbac-proxy@sha256:6b33793126e32e75f4fa02dbb014eaa7458f36c70f316a7383171a02c38509f1
+      imagePullPolicy: IfNotPresent
+      name: kube-rbac-proxy
+      ports:
+      - containerPort: 8443
+        name: https
+        protocol: TCP
+      resources:
+        limits:
+          cpu: 500m
+          memory: 128Mi
+        requests:
+          cpu: 5m
+          memory: 64Mi
+      securityContext:
+        allowPrivilegeEscalation: false
+        capabilities:
+          drop:
+          - ALL
+        runAsUser: 1000420000
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /apiserver.local.config/certificates
+        name: apiservice-cert
+      - mountPath: /tmp/k8s-webhook-server/serving-certs
+        name: webhook-cert
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-4dt6f
+        readOnly: true
+    dnsPolicy: ClusterFirst
+    enableServiceLinks: true
+    imagePullSecrets:
+    - name: jaeger-operator-dockercfg-5dd5x
+    nodeName: ip-10-0-91-247.ec2.internal
+    preemptionPolicy: PreemptLowerPriority
+    priority: 0
+    restartPolicy: Always
+    schedulerName: default-scheduler
+    securityContext:
+      fsGroup: 1000420000
+      runAsNonRoot: true
+      seLinuxOptions:
+        level: s0:c21,c0
+      seccompProfile:
+        type: RuntimeDefault
+    serviceAccount: jaeger-operator
+    serviceAccountName: jaeger-operator
+    terminationGracePeriodSeconds: 10
+    tolerations:
+    - effect: NoExecute
+      key: node.kubernetes.io/not-ready
+      operator: Exists
+      tolerationSeconds: 300
+    - effect: NoExecute
+      key: node.kubernetes.io/unreachable
+      operator: Exists
+      tolerationSeconds: 300
+    - effect: NoSchedule
+      key: node.kubernetes.io/memory-pressure
+      operator: Exists
+    volumes:
+    - name: cert
+      secret:
+        defaultMode: 420
+        secretName: jaeger-operator-service-cert
+    - name: apiservice-cert
+      secret:
+        defaultMode: 420
+        items:
+        - key: tls.crt
+          path: apiserver.crt
+        - key: tls.key
+          path: apiserver.key
+        secretName: jaeger-operator-service-cert
+    - name: webhook-cert
+      secret:
+        defaultMode: 420
+        items:
+        - key: tls.crt
+          path: tls.crt
+        - key: tls.key
+          path: tls.key
+        secretName: jaeger-operator-service-cert
+    - name: kube-api-access-4dt6f
+      projected:
+        defaultMode: 420
+        sources:
+        - serviceAccountToken:
+            expirationSeconds: 3607
+            path: token
+        - configMap:
+            items:
+            - key: ca.crt
+              path: ca.crt
+            name: kube-root-ca.crt
+        - downwardAPI:
+            items:
+            - fieldRef:
+                apiVersion: v1
+                fieldPath: metadata.namespace
+              path: namespace
+        - configMap:
+            items:
+            - key: service-ca.crt
+              path: service-ca.crt
+            name: openshift-service-ca.crt
+  status:
+    conditions:
+    - lastProbeTime: null
+      lastTransitionTime: "2024-06-05T10:44:56Z"
+      status: "True"
+      type: Initialized
+    - lastProbeTime: null
+      lastTransitionTime: "2024-06-05T10:45:16Z"
+      status: "True"
+      type: Ready
+    - lastProbeTime: null
+      lastTransitionTime: "2024-06-05T10:45:16Z"
+      status: "True"
+      type: ContainersReady
+    - lastProbeTime: null
+      lastTransitionTime: "2024-06-05T10:44:56Z"
+      status: "True"
+      type: PodScheduled
+    containerStatuses:
+    - containerID: cri-o://244acc2edcab13a9d67e7408fe3797a4efbed7ab4684dfca89a36af249d2675b
+      image: registry.redhat.io/rhosdt/jaeger-rhel8-operator@sha256:0d5bab1b26572942eef72f8068dcc1eb219b67896ddc216905c650724f3e45fa
+      imageID: registry.redhat.io/rhosdt/jaeger-rhel8-operator@sha256:0d5bab1b26572942eef72f8068dcc1eb219b67896ddc216905c650724f3e45fa
+      lastState: {}
+      name: jaeger-operator
+      ready: true
+      restartCount: 0
+      started: true
+      state:
+        running:
+          startedAt: "2024-06-05T10:45:05Z"
+    - containerID: cri-o://b610157470717183b892aacfaf4d774befdd456aac044d6b82ce469c1b538416
+      image: registry.redhat.io/openshift4/ose-kube-rbac-proxy@sha256:6b33793126e32e75f4fa02dbb014eaa7458f36c70f316a7383171a02c38509f1
+      imageID: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:6b33793126e32e75f4fa02dbb014eaa7458f36c70f316a7383171a02c38509f1
+      lastState: {}
+      name: kube-rbac-proxy
+      ready: true
+      restartCount: 0
+      started: true
+      state:
+        running:
+          startedAt: "2024-06-05T10:45:15Z"
+    hostIP: 10.0.91.247
+    phase: Running
+    podIP: 10.128.2.14
+    podIPs:
+    - ip: 10.128.2.14
+    qosClass: Burstable
+    startTime: "2024-06-05T10:44:56Z"
+- apiVersion: v1
+  kind: Pod
+  metadata:
+    annotations:
+      alm-examples: |-
+        [
+          {
+            "apiVersion": "kiali.io/v1alpha1",
+            "kind": "Kiali",
+            "metadata": {
+              "name": "kiali"
+            },
+            "spec": {
+              "version": "default",
+              "istio_namespace": "istio-system",
+              "deployment": {
+                "logger": {
+                  "log_level": "info"
+                },
+                "view_only_mode": false
+              }
+            }
+          },
+          {
+            "apiVersion": "kiali.io/v1alpha1",
+            "kind": "OSSMConsole",
+            "metadata": {
+              "name": "ossmconsole"
+            },
+            "spec": {
+              "version": "default",
+              "kiali": {
+                "serviceName": "",
+                "serviceNamespace": ""
+              }
+            }
+          }
+        ]
+      capabilities: Deep Insights
+      categories: Monitoring,Logging & Tracing
+      certified: "false"
+      containerImage: registry.redhat.io/openshift-service-mesh/kiali-rhel8-operator@sha256:efddc0d03a66c1c076b805f93699e41266f0306d781c88f5bc2cae11a544fbc8
+      createdAt: "2024-04-19T13:18:27Z"
+      description: This productized operator provides Kiali and OSSMC. Kiali is the
+        Istio observability and management Console. OSSMC is the OpenShift Service
+        Mesh Console plugin, powered by Kiali.
+      features.operators.openshift.io/cnf: "false"
+      features.operators.openshift.io/cni: "false"
+      features.operators.openshift.io/csi: "false"
+      features.operators.openshift.io/disconnected: "true"
+      features.operators.openshift.io/fips-compliant: "true"
+      features.operators.openshift.io/proxy-aware: "false"
+      features.operators.openshift.io/tls-profiles: "false"
+      features.operators.openshift.io/token-auth-aws: "false"
+      features.operators.openshift.io/token-auth-azure: "false"
+      features.operators.openshift.io/token-auth-gcp: "false"
+      k8s.ovn.org/pod-networks: '{"default":{"ip_addresses":["10.128.2.17/23"],"mac_address":"0a:58:0a:80:02:11","gateway_ips":["10.128.2.1"],"routes":[{"dest":"10.128.0.0/14","nextHop":"10.128.2.1"},{"dest":"172.30.0.0/16","nextHop":"10.128.2.1"},{"dest":"100.64.0.0/16","nextHop":"10.128.2.1"}],"ip_address":"10.128.2.17/23","gateway_ip":"10.128.2.1"}}'
+      k8s.v1.cni.cncf.io/network-status: |-
+        [{
+            "name": "ovn-kubernetes",
+            "interface": "eth0",
+            "ips": [
+                "10.128.2.17"
+            ],
+            "mac": "0a:58:0a:80:02:11",
+            "default": true,
+            "dns": {}
+        }]
+      olm.operatorGroup: global-operators
+      olm.operatorNamespace: openshift-operators
+      olm.skipRange: '>=1.0.0 <1.73.7'
+      olm.targetNamespaces: ""
+      openshift.io/scc: restricted-v2
+      operatorframework.io/properties: '{"properties":[{"type":"olm.gvk","value":{"group":"kiali.io","kind":"Kiali","version":"v1alpha1"}},{"type":"olm.gvk","value":{"group":"kiali.io","kind":"OSSMConsole","version":"v1alpha1"}},{"type":"olm.package","value":{"packageName":"kiali-ossm","version":"1.73.7"}}]}'
+      operators.openshift.io/infrastructure-features: '["disconnected", "fips"]'
+      operators.openshift.io/valid-subscription: '["OpenShift Container Platform",
+        "OpenShift Platform Plus"]'
+      prometheus.io/path: /metrics
+      prometheus.io/port: "8080"
+      prometheus.io/scrape: "true"
+      repository: https://github.com/kiali/kiali
+      seccomp.security.alpha.kubernetes.io/pod: runtime/default
+      support: Red Hat
+    creationTimestamp: "2024-06-05T10:45:00Z"
+    generateName: kiali-operator-6c74649b84-
+    labels:
+      app: kiali-operator
+      app.kubernetes.io/name: kiali-operator
+      app.kubernetes.io/part-of: kiali-operator
+      app.kubernetes.io/version: v1.73.7
+      name: kiali-operator
+      pod-template-hash: 6c74649b84
+      version: v1.73.7
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            f:k8s.ovn.org/pod-networks: {}
+      manager: ip-10-0-91-247
+      operation: Update
+      subresource: status
+      time: "2024-06-05T10:45:00Z"
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:alm-examples: {}
+            f:capabilities: {}
+            f:categories: {}
+            f:certified: {}
+            f:containerImage: {}
+            f:createdAt: {}
+            f:description: {}
+            f:features.operators.openshift.io/cnf: {}
+            f:features.operators.openshift.io/cni: {}
+            f:features.operators.openshift.io/csi: {}
+            f:features.operators.openshift.io/disconnected: {}
+            f:features.operators.openshift.io/fips-compliant: {}
+            f:features.operators.openshift.io/proxy-aware: {}
+            f:features.operators.openshift.io/tls-profiles: {}
+            f:features.operators.openshift.io/token-auth-aws: {}
+            f:features.operators.openshift.io/token-auth-azure: {}
+            f:features.operators.openshift.io/token-auth-gcp: {}
+            f:olm.operatorGroup: {}
+            f:olm.operatorNamespace: {}
+            f:olm.skipRange: {}
+            f:olm.targetNamespaces: {}
+            f:operatorframework.io/properties: {}
+            f:operators.openshift.io/infrastructure-features: {}
+            f:operators.openshift.io/valid-subscription: {}
+            f:prometheus.io/path: {}
+            f:prometheus.io/port: {}
+            f:prometheus.io/scrape: {}
+            f:repository: {}
+            f:support: {}
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:app: {}
+            f:app.kubernetes.io/name: {}
+            f:app.kubernetes.io/part-of: {}
+            f:app.kubernetes.io/version: {}
+            f:name: {}
+            f:pod-template-hash: {}
+            f:version: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"51b65547-eee9-43da-a4c5-613843a654a0"}: {}
+        f:spec:
+          f:containers:
+            k:{"name":"operator"}:
+              .: {}
+              f:args: {}
+              f:env:
+                .: {}
+                k:{"name":"ACCESSIBLE_NAMESPACES_LABEL"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+                k:{"name":"ALLOW_AD_HOC_KIALI_IMAGE"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+                k:{"name":"ALLOW_AD_HOC_KIALI_NAMESPACE"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+                k:{"name":"ALLOW_AD_HOC_OSSMCONSOLE_IMAGE"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+                k:{"name":"ALLOW_ALL_ACCESSIBLE_NAMESPACES"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+                k:{"name":"ALLOW_SECURITY_CONTEXT_OVERRIDE"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+                k:{"name":"ANSIBLE_CONFIG"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+                k:{"name":"ANSIBLE_DEBUG_LOGS"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+                k:{"name":"ANSIBLE_VERBOSITY_KIALI_KIALI_IO"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+                k:{"name":"ANSIBLE_VERBOSITY_OSSMCONSOLE_KIALI_IO"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+                k:{"name":"OPERATOR_CONDITION_NAME"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+                k:{"name":"POD_NAME"}:
+                  .: {}
+                  f:name: {}
+                  f:valueFrom:
+                    .: {}
+                    f:fieldRef: {}
+                k:{"name":"POD_NAMESPACE"}:
+                  .: {}
+                  f:name: {}
+                  f:valueFrom:
+                    .: {}
+                    f:fieldRef: {}
+                k:{"name":"PROFILE_TASKS_TASK_OUTPUT_LIMIT"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+                k:{"name":"RELATED_IMAGE_kiali_default"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+                k:{"name":"RELATED_IMAGE_kiali_v1_48"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+                k:{"name":"RELATED_IMAGE_kiali_v1_57"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+                k:{"name":"RELATED_IMAGE_kiali_v1_65"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+                k:{"name":"RELATED_IMAGE_kiali_v1_73"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+                k:{"name":"RELATED_IMAGE_ossmconsole_default"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+                k:{"name":"RELATED_IMAGE_ossmconsole_v1_73"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+                k:{"name":"WATCH_NAMESPACE"}:
+                  .: {}
+                  f:name: {}
+                  f:valueFrom:
+                    .: {}
+                    f:fieldRef: {}
+              f:image: {}
+              f:imagePullPolicy: {}
+              f:name: {}
+              f:ports:
+                .: {}
+                k:{"containerPort":8080,"protocol":"TCP"}:
+                  .: {}
+                  f:containerPort: {}
+                  f:name: {}
+                  f:protocol: {}
+              f:resources:
+                .: {}
+                f:requests:
+                  .: {}
+                  f:cpu: {}
+                  f:memory: {}
+              f:securityContext:
+                .: {}
+                f:allowPrivilegeEscalation: {}
+                f:capabilities:
+                  .: {}
+                  f:drop: {}
+                f:privileged: {}
+                f:runAsNonRoot: {}
+              f:terminationMessagePath: {}
+              f:terminationMessagePolicy: {}
+              f:volumeMounts:
+                .: {}
+                k:{"mountPath":"/tmp/ansible-operator/runner"}:
+                  .: {}
+                  f:mountPath: {}
+                  f:name: {}
+          f:dnsPolicy: {}
+          f:enableServiceLinks: {}
+          f:restartPolicy: {}
+          f:schedulerName: {}
+          f:securityContext: {}
+          f:serviceAccount: {}
+          f:serviceAccountName: {}
+          f:terminationGracePeriodSeconds: {}
+          f:volumes:
+            .: {}
+            k:{"name":"runner"}:
+              .: {}
+              f:emptyDir: {}
+              f:name: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2024-06-05T10:45:00Z"
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            f:k8s.v1.cni.cncf.io/network-status: {}
+      manager: multus-daemon
+      operation: Update
+      subresource: status
+      time: "2024-06-05T10:45:00Z"
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          f:conditions:
+            k:{"type":"ContainersReady"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+            k:{"type":"Initialized"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+            k:{"type":"Ready"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+          f:containerStatuses: {}
+          f:hostIP: {}
+          f:phase: {}
+          f:podIP: {}
+          f:podIPs:
+            .: {}
+            k:{"ip":"10.128.2.17"}:
+              .: {}
+              f:ip: {}
+          f:startTime: {}
+      manager: kubelet
+      operation: Update
+      subresource: status
+      time: "2024-06-05T10:45:16Z"
+    name: kiali-operator-6c74649b84-hdnp4
+    namespace: openshift-operators
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: ReplicaSet
+      name: kiali-operator-6c74649b84
+      uid: 51b65547-eee9-43da-a4c5-613843a654a0
+    resourceVersion: "34296"
+    uid: bfa72d85-9f5f-4208-b617-d1be4016a091
+  spec:
+    containers:
+    - args:
+      - --zap-log-level=info
+      - --leader-election-id=kiali-operator
+      - --watches-file=./watches-os.yaml
+      env:
+      - name: WATCH_NAMESPACE
+        valueFrom:
+          fieldRef:
+            apiVersion: v1
+            fieldPath: metadata.annotations['olm.targetNamespaces']
+      - name: POD_NAME
+        valueFrom:
+          fieldRef:
+            apiVersion: v1
+            fieldPath: metadata.name
+      - name: POD_NAMESPACE
+        valueFrom:
+          fieldRef:
+            apiVersion: v1
+            fieldPath: metadata.namespace
+      - name: ALLOW_AD_HOC_KIALI_NAMESPACE
+        value: "false"
+      - name: ALLOW_AD_HOC_KIALI_IMAGE
+        value: "false"
+      - name: ALLOW_AD_HOC_OSSMCONSOLE_IMAGE
+        value: "false"
+      - name: ALLOW_SECURITY_CONTEXT_OVERRIDE
+        value: "false"
+      - name: ALLOW_ALL_ACCESSIBLE_NAMESPACES
+        value: "true"
+      - name: ACCESSIBLE_NAMESPACES_LABEL
+        value: maistra.io/member-of
+      - name: PROFILE_TASKS_TASK_OUTPUT_LIMIT
+        value: "100"
+      - name: ANSIBLE_DEBUG_LOGS
+        value: "True"
+      - name: ANSIBLE_VERBOSITY_KIALI_KIALI_IO
+        value: "1"
+      - name: ANSIBLE_VERBOSITY_OSSMCONSOLE_KIALI_IO
+        value: "1"
+      - name: ANSIBLE_CONFIG
+        value: /etc/ansible/ansible.cfg
+      - name: RELATED_IMAGE_kiali_default
+        value: registry.redhat.io/openshift-service-mesh/kiali-rhel8@sha256:ddbac1fbac65d603795fcb11546bcfee6e7eb3f94a0707071aa33c5dad246a54
+      - name: RELATED_IMAGE_kiali_v1_73
+        value: registry.redhat.io/openshift-service-mesh/kiali-rhel8@sha256:ddbac1fbac65d603795fcb11546bcfee6e7eb3f94a0707071aa33c5dad246a54
+      - name: RELATED_IMAGE_kiali_v1_65
+        value: registry.redhat.io/openshift-service-mesh/kiali-rhel8@sha256:c3054340d3d3dd214069d5d5cfbfa9e7873d2226f2b4c3157edb0ccd0777b3ad
+      - name: RELATED_IMAGE_kiali_v1_57
+        value: registry.redhat.io/openshift-service-mesh/kiali-rhel8@sha256:30da80779f1b43e7e331c902e4319be43fec52467302ba372af7c3b07256bcf4
+      - name: RELATED_IMAGE_kiali_v1_48
+        value: registry.redhat.io/openshift-service-mesh/kiali-rhel8@sha256:7ef41fb8e5ce2b394d67d8dd06bb23f49e249e0c4371cc49659cf2049ae8ad9a
+      - name: RELATED_IMAGE_ossmconsole_default
+        value: registry.redhat.io/openshift-service-mesh/kiali-ossmc-rhel8@sha256:e1038b249f7776e8b50e044a6ac235d1475e7403094f79555541a2a2e87db2e4
+      - name: RELATED_IMAGE_ossmconsole_v1_73
+        value: registry.redhat.io/openshift-service-mesh/kiali-ossmc-rhel8@sha256:e1038b249f7776e8b50e044a6ac235d1475e7403094f79555541a2a2e87db2e4
+      - name: OPERATOR_CONDITION_NAME
+        value: kiali-operator.v1.73.7
+      image: registry.redhat.io/openshift-service-mesh/kiali-rhel8-operator@sha256:efddc0d03a66c1c076b805f93699e41266f0306d781c88f5bc2cae11a544fbc8
+      imagePullPolicy: IfNotPresent
+      name: operator
+      ports:
+      - containerPort: 8080
+        name: http-metrics
+        protocol: TCP
+      resources:
+        requests:
+          cpu: 10m
+          memory: 64Mi
+      securityContext:
+        allowPrivilegeEscalation: false
+        capabilities:
+          drop:
+          - ALL
+        privileged: false
+        runAsNonRoot: true
+        runAsUser: 1000420000
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /tmp/ansible-operator/runner
+        name: runner
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-5tdml
+        readOnly: true
+    dnsPolicy: ClusterFirst
+    enableServiceLinks: true
+    imagePullSecrets:
+    - name: kiali-operator-dockercfg-nzdc2
+    nodeName: ip-10-0-91-247.ec2.internal
+    preemptionPolicy: PreemptLowerPriority
+    priority: 0
+    restartPolicy: Always
+    schedulerName: default-scheduler
+    securityContext:
+      fsGroup: 1000420000
+      seLinuxOptions:
+        level: s0:c21,c0
+      seccompProfile:
+        type: RuntimeDefault
+    serviceAccount: kiali-operator
+    serviceAccountName: kiali-operator
+    terminationGracePeriodSeconds: 30
+    tolerations:
+    - effect: NoExecute
+      key: node.kubernetes.io/not-ready
+      operator: Exists
+      tolerationSeconds: 300
+    - effect: NoExecute
+      key: node.kubernetes.io/unreachable
+      operator: Exists
+      tolerationSeconds: 300
+    - effect: NoSchedule
+      key: node.kubernetes.io/memory-pressure
+      operator: Exists
+    volumes:
+    - emptyDir: {}
+      name: runner
+    - name: kube-api-access-5tdml
+      projected:
+        defaultMode: 420
+        sources:
+        - serviceAccountToken:
+            expirationSeconds: 3607
+            path: token
+        - configMap:
+            items:
+            - key: ca.crt
+              path: ca.crt
+            name: kube-root-ca.crt
+        - downwardAPI:
+            items:
+            - fieldRef:
+                apiVersion: v1
+                fieldPath: metadata.namespace
+              path: namespace
+        - configMap:
+            items:
+            - key: service-ca.crt
+              path: service-ca.crt
+            name: openshift-service-ca.crt
+  status:
+    conditions:
+    - lastProbeTime: null
+      lastTransitionTime: "2024-06-05T10:45:00Z"
+      status: "True"
+      type: Initialized
+    - lastProbeTime: null
+      lastTransitionTime: "2024-06-05T10:45:16Z"
+      status: "True"
+      type: Ready
+    - lastProbeTime: null
+      lastTransitionTime: "2024-06-05T10:45:16Z"
+      status: "True"
+      type: ContainersReady
+    - lastProbeTime: null
+      lastTransitionTime: "2024-06-05T10:45:00Z"
+      status: "True"
+      type: PodScheduled
+    containerStatuses:
+    - containerID: cri-o://8dd139a1d28246193d9c4f7bcc0b613a0e6a4c84c62ee5fb27620f7875bd83b2
+      image: registry.redhat.io/openshift-service-mesh/kiali-rhel8-operator@sha256:efddc0d03a66c1c076b805f93699e41266f0306d781c88f5bc2cae11a544fbc8
+      imageID: registry.redhat.io/openshift-service-mesh/kiali-rhel8-operator@sha256:4919abb410f858d91bb76654aa682a18ab9b87a6c410c5c437d2678afbbf14ee
+      lastState: {}
+      name: operator
+      ready: true
+      restartCount: 0
+      started: true
+      state:
+        running:
+          startedAt: "2024-06-05T10:45:15Z"
+    hostIP: 10.0.91.247
+    phase: Running
+    podIP: 10.128.2.17
+    podIPs:
+    - ip: 10.128.2.17
+    qosClass: Burstable
+    startTime: "2024-06-05T10:45:00Z"
+kind: PodList
+metadata:
+  resourceVersion: "54612"

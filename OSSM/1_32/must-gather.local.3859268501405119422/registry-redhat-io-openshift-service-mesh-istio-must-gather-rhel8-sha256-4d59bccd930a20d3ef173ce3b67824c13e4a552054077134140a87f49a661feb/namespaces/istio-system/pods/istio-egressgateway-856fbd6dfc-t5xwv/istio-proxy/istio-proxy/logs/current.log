@@ -1,0 +1,16 @@
+2024-06-05T10:46:07.155136822Z 2024-06-05T10:46:07.155070Z	info	citadelclient	Citadel client using custom root cert: var/run/secrets/istio/root-cert.pem
+2024-06-05T10:46:07.174205553Z 2024-06-05T10:46:07.174148Z	info	ads	All caches have been synced up in 27.472499ms, marking server ready
+2024-06-05T10:46:07.174468458Z 2024-06-05T10:46:07.174443Z	info	xdsproxy	Initializing with upstream address "istiod-basic.istio-system.svc:15012" and cluster "Kubernetes"
+2024-06-05T10:46:07.178775635Z 2024-06-05T10:46:07.178741Z	info	sds	Starting SDS grpc server
+2024-06-05T10:46:07.244829535Z 2024-06-05T10:46:07.244679Z	info	xdsproxy	connected to upstream XDS server: istiod-basic.istio-system.svc:15012
+2024-06-05T10:46:07.270118471Z 2024-06-05T10:46:07.270076Z	info	ads	ADS: new connection for node:istio-egressgateway-856fbd6dfc-t5xwv.istio-system-1
+2024-06-05T10:46:07.270256134Z 2024-06-05T10:46:07.270135Z	info	ads	ADS: new connection for node:istio-egressgateway-856fbd6dfc-t5xwv.istio-system-2
+2024-06-05T10:46:07.424363965Z 2024-06-05T10:46:07.424300Z	info	cache	generated new workload certificate	latency=249.953868ms ttl=23h59m59.575719606s
+2024-06-05T10:46:07.424363965Z 2024-06-05T10:46:07.424326Z	info	cache	Root cert has changed, start rotating root cert
+2024-06-05T10:46:07.424363965Z 2024-06-05T10:46:07.424338Z	info	ads	XDS: Incremental Pushing:0 ConnectedEndpoints:2 Version:
+2024-06-05T10:46:07.424415396Z 2024-06-05T10:46:07.424394Z	info	cache	returned workload trust anchor from cache	ttl=23h59m59.575608854s
+2024-06-05T10:46:07.424425787Z 2024-06-05T10:46:07.424416Z	info	cache	returned workload trust anchor from cache	ttl=23h59m59.575586134s
+2024-06-05T10:46:07.424548549Z 2024-06-05T10:46:07.424520Z	info	cache	returned workload certificate from cache	ttl=23h59m59.575487622s
+2024-06-05T10:46:07.424648231Z 2024-06-05T10:46:07.424631Z	info	ads	SDS: PUSH request for node:istio-egressgateway-856fbd6dfc-t5xwv.istio-system resources:1 size:1.1kB resource:ROOTCA
+2024-06-05T10:46:07.424648231Z 2024-06-05T10:46:07.424636Z	info	ads	SDS: PUSH request for node:istio-egressgateway-856fbd6dfc-t5xwv.istio-system resources:1 size:4.0kB resource:default
+2024-06-05T10:46:07.424719473Z 2024-06-05T10:46:07.424685Z	info	cache	returned workload trust anchor from cache	ttl=23h59m59.575317038s

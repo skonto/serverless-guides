@@ -1,0 +1,34 @@
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  annotations:
+    openshift.io/description: Allows deploymentconfigs in this namespace to rollout
+      pods in this namespace.  It is auto-managed by a controller; remove subjects
+      to disable.
+  creationTimestamp: "2024-06-05T10:46:24Z"
+  managedFields:
+  - apiVersion: rbac.authorization.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:openshift.io/description: {}
+      f:roleRef: {}
+      f:subjects: {}
+    manager: openshift-controller-manager
+    operation: Update
+    time: "2024-06-05T10:46:24Z"
+  name: system:deployers
+  namespace: knative-eventing
+  resourceVersion: "35924"
+  uid: 9760b0d3-c75e-4908-8c5e-c83f50e560f3
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: system:deployer
+subjects:
+- kind: ServiceAccount
+  name: deployer
+  namespace: knative-eventing

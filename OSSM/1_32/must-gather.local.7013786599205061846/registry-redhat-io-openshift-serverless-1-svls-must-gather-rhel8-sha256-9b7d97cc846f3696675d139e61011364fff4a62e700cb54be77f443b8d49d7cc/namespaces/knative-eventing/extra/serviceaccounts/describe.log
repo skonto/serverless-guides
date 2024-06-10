@@ -1,0 +1,28 @@
+Name:                builder
+Namespace:           knative-eventing
+Labels:              <none>
+Annotations:         <none>
+Image pull secrets:  builder-dockercfg-q6w49
+Mountable secrets:   builder-dockercfg-q6w49
+Tokens:              builder-token-n89zn
+Events:              <none>
+
+
+Name:                default
+Namespace:           knative-eventing
+Labels:              <none>
+Annotations:         <none>
+Image pull secrets:  default-dockercfg-sp6mf
+Mountable secrets:   default-dockercfg-sp6mf
+Tokens:              default-token-rcd96
+Events:              <none>
+
+
+Name:                deployer
+Namespace:           knative-eventing
+Labels:              <none>
+Annotations:         <none>
+Image pull secrets:  deployer-dockercfg-t2vvt
+Mountable secrets:   deployer-dockercfg-t2vvt
+Tokens:              deployer-token-7tb7q
+Events:              <none>

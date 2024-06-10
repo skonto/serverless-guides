@@ -1,0 +1,136 @@
+---
+apiVersion: admissionregistration.k8s.io/v1
+kind: ValidatingWebhookConfiguration
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"admissionregistration.k8s.io/v1","kind":"ValidatingWebhookConfiguration","metadata":{"annotations":{"maistra.io/mesh-generation":"2.5.1-1-2"},"labels":{"app":"istiod","app.kubernetes.io/component":"istio-discovery","app.kubernetes.io/instance":"istio-system","app.kubernetes.io/managed-by":"maistra-istio-operator","app.kubernetes.io/name":"istio-discovery","app.kubernetes.io/part-of":"istio","app.kubernetes.io/version":"2.5.1-1-2","istio":"istiod","istio.io/rev":"basic","maistra-version":"2.4.7","maistra.io/owner":"istio-system","maistra.io/owner-name":"basic","release":"istio"},"name":"istio-validator-basic-istio-system"},"webhooks":[{"admissionReviewVersions":["v1beta1","v1"],"clientConfig":{"service":{"name":"istiod-basic","namespace":"istio-system","path":"/validate"}},"failurePolicy":"Fail","name":"rev.validation.istio.io","namespaceSelector":{"matchExpressions":[{"key":"maistra.io/member-of","operator":"In","values":["istio-system"]}]},"objectSelector":{"matchExpressions":[{"key":"maistra-version","operator":"DoesNotExist"}]},"rules":[{"apiGroups":["authentication.maistra.io"],"apiVersions":["*"],"operations":["CREATE","UPDATE"],"resources":["*"]},{"apiGroups":["rbac.maistra.io"],"apiVersions":["*"],"operations":["CREATE","UPDATE"],"resources":["*"]},{"apiGroups":["security.istio.io","networking.istio.io","telemetry.istio.io","extensions.istio.io"],"apiVersions":["*"],"operations":["CREATE","UPDATE"],"resources":["*"]}],"sideEffects":"None"}]}
+    maistra.io/mesh-generation: 2.5.1-1-2
+  creationTimestamp: "2024-06-05T10:45:42Z"
+  generation: 2
+  labels:
+    app: istiod
+    app.kubernetes.io/component: istio-discovery
+    app.kubernetes.io/instance: istio-system
+    app.kubernetes.io/managed-by: maistra-istio-operator
+    app.kubernetes.io/name: istio-discovery
+    app.kubernetes.io/part-of: istio
+    app.kubernetes.io/version: 2.5.1-1-2
+    istio: istiod
+    istio.io/rev: basic
+    maistra-version: 2.4.7
+    maistra.io/owner: istio-system
+    maistra.io/owner-name: basic
+    release: istio
+  managedFields:
+  - apiVersion: admissionregistration.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:kubectl.kubernetes.io/last-applied-configuration: {}
+          f:maistra.io/mesh-generation: {}
+        f:labels:
+          .: {}
+          f:app: {}
+          f:app.kubernetes.io/component: {}
+          f:app.kubernetes.io/instance: {}
+          f:app.kubernetes.io/managed-by: {}
+          f:app.kubernetes.io/name: {}
+          f:app.kubernetes.io/part-of: {}
+          f:app.kubernetes.io/version: {}
+          f:istio: {}
+          f:istio.io/rev: {}
+          f:maistra-version: {}
+          f:maistra.io/owner: {}
+          f:maistra.io/owner-name: {}
+          f:release: {}
+      f:webhooks:
+        .: {}
+        k:{"name":"rev.validation.istio.io"}:
+          .: {}
+          f:admissionReviewVersions: {}
+          f:clientConfig:
+            .: {}
+            f:caBundle: {}
+            f:service:
+              .: {}
+              f:name: {}
+              f:namespace: {}
+              f:path: {}
+              f:port: {}
+          f:failurePolicy: {}
+          f:matchPolicy: {}
+          f:name: {}
+          f:namespaceSelector: {}
+          f:objectSelector: {}
+          f:rules: {}
+          f:sideEffects: {}
+          f:timeoutSeconds: {}
+    manager: istio-operator
+    operation: Update
+    time: "2024-06-05T10:45:52Z"
+  name: istio-validator-basic-istio-system
+  resourceVersion: "35275"
+  uid: f67e55fb-f54e-429c-84a5-06e4d1a37354
+webhooks:
+- admissionReviewVersions:
+  - v1beta1
+  - v1
+  clientConfig:
+    caBundle: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUMvRENDQWVTZ0F3SUJBZ0lRUE5aRytsT0lSOVJwM1VVWDZwR25vVEFOQmdrcWhraUc5dzBCQVFzRkFEQVkKTVJZd0ZBWURWUVFLRXcxamJIVnpkR1Z5TG14dlkyRnNNQjRYRFRJME1EWXdOVEV3TkRVMU1sb1hEVE0wTURZdwpNekV3TkRVMU1sb3dHREVXTUJRR0ExVUVDaE1OWTJ4MWMzUmxjaTVzYjJOaGJEQ0NBU0l3RFFZSktvWklodmNOCkFRRUJCUUFEZ2dFUEFEQ0NBUW9DZ2dFQkFMa1A1dWJtQTZIVFF0bUFWVWFKSk1LaXJPdGpSR1hlbVNESTA0eloKL210WFVrRHFQZVNIaTBJeFJ5aHNBd0dkdStFZFpHUGsyUzNxbWxTRlNGQ1IvekJqQjFKdk90RldLakJiRmgxdwo4NnNYNit2NVpicmt6NjNRNWNPUVZHdkRUVDZrR21aQWoycUkxc0FVTHE0WHBGYWx4Vnc5cDJ2c0kxaGxLdWd4CnJuQ2cxUEFqeEJhWTQyTkpjZjBZc2NUam84M0dnS0gyYUptUXM5aVE0VVdtSTJBUHI5ZUZkS0FIZFU2Z1dvVHUKNUJ3TktWelRiQld1ZDlGYzJzYlFKbVRNYjhjOHphZXcyN21MV25iMHBOT2ROZXdjb1NTZWFKcFF4aFRjeHhsNQp0Mmh6bWVjV2VZOFU1MStaTDM2L0R2Y2cxNjVTVWR3bVkxQmJsMURRN2V3T3dYY0NBd0VBQWFOQ01FQXdEZ1lEClZSMFBBUUgvQkFRREFnSUVNQThHQTFVZEV3RUIvd1FGTUFNQkFmOHdIUVlEVlIwT0JCWUVGTW1nU2xIclZLSVIKak40Rk9UNG1GS2xzNmxNTE1BMEdDU3FHU0liM0RRRUJDd1VBQTRJQkFRQXVYV1NPS3RtVTdlTGZrMEpWR0ErMgpmK0pLSWVZYTc3cktaSFA4L3pyZXQ0U2F1blJ2ZDIyUFByQnRtVDFNSkNMQ3hvSUdqRGxiUVR3UktnZ2VwQ1JTCjJrRTBvUm1QN1IyYmlWOFBiWU9haGFYd2VsWlVCZ2NaSk9tUzNjazkxVXVXRVpmK2hua0htbjBxcTRaSnVGTGIKcU16VVJFZzY1N2FOMktQNVJUT1FsQ2tIWWMvY1JvQzNVRzJDRm8wZHZGUHkyWWRVZkYyWS9xbW92a3ZMSk4wdQpZcEx0ekdCVzNTdzIvYTRVNjdpeWE4NlBFZEx6QkxkUGRpZ3lNRUNaN3pvUnZNR2lPYmZqVHk0YmR3WWx3dXV6CmU3ZkppMC85cEZSSDdDcWJtNGhQeUhXOCtGTHlxc1B5NUZIRnZOSms1SVJxYXRLL1V0K3k3R2RWZXRsdlQvZVoKLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo=
+    service:
+      name: istiod-basic
+      namespace: istio-system
+      path: /validate
+      port: 443
+  failurePolicy: Fail
+  matchPolicy: Equivalent
+  name: rev.validation.istio.io
+  namespaceSelector:
+    matchExpressions:
+    - key: maistra.io/member-of
+      operator: In
+      values:
+      - istio-system
+  objectSelector:
+    matchExpressions:
+    - key: maistra-version
+      operator: DoesNotExist
+  rules:
+  - apiGroups:
+    - authentication.maistra.io
+    apiVersions:
+    - '*'
+    operations:
+    - CREATE
+    - UPDATE
+    resources:
+    - '*'
+    scope: '*'
+  - apiGroups:
+    - rbac.maistra.io
+    apiVersions:
+    - '*'
+    operations:
+    - CREATE
+    - UPDATE
+    resources:
+    - '*'
+    scope: '*'
+  - apiGroups:
+    - security.istio.io
+    - networking.istio.io
+    - telemetry.istio.io
+    - extensions.istio.io
+    apiVersions:
+    - '*'
+    operations:
+    - CREATE
+    - UPDATE
+    resources:
+    - '*'
+    scope: '*'
+  sideEffects: None
+  timeoutSeconds: 10

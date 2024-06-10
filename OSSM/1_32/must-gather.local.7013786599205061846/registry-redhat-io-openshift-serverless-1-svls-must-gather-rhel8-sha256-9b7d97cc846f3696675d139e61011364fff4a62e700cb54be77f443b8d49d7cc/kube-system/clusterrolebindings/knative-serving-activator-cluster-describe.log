@@ -1,0 +1,12 @@
+Name:         knative-serving-activator-cluster
+Labels:       app.kubernetes.io/component=activator
+              app.kubernetes.io/name=knative-serving
+              app.kubernetes.io/version=release-v1.11
+Annotations:  manifestival: new
+Role:
+  Kind:  ClusterRole
+  Name:  knative-serving-activator-cluster
+Subjects:
+  Kind            Name       Namespace
+  ----            ----       ---------
+  ServiceAccount  activator  knative-serving

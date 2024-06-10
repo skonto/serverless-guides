@@ -1,0 +1,1083 @@
+2024-06-05T10:45:52.168681605Z 2024-06-05T10:45:52.168621Z	info	klog	Config not found: /var/run/secrets/remote/config
+2024-06-05T10:45:52.169933290Z 2024-06-05T10:45:52.169911Z	info	smmr	Member namespace list updated: []
+2024-06-05T10:45:52.190474790Z 2024-06-05T10:45:52.190400Z	info	controllers	starting	controller=configmap istio-basic
+2024-06-05T10:45:52.193977009Z 2024-06-05T10:45:52.193929Z	info	model	reloading network gateways
+2024-06-05T10:45:52.198894047Z 2024-06-05T10:45:52.198847Z	info	pkica	Failed to get secret (error: secrets "istio-ca-secret" not found), will create one
+2024-06-05T10:45:52.220684332Z 2024-06-05T10:45:52.220644Z	warn	discovery is not ready: <nil>
+2024-06-05T10:45:52.418779949Z 2024-06-05T10:45:52.418731Z	info	pkica	Using self-generated public key: -----BEGIN CERTIFICATE-----
+2024-06-05T10:45:52.418779949Z MIIC/DCCAeSgAwIBAgIQPNZG+lOIR9Rp3UUX6pGnoTANBgkqhkiG9w0BAQsFADAY
+2024-06-05T10:45:52.418779949Z MRYwFAYDVQQKEw1jbHVzdGVyLmxvY2FsMB4XDTI0MDYwNTEwNDU1MloXDTM0MDYw
+2024-06-05T10:45:52.418779949Z MzEwNDU1MlowGDEWMBQGA1UEChMNY2x1c3Rlci5sb2NhbDCCASIwDQYJKoZIhvcN
+2024-06-05T10:45:52.418779949Z AQEBBQADggEPADCCAQoCggEBALkP5ubmA6HTQtmAVUaJJMKirOtjRGXemSDI04zZ
+2024-06-05T10:45:52.418779949Z /mtXUkDqPeSHi0IxRyhsAwGdu+EdZGPk2S3qmlSFSFCR/zBjB1JvOtFWKjBbFh1w
+2024-06-05T10:45:52.418779949Z 86sX6+v5Zbrkz63Q5cOQVGvDTT6kGmZAj2qI1sAULq4XpFalxVw9p2vsI1hlKugx
+2024-06-05T10:45:52.418779949Z rnCg1PAjxBaY42NJcf0YscTjo83GgKH2aJmQs9iQ4UWmI2APr9eFdKAHdU6gWoTu
+2024-06-05T10:45:52.418779949Z 5BwNKVzTbBWud9Fc2sbQJmTMb8c8zaew27mLWnb0pNOdNewcoSSeaJpQxhTcxxl5
+2024-06-05T10:45:52.418779949Z t2hzmecWeY8U51+ZL36/Dvcg165SUdwmY1Bbl1DQ7ewOwXcCAwEAAaNCMEAwDgYD
+2024-06-05T10:45:52.418779949Z VR0PAQH/BAQDAgIEMA8GA1UdEwEB/wQFMAMBAf8wHQYDVR0OBBYEFMmgSlHrVKIR
+2024-06-05T10:45:52.418779949Z jN4FOT4mFKls6lMLMA0GCSqGSIb3DQEBCwUAA4IBAQAuXWSOKtmU7eLfk0JVGA+2
+2024-06-05T10:45:52.418779949Z f+JKIeYa77rKZHP8/zret4SaunRvd22PPrBtmT1MJCLCxoIGjDlbQTwRKggepCRS
+2024-06-05T10:45:52.418779949Z 2kE0oRmP7R2biV8PbYOahaXwelZUBgcZJOmS3ck91UuWEZf+hnkHmn0qq4ZJuFLb
+2024-06-05T10:45:52.418779949Z qMzUREg657aN2KP5RTOQlCkHYc/cRoC3UG2CFo0dvFPy2YdUfF2Y/qmovkvLJN0u
+2024-06-05T10:45:52.418779949Z YpLtzGBW3Sw2/a4U67iya86PEdLzBLdPdigyMECZ7zoRvMGiObfjTy4bdwYlwuuz
+2024-06-05T10:45:52.418779949Z e7fJi0/9pFRH7Cqbm4hPyHW8+FLyqsPy5FHFvNJk5IRqatK/Ut+y7GdVetlvT/eZ
+2024-06-05T10:45:52.418779949Z -----END CERTIFICATE-----
+2024-06-05T10:45:52.418779949Z 
+2024-06-05T10:45:52.418868410Z 2024-06-05T10:45:52.418854Z	info	rootcertrotator	Set up back off time 57m17s to start rotator.
+2024-06-05T10:45:52.423448562Z 2024-06-05T10:45:52.423400Z	info	rootcertrotator	Jitter is enabled, wait 57m17s before starting root cert rotator.
+2024-06-05T10:45:52.803914233Z 2024-06-05T10:45:52.803869Z	info	spiffe	Added 1 certs to trust domain cluster.local in peer cert verifier
+2024-06-05T10:45:52.804392453Z 2024-06-05T10:45:52.804375Z	warn	federation	ResyncPeriod not specified, defaulting to 1m0s	component=federation-discovery-controller
+2024-06-05T10:45:52.804770400Z 2024-06-05T10:45:52.804753Z	info	spiffe	Added 1 certs to trust domain cluster.local in peer cert verifier
+2024-06-05T10:45:52.849682875Z 2024-06-05T10:45:52.849637Z	info	kube	Initializing Kubernetes service registry "Kubernetes"
+2024-06-05T10:45:52.849778787Z 2024-06-05T10:45:52.849766Z	info	kube	should join leader-election for cluster Kubernetes: false
+2024-06-05T10:45:52.854235366Z 2024-06-05T10:45:52.854198Z	info	klog	Waiting for caches to sync for smmr
+2024-06-05T10:45:52.854410429Z 2024-06-05T10:45:52.854378Z	info	federation	Starting controller	component=federation-discovery-controller
+2024-06-05T10:45:52.854511431Z 2024-06-05T10:45:52.854285Z	info	controllers	starting	controller=healthcheck
+2024-06-05T10:45:52.855150114Z 2024-06-05T10:45:52.855120Z	info	klog	attempting to acquire leader lease istio-system/ior-leader...
+2024-06-05T10:45:52.855353548Z 2024-06-05T10:45:52.855317Z	info	controllers	starting	controller=unregister_workloadentry
+2024-06-05T10:45:52.855504551Z 2024-06-05T10:45:52.855480Z	info	klog	attempting to acquire leader lease istio-system/servicemesh-federation...
+2024-06-05T10:45:52.855699185Z 2024-06-05T10:45:52.855674Z	info	federation	Starting controller	component=federation-exports-controller
+2024-06-05T10:45:52.855766926Z 2024-06-05T10:45:52.855748Z	info	federation	Starting controller	component=federation-imports-controller
+2024-06-05T10:45:52.855913109Z 2024-06-05T10:45:52.855885Z	info	kube	Starting Pilot K8S CRD controller	controller=crd-controller
+2024-06-05T10:45:52.855924779Z 2024-06-05T10:45:52.855918Z	info	kube	controller "networking.istio.io/v1alpha3/DestinationRule" is syncing...	controller=crd-controller
+2024-06-05T10:45:52.859421029Z 2024-06-05T10:45:52.859393Z	info	kube	controller "networking.istio.io/v1alpha3/DestinationRule" is syncing...	controller=crd-controller
+2024-06-05T10:45:52.861161924Z 2024-06-05T10:45:52.861129Z	info	controllers	starting	controller=multicluster secret
+2024-06-05T10:45:52.866453029Z 2024-06-05T10:45:52.866407Z	info	controllers	starting	controller=configmap istio-sidecar-injector-basic
+2024-06-05T10:45:52.866518351Z 2024-06-05T10:45:52.866499Z	info	kube	controller "networking.istio.io/v1alpha3/DestinationRule" is syncing...	controller=crd-controller
+2024-06-05T10:45:52.874887977Z 2024-06-05T10:45:52.874857Z	info	kube	controller "telemetry.istio.io/v1alpha1/Telemetry" is syncing...	controller=crd-controller
+2024-06-05T10:45:52.882385937Z 2024-06-05T10:45:52.881650Z	info	klog	successfully acquired lease istio-system/servicemesh-federation
+2024-06-05T10:45:52.882385937Z 2024-06-05T10:45:52.881926Z	info	klog	successfully acquired lease istio-system/ior-leader
+2024-06-05T10:45:52.882385937Z 2024-06-05T10:45:52.882020Z	info	ior	Creating new IOR controller
+2024-06-05T10:45:52.893256263Z 2024-06-05T10:45:52.892509Z	info	kube	controller "networking.istio.io/v1alpha3/DestinationRule" is syncing...	controller=crd-controller
+2024-06-05T10:45:52.924639839Z 2024-06-05T10:45:52.924539Z	info	kube	controller "networking.istio.io/v1beta1/ProxyConfig" is syncing...	controller=crd-controller
+2024-06-05T10:45:52.957453273Z 2024-06-05T10:45:52.956406Z	info	klog	Caches are synced for smmr
+2024-06-05T10:45:52.957453273Z 2024-06-05T10:45:52.956484Z	info	smmr	Cache synced for listener "MaistraDiscoveryNamespacesFilter"
+2024-06-05T10:45:52.957453273Z 2024-06-05T10:45:52.956507Z	info	smmr	Seeding listener "MaistraDiscoveryNamespacesFilter" with system namespace.
+2024-06-05T10:45:52.971375450Z 2024-06-05T10:45:52.970394Z	info	smmr	Cache synced for listener "openshift-route-informers"
+2024-06-05T10:45:52.971375450Z 2024-06-05T10:45:52.970421Z	info	smmr	Seeding listener "openshift-route-informers" with system namespace.
+2024-06-05T10:45:52.971375450Z 2024-06-05T10:45:52.970824Z	info	smmr	Cache synced for listener "istio-informers"
+2024-06-05T10:45:52.971375450Z 2024-06-05T10:45:52.970844Z	info	smmr	Seeding listener "istio-informers" with system namespace.
+2024-06-05T10:45:52.971375450Z 2024-06-05T10:45:52.970936Z	info	smmr	Cache synced for listener "namespace logger"
+2024-06-05T10:45:52.971375450Z 2024-06-05T10:45:52.970951Z	info	smmr	Seeding listener "namespace logger" with system namespace.
+2024-06-05T10:45:52.971375450Z 2024-06-05T10:45:52.971069Z	info	smmr	Member namespace list updated: [istio-system]
+2024-06-05T10:45:52.974363479Z 2024-06-05T10:45:52.971688Z	info	smmr	Cache synced for listener "kubernetes-informers"
+2024-06-05T10:45:52.974363479Z 2024-06-05T10:45:52.971822Z	info	smmr	Seeding listener "kubernetes-informers" with system namespace.
+2024-06-05T10:45:52.974363479Z 2024-06-05T10:45:52.972103Z	info	smmr	Cache synced for listener "dynamic-informers"
+2024-06-05T10:45:52.974363479Z 2024-06-05T10:45:52.972120Z	info	smmr	Seeding listener "dynamic-informers" with system namespace.
+2024-06-05T10:45:52.991371658Z 2024-06-05T10:45:52.989589Z	info	kube	controller "networking.istio.io/v1alpha3/WorkloadGroup" is syncing...	controller=crd-controller
+2024-06-05T10:45:53.040157911Z 2024-06-05T10:45:53.040108Z	warn	discovery is not ready: <nil>
+2024-06-05T10:45:53.060374424Z 2024-06-05T10:45:53.057398Z	info	federation	Controller synced in 201.663509ms	component=federation-imports-controller
+2024-06-05T10:45:53.060374424Z 2024-06-05T10:45:53.057414Z	info	federation	Starting workers	component=federation-imports-controller
+2024-06-05T10:45:53.060374424Z 2024-06-05T10:45:53.057441Z	info	federation	Controller synced in 203.073577ms	component=federation-discovery-controller
+2024-06-05T10:45:53.060374424Z 2024-06-05T10:45:53.057445Z	info	federation	Starting workers	component=federation-discovery-controller
+2024-06-05T10:45:53.060374424Z 2024-06-05T10:45:53.057458Z	info	federation	Controller synced in 201.808471ms	component=federation-exports-controller
+2024-06-05T10:45:53.060374424Z 2024-06-05T10:45:53.057461Z	info	federation	Starting workers	component=federation-exports-controller
+2024-06-05T10:45:53.090429492Z 2024-06-05T10:45:53.090398Z	info	kube	controller "networking.istio.io/v1alpha3/WorkloadEntry" is syncing...	controller=crd-controller
+2024-06-05T10:45:53.093485913Z 2024-06-05T10:45:53.093466Z	info	ads	Incremental push, service istiod-basic.istio-system.svc.cluster.local at shard Kubernetes/Kubernetes has no endpoints
+2024-06-05T10:45:53.093542234Z 2024-06-05T10:45:53.093531Z	info	kube	kube controller for Kubernetes synced after 238.284668ms
+2024-06-05T10:45:53.190610628Z 2024-06-05T10:45:53.190571Z	info	kube	controller "networking.istio.io/v1alpha3/ServiceEntry" is syncing...	controller=crd-controller
+2024-06-05T10:45:53.196414304Z 2024-06-05T10:45:53.196375Z	info	ads	Push debounce stable[1] 11 for config Secret/istio-system/builder-token-r5cwp and 9 more configs: 102.795948ms since last change, 194.879813ms since last push, full=true
+2024-06-05T10:45:53.196664079Z 2024-06-05T10:45:53.196647Z	info	ads	XDS: Pushing:2024-06-05T10:45:53Z/1 Services:1 ConnectedEndpoints:0 Version:2024-06-05T10:45:53Z/1
+2024-06-05T10:45:53.224523804Z 2024-06-05T10:45:53.224494Z	warn	discovery is not ready: <nil>
+2024-06-05T10:45:53.291437758Z 2024-06-05T10:45:53.291393Z	info	kube	controller "networking.istio.io/v1alpha3/Sidecar" is syncing...	controller=crd-controller
+2024-06-05T10:45:53.395386199Z 2024-06-05T10:45:53.394537Z	info	kube	Pilot K8S CRD controller synced in 538.727025ms	controller=crd-controller
+2024-06-05T10:45:53.460387974Z 2024-06-05T10:45:53.457560Z	info	kube	joining leader-election for istio-namespace-controller-election in istio-system on cluster Kubernetes
+2024-06-05T10:45:53.460387974Z 2024-06-05T10:45:53.457625Z	info	klog	attempting to acquire leader lease istio-system/istio-namespace-controller-election...
+2024-06-05T10:45:53.472642539Z 2024-06-05T10:45:53.472598Z	info	klog	successfully acquired lease istio-system/istio-namespace-controller-election
+2024-06-05T10:45:53.472986565Z 2024-06-05T10:45:53.472951Z	info	kube	starting namespace controller for cluster Kubernetes
+2024-06-05T10:45:53.473159829Z 2024-06-05T10:45:53.473138Z	info	controllers	starting	controller=namespace controller
+2024-06-05T10:45:53.473242251Z 2024-06-05T10:45:53.473218Z	info	smmr	Cache synced for listener "namespace-controller"
+2024-06-05T10:45:53.473274031Z 2024-06-05T10:45:53.473261Z	info	smmr	Seeding listener "namespace-controller" with system namespace.
+2024-06-05T10:45:53.495441343Z 2024-06-05T10:45:53.495402Z	info	ads	Push debounce stable[2] 1 for config DestinationRule/istio-system/istiod-basic: 100.901291ms since last change, 100.901201ms since last push, full=true
+2024-06-05T10:45:53.495592196Z 2024-06-05T10:45:53.495573Z	info	ads	XDS: Pushing:2024-06-05T10:45:53Z/2 Services:1 ConnectedEndpoints:0 Version:2024-06-05T10:45:53Z/2
+2024-06-05T10:45:53.525434680Z 2024-06-05T10:45:53.525387Z	info	ads	All caches have been synced up in 1.401524697s, marking server ready
+2024-06-05T10:45:53.525853249Z 2024-06-05T10:45:53.525822Z	info	federation	starting federation service discovery at [::]:8188	component=federation-server
+2024-06-05T10:45:54.418197060Z 2024-06-05T10:45:54.418153Z	info	ads	Full push, new service istio-system/istiod-basic.istio-system.svc.cluster.local
+2024-06-05T10:45:54.518473938Z 2024-06-05T10:45:54.518416Z	info	ads	Push debounce stable[3] 1 for config ServiceEntry/istio-system/istiod-basic.istio-system.svc.cluster.local: 100.112605ms since last change, 100.112375ms since last push, full=true
+2024-06-05T10:45:54.518752554Z 2024-06-05T10:45:54.518735Z	info	ads	XDS: Pushing:2024-06-05T10:45:54Z/3 Services:1 ConnectedEndpoints:0 Version:2024-06-05T10:45:54Z/3
+2024-06-05T10:45:54.899374888Z 2024-06-05T10:45:54.898395Z	info	ads	Push debounce stable[4] 1 for config EnvoyFilter/istio-system/metadata-exchange-1.6-basic: 102.585004ms since last change, 102.584824ms since last push, full=true
+2024-06-05T10:45:54.899374888Z 2024-06-05T10:45:54.898977Z	info	ads	XDS: Pushing:2024-06-05T10:45:54Z/4 Services:1 ConnectedEndpoints:0 Version:2024-06-05T10:45:54Z/4
+2024-06-05T10:45:55.011466462Z 2024-06-05T10:45:55.011417Z	info	ads	Push debounce stable[5] 1 for config EnvoyFilter/istio-system/tcp-metadata-exchange-1.6-basic: 101.840589ms since last change, 101.840409ms since last push, full=true
+2024-06-05T10:45:55.013261658Z 2024-06-05T10:45:55.013185Z	info	ads	XDS: Pushing:2024-06-05T10:45:55Z/5 Services:1 ConnectedEndpoints:0 Version:2024-06-05T10:45:55Z/5
+2024-06-05T10:45:55.284463712Z 2024-06-05T10:45:55.284410Z	info	ads	Push debounce stable[6] 3 for config DestinationRule/istio-system/api-server and 2 more configs: 100.055473ms since last change, 262.865408ms since last push, full=true
+2024-06-05T10:45:55.284740647Z 2024-06-05T10:45:55.284726Z	info	ads	XDS: Pushing:2024-06-05T10:45:55Z/6 Services:1 ConnectedEndpoints:0 Version:2024-06-05T10:45:55Z/6
+2024-06-05T10:45:55.657520665Z 2024-06-05T10:45:55.657428Z	info	ads	Push debounce stable[7] 1 for config Secret/istio-system/istio-ingressgateway-service-account-token-dd9zb: 102.594245ms since last change, 102.593645ms since last push, full=false
+2024-06-05T10:45:55.657644758Z 2024-06-05T10:45:55.657619Z	info	ads	XDS: Incremental Pushing:2024-06-05T10:45:55Z/6 ConnectedEndpoints:0 Version:2024-06-05T10:45:55Z/6
+2024-06-05T10:45:55.883204973Z 2024-06-05T10:45:55.883143Z	info	ads	Push debounce stable[8] 2 for config Secret/istio-system/istio-ingressgateway-service-account-token-dd9zb and 1 more configs: 100.110205ms since last change, 176.885865ms since last push, full=false
+2024-06-05T10:45:55.883359285Z 2024-06-05T10:45:55.883308Z	info	ads	XDS: Incremental Pushing:2024-06-05T10:45:55Z/6 ConnectedEndpoints:0 Version:2024-06-05T10:45:55Z/6
+2024-06-05T10:45:55.966040533Z 2024-06-05T10:45:55.965996Z	info	ads	Incremental push, service istio-ingressgateway.istio-system.svc.cluster.local at shard Kubernetes/Kubernetes has no endpoints
+2024-06-05T10:45:56.067396133Z 2024-06-05T10:45:56.066410Z	info	ads	Push debounce stable[9] 2 for config ServiceEntry/istio-system/istio-ingressgateway.istio-system.svc.cluster.local: 100.262158ms since last change, 171.08984ms since last push, full=true
+2024-06-05T10:45:56.067396133Z 2024-06-05T10:45:56.066769Z	info	ads	XDS: Pushing:2024-06-05T10:45:56Z/7 Services:2 ConnectedEndpoints:0 Version:2024-06-05T10:45:56Z/7
+2024-06-05T10:45:56.286721263Z 2024-06-05T10:45:56.286665Z	info	ads	Incremental push, service istio-egressgateway.istio-system.svc.cluster.local at shard Kubernetes/Kubernetes has no endpoints
+2024-06-05T10:45:56.387082383Z 2024-06-05T10:45:56.387043Z	info	ads	Push debounce stable[10] 5 for config Secret/istio-system/istio-egressgateway-service-account-token-fz27k and 2 more configs: 100.234977ms since last change, 210.403193ms since last push, full=true
+2024-06-05T10:45:56.387507371Z 2024-06-05T10:45:56.387490Z	info	ads	XDS: Pushing:2024-06-05T10:45:56Z/8 Services:3 ConnectedEndpoints:0 Version:2024-06-05T10:45:56Z/8
+2024-06-05T10:46:07.245371316Z 2024-06-05T10:46:07.245318Z	warn	Insecure first-party-jwt option used to validate token; use third-party-jwt
+2024-06-05T10:46:07.255961478Z 2024-06-05T10:46:07.255921Z	info	ads	ADS: new connection for node:istio-egressgateway-856fbd6dfc-t5xwv.istio-system-1
+2024-06-05T10:46:07.257029199Z 2024-06-05T10:46:07.256998Z	info	ads	CDS: PUSH request for node:istio-egressgateway-856fbd6dfc-t5xwv.istio-system resources:11 size:10.4kB cached:0/10
+2024-06-05T10:46:07.265887806Z 2024-06-05T10:46:07.265862Z	info	ads	EDS: PUSH request for node:istio-egressgateway-856fbd6dfc-t5xwv.istio-system resources:10 size:1.2kB empty:5 cached:0/10
+2024-06-05T10:46:07.285762834Z 2024-06-05T10:46:07.285731Z	warn	Insecure first-party-jwt option used to validate token; use third-party-jwt
+2024-06-05T10:46:07.291886636Z 2024-06-05T10:46:07.291866Z	info	ads	ADS: new connection for node:istio-ingressgateway-7b6954747-qqhbw.istio-system-2
+2024-06-05T10:46:07.292460848Z 2024-06-05T10:46:07.292426Z	info	ads	CDS: PUSH request for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:11 size:10.4kB cached:0/10
+2024-06-05T10:46:07.300499349Z 2024-06-05T10:46:07.300469Z	info	ads	EDS: PUSH request for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:10 size:1.2kB empty:5 cached:0/10
+2024-06-05T10:46:07.324147431Z 2024-06-05T10:46:07.324127Z	warn	Insecure first-party-jwt option used to validate token; use third-party-jwt
+2024-06-05T10:46:07.332968968Z 2024-06-05T10:46:07.332948Z	info	ads	LDS: PUSH request for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:0 size:0B
+2024-06-05T10:46:07.420476457Z 2024-06-05T10:46:07.420439Z	warn	Insecure first-party-jwt option used to validate token; use third-party-jwt
+2024-06-05T10:46:07.428108420Z 2024-06-05T10:46:07.428068Z	info	ads	LDS: PUSH request for node:istio-egressgateway-856fbd6dfc-t5xwv.istio-system resources:0 size:0B
+2024-06-05T10:46:07.486260643Z 2024-06-05T10:46:07.486216Z	info	ads	Incremental push, service istio-egressgateway.istio-system.svc.cluster.local at shard Kubernetes/Kubernetes has no endpoints
+2024-06-05T10:46:07.504580689Z 2024-06-05T10:46:07.504551Z	info	ads	Incremental push, service istio-ingressgateway.istio-system.svc.cluster.local at shard Kubernetes/Kubernetes has no endpoints
+2024-06-05T10:46:07.605672081Z 2024-06-05T10:46:07.605625Z	info	ads	Push debounce stable[11] 2 for config ServiceEntry/istio-system/istio-egressgateway.istio-system.svc.cluster.local and 1 more configs: 101.00491ms since last change, 119.363367ms since last push, full=false
+2024-06-05T10:46:07.605715292Z 2024-06-05T10:46:07.605670Z	info	ads	XDS: Incremental Pushing:2024-06-05T10:45:56Z/8 ConnectedEndpoints:2 Version:2024-06-05T10:45:56Z/8
+2024-06-05T10:46:08.483285730Z 2024-06-05T10:46:08.483222Z	info	ads	CDS: PUSH for node:istio-egressgateway-856fbd6dfc-t5xwv.istio-system resources:11 size:10.4kB cached:0/10
+2024-06-05T10:46:08.483427333Z 2024-06-05T10:46:08.483407Z	info	ads	EDS: PUSH for node:istio-egressgateway-856fbd6dfc-t5xwv.istio-system resources:10 size:1.2kB empty:0 cached:5/10
+2024-06-05T10:46:08.483505744Z 2024-06-05T10:46:08.483490Z	info	ads	LDS: PUSH for node:istio-egressgateway-856fbd6dfc-t5xwv.istio-system resources:0 size:0B
+2024-06-05T10:46:08.488587506Z 2024-06-05T10:46:08.488557Z	info	ads	Full push, new service istio-system/istio-egressgateway.istio-system.svc.cluster.local
+2024-06-05T10:46:08.508407022Z 2024-06-05T10:46:08.508359Z	info	ads	CDS: PUSH for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:11 size:10.4kB cached:8/10
+2024-06-05T10:46:08.508602386Z 2024-06-05T10:46:08.508585Z	info	ads	EDS: PUSH for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:10 size:1.4kB empty:0 cached:8/10
+2024-06-05T10:46:08.508685398Z 2024-06-05T10:46:08.508670Z	info	ads	LDS: PUSH for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:0 size:0B
+2024-06-05T10:46:08.521819500Z 2024-06-05T10:46:08.521788Z	info	ads	Full push, new service istio-system/istio-ingressgateway.istio-system.svc.cluster.local
+2024-06-05T10:46:08.622654087Z 2024-06-05T10:46:08.622607Z	info	ads	Push debounce stable[12] 2 for config ServiceEntry/istio-system/istio-egressgateway.istio-system.svc.cluster.local and 1 more configs: 100.682363ms since last change, 133.975449ms since last push, full=true
+2024-06-05T10:46:08.622901632Z 2024-06-05T10:46:08.622881Z	info	ads	XDS: Pushing:2024-06-05T10:46:08Z/9 Services:3 ConnectedEndpoints:2 Version:2024-06-05T10:46:08Z/9
+2024-06-05T10:46:08.623245768Z 2024-06-05T10:46:08.623220Z	info	ads	CDS: PUSH for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:11 size:10.8kB cached:5/10
+2024-06-05T10:46:08.623361601Z 2024-06-05T10:46:08.623221Z	info	ads	CDS: PUSH for node:istio-egressgateway-856fbd6dfc-t5xwv.istio-system resources:11 size:10.8kB cached:5/10
+2024-06-05T10:46:08.623499633Z 2024-06-05T10:46:08.623474Z	info	ads	EDS: PUSH INC for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:5 size:1.0kB empty:0 cached:1/5
+2024-06-05T10:46:08.623536904Z 2024-06-05T10:46:08.623515Z	info	ads	LDS: PUSH for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:0 size:0B
+2024-06-05T10:46:08.623562775Z 2024-06-05T10:46:08.623521Z	info	ads	EDS: PUSH INC for node:istio-egressgateway-856fbd6dfc-t5xwv.istio-system resources:5 size:1.0kB empty:0 cached:3/5
+2024-06-05T10:46:08.623619486Z 2024-06-05T10:46:08.623603Z	info	ads	LDS: PUSH for node:istio-egressgateway-856fbd6dfc-t5xwv.istio-system resources:0 size:0B
+2024-06-05T10:46:17.146401417Z 2024-06-05T10:46:17.146322Z	info	ads	Push debounce stable[13] 1 for config Secret/istio-system/wildcard-certs: 100.220734ms since last change, 100.220484ms since last push, full=false
+2024-06-05T10:46:17.146457158Z 2024-06-05T10:46:17.146398Z	info	ads	XDS: Incremental Pushing:2024-06-05T10:46:08Z/9 ConnectedEndpoints:2 Version:2024-06-05T10:46:08Z/9
+2024-06-05T10:46:23.213849414Z 2024-06-05T10:46:23.213807Z	info	smmr	Member namespace list updated: [istio-system knative-serving]
+2024-06-05T10:46:23.298746870Z 2024-06-05T10:46:23.298664Z	info	smmr	Member namespace list updated: [istio-system knative-eventing knative-serving]
+2024-06-05T10:46:23.529939126Z 2024-06-05T10:46:23.529886Z	info	ads	Push debounce stable[14] 10 for config Secret/knative-serving/default-dockercfg-nfknp and 9 more configs: 100.060761ms since last change, 305.991649ms since last push, full=false
+2024-06-05T10:46:23.529995707Z 2024-06-05T10:46:23.529938Z	info	ads	XDS: Incremental Pushing:2024-06-05T10:46:08Z/9 ConnectedEndpoints:2 Version:2024-06-05T10:46:08Z/9
+2024-06-05T10:46:23.740552868Z 2024-06-05T10:46:23.740499Z	info	ads	Push debounce stable[15] 4 for config Secret/knative-eventing/deployer-token-7tb7q and 3 more configs: 101.00372ms since last change, 182.11919ms since last push, full=false
+2024-06-05T10:46:23.740687191Z 2024-06-05T10:46:23.740642Z	info	ads	XDS: Incremental Pushing:2024-06-05T10:46:08Z/9 ConnectedEndpoints:2 Version:2024-06-05T10:46:08Z/9
+2024-06-05T10:46:23.787051502Z 2024-06-05T10:46:23.786946Z	info	smmr	Member namespace list updated: [istio-system knative-eventing knative-serving serving-tests]
+2024-06-05T10:46:24.101940990Z 2024-06-05T10:46:24.101888Z	info	ads	Push debounce stable[16] 9 for config Secret/serving-tests/builder-token-8tgk9 and 5 more configs: 100.50341ms since last change, 291.937517ms since last push, full=false
+2024-06-05T10:46:24.102051212Z 2024-06-05T10:46:24.102022Z	info	ads	XDS: Incremental Pushing:2024-06-05T10:46:08Z/9 ConnectedEndpoints:2 Version:2024-06-05T10:46:08Z/9
+2024-06-05T10:46:24.243729139Z 2024-06-05T10:46:24.243688Z	info	smmr	Member namespace list updated: [istio-system knative-eventing knative-serving serving-tests serving-tests-alt]
+2024-06-05T10:46:24.414870168Z 2024-06-05T10:46:24.414766Z	info	ads	Push debounce stable[17] 6 for config Secret/serving-tests-alt/default-token-6s8mz and 5 more configs: 110.231195ms since last change, 133.538814ms since last push, full=false
+2024-06-05T10:46:24.415002201Z 2024-06-05T10:46:24.414975Z	info	ads	XDS: Incremental Pushing:2024-06-05T10:46:08Z/9 ConnectedEndpoints:2 Version:2024-06-05T10:46:08Z/9
+2024-06-05T10:46:24.682822273Z 2024-06-05T10:46:24.682762Z	info	smmr	Member namespace list updated: [istio-system knative-eventing knative-serving serverless-tests serving-tests serving-tests-alt]
+2024-06-05T10:46:24.799455837Z 2024-06-05T10:46:24.799394Z	info	ads	Push debounce stable[18] 6 for config Secret/serverless-tests/builder-dockercfg-c9khz and 5 more configs: 101.112922ms since last change, 101.131042ms since last push, full=false
+2024-06-05T10:46:24.799604960Z 2024-06-05T10:46:24.799562Z	info	ads	XDS: Incremental Pushing:2024-06-05T10:46:08Z/9 ConnectedEndpoints:2 Version:2024-06-05T10:46:08Z/9
+2024-06-05T10:46:24.931546951Z 2024-06-05T10:46:24.931494Z	info	smmr	Member namespace list updated: [eventing-e2e0 istio-system knative-eventing knative-serving serverless-tests serving-tests serving-tests-alt]
+2024-06-05T10:46:25.049537032Z 2024-06-05T10:46:25.049485Z	info	ads	Push debounce stable[19] 6 for config Secret/eventing-e2e0/builder-dockercfg-8vqct and 5 more configs: 100.744505ms since last change, 100.804815ms since last push, full=false
+2024-06-05T10:46:25.049657664Z 2024-06-05T10:46:25.049626Z	info	ads	XDS: Incremental Pushing:2024-06-05T10:46:08Z/9 ConnectedEndpoints:2 Version:2024-06-05T10:46:08Z/9
+2024-06-05T10:46:25.401729299Z 2024-06-05T10:46:25.401630Z	info	smmr	Member namespace list updated: [eventing-e2e0 eventing-e2e1 istio-system knative-eventing knative-serving serverless-tests serving-tests serving-tests-alt]
+2024-06-05T10:46:25.518492295Z 2024-06-05T10:46:25.518428Z	info	ads	Push debounce stable[20] 6 for config Secret/eventing-e2e1/builder-dockercfg-slr2f and 5 more configs: 100.576891ms since last change, 100.607832ms since last push, full=false
+2024-06-05T10:46:25.518630968Z 2024-06-05T10:46:25.518586Z	info	ads	XDS: Incremental Pushing:2024-06-05T10:46:08Z/9 ConnectedEndpoints:2 Version:2024-06-05T10:46:08Z/9
+2024-06-05T10:46:25.661181403Z 2024-06-05T10:46:25.661106Z	info	smmr	Member namespace list updated: [eventing-e2e0 eventing-e2e1 eventing-e2e2 istio-system knative-eventing knative-serving serverless-tests serving-tests serving-tests-alt]
+2024-06-05T10:46:25.775680374Z 2024-06-05T10:46:25.775292Z	info	ads	Push debounce stable[21] 6 for config Secret/eventing-e2e2/builder-dockercfg-pkwdl and 5 more configs: 100.02363ms since last change, 100.103101ms since last push, full=false
+2024-06-05T10:46:25.775840997Z 2024-06-05T10:46:25.775806Z	info	ads	XDS: Incremental Pushing:2024-06-05T10:46:08Z/9 ConnectedEndpoints:2 Version:2024-06-05T10:46:08Z/9
+2024-06-05T10:46:26.073633211Z 2024-06-05T10:46:26.073584Z	info	smmr	Member namespace list updated: [eventing-e2e0 eventing-e2e1 eventing-e2e2 eventing-e2e3 istio-system knative-eventing knative-serving serverless-tests serving-tests serving-tests-alt]
+2024-06-05T10:46:26.189423248Z 2024-06-05T10:46:26.189377Z	info	ads	Push debounce stable[22] 6 for config Secret/eventing-e2e3/builder-dockercfg-jcjw5 and 5 more configs: 102.825887ms since last change, 102.830996ms since last push, full=false
+2024-06-05T10:46:26.189573671Z 2024-06-05T10:46:26.189529Z	info	ads	XDS: Incremental Pushing:2024-06-05T10:46:08Z/9 ConnectedEndpoints:2 Version:2024-06-05T10:46:08Z/9
+2024-06-05T10:46:26.471993636Z 2024-06-05T10:46:26.471767Z	info	smmr	Member namespace list updated: [eventing-e2e0 eventing-e2e1 eventing-e2e2 eventing-e2e3 eventing-e2e4 istio-system knative-eventing knative-serving serverless-tests serving-tests serving-tests-alt]
+2024-06-05T10:46:26.591396445Z 2024-06-05T10:46:26.590292Z	info	ads	Push debounce stable[23] 6 for config Secret/eventing-e2e4/default-dockercfg-jdvwj and 5 more configs: 105.437268ms since last change, 109.096552ms since last push, full=false
+2024-06-05T10:46:26.591396445Z 2024-06-05T10:46:26.590385Z	info	ads	XDS: Incremental Pushing:2024-06-05T10:46:08Z/9 ConnectedEndpoints:2 Version:2024-06-05T10:46:08Z/9
+2024-06-05T10:46:26.842376569Z 2024-06-05T10:46:26.841844Z	info	smmr	Member namespace list updated: [eventing-e2e0 eventing-e2e1 eventing-e2e2 eventing-e2e3 eventing-e2e4 istio-system knative-eventing knative-serving serverless-tests serving-tests serving-tests-alt tenant-1]
+2024-06-05T10:46:26.957384240Z 2024-06-05T10:46:26.955597Z	info	ads	Push debounce stable[24] 6 for config Secret/tenant-1/default-token-r5z29 and 5 more configs: 100.946398ms since last change, 100.982789ms since last push, full=false
+2024-06-05T10:46:26.957384240Z 2024-06-05T10:46:26.955682Z	info	ads	XDS: Incremental Pushing:2024-06-05T10:46:08Z/9 ConnectedEndpoints:2 Version:2024-06-05T10:46:08Z/9
+2024-06-05T10:46:27.227388786Z 2024-06-05T10:46:27.224936Z	info	smmr	Member namespace list updated: [eventing-e2e0 eventing-e2e1 eventing-e2e2 eventing-e2e3 eventing-e2e4 istio-system knative-eventing knative-serving serverless-tests serving-tests serving-tests-alt tenant-1 tenant-2]
+2024-06-05T10:46:27.349384517Z 2024-06-05T10:46:27.347418Z	info	ads	Push debounce stable[25] 6 for config Secret/tenant-2/default-token-s75w5 and 5 more configs: 100.583171ms since last change, 100.598341ms since last push, full=false
+2024-06-05T10:46:27.349384517Z 2024-06-05T10:46:27.347510Z	info	ads	XDS: Incremental Pushing:2024-06-05T10:46:08Z/9 ConnectedEndpoints:2 Version:2024-06-05T10:46:08Z/9
+2024-06-05T10:46:31.186920551Z 2024-06-05T10:46:31.185781Z	warn	ior	Hostname * is not supported at the moment. Letting OpenShift create it instead.
+2024-06-05T10:46:31.196383662Z 2024-06-05T10:46:31.195889Z	error	ior	failed to process gateway knative-ingress-gateway/knative-serving event add: 1 error occurred:
+2024-06-05T10:46:31.196383662Z 	* error creating a route for the host * from gateway: knative-serving/knative-ingress-gateway: Route.route.openshift.io "knative-serving-knative-ingress-gateway-684888c0ebb17f37" is invalid: spec.host: Invalid value: "knative-serving-knative-ingress-gateway-684888c0ebb17f37-istio-system.apps.ci-ln-bxslict-76ef8.origin-ci-int-aws.dev.rhcloud.com": must be no more than 63 characters
+2024-06-05T10:46:31.196383662Z 
+2024-06-05T10:46:31.196383662Z 
+2024-06-05T10:46:31.282649975Z 2024-06-05T10:46:31.282571Z	info	ads	Push debounce stable[26] 1 for config Gateway/knative-serving/knative-ingress-gateway: 100.119432ms since last change, 100.119162ms since last push, full=true
+2024-06-05T10:46:31.282797818Z 2024-06-05T10:46:31.282716Z	info	ads	XDS: Pushing:2024-06-05T10:46:31Z/10 Services:3 ConnectedEndpoints:2 Version:2024-06-05T10:46:31Z/10
+2024-06-05T10:46:31.283019112Z 2024-06-05T10:46:31.282996Z	info	ads	LDS: PUSH for node:istio-egressgateway-856fbd6dfc-t5xwv.istio-system resources:0 size:0B
+2024-06-05T10:46:31.284421441Z 2024-06-05T10:46:31.284326Z	info	ads	LDS: PUSH for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:1 size:5.2kB
+2024-06-05T10:46:31.289841970Z 2024-06-05T10:46:31.289717Z	warn	constructed http route config for route https.443.https.knative-ingress-gateway.knative-serving on port 443 with no vhosts; Setting up a default 404 vhost
+2024-06-05T10:46:31.289989353Z 2024-06-05T10:46:31.289957Z	info	ads	RDS: PUSH request for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:1 size:81B cached:0/0
+2024-06-05T10:46:31.292510293Z 2024-06-05T10:46:31.292482Z	info	ads	SDS: PUSH request for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:1 size:3.0kB cached:0/1
+2024-06-05T10:46:31.746153799Z 2024-06-05T10:46:31.746086Z	warn	ior	Hostname * is not supported at the moment. Letting OpenShift create it instead.
+2024-06-05T10:46:31.751968776Z 2024-06-05T10:46:31.751941Z	error	ior	failed to process gateway knative-local-gateway/knative-serving event add: 1 error occurred:
+2024-06-05T10:46:31.751968776Z 	* error creating a route for the host * from gateway: knative-serving/knative-local-gateway: Route.route.openshift.io "knative-serving-knative-local-gateway-684888c0ebb17f37" is invalid: spec.host: Invalid value: "knative-serving-knative-local-gateway-684888c0ebb17f37-istio-system.apps.ci-ln-bxslict-76ef8.origin-ci-int-aws.dev.rhcloud.com": must be no more than 63 characters
+2024-06-05T10:46:31.751968776Z 
+2024-06-05T10:46:31.751968776Z 
+2024-06-05T10:46:31.847170189Z 2024-06-05T10:46:31.847106Z	info	ads	Push debounce stable[27] 1 for config Gateway/knative-serving/knative-local-gateway: 100.980789ms since last change, 100.980589ms since last push, full=true
+2024-06-05T10:46:31.847294102Z 2024-06-05T10:46:31.847266Z	info	ads	XDS: Pushing:2024-06-05T10:46:31Z/11 Services:3 ConnectedEndpoints:2 Version:2024-06-05T10:46:31Z/11
+2024-06-05T10:46:31.847482155Z 2024-06-05T10:46:31.847457Z	info	ads	LDS: PUSH for node:istio-egressgateway-856fbd6dfc-t5xwv.istio-system resources:0 size:0B
+2024-06-05T10:46:31.847758161Z 2024-06-05T10:46:31.847733Z	info	ads	LDS: PUSH for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:2 size:10.4kB
+2024-06-05T10:46:31.847758161Z 2024-06-05T10:46:31.847752Z	warn	constructed http route config for route https.443.https.knative-ingress-gateway.knative-serving on port 443 with no vhosts; Setting up a default 404 vhost
+2024-06-05T10:46:31.847780952Z 2024-06-05T10:46:31.847775Z	info	ads	RDS: PUSH for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:1 size:81B cached:0/0
+2024-06-05T10:46:31.851558927Z 2024-06-05T10:46:31.851517Z	warn	constructed http route config for route https.8081.https.knative-local-gateway.knative-serving on port 8081 with no vhosts; Setting up a default 404 vhost
+2024-06-05T10:46:31.851558927Z 2024-06-05T10:46:31.851550Z	info	ads	RDS: PUSH request for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:1 size:81B cached:0/0 filtered:1
+2024-06-05T10:46:32.287008847Z 2024-06-05T10:46:32.286952Z	info	ads	Full push, new service istio-system/knative-local-gateway.istio-system.svc.cluster.local
+2024-06-05T10:46:32.387975846Z 2024-06-05T10:46:32.387922Z	info	ads	Push debounce stable[28] 2 for config ServiceEntry/istio-system/knative-local-gateway.istio-system.svc.cluster.local: 100.912418ms since last change, 148.639757ms since last push, full=true
+2024-06-05T10:46:32.388265892Z 2024-06-05T10:46:32.388234Z	info	ads	XDS: Pushing:2024-06-05T10:46:32Z/12 Services:4 ConnectedEndpoints:2 Version:2024-06-05T10:46:32Z/12
+2024-06-05T10:46:32.388569798Z 2024-06-05T10:46:32.388549Z	info	ads	CDS: PUSH for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:12 size:11.9kB cached:10/11
+2024-06-05T10:46:32.388653610Z 2024-06-05T10:46:32.388631Z	info	ads	CDS: PUSH for node:istio-egressgateway-856fbd6dfc-t5xwv.istio-system resources:12 size:11.9kB cached:10/11
+2024-06-05T10:46:32.388731202Z 2024-06-05T10:46:32.388713Z	info	ads	LDS: PUSH for node:istio-egressgateway-856fbd6dfc-t5xwv.istio-system resources:0 size:0B
+2024-06-05T10:46:32.388868294Z 2024-06-05T10:46:32.388849Z	info	ads	LDS: PUSH for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:2 size:10.4kB
+2024-06-05T10:46:32.388921035Z 2024-06-05T10:46:32.388906Z	warn	constructed http route config for route https.8081.https.knative-local-gateway.knative-serving on port 8081 with no vhosts; Setting up a default 404 vhost
+2024-06-05T10:46:32.388963786Z 2024-06-05T10:46:32.388950Z	warn	constructed http route config for route https.443.https.knative-ingress-gateway.knative-serving on port 443 with no vhosts; Setting up a default 404 vhost
+2024-06-05T10:46:32.389022927Z 2024-06-05T10:46:32.388992Z	info	ads	RDS: PUSH for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:2 size:162B cached:0/0
+2024-06-05T10:46:32.393015728Z 2024-06-05T10:46:32.392976Z	info	ads	EDS: PUSH request for node:istio-egressgateway-856fbd6dfc-t5xwv.istio-system resources:1 size:207B empty:0 cached:0/1 filtered:10
+2024-06-05T10:46:32.393512518Z 2024-06-05T10:46:32.393493Z	info	ads	EDS: PUSH request for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:1 size:207B empty:0 cached:1/1 filtered:10
+2024-06-05T10:46:33.794222729Z 2024-06-05T10:46:33.794160Z	info	ads	Push debounce stable[29] 1 for config DestinationRule/knative-eventing/disable-mtls-zipkin: 100.212667ms since last change, 100.212396ms since last push, full=true
+2024-06-05T10:46:33.794391312Z 2024-06-05T10:46:33.794371Z	info	ads	XDS: Pushing:2024-06-05T10:46:33Z/13 Services:4 ConnectedEndpoints:2 Version:2024-06-05T10:46:33Z/13
+2024-06-05T10:46:33.794676048Z 2024-06-05T10:46:33.794655Z	info	ads	CDS: PUSH for node:istio-egressgateway-856fbd6dfc-t5xwv.istio-system resources:12 size:11.9kB cached:11/11
+2024-06-05T10:46:33.794735909Z 2024-06-05T10:46:33.794712Z	info	ads	CDS: PUSH for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:12 size:11.9kB cached:11/11
+2024-06-05T10:46:33.794801340Z 2024-06-05T10:46:33.794781Z	info	ads	EDS: PUSH for node:istio-egressgateway-856fbd6dfc-t5xwv.istio-system resources:11 size:2.1kB empty:0 cached:11/11
+2024-06-05T10:46:33.794946313Z 2024-06-05T10:46:33.794901Z	info	ads	LDS: PUSH for node:istio-egressgateway-856fbd6dfc-t5xwv.istio-system resources:0 size:0B
+2024-06-05T10:46:33.795027875Z 2024-06-05T10:46:33.794825Z	info	ads	EDS: PUSH for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:11 size:2.1kB empty:0 cached:11/11
+2024-06-05T10:46:33.795419413Z 2024-06-05T10:46:33.795403Z	info	ads	LDS: PUSH for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:2 size:10.4kB
+2024-06-05T10:46:33.795470314Z 2024-06-05T10:46:33.795458Z	warn	constructed http route config for route https.8081.https.knative-local-gateway.knative-serving on port 8081 with no vhosts; Setting up a default 404 vhost
+2024-06-05T10:46:33.795505045Z 2024-06-05T10:46:33.795495Z	warn	constructed http route config for route https.443.https.knative-ingress-gateway.knative-serving on port 443 with no vhosts; Setting up a default 404 vhost
+2024-06-05T10:46:33.795558866Z 2024-06-05T10:46:33.795547Z	info	ads	RDS: PUSH for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:2 size:162B cached:0/0
+2024-06-05T10:55:49.246007676Z 2024-06-05T10:55:49.245913Z	info	ads	Push debounce stable[30] 6 for config Secret/knative-serving/controller-token-6rfj2 and 3 more configs: 100.673936ms since last change, 255.452055ms since last push, full=false
+2024-06-05T10:55:49.246061917Z 2024-06-05T10:55:49.246002Z	info	ads	XDS: Incremental Pushing:2024-06-05T10:46:33Z/13 ConnectedEndpoints:2 Version:2024-06-05T10:46:33Z/13
+2024-06-05T10:55:50.944810994Z 2024-06-05T10:55:50.944766Z	info	ads	Push debounce stable[31] 1 for config Secret/knative-serving/serving-certs-ctrl-ca: 100.493172ms since last change, 100.493002ms since last push, full=false
+2024-06-05T10:55:50.944842075Z 2024-06-05T10:55:50.944823Z	info	ads	XDS: Incremental Pushing:2024-06-05T10:46:33Z/13 ConnectedEndpoints:2 Version:2024-06-05T10:46:33Z/13
+2024-06-05T10:55:51.076087067Z 2024-06-05T10:55:51.076036Z	info	ads	Push debounce stable[32] 1 for config Secret/knative-serving/knative-serving-certs: 100.220086ms since last change, 100.220006ms since last push, full=false
+2024-06-05T10:55:51.076117657Z 2024-06-05T10:55:51.076084Z	info	ads	XDS: Incremental Pushing:2024-06-05T10:46:33Z/13 ConnectedEndpoints:2 Version:2024-06-05T10:46:33Z/13
+2024-06-05T10:55:51.210743996Z 2024-06-05T10:55:51.210664Z	info	ads	Push debounce stable[33] 1 for config Secret/knative-serving/control-serving-certs: 100.243556ms since last change, 100.243376ms since last push, full=false
+2024-06-05T10:55:51.210815127Z 2024-06-05T10:55:51.210751Z	info	ads	XDS: Incremental Pushing:2024-06-05T10:46:33Z/13 ConnectedEndpoints:2 Version:2024-06-05T10:46:33Z/13
+2024-06-05T10:55:51.344393666Z 2024-06-05T10:55:51.344323Z	info	ads	Push debounce stable[34] 1 for config Secret/knative-serving/routing-serving-certs: 100.596964ms since last change, 100.596854ms since last push, full=false
+2024-06-05T10:55:51.344441566Z 2024-06-05T10:55:51.344402Z	info	ads	XDS: Incremental Pushing:2024-06-05T10:46:33Z/13 ConnectedEndpoints:2 Version:2024-06-05T10:46:33Z/13
+2024-06-05T10:55:55.972126198Z 2024-06-05T10:55:55.972075Z	info	ads	Incremental push, service activator-service.knative-serving.svc.cluster.local at shard Kubernetes/Kubernetes has no endpoints
+2024-06-05T10:55:56.072858015Z 2024-06-05T10:55:56.072523Z	info	ads	Push debounce stable[35] 2 for config ServiceEntry/knative-serving/activator-service.knative-serving.svc.cluster.local: 100.405171ms since last change, 127.232323ms since last push, full=true
+2024-06-05T10:55:56.072892065Z 2024-06-05T10:55:56.072880Z	info	ads	XDS: Pushing:2024-06-05T10:55:56Z/14 Services:5 ConnectedEndpoints:2 Version:2024-06-05T10:55:56Z/14
+2024-06-05T10:55:56.073395305Z 2024-06-05T10:55:56.073369Z	info	ads	CDS: PUSH for node:istio-egressgateway-856fbd6dfc-t5xwv.istio-system resources:17 size:16.7kB cached:11/16
+2024-06-05T10:55:56.073440706Z 2024-06-05T10:55:56.073421Z	info	ads	LDS: PUSH for node:istio-egressgateway-856fbd6dfc-t5xwv.istio-system resources:0 size:0B
+2024-06-05T10:55:56.073509027Z 2024-06-05T10:55:56.073493Z	info	ads	CDS: PUSH for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:17 size:16.7kB cached:16/16
+2024-06-05T10:55:56.073986807Z 2024-06-05T10:55:56.073969Z	info	ads	LDS: PUSH for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:2 size:10.4kB
+2024-06-05T10:55:56.074031828Z 2024-06-05T10:55:56.074020Z	warn	constructed http route config for route https.8081.https.knative-local-gateway.knative-serving on port 8081 with no vhosts; Setting up a default 404 vhost
+2024-06-05T10:55:56.074069559Z 2024-06-05T10:55:56.074059Z	warn	constructed http route config for route https.443.https.knative-ingress-gateway.knative-serving on port 443 with no vhosts; Setting up a default 404 vhost
+2024-06-05T10:55:56.074134850Z 2024-06-05T10:55:56.074123Z	info	ads	RDS: PUSH for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:2 size:162B cached:0/0
+2024-06-05T10:55:56.082418514Z 2024-06-05T10:55:56.082195Z	info	ads	EDS: PUSH request for node:istio-egressgateway-856fbd6dfc-t5xwv.istio-system resources:5 size:335B empty:5 cached:0/5 filtered:11
+2024-06-05T10:55:56.085599957Z 2024-06-05T10:55:56.085425Z	info	ads	EDS: PUSH request for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:5 size:335B empty:0 cached:5/5 filtered:11
+2024-06-05T10:55:56.209850270Z 2024-06-05T10:55:56.209801Z	info	ads	Incremental push, service autoscaler.knative-serving.svc.cluster.local at shard Kubernetes/Kubernetes has no endpoints
+2024-06-05T10:55:56.310073097Z 2024-06-05T10:55:56.310017Z	info	ads	Push debounce stable[36] 2 for config ServiceEntry/knative-serving/autoscaler.knative-serving.svc.cluster.local: 100.170466ms since last change, 116.00838ms since last push, full=true
+2024-06-05T10:55:56.310425274Z 2024-06-05T10:55:56.310396Z	info	ads	XDS: Pushing:2024-06-05T10:55:56Z/15 Services:6 ConnectedEndpoints:2 Version:2024-06-05T10:55:56Z/15
+2024-06-05T10:55:56.310830282Z 2024-06-05T10:55:56.310789Z	info	ads	CDS: PUSH for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:20 size:19.4kB cached:16/19
+2024-06-05T10:55:56.310830282Z 2024-06-05T10:55:56.310802Z	info	ads	CDS: PUSH for node:istio-egressgateway-856fbd6dfc-t5xwv.istio-system resources:20 size:19.4kB cached:18/19
+2024-06-05T10:55:56.310881143Z 2024-06-05T10:55:56.310860Z	info	ads	LDS: PUSH for node:istio-egressgateway-856fbd6dfc-t5xwv.istio-system resources:0 size:0B
+2024-06-05T10:55:56.311217090Z 2024-06-05T10:55:56.311111Z	info	ads	LDS: PUSH for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:2 size:10.4kB
+2024-06-05T10:55:56.311217090Z 2024-06-05T10:55:56.311134Z	warn	constructed http route config for route https.8081.https.knative-local-gateway.knative-serving on port 8081 with no vhosts; Setting up a default 404 vhost
+2024-06-05T10:55:56.311217090Z 2024-06-05T10:55:56.311149Z	warn	constructed http route config for route https.443.https.knative-ingress-gateway.knative-serving on port 443 with no vhosts; Setting up a default 404 vhost
+2024-06-05T10:55:56.311217090Z 2024-06-05T10:55:56.311167Z	info	ads	RDS: PUSH for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:2 size:162B cached:0/0
+2024-06-05T10:55:56.317199019Z 2024-06-05T10:55:56.317170Z	info	ads	EDS: PUSH request for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:3 size:183B empty:3 cached:0/3 filtered:16
+2024-06-05T10:55:56.317307221Z 2024-06-05T10:55:56.317282Z	info	ads	EDS: PUSH request for node:istio-egressgateway-856fbd6dfc-t5xwv.istio-system resources:3 size:183B empty:0 cached:3/3 filtered:16
+2024-06-05T10:55:56.464997279Z 2024-06-05T10:55:56.464136Z	info	ads	Incremental push, service controller.knative-serving.svc.cluster.local at shard Kubernetes/Kubernetes has no endpoints
+2024-06-05T10:55:56.565272647Z 2024-06-05T10:55:56.565218Z	info	ads	Push debounce stable[37] 2 for config ServiceEntry/knative-serving/controller.knative-serving.svc.cluster.local: 101.035263ms since last change, 108.588693ms since last push, full=true
+2024-06-05T10:55:56.565632454Z 2024-06-05T10:55:56.565605Z	info	ads	XDS: Pushing:2024-06-05T10:55:56Z/16 Services:7 ConnectedEndpoints:2 Version:2024-06-05T10:55:56Z/16
+2024-06-05T10:55:56.565987461Z 2024-06-05T10:55:56.565958Z	info	ads	CDS: PUSH for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:22 size:21.2kB cached:19/21
+2024-06-05T10:55:56.566132944Z 2024-06-05T10:55:56.565960Z	info	ads	CDS: PUSH for node:istio-egressgateway-856fbd6dfc-t5xwv.istio-system resources:22 size:21.2kB cached:19/21
+2024-06-05T10:55:56.566310457Z 2024-06-05T10:55:56.566205Z	info	ads	LDS: PUSH for node:istio-egressgateway-856fbd6dfc-t5xwv.istio-system resources:0 size:0B
+2024-06-05T10:55:56.566310457Z 2024-06-05T10:55:56.566252Z	info	ads	LDS: PUSH for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:2 size:10.4kB
+2024-06-05T10:55:56.566310457Z 2024-06-05T10:55:56.566270Z	warn	constructed http route config for route https.8081.https.knative-local-gateway.knative-serving on port 8081 with no vhosts; Setting up a default 404 vhost
+2024-06-05T10:55:56.566310457Z 2024-06-05T10:55:56.566283Z	warn	constructed http route config for route https.443.https.knative-ingress-gateway.knative-serving on port 443 with no vhosts; Setting up a default 404 vhost
+2024-06-05T10:55:56.566310457Z 2024-06-05T10:55:56.566299Z	info	ads	RDS: PUSH for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:2 size:162B cached:0/0
+2024-06-05T10:55:56.570802846Z 2024-06-05T10:55:56.570767Z	info	ads	EDS: PUSH request for node:istio-egressgateway-856fbd6dfc-t5xwv.istio-system resources:2 size:122B empty:2 cached:0/2 filtered:19
+2024-06-05T10:55:56.572203124Z 2024-06-05T10:55:56.572171Z	info	ads	EDS: PUSH request for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:2 size:122B empty:0 cached:2/2 filtered:19
+2024-06-05T10:55:57.026232705Z 2024-06-05T10:55:57.026185Z	info	ads	Incremental push, service webhook.knative-serving.svc.cluster.local at shard Kubernetes/Kubernetes has no endpoints
+2024-06-05T10:55:57.219307002Z 2024-06-05T10:55:57.219260Z	info	ads	Push debounce stable[38] 3 for config ServiceEntry/knative-serving/webhook.knative-serving.svc.cluster.local and 1 more configs: 101.059964ms since last change, 217.713446ms since last push, full=true
+2024-06-05T10:55:57.219716461Z 2024-06-05T10:55:57.219689Z	info	ads	XDS: Pushing:2024-06-05T10:55:57Z/17 Services:8 ConnectedEndpoints:2 Version:2024-06-05T10:55:57Z/17
+2024-06-05T10:55:57.220091328Z 2024-06-05T10:55:57.220070Z	info	ads	CDS: PUSH for node:istio-egressgateway-856fbd6dfc-t5xwv.istio-system resources:25 size:23.8kB cached:21/24
+2024-06-05T10:55:57.220091328Z 2024-06-05T10:55:57.220078Z	info	ads	CDS: PUSH for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:25 size:23.8kB cached:24/24
+2024-06-05T10:55:57.220559227Z 2024-06-05T10:55:57.220186Z	info	ads	EDS: PUSH for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:21 size:2.7kB empty:0 cached:21/21
+2024-06-05T10:55:57.220559227Z 2024-06-05T10:55:57.220299Z	info	ads	EDS: PUSH for node:istio-egressgateway-856fbd6dfc-t5xwv.istio-system resources:21 size:2.7kB empty:0 cached:21/21
+2024-06-05T10:55:57.220559227Z 2024-06-05T10:55:57.220325Z	info	ads	LDS: PUSH for node:istio-egressgateway-856fbd6dfc-t5xwv.istio-system resources:0 size:0B
+2024-06-05T10:55:57.220559227Z 2024-06-05T10:55:57.220522Z	info	ads	LDS: PUSH for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:2 size:10.4kB
+2024-06-05T10:55:57.220559227Z 2024-06-05T10:55:57.220541Z	warn	constructed http route config for route https.8081.https.knative-local-gateway.knative-serving on port 8081 with no vhosts; Setting up a default 404 vhost
+2024-06-05T10:55:57.220588778Z 2024-06-05T10:55:57.220556Z	warn	constructed http route config for route https.443.https.knative-ingress-gateway.knative-serving on port 443 with no vhosts; Setting up a default 404 vhost
+2024-06-05T10:55:57.220599658Z 2024-06-05T10:55:57.220590Z	info	ads	RDS: PUSH for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:2 size:162B cached:0/0
+2024-06-05T10:55:57.220656349Z 2024-06-05T10:55:57.220623Z	info	ads	SDS: PUSH for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:1 size:3.0kB cached:1/1
+2024-06-05T10:55:57.227685779Z 2024-06-05T10:55:57.227664Z	info	ads	EDS: PUSH request for node:istio-egressgateway-856fbd6dfc-t5xwv.istio-system resources:3 size:173B empty:3 cached:0/3 filtered:21
+2024-06-05T10:55:57.227886612Z 2024-06-05T10:55:57.227866Z	info	ads	EDS: PUSH request for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:3 size:173B empty:0 cached:3/3 filtered:21
+2024-06-05T10:55:57.398565926Z 2024-06-05T10:55:57.398508Z	info	ads	Incremental push, service autoscaler-hpa.knative-serving.svc.cluster.local at shard Kubernetes/Kubernetes has no endpoints
+2024-06-05T10:55:57.498895745Z 2024-06-05T10:55:57.498809Z	info	ads	Push debounce stable[39] 2 for config ServiceEntry/knative-serving/autoscaler-hpa.knative-serving.svc.cluster.local: 100.258087ms since last change, 110.217205ms since last push, full=true
+2024-06-05T10:55:57.499385035Z 2024-06-05T10:55:57.499359Z	info	ads	XDS: Pushing:2024-06-05T10:55:57Z/18 Services:9 ConnectedEndpoints:2 Version:2024-06-05T10:55:57Z/18
+2024-06-05T10:55:57.499754582Z 2024-06-05T10:55:57.499726Z	info	ads	CDS: PUSH for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:27 size:25.6kB cached:24/26
+2024-06-05T10:55:57.499863214Z 2024-06-05T10:55:57.499726Z	info	ads	CDS: PUSH for node:istio-egressgateway-856fbd6dfc-t5xwv.istio-system resources:27 size:25.6kB cached:24/26
+2024-06-05T10:55:57.499933526Z 2024-06-05T10:55:57.499918Z	info	ads	LDS: PUSH for node:istio-egressgateway-856fbd6dfc-t5xwv.istio-system resources:0 size:0B
+2024-06-05T10:55:57.500021817Z 2024-06-05T10:55:57.499998Z	info	ads	LDS: PUSH for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:2 size:10.4kB
+2024-06-05T10:55:57.500021817Z 2024-06-05T10:55:57.500018Z	warn	constructed http route config for route https.8081.https.knative-local-gateway.knative-serving on port 8081 with no vhosts; Setting up a default 404 vhost
+2024-06-05T10:55:57.500037038Z 2024-06-05T10:55:57.500030Z	warn	constructed http route config for route https.443.https.knative-ingress-gateway.knative-serving on port 443 with no vhosts; Setting up a default 404 vhost
+2024-06-05T10:55:57.500051058Z 2024-06-05T10:55:57.500044Z	info	ads	RDS: PUSH for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:2 size:162B cached:0/0
+2024-06-05T10:55:57.505300062Z 2024-06-05T10:55:57.505260Z	info	ads	EDS: PUSH request for node:istio-egressgateway-856fbd6dfc-t5xwv.istio-system resources:2 size:130B empty:2 cached:0/2 filtered:24
+2024-06-05T10:55:57.505370013Z 2024-06-05T10:55:57.505332Z	info	ads	EDS: PUSH request for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:2 size:130B empty:0 cached:2/2 filtered:24
+2024-06-05T10:55:58.152260448Z 2024-06-05T10:55:58.152206Z	info	ads	Push debounce stable[40] 1 for config Secret/knative-serving/net-istio-webhook-certs: 100.337459ms since last change, 100.337259ms since last push, full=false
+2024-06-05T10:55:58.152306319Z 2024-06-05T10:55:58.152265Z	info	ads	XDS: Incremental Pushing:2024-06-05T10:55:57Z/18 ConnectedEndpoints:2 Version:2024-06-05T10:55:57Z/18
+2024-06-05T10:55:58.195619657Z 2024-06-05T10:55:58.195558Z	info	ads	Incremental push, service net-istio-webhook.knative-serving.svc.cluster.local at shard Kubernetes/Kubernetes has no endpoints
+2024-06-05T10:55:58.296094199Z 2024-06-05T10:55:58.296033Z	info	ads	Push debounce stable[41] 2 for config ServiceEntry/knative-serving/net-istio-webhook.knative-serving.svc.cluster.local: 100.427641ms since last change, 107.816028ms since last push, full=true
+2024-06-05T10:55:58.296835834Z 2024-06-05T10:55:58.296795Z	info	ads	XDS: Pushing:2024-06-05T10:55:58Z/19 Services:10 ConnectedEndpoints:2 Version:2024-06-05T10:55:58Z/19
+2024-06-05T10:55:58.297306424Z 2024-06-05T10:55:58.297260Z	info	ads	CDS: PUSH for node:istio-egressgateway-856fbd6dfc-t5xwv.istio-system resources:30 size:28.4kB cached:26/29
+2024-06-05T10:55:58.297306424Z 2024-06-05T10:55:58.297285Z	info	ads	CDS: PUSH for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:30 size:28.4kB cached:28/29
+2024-06-05T10:55:58.297335224Z 2024-06-05T10:55:58.297321Z	info	ads	LDS: PUSH for node:istio-egressgateway-856fbd6dfc-t5xwv.istio-system resources:0 size:0B
+2024-06-05T10:55:58.297780453Z 2024-06-05T10:55:58.297625Z	info	ads	LDS: PUSH for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:2 size:10.4kB
+2024-06-05T10:55:58.297780453Z 2024-06-05T10:55:58.297646Z	warn	constructed http route config for route https.8081.https.knative-local-gateway.knative-serving on port 8081 with no vhosts; Setting up a default 404 vhost
+2024-06-05T10:55:58.297780453Z 2024-06-05T10:55:58.297660Z	warn	constructed http route config for route https.443.https.knative-ingress-gateway.knative-serving on port 443 with no vhosts; Setting up a default 404 vhost
+2024-06-05T10:55:58.297780453Z 2024-06-05T10:55:58.297677Z	info	ads	RDS: PUSH for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:2 size:162B cached:0/0
+2024-06-05T10:55:58.308447604Z 2024-06-05T10:55:58.308421Z	info	ads	EDS: PUSH request for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:3 size:203B empty:3 cached:0/3 filtered:26
+2024-06-05T10:55:58.309935194Z 2024-06-05T10:55:58.309154Z	info	ads	EDS: PUSH request for node:istio-egressgateway-856fbd6dfc-t5xwv.istio-system resources:3 size:203B empty:0 cached:3/3 filtered:26
+2024-06-05T10:55:58.468970667Z 2024-06-05T10:55:58.468926Z	info	ads	Incremental push, service activator-sm-service.knative-serving.svc.cluster.local at shard Kubernetes/Kubernetes has no endpoints
+2024-06-05T10:55:58.569734474Z 2024-06-05T10:55:58.569675Z	info	ads	Push debounce stable[42] 2 for config ServiceEntry/knative-serving/activator-sm-service.knative-serving.svc.cluster.local: 100.621074ms since last change, 112.596702ms since last push, full=true
+2024-06-05T10:55:58.570256235Z 2024-06-05T10:55:58.570233Z	info	ads	XDS: Pushing:2024-06-05T10:55:58Z/20 Services:11 ConnectedEndpoints:2 Version:2024-06-05T10:55:58Z/20
+2024-06-05T10:55:58.570700263Z 2024-06-05T10:55:58.570681Z	info	ads	CDS: PUSH for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:31 size:29.3kB cached:29/30
+2024-06-05T10:55:58.571038600Z 2024-06-05T10:55:58.571020Z	info	ads	LDS: PUSH for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:2 size:10.4kB
+2024-06-05T10:55:58.571082061Z 2024-06-05T10:55:58.571058Z	info	ads	CDS: PUSH for node:istio-egressgateway-856fbd6dfc-t5xwv.istio-system resources:31 size:29.3kB cached:30/30
+2024-06-05T10:55:58.571121182Z 2024-06-05T10:55:58.571103Z	info	ads	LDS: PUSH for node:istio-egressgateway-856fbd6dfc-t5xwv.istio-system resources:0 size:0B
+2024-06-05T10:55:58.571250114Z 2024-06-05T10:55:58.571068Z	warn	constructed http route config for route https.8081.https.knative-local-gateway.knative-serving on port 8081 with no vhosts; Setting up a default 404 vhost
+2024-06-05T10:55:58.571294905Z 2024-06-05T10:55:58.571281Z	warn	constructed http route config for route https.443.https.knative-ingress-gateway.knative-serving on port 443 with no vhosts; Setting up a default 404 vhost
+2024-06-05T10:55:58.571359726Z 2024-06-05T10:55:58.571333Z	info	ads	RDS: PUSH for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:2 size:162B cached:0/0
+2024-06-05T10:55:58.578042889Z 2024-06-05T10:55:58.578021Z	info	ads	EDS: PUSH request for node:istio-egressgateway-856fbd6dfc-t5xwv.istio-system resources:1 size:71B empty:1 cached:0/1 filtered:29
+2024-06-05T10:55:58.579093900Z 2024-06-05T10:55:58.579042Z	info	ads	EDS: PUSH request for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:1 size:71B empty:0 cached:1/1 filtered:29
+2024-06-05T10:55:58.733487140Z 2024-06-05T10:55:58.733441Z	info	ads	Incremental push, service autoscaler-sm-service.knative-serving.svc.cluster.local at shard Kubernetes/Kubernetes has no endpoints
+2024-06-05T10:55:58.834590035Z 2024-06-05T10:55:58.834544Z	info	ads	Push debounce stable[43] 2 for config ServiceEntry/knative-serving/autoscaler-sm-service.knative-serving.svc.cluster.local: 100.972442ms since last change, 112.526211ms since last push, full=true
+2024-06-05T10:55:58.835036924Z 2024-06-05T10:55:58.835015Z	info	ads	XDS: Pushing:2024-06-05T10:55:58Z/21 Services:12 ConnectedEndpoints:2 Version:2024-06-05T10:55:58Z/21
+2024-06-05T10:55:58.835426581Z 2024-06-05T10:55:58.835388Z	info	ads	CDS: PUSH for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:32 size:30.3kB cached:30/31
+2024-06-05T10:55:58.835486033Z 2024-06-05T10:55:58.835394Z	info	ads	CDS: PUSH for node:istio-egressgateway-856fbd6dfc-t5xwv.istio-system resources:32 size:30.3kB cached:30/31
+2024-06-05T10:55:58.835578354Z 2024-06-05T10:55:58.835561Z	info	ads	LDS: PUSH for node:istio-egressgateway-856fbd6dfc-t5xwv.istio-system resources:0 size:0B
+2024-06-05T10:55:58.835704787Z 2024-06-05T10:55:58.835685Z	info	ads	LDS: PUSH for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:2 size:10.4kB
+2024-06-05T10:55:58.835753858Z 2024-06-05T10:55:58.835741Z	warn	constructed http route config for route https.8081.https.knative-local-gateway.knative-serving on port 8081 with no vhosts; Setting up a default 404 vhost
+2024-06-05T10:55:58.835792529Z 2024-06-05T10:55:58.835780Z	warn	constructed http route config for route https.443.https.knative-ingress-gateway.knative-serving on port 443 with no vhosts; Setting up a default 404 vhost
+2024-06-05T10:55:58.835835820Z 2024-06-05T10:55:58.835823Z	info	ads	RDS: PUSH for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:2 size:162B cached:0/0
+2024-06-05T10:55:58.842219986Z 2024-06-05T10:55:58.842191Z	info	ads	EDS: PUSH request for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:1 size:72B empty:1 cached:0/1 filtered:30
+2024-06-05T10:55:58.842377539Z 2024-06-05T10:55:58.842337Z	info	ads	EDS: PUSH request for node:istio-egressgateway-856fbd6dfc-t5xwv.istio-system resources:1 size:72B empty:0 cached:1/1 filtered:30
+2024-06-05T10:55:58.997799700Z 2024-06-05T10:55:58.997665Z	info	ads	Incremental push, service autoscaler-hpa-sm-service.knative-serving.svc.cluster.local at shard Kubernetes/Kubernetes has no endpoints
+2024-06-05T10:55:59.158304992Z 2024-06-05T10:55:59.158253Z	info	ads	Push debounce stable[44] 8 for config ServiceEntry/knative-serving/activator-sm-service.knative-serving.svc.cluster.local and 5 more configs: 101.037673ms since last change, 316.137697ms since last push, full=true
+2024-06-05T10:55:59.158788882Z 2024-06-05T10:55:59.158768Z	info	ads	XDS: Pushing:2024-06-05T10:55:59Z/22 Services:13 ConnectedEndpoints:2 Version:2024-06-05T10:55:59Z/22
+2024-06-05T10:55:59.159256011Z 2024-06-05T10:55:59.159221Z	info	ads	CDS: PUSH for node:istio-egressgateway-856fbd6dfc-t5xwv.istio-system resources:33 size:31.3kB cached:30/32
+2024-06-05T10:55:59.159438955Z 2024-06-05T10:55:59.159412Z	info	ads	EDS: PUSH for node:istio-egressgateway-856fbd6dfc-t5xwv.istio-system resources:31 size:3.4kB empty:2 cached:29/31
+2024-06-05T10:55:59.159495506Z 2024-06-05T10:55:59.159454Z	info	ads	LDS: PUSH for node:istio-egressgateway-856fbd6dfc-t5xwv.istio-system resources:0 size:0B
+2024-06-05T10:55:59.159495506Z 2024-06-05T10:55:59.159221Z	info	ads	CDS: PUSH for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:33 size:31.3kB cached:29/32
+2024-06-05T10:55:59.159860983Z 2024-06-05T10:55:59.159669Z	info	ads	EDS: PUSH for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:31 size:3.4kB empty:0 cached:31/31
+2024-06-05T10:55:59.160299152Z 2024-06-05T10:55:59.159980Z	info	ads	LDS: PUSH for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:2 size:10.4kB
+2024-06-05T10:55:59.160299152Z 2024-06-05T10:55:59.160001Z	warn	constructed http route config for route https.8081.https.knative-local-gateway.knative-serving on port 8081 with no vhosts; Setting up a default 404 vhost
+2024-06-05T10:55:59.160299152Z 2024-06-05T10:55:59.160015Z	warn	constructed http route config for route https.443.https.knative-ingress-gateway.knative-serving on port 443 with no vhosts; Setting up a default 404 vhost
+2024-06-05T10:55:59.160299152Z 2024-06-05T10:55:59.160032Z	info	ads	RDS: PUSH for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:2 size:162B cached:0/0
+2024-06-05T10:55:59.160299152Z 2024-06-05T10:55:59.160062Z	info	ads	SDS: PUSH for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:1 size:3.0kB cached:1/1
+2024-06-05T10:55:59.166937833Z 2024-06-05T10:55:59.166907Z	info	ads	EDS: PUSH request for node:istio-egressgateway-856fbd6dfc-t5xwv.istio-system resources:1 size:76B empty:1 cached:0/1 filtered:31
+2024-06-05T10:55:59.170198578Z 2024-06-05T10:55:59.170168Z	info	ads	EDS: PUSH request for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:1 size:76B empty:0 cached:1/1 filtered:31
+2024-06-05T10:55:59.271377344Z 2024-06-05T10:55:59.269654Z	info	ads	Incremental push, service controller-sm-service.knative-serving.svc.cluster.local at shard Kubernetes/Kubernetes has no endpoints
+2024-06-05T10:55:59.370012909Z 2024-06-05T10:55:59.369945Z	info	ads	Push debounce stable[45] 2 for config ServiceEntry/knative-serving/controller-sm-service.knative-serving.svc.cluster.local: 100.250018ms since last change, 113.139633ms since last push, full=true
+2024-06-05T10:55:59.370736394Z 2024-06-05T10:55:59.370717Z	info	ads	XDS: Pushing:2024-06-05T10:55:59Z/23 Services:14 ConnectedEndpoints:2 Version:2024-06-05T10:55:59Z/23
+2024-06-05T10:55:59.371253064Z 2024-06-05T10:55:59.371234Z	info	ads	CDS: PUSH for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:34 size:32.2kB cached:32/33
+2024-06-05T10:55:59.371582890Z 2024-06-05T10:55:59.371566Z	info	ads	LDS: PUSH for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:2 size:10.4kB
+2024-06-05T10:55:59.371682902Z 2024-06-05T10:55:59.371669Z	warn	constructed http route config for route https.8081.https.knative-local-gateway.knative-serving on port 8081 with no vhosts; Setting up a default 404 vhost
+2024-06-05T10:55:59.371721973Z 2024-06-05T10:55:59.371711Z	warn	constructed http route config for route https.443.https.knative-ingress-gateway.knative-serving on port 443 with no vhosts; Setting up a default 404 vhost
+2024-06-05T10:55:59.371783454Z 2024-06-05T10:55:59.371771Z	info	ads	RDS: PUSH for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:2 size:162B cached:0/0
+2024-06-05T10:55:59.372093600Z 2024-06-05T10:55:59.372077Z	info	ads	CDS: PUSH for node:istio-egressgateway-856fbd6dfc-t5xwv.istio-system resources:34 size:32.2kB cached:33/33
+2024-06-05T10:55:59.372162822Z 2024-06-05T10:55:59.372150Z	info	ads	LDS: PUSH for node:istio-egressgateway-856fbd6dfc-t5xwv.istio-system resources:0 size:0B
+2024-06-05T10:55:59.384903874Z 2024-06-05T10:55:59.379867Z	info	ads	EDS: PUSH request for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:1 size:72B empty:1 cached:0/1 filtered:32
+2024-06-05T10:55:59.384903874Z 2024-06-05T10:55:59.383467Z	info	ads	EDS: PUSH request for node:istio-egressgateway-856fbd6dfc-t5xwv.istio-system resources:1 size:72B empty:0 cached:1/1 filtered:32
+2024-06-05T10:55:59.492722342Z 2024-06-05T10:55:59.492271Z	warn	Insecure first-party-jwt option used to validate token; use third-party-jwt
+2024-06-05T10:55:59.499217601Z 2024-06-05T10:55:59.499194Z	info	ads	ADS: new connection for node:autoscaler-588cfb64fb-8csmw.knative-serving-3
+2024-06-05T10:55:59.500468585Z 2024-06-05T10:55:59.500450Z	info	ads	CDS: PUSH request for node:autoscaler-588cfb64fb-8csmw.knative-serving resources:40 size:34.1kB cached:0/33
+2024-06-05T10:55:59.503811282Z 2024-06-05T10:55:59.503529Z	warn	Insecure first-party-jwt option used to validate token; use third-party-jwt
+2024-06-05T10:55:59.510746519Z 2024-06-05T10:55:59.510726Z	info	ads	Push debounce stable[46] 2 for config Secret/knative-serving/controller-sm-service-tls and 1 more configs: 100.916361ms since last change, 107.92276ms since last push, full=true
+2024-06-05T10:55:59.511300920Z 2024-06-05T10:55:59.511280Z	info	ads	XDS: Pushing:2024-06-05T10:55:59Z/24 Services:14 ConnectedEndpoints:3 Version:2024-06-05T10:55:59Z/24
+2024-06-05T10:55:59.511730549Z 2024-06-05T10:55:59.511709Z	info	ads	CDS: PUSH for node:istio-egressgateway-856fbd6dfc-t5xwv.istio-system resources:34 size:32.2kB cached:32/33
+2024-06-05T10:55:59.513994054Z 2024-06-05T10:55:59.513973Z	info	ads	EDS: PUSH for node:istio-egressgateway-856fbd6dfc-t5xwv.istio-system resources:33 size:3.5kB empty:1 cached:32/33
+2024-06-05T10:55:59.514137607Z 2024-06-05T10:55:59.514120Z	info	ads	LDS: PUSH for node:istio-egressgateway-856fbd6dfc-t5xwv.istio-system resources:0 size:0B
+2024-06-05T10:55:59.514241198Z 2024-06-05T10:55:59.513163Z	info	ads	CDS: PUSH for node:autoscaler-588cfb64fb-8csmw.knative-serving resources:40 size:34.1kB cached:0/33
+2024-06-05T10:55:59.514296720Z 2024-06-05T10:55:59.513648Z	info	ads	CDS: PUSH for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:34 size:32.2kB cached:33/33
+2024-06-05T10:55:59.514675017Z 2024-06-05T10:55:59.514471Z	info	ads	EDS: PUSH for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:33 size:3.5kB empty:0 cached:33/33
+2024-06-05T10:55:59.515210158Z 2024-06-05T10:55:59.515191Z	info	ads	LDS: PUSH for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:2 size:10.4kB
+2024-06-05T10:55:59.515319660Z 2024-06-05T10:55:59.515306Z	warn	constructed http route config for route https.8081.https.knative-local-gateway.knative-serving on port 8081 with no vhosts; Setting up a default 404 vhost
+2024-06-05T10:55:59.515396681Z 2024-06-05T10:55:59.515382Z	warn	constructed http route config for route https.443.https.knative-ingress-gateway.knative-serving on port 443 with no vhosts; Setting up a default 404 vhost
+2024-06-05T10:55:59.515456373Z 2024-06-05T10:55:59.515442Z	info	ads	RDS: PUSH for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:2 size:162B cached:0/0
+2024-06-05T10:55:59.515584845Z 2024-06-05T10:55:59.515567Z	info	ads	SDS: PUSH for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:1 size:3.0kB cached:1/1
+2024-06-05T10:55:59.521574334Z 2024-06-05T10:55:59.521550Z	info	ads	EDS: PUSH request for node:autoscaler-588cfb64fb-8csmw.knative-serving resources:33 size:3.5kB empty:22 cached:0/33
+2024-06-05T10:55:59.536374007Z 2024-06-05T10:55:59.535766Z	info	ads	Incremental push, service webhook-sm-service.knative-serving.svc.cluster.local at shard Kubernetes/Kubernetes has no endpoints
+2024-06-05T10:55:59.546334415Z 2024-06-05T10:55:59.546306Z	info	ads	LDS: PUSH request for node:autoscaler-588cfb64fb-8csmw.knative-serving resources:22 size:102.9kB
+2024-06-05T10:55:59.546716882Z 2024-06-05T10:55:59.546697Z	info	ads	NDS: PUSH request for node:autoscaler-588cfb64fb-8csmw.knative-serving resources:1 size:1.6kB
+2024-06-05T10:55:59.583550003Z 2024-06-05T10:55:59.583496Z	info	ads	RDS: PUSH request for node:autoscaler-588cfb64fb-8csmw.knative-serving resources:8 size:12.6kB cached:0/8
+2024-06-05T10:55:59.724910915Z 2024-06-05T10:55:59.724856Z	info	ads	Push debounce stable[47] 4 for config ServiceEntry/knative-serving/webhook-sm-service.knative-serving.svc.cluster.local and 1 more configs: 100.585464ms since last change, 199.963984ms since last push, full=true
+2024-06-05T10:55:59.725490426Z 2024-06-05T10:55:59.725466Z	info	ads	XDS: Pushing:2024-06-05T10:55:59Z/25 Services:15 ConnectedEndpoints:3 Version:2024-06-05T10:55:59Z/25
+2024-06-05T10:55:59.725999507Z 2024-06-05T10:55:59.725979Z	info	ads	CDS: PUSH for node:autoscaler-588cfb64fb-8csmw.knative-serving resources:41 size:35.1kB cached:33/34
+2024-06-05T10:55:59.726172920Z 2024-06-05T10:55:59.726158Z	info	ads	EDS: PUSH for node:autoscaler-588cfb64fb-8csmw.knative-serving resources:33 size:3.5kB empty:0 cached:33/33
+2024-06-05T10:55:59.726688540Z 2024-06-05T10:55:59.726664Z	info	ads	CDS: PUSH for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:35 size:33.1kB cached:34/34
+2024-06-05T10:55:59.726843343Z 2024-06-05T10:55:59.726822Z	info	ads	EDS: PUSH for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:33 size:3.5kB empty:0 cached:33/33
+2024-06-05T10:55:59.727239291Z 2024-06-05T10:55:59.727218Z	info	ads	LDS: PUSH for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:2 size:10.4kB
+2024-06-05T10:55:59.727250791Z 2024-06-05T10:55:59.727242Z	warn	constructed http route config for route https.8081.https.knative-local-gateway.knative-serving on port 8081 with no vhosts; Setting up a default 404 vhost
+2024-06-05T10:55:59.727259561Z 2024-06-05T10:55:59.727253Z	warn	constructed http route config for route https.443.https.knative-ingress-gateway.knative-serving on port 443 with no vhosts; Setting up a default 404 vhost
+2024-06-05T10:55:59.727286222Z 2024-06-05T10:55:59.727270Z	info	ads	RDS: PUSH for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:2 size:162B cached:0/0
+2024-06-05T10:55:59.727318873Z 2024-06-05T10:55:59.727303Z	info	ads	SDS: PUSH for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:1 size:3.0kB cached:1/1
+2024-06-05T10:55:59.727528587Z 2024-06-05T10:55:59.727512Z	info	ads	LDS: PUSH for node:autoscaler-588cfb64fb-8csmw.knative-serving resources:23 size:106.2kB
+2024-06-05T10:55:59.727703940Z 2024-06-05T10:55:59.725992Z	info	ads	CDS: PUSH for node:istio-egressgateway-856fbd6dfc-t5xwv.istio-system resources:35 size:33.1kB cached:33/34
+2024-06-05T10:55:59.727862613Z 2024-06-05T10:55:59.727848Z	info	ads	EDS: PUSH for node:istio-egressgateway-856fbd6dfc-t5xwv.istio-system resources:33 size:3.5kB empty:0 cached:33/33
+2024-06-05T10:55:59.727908805Z 2024-06-05T10:55:59.727897Z	info	ads	LDS: PUSH for node:istio-egressgateway-856fbd6dfc-t5xwv.istio-system resources:0 size:0B
+2024-06-05T10:55:59.734369902Z 2024-06-05T10:55:59.732858Z	info	ads	RDS: PUSH for node:autoscaler-588cfb64fb-8csmw.knative-serving resources:8 size:12.6kB cached:8/8
+2024-06-05T10:55:59.734369902Z 2024-06-05T10:55:59.732928Z	info	ads	NDS: PUSH for node:autoscaler-588cfb64fb-8csmw.knative-serving resources:1 size:1.8kB
+2024-06-05T10:55:59.738370772Z 2024-06-05T10:55:59.736503Z	info	ads	EDS: PUSH request for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:1 size:69B empty:1 cached:0/1 filtered:33
+2024-06-05T10:55:59.740559645Z 2024-06-05T10:55:59.740533Z	info	ads	EDS: PUSH request for node:istio-egressgateway-856fbd6dfc-t5xwv.istio-system resources:1 size:69B empty:0 cached:1/1 filtered:33
+2024-06-05T10:55:59.749370080Z 2024-06-05T10:55:59.746551Z	info	ads	EDS: PUSH request for node:autoscaler-588cfb64fb-8csmw.knative-serving resources:1 size:69B empty:1 cached:0/1 filtered:33
+2024-06-05T10:55:59.900703130Z 2024-06-05T10:55:59.900652Z	info	ads	Incremental push, service autoscaler-sm-service.knative-serving.svc.cluster.local at shard Kubernetes/Kubernetes has no endpoints
+2024-06-05T10:55:59.902004576Z 2024-06-05T10:55:59.901413Z	info	ads	Incremental push, service autoscaler.knative-serving.svc.cluster.local at shard Kubernetes/Kubernetes has no endpoints
+2024-06-05T10:56:00.001943507Z 2024-06-05T10:56:00.001894Z	info	ads	Push debounce stable[48] 2 for config ServiceEntry/knative-serving/autoscaler-sm-service.knative-serving.svc.cluster.local and 1 more configs: 100.37386ms since last change, 101.187366ms since last push, full=false
+2024-06-05T10:56:00.002069360Z 2024-06-05T10:56:00.002021Z	info	ads	XDS: Incremental Pushing:2024-06-05T10:55:59Z/25 ConnectedEndpoints:3 Version:2024-06-05T10:55:59Z/25
+2024-06-05T10:56:00.470909800Z 2024-06-05T10:56:00.470865Z	info	ads	Full push, new service knative-serving/autoscaler-bucket-00-of-01.knative-serving.svc.cluster.local
+2024-06-05T10:56:00.662471036Z 2024-06-05T10:56:00.662413Z	info	ads	Push debounce stable[49] 3 for config Secret/knative-serving/serving-certs-ctrl-ca and 1 more configs: 100.403286ms since last change, 229.269105ms since last push, full=true
+2024-06-05T10:56:00.663423985Z 2024-06-05T10:56:00.663405Z	info	ads	XDS: Pushing:2024-06-05T10:56:00Z/26 Services:16 ConnectedEndpoints:3 Version:2024-06-05T10:56:00Z/26
+2024-06-05T10:56:00.664110129Z 2024-06-05T10:56:00.664093Z	info	ads	CDS: PUSH for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:36 size:34.1kB cached:30/35
+2024-06-05T10:56:00.664336293Z 2024-06-05T10:56:00.664313Z	info	ads	CDS: PUSH for node:autoscaler-588cfb64fb-8csmw.knative-serving resources:42 size:36.0kB cached:30/35
+2024-06-05T10:56:00.664579228Z 2024-06-05T10:56:00.664560Z	info	ads	EDS: PUSH for node:autoscaler-588cfb64fb-8csmw.knative-serving resources:34 size:3.6kB empty:0 cached:34/34
+2024-06-05T10:56:00.664735261Z 2024-06-05T10:56:00.664719Z	info	ads	CDS: PUSH for node:istio-egressgateway-856fbd6dfc-t5xwv.istio-system resources:36 size:34.1kB cached:34/35
+2024-06-05T10:56:00.664910965Z 2024-06-05T10:56:00.664897Z	info	ads	EDS: PUSH for node:istio-egressgateway-856fbd6dfc-t5xwv.istio-system resources:34 size:3.6kB empty:0 cached:34/34
+2024-06-05T10:56:00.664976986Z 2024-06-05T10:56:00.664965Z	info	ads	LDS: PUSH for node:istio-egressgateway-856fbd6dfc-t5xwv.istio-system resources:0 size:0B
+2024-06-05T10:56:00.668795602Z 2024-06-05T10:56:00.665853Z	info	ads	LDS: PUSH for node:autoscaler-588cfb64fb-8csmw.knative-serving resources:23 size:106.2kB
+2024-06-05T10:56:00.668795602Z 2024-06-05T10:56:00.666410Z	info	ads	RDS: PUSH for node:autoscaler-588cfb64fb-8csmw.knative-serving resources:8 size:13.3kB cached:5/8
+2024-06-05T10:56:00.668795602Z 2024-06-05T10:56:00.666471Z	info	ads	NDS: PUSH for node:autoscaler-588cfb64fb-8csmw.knative-serving resources:1 size:1.9kB
+2024-06-05T10:56:00.668795602Z 2024-06-05T10:56:00.664317Z	info	ads	EDS: PUSH for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:34 size:3.6kB empty:0 cached:34/34
+2024-06-05T10:56:00.668795602Z 2024-06-05T10:56:00.666930Z	info	ads	LDS: PUSH for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:2 size:10.4kB
+2024-06-05T10:56:00.668795602Z 2024-06-05T10:56:00.666946Z	warn	constructed http route config for route https.8081.https.knative-local-gateway.knative-serving on port 8081 with no vhosts; Setting up a default 404 vhost
+2024-06-05T10:56:00.668795602Z 2024-06-05T10:56:00.666956Z	warn	constructed http route config for route https.443.https.knative-ingress-gateway.knative-serving on port 443 with no vhosts; Setting up a default 404 vhost
+2024-06-05T10:56:00.668795602Z 2024-06-05T10:56:00.666971Z	info	ads	RDS: PUSH for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:2 size:162B cached:0/0
+2024-06-05T10:56:00.668795602Z 2024-06-05T10:56:00.666995Z	info	ads	SDS: PUSH for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:1 size:3.0kB cached:1/1
+2024-06-05T10:56:00.674620767Z 2024-06-05T10:56:00.674585Z	info	ads	EDS: PUSH request for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:1 size:158B empty:0 cached:0/1 filtered:34
+2024-06-05T10:56:00.675327532Z 2024-06-05T10:56:00.675019Z	info	ads	EDS: PUSH request for node:istio-egressgateway-856fbd6dfc-t5xwv.istio-system resources:1 size:158B empty:0 cached:1/1 filtered:34
+2024-06-05T10:56:00.682886732Z 2024-06-05T10:56:00.682731Z	info	ads	EDS: PUSH request for node:autoscaler-588cfb64fb-8csmw.knative-serving resources:1 size:158B empty:0 cached:0/1 filtered:34
+2024-06-05T10:56:00.821996966Z 2024-06-05T10:56:00.821939Z	info	ads	Incremental push, service controller.knative-serving.svc.cluster.local at shard Kubernetes/Kubernetes has no endpoints
+2024-06-05T10:56:00.822389534Z 2024-06-05T10:56:00.822312Z	info	ads	Incremental push, service controller-sm-service.knative-serving.svc.cluster.local at shard Kubernetes/Kubernetes has no endpoints
+2024-06-05T10:56:00.905080707Z 2024-06-05T10:56:00.905038Z	info	ads	Incremental push, service autoscaler-hpa.knative-serving.svc.cluster.local at shard Kubernetes/Kubernetes has no endpoints
+2024-06-05T10:56:00.906474554Z 2024-06-05T10:56:00.906162Z	info	ads	Incremental push, service autoscaler-hpa-sm-service.knative-serving.svc.cluster.local at shard Kubernetes/Kubernetes has no endpoints
+2024-06-05T10:56:00.922858670Z 2024-06-05T10:56:00.922827Z	info	ads	CDS: PUSH for node:autoscaler-588cfb64fb-8csmw.knative-serving resources:42 size:36.0kB cached:35/35
+2024-06-05T10:56:00.923018063Z 2024-06-05T10:56:00.922994Z	info	ads	EDS: PUSH for node:autoscaler-588cfb64fb-8csmw.knative-serving resources:35 size:3.7kB empty:0 cached:35/35
+2024-06-05T10:56:00.924090264Z 2024-06-05T10:56:00.924050Z	info	ads	LDS: PUSH for node:autoscaler-588cfb64fb-8csmw.knative-serving resources:23 size:106.2kB
+2024-06-05T10:56:00.924387640Z 2024-06-05T10:56:00.924365Z	info	ads	RDS: PUSH for node:autoscaler-588cfb64fb-8csmw.knative-serving resources:8 size:13.3kB cached:8/8
+2024-06-05T10:56:00.924500863Z 2024-06-05T10:56:00.924484Z	info	ads	NDS: PUSH for node:autoscaler-588cfb64fb-8csmw.knative-serving resources:1 size:1.9kB
+2024-06-05T10:56:00.933395939Z 2024-06-05T10:56:00.928211Z	info	ads	Full push, new service knative-serving/autoscaler.knative-serving.svc.cluster.local
+2024-06-05T10:56:00.935985551Z 2024-06-05T10:56:00.935964Z	info	ads	Full push, new service knative-serving/autoscaler-sm-service.knative-serving.svc.cluster.local
+2024-06-05T10:56:00.977181139Z 2024-06-05T10:56:00.977099Z	info	ads	Incremental push, service controller.knative-serving.svc.cluster.local at shard Kubernetes/Kubernetes has no endpoints
+2024-06-05T10:56:00.981169549Z 2024-06-05T10:56:00.981141Z	info	ads	Incremental push, service controller-sm-service.knative-serving.svc.cluster.local at shard Kubernetes/Kubernetes has no endpoints
+2024-06-05T10:56:01.164638934Z 2024-06-05T10:56:01.164585Z	info	ads	Push debounce stable[50] 10 for config ServiceEntry/knative-serving/controller.knative-serving.svc.cluster.local and 7 more configs: 100.231482ms since last change, 342.545827ms since last push, full=true
+2024-06-05T10:56:01.165206966Z 2024-06-05T10:56:01.165182Z	info	ads	XDS: Pushing:2024-06-05T10:56:01Z/27 Services:16 ConnectedEndpoints:3 Version:2024-06-05T10:56:01Z/27
+2024-06-05T10:56:01.166029522Z 2024-06-05T10:56:01.166006Z	info	ads	CDS: PUSH for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:36 size:34.4kB cached:30/35
+2024-06-05T10:56:01.166207225Z 2024-06-05T10:56:01.166006Z	info	ads	CDS: PUSH for node:istio-egressgateway-856fbd6dfc-t5xwv.istio-system resources:36 size:34.4kB cached:25/35
+2024-06-05T10:56:01.166288767Z 2024-06-05T10:56:01.166269Z	info	ads	CDS: PUSH for node:autoscaler-588cfb64fb-8csmw.knative-serving resources:42 size:36.3kB cached:25/35
+2024-06-05T10:56:01.166400719Z 2024-06-05T10:56:01.166375Z	info	ads	EDS: PUSH for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:35 size:4.6kB empty:6 cached:25/35
+2024-06-05T10:56:01.166420070Z 2024-06-05T10:56:01.166408Z	info	ads	EDS: PUSH for node:istio-egressgateway-856fbd6dfc-t5xwv.istio-system resources:35 size:4.6kB empty:0 cached:35/35
+2024-06-05T10:56:01.166452810Z 2024-06-05T10:56:01.166437Z	info	ads	LDS: PUSH for node:istio-egressgateway-856fbd6dfc-t5xwv.istio-system resources:0 size:0B
+2024-06-05T10:56:01.166669444Z 2024-06-05T10:56:01.166650Z	info	ads	LDS: PUSH for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:2 size:10.4kB
+2024-06-05T10:56:01.166727206Z 2024-06-05T10:56:01.166712Z	warn	constructed http route config for route https.8081.https.knative-local-gateway.knative-serving on port 8081 with no vhosts; Setting up a default 404 vhost
+2024-06-05T10:56:01.166772557Z 2024-06-05T10:56:01.166757Z	warn	constructed http route config for route https.443.https.knative-ingress-gateway.knative-serving on port 443 with no vhosts; Setting up a default 404 vhost
+2024-06-05T10:56:01.166843538Z 2024-06-05T10:56:01.166658Z	info	ads	EDS: PUSH for node:autoscaler-588cfb64fb-8csmw.knative-serving resources:35 size:4.6kB empty:6 cached:25/35
+2024-06-05T10:56:01.167276096Z 2024-06-05T10:56:01.167247Z	info	ads	RDS: PUSH for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:2 size:162B cached:0/0
+2024-06-05T10:56:01.167297317Z 2024-06-05T10:56:01.167290Z	info	ads	SDS: PUSH for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:1 size:3.0kB cached:1/1
+2024-06-05T10:56:01.181731594Z 2024-06-05T10:56:01.181693Z	info	ads	LDS: PUSH for node:autoscaler-588cfb64fb-8csmw.knative-serving resources:23 size:106.2kB
+2024-06-05T10:56:01.182182763Z 2024-06-05T10:56:01.182161Z	info	ads	RDS: PUSH for node:autoscaler-588cfb64fb-8csmw.knative-serving resources:8 size:13.3kB cached:5/8
+2024-06-05T10:56:01.182335976Z 2024-06-05T10:56:01.182319Z	info	ads	NDS: PUSH for node:autoscaler-588cfb64fb-8csmw.knative-serving resources:1 size:1.9kB
+2024-06-05T10:56:01.325903458Z 2024-06-05T10:56:01.325837Z	info	ads	Push debounce stable[51] 1 for config Secret/knative-serving/knative-serving-certs: 100.529927ms since last change, 100.529847ms since last push, full=false
+2024-06-05T10:56:01.325951959Z 2024-06-05T10:56:01.325907Z	info	ads	XDS: Incremental Pushing:2024-06-05T10:56:01Z/27 ConnectedEndpoints:3 Version:2024-06-05T10:56:01Z/27
+2024-06-05T10:56:01.725454778Z 2024-06-05T10:56:01.725400Z	info	ads	Full push, new service knative-serving/controller.knative-serving.svc.cluster.local
+2024-06-05T10:56:01.726599350Z 2024-06-05T10:56:01.726576Z	info	ads	Full push, new service knative-serving/controller-sm-service.knative-serving.svc.cluster.local
+2024-06-05T10:56:01.827447074Z 2024-06-05T10:56:01.827385Z	info	ads	Push debounce stable[52] 2 for config ServiceEntry/knative-serving/controller-sm-service.knative-serving.svc.cluster.local and 1 more configs: 100.725112ms since last change, 101.928146ms since last push, full=true
+2024-06-05T10:56:01.828008896Z 2024-06-05T10:56:01.827983Z	info	ads	XDS: Pushing:2024-06-05T10:56:01Z/28 Services:16 ConnectedEndpoints:3 Version:2024-06-05T10:56:01Z/28
+2024-06-05T10:56:01.828618748Z 2024-06-05T10:56:01.828580Z	info	ads	CDS: PUSH for node:autoscaler-588cfb64fb-8csmw.knative-serving resources:42 size:36.5kB cached:32/35
+2024-06-05T10:56:01.828618748Z 2024-06-05T10:56:01.828587Z	info	ads	CDS: PUSH for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:36 size:34.5kB cached:32/35
+2024-06-05T10:56:01.828754420Z 2024-06-05T10:56:01.828732Z	info	ads	EDS: PUSH INC for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:3 size:512B empty:0 cached:0/3
+2024-06-05T10:56:01.828891133Z 2024-06-05T10:56:01.828841Z	info	ads	EDS: PUSH INC for node:autoscaler-588cfb64fb-8csmw.knative-serving resources:3 size:512B empty:0 cached:0/3
+2024-06-05T10:56:01.828947964Z 2024-06-05T10:56:01.828582Z	info	ads	CDS: PUSH for node:istio-egressgateway-856fbd6dfc-t5xwv.istio-system resources:36 size:34.5kB cached:33/35
+2024-06-05T10:56:01.829008985Z 2024-06-05T10:56:01.828984Z	info	ads	EDS: PUSH INC for node:istio-egressgateway-856fbd6dfc-t5xwv.istio-system resources:3 size:512B empty:0 cached:3/3
+2024-06-05T10:56:01.829022416Z 2024-06-05T10:56:01.829016Z	info	ads	LDS: PUSH for node:istio-egressgateway-856fbd6dfc-t5xwv.istio-system resources:0 size:0B
+2024-06-05T10:56:01.829188929Z 2024-06-05T10:56:01.829168Z	info	ads	LDS: PUSH for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:2 size:10.4kB
+2024-06-05T10:56:01.829232750Z 2024-06-05T10:56:01.829221Z	warn	constructed http route config for route https.8081.https.knative-local-gateway.knative-serving on port 8081 with no vhosts; Setting up a default 404 vhost
+2024-06-05T10:56:01.829272990Z 2024-06-05T10:56:01.829260Z	warn	constructed http route config for route https.443.https.knative-ingress-gateway.knative-serving on port 443 with no vhosts; Setting up a default 404 vhost
+2024-06-05T10:56:01.829322782Z 2024-06-05T10:56:01.829309Z	info	ads	RDS: PUSH for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:2 size:162B cached:0/0
+2024-06-05T10:56:01.832478014Z 2024-06-05T10:56:01.830521Z	info	ads	LDS: PUSH for node:autoscaler-588cfb64fb-8csmw.knative-serving resources:23 size:106.2kB
+2024-06-05T10:56:01.832478014Z 2024-06-05T10:56:01.831022Z	info	ads	RDS: PUSH for node:autoscaler-588cfb64fb-8csmw.knative-serving resources:8 size:13.3kB cached:6/8
+2024-06-05T10:56:01.832478014Z 2024-06-05T10:56:01.831090Z	info	ads	NDS: PUSH for node:autoscaler-588cfb64fb-8csmw.knative-serving resources:1 size:1.9kB
+2024-06-05T10:56:01.926399140Z 2024-06-05T10:56:01.926338Z	info	ads	Full push, new service knative-serving/autoscaler-hpa.knative-serving.svc.cluster.local
+2024-06-05T10:56:01.926531493Z 2024-06-05T10:56:01.926514Z	info	ads	Full push, new service knative-serving/autoscaler-hpa-sm-service.knative-serving.svc.cluster.local
+2024-06-05T10:56:02.084301158Z 2024-06-05T10:56:02.084252Z	info	ads	Push debounce stable[53] 4 for config ServiceEntry/knative-serving/autoscaler-hpa.knative-serving.svc.cluster.local and 3 more configs: 100.047498ms since last change, 157.670123ms since last push, full=true
+2024-06-05T10:56:02.084855299Z 2024-06-05T10:56:02.084823Z	info	ads	XDS: Pushing:2024-06-05T10:56:02Z/29 Services:16 ConnectedEndpoints:3 Version:2024-06-05T10:56:02Z/29
+2024-06-05T10:56:02.085488412Z 2024-06-05T10:56:02.085465Z	info	ads	CDS: PUSH for node:istio-egressgateway-856fbd6dfc-t5xwv.istio-system resources:36 size:34.7kB cached:33/35
+2024-06-05T10:56:02.085640315Z 2024-06-05T10:56:02.085465Z	info	ads	CDS: PUSH for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:36 size:34.7kB cached:29/35
+2024-06-05T10:56:02.085803008Z 2024-06-05T10:56:02.085776Z	info	ads	CDS: PUSH for node:autoscaler-588cfb64fb-8csmw.knative-serving resources:42 size:36.6kB cached:29/35
+2024-06-05T10:56:02.086635214Z 2024-06-05T10:56:02.085964Z	info	ads	EDS: PUSH INC for node:autoscaler-588cfb64fb-8csmw.knative-serving resources:6 size:1.3kB empty:0 cached:0/6
+2024-06-05T10:56:02.086635214Z 2024-06-05T10:56:02.086029Z	info	ads	EDS: PUSH INC for node:istio-egressgateway-856fbd6dfc-t5xwv.istio-system resources:6 size:1.3kB empty:0 cached:3/6
+2024-06-05T10:56:02.086635214Z 2024-06-05T10:56:02.086055Z	info	ads	LDS: PUSH for node:istio-egressgateway-856fbd6dfc-t5xwv.istio-system resources:0 size:0B
+2024-06-05T10:56:02.086635214Z 2024-06-05T10:56:02.086244Z	info	ads	EDS: PUSH INC for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:6 size:1.3kB empty:0 cached:2/6
+2024-06-05T10:56:02.086635214Z 2024-06-05T10:56:02.086505Z	info	ads	LDS: PUSH for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:2 size:10.4kB
+2024-06-05T10:56:02.086635214Z 2024-06-05T10:56:02.086521Z	warn	constructed http route config for route https.8081.https.knative-local-gateway.knative-serving on port 8081 with no vhosts; Setting up a default 404 vhost
+2024-06-05T10:56:02.086635214Z 2024-06-05T10:56:02.086532Z	warn	constructed http route config for route https.443.https.knative-ingress-gateway.knative-serving on port 443 with no vhosts; Setting up a default 404 vhost
+2024-06-05T10:56:02.086635214Z 2024-06-05T10:56:02.086549Z	info	ads	RDS: PUSH for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:2 size:162B cached:0/0
+2024-06-05T10:56:02.087308208Z 2024-06-05T10:56:02.087280Z	info	ads	LDS: PUSH for node:autoscaler-588cfb64fb-8csmw.knative-serving resources:23 size:106.2kB
+2024-06-05T10:56:02.090327057Z 2024-06-05T10:56:02.088926Z	info	ads	RDS: PUSH for node:autoscaler-588cfb64fb-8csmw.knative-serving resources:8 size:13.3kB cached:6/8
+2024-06-05T10:56:02.090327057Z 2024-06-05T10:56:02.088997Z	info	ads	NDS: PUSH for node:autoscaler-588cfb64fb-8csmw.knative-serving resources:1 size:1.9kB
+2024-06-05T10:56:02.424518837Z 2024-06-05T10:56:02.424470Z	info	ads	Push debounce stable[54] 1 for config Secret/knative-serving/net-istio-webhook-certs: 100.417895ms since last change, 100.417715ms since last push, full=false
+2024-06-05T10:56:02.424570478Z 2024-06-05T10:56:02.424519Z	info	ads	XDS: Incremental Pushing:2024-06-05T10:56:02Z/29 ConnectedEndpoints:3 Version:2024-06-05T10:56:02Z/29
+2024-06-05T10:56:02.856409319Z 2024-06-05T10:56:02.856366Z	info	ads	Incremental push, service net-istio-webhook.knative-serving.svc.cluster.local at shard Kubernetes/Kubernetes has no endpoints
+2024-06-05T10:56:02.879176681Z 2024-06-05T10:56:02.879123Z	info	ads	Full push, new service knative-serving/net-istio-webhook.knative-serving.svc.cluster.local
+2024-06-05T10:56:02.979682399Z 2024-06-05T10:56:02.979628Z	info	ads	Push debounce stable[55] 2 for config ServiceEntry/knative-serving/net-istio-webhook.knative-serving.svc.cluster.local: 100.376804ms since last change, 123.212678ms since last push, full=true
+2024-06-05T10:56:02.980250520Z 2024-06-05T10:56:02.980228Z	info	ads	XDS: Pushing:2024-06-05T10:56:02Z/30 Services:16 ConnectedEndpoints:3 Version:2024-06-05T10:56:02Z/30
+2024-06-05T10:56:02.980755690Z 2024-06-05T10:56:02.980732Z	info	ads	CDS: PUSH for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:36 size:34.9kB cached:34/35
+2024-06-05T10:56:02.980850642Z 2024-06-05T10:56:02.980827Z	info	ads	CDS: PUSH for node:autoscaler-588cfb64fb-8csmw.knative-serving resources:42 size:36.8kB cached:32/35
+2024-06-05T10:56:02.980909643Z 2024-06-05T10:56:02.980732Z	info	ads	CDS: PUSH for node:istio-egressgateway-856fbd6dfc-t5xwv.istio-system resources:36 size:34.9kB cached:32/35
+2024-06-05T10:56:02.980993314Z 2024-06-05T10:56:02.980976Z	info	ads	EDS: PUSH INC for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:3 size:542B empty:0 cached:0/3
+2024-06-05T10:56:02.981039315Z 2024-06-05T10:56:02.980981Z	info	ads	EDS: PUSH INC for node:istio-egressgateway-856fbd6dfc-t5xwv.istio-system resources:3 size:542B empty:0 cached:1/3
+2024-06-05T10:56:02.981077076Z 2024-06-05T10:56:02.981056Z	info	ads	LDS: PUSH for node:istio-egressgateway-856fbd6dfc-t5xwv.istio-system resources:0 size:0B
+2024-06-05T10:56:02.981120417Z 2024-06-05T10:56:02.981065Z	info	ads	EDS: PUSH INC for node:autoscaler-588cfb64fb-8csmw.knative-serving resources:3 size:542B empty:0 cached:0/3
+2024-06-05T10:56:02.981419643Z 2024-06-05T10:56:02.981399Z	info	ads	LDS: PUSH for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:2 size:10.4kB
+2024-06-05T10:56:02.981480594Z 2024-06-05T10:56:02.981466Z	warn	constructed http route config for route https.8081.https.knative-local-gateway.knative-serving on port 8081 with no vhosts; Setting up a default 404 vhost
+2024-06-05T10:56:02.981515965Z 2024-06-05T10:56:02.981504Z	warn	constructed http route config for route https.443.https.knative-ingress-gateway.knative-serving on port 443 with no vhosts; Setting up a default 404 vhost
+2024-06-05T10:56:02.981559956Z 2024-06-05T10:56:02.981548Z	info	ads	RDS: PUSH for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:2 size:162B cached:0/0
+2024-06-05T10:56:02.982440983Z 2024-06-05T10:56:02.982415Z	info	ads	LDS: PUSH for node:autoscaler-588cfb64fb-8csmw.knative-serving resources:23 size:106.2kB
+2024-06-05T10:56:02.982957873Z 2024-06-05T10:56:02.982938Z	info	ads	RDS: PUSH for node:autoscaler-588cfb64fb-8csmw.knative-serving resources:8 size:13.3kB cached:6/8
+2024-06-05T10:56:02.983050735Z 2024-06-05T10:56:02.983032Z	info	ads	NDS: PUSH for node:autoscaler-588cfb64fb-8csmw.knative-serving resources:1 size:1.9kB
+2024-06-05T10:56:06.487497108Z 2024-06-05T10:56:06.487456Z	info	ads	Push debounce stable[56] 1 for config Secret/knative-serving/serving-certs-ctrl-ca: 100.15007ms since last change, 100.1499ms since last push, full=false
+2024-06-05T10:56:06.487542939Z 2024-06-05T10:56:06.487506Z	info	ads	XDS: Incremental Pushing:2024-06-05T10:56:02Z/30 ConnectedEndpoints:3 Version:2024-06-05T10:56:02Z/30
+2024-06-05T10:56:06.620946970Z 2024-06-05T10:56:06.620896Z	info	ads	Push debounce stable[57] 1 for config Secret/knative-serving/knative-serving-certs: 100.771112ms since last change, 100.770912ms since last push, full=false
+2024-06-05T10:56:06.620975820Z 2024-06-05T10:56:06.620948Z	info	ads	XDS: Incremental Pushing:2024-06-05T10:56:02Z/30 ConnectedEndpoints:3 Version:2024-06-05T10:56:02Z/30
+2024-06-05T10:56:06.753936892Z 2024-06-05T10:56:06.753886Z	info	ads	Push debounce stable[58] 1 for config Secret/knative-serving/control-serving-certs: 100.225032ms since last change, 100.224832ms since last push, full=false
+2024-06-05T10:56:06.753999923Z 2024-06-05T10:56:06.753935Z	info	ads	XDS: Incremental Pushing:2024-06-05T10:56:02Z/30 ConnectedEndpoints:3 Version:2024-06-05T10:56:02Z/30
+2024-06-05T10:56:06.830004314Z 2024-06-05T10:56:06.829945Z	warn	Insecure first-party-jwt option used to validate token; use third-party-jwt
+2024-06-05T10:56:06.834898381Z 2024-06-05T10:56:06.834867Z	info	ads	ADS: new connection for node:activator-7b646b88cc-fkrcw.knative-serving-4
+2024-06-05T10:56:06.835252678Z 2024-06-05T10:56:06.835229Z	info	ads	CDS: PUSH request for node:activator-7b646b88cc-fkrcw.knative-serving resources:44 size:37.7kB cached:35/35
+2024-06-05T10:56:06.856192704Z 2024-06-05T10:56:06.856149Z	info	ads	EDS: PUSH request for node:activator-7b646b88cc-fkrcw.knative-serving resources:35 size:5.9kB empty:0 cached:35/35
+2024-06-05T10:56:06.878129810Z 2024-06-05T10:56:06.878010Z	info	ads	Incremental push, service activator-service.knative-serving.svc.cluster.local at shard Kubernetes/Kubernetes has no endpoints
+2024-06-05T10:56:06.878989767Z 2024-06-05T10:56:06.878965Z	info	ads	Incremental push, service activator-sm-service.knative-serving.svc.cluster.local at shard Kubernetes/Kubernetes has no endpoints
+2024-06-05T10:56:06.920943541Z 2024-06-05T10:56:06.920907Z	warn	Insecure first-party-jwt option used to validate token; use third-party-jwt
+2024-06-05T10:56:06.936746995Z 2024-06-05T10:56:06.936712Z	info	ads	LDS: PUSH request for node:activator-7b646b88cc-fkrcw.knative-serving resources:23 size:111.9kB
+2024-06-05T10:56:06.936944389Z 2024-06-05T10:56:06.936922Z	info	ads	NDS: PUSH request for node:activator-7b646b88cc-fkrcw.knative-serving resources:1 size:1.9kB
+2024-06-05T10:56:06.970663899Z 2024-06-05T10:56:06.970636Z	info	ads	RDS: PUSH request for node:activator-7b646b88cc-fkrcw.knative-serving resources:8 size:13.3kB cached:8/8
+2024-06-05T10:56:06.979302540Z 2024-06-05T10:56:06.979266Z	info	ads	Push debounce stable[59] 3 for config ServiceEntry/knative-serving/activator-sm-service.knative-serving.svc.cluster.local and 2 more configs: 100.268862ms since last change, 191.898782ms since last push, full=false
+2024-06-05T10:56:06.979397502Z 2024-06-05T10:56:06.979359Z	info	ads	XDS: Incremental Pushing:2024-06-05T10:56:02Z/30 ConnectedEndpoints:4 Version:2024-06-05T10:56:02Z/30
+2024-06-05T10:56:07.891080937Z 2024-06-05T10:56:07.891035Z	info	ads	CDS: PUSH for node:activator-7b646b88cc-fkrcw.knative-serving resources:44 size:37.7kB cached:29/35
+2024-06-05T10:56:07.891247801Z 2024-06-05T10:56:07.891194Z	info	ads	EDS: PUSH for node:activator-7b646b88cc-fkrcw.knative-serving resources:35 size:5.9kB empty:0 cached:35/35
+2024-06-05T10:56:07.892267211Z 2024-06-05T10:56:07.892245Z	info	ads	LDS: PUSH for node:activator-7b646b88cc-fkrcw.knative-serving resources:23 size:111.9kB
+2024-06-05T10:56:07.892535917Z 2024-06-05T10:56:07.892501Z	info	ads	RDS: PUSH for node:activator-7b646b88cc-fkrcw.knative-serving resources:8 size:13.3kB cached:4/8
+2024-06-05T10:56:07.892604758Z 2024-06-05T10:56:07.892566Z	info	ads	NDS: PUSH for node:activator-7b646b88cc-fkrcw.knative-serving resources:1 size:1.9kB
+2024-06-05T10:56:07.897767710Z 2024-06-05T10:56:07.897745Z	info	ads	Full push, new service knative-serving/activator-service.knative-serving.svc.cluster.local
+2024-06-05T10:56:07.903756169Z 2024-06-05T10:56:07.903729Z	info	ads	Full push, new service knative-serving/activator-sm-service.knative-serving.svc.cluster.local
+2024-06-05T10:56:08.004174805Z 2024-06-05T10:56:08.004120Z	info	ads	Push debounce stable[60] 2 for config ServiceEntry/knative-serving/activator-sm-service.knative-serving.svc.cluster.local and 1 more configs: 100.361755ms since last change, 106.309623ms since last push, full=true
+2024-06-05T10:56:08.004736156Z 2024-06-05T10:56:08.004710Z	info	ads	XDS: Pushing:2024-06-05T10:56:08Z/31 Services:16 ConnectedEndpoints:4 Version:2024-06-05T10:56:08Z/31
+2024-06-05T10:56:08.005391189Z 2024-06-05T10:56:08.005331Z	info	ads	CDS: PUSH for node:istio-egressgateway-856fbd6dfc-t5xwv.istio-system resources:36 size:35.2kB cached:29/35
+2024-06-05T10:56:08.005468320Z 2024-06-05T10:56:08.005431Z	info	ads	CDS: PUSH for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:36 size:35.2kB cached:33/35
+2024-06-05T10:56:08.005566762Z 2024-06-05T10:56:08.005547Z	info	ads	EDS: PUSH INC for node:istio-egressgateway-856fbd6dfc-t5xwv.istio-system resources:6 size:1.7kB empty:0 cached:0/6
+2024-06-05T10:56:08.005611693Z 2024-06-05T10:56:08.005586Z	info	ads	EDS: PUSH INC for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:6 size:1.7kB empty:0 cached:4/6
+2024-06-05T10:56:08.005654094Z 2024-06-05T10:56:08.005640Z	info	ads	LDS: PUSH for node:istio-egressgateway-856fbd6dfc-t5xwv.istio-system resources:0 size:0B
+2024-06-05T10:56:08.005778236Z 2024-06-05T10:56:08.005754Z	info	ads	CDS: PUSH for node:autoscaler-588cfb64fb-8csmw.knative-serving resources:42 size:37.2kB cached:34/35
+2024-06-05T10:56:08.005900699Z 2024-06-05T10:56:08.005875Z	info	ads	LDS: PUSH for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:2 size:10.4kB
+2024-06-05T10:56:08.005916059Z 2024-06-05T10:56:08.005899Z	warn	constructed http route config for route https.8081.https.knative-local-gateway.knative-serving on port 8081 with no vhosts; Setting up a default 404 vhost
+2024-06-05T10:56:08.005933290Z 2024-06-05T10:56:08.005913Z	warn	constructed http route config for route https.443.https.knative-ingress-gateway.knative-serving on port 443 with no vhosts; Setting up a default 404 vhost
+2024-06-05T10:56:08.005943180Z 2024-06-05T10:56:08.005930Z	info	ads	RDS: PUSH for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:2 size:162B cached:0/0
+2024-06-05T10:56:08.005967800Z 2024-06-05T10:56:08.005435Z	info	ads	CDS: PUSH for node:activator-7b646b88cc-fkrcw.knative-serving resources:44 size:38.1kB cached:29/35
+2024-06-05T10:56:08.006011131Z 2024-06-05T10:56:08.005987Z	info	ads	EDS: PUSH INC for node:autoscaler-588cfb64fb-8csmw.knative-serving resources:6 size:1.7kB empty:0 cached:0/6
+2024-06-05T10:56:08.006074782Z 2024-06-05T10:56:08.006060Z	info	ads	EDS: PUSH INC for node:activator-7b646b88cc-fkrcw.knative-serving resources:6 size:1.7kB empty:0 cached:6/6
+2024-06-05T10:56:08.007363808Z 2024-06-05T10:56:08.007323Z	info	ads	LDS: PUSH for node:activator-7b646b88cc-fkrcw.knative-serving resources:23 size:111.9kB
+2024-06-05T10:56:08.007547622Z 2024-06-05T10:56:08.007528Z	info	ads	LDS: PUSH for node:autoscaler-588cfb64fb-8csmw.knative-serving resources:23 size:106.2kB
+2024-06-05T10:56:08.007959530Z 2024-06-05T10:56:08.007927Z	info	ads	RDS: PUSH for node:autoscaler-588cfb64fb-8csmw.knative-serving resources:8 size:13.3kB cached:7/8
+2024-06-05T10:56:08.008063442Z 2024-06-05T10:56:08.008045Z	info	ads	NDS: PUSH for node:autoscaler-588cfb64fb-8csmw.knative-serving resources:1 size:1.9kB
+2024-06-05T10:56:08.008176834Z 2024-06-05T10:56:08.008141Z	info	ads	RDS: PUSH for node:activator-7b646b88cc-fkrcw.knative-serving resources:8 size:13.3kB cached:4/8
+2024-06-05T10:56:08.008283906Z 2024-06-05T10:56:08.008266Z	info	ads	NDS: PUSH for node:activator-7b646b88cc-fkrcw.knative-serving resources:1 size:1.9kB
+2024-06-05T10:56:08.080879109Z 2024-06-05T10:56:08.080811Z	info	ads	Incremental push, service webhook-sm-service.knative-serving.svc.cluster.local at shard Kubernetes/Kubernetes has no endpoints
+2024-06-05T10:56:08.082781197Z 2024-06-05T10:56:08.082757Z	info	ads	Incremental push, service webhook.knative-serving.svc.cluster.local at shard Kubernetes/Kubernetes has no endpoints
+2024-06-05T10:56:08.238060932Z 2024-06-05T10:56:08.237962Z	info	ads	Full push, new service knative-serving/webhook-sm-service.knative-serving.svc.cluster.local
+2024-06-05T10:56:08.238116243Z 2024-06-05T10:56:08.238078Z	info	ads	Full push, new service knative-serving/webhook.knative-serving.svc.cluster.local
+2024-06-05T10:56:08.407506829Z 2024-06-05T10:56:08.407454Z	info	ads	Push debounce stable[61] 13 for config ServiceEntry/knative-serving/net-istio-webhook.knative-serving.svc.cluster.local and 7 more configs: 100.916335ms since last change, 355.578625ms since last push, full=true
+2024-06-05T10:56:08.408167522Z 2024-06-05T10:56:08.408144Z	info	ads	XDS: Pushing:2024-06-05T10:56:08Z/32 Services:16 ConnectedEndpoints:4 Version:2024-06-05T10:56:08Z/32
+2024-06-05T10:56:08.409029609Z 2024-06-05T10:56:08.408981Z	info	ads	CDS: PUSH for node:istio-egressgateway-856fbd6dfc-t5xwv.istio-system resources:36 size:35.5kB cached:27/35
+2024-06-05T10:56:08.409116501Z 2024-06-05T10:56:08.409084Z	info	ads	CDS: PUSH for node:activator-7b646b88cc-fkrcw.knative-serving resources:44 size:38.3kB cached:22/35
+2024-06-05T10:56:08.409256244Z 2024-06-05T10:56:08.408987Z	info	ads	CDS: PUSH for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:36 size:35.5kB cached:24/35
+2024-06-05T10:56:08.409382506Z 2024-06-05T10:56:08.409338Z	info	ads	CDS: PUSH for node:autoscaler-588cfb64fb-8csmw.knative-serving resources:42 size:37.4kB cached:27/35
+2024-06-05T10:56:08.409500129Z 2024-06-05T10:56:08.409477Z	info	ads	EDS: PUSH for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:35 size:8.2kB empty:0 cached:32/35
+2024-06-05T10:56:08.409515099Z 2024-06-05T10:56:08.409505Z	info	ads	EDS: PUSH for node:istio-egressgateway-856fbd6dfc-t5xwv.istio-system resources:35 size:8.2kB empty:0 cached:24/35
+2024-06-05T10:56:08.409540919Z 2024-06-05T10:56:08.409533Z	info	ads	LDS: PUSH for node:istio-egressgateway-856fbd6dfc-t5xwv.istio-system resources:0 size:0B
+2024-06-05T10:56:08.409716543Z 2024-06-05T10:56:08.409691Z	info	ads	EDS: PUSH for node:activator-7b646b88cc-fkrcw.knative-serving resources:35 size:8.2kB empty:0 cached:23/35
+2024-06-05T10:56:08.409760964Z 2024-06-05T10:56:08.409736Z	info	ads	LDS: PUSH for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:2 size:10.4kB
+2024-06-05T10:56:08.409772114Z 2024-06-05T10:56:08.409758Z	warn	constructed http route config for route https.8081.https.knative-local-gateway.knative-serving on port 8081 with no vhosts; Setting up a default 404 vhost
+2024-06-05T10:56:08.409772114Z 2024-06-05T10:56:08.409767Z	warn	constructed http route config for route https.443.https.knative-ingress-gateway.knative-serving on port 443 with no vhosts; Setting up a default 404 vhost
+2024-06-05T10:56:08.409801495Z 2024-06-05T10:56:08.409784Z	info	ads	RDS: PUSH for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:2 size:162B cached:0/0
+2024-06-05T10:56:08.409840355Z 2024-06-05T10:56:08.409817Z	info	ads	SDS: PUSH for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:1 size:3.0kB cached:1/1
+2024-06-05T10:56:08.409946727Z 2024-06-05T10:56:08.409917Z	info	ads	EDS: PUSH for node:autoscaler-588cfb64fb-8csmw.knative-serving resources:35 size:8.2kB empty:0 cached:32/35
+2024-06-05T10:56:08.413682321Z 2024-06-05T10:56:08.411044Z	info	ads	LDS: PUSH for node:activator-7b646b88cc-fkrcw.knative-serving resources:23 size:111.9kB
+2024-06-05T10:56:08.413682321Z 2024-06-05T10:56:08.411706Z	info	ads	RDS: PUSH for node:activator-7b646b88cc-fkrcw.knative-serving resources:8 size:13.3kB cached:6/8
+2024-06-05T10:56:08.413682321Z 2024-06-05T10:56:08.411766Z	info	ads	NDS: PUSH for node:activator-7b646b88cc-fkrcw.knative-serving resources:1 size:1.9kB
+2024-06-05T10:56:08.413682321Z 2024-06-05T10:56:08.412479Z	info	ads	LDS: PUSH for node:autoscaler-588cfb64fb-8csmw.knative-serving resources:23 size:106.2kB
+2024-06-05T10:56:08.413682321Z 2024-06-05T10:56:08.412852Z	info	ads	RDS: PUSH for node:autoscaler-588cfb64fb-8csmw.knative-serving resources:8 size:13.3kB cached:8/8
+2024-06-05T10:56:08.413682321Z 2024-06-05T10:56:08.412913Z	info	ads	NDS: PUSH for node:autoscaler-588cfb64fb-8csmw.knative-serving resources:1 size:1.9kB
+2024-06-05T10:56:08.970774971Z 2024-06-05T10:56:08.970715Z	info	ads	Push debounce stable[62] 2 for config ServiceEntry/knative-serving/controller.knative-serving.svc.cluster.local and 1 more configs: 100.943776ms since last change, 100.980256ms since last push, full=false
+2024-06-05T10:56:08.970826132Z 2024-06-05T10:56:08.970768Z	info	ads	XDS: Incremental Pushing:2024-06-05T10:56:08Z/32 ConnectedEndpoints:4 Version:2024-06-05T10:56:08Z/32
+2024-06-05T10:56:09.322003620Z 2024-06-05T10:56:09.321940Z	info	ads	Push debounce stable[63] 4 for config ServiceEntry/knative-serving/controller-sm-service.knative-serving.svc.cluster.local and 1 more configs: 100.723461ms since last change, 185.591658ms since last push, full=false
+2024-06-05T10:56:09.322052090Z 2024-06-05T10:56:09.322007Z	info	ads	XDS: Incremental Pushing:2024-06-05T10:56:08Z/32 ConnectedEndpoints:4 Version:2024-06-05T10:56:08Z/32
+2024-06-05T10:56:09.557426258Z 2024-06-05T10:56:09.557374Z	info	ads	Push debounce stable[64] 2 for config ServiceEntry/knative-serving/controller-sm-service.knative-serving.svc.cluster.local and 1 more configs: 100.101929ms since last change, 100.398164ms since last push, full=false
+2024-06-05T10:56:09.557474819Z 2024-06-05T10:56:09.557420Z	info	ads	XDS: Incremental Pushing:2024-06-05T10:56:08Z/32 ConnectedEndpoints:4 Version:2024-06-05T10:56:08Z/32
+2024-06-05T10:56:13.619259227Z 2024-06-05T10:56:13.619204Z	info	ads	Push debounce stable[65] 1 for config ServiceEntry/knative-serving/activator-service.knative-serving.svc.cluster.local: 100.493987ms since last change, 100.493827ms since last push, full=true
+2024-06-05T10:56:13.619882349Z 2024-06-05T10:56:13.619847Z	info	ads	XDS: Pushing:2024-06-05T10:56:13Z/33 Services:16 ConnectedEndpoints:4 Version:2024-06-05T10:56:13Z/33
+2024-06-05T10:56:13.621213066Z 2024-06-05T10:56:13.621182Z	info	ads	CDS: PUSH for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:36 size:35.5kB cached:28/35
+2024-06-05T10:56:13.621420210Z 2024-06-05T10:56:13.621400Z	info	ads	CDS: PUSH for node:activator-7b646b88cc-fkrcw.knative-serving resources:44 size:38.3kB cached:27/35
+2024-06-05T10:56:13.621464311Z 2024-06-05T10:56:13.621442Z	info	ads	EDS: PUSH INC for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:5 size:1.4kB empty:0 cached:0/5
+2024-06-05T10:56:13.621717366Z 2024-06-05T10:56:13.621700Z	info	ads	EDS: PUSH INC for node:activator-7b646b88cc-fkrcw.knative-serving resources:5 size:1.4kB empty:0 cached:0/5
+2024-06-05T10:56:13.621946440Z 2024-06-05T10:56:13.621914Z	info	ads	LDS: PUSH for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:2 size:10.4kB
+2024-06-05T10:56:13.621958701Z 2024-06-05T10:56:13.621945Z	warn	constructed http route config for route https.8081.https.knative-local-gateway.knative-serving on port 8081 with no vhosts; Setting up a default 404 vhost
+2024-06-05T10:56:13.621967421Z 2024-06-05T10:56:13.621957Z	warn	constructed http route config for route https.443.https.knative-ingress-gateway.knative-serving on port 443 with no vhosts; Setting up a default 404 vhost
+2024-06-05T10:56:13.621993481Z 2024-06-05T10:56:13.621977Z	info	ads	RDS: PUSH for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:2 size:162B cached:0/0
+2024-06-05T10:56:13.622002631Z 2024-06-05T10:56:13.621988Z	info	ads	CDS: PUSH for node:istio-egressgateway-856fbd6dfc-t5xwv.istio-system resources:36 size:35.5kB cached:33/35
+2024-06-05T10:56:13.622134474Z 2024-06-05T10:56:13.622112Z	info	ads	EDS: PUSH INC for node:istio-egressgateway-856fbd6dfc-t5xwv.istio-system resources:5 size:1.4kB empty:0 cached:5/5
+2024-06-05T10:56:13.622164175Z 2024-06-05T10:56:13.622148Z	info	ads	LDS: PUSH for node:istio-egressgateway-856fbd6dfc-t5xwv.istio-system resources:0 size:0B
+2024-06-05T10:56:13.622416800Z 2024-06-05T10:56:13.622387Z	info	ads	CDS: PUSH for node:autoscaler-588cfb64fb-8csmw.knative-serving resources:42 size:37.4kB cached:31/35
+2024-06-05T10:56:13.622509641Z 2024-06-05T10:56:13.622489Z	info	ads	EDS: PUSH INC for node:autoscaler-588cfb64fb-8csmw.knative-serving resources:5 size:1.4kB empty:0 cached:5/5
+2024-06-05T10:56:13.624980821Z 2024-06-05T10:56:13.624958Z	info	ads	LDS: PUSH for node:activator-7b646b88cc-fkrcw.knative-serving resources:23 size:111.9kB
+2024-06-05T10:56:13.631844727Z 2024-06-05T10:56:13.631823Z	info	ads	RDS: PUSH for node:activator-7b646b88cc-fkrcw.knative-serving resources:8 size:13.3kB cached:4/8
+2024-06-05T10:56:13.631962329Z 2024-06-05T10:56:13.631948Z	info	ads	NDS: PUSH for node:activator-7b646b88cc-fkrcw.knative-serving resources:1 size:1.9kB
+2024-06-05T10:56:13.632055471Z 2024-06-05T10:56:13.624983Z	info	ads	LDS: PUSH for node:autoscaler-588cfb64fb-8csmw.knative-serving resources:23 size:106.2kB
+2024-06-05T10:56:13.632261005Z 2024-06-05T10:56:13.632239Z	info	ads	RDS: PUSH for node:autoscaler-588cfb64fb-8csmw.knative-serving resources:8 size:13.3kB cached:8/8
+2024-06-05T10:56:13.632387248Z 2024-06-05T10:56:13.632368Z	info	ads	NDS: PUSH for node:autoscaler-588cfb64fb-8csmw.knative-serving resources:1 size:1.9kB
+2024-06-05T10:56:13.886502637Z 2024-06-05T10:56:13.886438Z	info	ads	Push debounce stable[66] 1 for config ServiceEntry/knative-serving/autoscaler.knative-serving.svc.cluster.local: 100.352314ms since last change, 100.352123ms since last push, full=true
+2024-06-05T10:56:13.887235491Z 2024-06-05T10:56:13.887215Z	info	ads	XDS: Pushing:2024-06-05T10:56:13Z/34 Services:16 ConnectedEndpoints:4 Version:2024-06-05T10:56:13Z/34
+2024-06-05T10:56:13.887894714Z 2024-06-05T10:56:13.887864Z	info	ads	CDS: PUSH for node:istio-egressgateway-856fbd6dfc-t5xwv.istio-system resources:36 size:35.5kB cached:32/35
+2024-06-05T10:56:13.887894714Z 2024-06-05T10:56:13.887876Z	info	ads	CDS: PUSH for node:autoscaler-588cfb64fb-8csmw.knative-serving resources:42 size:37.4kB cached:35/35
+2024-06-05T10:56:13.888018287Z 2024-06-05T10:56:13.887979Z	info	ads	EDS: PUSH INC for node:istio-egressgateway-856fbd6dfc-t5xwv.istio-system resources:3 size:825B empty:0 cached:0/3
+2024-06-05T10:56:13.888018287Z 2024-06-05T10:56:13.888012Z	info	ads	LDS: PUSH for node:istio-egressgateway-856fbd6dfc-t5xwv.istio-system resources:0 size:0B
+2024-06-05T10:56:13.888168920Z 2024-06-05T10:56:13.887865Z	info	ads	CDS: PUSH for node:activator-7b646b88cc-fkrcw.knative-serving resources:44 size:38.3kB cached:32/35
+2024-06-05T10:56:13.888283842Z 2024-06-05T10:56:13.888258Z	info	ads	CDS: PUSH for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:36 size:35.5kB cached:35/35
+2024-06-05T10:56:13.888325643Z 2024-06-05T10:56:13.888305Z	info	ads	EDS: PUSH INC for node:autoscaler-588cfb64fb-8csmw.knative-serving resources:3 size:825B empty:0 cached:1/3
+2024-06-05T10:56:13.888337203Z 2024-06-05T10:56:13.888324Z	info	ads	EDS: PUSH INC for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:3 size:825B empty:0 cached:3/3
+2024-06-05T10:56:13.888393694Z 2024-06-05T10:56:13.888379Z	info	ads	EDS: PUSH INC for node:activator-7b646b88cc-fkrcw.knative-serving resources:3 size:825B empty:0 cached:0/3
+2024-06-05T10:56:13.889939325Z 2024-06-05T10:56:13.889916Z	info	ads	LDS: PUSH for node:activator-7b646b88cc-fkrcw.knative-serving resources:23 size:111.9kB
+2024-06-05T10:56:13.890740531Z 2024-06-05T10:56:13.890237Z	info	ads	LDS: PUSH for node:autoscaler-588cfb64fb-8csmw.knative-serving resources:23 size:106.2kB
+2024-06-05T10:56:13.890740531Z 2024-06-05T10:56:13.890640Z	info	ads	RDS: PUSH for node:autoscaler-588cfb64fb-8csmw.knative-serving resources:8 size:13.3kB cached:8/8
+2024-06-05T10:56:13.890740531Z 2024-06-05T10:56:13.890700Z	info	ads	NDS: PUSH for node:autoscaler-588cfb64fb-8csmw.knative-serving resources:1 size:1.9kB
+2024-06-05T10:56:13.891145609Z 2024-06-05T10:56:13.891124Z	info	ads	RDS: PUSH for node:activator-7b646b88cc-fkrcw.knative-serving resources:8 size:13.3kB cached:5/8
+2024-06-05T10:56:13.891239731Z 2024-06-05T10:56:13.891223Z	info	ads	NDS: PUSH for node:activator-7b646b88cc-fkrcw.knative-serving resources:1 size:1.9kB
+2024-06-05T10:56:13.892834083Z 2024-06-05T10:56:13.892687Z	info	ads	LDS: PUSH for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:2 size:10.4kB
+2024-06-05T10:56:13.892834083Z 2024-06-05T10:56:13.892707Z	warn	constructed http route config for route https.8081.https.knative-local-gateway.knative-serving on port 8081 with no vhosts; Setting up a default 404 vhost
+2024-06-05T10:56:13.892834083Z 2024-06-05T10:56:13.892718Z	warn	constructed http route config for route https.443.https.knative-ingress-gateway.knative-serving on port 443 with no vhosts; Setting up a default 404 vhost
+2024-06-05T10:56:13.892834083Z 2024-06-05T10:56:13.892735Z	info	ads	RDS: PUSH for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:2 size:162B cached:0/0
+2024-06-05T10:56:14.152848100Z 2024-06-05T10:56:14.152800Z	info	ads	Push debounce stable[67] 1 for config ServiceEntry/knative-serving/controller.knative-serving.svc.cluster.local: 100.300434ms since last change, 100.300334ms since last push, full=true
+2024-06-05T10:56:14.153487283Z 2024-06-05T10:56:14.153459Z	info	ads	XDS: Pushing:2024-06-05T10:56:14Z/35 Services:16 ConnectedEndpoints:4 Version:2024-06-05T10:56:14Z/35
+2024-06-05T10:56:14.154012703Z 2024-06-05T10:56:14.153981Z	info	ads	CDS: PUSH for node:istio-egressgateway-856fbd6dfc-t5xwv.istio-system resources:36 size:35.5kB cached:33/35
+2024-06-05T10:56:14.154137665Z 2024-06-05T10:56:14.154104Z	info	ads	EDS: PUSH INC for node:istio-egressgateway-856fbd6dfc-t5xwv.istio-system resources:2 size:532B empty:0 cached:0/2
+2024-06-05T10:56:14.154137665Z 2024-06-05T10:56:14.154115Z	info	ads	CDS: PUSH for node:activator-7b646b88cc-fkrcw.knative-serving resources:44 size:38.3kB cached:33/35
+2024-06-05T10:56:14.154137665Z 2024-06-05T10:56:14.154124Z	info	ads	CDS: PUSH for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:36 size:35.5kB cached:34/35
+2024-06-05T10:56:14.154153686Z 2024-06-05T10:56:14.154140Z	info	ads	LDS: PUSH for node:istio-egressgateway-856fbd6dfc-t5xwv.istio-system resources:0 size:0B
+2024-06-05T10:56:14.154165566Z 2024-06-05T10:56:14.154159Z	info	ads	EDS: PUSH INC for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:2 size:532B empty:0 cached:2/2
+2024-06-05T10:56:14.154227357Z 2024-06-05T10:56:14.154203Z	info	ads	EDS: PUSH INC for node:activator-7b646b88cc-fkrcw.knative-serving resources:2 size:532B empty:0 cached:0/2
+2024-06-05T10:56:14.154495082Z 2024-06-05T10:56:14.154472Z	info	ads	LDS: PUSH for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:2 size:10.4kB
+2024-06-05T10:56:14.154553464Z 2024-06-05T10:56:14.154537Z	warn	constructed http route config for route https.8081.https.knative-local-gateway.knative-serving on port 8081 with no vhosts; Setting up a default 404 vhost
+2024-06-05T10:56:14.154593444Z 2024-06-05T10:56:14.154580Z	warn	constructed http route config for route https.443.https.knative-ingress-gateway.knative-serving on port 443 with no vhosts; Setting up a default 404 vhost
+2024-06-05T10:56:14.154643155Z 2024-06-05T10:56:14.154628Z	info	ads	RDS: PUSH for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:2 size:162B cached:0/0
+2024-06-05T10:56:14.154768408Z 2024-06-05T10:56:14.154205Z	info	ads	CDS: PUSH for node:autoscaler-588cfb64fb-8csmw.knative-serving resources:42 size:37.4kB cached:33/35
+2024-06-05T10:56:14.154848239Z 2024-06-05T10:56:14.154832Z	info	ads	EDS: PUSH INC for node:autoscaler-588cfb64fb-8csmw.knative-serving resources:2 size:532B empty:0 cached:2/2
+2024-06-05T10:56:14.155651435Z 2024-06-05T10:56:14.155623Z	info	ads	LDS: PUSH for node:activator-7b646b88cc-fkrcw.knative-serving resources:23 size:111.9kB
+2024-06-05T10:56:14.156110295Z 2024-06-05T10:56:14.156090Z	info	ads	LDS: PUSH for node:autoscaler-588cfb64fb-8csmw.knative-serving resources:23 size:106.2kB
+2024-06-05T10:56:14.156303378Z 2024-06-05T10:56:14.156256Z	info	ads	RDS: PUSH for node:activator-7b646b88cc-fkrcw.knative-serving resources:8 size:13.3kB cached:6/8
+2024-06-05T10:56:14.156381090Z 2024-06-05T10:56:14.156325Z	info	ads	NDS: PUSH for node:activator-7b646b88cc-fkrcw.knative-serving resources:1 size:1.9kB
+2024-06-05T10:56:14.156645015Z 2024-06-05T10:56:14.156598Z	info	ads	RDS: PUSH for node:autoscaler-588cfb64fb-8csmw.knative-serving resources:8 size:13.3kB cached:8/8
+2024-06-05T10:56:14.157510542Z 2024-06-05T10:56:14.157490Z	info	ads	NDS: PUSH for node:autoscaler-588cfb64fb-8csmw.knative-serving resources:1 size:1.9kB
+2024-06-05T10:56:14.686689877Z 2024-06-05T10:56:14.686644Z	info	ads	Push debounce stable[68] 1 for config ServiceEntry/knative-serving/webhook.knative-serving.svc.cluster.local: 100.530637ms since last change, 100.530557ms since last push, full=true
+2024-06-05T10:56:14.687270719Z 2024-06-05T10:56:14.687247Z	info	ads	XDS: Pushing:2024-06-05T10:56:14Z/36 Services:16 ConnectedEndpoints:4 Version:2024-06-05T10:56:14Z/36
+2024-06-05T10:56:14.687771569Z 2024-06-05T10:56:14.687744Z	info	ads	CDS: PUSH for node:istio-egressgateway-856fbd6dfc-t5xwv.istio-system resources:36 size:35.5kB cached:32/35
+2024-06-05T10:56:14.687881791Z 2024-06-05T10:56:14.687860Z	info	ads	EDS: PUSH INC for node:istio-egressgateway-856fbd6dfc-t5xwv.istio-system resources:3 size:482B empty:0 cached:0/3
+2024-06-05T10:56:14.687912391Z 2024-06-05T10:56:14.687898Z	info	ads	LDS: PUSH for node:istio-egressgateway-856fbd6dfc-t5xwv.istio-system resources:0 size:0B
+2024-06-05T10:56:14.687948632Z 2024-06-05T10:56:14.687744Z	info	ads	CDS: PUSH for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:36 size:35.5kB cached:32/35
+2024-06-05T10:56:14.687948632Z 2024-06-05T10:56:14.687940Z	info	ads	CDS: PUSH for node:activator-7b646b88cc-fkrcw.knative-serving resources:44 size:38.3kB cached:33/35
+2024-06-05T10:56:14.687992233Z 2024-06-05T10:56:14.687973Z	info	ads	EDS: PUSH INC for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:3 size:482B empty:0 cached:3/3
+2024-06-05T10:56:14.688041964Z 2024-06-05T10:56:14.688021Z	info	ads	EDS: PUSH INC for node:activator-7b646b88cc-fkrcw.knative-serving resources:3 size:482B empty:0 cached:0/3
+2024-06-05T10:56:14.688242088Z 2024-06-05T10:56:14.688224Z	info	ads	CDS: PUSH for node:autoscaler-588cfb64fb-8csmw.knative-serving resources:42 size:37.4kB cached:32/35
+2024-06-05T10:56:14.688437862Z 2024-06-05T10:56:14.688404Z	info	ads	EDS: PUSH INC for node:autoscaler-588cfb64fb-8csmw.knative-serving resources:3 size:482B empty:0 cached:3/3
+2024-06-05T10:56:14.688612565Z 2024-06-05T10:56:14.688288Z	info	ads	LDS: PUSH for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:2 size:10.4kB
+2024-06-05T10:56:14.688649486Z 2024-06-05T10:56:14.688614Z	warn	constructed http route config for route https.8081.https.knative-local-gateway.knative-serving on port 8081 with no vhosts; Setting up a default 404 vhost
+2024-06-05T10:56:14.688649486Z 2024-06-05T10:56:14.688626Z	warn	constructed http route config for route https.443.https.knative-ingress-gateway.knative-serving on port 443 with no vhosts; Setting up a default 404 vhost
+2024-06-05T10:56:14.688696937Z 2024-06-05T10:56:14.688677Z	info	ads	RDS: PUSH for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:2 size:162B cached:0/0
+2024-06-05T10:56:14.689485163Z 2024-06-05T10:56:14.689460Z	info	ads	LDS: PUSH for node:activator-7b646b88cc-fkrcw.knative-serving resources:23 size:111.9kB
+2024-06-05T10:56:14.690030874Z 2024-06-05T10:56:14.689947Z	info	ads	RDS: PUSH for node:activator-7b646b88cc-fkrcw.knative-serving resources:8 size:13.3kB cached:6/8
+2024-06-05T10:56:14.690177717Z 2024-06-05T10:56:14.690088Z	info	ads	NDS: PUSH for node:activator-7b646b88cc-fkrcw.knative-serving resources:1 size:1.9kB
+2024-06-05T10:56:14.690695817Z 2024-06-05T10:56:14.690677Z	info	ads	LDS: PUSH for node:autoscaler-588cfb64fb-8csmw.knative-serving resources:23 size:106.2kB
+2024-06-05T10:56:14.691161836Z 2024-06-05T10:56:14.691144Z	info	ads	RDS: PUSH for node:autoscaler-588cfb64fb-8csmw.knative-serving resources:8 size:13.3kB cached:8/8
+2024-06-05T10:56:14.691302989Z 2024-06-05T10:56:14.691267Z	info	ads	NDS: PUSH for node:autoscaler-588cfb64fb-8csmw.knative-serving resources:1 size:1.9kB
+2024-06-05T10:56:14.819601778Z 2024-06-05T10:56:14.819555Z	info	ads	Push debounce stable[69] 1 for config Secret/knative-serving/webhook-certs: 100.321143ms since last change, 100.321063ms since last push, full=false
+2024-06-05T10:56:14.819647159Z 2024-06-05T10:56:14.819596Z	info	ads	XDS: Incremental Pushing:2024-06-05T10:56:14Z/36 ConnectedEndpoints:4 Version:2024-06-05T10:56:14Z/36
+2024-06-05T10:56:15.085901439Z 2024-06-05T10:56:15.085832Z	info	ads	Push debounce stable[70] 5 for config ServiceEntry/knative-serving/autoscaler-hpa.knative-serving.svc.cluster.local and 2 more configs: 100.593039ms since last change, 183.789352ms since last push, full=true
+2024-06-05T10:56:15.086672455Z 2024-06-05T10:56:15.086646Z	info	ads	XDS: Pushing:2024-06-05T10:56:15Z/37 Services:16 ConnectedEndpoints:4 Version:2024-06-05T10:56:15Z/37
+2024-06-05T10:56:15.087218325Z 2024-06-05T10:56:15.087188Z	info	ads	CDS: PUSH for node:istio-egressgateway-856fbd6dfc-t5xwv.istio-system resources:36 size:35.5kB cached:29/35
+2024-06-05T10:56:15.087238356Z 2024-06-05T10:56:15.087227Z	info	ads	CDS: PUSH for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:36 size:35.5kB cached:30/35
+2024-06-05T10:56:15.087419480Z 2024-06-05T10:56:15.087391Z	info	ads	CDS: PUSH for node:autoscaler-588cfb64fb-8csmw.knative-serving resources:42 size:37.4kB cached:31/35
+2024-06-05T10:56:15.087419480Z 2024-06-05T10:56:15.087414Z	info	ads	EDS: PUSH INC for node:istio-egressgateway-856fbd6dfc-t5xwv.istio-system resources:6 size:1.6kB empty:0 cached:0/6
+2024-06-05T10:56:15.087462650Z 2024-06-05T10:56:15.087443Z	info	ads	LDS: PUSH for node:istio-egressgateway-856fbd6dfc-t5xwv.istio-system resources:0 size:0B
+2024-06-05T10:56:15.087586033Z 2024-06-05T10:56:15.087567Z	info	ads	CDS: PUSH for node:activator-7b646b88cc-fkrcw.knative-serving resources:44 size:38.3kB cached:29/35
+2024-06-05T10:56:15.087654844Z 2024-06-05T10:56:15.087634Z	info	ads	EDS: PUSH INC for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:6 size:1.6kB empty:0 cached:3/6
+2024-06-05T10:56:15.087693705Z 2024-06-05T10:56:15.087679Z	info	ads	EDS: PUSH INC for node:activator-7b646b88cc-fkrcw.knative-serving resources:6 size:1.6kB empty:0 cached:6/6
+2024-06-05T10:56:15.087896819Z 2024-06-05T10:56:15.087580Z	info	ads	EDS: PUSH INC for node:autoscaler-588cfb64fb-8csmw.knative-serving resources:6 size:1.6kB empty:0 cached:0/6
+2024-06-05T10:56:15.089198625Z 2024-06-05T10:56:15.089178Z	info	ads	LDS: PUSH for node:activator-7b646b88cc-fkrcw.knative-serving resources:23 size:111.9kB
+2024-06-05T10:56:15.089724606Z 2024-06-05T10:56:15.089416Z	info	ads	LDS: PUSH for node:autoscaler-588cfb64fb-8csmw.knative-serving resources:23 size:106.2kB
+2024-06-05T10:56:15.089868588Z 2024-06-05T10:56:15.089853Z	info	ads	RDS: PUSH for node:activator-7b646b88cc-fkrcw.knative-serving resources:8 size:13.3kB cached:7/8
+2024-06-05T10:56:15.089996401Z 2024-06-05T10:56:15.089931Z	info	ads	RDS: PUSH for node:autoscaler-588cfb64fb-8csmw.knative-serving resources:8 size:13.3kB cached:7/8
+2024-06-05T10:56:15.090104233Z 2024-06-05T10:56:15.090039Z	info	ads	NDS: PUSH for node:autoscaler-588cfb64fb-8csmw.knative-serving resources:1 size:1.9kB
+2024-06-05T10:56:15.090163644Z 2024-06-05T10:56:15.090147Z	info	ads	NDS: PUSH for node:activator-7b646b88cc-fkrcw.knative-serving resources:1 size:1.9kB
+2024-06-05T10:56:15.090786216Z 2024-06-05T10:56:15.090767Z	info	ads	LDS: PUSH for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:2 size:10.4kB
+2024-06-05T10:56:15.090843798Z 2024-06-05T10:56:15.090830Z	warn	constructed http route config for route https.8081.https.knative-local-gateway.knative-serving on port 8081 with no vhosts; Setting up a default 404 vhost
+2024-06-05T10:56:15.090881158Z 2024-06-05T10:56:15.090869Z	warn	constructed http route config for route https.443.https.knative-ingress-gateway.knative-serving on port 443 with no vhosts; Setting up a default 404 vhost
+2024-06-05T10:56:15.090933389Z 2024-06-05T10:56:15.090919Z	info	ads	RDS: PUSH for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:2 size:162B cached:0/0
+2024-06-05T10:56:15.752039036Z 2024-06-05T10:56:15.751984Z	info	ads	Push debounce stable[71] 1 for config Secret/knative-serving/net-istio-webhook-certs: 100.822793ms since last change, 100.822693ms since last push, full=false
+2024-06-05T10:56:15.752077516Z 2024-06-05T10:56:15.752036Z	info	ads	XDS: Incremental Pushing:2024-06-05T10:56:15Z/37 ConnectedEndpoints:4 Version:2024-06-05T10:56:15Z/37
+2024-06-05T10:56:15.887413216Z 2024-06-05T10:56:15.887366Z	info	ads	Push debounce stable[72] 1 for config ServiceEntry/knative-serving/net-istio-webhook.knative-serving.svc.cluster.local: 100.402896ms since last change, 100.402805ms since last push, full=true
+2024-06-05T10:56:15.888167971Z 2024-06-05T10:56:15.888119Z	info	ads	XDS: Pushing:2024-06-05T10:56:15Z/38 Services:16 ConnectedEndpoints:4 Version:2024-06-05T10:56:15Z/38
+2024-06-05T10:56:15.888705812Z 2024-06-05T10:56:15.888678Z	info	ads	CDS: PUSH for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:36 size:35.5kB cached:32/35
+2024-06-05T10:56:15.888815294Z 2024-06-05T10:56:15.888795Z	info	ads	EDS: PUSH INC for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:3 size:860B empty:0 cached:0/3
+2024-06-05T10:56:15.888895875Z 2024-06-05T10:56:15.888879Z	info	ads	CDS: PUSH for node:activator-7b646b88cc-fkrcw.knative-serving resources:44 size:38.3kB cached:32/35
+2024-06-05T10:56:15.889047529Z 2024-06-05T10:56:15.889029Z	info	ads	EDS: PUSH INC for node:activator-7b646b88cc-fkrcw.knative-serving resources:3 size:860B empty:0 cached:0/3
+2024-06-05T10:56:15.889112990Z 2024-06-05T10:56:15.889090Z	info	ads	LDS: PUSH for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:2 size:10.4kB
+2024-06-05T10:56:15.889126460Z 2024-06-05T10:56:15.889113Z	warn	constructed http route config for route https.8081.https.knative-local-gateway.knative-serving on port 8081 with no vhosts; Setting up a default 404 vhost
+2024-06-05T10:56:15.889135900Z 2024-06-05T10:56:15.889127Z	warn	constructed http route config for route https.443.https.knative-ingress-gateway.knative-serving on port 443 with no vhosts; Setting up a default 404 vhost
+2024-06-05T10:56:15.889162341Z 2024-06-05T10:56:15.889142Z	info	ads	RDS: PUSH for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:2 size:162B cached:0/0
+2024-06-05T10:56:15.889330224Z 2024-06-05T10:56:15.889306Z	info	ads	CDS: PUSH for node:istio-egressgateway-856fbd6dfc-t5xwv.istio-system resources:36 size:35.5kB cached:35/35
+2024-06-05T10:56:15.889420346Z 2024-06-05T10:56:15.889395Z	info	ads	EDS: PUSH INC for node:istio-egressgateway-856fbd6dfc-t5xwv.istio-system resources:3 size:860B empty:0 cached:3/3
+2024-06-05T10:56:15.889467677Z 2024-06-05T10:56:15.889449Z	info	ads	LDS: PUSH for node:istio-egressgateway-856fbd6dfc-t5xwv.istio-system resources:0 size:0B
+2024-06-05T10:56:15.889792343Z 2024-06-05T10:56:15.888892Z	info	ads	CDS: PUSH for node:autoscaler-588cfb64fb-8csmw.knative-serving resources:42 size:37.4kB cached:35/35
+2024-06-05T10:56:15.889850605Z 2024-06-05T10:56:15.889826Z	info	ads	EDS: PUSH INC for node:autoscaler-588cfb64fb-8csmw.knative-serving resources:3 size:860B empty:0 cached:3/3
+2024-06-05T10:56:15.890803103Z 2024-06-05T10:56:15.890783Z	info	ads	LDS: PUSH for node:activator-7b646b88cc-fkrcw.knative-serving resources:23 size:111.9kB
+2024-06-05T10:56:15.891249062Z 2024-06-05T10:56:15.891232Z	info	ads	RDS: PUSH for node:activator-7b646b88cc-fkrcw.knative-serving resources:8 size:13.3kB cached:6/8
+2024-06-05T10:56:15.891404655Z 2024-06-05T10:56:15.891319Z	info	ads	LDS: PUSH for node:autoscaler-588cfb64fb-8csmw.knative-serving resources:23 size:106.2kB
+2024-06-05T10:56:15.891564208Z 2024-06-05T10:56:15.891547Z	info	ads	NDS: PUSH for node:activator-7b646b88cc-fkrcw.knative-serving resources:1 size:1.9kB
+2024-06-05T10:56:15.891673591Z 2024-06-05T10:56:15.891657Z	info	ads	RDS: PUSH for node:autoscaler-588cfb64fb-8csmw.knative-serving resources:8 size:13.3kB cached:8/8
+2024-06-05T10:56:15.891762072Z 2024-06-05T10:56:15.891746Z	info	ads	NDS: PUSH for node:autoscaler-588cfb64fb-8csmw.knative-serving resources:1 size:1.9kB
+2024-06-05T10:56:16.154203907Z 2024-06-05T10:56:16.154154Z	info	ads	Push debounce stable[73] 1 for config ServiceEntry/knative-serving/webhook-sm-service.knative-serving.svc.cluster.local: 101.006047ms since last change, 101.005987ms since last push, full=true
+2024-06-05T10:56:16.154857150Z 2024-06-05T10:56:16.154833Z	info	ads	XDS: Pushing:2024-06-05T10:56:16Z/39 Services:16 ConnectedEndpoints:4 Version:2024-06-05T10:56:16Z/39
+2024-06-05T10:56:16.155279238Z 2024-06-05T10:56:16.155236Z	info	ads	CDS: PUSH for node:istio-egressgateway-856fbd6dfc-t5xwv.istio-system resources:36 size:35.5kB cached:34/35
+2024-06-05T10:56:16.155334449Z 2024-06-05T10:56:16.155314Z	info	ads	EDS: PUSH INC for node:istio-egressgateway-856fbd6dfc-t5xwv.istio-system resources:1 size:268B empty:0 cached:0/1
+2024-06-05T10:56:16.155375450Z 2024-06-05T10:56:16.155333Z	info	ads	CDS: PUSH for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:36 size:35.5kB cached:35/35
+2024-06-05T10:56:16.155375450Z 2024-06-05T10:56:16.155369Z	info	ads	LDS: PUSH for node:istio-egressgateway-856fbd6dfc-t5xwv.istio-system resources:0 size:0B
+2024-06-05T10:56:16.155390910Z 2024-06-05T10:56:16.155380Z	info	ads	EDS: PUSH INC for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:1 size:268B empty:0 cached:1/1
+2024-06-05T10:56:16.155424281Z 2024-06-05T10:56:16.155403Z	info	ads	CDS: PUSH for node:activator-7b646b88cc-fkrcw.knative-serving resources:44 size:38.3kB cached:34/35
+2024-06-05T10:56:16.155515153Z 2024-06-05T10:56:16.155499Z	info	ads	EDS: PUSH INC for node:activator-7b646b88cc-fkrcw.knative-serving resources:1 size:268B empty:0 cached:0/1
+2024-06-05T10:56:16.155668036Z 2024-06-05T10:56:16.155644Z	info	ads	LDS: PUSH for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:2 size:10.4kB
+2024-06-05T10:56:16.155681956Z 2024-06-05T10:56:16.155669Z	warn	constructed http route config for route https.8081.https.knative-local-gateway.knative-serving on port 8081 with no vhosts; Setting up a default 404 vhost
+2024-06-05T10:56:16.155693136Z 2024-06-05T10:56:16.155680Z	warn	constructed http route config for route https.443.https.knative-ingress-gateway.knative-serving on port 443 with no vhosts; Setting up a default 404 vhost
+2024-06-05T10:56:16.155703037Z 2024-06-05T10:56:16.155696Z	info	ads	RDS: PUSH for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:2 size:162B cached:0/0
+2024-06-05T10:56:16.155714467Z 2024-06-05T10:56:16.155695Z	info	ads	CDS: PUSH for node:autoscaler-588cfb64fb-8csmw.knative-serving resources:42 size:37.4kB cached:35/35
+2024-06-05T10:56:16.155759828Z 2024-06-05T10:56:16.155740Z	info	ads	EDS: PUSH INC for node:autoscaler-588cfb64fb-8csmw.knative-serving resources:1 size:268B empty:0 cached:1/1
+2024-06-05T10:56:16.157777598Z 2024-06-05T10:56:16.156971Z	info	ads	LDS: PUSH for node:autoscaler-588cfb64fb-8csmw.knative-serving resources:23 size:106.2kB
+2024-06-05T10:56:16.157777598Z 2024-06-05T10:56:16.157322Z	info	ads	RDS: PUSH for node:autoscaler-588cfb64fb-8csmw.knative-serving resources:8 size:13.3kB cached:8/8
+2024-06-05T10:56:16.157777598Z 2024-06-05T10:56:16.157411Z	info	ads	NDS: PUSH for node:autoscaler-588cfb64fb-8csmw.knative-serving resources:1 size:1.9kB
+2024-06-05T10:56:16.159951111Z 2024-06-05T10:56:16.158650Z	info	ads	LDS: PUSH for node:activator-7b646b88cc-fkrcw.knative-serving resources:23 size:111.9kB
+2024-06-05T10:56:16.159951111Z 2024-06-05T10:56:16.158985Z	info	ads	RDS: PUSH for node:activator-7b646b88cc-fkrcw.knative-serving resources:8 size:13.3kB cached:8/8
+2024-06-05T10:56:16.159951111Z 2024-06-05T10:56:16.159197Z	info	ads	NDS: PUSH for node:activator-7b646b88cc-fkrcw.knative-serving resources:1 size:1.9kB
+2024-06-05T10:56:16.421075685Z 2024-06-05T10:56:16.421035Z	info	ads	Push debounce stable[74] 1 for config ServiceEntry/knative-serving/activator-sm-service.knative-serving.svc.cluster.local: 100.974652ms since last change, 100.974392ms since last push, full=true
+2024-06-05T10:56:16.421817159Z 2024-06-05T10:56:16.421795Z	info	ads	XDS: Pushing:2024-06-05T10:56:16Z/40 Services:16 ConnectedEndpoints:4 Version:2024-06-05T10:56:16Z/40
+2024-06-05T10:56:16.422236488Z 2024-06-05T10:56:16.422208Z	info	ads	CDS: PUSH for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:36 size:35.5kB cached:34/35
+2024-06-05T10:56:16.422284329Z 2024-06-05T10:56:16.422269Z	info	ads	CDS: PUSH for node:istio-egressgateway-856fbd6dfc-t5xwv.istio-system resources:36 size:35.5kB cached:34/35
+2024-06-05T10:56:16.422367770Z 2024-06-05T10:56:16.422329Z	info	ads	EDS: PUSH INC for node:istio-egressgateway-856fbd6dfc-t5xwv.istio-system resources:1 size:284B empty:0 cached:1/1
+2024-06-05T10:56:16.422438752Z 2024-06-05T10:56:16.422422Z	info	ads	LDS: PUSH for node:istio-egressgateway-856fbd6dfc-t5xwv.istio-system resources:0 size:0B
+2024-06-05T10:56:16.422484242Z 2024-06-05T10:56:16.422292Z	info	ads	EDS: PUSH INC for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:1 size:284B empty:0 cached:0/1
+2024-06-05T10:56:16.422586444Z 2024-06-05T10:56:16.422511Z	info	ads	CDS: PUSH for node:autoscaler-588cfb64fb-8csmw.knative-serving resources:42 size:37.4kB cached:35/35
+2024-06-05T10:56:16.422705337Z 2024-06-05T10:56:16.422605Z	info	ads	EDS: PUSH INC for node:autoscaler-588cfb64fb-8csmw.knative-serving resources:1 size:284B empty:0 cached:0/1
+2024-06-05T10:56:16.422780828Z 2024-06-05T10:56:16.422743Z	info	ads	LDS: PUSH for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:2 size:10.4kB
+2024-06-05T10:56:16.422780828Z 2024-06-05T10:56:16.422768Z	warn	constructed http route config for route https.8081.https.knative-local-gateway.knative-serving on port 8081 with no vhosts; Setting up a default 404 vhost
+2024-06-05T10:56:16.422795659Z 2024-06-05T10:56:16.422782Z	warn	constructed http route config for route https.443.https.knative-ingress-gateway.knative-serving on port 443 with no vhosts; Setting up a default 404 vhost
+2024-06-05T10:56:16.422805679Z 2024-06-05T10:56:16.422800Z	info	ads	RDS: PUSH for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:2 size:162B cached:0/0
+2024-06-05T10:56:16.422832189Z 2024-06-05T10:56:16.422330Z	info	ads	CDS: PUSH for node:activator-7b646b88cc-fkrcw.knative-serving resources:44 size:38.3kB cached:34/35
+2024-06-05T10:56:16.422908251Z 2024-06-05T10:56:16.422892Z	info	ads	EDS: PUSH INC for node:activator-7b646b88cc-fkrcw.knative-serving resources:1 size:284B empty:0 cached:1/1
+2024-06-05T10:56:16.424211737Z 2024-06-05T10:56:16.424189Z	info	ads	LDS: PUSH for node:activator-7b646b88cc-fkrcw.knative-serving resources:23 size:111.9kB
+2024-06-05T10:56:16.424701207Z 2024-06-05T10:56:16.424680Z	info	ads	RDS: PUSH for node:activator-7b646b88cc-fkrcw.knative-serving resources:8 size:13.3kB cached:8/8
+2024-06-05T10:56:16.424831799Z 2024-06-05T10:56:16.424814Z	info	ads	NDS: PUSH for node:activator-7b646b88cc-fkrcw.knative-serving resources:1 size:1.9kB
+2024-06-05T10:56:16.426060124Z 2024-06-05T10:56:16.426037Z	info	ads	LDS: PUSH for node:autoscaler-588cfb64fb-8csmw.knative-serving resources:23 size:106.2kB
+2024-06-05T10:56:16.426452712Z 2024-06-05T10:56:16.426410Z	info	ads	RDS: PUSH for node:autoscaler-588cfb64fb-8csmw.knative-serving resources:8 size:13.3kB cached:8/8
+2024-06-05T10:56:16.426529083Z 2024-06-05T10:56:16.426506Z	info	ads	NDS: PUSH for node:autoscaler-588cfb64fb-8csmw.knative-serving resources:1 size:1.9kB
+2024-06-05T10:56:16.685490303Z 2024-06-05T10:56:16.685449Z	info	ads	Push debounce stable[75] 1 for config ServiceEntry/knative-serving/autoscaler-sm-service.knative-serving.svc.cluster.local: 100.283618ms since last change, 100.283458ms since last push, full=true
+2024-06-05T10:56:16.686059585Z 2024-06-05T10:56:16.686017Z	info	ads	XDS: Pushing:2024-06-05T10:56:16Z/41 Services:16 ConnectedEndpoints:4 Version:2024-06-05T10:56:16Z/41
+2024-06-05T10:56:16.686467203Z 2024-06-05T10:56:16.686442Z	info	ads	CDS: PUSH for node:istio-egressgateway-856fbd6dfc-t5xwv.istio-system resources:36 size:35.5kB cached:34/35
+2024-06-05T10:56:16.686545844Z 2024-06-05T10:56:16.686524Z	info	ads	EDS: PUSH INC for node:istio-egressgateway-856fbd6dfc-t5xwv.istio-system resources:1 size:286B empty:0 cached:0/1
+2024-06-05T10:56:16.686580475Z 2024-06-05T10:56:16.686562Z	info	ads	LDS: PUSH for node:istio-egressgateway-856fbd6dfc-t5xwv.istio-system resources:0 size:0B
+2024-06-05T10:56:16.686752759Z 2024-06-05T10:56:16.686735Z	info	ads	CDS: PUSH for node:autoscaler-588cfb64fb-8csmw.knative-serving resources:42 size:37.4kB cached:34/35
+2024-06-05T10:56:16.686827410Z 2024-06-05T10:56:16.686803Z	info	ads	CDS: PUSH for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:36 size:35.5kB cached:35/35
+2024-06-05T10:56:16.686870711Z 2024-06-05T10:56:16.686844Z	info	ads	EDS: PUSH INC for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:1 size:286B empty:0 cached:1/1
+2024-06-05T10:56:16.686952202Z 2024-06-05T10:56:16.686935Z	info	ads	EDS: PUSH INC for node:autoscaler-588cfb64fb-8csmw.knative-serving resources:1 size:286B empty:0 cached:0/1
+2024-06-05T10:56:16.686988463Z 2024-06-05T10:56:16.686734Z	info	ads	CDS: PUSH for node:activator-7b646b88cc-fkrcw.knative-serving resources:44 size:38.3kB cached:34/35
+2024-06-05T10:56:16.687052214Z 2024-06-05T10:56:16.687037Z	info	ads	EDS: PUSH INC for node:activator-7b646b88cc-fkrcw.knative-serving resources:1 size:286B empty:0 cached:1/1
+2024-06-05T10:56:16.687132896Z 2024-06-05T10:56:16.687107Z	info	ads	LDS: PUSH for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:2 size:10.4kB
+2024-06-05T10:56:16.687145276Z 2024-06-05T10:56:16.687132Z	warn	constructed http route config for route https.8081.https.knative-local-gateway.knative-serving on port 8081 with no vhosts; Setting up a default 404 vhost
+2024-06-05T10:56:16.687154447Z 2024-06-05T10:56:16.687145Z	warn	constructed http route config for route https.443.https.knative-ingress-gateway.knative-serving on port 443 with no vhosts; Setting up a default 404 vhost
+2024-06-05T10:56:16.687181667Z 2024-06-05T10:56:16.687165Z	info	ads	RDS: PUSH for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:2 size:162B cached:0/0
+2024-06-05T10:56:16.689404611Z 2024-06-05T10:56:16.688130Z	info	ads	LDS: PUSH for node:autoscaler-588cfb64fb-8csmw.knative-serving resources:23 size:106.2kB
+2024-06-05T10:56:16.689404611Z 2024-06-05T10:56:16.688479Z	info	ads	RDS: PUSH for node:autoscaler-588cfb64fb-8csmw.knative-serving resources:8 size:13.3kB cached:8/8
+2024-06-05T10:56:16.689404611Z 2024-06-05T10:56:16.688542Z	info	ads	NDS: PUSH for node:autoscaler-588cfb64fb-8csmw.knative-serving resources:1 size:1.9kB
+2024-06-05T10:56:16.689404611Z 2024-06-05T10:56:16.688845Z	info	ads	LDS: PUSH for node:activator-7b646b88cc-fkrcw.knative-serving resources:23 size:111.9kB
+2024-06-05T10:56:16.689404611Z 2024-06-05T10:56:16.689184Z	info	ads	RDS: PUSH for node:activator-7b646b88cc-fkrcw.knative-serving resources:8 size:13.3kB cached:8/8
+2024-06-05T10:56:16.689404611Z 2024-06-05T10:56:16.689307Z	info	ads	NDS: PUSH for node:activator-7b646b88cc-fkrcw.knative-serving resources:1 size:1.9kB
+2024-06-05T10:56:16.724962350Z 2024-06-05T10:56:16.724910Z	warn	Insecure first-party-jwt option used to validate token; use third-party-jwt
+2024-06-05T10:56:16.729994920Z 2024-06-05T10:56:16.729957Z	info	ads	ADS: new connection for node:autoscaler-588cfb64fb-9nv45.knative-serving-5
+2024-06-05T10:56:16.730909278Z 2024-06-05T10:56:16.730876Z	info	ads	CDS: PUSH request for node:autoscaler-588cfb64fb-9nv45.knative-serving resources:42 size:37.4kB cached:0/35
+2024-06-05T10:56:16.751254264Z 2024-06-05T10:56:16.751203Z	info	ads	EDS: PUSH request for node:autoscaler-588cfb64fb-9nv45.knative-serving resources:35 size:8.6kB empty:0 cached:0/35
+2024-06-05T10:56:16.843799528Z 2024-06-05T10:56:16.843750Z	warn	Insecure first-party-jwt option used to validate token; use third-party-jwt
+2024-06-05T10:56:16.865577302Z 2024-06-05T10:56:16.865538Z	info	ads	LDS: PUSH request for node:autoscaler-588cfb64fb-9nv45.knative-serving resources:23 size:106.2kB
+2024-06-05T10:56:16.865766586Z 2024-06-05T10:56:16.865748Z	info	ads	NDS: PUSH request for node:autoscaler-588cfb64fb-9nv45.knative-serving resources:1 size:1.9kB
+2024-06-05T10:56:16.910248902Z 2024-06-05T10:56:16.910151Z	info	ads	RDS: PUSH request for node:autoscaler-588cfb64fb-9nv45.knative-serving resources:8 size:13.3kB cached:8/8
+2024-06-05T10:56:16.953774789Z 2024-06-05T10:56:16.953670Z	info	ads	Push debounce stable[76] 1 for config ServiceEntry/knative-serving/autoscaler-hpa-sm-service.knative-serving.svc.cluster.local: 100.768248ms since last change, 100.768138ms since last push, full=true
+2024-06-05T10:56:16.954493124Z 2024-06-05T10:56:16.954465Z	info	ads	XDS: Pushing:2024-06-05T10:56:16Z/42 Services:16 ConnectedEndpoints:5 Version:2024-06-05T10:56:16Z/42
+2024-06-05T10:56:16.954988744Z 2024-06-05T10:56:16.954946Z	info	ads	CDS: PUSH for node:autoscaler-588cfb64fb-8csmw.knative-serving resources:42 size:37.4kB cached:34/35
+2024-06-05T10:56:16.955046835Z 2024-06-05T10:56:16.955025Z	info	ads	EDS: PUSH INC for node:autoscaler-588cfb64fb-8csmw.knative-serving resources:1 size:289B empty:0 cached:0/1
+2024-06-05T10:56:16.955339200Z 2024-06-05T10:56:16.955318Z	info	ads	CDS: PUSH for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:36 size:35.5kB cached:34/35
+2024-06-05T10:56:16.955501044Z 2024-06-05T10:56:16.955480Z	info	ads	EDS: PUSH INC for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:1 size:289B empty:0 cached:0/1
+2024-06-05T10:56:16.955821030Z 2024-06-05T10:56:16.955801Z	info	ads	LDS: PUSH for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:2 size:10.4kB
+2024-06-05T10:56:16.955869261Z 2024-06-05T10:56:16.955854Z	warn	constructed http route config for route https.8081.https.knative-local-gateway.knative-serving on port 8081 with no vhosts; Setting up a default 404 vhost
+2024-06-05T10:56:16.955908032Z 2024-06-05T10:56:16.955896Z	warn	constructed http route config for route https.443.https.knative-ingress-gateway.knative-serving on port 443 with no vhosts; Setting up a default 404 vhost
+2024-06-05T10:56:16.955953373Z 2024-06-05T10:56:16.955941Z	info	ads	RDS: PUSH for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:2 size:162B cached:0/0
+2024-06-05T10:56:16.955993544Z 2024-06-05T10:56:16.955960Z	info	ads	CDS: PUSH for node:istio-egressgateway-856fbd6dfc-t5xwv.istio-system resources:36 size:35.5kB cached:35/35
+2024-06-05T10:56:16.956054335Z 2024-06-05T10:56:16.956040Z	info	ads	EDS: PUSH INC for node:istio-egressgateway-856fbd6dfc-t5xwv.istio-system resources:1 size:289B empty:0 cached:1/1
+2024-06-05T10:56:16.956127816Z 2024-06-05T10:56:16.956113Z	info	ads	LDS: PUSH for node:istio-egressgateway-856fbd6dfc-t5xwv.istio-system resources:0 size:0B
+2024-06-05T10:56:16.957781459Z 2024-06-05T10:56:16.956414Z	info	ads	CDS: PUSH for node:autoscaler-588cfb64fb-9nv45.knative-serving resources:42 size:37.4kB cached:0/35
+2024-06-05T10:56:16.957781459Z 2024-06-05T10:56:16.956479Z	info	ads	EDS: PUSH INC for node:autoscaler-588cfb64fb-9nv45.knative-serving resources:1 size:289B empty:0 cached:0/1
+2024-06-05T10:56:16.957781459Z 2024-06-05T10:56:16.956587Z	info	ads	LDS: PUSH for node:autoscaler-588cfb64fb-8csmw.knative-serving resources:23 size:106.2kB
+2024-06-05T10:56:16.957781459Z 2024-06-05T10:56:16.957094Z	info	ads	RDS: PUSH for node:autoscaler-588cfb64fb-8csmw.knative-serving resources:8 size:13.3kB cached:8/8
+2024-06-05T10:56:16.957781459Z 2024-06-05T10:56:16.957178Z	info	ads	NDS: PUSH for node:autoscaler-588cfb64fb-8csmw.knative-serving resources:1 size:1.9kB
+2024-06-05T10:56:16.958077375Z 2024-06-05T10:56:16.958057Z	info	ads	CDS: PUSH for node:activator-7b646b88cc-fkrcw.knative-serving resources:44 size:38.3kB cached:35/35
+2024-06-05T10:56:16.958152837Z 2024-06-05T10:56:16.958137Z	info	ads	EDS: PUSH INC for node:activator-7b646b88cc-fkrcw.knative-serving resources:1 size:289B empty:0 cached:1/1
+2024-06-05T10:56:16.958586275Z 2024-06-05T10:56:16.958082Z	info	ads	LDS: PUSH for node:autoscaler-588cfb64fb-9nv45.knative-serving resources:23 size:106.2kB
+2024-06-05T10:56:16.958754519Z 2024-06-05T10:56:16.958730Z	info	ads	RDS: PUSH for node:autoscaler-588cfb64fb-9nv45.knative-serving resources:8 size:13.3kB cached:8/8
+2024-06-05T10:56:16.958825960Z 2024-06-05T10:56:16.958805Z	info	ads	NDS: PUSH for node:autoscaler-588cfb64fb-9nv45.knative-serving resources:1 size:1.9kB
+2024-06-05T10:56:16.963905111Z 2024-06-05T10:56:16.962268Z	info	ads	LDS: PUSH for node:activator-7b646b88cc-fkrcw.knative-serving resources:23 size:111.9kB
+2024-06-05T10:56:16.963905111Z 2024-06-05T10:56:16.963171Z	info	ads	RDS: PUSH for node:activator-7b646b88cc-fkrcw.knative-serving resources:8 size:13.3kB cached:8/8
+2024-06-05T10:56:16.963905111Z 2024-06-05T10:56:16.963258Z	info	ads	NDS: PUSH for node:activator-7b646b88cc-fkrcw.knative-serving resources:1 size:1.9kB
+2024-06-05T10:56:17.219762470Z 2024-06-05T10:56:17.219706Z	info	ads	Push debounce stable[77] 3 for config ServiceEntry/knative-serving/autoscaler-sm-service.knative-serving.svc.cluster.local and 2 more configs: 100.840639ms since last change, 120.595413ms since last push, full=true
+2024-06-05T10:56:17.221311201Z 2024-06-05T10:56:17.221273Z	info	ads	XDS: Pushing:2024-06-05T10:56:17Z/43 Services:16 ConnectedEndpoints:5 Version:2024-06-05T10:56:17Z/43
+2024-06-05T10:56:17.222029885Z 2024-06-05T10:56:17.222000Z	info	ads	CDS: PUSH for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:36 size:35.5kB cached:30/35
+2024-06-05T10:56:17.222242709Z 2024-06-05T10:56:17.222219Z	info	ads	EDS: PUSH INC for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:5 size:1.4kB empty:0 cached:0/5
+2024-06-05T10:56:17.222566916Z 2024-06-05T10:56:17.222543Z	info	ads	LDS: PUSH for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:2 size:10.4kB
+2024-06-05T10:56:17.222590376Z 2024-06-05T10:56:17.222569Z	warn	constructed http route config for route https.8081.https.knative-local-gateway.knative-serving on port 8081 with no vhosts; Setting up a default 404 vhost
+2024-06-05T10:56:17.222601677Z 2024-06-05T10:56:17.222594Z	warn	constructed http route config for route https.443.https.knative-ingress-gateway.knative-serving on port 443 with no vhosts; Setting up a default 404 vhost
+2024-06-05T10:56:17.222640687Z 2024-06-05T10:56:17.222618Z	info	ads	RDS: PUSH for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:2 size:162B cached:0/0
+2024-06-05T10:56:17.224134927Z 2024-06-05T10:56:17.224050Z	info	ads	CDS: PUSH for node:autoscaler-588cfb64fb-8csmw.knative-serving resources:42 size:37.4kB cached:30/35
+2024-06-05T10:56:17.224539565Z 2024-06-05T10:56:17.224514Z	info	ads	CDS: PUSH for node:istio-egressgateway-856fbd6dfc-t5xwv.istio-system resources:36 size:35.5kB cached:35/35
+2024-06-05T10:56:17.224608476Z 2024-06-05T10:56:17.224589Z	info	ads	EDS: PUSH INC for node:istio-egressgateway-856fbd6dfc-t5xwv.istio-system resources:5 size:1.4kB empty:0 cached:5/5
+2024-06-05T10:56:17.224660607Z 2024-06-05T10:56:17.224629Z	info	ads	LDS: PUSH for node:istio-egressgateway-856fbd6dfc-t5xwv.istio-system resources:0 size:0B
+2024-06-05T10:56:17.225312160Z 2024-06-05T10:56:17.225283Z	info	ads	CDS: PUSH for node:activator-7b646b88cc-fkrcw.knative-serving resources:44 size:38.3kB cached:35/35
+2024-06-05T10:56:17.225513915Z 2024-06-05T10:56:17.225491Z	info	ads	EDS: PUSH INC for node:activator-7b646b88cc-fkrcw.knative-serving resources:5 size:1.4kB empty:0 cached:0/5
+2024-06-05T10:56:17.227198638Z 2024-06-05T10:56:17.227127Z	info	ads	LDS: PUSH for node:activator-7b646b88cc-fkrcw.knative-serving resources:23 size:111.9kB
+2024-06-05T10:56:17.227690118Z 2024-06-05T10:56:17.227666Z	info	ads	RDS: PUSH for node:activator-7b646b88cc-fkrcw.knative-serving resources:8 size:13.3kB cached:5/8
+2024-06-05T10:56:17.227774640Z 2024-06-05T10:56:17.227754Z	info	ads	NDS: PUSH for node:activator-7b646b88cc-fkrcw.knative-serving resources:1 size:1.9kB
+2024-06-05T10:56:17.227988074Z 2024-06-05T10:56:17.227964Z	info	ads	EDS: PUSH INC for node:autoscaler-588cfb64fb-8csmw.knative-serving resources:5 size:1.4kB empty:0 cached:4/5
+2024-06-05T10:56:17.229281170Z 2024-06-05T10:56:17.229254Z	info	ads	LDS: PUSH for node:autoscaler-588cfb64fb-8csmw.knative-serving resources:23 size:106.2kB
+2024-06-05T10:56:17.229658837Z 2024-06-05T10:56:17.229634Z	info	ads	RDS: PUSH for node:autoscaler-588cfb64fb-8csmw.knative-serving resources:8 size:13.3kB cached:8/8
+2024-06-05T10:56:17.229738669Z 2024-06-05T10:56:17.229717Z	info	ads	NDS: PUSH for node:autoscaler-588cfb64fb-8csmw.knative-serving resources:1 size:1.9kB
+2024-06-05T10:56:17.234382921Z 2024-06-05T10:56:17.233045Z	info	ads	CDS: PUSH for node:autoscaler-588cfb64fb-9nv45.knative-serving resources:42 size:37.4kB cached:30/35
+2024-06-05T10:56:17.234382921Z 2024-06-05T10:56:17.233252Z	info	ads	EDS: PUSH INC for node:autoscaler-588cfb64fb-9nv45.knative-serving resources:5 size:1.4kB empty:0 cached:0/5
+2024-06-05T10:56:17.235544274Z 2024-06-05T10:56:17.235172Z	info	ads	LDS: PUSH for node:autoscaler-588cfb64fb-9nv45.knative-serving resources:23 size:106.2kB
+2024-06-05T10:56:17.235640146Z 2024-06-05T10:56:17.235617Z	info	ads	RDS: PUSH for node:autoscaler-588cfb64fb-9nv45.knative-serving resources:8 size:13.3kB cached:8/8
+2024-06-05T10:56:17.235810030Z 2024-06-05T10:56:17.235754Z	info	ads	NDS: PUSH for node:autoscaler-588cfb64fb-9nv45.knative-serving resources:1 size:1.9kB
+2024-06-05T10:56:18.117299275Z 2024-06-05T10:56:18.117256Z	info	ads	CDS: PUSH for node:autoscaler-588cfb64fb-9nv45.knative-serving resources:42 size:37.4kB cached:35/35
+2024-06-05T10:56:18.117879437Z 2024-06-05T10:56:18.117827Z	info	ads	EDS: PUSH for node:autoscaler-588cfb64fb-9nv45.knative-serving resources:35 size:8.6kB empty:0 cached:6/35
+2024-06-05T10:56:18.118878566Z 2024-06-05T10:56:18.118855Z	info	ads	LDS: PUSH for node:autoscaler-588cfb64fb-9nv45.knative-serving resources:23 size:106.2kB
+2024-06-05T10:56:18.119110381Z 2024-06-05T10:56:18.119089Z	info	ads	RDS: PUSH for node:autoscaler-588cfb64fb-9nv45.knative-serving resources:8 size:13.3kB cached:8/8
+2024-06-05T10:56:18.119239573Z 2024-06-05T10:56:18.119218Z	info	ads	NDS: PUSH for node:autoscaler-588cfb64fb-9nv45.knative-serving resources:1 size:1.9kB
+2024-06-05T10:56:18.227094213Z 2024-06-05T10:56:18.227027Z	info	ads	Push debounce stable[78] 2 for config ServiceEntry/knative-serving/autoscaler.knative-serving.svc.cluster.local and 1 more configs: 100.760118ms since last change, 103.170536ms since last push, full=false
+2024-06-05T10:56:18.227140764Z 2024-06-05T10:56:18.227095Z	info	ads	XDS: Incremental Pushing:2024-06-05T10:56:17Z/43 ConnectedEndpoints:5 Version:2024-06-05T10:56:17Z/43
+2024-06-05T10:56:18.244538830Z 2024-06-05T10:56:18.244496Z	warn	Insecure first-party-jwt option used to validate token; use third-party-jwt
+2024-06-05T10:56:18.249063401Z 2024-06-05T10:56:18.249033Z	info	ads	ADS: new connection for node:activator-7b646b88cc-vntdm.knative-serving-6
+2024-06-05T10:56:18.249722844Z 2024-06-05T10:56:18.249701Z	info	ads	CDS: PUSH request for node:activator-7b646b88cc-vntdm.knative-serving resources:44 size:38.3kB cached:31/35
+2024-06-05T10:56:18.267013358Z 2024-06-05T10:56:18.266992Z	info	ads	EDS: PUSH request for node:activator-7b646b88cc-vntdm.knative-serving resources:35 size:9.4kB empty:0 cached:35/35
+2024-06-05T10:56:18.317900112Z 2024-06-05T10:56:18.317865Z	warn	Insecure first-party-jwt option used to validate token; use third-party-jwt
+2024-06-05T10:56:18.334050104Z 2024-06-05T10:56:18.334018Z	info	ads	LDS: PUSH request for node:activator-7b646b88cc-vntdm.knative-serving resources:23 size:111.9kB
+2024-06-05T10:56:18.334194217Z 2024-06-05T10:56:18.334174Z	info	ads	NDS: PUSH request for node:activator-7b646b88cc-vntdm.knative-serving resources:1 size:1.9kB
+2024-06-05T10:56:18.370713465Z 2024-06-05T10:56:18.370689Z	info	ads	RDS: PUSH request for node:activator-7b646b88cc-vntdm.knative-serving resources:8 size:13.3kB cached:5/8
+2024-06-05T10:56:19.205272614Z 2024-06-05T10:56:19.205208Z	info	ads	Push debounce stable[79] 2 for config ServiceEntry/knative-serving/activator-service.knative-serving.svc.cluster.local and 1 more configs: 101.053264ms since last change, 101.555824ms since last push, full=false
+2024-06-05T10:56:19.205328396Z 2024-06-05T10:56:19.205267Z	info	ads	XDS: Incremental Pushing:2024-06-05T10:56:17Z/43 ConnectedEndpoints:6 Version:2024-06-05T10:56:17Z/43
+2024-06-05T10:56:20.100963743Z 2024-06-05T10:56:20.100905Z	info	ads	CDS: PUSH for node:activator-7b646b88cc-vntdm.knative-serving resources:44 size:38.3kB cached:25/35
+2024-06-05T10:56:20.101174637Z 2024-06-05T10:56:20.101149Z	info	ads	EDS: PUSH for node:activator-7b646b88cc-vntdm.knative-serving resources:35 size:9.4kB empty:0 cached:35/35
+2024-06-05T10:56:20.102611726Z 2024-06-05T10:56:20.102581Z	info	ads	LDS: PUSH for node:activator-7b646b88cc-vntdm.knative-serving resources:23 size:111.9kB
+2024-06-05T10:56:20.103148837Z 2024-06-05T10:56:20.103125Z	info	ads	RDS: PUSH for node:activator-7b646b88cc-vntdm.knative-serving resources:8 size:13.3kB cached:3/8
+2024-06-05T10:56:20.103212088Z 2024-06-05T10:56:20.103192Z	info	ads	NDS: PUSH for node:activator-7b646b88cc-vntdm.knative-serving resources:1 size:1.9kB
+2024-06-05T10:56:20.209844172Z 2024-06-05T10:56:20.209797Z	info	ads	Push debounce stable[80] 2 for config ServiceEntry/knative-serving/activator-sm-service.knative-serving.svc.cluster.local and 1 more configs: 100.302819ms since last change, 101.661056ms since last push, full=false
+2024-06-05T10:56:20.209901464Z 2024-06-05T10:56:20.209856Z	info	ads	XDS: Incremental Pushing:2024-06-05T10:56:17Z/43 ConnectedEndpoints:6 Version:2024-06-05T10:56:17Z/43
+2024-06-05T10:58:33.240622893Z 2024-06-05T10:58:33.240222Z	info	smmr	Member namespace list updated: [istio-system knative-eventing knative-serving serving-tests serving-tests-alt user-ns]
+2024-06-05T10:58:33.259501818Z 2024-06-05T10:58:33.259312Z	error	controllers	error handling tenant-2/istio-ca-root-cert, and retry budget exceeded: error when creating configmap istio-ca-root-cert: configmaps is forbidden: User "system:serviceaccount:istio-system:istiod-basic" cannot create resource "configmaps" in API group "" in the namespace "tenant-2"	controller=namespace controller
+2024-06-05T10:58:33.270725781Z 2024-06-05T10:58:33.270683Z	error	controllers	error handling eventing-e2e3/istio-ca-root-cert, and retry budget exceeded: error when creating configmap istio-ca-root-cert: configmaps is forbidden: User "system:serviceaccount:istio-system:istiod-basic" cannot create resource "configmaps" in API group "" in the namespace "eventing-e2e3"	controller=namespace controller
+2024-06-05T10:58:33.272501636Z 2024-06-05T10:58:33.272480Z	error	controllers	error handling serverless-tests/istio-ca-root-cert, and retry budget exceeded: error when creating configmap istio-ca-root-cert: configmaps is forbidden: User "system:serviceaccount:istio-system:istiod-basic" cannot create resource "configmaps" in API group "" in the namespace "serverless-tests"	controller=namespace controller
+2024-06-05T10:58:33.275518046Z 2024-06-05T10:58:33.275494Z	error	controllers	error handling tenant-1/istio-ca-root-cert, and retry budget exceeded: error when creating configmap istio-ca-root-cert: configmaps is forbidden: User "system:serviceaccount:istio-system:istiod-basic" cannot create resource "configmaps" in API group "" in the namespace "tenant-1"	controller=namespace controller
+2024-06-05T10:58:33.276746570Z 2024-06-05T10:58:33.276723Z	error	controllers	error handling eventing-e2e0/istio-ca-root-cert, and retry budget exceeded: error when creating configmap istio-ca-root-cert: configmaps is forbidden: User "system:serviceaccount:istio-system:istiod-basic" cannot create resource "configmaps" in API group "" in the namespace "eventing-e2e0"	controller=namespace controller
+2024-06-05T10:58:33.280536105Z 2024-06-05T10:58:33.280513Z	error	controllers	error handling eventing-e2e1/istio-ca-root-cert, and retry budget exceeded: error when creating configmap istio-ca-root-cert: configmaps is forbidden: User "system:serviceaccount:istio-system:istiod-basic" cannot create resource "configmaps" in API group "" in the namespace "eventing-e2e1"	controller=namespace controller
+2024-06-05T10:58:33.282508075Z 2024-06-05T10:58:33.282485Z	error	controllers	error handling eventing-e2e2/istio-ca-root-cert, and retry budget exceeded: error when creating configmap istio-ca-root-cert: configmaps is forbidden: User "system:serviceaccount:istio-system:istiod-basic" cannot create resource "configmaps" in API group "" in the namespace "eventing-e2e2"	controller=namespace controller
+2024-06-05T10:58:33.283502614Z 2024-06-05T10:58:33.283481Z	error	controllers	error handling eventing-e2e4/istio-ca-root-cert, and retry budget exceeded: error when creating configmap istio-ca-root-cert: configmaps is forbidden: User "system:serviceaccount:istio-system:istiod-basic" cannot create resource "configmaps" in API group "" in the namespace "eventing-e2e4"	controller=namespace controller
+2024-06-05T10:58:33.322135671Z 2024-06-05T10:58:33.322092Z	info	smmr	Member namespace list updated: [istio-system knative-eventing knative-serving user-ns]
+2024-06-05T10:58:33.327488697Z 2024-06-05T10:58:33.327465Z	error	controllers	error handling serving-tests-alt/istio-ca-root-cert, and retry budget exceeded: error when creating configmap istio-ca-root-cert: configmaps is forbidden: User "system:serviceaccount:istio-system:istiod-basic" cannot create resource "configmaps" in API group "" in the namespace "serving-tests-alt"	controller=namespace controller
+2024-06-05T10:58:33.328706172Z 2024-06-05T10:58:33.328682Z	error	controllers	error handling serving-tests/istio-ca-root-cert, and retry budget exceeded: error when creating configmap istio-ca-root-cert: configmaps is forbidden: User "system:serviceaccount:istio-system:istiod-basic" cannot create resource "configmaps" in API group "" in the namespace "serving-tests"	controller=namespace controller
+2024-06-05T10:58:33.423532474Z 2024-06-05T10:58:33.423431Z	info	ads	Push debounce stable[81] 66 for config Secret/serverless-tests/builder-dockercfg-c9khz and 65 more configs: 100.573966ms since last change, 173.432522ms since last push, full=false
+2024-06-05T10:58:33.423745598Z 2024-06-05T10:58:33.423716Z	info	ads	XDS: Incremental Pushing:2024-06-05T10:56:17Z/43 ConnectedEndpoints:6 Version:2024-06-05T10:56:17Z/43
+2024-06-05T10:59:13.568061591Z 2024-06-05T10:59:13.568018Z	info	ads	Incremental push, service helloworld-go-00001-private.user-ns.svc.cluster.local at shard Kubernetes/Kubernetes has no endpoints
+2024-06-05T10:59:13.595987217Z 2024-06-05T10:59:13.595943Z	info	ads	Full push, new service user-ns/helloworld-go-00001.user-ns.svc.cluster.local
+2024-06-05T10:59:13.697016252Z 2024-06-05T10:59:13.696932Z	info	ads	Push debounce stable[82] 4 for config ServiceEntry/user-ns/helloworld-go-00001-private.user-ns.svc.cluster.local and 1 more configs: 100.851911ms since last change, 156.403189ms since last push, full=true
+2024-06-05T10:59:13.698237887Z 2024-06-05T10:59:13.698195Z	info	ads	XDS: Pushing:2024-06-05T10:59:13Z/44 Services:18 ConnectedEndpoints:6 Version:2024-06-05T10:59:13Z/44
+2024-06-05T10:59:13.699377419Z 2024-06-05T10:59:13.699354Z	info	ads	CDS: PUSH for node:istio-egressgateway-856fbd6dfc-t5xwv.istio-system resources:44 size:43.0kB cached:25/43
+2024-06-05T10:59:13.699510682Z 2024-06-05T10:59:13.699492Z	info	ads	LDS: PUSH for node:istio-egressgateway-856fbd6dfc-t5xwv.istio-system resources:0 size:0B
+2024-06-05T10:59:13.699619494Z 2024-06-05T10:59:13.699507Z	info	ads	CDS: PUSH for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:44 size:43.0kB cached:43/43
+2024-06-05T10:59:13.700020762Z 2024-06-05T10:59:13.699979Z	info	ads	LDS: PUSH for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:2 size:10.4kB
+2024-06-05T10:59:13.700087873Z 2024-06-05T10:59:13.700053Z	warn	constructed http route config for route https.8081.https.knative-local-gateway.knative-serving on port 8081 with no vhosts; Setting up a default 404 vhost
+2024-06-05T10:59:13.700140855Z 2024-06-05T10:59:13.700126Z	warn	constructed http route config for route https.443.https.knative-ingress-gateway.knative-serving on port 443 with no vhosts; Setting up a default 404 vhost
+2024-06-05T10:59:13.700192786Z 2024-06-05T10:59:13.700178Z	info	ads	RDS: PUSH for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:2 size:162B cached:0/0
+2024-06-05T10:59:13.700235496Z 2024-06-05T10:59:13.700149Z	info	ads	CDS: PUSH for node:activator-7b646b88cc-fkrcw.knative-serving resources:52 size:45.8kB cached:41/43
+2024-06-05T10:59:13.700442221Z 2024-06-05T10:59:13.700094Z	info	ads	CDS: PUSH for node:autoscaler-588cfb64fb-8csmw.knative-serving resources:50 size:44.9kB cached:25/43
+2024-06-05T10:59:13.710480421Z 2024-06-05T10:59:13.700646Z	info	ads	CDS: PUSH for node:activator-7b646b88cc-vntdm.knative-serving resources:52 size:45.8kB cached:40/43
+2024-06-05T10:59:13.710480421Z 2024-06-05T10:59:13.705904Z	info	ads	LDS: PUSH for node:activator-7b646b88cc-vntdm.knative-serving resources:28 size:133.0kB
+2024-06-05T10:59:13.710480421Z 2024-06-05T10:59:13.706463Z	info	ads	RDS: PUSH for node:activator-7b646b88cc-vntdm.knative-serving resources:8 size:15.0kB cached:4/8
+2024-06-05T10:59:13.710480421Z 2024-06-05T10:59:13.706546Z	info	ads	NDS: PUSH for node:activator-7b646b88cc-vntdm.knative-serving resources:1 size:2.1kB
+2024-06-05T10:59:13.710480421Z 2024-06-05T10:59:13.700667Z	info	ads	CDS: PUSH for node:autoscaler-588cfb64fb-9nv45.knative-serving resources:50 size:44.9kB cached:29/43
+2024-06-05T10:59:13.710480421Z 2024-06-05T10:59:13.702303Z	info	ads	LDS: PUSH for node:autoscaler-588cfb64fb-8csmw.knative-serving resources:28 size:127.3kB
+2024-06-05T10:59:13.710480421Z 2024-06-05T10:59:13.707597Z	info	ads	RDS: PUSH for node:autoscaler-588cfb64fb-8csmw.knative-serving resources:8 size:15.0kB cached:8/8
+2024-06-05T10:59:13.710480421Z 2024-06-05T10:59:13.707660Z	info	ads	NDS: PUSH for node:autoscaler-588cfb64fb-8csmw.knative-serving resources:1 size:2.1kB
+2024-06-05T10:59:13.710480421Z 2024-06-05T10:59:13.703838Z	info	ads	LDS: PUSH for node:activator-7b646b88cc-fkrcw.knative-serving resources:28 size:133.0kB
+2024-06-05T10:59:13.710480421Z 2024-06-05T10:59:13.707889Z	info	ads	RDS: PUSH for node:activator-7b646b88cc-fkrcw.knative-serving resources:8 size:15.0kB cached:8/8
+2024-06-05T10:59:13.710480421Z 2024-06-05T10:59:13.707947Z	info	ads	NDS: PUSH for node:activator-7b646b88cc-fkrcw.knative-serving resources:1 size:2.1kB
+2024-06-05T10:59:13.710480421Z 2024-06-05T10:59:13.708976Z	info	ads	LDS: PUSH for node:autoscaler-588cfb64fb-9nv45.knative-serving resources:28 size:127.3kB
+2024-06-05T10:59:13.710480421Z 2024-06-05T10:59:13.709521Z	info	ads	RDS: PUSH for node:autoscaler-588cfb64fb-9nv45.knative-serving resources:8 size:15.0kB cached:8/8
+2024-06-05T10:59:13.710480421Z 2024-06-05T10:59:13.709855Z	info	ads	NDS: PUSH for node:autoscaler-588cfb64fb-9nv45.knative-serving resources:1 size:2.1kB
+2024-06-05T10:59:13.716693445Z 2024-06-05T10:59:13.716667Z	info	ads	EDS: PUSH request for node:activator-7b646b88cc-fkrcw.knative-serving resources:8 size:1.4kB empty:6 cached:0/8 filtered:35
+2024-06-05T10:59:13.717020321Z 2024-06-05T10:59:13.716998Z	info	ads	EDS: PUSH request for node:autoscaler-588cfb64fb-9nv45.knative-serving resources:8 size:1.4kB empty:6 cached:0/8 filtered:35
+2024-06-05T10:59:13.718561672Z 2024-06-05T10:59:13.718537Z	info	ads	EDS: PUSH request for node:activator-7b646b88cc-vntdm.knative-serving resources:8 size:1.4kB empty:0 cached:8/8 filtered:35
+2024-06-05T10:59:13.724132793Z 2024-06-05T10:59:13.724110Z	info	ads	EDS: PUSH request for node:istio-egressgateway-856fbd6dfc-t5xwv.istio-system resources:8 size:1.4kB empty:6 cached:0/8 filtered:35
+2024-06-05T10:59:13.724470970Z 2024-06-05T10:59:13.724450Z	info	ads	RDS: PUSH request for node:autoscaler-588cfb64fb-9nv45.knative-serving resources:3 size:2.0kB cached:0/3 filtered:8
+2024-06-05T10:59:13.726507690Z 2024-06-05T10:59:13.726485Z	info	ads	RDS: PUSH request for node:activator-7b646b88cc-vntdm.knative-serving resources:3 size:2.0kB cached:3/3 filtered:8
+2024-06-05T10:59:13.726759485Z 2024-06-05T10:59:13.726741Z	info	ads	RDS: PUSH request for node:activator-7b646b88cc-fkrcw.knative-serving resources:3 size:2.0kB cached:3/3 filtered:8
+2024-06-05T10:59:13.730410158Z 2024-06-05T10:59:13.730327Z	info	ads	EDS: PUSH request for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:8 size:1.4kB empty:0 cached:8/8 filtered:35
+2024-06-05T10:59:13.733040101Z 2024-06-05T10:59:13.732331Z	info	ads	EDS: PUSH request for node:autoscaler-588cfb64fb-8csmw.knative-serving resources:8 size:1.4kB empty:0 cached:8/8 filtered:35
+2024-06-05T10:59:13.734776635Z 2024-06-05T10:59:13.734580Z	info	ads	RDS: PUSH request for node:autoscaler-588cfb64fb-8csmw.knative-serving resources:3 size:2.0kB cached:3/3 filtered:8
+2024-06-05T10:59:16.889477520Z 2024-06-05T10:59:16.889364Z	warn	Insecure first-party-jwt option used to validate token; use third-party-jwt
+2024-06-05T10:59:16.894585212Z 2024-06-05T10:59:16.894557Z	info	ads	ADS: new connection for node:helloworld-go-00001-deployment-5bd78dbc5f-xlp2f.user-ns-7
+2024-06-05T10:59:16.894914269Z 2024-06-05T10:59:16.894897Z	info	ads	CDS: PUSH request for node:helloworld-go-00001-deployment-5bd78dbc5f-xlp2f.user-ns resources:51 size:45.4kB cached:43/43
+2024-06-05T10:59:16.910959990Z 2024-06-05T10:59:16.910931Z	info	ads	EDS: PUSH request for node:helloworld-go-00001-deployment-5bd78dbc5f-xlp2f.user-ns resources:43 size:12.1kB empty:0 cached:43/43
+2024-06-05T10:59:16.922488030Z 2024-06-05T10:59:16.922454Z	warn	Insecure first-party-jwt option used to validate token; use third-party-jwt
+2024-06-05T10:59:16.939821537Z 2024-06-05T10:59:16.939775Z	info	ads	LDS: PUSH request for node:helloworld-go-00001-deployment-5bd78dbc5f-xlp2f.user-ns resources:28 size:130.9kB
+2024-06-05T10:59:16.940188314Z 2024-06-05T10:59:16.940152Z	info	ads	NDS: PUSH request for node:helloworld-go-00001-deployment-5bd78dbc5f-xlp2f.user-ns resources:1 size:2.1kB
+2024-06-05T10:59:16.977288416Z 2024-06-05T10:59:16.977250Z	info	ads	RDS: PUSH request for node:helloworld-go-00001-deployment-5bd78dbc5f-xlp2f.user-ns resources:11 size:17.0kB cached:0/11
+2024-06-05T10:59:17.353399405Z 2024-06-05T10:59:17.353337Z	info	ads	Incremental push, service helloworld-go-00001-private.user-ns.svc.cluster.local at shard Kubernetes/Kubernetes has no endpoints
+2024-06-05T10:59:17.368052408Z 2024-06-05T10:59:17.368020Z	info	ads	CDS: PUSH for node:helloworld-go-00001-deployment-5bd78dbc5f-xlp2f.user-ns resources:51 size:45.4kB cached:43/43
+2024-06-05T10:59:17.368251672Z 2024-06-05T10:59:17.368230Z	info	ads	EDS: PUSH for node:helloworld-go-00001-deployment-5bd78dbc5f-xlp2f.user-ns resources:43 size:12.1kB empty:0 cached:43/43
+2024-06-05T10:59:17.369571588Z 2024-06-05T10:59:17.369548Z	info	ads	LDS: PUSH for node:helloworld-go-00001-deployment-5bd78dbc5f-xlp2f.user-ns resources:28 size:130.9kB
+2024-06-05T10:59:17.370115189Z 2024-06-05T10:59:17.370089Z	info	ads	RDS: PUSH for node:helloworld-go-00001-deployment-5bd78dbc5f-xlp2f.user-ns resources:11 size:17.0kB cached:0/11
+2024-06-05T10:59:17.370190181Z 2024-06-05T10:59:17.370172Z	info	ads	NDS: PUSH for node:helloworld-go-00001-deployment-5bd78dbc5f-xlp2f.user-ns resources:1 size:2.1kB
+2024-06-05T10:59:17.376263972Z 2024-06-05T10:59:17.376240Z	info	ads	Full push, new service user-ns/helloworld-go-00001-private.user-ns.svc.cluster.local
+2024-06-05T10:59:17.397210191Z 2024-06-05T10:59:17.397168Z	info	ads	Full push, service accounts changed, helloworld-go-00001.user-ns.svc.cluster.local
+2024-06-05T10:59:17.498287222Z 2024-06-05T10:59:17.498216Z	info	ads	Push debounce stable[83] 3 for config ServiceEntry/user-ns/helloworld-go-00001.user-ns.svc.cluster.local and 1 more configs: 100.952468ms since last change, 144.807825ms since last push, full=true
+2024-06-05T10:59:17.498930835Z 2024-06-05T10:59:17.498895Z	info	ads	XDS: Pushing:2024-06-05T10:59:17Z/45 Services:18 ConnectedEndpoints:7 Version:2024-06-05T10:59:17Z/45
+2024-06-05T10:59:17.499878534Z 2024-06-05T10:59:17.499856Z	info	ads	CDS: PUSH for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:44 size:43.3kB cached:35/43
+2024-06-05T10:59:17.500167909Z 2024-06-05T10:59:17.500147Z	info	ads	EDS: PUSH INC for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:8 size:2.4kB empty:0 cached:0/8
+2024-06-05T10:59:17.500308042Z 2024-06-05T10:59:17.499857Z	info	ads	CDS: PUSH for node:istio-egressgateway-856fbd6dfc-t5xwv.istio-system resources:44 size:43.3kB cached:37/43
+2024-06-05T10:59:17.500392884Z 2024-06-05T10:59:17.500372Z	info	ads	EDS: PUSH INC for node:istio-egressgateway-856fbd6dfc-t5xwv.istio-system resources:8 size:2.4kB empty:0 cached:8/8
+2024-06-05T10:59:17.500411034Z 2024-06-05T10:59:17.499865Z	info	ads	CDS: PUSH for node:activator-7b646b88cc-fkrcw.knative-serving resources:52 size:46.1kB cached:35/43
+2024-06-05T10:59:17.500411034Z 2024-06-05T10:59:17.500405Z	info	ads	LDS: PUSH for node:istio-egressgateway-856fbd6dfc-t5xwv.istio-system resources:0 size:0B
+2024-06-05T10:59:17.500515296Z 2024-06-05T10:59:17.500492Z	info	ads	CDS: PUSH for node:autoscaler-588cfb64fb-8csmw.knative-serving resources:50 size:45.2kB cached:42/43
+2024-06-05T10:59:17.500647269Z 2024-06-05T10:59:17.500624Z	info	ads	EDS: PUSH INC for node:activator-7b646b88cc-fkrcw.knative-serving resources:8 size:2.4kB empty:0 cached:0/8
+2024-06-05T10:59:17.500774291Z 2024-06-05T10:59:17.500185Z	info	ads	CDS: PUSH for node:activator-7b646b88cc-vntdm.knative-serving resources:52 size:46.1kB cached:38/43
+2024-06-05T10:59:17.500947375Z 2024-06-05T10:59:17.500181Z	info	ads	CDS: PUSH for node:autoscaler-588cfb64fb-9nv45.knative-serving resources:50 size:45.2kB cached:37/43
+2024-06-05T10:59:17.501026767Z 2024-06-05T10:59:17.501007Z	info	ads	EDS: PUSH INC for node:activator-7b646b88cc-vntdm.knative-serving resources:8 size:2.4kB empty:0 cached:0/8
+2024-06-05T10:59:17.501087238Z 2024-06-05T10:59:17.500649Z	info	ads	CDS: PUSH for node:helloworld-go-00001-deployment-5bd78dbc5f-xlp2f.user-ns resources:51 size:45.6kB cached:43/43
+2024-06-05T10:59:17.501185120Z 2024-06-05T10:59:17.501169Z	info	ads	EDS: PUSH INC for node:helloworld-go-00001-deployment-5bd78dbc5f-xlp2f.user-ns resources:8 size:2.4kB empty:0 cached:8/8
+2024-06-05T10:59:17.501407554Z 2024-06-05T10:59:17.500639Z	info	ads	LDS: PUSH for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:2 size:10.4kB
+2024-06-05T10:59:17.501462405Z 2024-06-05T10:59:17.501448Z	warn	constructed http route config for route https.8081.https.knative-local-gateway.knative-serving on port 8081 with no vhosts; Setting up a default 404 vhost
+2024-06-05T10:59:17.501498736Z 2024-06-05T10:59:17.501487Z	warn	constructed http route config for route https.443.https.knative-ingress-gateway.knative-serving on port 443 with no vhosts; Setting up a default 404 vhost
+2024-06-05T10:59:17.501543107Z 2024-06-05T10:59:17.501530Z	info	ads	RDS: PUSH for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:2 size:162B cached:0/0
+2024-06-05T10:59:17.502662879Z 2024-06-05T10:59:17.502641Z	info	ads	LDS: PUSH for node:activator-7b646b88cc-vntdm.knative-serving resources:28 size:133.0kB
+2024-06-05T10:59:17.502775931Z 2024-06-05T10:59:17.502750Z	info	ads	LDS: PUSH for node:helloworld-go-00001-deployment-5bd78dbc5f-xlp2f.user-ns resources:28 size:130.9kB
+2024-06-05T10:59:17.503087308Z 2024-06-05T10:59:17.501034Z	info	ads	EDS: PUSH INC for node:autoscaler-588cfb64fb-9nv45.knative-serving resources:8 size:2.4kB empty:0 cached:8/8
+2024-06-05T10:59:17.503403944Z 2024-06-05T10:59:17.503383Z	info	ads	RDS: PUSH for node:activator-7b646b88cc-vntdm.knative-serving resources:11 size:17.1kB cached:6/11
+2024-06-05T10:59:17.503600338Z 2024-06-05T10:59:17.503572Z	info	ads	NDS: PUSH for node:activator-7b646b88cc-vntdm.knative-serving resources:1 size:2.1kB
+2024-06-05T10:59:17.504069677Z 2024-06-05T10:59:17.500628Z	info	ads	EDS: PUSH INC for node:autoscaler-588cfb64fb-8csmw.knative-serving resources:8 size:2.4kB empty:0 cached:7/8
+2024-06-05T10:59:17.504490396Z 2024-06-05T10:59:17.504463Z	info	ads	LDS: PUSH for node:autoscaler-588cfb64fb-9nv45.knative-serving resources:28 size:127.3kB
+2024-06-05T10:59:17.504595378Z 2024-06-05T10:59:17.504571Z	info	ads	RDS: PUSH for node:helloworld-go-00001-deployment-5bd78dbc5f-xlp2f.user-ns resources:11 size:17.0kB cached:6/11
+2024-06-05T10:59:17.504681129Z 2024-06-05T10:59:17.504658Z	info	ads	NDS: PUSH for node:helloworld-go-00001-deployment-5bd78dbc5f-xlp2f.user-ns resources:1 size:2.1kB
+2024-06-05T10:59:17.504856593Z 2024-06-05T10:59:17.504832Z	info	ads	RDS: PUSH for node:autoscaler-588cfb64fb-9nv45.knative-serving resources:11 size:17.1kB cached:11/11
+2024-06-05T10:59:17.504919854Z 2024-06-05T10:59:17.504899Z	info	ads	NDS: PUSH for node:autoscaler-588cfb64fb-9nv45.knative-serving resources:1 size:2.1kB
+2024-06-05T10:59:17.506031987Z 2024-06-05T10:59:17.506009Z	info	ads	LDS: PUSH for node:autoscaler-588cfb64fb-8csmw.knative-serving resources:28 size:127.3kB
+2024-06-05T10:59:17.506180150Z 2024-06-05T10:59:17.506152Z	info	ads	LDS: PUSH for node:activator-7b646b88cc-fkrcw.knative-serving resources:28 size:133.0kB
+2024-06-05T10:59:17.506426615Z 2024-06-05T10:59:17.506401Z	info	ads	RDS: PUSH for node:autoscaler-588cfb64fb-8csmw.knative-serving resources:11 size:17.1kB cached:11/11
+2024-06-05T10:59:17.506608568Z 2024-06-05T10:59:17.506590Z	info	ads	NDS: PUSH for node:autoscaler-588cfb64fb-8csmw.knative-serving resources:1 size:2.1kB
+2024-06-05T10:59:17.506870473Z 2024-06-05T10:59:17.506848Z	info	ads	RDS: PUSH for node:activator-7b646b88cc-fkrcw.knative-serving resources:11 size:17.1kB cached:11/11
+2024-06-05T10:59:17.507117428Z 2024-06-05T10:59:17.507098Z	info	ads	NDS: PUSH for node:activator-7b646b88cc-fkrcw.knative-serving resources:1 size:2.1kB
+2024-06-05T10:59:19.111184379Z 2024-06-05T10:59:19.111134Z	warn	Insecure first-party-jwt option used to validate token; use third-party-jwt
+2024-06-05T10:59:19.115984075Z 2024-06-05T10:59:19.115958Z	info	ads	ADS: new connection for node:helloworld-go-00001-deployment-5bd78dbc5f-zslnq.user-ns-8
+2024-06-05T10:59:19.116298201Z 2024-06-05T10:59:19.116276Z	info	ads	CDS: PUSH request for node:helloworld-go-00001-deployment-5bd78dbc5f-zslnq.user-ns resources:51 size:45.6kB cached:43/43
+2024-06-05T10:59:19.135163298Z 2024-06-05T10:59:19.135129Z	info	ads	EDS: PUSH request for node:helloworld-go-00001-deployment-5bd78dbc5f-zslnq.user-ns resources:43 size:13.1kB empty:0 cached:43/43
+2024-06-05T10:59:19.260827871Z 2024-06-05T10:59:19.260774Z	warn	Insecure first-party-jwt option used to validate token; use third-party-jwt
+2024-06-05T10:59:19.279131467Z 2024-06-05T10:59:19.279100Z	info	ads	LDS: PUSH request for node:helloworld-go-00001-deployment-5bd78dbc5f-zslnq.user-ns resources:28 size:130.9kB
+2024-06-05T10:59:19.279361961Z 2024-06-05T10:59:19.279315Z	info	ads	NDS: PUSH request for node:helloworld-go-00001-deployment-5bd78dbc5f-zslnq.user-ns resources:1 size:2.1kB
+2024-06-05T10:59:19.315874671Z 2024-06-05T10:59:19.315816Z	info	ads	RDS: PUSH request for node:helloworld-go-00001-deployment-5bd78dbc5f-zslnq.user-ns resources:11 size:17.0kB cached:11/11
+2024-06-05T10:59:19.628806257Z 2024-06-05T10:59:19.628756Z	info	ads	CDS: PUSH for node:helloworld-go-00001-deployment-5bd78dbc5f-zslnq.user-ns resources:51 size:45.6kB cached:35/43
+2024-06-05T10:59:19.629158444Z 2024-06-05T10:59:19.629137Z	info	ads	EDS: PUSH for node:helloworld-go-00001-deployment-5bd78dbc5f-zslnq.user-ns resources:43 size:13.1kB empty:0 cached:35/43
+2024-06-05T10:59:19.630448120Z 2024-06-05T10:59:19.630400Z	info	ads	LDS: PUSH for node:helloworld-go-00001-deployment-5bd78dbc5f-zslnq.user-ns resources:28 size:130.9kB
+2024-06-05T10:59:19.630729806Z 2024-06-05T10:59:19.630708Z	info	ads	RDS: PUSH for node:helloworld-go-00001-deployment-5bd78dbc5f-zslnq.user-ns resources:11 size:17.0kB cached:6/11
+2024-06-05T10:59:19.630818477Z 2024-06-05T10:59:19.630798Z	info	ads	NDS: PUSH for node:helloworld-go-00001-deployment-5bd78dbc5f-zslnq.user-ns resources:1 size:2.1kB
+2024-06-05T10:59:19.748211184Z 2024-06-05T10:59:19.748161Z	info	ads	Push debounce stable[84] 4 for config ServiceEntry/user-ns/helloworld-go-00001-private.user-ns.svc.cluster.local and 1 more configs: 100.201573ms since last change, 140.593091ms since last push, full=false
+2024-06-05T10:59:19.748241435Z 2024-06-05T10:59:19.748222Z	info	ads	XDS: Incremental Pushing:2024-06-05T10:59:17Z/45 ConnectedEndpoints:8 Version:2024-06-05T10:59:17Z/45
+2024-06-05T10:59:19.928422977Z 2024-06-05T10:59:19.928375Z	info	ads	Push debounce stable[85] 3 for config ServiceEntry/user-ns/helloworld-go.user-ns.svc.cluster.local and 2 more configs: 100.039129ms since last change, 156.129791ms since last push, full=true
+2024-06-05T10:59:19.929427307Z 2024-06-05T10:59:19.929401Z	info	ads	XDS: Pushing:2024-06-05T10:59:19Z/46 Services:19 ConnectedEndpoints:8 Version:2024-06-05T10:59:19Z/46
+2024-06-05T10:59:19.930182742Z 2024-06-05T10:59:19.930164Z	info	ads	CDS: PUSH for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:45 size:44.4kB cached:35/44
+2024-06-05T10:59:19.934377516Z 2024-06-05T10:59:19.930568Z	info	ads	CDS: PUSH for node:autoscaler-588cfb64fb-9nv45.knative-serving resources:51 size:46.4kB cached:35/44
+2024-06-05T10:59:19.934377516Z 2024-06-05T10:59:19.930638Z	info	ads	CDS: PUSH for node:helloworld-go-00001-deployment-5bd78dbc5f-zslnq.user-ns resources:52 size:46.8kB cached:44/44
+2024-06-05T10:59:19.934377516Z 2024-06-05T10:59:19.930934Z	info	ads	EDS: PUSH for node:autoscaler-588cfb64fb-9nv45.knative-serving resources:43 size:14.9kB empty:0 cached:43/43
+2024-06-05T10:59:19.934377516Z 2024-06-05T10:59:19.931113Z	info	ads	CDS: PUSH for node:istio-egressgateway-856fbd6dfc-t5xwv.istio-system resources:45 size:44.4kB cached:44/44
+2024-06-05T10:59:19.934377516Z 2024-06-05T10:59:19.931154Z	info	ads	CDS: PUSH for node:activator-7b646b88cc-fkrcw.knative-serving resources:53 size:47.2kB cached:35/44
+2024-06-05T10:59:19.934377516Z 2024-06-05T10:59:19.931542Z	info	ads	CDS: PUSH for node:helloworld-go-00001-deployment-5bd78dbc5f-xlp2f.user-ns resources:52 size:46.8kB cached:44/44
+2024-06-05T10:59:19.934377516Z 2024-06-05T10:59:19.931720Z	info	ads	EDS: PUSH for node:helloworld-go-00001-deployment-5bd78dbc5f-xlp2f.user-ns resources:43 size:14.9kB empty:0 cached:43/43
+2024-06-05T10:59:19.934377516Z 2024-06-05T10:59:19.932421Z	info	ads	LDS: PUSH for node:autoscaler-588cfb64fb-9nv45.knative-serving resources:28 size:127.3kB
+2024-06-05T10:59:19.934377516Z 2024-06-05T10:59:19.933302Z	info	ads	RDS: PUSH for node:autoscaler-588cfb64fb-9nv45.knative-serving resources:11 size:19.9kB cached:0/11
+2024-06-05T10:59:19.934377516Z 2024-06-05T10:59:19.933579Z	info	ads	LDS: PUSH for node:helloworld-go-00001-deployment-5bd78dbc5f-xlp2f.user-ns resources:28 size:130.9kB
+2024-06-05T10:59:19.934377516Z 2024-06-05T10:59:19.933873Z	info	ads	EDS: PUSH for node:activator-7b646b88cc-fkrcw.knative-serving resources:43 size:14.9kB empty:0 cached:43/43
+2024-06-05T10:59:19.934377516Z 2024-06-05T10:59:19.933897Z	info	ads	NDS: PUSH for node:autoscaler-588cfb64fb-9nv45.knative-serving resources:1 size:2.1kB
+2024-06-05T10:59:19.934377516Z 2024-06-05T10:59:19.934059Z	info	ads	EDS: PUSH for node:helloworld-go-00001-deployment-5bd78dbc5f-zslnq.user-ns resources:43 size:14.9kB empty:0 cached:43/43
+2024-06-05T10:59:19.934545209Z 2024-06-05T10:59:19.934520Z	info	ads	CDS: PUSH for node:autoscaler-588cfb64fb-8csmw.knative-serving resources:51 size:46.4kB cached:44/44
+2024-06-05T10:59:19.934736603Z 2024-06-05T10:59:19.934701Z	info	ads	EDS: PUSH for node:autoscaler-588cfb64fb-8csmw.knative-serving resources:43 size:14.9kB empty:0 cached:43/43
+2024-06-05T10:59:19.934947817Z 2024-06-05T10:59:19.934930Z	info	ads	RDS: PUSH for node:helloworld-go-00001-deployment-5bd78dbc5f-xlp2f.user-ns resources:11 size:19.8kB cached:0/11
+2024-06-05T10:59:19.935071010Z 2024-06-05T10:59:19.935043Z	info	ads	NDS: PUSH for node:helloworld-go-00001-deployment-5bd78dbc5f-xlp2f.user-ns resources:1 size:2.1kB
+2024-06-05T10:59:19.940384596Z 2024-06-05T10:59:19.938765Z	info	ads	EDS: PUSH for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:43 size:14.9kB empty:0 cached:43/43
+2024-06-05T10:59:19.940384596Z 2024-06-05T10:59:19.939060Z	info	ads	LDS: PUSH for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:2 size:10.4kB
+2024-06-05T10:59:19.940384596Z 2024-06-05T10:59:19.939228Z	info	ads	RDS: PUSH for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:2 size:2.5kB cached:0/0
+2024-06-05T10:59:19.946367846Z 2024-06-05T10:59:19.944105Z	info	ads	CDS: PUSH for node:activator-7b646b88cc-vntdm.knative-serving resources:53 size:47.2kB cached:43/44
+2024-06-05T10:59:19.946367846Z 2024-06-05T10:59:19.944476Z	info	ads	EDS: PUSH for node:activator-7b646b88cc-vntdm.knative-serving resources:43 size:14.9kB empty:0 cached:43/43
+2024-06-05T10:59:19.946367846Z 2024-06-05T10:59:19.944644Z	info	ads	LDS: PUSH for node:activator-7b646b88cc-fkrcw.knative-serving resources:28 size:133.0kB
+2024-06-05T10:59:19.946367846Z 2024-06-05T10:59:19.945368Z	info	ads	RDS: PUSH for node:activator-7b646b88cc-fkrcw.knative-serving resources:11 size:19.9kB cached:11/11
+2024-06-05T10:59:19.946367846Z 2024-06-05T10:59:19.945466Z	info	ads	NDS: PUSH for node:activator-7b646b88cc-fkrcw.knative-serving resources:1 size:2.1kB
+2024-06-05T10:59:19.947034329Z 2024-06-05T10:59:19.946999Z	info	ads	LDS: PUSH for node:autoscaler-588cfb64fb-8csmw.knative-serving resources:28 size:127.3kB
+2024-06-05T10:59:19.948291154Z 2024-06-05T10:59:19.947652Z	info	ads	EDS: PUSH for node:istio-egressgateway-856fbd6dfc-t5xwv.istio-system resources:43 size:14.9kB empty:0 cached:43/43
+2024-06-05T10:59:19.949374326Z 2024-06-05T10:59:19.948588Z	info	ads	LDS: PUSH for node:istio-egressgateway-856fbd6dfc-t5xwv.istio-system resources:0 size:0B
+2024-06-05T10:59:19.949717333Z 2024-06-05T10:59:19.948702Z	info	ads	RDS: PUSH for node:autoscaler-588cfb64fb-8csmw.knative-serving resources:11 size:19.9kB cached:11/11
+2024-06-05T10:59:19.949833975Z 2024-06-05T10:59:19.949817Z	info	ads	LDS: PUSH for node:helloworld-go-00001-deployment-5bd78dbc5f-zslnq.user-ns resources:28 size:130.9kB
+2024-06-05T10:59:19.950447227Z 2024-06-05T10:59:19.950427Z	info	ads	NDS: PUSH for node:autoscaler-588cfb64fb-8csmw.knative-serving resources:1 size:2.1kB
+2024-06-05T10:59:19.950570900Z 2024-06-05T10:59:19.948935Z	info	ads	LDS: PUSH for node:activator-7b646b88cc-vntdm.knative-serving resources:28 size:133.0kB
+2024-06-05T10:59:19.951178632Z 2024-06-05T10:59:19.951158Z	info	ads	RDS: PUSH for node:helloworld-go-00001-deployment-5bd78dbc5f-zslnq.user-ns resources:11 size:19.8kB cached:11/11
+2024-06-05T10:59:19.951902276Z 2024-06-05T10:59:19.951875Z	info	ads	RDS: PUSH for node:activator-7b646b88cc-vntdm.knative-serving resources:11 size:19.9kB cached:11/11
+2024-06-05T10:59:19.952320585Z 2024-06-05T10:59:19.952303Z	info	ads	NDS: PUSH for node:helloworld-go-00001-deployment-5bd78dbc5f-zslnq.user-ns resources:1 size:2.1kB
+2024-06-05T10:59:19.952487238Z 2024-06-05T10:59:19.952466Z	info	ads	NDS: PUSH for node:activator-7b646b88cc-vntdm.knative-serving resources:1 size:2.1kB
+2024-06-05T10:59:20.164389275Z 2024-06-05T10:59:20.164311Z	info	ads	Push debounce stable[86] 1 for config ServiceEntry/user-ns/helloworld-go.user-ns.svc.cluster.local: 100.470259ms since last change, 100.469989ms since last push, full=true
+2024-06-05T10:59:20.165259252Z 2024-06-05T10:59:20.165235Z	info	ads	XDS: Pushing:2024-06-05T10:59:20Z/47 Services:19 ConnectedEndpoints:8 Version:2024-06-05T10:59:20Z/47
+2024-06-05T10:59:20.166060478Z 2024-06-05T10:59:20.166029Z	info	ads	CDS: PUSH for node:helloworld-go-00001-deployment-5bd78dbc5f-zslnq.user-ns resources:52 size:46.8kB cached:43/44
+2024-06-05T10:59:20.166313163Z 2024-06-05T10:59:20.166187Z	info	ads	CDS: PUSH for node:helloworld-go-00001-deployment-5bd78dbc5f-xlp2f.user-ns resources:52 size:46.8kB cached:44/44
+2024-06-05T10:59:20.166514877Z 2024-06-05T10:59:20.166494Z	info	ads	CDS: PUSH for node:autoscaler-588cfb64fb-8csmw.knative-serving resources:51 size:46.3kB cached:44/44
+2024-06-05T10:59:20.167769592Z 2024-06-05T10:59:20.167741Z	info	ads	LDS: PUSH for node:helloworld-go-00001-deployment-5bd78dbc5f-zslnq.user-ns resources:28 size:130.9kB
+2024-06-05T10:59:20.168334454Z 2024-06-05T10:59:20.168308Z	info	ads	RDS: PUSH for node:helloworld-go-00001-deployment-5bd78dbc5f-zslnq.user-ns resources:11 size:19.8kB cached:10/11
+2024-06-05T10:59:20.168427195Z 2024-06-05T10:59:20.168405Z	info	ads	NDS: PUSH for node:helloworld-go-00001-deployment-5bd78dbc5f-zslnq.user-ns resources:1 size:2.1kB
+2024-06-05T10:59:20.168446996Z 2024-06-05T10:59:20.168412Z	info	ads	LDS: PUSH for node:helloworld-go-00001-deployment-5bd78dbc5f-xlp2f.user-ns resources:28 size:130.9kB
+2024-06-05T10:59:20.168622449Z 2024-06-05T10:59:20.166032Z	info	ads	CDS: PUSH for node:activator-7b646b88cc-fkrcw.knative-serving resources:53 size:47.2kB cached:43/44
+2024-06-05T10:59:20.168669410Z 2024-06-05T10:59:20.168653Z	info	ads	LDS: PUSH for node:autoscaler-588cfb64fb-8csmw.knative-serving resources:28 size:127.3kB
+2024-06-05T10:59:20.170220011Z 2024-06-05T10:59:20.169395Z	info	ads	RDS: PUSH for node:helloworld-go-00001-deployment-5bd78dbc5f-xlp2f.user-ns resources:11 size:19.8kB cached:11/11
+2024-06-05T10:59:20.170783272Z 2024-06-05T10:59:20.169730Z	info	ads	CDS: PUSH for node:activator-7b646b88cc-vntdm.knative-serving resources:53 size:47.2kB cached:44/44
+2024-06-05T10:59:20.170866424Z 2024-06-05T10:59:20.170831Z	info	ads	CDS: PUSH for node:autoscaler-588cfb64fb-9nv45.knative-serving resources:51 size:46.3kB cached:44/44
+2024-06-05T10:59:20.178382204Z 2024-06-05T10:59:20.172295Z	info	ads	LDS: PUSH for node:autoscaler-588cfb64fb-9nv45.knative-serving resources:28 size:127.3kB
+2024-06-05T10:59:20.178382204Z 2024-06-05T10:59:20.172815Z	info	ads	RDS: PUSH for node:autoscaler-588cfb64fb-9nv45.knative-serving resources:11 size:19.9kB cached:11/11
+2024-06-05T10:59:20.178382204Z 2024-06-05T10:59:20.172881Z	info	ads	NDS: PUSH for node:autoscaler-588cfb64fb-9nv45.knative-serving resources:1 size:2.1kB
+2024-06-05T10:59:20.178382204Z 2024-06-05T10:59:20.170128Z	info	ads	LDS: PUSH for node:activator-7b646b88cc-fkrcw.knative-serving resources:28 size:133.0kB
+2024-06-05T10:59:20.178382204Z 2024-06-05T10:59:20.176673Z	info	ads	RDS: PUSH for node:activator-7b646b88cc-fkrcw.knative-serving resources:11 size:19.9kB cached:11/11
+2024-06-05T10:59:20.178382204Z 2024-06-05T10:59:20.176734Z	info	ads	NDS: PUSH for node:activator-7b646b88cc-fkrcw.knative-serving resources:1 size:2.1kB
+2024-06-05T10:59:20.178382204Z 2024-06-05T10:59:20.170157Z	info	ads	CDS: PUSH for node:istio-egressgateway-856fbd6dfc-t5xwv.istio-system resources:45 size:44.4kB cached:43/44
+2024-06-05T10:59:20.178382204Z 2024-06-05T10:59:20.176834Z	info	ads	LDS: PUSH for node:istio-egressgateway-856fbd6dfc-t5xwv.istio-system resources:0 size:0B
+2024-06-05T10:59:20.178382204Z 2024-06-05T10:59:20.170385Z	info	ads	CDS: PUSH for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:45 size:44.4kB cached:44/44
+2024-06-05T10:59:20.178382204Z 2024-06-05T10:59:20.177104Z	info	ads	LDS: PUSH for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:2 size:10.4kB
+2024-06-05T10:59:20.178382204Z 2024-06-05T10:59:20.177235Z	info	ads	RDS: PUSH for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:2 size:2.5kB cached:0/0
+2024-06-05T10:59:20.178634849Z 2024-06-05T10:59:20.178615Z	info	ads	LDS: PUSH for node:activator-7b646b88cc-vntdm.knative-serving resources:28 size:133.0kB
+2024-06-05T10:59:20.179225621Z 2024-06-05T10:59:20.179207Z	info	ads	RDS: PUSH for node:activator-7b646b88cc-vntdm.knative-serving resources:11 size:19.9kB cached:11/11
+2024-06-05T10:59:20.179539798Z 2024-06-05T10:59:20.179481Z	info	ads	NDS: PUSH for node:activator-7b646b88cc-vntdm.knative-serving resources:1 size:2.1kB
+2024-06-05T10:59:20.179830893Z 2024-06-05T10:59:20.170580Z	info	ads	RDS: PUSH for node:autoscaler-588cfb64fb-8csmw.knative-serving resources:11 size:19.9kB cached:10/11
+2024-06-05T10:59:20.180129389Z 2024-06-05T10:59:20.180067Z	info	ads	NDS: PUSH for node:autoscaler-588cfb64fb-8csmw.knative-serving resources:1 size:2.1kB
+2024-06-05T10:59:20.183654740Z 2024-06-05T10:59:20.183631Z	info	ads	NDS: PUSH for node:helloworld-go-00001-deployment-5bd78dbc5f-xlp2f.user-ns resources:1 size:2.1kB
+2024-06-05T10:59:22.855958815Z 2024-06-05T10:59:22.855875Z	info	ads	Push Status: {
+2024-06-05T10:59:22.855958815Z     "pilot_vservice_dup_domain": {
+2024-06-05T10:59:22.855958815Z         "helloworld-go.user-ns.svc.cluster.local:80": {
+2024-06-05T10:59:22.855958815Z             "proxy": "autoscaler-588cfb64fb-8csmw.knative-serving",
+2024-06-05T10:59:22.855958815Z             "message": "duplicate domain from service: helloworld-go.user-ns.svc.cluster.local:80"
+2024-06-05T10:59:22.855958815Z         }
+2024-06-05T10:59:22.855958815Z     }
+2024-06-05T10:59:22.855958815Z }
+2024-06-05T11:14:38.763068803Z 2024-06-05T11:14:38.763003Z	info	ads	ADS: "10.128.2.20:34726" istio-ingressgateway-7b6954747-qqhbw.istio-system-2 terminated
+2024-06-05T11:14:39.262182646Z 2024-06-05T11:14:39.262141Z	warn	Insecure first-party-jwt option used to validate token; use third-party-jwt
+2024-06-05T11:14:39.268922451Z 2024-06-05T11:14:39.268893Z	info	ads	ADS: new connection for node:istio-ingressgateway-7b6954747-qqhbw.istio-system-9
+2024-06-05T11:14:39.269216826Z 2024-06-05T11:14:39.269195Z	info	ads	CDS: PUSH request for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:45 size:44.4kB cached:44/44
+2024-06-05T11:14:39.269435011Z 2024-06-05T11:14:39.269413Z	info	ads	EDS: PUSH request for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:43 size:14.9kB empty:0 cached:43/43
+2024-06-05T11:14:39.269730907Z 2024-06-05T11:14:39.269710Z	info	ads	LDS: PUSH request for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:2 size:10.4kB
+2024-06-05T11:14:39.271567163Z 2024-06-05T11:14:39.271537Z	info	ads	SDS: PUSH request for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:1 size:3.0kB cached:1/1
+2024-06-05T11:14:39.271731197Z 2024-06-05T11:14:39.271711Z	info	ads	RDS: PUSH request for node:istio-ingressgateway-7b6954747-qqhbw.istio-system resources:2 size:2.5kB cached:0/0

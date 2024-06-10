@@ -1,0 +1,528 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    alm-examples: "[\n  {\n    \"apiVersion\": \"maistra.io/v2\",\n    \"kind\": \"ServiceMeshControlPlane\",\n
+      \   \"metadata\": {\n      \"name\": \"basic\",\n      \"namespace\": \"control-plane-namespace\"\n
+      \   },\n    \"spec\": {\n      \"version\": \"v2.5\",\n      \"tracing\": {\n
+      \       \"type\": \"Jaeger\",\n        \"sampling\": 10000\n      },\n      \"policy\":
+      {\n         \"type\": \"Istiod\"\n      },\n      \"telemetry\": {\n         \"type\":
+      \"Istiod\"\n      },\n      \"addons\": {\n        \"jaeger\": {\n          \"install\":
+      {\n            \"storage\": {\n              \"type\": \"Memory\"\n            }\n
+      \         }\n        },\n        \"prometheus\": {\n          \"enabled\": true\n
+      \       },\n        \"kiali\": {\n          \"enabled\": true\n        },\n
+      \       \"grafana\": {\n          \"enabled\": true\n        }\n      }\n    }\n
+      \ },\n  {\n    \"apiVersion\": \"maistra.io/v1\",\n    \"kind\": \"ServiceMeshMemberRoll\",\n
+      \   \"metadata\": {\n      \"name\": \"default\",\n      \"namespace\": \"control-plane-namespace\"\n
+      \   },\n    \"spec\": {\n      \"members\": [\n        \"your-project\",\n        \"another-of-your-projects\"
+      \n      ]\n    }\n  },\n  {\n    \"apiVersion\": \"maistra.io/v1\",\n    \"kind\":
+      \"ServiceMeshMember\",\n    \"metadata\": {\n      \"name\": \"default\",\n
+      \     \"namespace\": \"application-namespace\"\n    },\n    \"spec\": {\n      \"controlPlaneRef\":
+      {\n        \"name\": \"basic\",\n        \"namespace\": \"control-plane-namespace\"\n
+      \     }\n    }\n  }\n]"
+    capabilities: Seamless Upgrades
+    categories: OpenShift Optional, Integration & Delivery
+    certified: "false"
+    containerImage: registry.redhat.io/openshift-service-mesh/istio-rhel8-operator@sha256:d256a729a61e11dbba4d724612b23d4e5662dbb01f1567dec9fa13adab6287a5
+    createdAt: 2024-03-18T18:51:19CET
+    description: The OpenShift Service Mesh Operator enables you to install, configure,
+      and manage an instance of Red Hat OpenShift Service Mesh. OpenShift Service
+      Mesh is based on the open source Istio project.
+    features.operators.openshift.io/cnf: "false"
+    features.operators.openshift.io/cni: "true"
+    features.operators.openshift.io/csi: "false"
+    features.operators.openshift.io/disconnected: "true"
+    features.operators.openshift.io/fips-compliant: "true"
+    features.operators.openshift.io/proxy-aware: "true"
+    features.operators.openshift.io/tls-profiles: "false"
+    features.operators.openshift.io/token-auth-aws: "false"
+    features.operators.openshift.io/token-auth-azure: "false"
+    features.operators.openshift.io/token-auth-gcp: "false"
+    k8s.ovn.org/pod-networks: '{"default":{"ip_addresses":["10.128.2.15/23"],"mac_address":"0a:58:0a:80:02:0f","gateway_ips":["10.128.2.1"],"routes":[{"dest":"10.128.0.0/14","nextHop":"10.128.2.1"},{"dest":"172.30.0.0/16","nextHop":"10.128.2.1"},{"dest":"100.64.0.0/16","nextHop":"10.128.2.1"}],"ip_address":"10.128.2.15/23","gateway_ip":"10.128.2.1"}}'
+    k8s.v1.cni.cncf.io/network-status: |-
+      [{
+          "name": "ovn-kubernetes",
+          "interface": "eth0",
+          "ips": [
+              "10.128.2.15"
+          ],
+          "mac": "0a:58:0a:80:02:0f",
+          "default": true,
+          "dns": {}
+      }]
+    oauth-proxy.name: oauth-proxy
+    oauth-proxy.namespace: openshift
+    oauth-proxy.query: "true"
+    oauth-proxy.tag: v4.4
+    olm.operatorGroup: global-operators
+    olm.operatorNamespace: openshift-operators
+    olm.relatedImage.v2_2.cni: registry.redhat.io/openshift-service-mesh/istio-cni-rhel8@sha256:377c52c8907845335cd861ab73ae54a5e28399514254de8a1361f36f59d9387b
+    olm.relatedImage.v2_2.grafana: registry.redhat.io/openshift-service-mesh/grafana-rhel8@sha256:dff9810ee591b51ac25b93c9cd132d61771fa85888496f84a0da3d9d22831a79
+    olm.relatedImage.v2_2.pilot: registry.redhat.io/openshift-service-mesh/pilot-rhel8@sha256:2f141d3f9386d341addb9fc5aa91a39419af30cb0b53934b89e462aa73ca6143
+    olm.relatedImage.v2_2.prometheus: registry.redhat.io/openshift-service-mesh/prometheus-rhel8@sha256:02440db7428767eb5f4596219b633af0d015edb2b8e5ec85b147dcf8b6cff739
+    olm.relatedImage.v2_2.proxyv2: registry.redhat.io/openshift-service-mesh/proxyv2-rhel8@sha256:f12ac415a61985b7c8b1b1afa91dd52d35defbdbd8facbe5d35d423c62ca1575
+    olm.relatedImage.v2_2.rls: registry.redhat.io/openshift-service-mesh/ratelimit-rhel8@sha256:c098892b78720699a5465696c337dcc887d0aa0de35bfd8f0c03e7e8df6d5379
+    olm.relatedImage.v2_2.wasm-cacher: registry.redhat.io/openshift-service-mesh/pilot-rhel8@sha256:2f141d3f9386d341addb9fc5aa91a39419af30cb0b53934b89e462aa73ca6143
+    olm.relatedImage.v2_3.cni: registry.redhat.io/openshift-service-mesh/istio-cni-rhel8@sha256:d7576d94c50a1f18d5162d45ba9a628303211f64862c1507ad6d15e6bb830c01
+    olm.relatedImage.v2_3.grafana: registry.redhat.io/openshift-service-mesh/grafana-rhel8@sha256:9e30441691add3e43b9034b92fbc3163c2d03230503ced4a169cfe2ff9ad6d5c
+    olm.relatedImage.v2_3.pilot: registry.redhat.io/openshift-service-mesh/pilot-rhel8@sha256:a46c6e3553f38f3ef1ffec6e5f774e7038066ce7db11dc31cdf74bbee25baf6c
+    olm.relatedImage.v2_3.prometheus: registry.redhat.io/openshift-service-mesh/prometheus-rhel8@sha256:b7b9c1481e6a7f59ac31952b11eb01ee0f27047acd13dc673dc969341992bbb6
+    olm.relatedImage.v2_3.proxyv2: registry.redhat.io/openshift-service-mesh/proxyv2-rhel8@sha256:891cac1c03beb2ec60981ed0001add85f0084cda538562e0accc48893494de85
+    olm.relatedImage.v2_3.rls: registry.redhat.io/openshift-service-mesh/ratelimit-rhel8@sha256:666bfe25e4583efa71fa14e587365e63ba9baeb4359f691eb731725a4ad1b5a8
+    olm.relatedImage.v2_3.wasm-cacher: registry.redhat.io/openshift-service-mesh/pilot-rhel8@sha256:a46c6e3553f38f3ef1ffec6e5f774e7038066ce7db11dc31cdf74bbee25baf6c
+    olm.relatedImage.v2_4.cni: registry.redhat.io/openshift-service-mesh/istio-cni-rhel8@sha256:8e36644dc0f6fe5018b6643cca057ded23aa9b8a026280b864f5f1cc1fa0f259
+    olm.relatedImage.v2_4.grafana: registry.redhat.io/openshift-service-mesh/grafana-rhel8@sha256:2474d99af3378c05b26d298cd048895f87d78f6f7627f8f0b391eed299d1b649
+    olm.relatedImage.v2_4.pilot: registry.redhat.io/openshift-service-mesh/pilot-rhel8@sha256:1a8882f482044b38e6d75e322db6d6b80d21525f56fdd08f7f2ee9a58897e742
+    olm.relatedImage.v2_4.prometheus: registry.redhat.io/openshift4/ose-prometheus@sha256:f5654f60b945c6faa2f9d97e048521ae272434aad395db45f2b2f14dc5cece0f
+    olm.relatedImage.v2_4.prometheus-config-reloader: registry.redhat.io/openshift4/ose-prometheus-config-reloader@sha256:c0e4bf1a74d5db4dda67d02a4a7069e898d6a6bf91862846ab96c83b84695fa6
+    olm.relatedImage.v2_4.proxyv2: registry.redhat.io/openshift-service-mesh/proxyv2-rhel8@sha256:186619a888331a58729e27e67fbcee236875c1998b6714565238db53e9a1f8bd
+    olm.relatedImage.v2_4.rls: registry.redhat.io/openshift-service-mesh/ratelimit-rhel8@sha256:69232a0efae0517a33513582c8b088f6142314316a202b46de869df448494454
+    olm.relatedImage.v2_5.cni: registry.redhat.io/openshift-service-mesh/istio-cni-rhel8@sha256:205a39b2b48bff0d705c1879da7a2969c201eb319d38b2235ac1caff5bed4360
+    olm.relatedImage.v2_5.grafana: registry.redhat.io/openshift-service-mesh/grafana-rhel8@sha256:b2576fb445714ff8cd38f08967e7ff2af2b7431300be5281f73e5918fbb8acbb
+    olm.relatedImage.v2_5.pilot: registry.redhat.io/openshift-service-mesh/pilot-rhel8@sha256:f12207461e6613649d6c62eea7bdf00829715249068796d59ba2fe99c19948ae
+    olm.relatedImage.v2_5.prometheus: registry.redhat.io/openshift4/ose-prometheus@sha256:f5654f60b945c6faa2f9d97e048521ae272434aad395db45f2b2f14dc5cece0f
+    olm.relatedImage.v2_5.prometheus-config-reloader: registry.redhat.io/openshift4/ose-prometheus-config-reloader@sha256:c0e4bf1a74d5db4dda67d02a4a7069e898d6a6bf91862846ab96c83b84695fa6
+    olm.relatedImage.v2_5.proxyv2: registry.redhat.io/openshift-service-mesh/proxyv2-rhel8@sha256:7c413c4ec671f301ea71b6ad59d4673929f2d110e4e427beeb487c74b393e083
+    olm.relatedImage.v2_5.rls: registry.redhat.io/openshift-service-mesh/ratelimit-rhel8@sha256:89d092eb5d4a0452a6830d14e4972e33235e83ca8bc14ecacf47d7391bab3b8a
+    olm.skipRange: '>=1.0.2 <2.5.1-0'
+    olm.targetNamespaces: ""
+    openshift.io/scc: restricted-v2
+    operatorframework.io/properties: '{"properties":[{"type":"olm.gvk","value":{"group":"maistra.io","kind":"ServiceMeshControlPlane","version":"v1"}},{"type":"olm.gvk","value":{"group":"maistra.io","kind":"ServiceMeshControlPlane","version":"v2"}},{"type":"olm.gvk","value":{"group":"maistra.io","kind":"ServiceMeshMember","version":"v1"}},{"type":"olm.gvk","value":{"group":"maistra.io","kind":"ServiceMeshMemberRoll","version":"v1"}},{"type":"olm.package","value":{"packageName":"servicemeshoperator","version":"2.5.1-0"}}]}'
+    operators.openshift.io/infrastructure-features: '["Disconnected","fips"]'
+    operators.openshift.io/valid-subscription: '["OpenShift Container Platform", "OpenShift
+      Platform Plus"]'
+    repository: https://github.com/maistra/istio-operator
+    seccomp.security.alpha.kubernetes.io/pod: runtime/default
+    support: Red Hat, Inc.
+  creationTimestamp: "2024-06-05T10:44:58Z"
+  generateName: istio-operator-58c556c9df-
+  labels:
+    name: istio-operator
+    pod-template-hash: 58c556c9df
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.ovn.org/pod-networks: {}
+    manager: ip-10-0-91-247
+    operation: Update
+    subresource: status
+    time: "2024-06-05T10:44:58Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:alm-examples: {}
+          f:capabilities: {}
+          f:categories: {}
+          f:certified: {}
+          f:containerImage: {}
+          f:createdAt: {}
+          f:description: {}
+          f:features.operators.openshift.io/cnf: {}
+          f:features.operators.openshift.io/cni: {}
+          f:features.operators.openshift.io/csi: {}
+          f:features.operators.openshift.io/disconnected: {}
+          f:features.operators.openshift.io/fips-compliant: {}
+          f:features.operators.openshift.io/proxy-aware: {}
+          f:features.operators.openshift.io/tls-profiles: {}
+          f:features.operators.openshift.io/token-auth-aws: {}
+          f:features.operators.openshift.io/token-auth-azure: {}
+          f:features.operators.openshift.io/token-auth-gcp: {}
+          f:oauth-proxy.name: {}
+          f:oauth-proxy.namespace: {}
+          f:oauth-proxy.query: {}
+          f:oauth-proxy.tag: {}
+          f:olm.operatorGroup: {}
+          f:olm.operatorNamespace: {}
+          f:olm.relatedImage.v2_2.cni: {}
+          f:olm.relatedImage.v2_2.grafana: {}
+          f:olm.relatedImage.v2_2.pilot: {}
+          f:olm.relatedImage.v2_2.prometheus: {}
+          f:olm.relatedImage.v2_2.proxyv2: {}
+          f:olm.relatedImage.v2_2.rls: {}
+          f:olm.relatedImage.v2_2.wasm-cacher: {}
+          f:olm.relatedImage.v2_3.cni: {}
+          f:olm.relatedImage.v2_3.grafana: {}
+          f:olm.relatedImage.v2_3.pilot: {}
+          f:olm.relatedImage.v2_3.prometheus: {}
+          f:olm.relatedImage.v2_3.proxyv2: {}
+          f:olm.relatedImage.v2_3.rls: {}
+          f:olm.relatedImage.v2_3.wasm-cacher: {}
+          f:olm.relatedImage.v2_4.cni: {}
+          f:olm.relatedImage.v2_4.grafana: {}
+          f:olm.relatedImage.v2_4.pilot: {}
+          f:olm.relatedImage.v2_4.prometheus: {}
+          f:olm.relatedImage.v2_4.prometheus-config-reloader: {}
+          f:olm.relatedImage.v2_4.proxyv2: {}
+          f:olm.relatedImage.v2_4.rls: {}
+          f:olm.relatedImage.v2_5.cni: {}
+          f:olm.relatedImage.v2_5.grafana: {}
+          f:olm.relatedImage.v2_5.pilot: {}
+          f:olm.relatedImage.v2_5.prometheus: {}
+          f:olm.relatedImage.v2_5.prometheus-config-reloader: {}
+          f:olm.relatedImage.v2_5.proxyv2: {}
+          f:olm.relatedImage.v2_5.rls: {}
+          f:olm.skipRange: {}
+          f:olm.targetNamespaces: {}
+          f:operatorframework.io/properties: {}
+          f:operators.openshift.io/infrastructure-features: {}
+          f:operators.openshift.io/valid-subscription: {}
+          f:repository: {}
+          f:support: {}
+        f:generateName: {}
+        f:labels:
+          .: {}
+          f:name: {}
+          f:pod-template-hash: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"6b5db3a3-4857-456d-85fc-f1696fcf6e18"}: {}
+      f:spec:
+        f:containers:
+          k:{"name":"istio-operator"}:
+            .: {}
+            f:command: {}
+            f:env:
+              .: {}
+              k:{"name":"OPERATOR_CONDITION_NAME"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"OPERATOR_NAME"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"POD_NAME"}:
+                .: {}
+                f:name: {}
+                f:valueFrom:
+                  .: {}
+                  f:fieldRef: {}
+              k:{"name":"WATCH_NAMESPACE"}:
+                .: {}
+                f:name: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:name: {}
+            f:ports:
+              .: {}
+              k:{"containerPort":11200,"protocol":"TCP"}:
+                .: {}
+                f:containerPort: {}
+                f:name: {}
+                f:protocol: {}
+              k:{"containerPort":11999,"protocol":"TCP"}:
+                .: {}
+                f:containerPort: {}
+                f:name: {}
+                f:protocol: {}
+              k:{"containerPort":60000,"protocol":"TCP"}:
+                .: {}
+                f:containerPort: {}
+                f:name: {}
+                f:protocol: {}
+            f:readinessProbe:
+              .: {}
+              f:failureThreshold: {}
+              f:httpGet:
+                .: {}
+                f:path: {}
+                f:port: {}
+                f:scheme: {}
+              f:periodSeconds: {}
+              f:successThreshold: {}
+              f:timeoutSeconds: {}
+            f:resources: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/etc/operator/olm"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+                f:readOnly: {}
+              k:{"mountPath":"/tmp/k8s-webhook-server/serving-certs"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+                f:readOnly: {}
+              k:{"mountPath":"/usr/local/share/istio-operator/templates/"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+                f:readOnly: {}
+        f:dnsPolicy: {}
+        f:enableServiceLinks: {}
+        f:restartPolicy: {}
+        f:schedulerName: {}
+        f:securityContext: {}
+        f:serviceAccount: {}
+        f:serviceAccountName: {}
+        f:terminationGracePeriodSeconds: {}
+        f:volumes:
+          .: {}
+          k:{"name":"operator-olm-config"}:
+            .: {}
+            f:downwardAPI:
+              .: {}
+              f:defaultMode: {}
+              f:items: {}
+            f:name: {}
+          k:{"name":"smcp-templates"}:
+            .: {}
+            f:configMap:
+              .: {}
+              f:defaultMode: {}
+              f:name: {}
+              f:optional: {}
+            f:name: {}
+          k:{"name":"webhook-tls-volume"}:
+            .: {}
+            f:name: {}
+            f:secret:
+              .: {}
+              f:defaultMode: {}
+              f:optional: {}
+              f:secretName: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2024-06-05T10:44:58Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.v1.cni.cncf.io/network-status: {}
+    manager: multus-daemon
+    operation: Update
+    subresource: status
+    time: "2024-06-05T10:44:58Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"ContainersReady"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Initialized"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Ready"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+        f:containerStatuses: {}
+        f:hostIP: {}
+        f:phase: {}
+        f:podIP: {}
+        f:podIPs:
+          .: {}
+          k:{"ip":"10.128.2.15"}:
+            .: {}
+            f:ip: {}
+        f:startTime: {}
+    manager: kubelet
+    operation: Update
+    subresource: status
+    time: "2024-06-05T10:45:28Z"
+  name: istio-operator-58c556c9df-wrl9h
+  namespace: openshift-operators
+  ownerReferences:
+  - apiVersion: apps/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: ReplicaSet
+    name: istio-operator-58c556c9df
+    uid: 6b5db3a3-4857-456d-85fc-f1696fcf6e18
+  resourceVersion: "34603"
+  uid: 460bab17-08d7-4c5e-8f19-55139b8db362
+spec:
+  containers:
+  - command:
+    - istio-operator
+    - --config
+    - /etc/operator/olm/config.properties
+    env:
+    - name: WATCH_NAMESPACE
+    - name: POD_NAME
+      valueFrom:
+        fieldRef:
+          apiVersion: v1
+          fieldPath: metadata.name
+    - name: OPERATOR_NAME
+      value: istio-operator
+    - name: OPERATOR_CONDITION_NAME
+      value: servicemeshoperator.v2.5.1
+    image: registry.redhat.io/openshift-service-mesh/istio-rhel8-operator@sha256:d256a729a61e11dbba4d724612b23d4e5662dbb01f1567dec9fa13adab6287a5
+    imagePullPolicy: Always
+    name: istio-operator
+    ports:
+    - containerPort: 11999
+      name: validation
+      protocol: TCP
+    - containerPort: 11200
+      name: probes
+      protocol: TCP
+    - containerPort: 60000
+      name: metrics
+      protocol: TCP
+    readinessProbe:
+      failureThreshold: 3
+      httpGet:
+        path: /readyz
+        port: 11200
+        scheme: HTTP
+      periodSeconds: 10
+      successThreshold: 1
+      timeoutSeconds: 1
+    resources: {}
+    securityContext:
+      allowPrivilegeEscalation: false
+      capabilities:
+        drop:
+        - ALL
+      runAsNonRoot: true
+      runAsUser: 1000420000
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /etc/operator/olm
+      name: operator-olm-config
+      readOnly: true
+    - mountPath: /tmp/k8s-webhook-server/serving-certs
+      name: webhook-tls-volume
+      readOnly: true
+    - mountPath: /usr/local/share/istio-operator/templates/
+      name: smcp-templates
+      readOnly: true
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-c8rc4
+      readOnly: true
+  dnsPolicy: ClusterFirst
+  enableServiceLinks: true
+  imagePullSecrets:
+  - name: istio-operator-dockercfg-m4f48
+  nodeName: ip-10-0-91-247.ec2.internal
+  preemptionPolicy: PreemptLowerPriority
+  priority: 0
+  restartPolicy: Always
+  schedulerName: default-scheduler
+  securityContext:
+    fsGroup: 1000420000
+    seLinuxOptions:
+      level: s0:c21,c0
+    seccompProfile:
+      type: RuntimeDefault
+  serviceAccount: istio-operator
+  serviceAccountName: istio-operator
+  terminationGracePeriodSeconds: 30
+  tolerations:
+  - effect: NoExecute
+    key: node.kubernetes.io/not-ready
+    operator: Exists
+    tolerationSeconds: 300
+  - effect: NoExecute
+    key: node.kubernetes.io/unreachable
+    operator: Exists
+    tolerationSeconds: 300
+  volumes:
+  - downwardAPI:
+      defaultMode: 420
+      items:
+      - fieldRef:
+          apiVersion: v1
+          fieldPath: metadata.annotations
+        path: config.properties
+    name: operator-olm-config
+  - name: webhook-tls-volume
+    secret:
+      defaultMode: 420
+      optional: true
+      secretName: maistra-operator-serving-cert
+  - configMap:
+      defaultMode: 420
+      name: smcp-templates
+      optional: true
+    name: smcp-templates
+  - name: kube-api-access-c8rc4
+    projected:
+      defaultMode: 420
+      sources:
+      - serviceAccountToken:
+          expirationSeconds: 3607
+          path: token
+      - configMap:
+          items:
+          - key: ca.crt
+            path: ca.crt
+          name: kube-root-ca.crt
+      - downwardAPI:
+          items:
+          - fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.namespace
+            path: namespace
+      - configMap:
+          items:
+          - key: service-ca.crt
+            path: service-ca.crt
+          name: openshift-service-ca.crt
+status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2024-06-05T10:44:58Z"
+    status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2024-06-05T10:45:28Z"
+    status: "True"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2024-06-05T10:45:28Z"
+    status: "True"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2024-06-05T10:44:58Z"
+    status: "True"
+    type: PodScheduled
+  containerStatuses:
+  - containerID: cri-o://4cbf7d7c7b4eaded3e6403df519e1590358e0b36f81ab20a475373fd42841dbe
+    image: registry.redhat.io/openshift-service-mesh/istio-rhel8-operator@sha256:d256a729a61e11dbba4d724612b23d4e5662dbb01f1567dec9fa13adab6287a5
+    imageID: registry.redhat.io/openshift-service-mesh/istio-rhel8-operator@sha256:2cb94a0220ff8d69c17f2eee8db3c6f045776d63de4dc80e1a4ab31190d5c04f
+    lastState:
+      terminated:
+        containerID: cri-o://902a79f01accecc8343e2d96bc9b5f6771e0c1825b665ce39f79dd1a0b33dd7d
+        exitCode: 0
+        finishedAt: "2024-06-05T10:45:08Z"
+        reason: Completed
+        startedAt: "2024-06-05T10:45:05Z"
+    name: istio-operator
+    ready: true
+    restartCount: 1
+    started: true
+    state:
+      running:
+        startedAt: "2024-06-05T10:45:15Z"
+  hostIP: 10.0.91.247
+  phase: Running
+  podIP: 10.128.2.15
+  podIPs:
+  - ip: 10.128.2.15
+  qosClass: BestEffort
+  startTime: "2024-06-05T10:44:58Z"

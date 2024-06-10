@@ -1,0 +1,565 @@
+---
+apiVersion: apps/v1
+items:
+- apiVersion: apps/v1
+  kind: ReplicaSet
+  metadata:
+    annotations:
+      autoscaling.knative.dev/minScale: "2"
+      autoscaling.knative.dev/target: "10"
+      autoscaling.knative.dev/targetBurstCapacity: "0"
+      deployment.kubernetes.io/desired-replicas: "2"
+      deployment.kubernetes.io/max-replicas: "3"
+      deployment.kubernetes.io/revision: "1"
+      queue.sidecar.serving.knative.dev/resourcePercentage: "0.3"
+      serving.knative.dev/creator: system:admin
+      sidecar.istio.io/inject: "true"
+      sidecar.istio.io/rewriteAppHTTPProbers: "true"
+    creationTimestamp: "2024-06-05T10:59:13Z"
+    generation: 2
+    labels:
+      app: helloworld-go
+      pod-template-hash: 5bd78dbc5f
+      service.istio.io/canonical-name: helloworld-go
+      service.istio.io/canonical-revision: helloworld-go-00001
+      serving.knative.dev/configuration: helloworld-go
+      serving.knative.dev/configurationGeneration: "1"
+      serving.knative.dev/configurationUID: 6402ac10-ce56-4a74-a207-9167495600f6
+      serving.knative.dev/revision: helloworld-go-00001
+      serving.knative.dev/revisionUID: fe3dcdf0-fd1b-42cc-b546-73a365a8bae7
+      serving.knative.dev/service: helloworld-go
+      serving.knative.dev/serviceUID: d30abd09-975d-4327-a440-ef03bb5a8d6e
+    managedFields:
+    - apiVersion: apps/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:autoscaling.knative.dev/minScale: {}
+            f:autoscaling.knative.dev/target: {}
+            f:autoscaling.knative.dev/targetBurstCapacity: {}
+            f:deployment.kubernetes.io/desired-replicas: {}
+            f:deployment.kubernetes.io/max-replicas: {}
+            f:deployment.kubernetes.io/revision: {}
+            f:queue.sidecar.serving.knative.dev/resourcePercentage: {}
+            f:serving.knative.dev/creator: {}
+            f:sidecar.istio.io/inject: {}
+            f:sidecar.istio.io/rewriteAppHTTPProbers: {}
+          f:labels:
+            .: {}
+            f:app: {}
+            f:pod-template-hash: {}
+            f:service.istio.io/canonical-name: {}
+            f:service.istio.io/canonical-revision: {}
+            f:serving.knative.dev/configuration: {}
+            f:serving.knative.dev/configurationGeneration: {}
+            f:serving.knative.dev/configurationUID: {}
+            f:serving.knative.dev/revision: {}
+            f:serving.knative.dev/revisionUID: {}
+            f:serving.knative.dev/service: {}
+            f:serving.knative.dev/serviceUID: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"5b46017e-6fc6-4097-9b3e-6fe546e13c14"}: {}
+        f:spec:
+          f:replicas: {}
+          f:selector: {}
+          f:template:
+            f:metadata:
+              f:annotations:
+                .: {}
+                f:autoscaling.knative.dev/minScale: {}
+                f:autoscaling.knative.dev/target: {}
+                f:autoscaling.knative.dev/targetBurstCapacity: {}
+                f:queue.sidecar.serving.knative.dev/resourcePercentage: {}
+                f:serving.knative.dev/creator: {}
+                f:sidecar.istio.io/inject: {}
+                f:sidecar.istio.io/rewriteAppHTTPProbers: {}
+              f:labels:
+                .: {}
+                f:app: {}
+                f:pod-template-hash: {}
+                f:service.istio.io/canonical-name: {}
+                f:service.istio.io/canonical-revision: {}
+                f:serving.knative.dev/configuration: {}
+                f:serving.knative.dev/configurationGeneration: {}
+                f:serving.knative.dev/configurationUID: {}
+                f:serving.knative.dev/revision: {}
+                f:serving.knative.dev/revisionUID: {}
+                f:serving.knative.dev/service: {}
+                f:serving.knative.dev/serviceUID: {}
+            f:spec:
+              f:containers:
+                k:{"name":"queue-proxy"}:
+                  .: {}
+                  f:env:
+                    .: {}
+                    k:{"name":"CONTAINER_CONCURRENCY"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"ENABLE_HTTP_FULL_DUPLEX"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"ENABLE_HTTP2_AUTO_DETECTION"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"ENABLE_PROFILING"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"HOST_IP"}:
+                      .: {}
+                      f:name: {}
+                      f:valueFrom:
+                        .: {}
+                        f:fieldRef: {}
+                    k:{"name":"METRICS_COLLECTOR_ADDRESS"}:
+                      .: {}
+                      f:name: {}
+                    k:{"name":"METRICS_DOMAIN"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"QUEUE_SERVING_PORT"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"QUEUE_SERVING_TLS_PORT"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"REVISION_IDLE_TIMEOUT_SECONDS"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"REVISION_RESPONSE_START_TIMEOUT_SECONDS"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"REVISION_TIMEOUT_SECONDS"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"ROOT_CA"}:
+                      .: {}
+                      f:name: {}
+                    k:{"name":"SERVING_CONFIGURATION"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"SERVING_ENABLE_PROBE_REQUEST_LOG"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"SERVING_ENABLE_REQUEST_LOG"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"SERVING_LOGGING_CONFIG"}:
+                      .: {}
+                      f:name: {}
+                    k:{"name":"SERVING_LOGGING_LEVEL"}:
+                      .: {}
+                      f:name: {}
+                    k:{"name":"SERVING_NAMESPACE"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"SERVING_POD"}:
+                      .: {}
+                      f:name: {}
+                      f:valueFrom:
+                        .: {}
+                        f:fieldRef: {}
+                    k:{"name":"SERVING_POD_IP"}:
+                      .: {}
+                      f:name: {}
+                      f:valueFrom:
+                        .: {}
+                        f:fieldRef: {}
+                    k:{"name":"SERVING_READINESS_PROBE"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"SERVING_REQUEST_LOG_TEMPLATE"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"SERVING_REQUEST_METRICS_BACKEND"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"SERVING_REQUEST_METRICS_REPORTING_PERIOD_SECONDS"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"SERVING_REVISION"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"SERVING_SERVICE"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"SYSTEM_NAMESPACE"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"TRACING_CONFIG_BACKEND"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"TRACING_CONFIG_DEBUG"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"TRACING_CONFIG_SAMPLE_RATE"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"TRACING_CONFIG_ZIPKIN_ENDPOINT"}:
+                      .: {}
+                      f:name: {}
+                    k:{"name":"USER_PORT"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                  f:image: {}
+                  f:imagePullPolicy: {}
+                  f:name: {}
+                  f:ports:
+                    .: {}
+                    k:{"containerPort":8012,"protocol":"TCP"}:
+                      .: {}
+                      f:containerPort: {}
+                      f:name: {}
+                      f:protocol: {}
+                    k:{"containerPort":8022,"protocol":"TCP"}:
+                      .: {}
+                      f:containerPort: {}
+                      f:name: {}
+                      f:protocol: {}
+                    k:{"containerPort":8112,"protocol":"TCP"}:
+                      .: {}
+                      f:containerPort: {}
+                      f:name: {}
+                      f:protocol: {}
+                    k:{"containerPort":9090,"protocol":"TCP"}:
+                      .: {}
+                      f:containerPort: {}
+                      f:name: {}
+                      f:protocol: {}
+                    k:{"containerPort":9091,"protocol":"TCP"}:
+                      .: {}
+                      f:containerPort: {}
+                      f:name: {}
+                      f:protocol: {}
+                  f:readinessProbe:
+                    .: {}
+                    f:failureThreshold: {}
+                    f:httpGet:
+                      .: {}
+                      f:httpHeaders: {}
+                      f:path: {}
+                      f:port: {}
+                      f:scheme: {}
+                    f:periodSeconds: {}
+                    f:successThreshold: {}
+                    f:timeoutSeconds: {}
+                  f:resources:
+                    .: {}
+                    f:requests:
+                      .: {}
+                      f:cpu: {}
+                  f:securityContext:
+                    .: {}
+                    f:allowPrivilegeEscalation: {}
+                    f:capabilities:
+                      .: {}
+                      f:drop: {}
+                    f:readOnlyRootFilesystem: {}
+                    f:runAsNonRoot: {}
+                  f:terminationMessagePath: {}
+                  f:terminationMessagePolicy: {}
+                k:{"name":"user-container"}:
+                  .: {}
+                  f:env:
+                    .: {}
+                    k:{"name":"K_CONFIGURATION"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"K_REVISION"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"K_SERVICE"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"PORT"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"TARGET"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                  f:image: {}
+                  f:imagePullPolicy: {}
+                  f:lifecycle:
+                    .: {}
+                    f:preStop:
+                      .: {}
+                      f:httpGet:
+                        .: {}
+                        f:path: {}
+                        f:port: {}
+                        f:scheme: {}
+                  f:name: {}
+                  f:ports:
+                    .: {}
+                    k:{"containerPort":8080,"protocol":"TCP"}:
+                      .: {}
+                      f:containerPort: {}
+                      f:name: {}
+                      f:protocol: {}
+                  f:resources:
+                    .: {}
+                    f:requests:
+                      .: {}
+                      f:cpu: {}
+                  f:terminationMessagePath: {}
+                  f:terminationMessagePolicy: {}
+              f:dnsPolicy: {}
+              f:enableServiceLinks: {}
+              f:restartPolicy: {}
+              f:schedulerName: {}
+              f:securityContext: {}
+              f:terminationGracePeriodSeconds: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2024-06-05T10:59:13Z"
+    - apiVersion: apps/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          f:availableReplicas: {}
+          f:fullyLabeledReplicas: {}
+          f:observedGeneration: {}
+          f:readyReplicas: {}
+          f:replicas: {}
+      manager: kube-controller-manager
+      operation: Update
+      subresource: status
+      time: "2024-06-05T10:59:19Z"
+    name: helloworld-go-00001-deployment-5bd78dbc5f
+    namespace: user-ns
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Deployment
+      name: helloworld-go-00001-deployment
+      uid: 5b46017e-6fc6-4097-9b3e-6fe546e13c14
+    resourceVersion: "44018"
+    uid: eb5f4563-3661-439f-8cf2-d2a23176f529
+  spec:
+    replicas: 2
+    selector:
+      matchLabels:
+        pod-template-hash: 5bd78dbc5f
+        serving.knative.dev/revisionUID: fe3dcdf0-fd1b-42cc-b546-73a365a8bae7
+    template:
+      metadata:
+        annotations:
+          autoscaling.knative.dev/minScale: "2"
+          autoscaling.knative.dev/target: "10"
+          autoscaling.knative.dev/targetBurstCapacity: "0"
+          queue.sidecar.serving.knative.dev/resourcePercentage: "0.3"
+          serving.knative.dev/creator: system:admin
+          sidecar.istio.io/inject: "true"
+          sidecar.istio.io/rewriteAppHTTPProbers: "true"
+        creationTimestamp: null
+        labels:
+          app: helloworld-go
+          pod-template-hash: 5bd78dbc5f
+          service.istio.io/canonical-name: helloworld-go
+          service.istio.io/canonical-revision: helloworld-go-00001
+          serving.knative.dev/configuration: helloworld-go
+          serving.knative.dev/configurationGeneration: "1"
+          serving.knative.dev/configurationUID: 6402ac10-ce56-4a74-a207-9167495600f6
+          serving.knative.dev/revision: helloworld-go-00001
+          serving.knative.dev/revisionUID: fe3dcdf0-fd1b-42cc-b546-73a365a8bae7
+          serving.knative.dev/service: helloworld-go
+          serving.knative.dev/serviceUID: d30abd09-975d-4327-a440-ef03bb5a8d6e
+      spec:
+        containers:
+        - env:
+          - name: TARGET
+            value: Go Sample v1
+          - name: PORT
+            value: "8080"
+          - name: K_REVISION
+            value: helloworld-go-00001
+          - name: K_CONFIGURATION
+            value: helloworld-go
+          - name: K_SERVICE
+            value: helloworld-go
+          image: index.docker.io/skonto/helloworld-go@sha256:dd20d7659c16bdc58c09740a543ef3c36b7c04742a2b6b280a30c2a76dcf6c09
+          imagePullPolicy: Always
+          lifecycle:
+            preStop:
+              httpGet:
+                path: /wait-for-drain
+                port: 8022
+                scheme: HTTP
+          name: user-container
+          ports:
+          - containerPort: 8080
+            name: user-port
+            protocol: TCP
+          resources:
+            requests:
+              cpu: 200m
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: FallbackToLogsOnError
+        - env:
+          - name: SERVING_NAMESPACE
+            value: user-ns
+          - name: SERVING_SERVICE
+            value: helloworld-go
+          - name: SERVING_CONFIGURATION
+            value: helloworld-go
+          - name: SERVING_REVISION
+            value: helloworld-go-00001
+          - name: QUEUE_SERVING_PORT
+            value: "8012"
+          - name: QUEUE_SERVING_TLS_PORT
+            value: "8112"
+          - name: CONTAINER_CONCURRENCY
+            value: "0"
+          - name: REVISION_TIMEOUT_SECONDS
+            value: "300"
+          - name: REVISION_RESPONSE_START_TIMEOUT_SECONDS
+            value: "0"
+          - name: REVISION_IDLE_TIMEOUT_SECONDS
+            value: "0"
+          - name: SERVING_POD
+            valueFrom:
+              fieldRef:
+                apiVersion: v1
+                fieldPath: metadata.name
+          - name: SERVING_POD_IP
+            valueFrom:
+              fieldRef:
+                apiVersion: v1
+                fieldPath: status.podIP
+          - name: SERVING_LOGGING_CONFIG
+          - name: SERVING_LOGGING_LEVEL
+          - name: SERVING_REQUEST_LOG_TEMPLATE
+            value: '{"httpRequest": {"requestMethod": "{{.Request.Method}}", "requestUrl":
+              "{{js .Request.RequestURI}}", "requestSize": "{{.Request.ContentLength}}",
+              "status": {{.Response.Code}}, "responseSize": "{{.Response.Size}}",
+              "userAgent": "{{js .Request.UserAgent}}", "remoteIp": "{{js .Request.RemoteAddr}}",
+              "serverIp": "{{.Revision.PodIP}}", "referer": "{{js .Request.Referer}}",
+              "latency": "{{.Response.Latency}}s", "protocol": "{{.Request.Proto}}"},
+              "traceId": "{{index .Request.Header "X-B3-Traceid"}}"}'
+          - name: SERVING_ENABLE_REQUEST_LOG
+            value: "false"
+          - name: SERVING_REQUEST_METRICS_BACKEND
+            value: prometheus
+          - name: SERVING_REQUEST_METRICS_REPORTING_PERIOD_SECONDS
+            value: "5"
+          - name: TRACING_CONFIG_BACKEND
+            value: none
+          - name: TRACING_CONFIG_ZIPKIN_ENDPOINT
+          - name: TRACING_CONFIG_DEBUG
+            value: "false"
+          - name: TRACING_CONFIG_SAMPLE_RATE
+            value: "0.1"
+          - name: USER_PORT
+            value: "8080"
+          - name: SYSTEM_NAMESPACE
+            value: knative-serving
+          - name: METRICS_DOMAIN
+            value: knative.dev/internal/serving
+          - name: SERVING_READINESS_PROBE
+            value: '{"tcpSocket":{"port":8080,"host":"127.0.0.1"},"successThreshold":1}'
+          - name: ENABLE_PROFILING
+            value: "false"
+          - name: SERVING_ENABLE_PROBE_REQUEST_LOG
+            value: "false"
+          - name: METRICS_COLLECTOR_ADDRESS
+          - name: HOST_IP
+            valueFrom:
+              fieldRef:
+                apiVersion: v1
+                fieldPath: status.hostIP
+          - name: ENABLE_HTTP2_AUTO_DETECTION
+            value: "false"
+          - name: ENABLE_HTTP_FULL_DUPLEX
+            value: "false"
+          - name: ROOT_CA
+          image: registry.redhat.io/openshift-serverless-1/serving-queue-rhel8@sha256:a0d0c8517ff470e3afac4c90df5e6541d974507feb50eac9719f87fcf78bba96
+          imagePullPolicy: IfNotPresent
+          name: queue-proxy
+          ports:
+          - containerPort: 8022
+            name: http-queueadm
+            protocol: TCP
+          - containerPort: 9090
+            name: http-autometric
+            protocol: TCP
+          - containerPort: 9091
+            name: http-usermetric
+            protocol: TCP
+          - containerPort: 8012
+            name: queue-port
+            protocol: TCP
+          - containerPort: 8112
+            name: https-port
+            protocol: TCP
+          readinessProbe:
+            failureThreshold: 3
+            httpGet:
+              httpHeaders:
+              - name: K-Network-Probe
+                value: queue
+              path: /
+              port: 8012
+              scheme: HTTP
+            periodSeconds: 10
+            successThreshold: 1
+            timeoutSeconds: 1
+          resources:
+            requests:
+              cpu: 25m
+          securityContext:
+            allowPrivilegeEscalation: false
+            capabilities:
+              drop:
+              - ALL
+            readOnlyRootFilesystem: true
+            runAsNonRoot: true
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+        dnsPolicy: ClusterFirst
+        enableServiceLinks: false
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        securityContext: {}
+        terminationGracePeriodSeconds: 300
+  status:
+    availableReplicas: 2
+    fullyLabeledReplicas: 2
+    observedGeneration: 2
+    readyReplicas: 2
+    replicas: 2
+kind: ReplicaSetList
+metadata:
+  resourceVersion: "54810"

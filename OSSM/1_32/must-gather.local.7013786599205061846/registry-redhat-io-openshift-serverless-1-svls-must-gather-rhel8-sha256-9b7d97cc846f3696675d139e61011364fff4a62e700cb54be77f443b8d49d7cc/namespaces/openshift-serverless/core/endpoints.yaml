@@ -1,0 +1,225 @@
+---
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2024-06-05T10:54:18Z"
+    creationTimestamp: "2024-06-05T10:54:07Z"
+    labels:
+      name: knative-openshift-ingress
+      olm.managed: "true"
+      operators.coreos.com/serverless-operator.openshift-serverless: ""
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:labels:
+            .: {}
+            f:name: {}
+            f:olm.managed: {}
+            f:operators.coreos.com/serverless-operator.openshift-serverless: {}
+        f:subsets: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2024-06-05T10:54:18Z"
+    name: knative-openshift-ingress-metrics
+    namespace: openshift-serverless
+    resourceVersion: "39860"
+    uid: e0818016-3d2a-47af-89b0-261f1f878c0e
+  subsets:
+  - addresses:
+    - ip: 10.128.2.24
+      nodeName: ip-10-0-91-247.ec2.internal
+      targetRef:
+        kind: Pod
+        name: knative-openshift-ingress-97b46bb9-rv5js
+        namespace: openshift-serverless
+        uid: 21bfc6ba-c1f7-41d9-ade6-1002f689617d
+    ports:
+    - name: metrics
+      port: 9090
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2024-06-05T10:54:32Z"
+    creationTimestamp: "2024-06-05T10:54:04Z"
+    labels:
+      name: knative-openshift
+      olm.managed: "true"
+      operators.coreos.com/serverless-operator.openshift-serverless: ""
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:labels:
+            .: {}
+            f:name: {}
+            f:olm.managed: {}
+            f:operators.coreos.com/serverless-operator.openshift-serverless: {}
+        f:subsets: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2024-06-05T10:54:32Z"
+    name: knative-openshift-metrics-3
+    namespace: openshift-serverless
+    resourceVersion: "40115"
+    uid: bface768-9476-4e11-875c-e7892a984aa7
+  subsets:
+  - addresses:
+    - ip: 10.129.2.15
+      nodeName: ip-10-0-105-86.ec2.internal
+      targetRef:
+        kind: Pod
+        name: knative-openshift-545686887b-bx4wx
+        namespace: openshift-serverless
+        uid: dcf00c3e-9609-42cb-b6ca-7f3f1ab87e38
+    ports:
+    - name: http-metrics
+      port: 8383
+      protocol: TCP
+    - name: http-cli
+      port: 8080
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2024-06-05T10:54:32Z"
+    creationTimestamp: "2024-06-05T10:54:10Z"
+    labels:
+      olm.managed: "true"
+      operators.coreos.com/serverless-operator.openshift-serverless: ""
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:labels:
+            .: {}
+            f:olm.managed: {}
+            f:operators.coreos.com/serverless-operator.openshift-serverless: {}
+        f:subsets: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2024-06-05T10:54:32Z"
+    name: knative-openshift-service
+    namespace: openshift-serverless
+    resourceVersion: "40116"
+    uid: c94c8b0c-fa8f-49c0-baf5-d13a39b19b09
+  subsets:
+  - addresses:
+    - ip: 10.129.2.15
+      nodeName: ip-10-0-105-86.ec2.internal
+      targetRef:
+        kind: Pod
+        name: knative-openshift-545686887b-bx4wx
+        namespace: openshift-serverless
+        uid: dcf00c3e-9609-42cb-b6ca-7f3f1ab87e38
+    ports:
+    - name: "9876"
+      port: 9876
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2024-06-05T10:54:25Z"
+    creationTimestamp: "2024-06-05T10:54:06Z"
+    labels:
+      name: knative-operator
+      olm.managed: "true"
+      operators.coreos.com/serverless-operator.openshift-serverless: ""
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:labels:
+            .: {}
+            f:name: {}
+            f:olm.managed: {}
+            f:operators.coreos.com/serverless-operator.openshift-serverless: {}
+        f:subsets: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2024-06-05T10:54:25Z"
+    name: knative-operator-metrics
+    namespace: openshift-serverless
+    resourceVersion: "39995"
+    uid: b182d757-1c9b-47d3-8e9f-38c42f2176b4
+  subsets:
+  - addresses:
+    - ip: 10.128.2.23
+      nodeName: ip-10-0-91-247.ec2.internal
+      targetRef:
+        kind: Pod
+        name: knative-operator-webhook-5cf7789dbd-qmpnp
+        namespace: openshift-serverless
+        uid: e2547b9a-664c-421f-b8a4-77fbd211c461
+    ports:
+    - name: metrics
+      port: 9090
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2024-06-05T10:54:25Z"
+    creationTimestamp: "2024-06-05T10:54:10Z"
+    labels:
+      olm.managed: "true"
+      operators.coreos.com/serverless-operator.openshift-serverless: ""
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:labels:
+            .: {}
+            f:olm.managed: {}
+            f:operators.coreos.com/serverless-operator.openshift-serverless: {}
+        f:subsets: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2024-06-05T10:54:25Z"
+    name: knative-operator-webhook-service
+    namespace: openshift-serverless
+    resourceVersion: "39996"
+    uid: 9320591a-8cf7-44df-9953-0ca68a3fc64a
+  subsets:
+  - addresses:
+    - ip: 10.128.2.23
+      nodeName: ip-10-0-91-247.ec2.internal
+      targetRef:
+        kind: Pod
+        name: knative-operator-webhook-5cf7789dbd-qmpnp
+        namespace: openshift-serverless
+        uid: e2547b9a-664c-421f-b8a4-77fbd211c461
+    ports:
+    - name: "8443"
+      port: 8443
+      protocol: TCP
+kind: EndpointsList
+metadata:
+  resourceVersion: "54064"

@@ -1,0 +1,102 @@
+apiVersion: maistra.io/v1
+kind: ServiceMeshMemberRoll
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"maistra.io/v1","kind":"ServiceMeshMemberRoll","metadata":{"annotations":{},"name":"default","namespace":"istio-system"},"spec":{"members":["knative-serving","knative-eventing","user-ns"]}}
+  creationTimestamp: "2024-06-05T10:46:13Z"
+  finalizers:
+  - maistra.io/istio-operator
+  generation: 2
+  managedFields:
+  - apiVersion: maistra.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:finalizers:
+          .: {}
+          v:"maistra.io/istio-operator": {}
+    manager: istio-operator
+    operation: Update
+    time: "2024-06-05T10:46:13Z"
+  - apiVersion: maistra.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:kubectl.kubernetes.io/last-applied-configuration: {}
+      f:spec:
+        .: {}
+        f:members: {}
+    manager: kubectl-client-side-apply
+    operation: Update
+    time: "2024-06-05T10:58:32Z"
+  - apiVersion: maistra.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:annotations:
+          .: {}
+          f:configuredMemberCount: {}
+        f:conditions: {}
+        f:configuredMembers: {}
+        f:memberStatuses: {}
+        f:members: {}
+        f:meshGeneration: {}
+        f:meshReconciledVersion: {}
+        f:observedGeneration: {}
+        f:pendingMembers: {}
+        f:terminatingMembers: {}
+    manager: istio-operator
+    operation: Update
+    subresource: status
+    time: "2024-06-05T10:58:33Z"
+  name: default
+  namespace: istio-system
+  resourceVersion: "43474"
+  uid: cf484983-f726-454d-8274-d425af7c134a
+spec:
+  members:
+  - knative-serving
+  - knative-eventing
+  - user-ns
+status:
+  annotations:
+    configuredMemberCount: 3/3
+  conditions:
+  - lastTransitionTime: "2024-06-05T10:46:27Z"
+    message: All namespaces have been configured successfully
+    reason: Configured
+    status: "True"
+    type: Ready
+  configuredMembers:
+  - knative-eventing
+  - knative-serving
+  - user-ns
+  memberStatuses:
+  - conditions:
+    - lastTransitionTime: "2024-06-05T10:46:23Z"
+      status: "True"
+      type: Reconciled
+    namespace: knative-eventing
+  - conditions:
+    - lastTransitionTime: "2024-06-05T10:46:23Z"
+      status: "True"
+      type: Reconciled
+    namespace: knative-serving
+  - conditions:
+    - lastTransitionTime: "2024-06-05T10:58:33Z"
+      status: "True"
+      type: Reconciled
+    namespace: user-ns
+  members:
+  - knative-eventing
+  - knative-serving
+  - user-ns
+  meshGeneration: 2
+  meshReconciledVersion: 2.5.1-1-2
+  observedGeneration: 2
+  pendingMembers: []
+  terminatingMembers: []

@@ -1,0 +1,23 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"rbac.authorization.k8s.io/v1","kind":"ClusterRoleBinding","metadata":{"labels":{"app.kubernetes.io/component":"controller","app.kubernetes.io/name":"knative-serving","app.kubernetes.io/version":"release-v1.11"},"name":"knative-serving-controller-addressable-resolver"},"roleRef":{"apiGroup":"rbac.authorization.k8s.io","kind":"ClusterRole","name":"knative-serving-aggregated-addressable-resolver"},"subjects":[{"kind":"ServiceAccount","name":"controller","namespace":"knative-serving"}]}
+    manifestival: new
+  creationTimestamp: "2024-06-05T10:55:46Z"
+  labels:
+    app.kubernetes.io/component: controller
+    app.kubernetes.io/name: knative-serving
+    app.kubernetes.io/version: release-v1.11
+  name: knative-serving-controller-addressable-resolver
+  resourceVersion: "41595"
+  uid: 60ff70da-487d-400c-8a45-e933c1f14776
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: knative-serving-aggregated-addressable-resolver
+subjects:
+- kind: ServiceAccount
+  name: controller
+  namespace: knative-serving

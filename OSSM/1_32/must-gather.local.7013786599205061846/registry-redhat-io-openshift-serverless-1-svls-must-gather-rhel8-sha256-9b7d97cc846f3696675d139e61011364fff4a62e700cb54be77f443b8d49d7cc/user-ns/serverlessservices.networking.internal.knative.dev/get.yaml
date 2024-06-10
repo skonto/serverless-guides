@@ -1,0 +1,64 @@
+apiVersion: v1
+items:
+- apiVersion: networking.internal.knative.dev/v1alpha1
+  kind: ServerlessService
+  metadata:
+    annotations:
+      autoscaling.knative.dev/class: kpa.autoscaling.knative.dev
+      autoscaling.knative.dev/minScale: "2"
+      autoscaling.knative.dev/target: "10"
+      autoscaling.knative.dev/targetBurstCapacity: "0"
+      queue.sidecar.serving.knative.dev/resourcePercentage: "0.3"
+      serving.knative.dev/creator: system:admin
+      sidecar.istio.io/inject: "true"
+      sidecar.istio.io/rewriteAppHTTPProbers: "true"
+    creationTimestamp: "2024-06-05T10:59:13Z"
+    generation: 2
+    labels:
+      app: helloworld-go
+      serving.knative.dev/configuration: helloworld-go
+      serving.knative.dev/configurationGeneration: "1"
+      serving.knative.dev/configurationUID: 6402ac10-ce56-4a74-a207-9167495600f6
+      serving.knative.dev/revision: helloworld-go-00001
+      serving.knative.dev/revisionUID: fe3dcdf0-fd1b-42cc-b546-73a365a8bae7
+      serving.knative.dev/service: helloworld-go
+      serving.knative.dev/serviceUID: d30abd09-975d-4327-a440-ef03bb5a8d6e
+    name: helloworld-go-00001
+    namespace: user-ns
+    ownerReferences:
+    - apiVersion: autoscaling.internal.knative.dev/v1alpha1
+      blockOwnerDeletion: true
+      controller: true
+      kind: PodAutoscaler
+      name: helloworld-go-00001
+      uid: e1a1d2a8-6e54-4ec6-8d87-4cfd7890ab39
+    resourceVersion: "43983"
+    uid: 274c2e6d-ce48-4944-97fa-d9da4ed9ed50
+  spec:
+    mode: Serve
+    numActivators: 2
+    objectRef:
+      apiVersion: apps/v1
+      kind: Deployment
+      name: helloworld-go-00001-deployment
+    protocolType: http1
+  status:
+    conditions:
+    - lastTransitionTime: "2024-06-05T10:59:17Z"
+      message: Revision is backed by Activator
+      reason: ActivatorEndpointsPopulated
+      severity: Info
+      status: "False"
+      type: ActivatorEndpointsPopulated
+    - lastTransitionTime: "2024-06-05T10:59:17Z"
+      status: "True"
+      type: EndpointsPopulated
+    - lastTransitionTime: "2024-06-05T10:59:17Z"
+      status: "True"
+      type: Ready
+    observedGeneration: 2
+    privateServiceName: helloworld-go-00001-private
+    serviceName: helloworld-go-00001
+kind: List
+metadata:
+  resourceVersion: ""

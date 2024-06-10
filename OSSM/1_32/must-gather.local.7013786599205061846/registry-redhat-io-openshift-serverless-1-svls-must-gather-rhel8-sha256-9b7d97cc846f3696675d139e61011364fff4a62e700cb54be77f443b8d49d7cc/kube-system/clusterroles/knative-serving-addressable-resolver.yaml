@@ -1,0 +1,27 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"rbac.authorization.k8s.io/v1","kind":"ClusterRole","metadata":{"labels":{"app.kubernetes.io/name":"knative-serving","app.kubernetes.io/version":"release-v1.11","duck.knative.dev/addressable":"true"},"name":"knative-serving-addressable-resolver"},"rules":[{"apiGroups":["serving.knative.dev"],"resources":["routes","routes/status","services","services/status"],"verbs":["get","list","watch"]}]}
+    manifestival: new
+  creationTimestamp: "2024-06-05T10:55:45Z"
+  labels:
+    app.kubernetes.io/name: knative-serving
+    app.kubernetes.io/version: release-v1.11
+    duck.knative.dev/addressable: "true"
+  name: knative-serving-addressable-resolver
+  resourceVersion: "41498"
+  uid: f1e17d32-07db-4873-8e12-0c08dc61a905
+rules:
+- apiGroups:
+  - serving.knative.dev
+  resources:
+  - routes
+  - routes/status
+  - services
+  - services/status
+  verbs:
+  - get
+  - list
+  - watch

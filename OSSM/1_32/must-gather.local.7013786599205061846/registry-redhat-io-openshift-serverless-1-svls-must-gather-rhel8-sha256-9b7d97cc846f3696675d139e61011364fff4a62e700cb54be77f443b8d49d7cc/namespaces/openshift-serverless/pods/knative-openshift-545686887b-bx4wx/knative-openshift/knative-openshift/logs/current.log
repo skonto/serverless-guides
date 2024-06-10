@@ -1,0 +1,326 @@
+2024-06-05T10:54:23.135578913Z I0605 10:54:23.135480       1 request.go:682] Waited for 1.037748103s due to client-side throttling, not priority and fairness, request: GET:https://172.30.0.1:443/apis/imageregistry.operator.openshift.io/v1?timeout=32s
+2024-06-05T10:54:25.188812796Z {"level":"info","ts":"2024-06-05T10:54:25.188Z","logger":"controller-runtime.metrics","msg":"Metrics server is starting to listen","addr":"0.0.0.0:8383"}
+2024-06-05T10:54:25.189202995Z {"level":"info","ts":"2024-06-05T10:54:25.189Z","logger":"cmd","msg":"Registering Components."}
+2024-06-05T10:54:25.227627081Z {"level":"info","ts":"2024-06-05T10:54:25.227Z","logger":"controller-runtime.webhook","msg":"Registering webhook","path":"/mutate-knativeservings"}
+2024-06-05T10:54:25.228029641Z {"level":"info","ts":"2024-06-05T10:54:25.228Z","logger":"controller-runtime.webhook","msg":"Registering webhook","path":"/validate-knativeservings"}
+2024-06-05T10:54:25.228341249Z {"level":"info","ts":"2024-06-05T10:54:25.228Z","logger":"controller-runtime.webhook","msg":"Registering webhook","path":"/mutate-knativeeventings"}
+2024-06-05T10:54:25.228514263Z {"level":"info","ts":"2024-06-05T10:54:25.228Z","logger":"controller-runtime.webhook","msg":"Registering webhook","path":"/validate-knativeeventings"}
+2024-06-05T10:54:25.228779390Z {"level":"info","ts":"2024-06-05T10:54:25.228Z","logger":"controller-runtime.webhook","msg":"Registering webhook","path":"/validate-knativekafkas"}
+2024-06-05T10:54:28.387888039Z {"level":"info","ts":"2024-06-05T10:54:28.387Z","logger":"knative.openshift.health dashboard.mf","msg":"Parsing manifest"}
+2024-06-05T10:54:28.388487934Z {"level":"info","ts":"2024-06-05T10:54:28.388Z","logger":"knative.openshift.health dashboard","msg":"Installing dashboard"}
+2024-06-05T10:54:28.395247832Z {"level":"info","ts":"2024-06-05T10:54:28.395Z","logger":"knative.openshift.health dashboard.mf","msg":"Creating","name":"openshift-config-managed/grafana-dashboard-definition-knative-health","type":"/v1, Kind=ConfigMap"}
+2024-06-05T10:54:28.412456380Z {"level":"info","ts":"2024-06-05T10:54:28.412Z","logger":"knative.openshift.health dashboard","msg":"Dashboard is ready"}
+2024-06-05T10:54:28.412456380Z {"level":"info","ts":"2024-06-05T10:54:28.412Z","logger":"cmd","msg":"Starting the Cmd."}
+2024-06-05T10:54:28.412518082Z {"level":"info","ts":"2024-06-05T10:54:28.412Z","logger":"cmd","msg":"Serving CLI artifacts on :8080"}
+2024-06-05T10:54:28.412645995Z {"level":"info","ts":"2024-06-05T10:54:28.412Z","logger":"controller-runtime.webhook.webhooks","msg":"Starting webhook server"}
+2024-06-05T10:54:28.412679116Z {"level":"info","ts":"2024-06-05T10:54:28.412Z","msg":"Starting server","path":"/metrics","kind":"metrics","addr":"[::]:8383"}
+2024-06-05T10:54:28.412754138Z {"level":"info","ts":"2024-06-05T10:54:28.412Z","msg":"Starting server","kind":"health probe","addr":"[::]:8687"}
+2024-06-05T10:54:28.412897071Z {"level":"info","ts":"2024-06-05T10:54:28.412Z","logger":"controller-runtime.certwatcher","msg":"Updated current TLS certificate"}
+2024-06-05T10:54:28.412913262Z I0605 10:54:28.412902       1 leaderelection.go:248] attempting to acquire leader lease openshift-serverless/knative-serving-openshift-lock...
+2024-06-05T10:54:28.413049625Z {"level":"info","ts":"2024-06-05T10:54:28.412Z","logger":"controller-runtime.webhook","msg":"Serving webhook server","host":"","port":9876}
+2024-06-05T10:54:28.413236890Z {"level":"info","ts":"2024-06-05T10:54:28.413Z","logger":"controller-runtime.certwatcher","msg":"Starting certificate watcher"}
+2024-06-05T10:54:28.425980237Z I0605 10:54:28.425938       1 leaderelection.go:258] successfully acquired lease openshift-serverless/knative-serving-openshift-lock
+2024-06-05T10:54:28.426071089Z {"level":"info","ts":"2024-06-05T10:54:28.426Z","msg":"Starting EventSource","controller":"health-controller","source":"kind source: *v1.ConfigMap"}
+2024-06-05T10:54:28.426143270Z {"level":"info","ts":"2024-06-05T10:54:28.426Z","msg":"Starting Controller","controller":"health-controller"}
+2024-06-05T10:54:28.426201272Z {"level":"info","ts":"2024-06-05T10:54:28.426Z","msg":"Starting EventSource","controller":"knativekafka-controller","source":"kind source: *v1alpha1.KnativeKafka"}
+2024-06-05T10:54:28.426249363Z {"level":"info","ts":"2024-06-05T10:54:28.426Z","msg":"Starting EventSource","controller":"knativekafka-controller","source":"kind source: *unstructured.Unstructured"}
+2024-06-05T10:54:28.426296854Z {"level":"info","ts":"2024-06-05T10:54:28.426Z","msg":"Starting EventSource","controller":"knativekafka-controller","source":"kind source: *unstructured.Unstructured"}
+2024-06-05T10:54:28.426357226Z {"level":"info","ts":"2024-06-05T10:54:28.426Z","msg":"Starting EventSource","controller":"knativekafka-controller","source":"kind source: *unstructured.Unstructured"}
+2024-06-05T10:54:28.426406177Z {"level":"info","ts":"2024-06-05T10:54:28.426Z","msg":"Starting EventSource","controller":"knativekafka-controller","source":"kind source: *unstructured.Unstructured"}
+2024-06-05T10:54:28.426461248Z {"level":"info","ts":"2024-06-05T10:54:28.426Z","msg":"Starting EventSource","controller":"knativekafka-controller","source":"kind source: *unstructured.Unstructured"}
+2024-06-05T10:54:28.426503350Z {"level":"info","ts":"2024-06-05T10:54:28.426Z","msg":"Starting EventSource","controller":"knativekafka-controller","source":"kind source: *unstructured.Unstructured"}
+2024-06-05T10:54:28.426568431Z {"level":"info","ts":"2024-06-05T10:54:28.426Z","msg":"Starting EventSource","controller":"knativekafka-controller","source":"kind source: *unstructured.Unstructured"}
+2024-06-05T10:54:28.426602342Z {"level":"info","ts":"2024-06-05T10:54:28.426Z","msg":"Starting EventSource","controller":"knativekafka-controller","source":"kind source: *unstructured.Unstructured"}
+2024-06-05T10:54:28.426645793Z {"level":"info","ts":"2024-06-05T10:54:28.426Z","msg":"Starting EventSource","controller":"knativekafka-controller","source":"kind source: *unstructured.Unstructured"}
+2024-06-05T10:54:28.426683294Z {"level":"info","ts":"2024-06-05T10:54:28.426Z","msg":"Starting EventSource","controller":"knativekafka-controller","source":"kind source: *unstructured.Unstructured"}
+2024-06-05T10:54:28.426719755Z {"level":"info","ts":"2024-06-05T10:54:28.426Z","msg":"Starting EventSource","controller":"knativekafka-controller","source":"kind source: *unstructured.Unstructured"}
+2024-06-05T10:54:28.426779246Z {"level":"info","ts":"2024-06-05T10:54:28.426Z","msg":"Starting EventSource","controller":"knativekafka-controller","source":"kind source: *unstructured.Unstructured"}
+2024-06-05T10:54:28.426821767Z {"level":"info","ts":"2024-06-05T10:54:28.426Z","msg":"Starting EventSource","controller":"knativekafka-controller","source":"kind source: *v1.ConfigMap"}
+2024-06-05T10:54:28.426866579Z {"level":"info","ts":"2024-06-05T10:54:28.426Z","msg":"Starting EventSource","controller":"knativekafka-controller","source":"kind source: *v1beta1.KnativeEventing"}
+2024-06-05T10:54:28.426906629Z {"level":"info","ts":"2024-06-05T10:54:28.426Z","msg":"Starting Controller","controller":"knativekafka-controller"}
+2024-06-05T10:54:28.427015742Z {"level":"info","ts":"2024-06-05T10:54:28.426Z","msg":"Starting EventSource","controller":"knativeserving-controller","source":"kind source: *v1beta1.KnativeServing"}
+2024-06-05T10:54:28.427072694Z {"level":"info","ts":"2024-06-05T10:54:28.427Z","msg":"Starting EventSource","controller":"knativeserving-controller","source":"kind source: *v1.ConfigMap"}
+2024-06-05T10:54:28.427112525Z {"level":"info","ts":"2024-06-05T10:54:28.427Z","msg":"Starting EventSource","controller":"knativeserving-controller","source":"kind source: *v1.ClusterOperator"}
+2024-06-05T10:54:28.427161966Z {"level":"info","ts":"2024-06-05T10:54:28.427Z","msg":"Starting EventSource","controller":"knativeserving-controller","source":"kind source: *v1.Route"}
+2024-06-05T10:54:28.427191757Z {"level":"info","ts":"2024-06-05T10:54:28.427Z","msg":"Starting Controller","controller":"knativeserving-controller"}
+2024-06-05T10:54:28.427375541Z {"level":"info","ts":"2024-06-05T10:54:28.426Z","msg":"Starting EventSource","controller":"source-deployment-discovery-controller","source":"kind source: *v1.Deployment"}
+2024-06-05T10:54:28.427421462Z {"level":"info","ts":"2024-06-05T10:54:28.427Z","msg":"Starting Controller","controller":"source-deployment-discovery-controller"}
+2024-06-05T10:54:28.427533905Z {"level":"info","ts":"2024-06-05T10:54:28.426Z","msg":"Starting EventSource","controller":"knativeeventing-controller","source":"kind source: *v1.ClusterOperator"}
+2024-06-05T10:54:28.427548276Z {"level":"info","ts":"2024-06-05T10:54:28.427Z","msg":"Starting EventSource","controller":"knativeeventing-controller","source":"kind source: *v1beta1.KnativeEventing"}
+2024-06-05T10:54:28.427548276Z {"level":"info","ts":"2024-06-05T10:54:28.427Z","msg":"Starting Controller","controller":"knativeeventing-controller"}
+2024-06-05T10:54:28.529177893Z {"level":"info","ts":"2024-06-05T10:54:28.529Z","logger":"knative.openshift.controller","msg":"Serving, processing clusteroperator request","name":"console"}
+2024-06-05T10:54:28.529552223Z {"level":"info","ts":"2024-06-05T10:54:28.529Z","logger":"knative.openshift.controller","msg":"Eventing, processing crd request","name":"console"}
+2024-06-05T10:54:28.629668523Z {"level":"info","ts":"2024-06-05T10:54:28.629Z","logger":"knative.openshift.health dashboard.mf","msg":"Parsing manifest"}
+2024-06-05T10:54:28.629823357Z {"level":"info","ts":"2024-06-05T10:54:28.629Z","logger":"knative.openshift.health dashboard.mf","msg":"Parsing manifest"}
+2024-06-05T10:54:28.630612067Z {"level":"info","ts":"2024-06-05T10:54:28.630Z","logger":"knative.openshift.health dashboard","msg":"Installing dashboard"}
+2024-06-05T10:54:28.630922024Z {"level":"info","ts":"2024-06-05T10:54:28.630Z","logger":"knative.openshift.health dashboard","msg":"Installing dashboard"}
+2024-06-05T10:54:28.671531274Z {"level":"info","ts":"2024-06-05T10:54:28.671Z","logger":"knative.openshift.health dashboard.mf","msg":"Merging","diff":"{\"metadata\":{\"annotations\":{\"manifestival\":null}}}"}
+2024-06-05T10:54:28.672458177Z {"level":"info","ts":"2024-06-05T10:54:28.672Z","logger":"knative.openshift.health dashboard.mf","msg":"Updating","name":"openshift-config-managed/grafana-dashboard-definition-knative-health","type":"/v1, Kind=ConfigMap"}
+2024-06-05T10:54:28.673179035Z {"level":"info","ts":"2024-06-05T10:54:28.673Z","logger":"knative.openshift.health dashboard.mf","msg":"Merging","diff":"{\"metadata\":{\"annotations\":{\"manifestival\":null}}}"}
+2024-06-05T10:54:28.674015056Z {"level":"info","ts":"2024-06-05T10:54:28.673Z","logger":"knative.openshift.health dashboard.mf","msg":"Updating","name":"openshift-config-managed/grafana-dashboard-definition-knative-health","type":"/v1, Kind=ConfigMap"}
+2024-06-05T10:54:28.751493623Z {"level":"info","ts":"2024-06-05T10:54:28.751Z","logger":"knative.openshift.health dashboard","msg":"Dashboard is ready"}
+2024-06-05T10:54:29.827240961Z {"level":"info","ts":"2024-06-05T10:54:29.827Z","msg":"Starting workers","controller":"health-controller","worker count":1}
+2024-06-05T10:54:29.829537469Z {"level":"info","ts":"2024-06-05T10:54:29.829Z","msg":"Starting workers","controller":"knativeeventing-controller","worker count":1}
+2024-06-05T10:54:29.829593760Z {"level":"info","ts":"2024-06-05T10:54:29.829Z","msg":"Starting workers","controller":"knativeserving-controller","worker count":1}
+2024-06-05T10:54:29.830703367Z {"level":"info","ts":"2024-06-05T10:54:29.830Z","msg":"Starting workers","controller":"source-deployment-discovery-controller","worker count":1}
+2024-06-05T10:54:29.832862951Z {"level":"info","ts":"2024-06-05T10:54:29.832Z","msg":"Starting workers","controller":"knativekafka-controller","worker count":1}
+2024-06-05T10:55:45.791710894Z {"level":"info","ts":"2024-06-05T10:55:45.791Z","logger":"knative.openshift.controller","msg":"Reconciling KnativeServing","Request.Namespace":"knative-serving","Request.Name":"knative-serving"}
+2024-06-05T10:55:45.791710894Z {"level":"info","ts":"2024-06-05T10:55:45.791Z","msg":"Starting EventSource","controller":"knativeserving-controller","source":"kind source: *v1.ConsoleCLIDownload"}
+2024-06-05T10:55:45.791783146Z {"level":"info","ts":"2024-06-05T10:55:45.791Z","logger":"knative.openshift.controller","msg":"Adding finalizer"}
+2024-06-05T10:55:45.799067997Z {"level":"info","ts":"2024-06-05T10:55:45.799Z","logger":"knative.openshift.controller","msg":"Creating config map","name":"config-service-ca-service-ca"}
+2024-06-05T10:55:45.810332807Z {"level":"info","ts":"2024-06-05T10:55:45.810Z","logger":"knative.openshift.controller","msg":"Creating config map","name":"config-service-ca-trusted-ca"}
+2024-06-05T10:55:45.818418447Z {"level":"info","ts":"2024-06-05T10:55:45.818Z","logger":"knative.openshift.controller","msg":"Creating config map","name":"config-service-ca"}
+2024-06-05T10:55:45.824588950Z {"level":"info","ts":"2024-06-05T10:55:45.824Z","logger":"knative.openshift.controller","msg":"Installing Serving Dashboards"}
+2024-06-05T10:55:45.824626751Z {"level":"info","ts":"2024-06-05T10:55:45.824Z","logger":"knative.openshift.dashboard.mf","msg":"Parsing manifest"}
+2024-06-05T10:55:45.829433950Z {"level":"info","ts":"2024-06-05T10:55:45.829Z","logger":"knative.openshift.dashboard","msg":"Installing dashboards under ","path:":"deploy/resources/dashboards/serving"}
+2024-06-05T10:55:45.840899015Z {"level":"info","ts":"2024-06-05T10:55:45.840Z","logger":"knative.openshift.dashboard.mf","msg":"Creating","name":"openshift-config-managed/grafana-dashboard-knative-serving-queue-proxy","type":"/v1, Kind=ConfigMap"}
+2024-06-05T10:55:45.891837218Z {"level":"info","ts":"2024-06-05T10:55:45.891Z","logger":"knative.openshift.dashboard.mf","msg":"Creating","name":"openshift-config-managed/grafana-dashboard-definition-knative-serving-resources","type":"/v1, Kind=ConfigMap"}
+2024-06-05T10:55:45.948181656Z {"level":"info","ts":"2024-06-05T10:55:45.948Z","logger":"knative.openshift.dashboard.mf","msg":"Creating","name":"openshift-config-managed/grafana-dashboard-definition-knative-serving-scaling-debugging","type":"/v1, Kind=ConfigMap"}
+2024-06-05T10:55:45.966319486Z {"level":"info","ts":"2024-06-05T10:55:45.966Z","logger":"knative.openshift.dashboard","msg":"Dashboards are ready"}
+2024-06-05T10:55:45.966319486Z {"level":"info","ts":"2024-06-05T10:55:45.966Z","logger":"knative.openshift.quickstart.mf","msg":"Parsing manifest"}
+2024-06-05T10:55:45.966937912Z {"level":"info","ts":"2024-06-05T10:55:45.966Z","logger":"knative.openshift.quickstart","msg":"Installing Quickstarts"}
+2024-06-05T10:55:45.994934436Z {"level":"info","ts":"2024-06-05T10:55:45.994Z","logger":"knative.openshift.quickstart.mf","msg":"Creating","name":"/serverless-application","type":"console.openshift.io/v1, Kind=ConsoleQuickStart"}
+2024-06-05T10:55:46.020268644Z {"level":"info","ts":"2024-06-05T10:55:46.020Z","logger":"knative.openshift.quickstart","msg":"Quickstarts installed"}
+2024-06-05T10:55:46.020268644Z {"level":"info","ts":"2024-06-05T10:55:46.020Z","logger":"knative.openshift.consoleclidownload","msg":"Installing kn ConsoleCLIDownload Route"}
+2024-06-05T10:55:46.062097862Z {"level":"info","ts":"2024-06-05T10:55:46.062Z","logger":"knative.openshift.consoleclidownload","msg":"Installing kn ConsoleCLIDownload"}
+2024-06-05T10:55:46.079293169Z {"level":"info","ts":"2024-06-05T10:55:46.079Z","logger":"knative.openshift.controller","msg":"Reconciling KnativeServing","Request.Namespace":"knative-serving","Request.Name":"knative-serving"}
+2024-06-05T10:55:46.079325080Z {"level":"info","ts":"2024-06-05T10:55:46.079Z","logger":"knative.openshift.controller","msg":"Updating config map","name":"config-service-ca-service-ca"}
+2024-06-05T10:55:46.095247875Z {"level":"info","ts":"2024-06-05T10:55:46.095Z","logger":"knative.openshift.controller","msg":"Updating config map","name":"config-service-ca"}
+2024-06-05T10:55:46.128319645Z {"level":"info","ts":"2024-06-05T10:55:46.128Z","logger":"knative.openshift.controller","msg":"Installing Serving Dashboards"}
+2024-06-05T10:55:46.128348536Z {"level":"info","ts":"2024-06-05T10:55:46.128Z","logger":"knative.openshift.dashboard.mf","msg":"Parsing manifest"}
+2024-06-05T10:55:46.132600601Z {"level":"info","ts":"2024-06-05T10:55:46.132Z","logger":"knative.openshift.dashboard","msg":"Installing dashboards under ","path:":"deploy/resources/dashboards/serving"}
+2024-06-05T10:55:46.146586558Z {"level":"info","ts":"2024-06-05T10:55:46.146Z","logger":"knative.openshift.dashboard.mf","msg":"Merging","diff":"{\"metadata\":{\"annotations\":{\"manifestival\":null}}}"}
+2024-06-05T10:55:46.147446009Z {"level":"info","ts":"2024-06-05T10:55:46.147Z","logger":"knative.openshift.dashboard.mf","msg":"Updating","name":"openshift-config-managed/grafana-dashboard-knative-serving-queue-proxy","type":"/v1, Kind=ConfigMap"}
+2024-06-05T10:55:46.196067686Z {"level":"info","ts":"2024-06-05T10:55:46.196Z","logger":"knative.openshift.dashboard.mf","msg":"Merging","diff":"{\"metadata\":{\"annotations\":{\"manifestival\":null}}}"}
+2024-06-05T10:55:46.196792243Z {"level":"info","ts":"2024-06-05T10:55:46.196Z","logger":"knative.openshift.dashboard.mf","msg":"Updating","name":"openshift-config-managed/grafana-dashboard-definition-knative-serving-resources","type":"/v1, Kind=ConfigMap"}
+2024-06-05T10:55:46.244212650Z {"level":"info","ts":"2024-06-05T10:55:46.244Z","logger":"knative.openshift.dashboard.mf","msg":"Merging","diff":"{\"metadata\":{\"annotations\":{\"manifestival\":null}}}"}
+2024-06-05T10:55:46.247113202Z {"level":"info","ts":"2024-06-05T10:55:46.247Z","logger":"knative.openshift.dashboard.mf","msg":"Updating","name":"openshift-config-managed/grafana-dashboard-definition-knative-serving-scaling-debugging","type":"/v1, Kind=ConfigMap"}
+2024-06-05T10:55:46.264936784Z {"level":"info","ts":"2024-06-05T10:55:46.264Z","logger":"knative.openshift.dashboard","msg":"Dashboards are ready"}
+2024-06-05T10:55:46.264936784Z {"level":"info","ts":"2024-06-05T10:55:46.264Z","logger":"knative.openshift.quickstart.mf","msg":"Parsing manifest"}
+2024-06-05T10:55:46.265561409Z {"level":"info","ts":"2024-06-05T10:55:46.265Z","logger":"knative.openshift.quickstart","msg":"Installing Quickstarts"}
+2024-06-05T10:55:46.284799677Z {"level":"info","ts":"2024-06-05T10:55:46.284Z","logger":"knative.openshift.quickstart.mf","msg":"Merging","diff":"{\"metadata\":{\"annotations\":null}}"}
+2024-06-05T10:55:46.285222317Z {"level":"info","ts":"2024-06-05T10:55:46.285Z","logger":"knative.openshift.quickstart.mf","msg":"Updating","name":"/serverless-application","type":"console.openshift.io/v1, Kind=ConsoleQuickStart"}
+2024-06-05T10:55:46.311686694Z {"level":"info","ts":"2024-06-05T10:55:46.311Z","logger":"knative.openshift.quickstart","msg":"Quickstarts installed"}
+2024-06-05T10:55:46.311686694Z {"level":"info","ts":"2024-06-05T10:55:46.311Z","logger":"knative.openshift.consoleclidownload","msg":"Installing kn ConsoleCLIDownload Route"}
+2024-06-05T10:55:46.320701637Z {"level":"info","ts":"2024-06-05T10:55:46.320Z","logger":"knative.openshift.consoleclidownload","msg":"Installing kn ConsoleCLIDownload"}
+2024-06-05T10:55:46.321274172Z {"level":"info","ts":"2024-06-05T10:55:46.320Z","logger":"knative.openshift.controller","msg":"Reconciling KnativeServing","Request.Namespace":"knative-serving","Request.Name":"knative-serving"}
+2024-06-05T10:55:46.321274172Z {"level":"info","ts":"2024-06-05T10:55:46.320Z","logger":"knative.openshift.controller","msg":"Installing Serving Dashboards"}
+2024-06-05T10:55:46.321274172Z {"level":"info","ts":"2024-06-05T10:55:46.320Z","logger":"knative.openshift.dashboard.mf","msg":"Parsing manifest"}
+2024-06-05T10:55:46.324376069Z {"level":"info","ts":"2024-06-05T10:55:46.324Z","logger":"knative.openshift.dashboard","msg":"Installing dashboards under ","path:":"deploy/resources/dashboards/serving"}
+2024-06-05T10:55:46.345762859Z {"level":"info","ts":"2024-06-05T10:55:46.345Z","logger":"knative.openshift.dashboard","msg":"Dashboards are ready"}
+2024-06-05T10:55:46.345762859Z {"level":"info","ts":"2024-06-05T10:55:46.345Z","logger":"knative.openshift.quickstart.mf","msg":"Parsing manifest"}
+2024-06-05T10:55:46.346321383Z {"level":"info","ts":"2024-06-05T10:55:46.346Z","logger":"knative.openshift.quickstart","msg":"Installing Quickstarts"}
+2024-06-05T10:55:46.350520617Z {"level":"info","ts":"2024-06-05T10:55:46.350Z","logger":"knative.openshift.quickstart","msg":"Quickstarts installed"}
+2024-06-05T10:55:46.350520617Z {"level":"info","ts":"2024-06-05T10:55:46.350Z","logger":"knative.openshift.consoleclidownload","msg":"Installing kn ConsoleCLIDownload Route"}
+2024-06-05T10:55:46.358863204Z {"level":"info","ts":"2024-06-05T10:55:46.358Z","logger":"knative.openshift.consoleclidownload","msg":"Installing kn ConsoleCLIDownload"}
+2024-06-05T10:55:55.817260294Z {"level":"info","ts":"2024-06-05T10:55:55.817Z","logger":"knative.openshift.controller","msg":"Reconciling KnativeServing","Request.Namespace":"knative-serving","Request.Name":"knative-serving"}
+2024-06-05T10:55:55.817312935Z {"level":"info","ts":"2024-06-05T10:55:55.817Z","logger":"knative.openshift.controller","msg":"Installing Serving Dashboards"}
+2024-06-05T10:55:55.817336396Z {"level":"info","ts":"2024-06-05T10:55:55.817Z","logger":"knative.openshift.dashboard.mf","msg":"Parsing manifest"}
+2024-06-05T10:55:55.820323020Z {"level":"info","ts":"2024-06-05T10:55:55.820Z","logger":"knative.openshift.dashboard","msg":"Installing dashboards under ","path:":"deploy/resources/dashboards/serving"}
+2024-06-05T10:55:55.839982967Z {"level":"info","ts":"2024-06-05T10:55:55.839Z","logger":"knative.openshift.dashboard","msg":"Dashboards are ready"}
+2024-06-05T10:55:55.839982967Z {"level":"info","ts":"2024-06-05T10:55:55.839Z","logger":"knative.openshift.quickstart.mf","msg":"Parsing manifest"}
+2024-06-05T10:55:55.840502400Z {"level":"info","ts":"2024-06-05T10:55:55.840Z","logger":"knative.openshift.quickstart","msg":"Installing Quickstarts"}
+2024-06-05T10:55:55.845698679Z {"level":"info","ts":"2024-06-05T10:55:55.845Z","logger":"knative.openshift.quickstart","msg":"Quickstarts installed"}
+2024-06-05T10:55:55.845698679Z {"level":"info","ts":"2024-06-05T10:55:55.845Z","logger":"knative.openshift.consoleclidownload","msg":"Installing kn ConsoleCLIDownload Route"}
+2024-06-05T10:55:55.852196050Z {"level":"info","ts":"2024-06-05T10:55:55.852Z","logger":"knative.openshift.consoleclidownload","msg":"Installing kn ConsoleCLIDownload"}
+2024-06-05T10:55:55.852251832Z {"level":"info","ts":"2024-06-05T10:55:55.852Z","logger":"knative.openshift.controller","msg":"Reconciling KnativeServing","Request.Namespace":"knative-serving","Request.Name":"knative-serving"}
+2024-06-05T10:55:55.852311463Z {"level":"info","ts":"2024-06-05T10:55:55.852Z","logger":"knative.openshift.controller","msg":"Installing Serving Dashboards"}
+2024-06-05T10:55:55.852311463Z {"level":"info","ts":"2024-06-05T10:55:55.852Z","logger":"knative.openshift.dashboard.mf","msg":"Parsing manifest"}
+2024-06-05T10:55:55.854911908Z {"level":"info","ts":"2024-06-05T10:55:55.854Z","logger":"knative.openshift.dashboard","msg":"Installing dashboards under ","path:":"deploy/resources/dashboards/serving"}
+2024-06-05T10:55:55.874620127Z {"level":"info","ts":"2024-06-05T10:55:55.874Z","logger":"knative.openshift.dashboard","msg":"Dashboards are ready"}
+2024-06-05T10:55:55.874620127Z {"level":"info","ts":"2024-06-05T10:55:55.874Z","logger":"knative.openshift.quickstart.mf","msg":"Parsing manifest"}
+2024-06-05T10:55:55.875259502Z {"level":"info","ts":"2024-06-05T10:55:55.875Z","logger":"knative.openshift.quickstart","msg":"Installing Quickstarts"}
+2024-06-05T10:55:55.882746898Z {"level":"info","ts":"2024-06-05T10:55:55.882Z","logger":"knative.openshift.quickstart","msg":"Quickstarts installed"}
+2024-06-05T10:55:55.882746898Z {"level":"info","ts":"2024-06-05T10:55:55.882Z","logger":"knative.openshift.consoleclidownload","msg":"Installing kn ConsoleCLIDownload Route"}
+2024-06-05T10:55:55.890459030Z {"level":"info","ts":"2024-06-05T10:55:55.890Z","logger":"knative.openshift.consoleclidownload","msg":"Installing kn ConsoleCLIDownload"}
+2024-06-05T10:55:55.890604673Z {"level":"info","ts":"2024-06-05T10:55:55.890Z","logger":"knative.openshift.controller","msg":"Reconciling KnativeServing","Request.Namespace":"knative-serving","Request.Name":"knative-serving"}
+2024-06-05T10:55:55.890722296Z {"level":"info","ts":"2024-06-05T10:55:55.890Z","logger":"knative.openshift.controller","msg":"Installing Serving Dashboards"}
+2024-06-05T10:55:55.890795998Z {"level":"info","ts":"2024-06-05T10:55:55.890Z","logger":"knative.openshift.dashboard.mf","msg":"Parsing manifest"}
+2024-06-05T10:55:55.894433938Z {"level":"info","ts":"2024-06-05T10:55:55.894Z","logger":"knative.openshift.dashboard","msg":"Installing dashboards under ","path:":"deploy/resources/dashboards/serving"}
+2024-06-05T10:55:55.911862390Z {"level":"info","ts":"2024-06-05T10:55:55.911Z","logger":"knative.openshift.dashboard","msg":"Dashboards are ready"}
+2024-06-05T10:55:55.911862390Z {"level":"info","ts":"2024-06-05T10:55:55.911Z","logger":"knative.openshift.quickstart.mf","msg":"Parsing manifest"}
+2024-06-05T10:55:55.912400494Z {"level":"info","ts":"2024-06-05T10:55:55.912Z","logger":"knative.openshift.quickstart","msg":"Installing Quickstarts"}
+2024-06-05T10:55:55.916692970Z {"level":"info","ts":"2024-06-05T10:55:55.916Z","logger":"knative.openshift.quickstart","msg":"Quickstarts installed"}
+2024-06-05T10:55:55.916758112Z {"level":"info","ts":"2024-06-05T10:55:55.916Z","logger":"knative.openshift.consoleclidownload","msg":"Installing kn ConsoleCLIDownload Route"}
+2024-06-05T10:55:55.929124509Z {"level":"info","ts":"2024-06-05T10:55:55.929Z","logger":"knative.openshift.consoleclidownload","msg":"Installing kn ConsoleCLIDownload"}
+2024-06-05T10:55:55.929208941Z {"level":"info","ts":"2024-06-05T10:55:55.929Z","logger":"knative.openshift.controller","msg":"Reconciling KnativeServing","Request.Namespace":"knative-serving","Request.Name":"knative-serving"}
+2024-06-05T10:55:55.929309303Z {"level":"info","ts":"2024-06-05T10:55:55.929Z","logger":"knative.openshift.controller","msg":"Installing Serving Dashboards"}
+2024-06-05T10:55:55.929309303Z {"level":"info","ts":"2024-06-05T10:55:55.929Z","logger":"knative.openshift.dashboard.mf","msg":"Parsing manifest"}
+2024-06-05T10:55:55.932190115Z {"level":"info","ts":"2024-06-05T10:55:55.932Z","logger":"knative.openshift.dashboard","msg":"Installing dashboards under ","path:":"deploy/resources/dashboards/serving"}
+2024-06-05T10:55:55.957639326Z {"level":"info","ts":"2024-06-05T10:55:55.957Z","logger":"knative.openshift.dashboard","msg":"Dashboards are ready"}
+2024-06-05T10:55:55.957704768Z {"level":"info","ts":"2024-06-05T10:55:55.957Z","logger":"knative.openshift.quickstart.mf","msg":"Parsing manifest"}
+2024-06-05T10:55:55.958669332Z {"level":"info","ts":"2024-06-05T10:55:55.958Z","logger":"knative.openshift.quickstart","msg":"Installing Quickstarts"}
+2024-06-05T10:55:55.979825907Z {"level":"info","ts":"2024-06-05T10:55:55.979Z","logger":"knative.openshift.quickstart","msg":"Quickstarts installed"}
+2024-06-05T10:55:55.979890618Z {"level":"info","ts":"2024-06-05T10:55:55.979Z","logger":"knative.openshift.consoleclidownload","msg":"Installing kn ConsoleCLIDownload Route"}
+2024-06-05T10:55:55.989314522Z {"level":"info","ts":"2024-06-05T10:55:55.989Z","logger":"knative.openshift.consoleclidownload","msg":"Installing kn ConsoleCLIDownload"}
+2024-06-05T10:55:57.652275745Z {"level":"info","ts":"2024-06-05T10:55:57.652Z","logger":"knative.openshift.controller","msg":"Reconciling KnativeServing","Request.Namespace":"knative-serving","Request.Name":"knative-serving"}
+2024-06-05T10:55:57.652505961Z {"level":"info","ts":"2024-06-05T10:55:57.652Z","logger":"knative.openshift.controller","msg":"Updating controller cert version","old":"","new":"40918"}
+2024-06-05T10:55:57.663572365Z {"level":"info","ts":"2024-06-05T10:55:57.663Z","logger":"knative.openshift.controller","msg":"Installing Serving Dashboards"}
+2024-06-05T10:55:57.663598206Z {"level":"info","ts":"2024-06-05T10:55:57.663Z","logger":"knative.openshift.dashboard.mf","msg":"Parsing manifest"}
+2024-06-05T10:55:57.666207221Z {"level":"info","ts":"2024-06-05T10:55:57.666Z","logger":"knative.openshift.dashboard","msg":"Installing dashboards under ","path:":"deploy/resources/dashboards/serving"}
+2024-06-05T10:55:57.687978310Z {"level":"info","ts":"2024-06-05T10:55:57.687Z","logger":"knative.openshift.dashboard","msg":"Dashboards are ready"}
+2024-06-05T10:55:57.688044002Z {"level":"info","ts":"2024-06-05T10:55:57.687Z","logger":"knative.openshift.quickstart.mf","msg":"Parsing manifest"}
+2024-06-05T10:55:57.688664927Z {"level":"info","ts":"2024-06-05T10:55:57.688Z","logger":"knative.openshift.quickstart","msg":"Installing Quickstarts"}
+2024-06-05T10:55:57.694364929Z {"level":"info","ts":"2024-06-05T10:55:57.694Z","logger":"knative.openshift.quickstart","msg":"Quickstarts installed"}
+2024-06-05T10:55:57.694364929Z {"level":"info","ts":"2024-06-05T10:55:57.694Z","logger":"knative.openshift.consoleclidownload","msg":"Installing kn ConsoleCLIDownload Route"}
+2024-06-05T10:55:57.702041849Z {"level":"info","ts":"2024-06-05T10:55:57.701Z","logger":"knative.openshift.consoleclidownload","msg":"Installing kn ConsoleCLIDownload"}
+2024-06-05T10:56:01.073629294Z {"level":"info","ts":"2024-06-05T10:56:01.073Z","logger":"knative.openshift.controller","msg":"Reconciling KnativeServing","Request.Namespace":"knative-serving","Request.Name":"knative-serving"}
+2024-06-05T10:56:01.074367342Z {"level":"info","ts":"2024-06-05T10:56:01.073Z","logger":"knative.openshift.controller","msg":"Installing Serving Dashboards"}
+2024-06-05T10:56:01.074367342Z {"level":"info","ts":"2024-06-05T10:56:01.073Z","logger":"knative.openshift.dashboard.mf","msg":"Parsing manifest"}
+2024-06-05T10:56:01.077494010Z {"level":"info","ts":"2024-06-05T10:56:01.077Z","logger":"knative.openshift.dashboard","msg":"Installing dashboards under ","path:":"deploy/resources/dashboards/serving"}
+2024-06-05T10:56:01.106985651Z {"level":"info","ts":"2024-06-05T10:56:01.106Z","logger":"knative.openshift.dashboard","msg":"Dashboards are ready"}
+2024-06-05T10:56:01.106985651Z {"level":"info","ts":"2024-06-05T10:56:01.106Z","logger":"knative.openshift.quickstart.mf","msg":"Parsing manifest"}
+2024-06-05T10:56:01.107825742Z {"level":"info","ts":"2024-06-05T10:56:01.107Z","logger":"knative.openshift.quickstart","msg":"Installing Quickstarts"}
+2024-06-05T10:56:01.112427966Z {"level":"info","ts":"2024-06-05T10:56:01.112Z","logger":"knative.openshift.quickstart","msg":"Quickstarts installed"}
+2024-06-05T10:56:01.112427966Z {"level":"info","ts":"2024-06-05T10:56:01.112Z","logger":"knative.openshift.consoleclidownload","msg":"Installing kn ConsoleCLIDownload Route"}
+2024-06-05T10:56:01.120063015Z {"level":"info","ts":"2024-06-05T10:56:01.120Z","logger":"knative.openshift.consoleclidownload","msg":"Installing kn ConsoleCLIDownload"}
+2024-06-05T10:56:07.054383035Z {"level":"info","ts":"2024-06-05T10:56:07.054Z","logger":"knative.openshift.controller","msg":"Reconciling KnativeServing","Request.Namespace":"knative-serving","Request.Name":"knative-serving"}
+2024-06-05T10:56:07.054623311Z {"level":"info","ts":"2024-06-05T10:56:07.054Z","logger":"knative.openshift.controller","msg":"Installing Serving Dashboards"}
+2024-06-05T10:56:07.054683502Z {"level":"info","ts":"2024-06-05T10:56:07.054Z","logger":"knative.openshift.dashboard.mf","msg":"Parsing manifest"}
+2024-06-05T10:56:07.058376644Z {"level":"info","ts":"2024-06-05T10:56:07.058Z","logger":"knative.openshift.dashboard","msg":"Installing dashboards under ","path:":"deploy/resources/dashboards/serving"}
+2024-06-05T10:56:07.076719608Z {"level":"info","ts":"2024-06-05T10:56:07.076Z","logger":"knative.openshift.dashboard","msg":"Dashboards are ready"}
+2024-06-05T10:56:07.076719608Z {"level":"info","ts":"2024-06-05T10:56:07.076Z","logger":"knative.openshift.quickstart.mf","msg":"Parsing manifest"}
+2024-06-05T10:56:07.077315873Z {"level":"info","ts":"2024-06-05T10:56:07.077Z","logger":"knative.openshift.quickstart","msg":"Installing Quickstarts"}
+2024-06-05T10:56:07.080976924Z {"level":"info","ts":"2024-06-05T10:56:07.080Z","logger":"knative.openshift.quickstart","msg":"Quickstarts installed"}
+2024-06-05T10:56:07.080976924Z {"level":"info","ts":"2024-06-05T10:56:07.080Z","logger":"knative.openshift.consoleclidownload","msg":"Installing kn ConsoleCLIDownload Route"}
+2024-06-05T10:56:07.087423904Z {"level":"info","ts":"2024-06-05T10:56:07.087Z","logger":"knative.openshift.consoleclidownload","msg":"Installing kn ConsoleCLIDownload"}
+2024-06-05T10:56:07.187894664Z {"level":"info","ts":"2024-06-05T10:56:07.185Z","logger":"knative.openshift.controller","msg":"Reconciling KnativeServing","Request.Namespace":"knative-serving","Request.Name":"knative-serving"}
+2024-06-05T10:56:07.187894664Z {"level":"info","ts":"2024-06-05T10:56:07.186Z","logger":"knative.openshift.controller","msg":"Installing Serving Dashboards"}
+2024-06-05T10:56:07.187894664Z {"level":"info","ts":"2024-06-05T10:56:07.186Z","logger":"knative.openshift.dashboard.mf","msg":"Parsing manifest"}
+2024-06-05T10:56:07.189671938Z {"level":"info","ts":"2024-06-05T10:56:07.189Z","logger":"knative.openshift.dashboard","msg":"Installing dashboards under ","path:":"deploy/resources/dashboards/serving"}
+2024-06-05T10:56:07.204598768Z {"level":"info","ts":"2024-06-05T10:56:07.204Z","logger":"knative.openshift.dashboard","msg":"Dashboards are ready"}
+2024-06-05T10:56:07.204598768Z {"level":"info","ts":"2024-06-05T10:56:07.204Z","logger":"knative.openshift.quickstart.mf","msg":"Parsing manifest"}
+2024-06-05T10:56:07.205136341Z {"level":"info","ts":"2024-06-05T10:56:07.205Z","logger":"knative.openshift.quickstart","msg":"Installing Quickstarts"}
+2024-06-05T10:56:07.208668309Z {"level":"info","ts":"2024-06-05T10:56:07.208Z","logger":"knative.openshift.quickstart","msg":"Quickstarts installed"}
+2024-06-05T10:56:07.208668309Z {"level":"info","ts":"2024-06-05T10:56:07.208Z","logger":"knative.openshift.consoleclidownload","msg":"Installing kn ConsoleCLIDownload Route"}
+2024-06-05T10:56:07.215343165Z {"level":"info","ts":"2024-06-05T10:56:07.215Z","logger":"knative.openshift.consoleclidownload","msg":"Installing kn ConsoleCLIDownload"}
+2024-06-05T10:56:07.319464896Z {"level":"info","ts":"2024-06-05T10:56:07.319Z","logger":"knative.openshift.controller","msg":"Reconciling KnativeServing","Request.Namespace":"knative-serving","Request.Name":"knative-serving"}
+2024-06-05T10:56:07.319551428Z {"level":"info","ts":"2024-06-05T10:56:07.319Z","logger":"knative.openshift.controller","msg":"Installing Serving Dashboards"}
+2024-06-05T10:56:07.319567218Z {"level":"info","ts":"2024-06-05T10:56:07.319Z","logger":"knative.openshift.dashboard.mf","msg":"Parsing manifest"}
+2024-06-05T10:56:07.322313796Z {"level":"info","ts":"2024-06-05T10:56:07.322Z","logger":"knative.openshift.dashboard","msg":"Installing dashboards under ","path:":"deploy/resources/dashboards/serving"}
+2024-06-05T10:56:07.338191810Z {"level":"info","ts":"2024-06-05T10:56:07.338Z","logger":"knative.openshift.dashboard","msg":"Dashboards are ready"}
+2024-06-05T10:56:07.338191810Z {"level":"info","ts":"2024-06-05T10:56:07.338Z","logger":"knative.openshift.quickstart.mf","msg":"Parsing manifest"}
+2024-06-05T10:56:07.338685522Z {"level":"info","ts":"2024-06-05T10:56:07.338Z","logger":"knative.openshift.quickstart","msg":"Installing Quickstarts"}
+2024-06-05T10:56:07.342662121Z {"level":"info","ts":"2024-06-05T10:56:07.342Z","logger":"knative.openshift.quickstart","msg":"Quickstarts installed"}
+2024-06-05T10:56:07.342662121Z {"level":"info","ts":"2024-06-05T10:56:07.342Z","logger":"knative.openshift.consoleclidownload","msg":"Installing kn ConsoleCLIDownload Route"}
+2024-06-05T10:56:07.348267260Z {"level":"info","ts":"2024-06-05T10:56:07.348Z","logger":"knative.openshift.consoleclidownload","msg":"Installing kn ConsoleCLIDownload"}
+2024-06-05T10:56:07.452996496Z {"level":"info","ts":"2024-06-05T10:56:07.452Z","logger":"knative.openshift.controller","msg":"Reconciling KnativeServing","Request.Namespace":"knative-serving","Request.Name":"knative-serving"}
+2024-06-05T10:56:07.453230301Z {"level":"info","ts":"2024-06-05T10:56:07.453Z","logger":"knative.openshift.controller","msg":"Installing Serving Dashboards"}
+2024-06-05T10:56:07.453341684Z {"level":"info","ts":"2024-06-05T10:56:07.453Z","logger":"knative.openshift.dashboard.mf","msg":"Parsing manifest"}
+2024-06-05T10:56:07.457895087Z {"level":"info","ts":"2024-06-05T10:56:07.457Z","logger":"knative.openshift.dashboard","msg":"Installing dashboards under ","path:":"deploy/resources/dashboards/serving"}
+2024-06-05T10:56:07.472114119Z {"level":"info","ts":"2024-06-05T10:56:07.472Z","logger":"knative.openshift.dashboard","msg":"Dashboards are ready"}
+2024-06-05T10:56:07.472114119Z {"level":"info","ts":"2024-06-05T10:56:07.472Z","logger":"knative.openshift.quickstart.mf","msg":"Parsing manifest"}
+2024-06-05T10:56:07.472616572Z {"level":"info","ts":"2024-06-05T10:56:07.472Z","logger":"knative.openshift.quickstart","msg":"Installing Quickstarts"}
+2024-06-05T10:56:07.476859757Z {"level":"info","ts":"2024-06-05T10:56:07.476Z","logger":"knative.openshift.quickstart","msg":"Quickstarts installed"}
+2024-06-05T10:56:07.476859757Z {"level":"info","ts":"2024-06-05T10:56:07.476Z","logger":"knative.openshift.consoleclidownload","msg":"Installing kn ConsoleCLIDownload Route"}
+2024-06-05T10:56:07.481759419Z {"level":"info","ts":"2024-06-05T10:56:07.481Z","logger":"knative.openshift.consoleclidownload","msg":"Installing kn ConsoleCLIDownload"}
+2024-06-05T10:56:07.587396936Z {"level":"info","ts":"2024-06-05T10:56:07.587Z","logger":"knative.openshift.controller","msg":"Reconciling KnativeServing","Request.Namespace":"knative-serving","Request.Name":"knative-serving"}
+2024-06-05T10:56:07.587463638Z {"level":"info","ts":"2024-06-05T10:56:07.587Z","logger":"knative.openshift.controller","msg":"Installing Serving Dashboards"}
+2024-06-05T10:56:07.587478378Z {"level":"info","ts":"2024-06-05T10:56:07.587Z","logger":"knative.openshift.dashboard.mf","msg":"Parsing manifest"}
+2024-06-05T10:56:07.590643777Z {"level":"info","ts":"2024-06-05T10:56:07.590Z","logger":"knative.openshift.dashboard","msg":"Installing dashboards under ","path:":"deploy/resources/dashboards/serving"}
+2024-06-05T10:56:07.607248439Z {"level":"info","ts":"2024-06-05T10:56:07.607Z","logger":"knative.openshift.dashboard","msg":"Dashboards are ready"}
+2024-06-05T10:56:07.607248439Z {"level":"info","ts":"2024-06-05T10:56:07.607Z","logger":"knative.openshift.quickstart.mf","msg":"Parsing manifest"}
+2024-06-05T10:56:07.608175482Z {"level":"info","ts":"2024-06-05T10:56:07.608Z","logger":"knative.openshift.quickstart","msg":"Installing Quickstarts"}
+2024-06-05T10:56:07.618718664Z {"level":"info","ts":"2024-06-05T10:56:07.618Z","logger":"knative.openshift.quickstart","msg":"Quickstarts installed"}
+2024-06-05T10:56:07.618718664Z {"level":"info","ts":"2024-06-05T10:56:07.618Z","logger":"knative.openshift.consoleclidownload","msg":"Installing kn ConsoleCLIDownload Route"}
+2024-06-05T10:56:07.626453685Z {"level":"info","ts":"2024-06-05T10:56:07.626Z","logger":"knative.openshift.consoleclidownload","msg":"Installing kn ConsoleCLIDownload"}
+2024-06-05T10:56:07.720201828Z {"level":"info","ts":"2024-06-05T10:56:07.720Z","logger":"knative.openshift.controller","msg":"Reconciling KnativeServing","Request.Namespace":"knative-serving","Request.Name":"knative-serving"}
+2024-06-05T10:56:07.720321711Z {"level":"info","ts":"2024-06-05T10:56:07.720Z","logger":"knative.openshift.controller","msg":"Installing Serving Dashboards"}
+2024-06-05T10:56:07.720388362Z {"level":"info","ts":"2024-06-05T10:56:07.720Z","logger":"knative.openshift.dashboard.mf","msg":"Parsing manifest"}
+2024-06-05T10:56:07.723130480Z {"level":"info","ts":"2024-06-05T10:56:07.723Z","logger":"knative.openshift.dashboard","msg":"Installing dashboards under ","path:":"deploy/resources/dashboards/serving"}
+2024-06-05T10:56:07.742578643Z {"level":"info","ts":"2024-06-05T10:56:07.742Z","logger":"knative.openshift.dashboard","msg":"Dashboards are ready"}
+2024-06-05T10:56:07.742578643Z {"level":"info","ts":"2024-06-05T10:56:07.742Z","logger":"knative.openshift.quickstart.mf","msg":"Parsing manifest"}
+2024-06-05T10:56:07.743172508Z {"level":"info","ts":"2024-06-05T10:56:07.743Z","logger":"knative.openshift.quickstart","msg":"Installing Quickstarts"}
+2024-06-05T10:56:07.746476650Z {"level":"info","ts":"2024-06-05T10:56:07.746Z","logger":"knative.openshift.quickstart","msg":"Quickstarts installed"}
+2024-06-05T10:56:07.746476650Z {"level":"info","ts":"2024-06-05T10:56:07.746Z","logger":"knative.openshift.consoleclidownload","msg":"Installing kn ConsoleCLIDownload Route"}
+2024-06-05T10:56:07.750880659Z {"level":"info","ts":"2024-06-05T10:56:07.750Z","logger":"knative.openshift.consoleclidownload","msg":"Installing kn ConsoleCLIDownload"}
+2024-06-05T10:56:07.852770525Z {"level":"info","ts":"2024-06-05T10:56:07.852Z","logger":"knative.openshift.controller","msg":"Reconciling KnativeServing","Request.Namespace":"knative-serving","Request.Name":"knative-serving"}
+2024-06-05T10:56:07.853783760Z {"level":"info","ts":"2024-06-05T10:56:07.853Z","logger":"knative.openshift.controller","msg":"Installing Serving Dashboards"}
+2024-06-05T10:56:07.853783760Z {"level":"info","ts":"2024-06-05T10:56:07.853Z","logger":"knative.openshift.dashboard.mf","msg":"Parsing manifest"}
+2024-06-05T10:56:07.857405960Z {"level":"info","ts":"2024-06-05T10:56:07.857Z","logger":"knative.openshift.dashboard","msg":"Installing dashboards under ","path:":"deploy/resources/dashboards/serving"}
+2024-06-05T10:56:07.877199501Z {"level":"info","ts":"2024-06-05T10:56:07.877Z","logger":"knative.openshift.dashboard","msg":"Dashboards are ready"}
+2024-06-05T10:56:07.877199501Z {"level":"info","ts":"2024-06-05T10:56:07.877Z","logger":"knative.openshift.quickstart.mf","msg":"Parsing manifest"}
+2024-06-05T10:56:07.877702493Z {"level":"info","ts":"2024-06-05T10:56:07.877Z","logger":"knative.openshift.quickstart","msg":"Installing Quickstarts"}
+2024-06-05T10:56:07.882006570Z {"level":"info","ts":"2024-06-05T10:56:07.881Z","logger":"knative.openshift.quickstart","msg":"Quickstarts installed"}
+2024-06-05T10:56:07.882006570Z {"level":"info","ts":"2024-06-05T10:56:07.881Z","logger":"knative.openshift.consoleclidownload","msg":"Installing kn ConsoleCLIDownload Route"}
+2024-06-05T10:56:07.886796299Z {"level":"info","ts":"2024-06-05T10:56:07.886Z","logger":"knative.openshift.consoleclidownload","msg":"Installing kn ConsoleCLIDownload"}
+2024-06-05T10:56:07.986525371Z {"level":"info","ts":"2024-06-05T10:56:07.986Z","logger":"knative.openshift.controller","msg":"Reconciling KnativeServing","Request.Namespace":"knative-serving","Request.Name":"knative-serving"}
+2024-06-05T10:56:07.986872409Z {"level":"info","ts":"2024-06-05T10:56:07.986Z","logger":"knative.openshift.controller","msg":"Installing Serving Dashboards"}
+2024-06-05T10:56:07.986899240Z {"level":"info","ts":"2024-06-05T10:56:07.986Z","logger":"knative.openshift.dashboard.mf","msg":"Parsing manifest"}
+2024-06-05T10:56:07.989834613Z {"level":"info","ts":"2024-06-05T10:56:07.989Z","logger":"knative.openshift.dashboard","msg":"Installing dashboards under ","path:":"deploy/resources/dashboards/serving"}
+2024-06-05T10:56:08.008033594Z {"level":"info","ts":"2024-06-05T10:56:08.007Z","logger":"knative.openshift.dashboard","msg":"Dashboards are ready"}
+2024-06-05T10:56:08.008033594Z {"level":"info","ts":"2024-06-05T10:56:08.007Z","logger":"knative.openshift.quickstart.mf","msg":"Parsing manifest"}
+2024-06-05T10:56:08.008634139Z {"level":"info","ts":"2024-06-05T10:56:08.008Z","logger":"knative.openshift.quickstart","msg":"Installing Quickstarts"}
+2024-06-05T10:56:08.013541080Z {"level":"info","ts":"2024-06-05T10:56:08.013Z","logger":"knative.openshift.quickstart","msg":"Quickstarts installed"}
+2024-06-05T10:56:08.013541080Z {"level":"info","ts":"2024-06-05T10:56:08.013Z","logger":"knative.openshift.consoleclidownload","msg":"Installing kn ConsoleCLIDownload Route"}
+2024-06-05T10:56:08.018872863Z {"level":"info","ts":"2024-06-05T10:56:08.018Z","logger":"knative.openshift.consoleclidownload","msg":"Installing kn ConsoleCLIDownload"}
+2024-06-05T10:56:08.134720574Z {"level":"info","ts":"2024-06-05T10:56:08.134Z","logger":"knative.openshift.controller","msg":"Reconciling KnativeServing","Request.Namespace":"knative-serving","Request.Name":"knative-serving"}
+2024-06-05T10:56:08.134830757Z {"level":"info","ts":"2024-06-05T10:56:08.134Z","logger":"knative.openshift.controller","msg":"Installing Serving Dashboards"}
+2024-06-05T10:56:08.134889099Z {"level":"info","ts":"2024-06-05T10:56:08.134Z","logger":"knative.openshift.dashboard.mf","msg":"Parsing manifest"}
+2024-06-05T10:56:08.139443261Z {"level":"info","ts":"2024-06-05T10:56:08.139Z","logger":"knative.openshift.dashboard","msg":"Installing dashboards under ","path:":"deploy/resources/dashboards/serving"}
+2024-06-05T10:56:08.167941608Z {"level":"info","ts":"2024-06-05T10:56:08.167Z","logger":"knative.openshift.dashboard","msg":"Dashboards are ready"}
+2024-06-05T10:56:08.167941608Z {"level":"info","ts":"2024-06-05T10:56:08.167Z","logger":"knative.openshift.quickstart.mf","msg":"Parsing manifest"}
+2024-06-05T10:56:08.168477151Z {"level":"info","ts":"2024-06-05T10:56:08.168Z","logger":"knative.openshift.quickstart","msg":"Installing Quickstarts"}
+2024-06-05T10:56:08.174511801Z {"level":"info","ts":"2024-06-05T10:56:08.174Z","logger":"knative.openshift.quickstart","msg":"Quickstarts installed"}
+2024-06-05T10:56:08.174511801Z {"level":"info","ts":"2024-06-05T10:56:08.174Z","logger":"knative.openshift.consoleclidownload","msg":"Installing kn ConsoleCLIDownload Route"}
+2024-06-05T10:56:08.182878858Z {"level":"info","ts":"2024-06-05T10:56:08.182Z","logger":"knative.openshift.consoleclidownload","msg":"Installing kn ConsoleCLIDownload"}
+2024-06-05T10:56:12.727577534Z {"level":"info","ts":"2024-06-05T10:56:12.726Z","logger":"knative.openshift.controller","msg":"Reconciling KnativeServing","Request.Namespace":"knative-serving","Request.Name":"knative-serving"}
+2024-06-05T10:56:12.727577534Z {"level":"info","ts":"2024-06-05T10:56:12.727Z","logger":"knative.openshift.controller","msg":"Installing Serving Dashboards"}
+2024-06-05T10:56:12.727759419Z {"level":"info","ts":"2024-06-05T10:56:12.727Z","logger":"knative.openshift.dashboard.mf","msg":"Parsing manifest"}
+2024-06-05T10:56:12.730782424Z {"level":"info","ts":"2024-06-05T10:56:12.730Z","logger":"knative.openshift.dashboard","msg":"Installing dashboards under ","path:":"deploy/resources/dashboards/serving"}
+2024-06-05T10:56:12.746948125Z {"level":"info","ts":"2024-06-05T10:56:12.746Z","logger":"knative.openshift.dashboard","msg":"Dashboards are ready"}
+2024-06-05T10:56:12.746948125Z {"level":"info","ts":"2024-06-05T10:56:12.746Z","logger":"knative.openshift.quickstart.mf","msg":"Parsing manifest"}
+2024-06-05T10:56:12.747504498Z {"level":"info","ts":"2024-06-05T10:56:12.747Z","logger":"knative.openshift.quickstart","msg":"Installing Quickstarts"}
+2024-06-05T10:56:12.751844416Z {"level":"info","ts":"2024-06-05T10:56:12.751Z","logger":"knative.openshift.quickstart","msg":"Quickstarts installed"}
+2024-06-05T10:56:12.751844416Z {"level":"info","ts":"2024-06-05T10:56:12.751Z","logger":"knative.openshift.consoleclidownload","msg":"Installing kn ConsoleCLIDownload Route"}
+2024-06-05T10:56:12.760834589Z {"level":"info","ts":"2024-06-05T10:56:12.760Z","logger":"knative.openshift.consoleclidownload","msg":"Installing kn ConsoleCLIDownload"}
+2024-06-05T10:56:12.854226964Z {"level":"info","ts":"2024-06-05T10:56:12.854Z","logger":"knative.openshift.controller","msg":"Reconciling KnativeServing","Request.Namespace":"knative-serving","Request.Name":"knative-serving"}
+2024-06-05T10:56:12.854622973Z {"level":"info","ts":"2024-06-05T10:56:12.854Z","logger":"knative.openshift.controller","msg":"Installing Serving Dashboards"}
+2024-06-05T10:56:12.854905010Z {"level":"info","ts":"2024-06-05T10:56:12.854Z","logger":"knative.openshift.dashboard.mf","msg":"Parsing manifest"}
+2024-06-05T10:56:12.858295074Z {"level":"info","ts":"2024-06-05T10:56:12.858Z","logger":"knative.openshift.dashboard","msg":"Installing dashboards under ","path:":"deploy/resources/dashboards/serving"}
+2024-06-05T10:56:12.872962368Z {"level":"info","ts":"2024-06-05T10:56:12.872Z","logger":"knative.openshift.dashboard","msg":"Dashboards are ready"}
+2024-06-05T10:56:12.872962368Z {"level":"info","ts":"2024-06-05T10:56:12.872Z","logger":"knative.openshift.quickstart.mf","msg":"Parsing manifest"}
+2024-06-05T10:56:12.873512652Z {"level":"info","ts":"2024-06-05T10:56:12.873Z","logger":"knative.openshift.quickstart","msg":"Installing Quickstarts"}
+2024-06-05T10:56:12.880968247Z {"level":"info","ts":"2024-06-05T10:56:12.880Z","logger":"knative.openshift.quickstart","msg":"Quickstarts installed"}
+2024-06-05T10:56:12.880968247Z {"level":"info","ts":"2024-06-05T10:56:12.880Z","logger":"knative.openshift.consoleclidownload","msg":"Installing kn ConsoleCLIDownload Route"}
+2024-06-05T10:56:12.895136478Z {"level":"info","ts":"2024-06-05T10:56:12.895Z","logger":"knative.openshift.consoleclidownload","msg":"Installing kn ConsoleCLIDownload"}
+2024-06-05T10:56:12.986100063Z {"level":"info","ts":"2024-06-05T10:56:12.986Z","logger":"knative.openshift.controller","msg":"Reconciling KnativeServing","Request.Namespace":"knative-serving","Request.Name":"knative-serving"}
+2024-06-05T10:56:12.986197165Z {"level":"info","ts":"2024-06-05T10:56:12.986Z","logger":"knative.openshift.controller","msg":"Installing Serving Dashboards"}
+2024-06-05T10:56:12.986245166Z {"level":"info","ts":"2024-06-05T10:56:12.986Z","logger":"knative.openshift.dashboard.mf","msg":"Parsing manifest"}
+2024-06-05T10:56:12.989322813Z {"level":"info","ts":"2024-06-05T10:56:12.989Z","logger":"knative.openshift.dashboard","msg":"Installing dashboards under ","path:":"deploy/resources/dashboards/serving"}
+2024-06-05T10:56:13.004059668Z {"level":"info","ts":"2024-06-05T10:56:13.004Z","logger":"knative.openshift.dashboard","msg":"Dashboards are ready"}
+2024-06-05T10:56:13.004059668Z {"level":"info","ts":"2024-06-05T10:56:13.004Z","logger":"knative.openshift.quickstart.mf","msg":"Parsing manifest"}
+2024-06-05T10:56:13.004560311Z {"level":"info","ts":"2024-06-05T10:56:13.004Z","logger":"knative.openshift.quickstart","msg":"Installing Quickstarts"}
+2024-06-05T10:56:13.009062812Z {"level":"info","ts":"2024-06-05T10:56:13.009Z","logger":"knative.openshift.quickstart","msg":"Quickstarts installed"}
+2024-06-05T10:56:13.009062812Z {"level":"info","ts":"2024-06-05T10:56:13.009Z","logger":"knative.openshift.consoleclidownload","msg":"Installing kn ConsoleCLIDownload Route"}
+2024-06-05T10:56:13.014075006Z {"level":"info","ts":"2024-06-05T10:56:13.014Z","logger":"knative.openshift.consoleclidownload","msg":"Installing kn ConsoleCLIDownload"}
+2024-06-05T10:56:15.257385125Z {"level":"info","ts":"2024-06-05T10:56:15.257Z","logger":"knative.openshift.controller","msg":"Reconciling KnativeServing","Request.Namespace":"knative-serving","Request.Name":"knative-serving"}
+2024-06-05T10:56:15.258039751Z {"level":"info","ts":"2024-06-05T10:56:15.257Z","logger":"knative.openshift.controller","msg":"Installing Serving Dashboards"}
+2024-06-05T10:56:15.258039751Z {"level":"info","ts":"2024-06-05T10:56:15.257Z","logger":"knative.openshift.dashboard.mf","msg":"Parsing manifest"}
+2024-06-05T10:56:15.261202590Z {"level":"info","ts":"2024-06-05T10:56:15.261Z","logger":"knative.openshift.dashboard","msg":"Installing dashboards under ","path:":"deploy/resources/dashboards/serving"}
+2024-06-05T10:56:15.276428107Z {"level":"info","ts":"2024-06-05T10:56:15.276Z","logger":"knative.openshift.dashboard","msg":"Dashboards are ready"}
+2024-06-05T10:56:15.276428107Z {"level":"info","ts":"2024-06-05T10:56:15.276Z","logger":"knative.openshift.quickstart.mf","msg":"Parsing manifest"}
+2024-06-05T10:56:15.277022612Z {"level":"info","ts":"2024-06-05T10:56:15.276Z","logger":"knative.openshift.quickstart","msg":"Installing Quickstarts"}
+2024-06-05T10:56:15.280907818Z {"level":"info","ts":"2024-06-05T10:56:15.280Z","logger":"knative.openshift.quickstart","msg":"Quickstarts installed"}
+2024-06-05T10:56:15.280907818Z {"level":"info","ts":"2024-06-05T10:56:15.280Z","logger":"knative.openshift.consoleclidownload","msg":"Installing kn ConsoleCLIDownload Route"}
+2024-06-05T10:56:15.285498822Z {"level":"info","ts":"2024-06-05T10:56:15.285Z","logger":"knative.openshift.consoleclidownload","msg":"Installing kn ConsoleCLIDownload"}
+2024-06-05T10:56:18.674716375Z {"level":"info","ts":"2024-06-05T10:56:18.674Z","logger":"knative.openshift.controller","msg":"Reconciling KnativeServing","Request.Namespace":"knative-serving","Request.Name":"knative-serving"}
+2024-06-05T10:56:18.674828207Z {"level":"info","ts":"2024-06-05T10:56:18.674Z","logger":"knative.openshift.controller","msg":"Installing Serving Dashboards"}
+2024-06-05T10:56:18.674828207Z {"level":"info","ts":"2024-06-05T10:56:18.674Z","logger":"knative.openshift.dashboard.mf","msg":"Parsing manifest"}
+2024-06-05T10:56:18.677355210Z {"level":"info","ts":"2024-06-05T10:56:18.677Z","logger":"knative.openshift.dashboard","msg":"Installing dashboards under ","path:":"deploy/resources/dashboards/serving"}
+2024-06-05T10:56:18.692191228Z {"level":"info","ts":"2024-06-05T10:56:18.692Z","logger":"knative.openshift.dashboard","msg":"Dashboards are ready"}
+2024-06-05T10:56:18.692191228Z {"level":"info","ts":"2024-06-05T10:56:18.692Z","logger":"knative.openshift.quickstart.mf","msg":"Parsing manifest"}
+2024-06-05T10:56:18.692676460Z {"level":"info","ts":"2024-06-05T10:56:18.692Z","logger":"knative.openshift.quickstart","msg":"Installing Quickstarts"}
+2024-06-05T10:56:18.696265298Z {"level":"info","ts":"2024-06-05T10:56:18.696Z","logger":"knative.openshift.quickstart","msg":"Quickstarts installed"}
+2024-06-05T10:56:18.696265298Z {"level":"info","ts":"2024-06-05T10:56:18.696Z","logger":"knative.openshift.consoleclidownload","msg":"Installing kn ConsoleCLIDownload Route"}
+2024-06-05T10:56:18.701989180Z {"level":"info","ts":"2024-06-05T10:56:18.701Z","logger":"knative.openshift.consoleclidownload","msg":"Installing kn ConsoleCLIDownload"}
+2024-06-05T10:56:28.066553172Z {"level":"info","ts":"2024-06-05T10:56:28.066Z","logger":"knative.openshift.controller","msg":"Reconciling KnativeServing","Request.Namespace":"knative-serving","Request.Name":"knative-serving"}
+2024-06-05T10:56:28.066618354Z {"level":"info","ts":"2024-06-05T10:56:28.066Z","logger":"knative.openshift.controller","msg":"Installing Serving Dashboards"}
+2024-06-05T10:56:28.066630074Z {"level":"info","ts":"2024-06-05T10:56:28.066Z","logger":"knative.openshift.dashboard.mf","msg":"Parsing manifest"}
+2024-06-05T10:56:28.069157527Z {"level":"info","ts":"2024-06-05T10:56:28.069Z","logger":"knative.openshift.dashboard","msg":"Installing dashboards under ","path:":"deploy/resources/dashboards/serving"}
+2024-06-05T10:56:28.093833599Z {"level":"info","ts":"2024-06-05T10:56:28.093Z","logger":"knative.openshift.dashboard","msg":"Dashboards are ready"}
+2024-06-05T10:56:28.093833599Z {"level":"info","ts":"2024-06-05T10:56:28.093Z","logger":"knative.openshift.quickstart.mf","msg":"Parsing manifest"}
+2024-06-05T10:56:28.094420663Z {"level":"info","ts":"2024-06-05T10:56:28.094Z","logger":"knative.openshift.quickstart","msg":"Installing Quickstarts"}
+2024-06-05T10:56:28.100850192Z {"level":"info","ts":"2024-06-05T10:56:28.100Z","logger":"knative.openshift.quickstart","msg":"Quickstarts installed"}
+2024-06-05T10:56:28.100902194Z {"level":"info","ts":"2024-06-05T10:56:28.100Z","logger":"knative.openshift.consoleclidownload","msg":"Installing kn ConsoleCLIDownload Route"}
+2024-06-05T10:56:28.112773418Z {"level":"info","ts":"2024-06-05T10:56:28.112Z","logger":"knative.openshift.consoleclidownload","msg":"Installing kn ConsoleCLIDownload"}

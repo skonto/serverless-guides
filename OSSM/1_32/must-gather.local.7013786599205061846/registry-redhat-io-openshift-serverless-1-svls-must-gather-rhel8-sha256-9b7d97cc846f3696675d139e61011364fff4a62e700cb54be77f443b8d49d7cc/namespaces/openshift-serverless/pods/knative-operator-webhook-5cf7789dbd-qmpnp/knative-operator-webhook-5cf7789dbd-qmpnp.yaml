@@ -1,0 +1,723 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    alm-examples: |-
+      [
+        {
+          "apiVersion": "operator.knative.dev/v1beta1",
+          "kind": "KnativeServing",
+          "metadata": {
+            "name": "knative-serving"
+          },
+          "spec": {
+          }
+        },
+        {
+          "apiVersion": "operator.knative.dev/v1beta1",
+          "kind": "KnativeEventing",
+          "metadata": {
+            "name": "knative-eventing"
+          },
+          "spec": {
+          }
+        },
+        {
+          "apiVersion": "operator.serverless.openshift.io/v1alpha1",
+          "kind": "KnativeKafka",
+          "metadata": {
+            "name": "knative-kafka"
+          },
+          "spec": {
+            "broker": {
+              "enabled": false,
+              "defaultConfig": {
+                "numPartitions": 10,
+                "replicationFactor": 3,
+                "bootstrapServers": "REPLACE_WITH_COMMA_SEPARATED_KAFKA_BOOTSTRAP_SERVERS"
+              }
+            },
+            "source": {
+              "enabled": false
+            },
+            "sink": {
+              "enabled": false
+            },
+            "channel": {
+              "enabled": false,
+              "bootstrapServers": "REPLACE_WITH_COMMA_SEPARATED_KAFKA_BOOTSTRAP_SERVERS"
+            }
+          }
+        }
+      ]
+    capabilities: Full Lifecycle
+    categories: Networking,Integration & Delivery,Cloud Provider,Developer Tools
+    certified: "false"
+    createdAt: "2024-03-28T16:23:48Z"
+    description: Deploy and manage event-driven serverless applications and functions
+      using Knative.
+    features.operators.openshift.io/disconnected: "true"
+    features.operators.openshift.io/fips-compliant: "true"
+    features.operators.openshift.io/proxy-aware: "true"
+    features.operators.openshift.io/tls-profiles: "false"
+    features.operators.openshift.io/token-auth-aws: "false"
+    features.operators.openshift.io/token-auth-azure: "false"
+    features.operators.openshift.io/token-auth-gcp: "false"
+    k8s.ovn.org/pod-networks: '{"default":{"ip_addresses":["10.128.2.23/23"],"mac_address":"0a:58:0a:80:02:17","gateway_ips":["10.128.2.1"],"routes":[{"dest":"10.128.0.0/14","nextHop":"10.128.2.1"},{"dest":"172.30.0.0/16","nextHop":"10.128.2.1"},{"dest":"100.64.0.0/16","nextHop":"10.128.2.1"}],"ip_address":"10.128.2.23/23","gateway_ip":"10.128.2.1"}}'
+    k8s.v1.cni.cncf.io/network-status: |-
+      [{
+          "name": "ovn-kubernetes",
+          "interface": "eth0",
+          "ips": [
+              "10.128.2.23"
+          ],
+          "mac": "0a:58:0a:80:02:17",
+          "default": true,
+          "dns": {}
+      }]
+    olm.operatorGroup: serverless-operators
+    olm.operatorNamespace: openshift-serverless
+    olm.skipRange: '>=1.32.0 <1.32.1'
+    olm.targetNamespaces: ""
+    olmcahash: e547dbc8445e7aa49ebad6c48972c8e1778ef2f39b7e60cf032e3951c1ccaa69
+    openshift.io/scc: restricted-v2
+    operatorframework.io/properties: '{"properties":[{"type":"olm.gvk","value":{"group":"operator.knative.dev","kind":"KnativeEventing","version":"v1beta1"}},{"type":"olm.gvk","value":{"group":"operator.knative.dev","kind":"KnativeServing","version":"v1beta1"}},{"type":"olm.gvk","value":{"group":"operator.serverless.openshift.io","kind":"KnativeKafka","version":"v1alpha1"}},{"type":"olm.package","value":{"packageName":"serverless-operator","version":"1.32.1"}}]}'
+    operatorframework.io/suggested-namespace: openshift-serverless
+    operators.openshift.io/infrastructure-features: '["disconnected", "fips", "proxy-aware"]'
+    operators.openshift.io/must-gather-image: registry.redhat.io/openshift-serverless-1/svls-must-gather-rhel8@sha256:04117b38e7de0c321033c40e349d025a2d7de3cc9242367e7e7a37ba6f9713cf
+    operators.openshift.io/valid-subscription: '["OpenShift Container Platform", "OpenShift
+      Platform Plus"]'
+    repository: https://github.com/openshift-knative/serverless-operator
+    seccomp.security.alpha.kubernetes.io/pod: runtime/default
+    sidecar.istio.io/inject: "false"
+    support: Red Hat
+  creationTimestamp: "2024-06-05T10:54:11Z"
+  generateName: knative-operator-webhook-5cf7789dbd-
+  labels:
+    name: knative-operator
+    pod-template-hash: 5cf7789dbd
+    serverless.openshift.io/is: webhook
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.ovn.org/pod-networks: {}
+    manager: ip-10-0-91-247
+    operation: Update
+    subresource: status
+    time: "2024-06-05T10:54:11Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:alm-examples: {}
+          f:capabilities: {}
+          f:categories: {}
+          f:certified: {}
+          f:createdAt: {}
+          f:description: {}
+          f:features.operators.openshift.io/disconnected: {}
+          f:features.operators.openshift.io/fips-compliant: {}
+          f:features.operators.openshift.io/proxy-aware: {}
+          f:features.operators.openshift.io/tls-profiles: {}
+          f:features.operators.openshift.io/token-auth-aws: {}
+          f:features.operators.openshift.io/token-auth-azure: {}
+          f:features.operators.openshift.io/token-auth-gcp: {}
+          f:olm.operatorGroup: {}
+          f:olm.operatorNamespace: {}
+          f:olm.skipRange: {}
+          f:olm.targetNamespaces: {}
+          f:olmcahash: {}
+          f:operatorframework.io/properties: {}
+          f:operatorframework.io/suggested-namespace: {}
+          f:operators.openshift.io/infrastructure-features: {}
+          f:operators.openshift.io/must-gather-image: {}
+          f:operators.openshift.io/valid-subscription: {}
+          f:repository: {}
+          f:sidecar.istio.io/inject: {}
+          f:support: {}
+        f:generateName: {}
+        f:labels:
+          .: {}
+          f:name: {}
+          f:pod-template-hash: {}
+          f:serverless.openshift.io/is: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"ebeb07ad-28e8-431f-9e7e-25cbe206d1de"}: {}
+      f:spec:
+        f:containers:
+          k:{"name":"knative-operator"}:
+            .: {}
+            f:env:
+              .: {}
+              k:{"name":"CURRENT_VERSION"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"IMAGE_APISERVER_RA_IMAGE"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"IMAGE_DISPATCHER_IMAGE"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"IMAGE_KN_CLIENT"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"IMAGE_KN_PLUGIN_EVENT_SENDER"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"IMAGE_KN_PLUGIN_FUNC_NODEJS_16"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"IMAGE_KN_PLUGIN_FUNC_OPENJDK_17"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"IMAGE_KN_PLUGIN_FUNC_OPENJDK_21"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"IMAGE_KN_PLUGIN_FUNC_PYTHON_39"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"IMAGE_KN_PLUGIN_FUNC_TEKTON_BUILDAH"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"IMAGE_KN_PLUGIN_FUNC_TEKTON_S2I"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"IMAGE_KN_PLUGIN_FUNC_UTIL"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"IMAGE_KUBE_RBAC_PROXY"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"IMAGE_activator"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"IMAGE_autoscaler"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"IMAGE_autoscaler-hpa"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"IMAGE_controller__controller"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"IMAGE_eventing-controller__eventing-controller"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"IMAGE_eventing-istio-controller__eventing-istio-controller"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"IMAGE_eventing-webhook__eventing-webhook"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"IMAGE_imc-controller__controller"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"IMAGE_imc-dispatcher__dispatcher"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"IMAGE_kourier-gateway"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"IMAGE_mt-broker-controller__mt-broker-controller"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"IMAGE_mt-broker-filter__filter"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"IMAGE_mt-broker-ingress__ingress"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"IMAGE_net-istio-controller__controller"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"IMAGE_net-istio-webhook__webhook"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"IMAGE_net-kourier-controller__controller"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"IMAGE_pingsource-mt-adapter__dispatcher"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"IMAGE_queue-proxy"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"IMAGE_storage-version-migration-eventing-__migrate"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"IMAGE_storage-version-migration-serving-__migrate"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"IMAGE_webhook__webhook"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"KUBERNETES_MIN_VERSION"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"METRICS_DOMAIN"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"OPERATOR_CONDITION_NAME"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"OPERATOR_NAME"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"POD_NAME"}:
+                .: {}
+                f:name: {}
+                f:valueFrom:
+                  .: {}
+                  f:fieldRef: {}
+              k:{"name":"REQUIRED_EVENTING_NAMESPACE"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"REQUIRED_SERVING_NAMESPACE"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"SERVICE_MONITOR_RBAC_MANIFEST_PATH"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"SYSTEM_NAMESPACE"}:
+                .: {}
+                f:name: {}
+                f:valueFrom:
+                  .: {}
+                  f:fieldRef: {}
+              k:{"name":"USE_OLM_TLS"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"WEBHOOK_NAME"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:name: {}
+            f:ports:
+              .: {}
+              k:{"containerPort":8443,"protocol":"TCP"}:
+                .: {}
+                f:containerPort: {}
+                f:name: {}
+                f:protocol: {}
+              k:{"containerPort":9090,"protocol":"TCP"}:
+                .: {}
+                f:containerPort: {}
+                f:name: {}
+                f:protocol: {}
+            f:readinessProbe:
+              .: {}
+              f:failureThreshold: {}
+              f:httpGet:
+                .: {}
+                f:httpHeaders: {}
+                f:path: {}
+                f:port: {}
+                f:scheme: {}
+              f:periodSeconds: {}
+              f:successThreshold: {}
+              f:timeoutSeconds: {}
+            f:resources: {}
+            f:securityContext:
+              .: {}
+              f:allowPrivilegeEscalation: {}
+              f:capabilities:
+                .: {}
+                f:drop: {}
+              f:readOnlyRootFilesystem: {}
+              f:runAsNonRoot: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/apiserver.local.config/certificates"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+              k:{"mountPath":"/tmp/k8s-webhook-server/serving-certs"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+        f:dnsPolicy: {}
+        f:enableServiceLinks: {}
+        f:restartPolicy: {}
+        f:schedulerName: {}
+        f:securityContext: {}
+        f:serviceAccount: {}
+        f:serviceAccountName: {}
+        f:terminationGracePeriodSeconds: {}
+        f:volumes:
+          .: {}
+          k:{"name":"apiservice-cert"}:
+            .: {}
+            f:name: {}
+            f:secret:
+              .: {}
+              f:defaultMode: {}
+              f:items: {}
+              f:secretName: {}
+          k:{"name":"webhook-cert"}:
+            .: {}
+            f:name: {}
+            f:secret:
+              .: {}
+              f:defaultMode: {}
+              f:items: {}
+              f:secretName: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2024-06-05T10:54:11Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.v1.cni.cncf.io/network-status: {}
+    manager: multus-daemon
+    operation: Update
+    subresource: status
+    time: "2024-06-05T10:54:12Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"ContainersReady"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Initialized"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Ready"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+        f:containerStatuses: {}
+        f:hostIP: {}
+        f:phase: {}
+        f:podIP: {}
+        f:podIPs:
+          .: {}
+          k:{"ip":"10.128.2.23"}:
+            .: {}
+            f:ip: {}
+        f:startTime: {}
+    manager: kubelet
+    operation: Update
+    subresource: status
+    time: "2024-06-05T10:54:25Z"
+  name: knative-operator-webhook-5cf7789dbd-qmpnp
+  namespace: openshift-serverless
+  ownerReferences:
+  - apiVersion: apps/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: ReplicaSet
+    name: knative-operator-webhook-5cf7789dbd
+    uid: ebeb07ad-28e8-431f-9e7e-25cbe206d1de
+  resourceVersion: "39993"
+  uid: e2547b9a-664c-421f-b8a4-77fbd211c461
+spec:
+  containers:
+  - env:
+    - name: POD_NAME
+      valueFrom:
+        fieldRef:
+          apiVersion: v1
+          fieldPath: metadata.name
+    - name: OPERATOR_NAME
+      value: knative-operator
+    - name: SYSTEM_NAMESPACE
+      valueFrom:
+        fieldRef:
+          apiVersion: v1
+          fieldPath: metadata.namespace
+    - name: METRICS_DOMAIN
+      value: knative.dev/serving-operator
+    - name: REQUIRED_SERVING_NAMESPACE
+      value: knative-serving
+    - name: REQUIRED_EVENTING_NAMESPACE
+      value: knative-eventing
+    - name: SERVICE_MONITOR_RBAC_MANIFEST_PATH
+      value: /var/run/ko/monitoring/rbac-proxy.yaml
+    - name: WEBHOOK_NAME
+      value: knative-operator-service
+    - name: USE_OLM_TLS
+      value: "true"
+    - name: KUBERNETES_MIN_VERSION
+      value: v1.0.0
+    - name: IMAGE_queue-proxy
+      value: registry.redhat.io/openshift-serverless-1/serving-queue-rhel8@sha256:a0d0c8517ff470e3afac4c90df5e6541d974507feb50eac9719f87fcf78bba96
+    - name: IMAGE_activator
+      value: registry.redhat.io/openshift-serverless-1/serving-activator-rhel8@sha256:498bbb08dce6b401e1904da74404c5275c915d68ecb7eee5af771dacb699cad4
+    - name: IMAGE_autoscaler
+      value: registry.redhat.io/openshift-serverless-1/serving-autoscaler-rhel8@sha256:260f1d34c34857bbde21a5a4ffb271baa13ac20deb4bc951f79a75f2d4825722
+    - name: IMAGE_autoscaler-hpa
+      value: registry.redhat.io/openshift-serverless-1/serving-autoscaler-hpa-rhel8@sha256:c3ab3140a7bc7bc1ff89d1bd620cdf1e362c901800ea699291f27029e87697a5
+    - name: IMAGE_controller__controller
+      value: registry.redhat.io/openshift-serverless-1/serving-controller-rhel8@sha256:4f56e90157c9c9ce5658b9f0946cf786703fd12a24abd091c0e5d6647c00db23
+    - name: IMAGE_webhook__webhook
+      value: registry.redhat.io/openshift-serverless-1/serving-webhook-rhel8@sha256:80e3c2d43c694d29b5392b1324522c8cab1431052307214ea794d11dc1450cb3
+    - name: IMAGE_storage-version-migration-serving-__migrate
+      value: registry.redhat.io/openshift-serverless-1/serving-storage-version-migration-rhel8@sha256:09dd06423043e786e37964d6c8755ebb1b144f00e223b9e75250fc2bcec0eec9
+    - name: IMAGE_kourier-gateway
+      value: registry.redhat.io/openshift-service-mesh/proxyv2-rhel8@sha256:ced90473636210bf6efdb7e8fdbe007a21269fe7883d4186e8309292dfd6826b
+    - name: IMAGE_net-kourier-controller__controller
+      value: registry.redhat.io/openshift-serverless-1/kourier-control-rhel8@sha256:cff8c78f5539343b44f20b464bb7848973c94b17b91fde02d0d6c126a4df0a06
+    - name: IMAGE_net-istio-controller__controller
+      value: registry.redhat.io/openshift-serverless-1/net-istio-controller-rhel8@sha256:bb93b5d5a33e10b6e836f338199b9ae563501af1a5ce9840967ef00009f2a07b
+    - name: IMAGE_net-istio-webhook__webhook
+      value: registry.redhat.io/openshift-serverless-1/net-istio-webhook-rhel8@sha256:854358e190dff1de84327877fbb9f61fb177a1f46cb2cc0ae79b62af3c252e7f
+    - name: IMAGE_eventing-controller__eventing-controller
+      value: registry.redhat.io/openshift-serverless-1/eventing-controller-rhel8@sha256:b01e8aa83f81b130aaafb4b29434bfd9057f6b84f9aa1cd3bc229b6c8207ae26
+    - name: IMAGE_eventing-istio-controller__eventing-istio-controller
+      value: registry.redhat.io/openshift-serverless-1/eventing-istio-controller-rhel8@sha256:15af188d02f524da32c0122c3a02b5ce58bbfb6b729abed8c04def9f0ff0b04d
+    - name: IMAGE_eventing-webhook__eventing-webhook
+      value: registry.redhat.io/openshift-serverless-1/eventing-webhook-rhel8@sha256:ef0a507ae9676f4cd27ef56e81cc2e6b14ec40004e2b6500f7351f5a9e3eae69
+    - name: IMAGE_storage-version-migration-eventing-__migrate
+      value: registry.redhat.io/openshift-serverless-1/eventing-storage-version-migration-rhel8@sha256:4a5e8233812053808fbf4d26dae6cb512027c872f93ccb09a54bd0065d4720f4
+    - name: IMAGE_mt-broker-controller__mt-broker-controller
+      value: registry.redhat.io/openshift-serverless-1/eventing-mtchannel-broker-rhel8@sha256:1c8931df351e1df76ebd32e2a7891d4b242c4f9304c511e8df04fbc23623b4b6
+    - name: IMAGE_mt-broker-filter__filter
+      value: registry.redhat.io/openshift-serverless-1/eventing-mtbroker-filter-rhel8@sha256:c86aa26e00a2248a051470e7811623dcab6d1ffac6b6831551294dbd13a937a1
+    - name: IMAGE_mt-broker-ingress__ingress
+      value: registry.redhat.io/openshift-serverless-1/eventing-mtbroker-ingress-rhel8@sha256:b2e3f71858b44053be240c28955574338e006e7a70d650429575333a1fe52a8d
+    - name: IMAGE_imc-controller__controller
+      value: registry.redhat.io/openshift-serverless-1/eventing-in-memory-channel-controller-rhel8@sha256:4d156ad90ade221eca5f6ac174245554984b710e39005a7bfd57ce2590800d08
+    - name: IMAGE_imc-dispatcher__dispatcher
+      value: registry.redhat.io/openshift-serverless-1/eventing-in-memory-channel-dispatcher-rhel8@sha256:4565dd8737c1e84950fa482ef06c6e11084b7873a2272d3a317ac0687a97193d
+    - name: IMAGE_pingsource-mt-adapter__dispatcher
+      value: registry.redhat.io/openshift-serverless-1/eventing-mtping-rhel8@sha256:6f999e5dd1bb415ca53c4c8fd8a3e4a032ca5cbebb3354e44d620f1d83a8d489
+    - name: IMAGE_APISERVER_RA_IMAGE
+      value: registry.redhat.io/openshift-serverless-1/eventing-apiserver-receive-adapter-rhel8@sha256:bbf27adc281e3b5e573f7cc11abcfc03e6a50adf6c7160d1e7d427077d288b1c
+    - name: IMAGE_DISPATCHER_IMAGE
+      value: registry.redhat.io/openshift-serverless-1/eventing-in-memory-channel-dispatcher-rhel8@sha256:4565dd8737c1e84950fa482ef06c6e11084b7873a2272d3a317ac0687a97193d
+    - name: IMAGE_KUBE_RBAC_PROXY
+      value: registry.redhat.io/openshift4/ose-kube-rbac-proxy@sha256:a6ea11d4df5b439e6ceaf8e9f8799a56aee1cfbfad774af968e01c1e175514c0
+    - name: IMAGE_KN_PLUGIN_EVENT_SENDER
+      value: registry.redhat.io/openshift-serverless-1-tech-preview/knative-client-plugin-event-sender-rhel8@sha256:f23587c78cecb9c09b7beb8e572a662cf4dba7844c08abebd583f205a993c435
+    - name: IMAGE_KN_CLIENT
+      value: registry.redhat.io/openshift-serverless-1/client-kn-rhel8@sha256:5121f1657645c4932fb2cf1e85810e5e135dca3a297138c687d827a9e493557d
+    - name: IMAGE_KN_PLUGIN_FUNC_UTIL
+      value: registry.redhat.io/openshift-serverless-1/func-utils-rhel8@sha256:fa4009b583229378dd3ba0348297fd0762aea352895728c648d98e7b34f1be13
+    - name: IMAGE_KN_PLUGIN_FUNC_TEKTON_S2I
+      value: registry.redhat.io/source-to-image/source-to-image-rhel8@sha256:6a6025914296a62fdf2092c3a40011bd9b966a6806b094d51eec5e1bd5026ef4
+    - name: IMAGE_KN_PLUGIN_FUNC_TEKTON_BUILDAH
+      value: registry.redhat.io/rhel8/buildah@sha256:55f5c7d88c77e1ab5a2ab8e877172b2b66cb196e21f10dc45148470d0ee8bbae
+    - name: IMAGE_KN_PLUGIN_FUNC_NODEJS_16
+      value: registry.redhat.io/ubi8/nodejs-16@sha256:69439fe83fa957089cb6fd3c1042ab71d719f81dd457a5d1fbc56c1e3ea600da
+    - name: IMAGE_KN_PLUGIN_FUNC_OPENJDK_17
+      value: registry.redhat.io/ubi8/openjdk-17@sha256:7016a0c5ce878211a8b82fbeb6619f82a97a35acdba6773be1c5f92f4e85aec8
+    - name: IMAGE_KN_PLUGIN_FUNC_OPENJDK_21
+      value: registry.redhat.io/ubi8/openjdk-21@sha256:86e499efaa15b1ad6221aa4d4fe26e514a8bb721aa3bf7575293b7101eb0e128
+    - name: IMAGE_KN_PLUGIN_FUNC_PYTHON_39
+      value: registry.redhat.io/ubi8/python-39@sha256:6b0a73679bad8510b017bb95e411bd4a7d3ee7d3515d030bba3b710254921f23
+    - name: CURRENT_VERSION
+      value: 1.32.1
+    - name: OPERATOR_CONDITION_NAME
+      value: serverless-operator.v1.32.1
+    image: registry.redhat.io/openshift-serverless-1/serverless-rhel8-operator@sha256:c92dbaae77f0b415c5d0b1f577ed48624bab2cdee901ad4f1615649b50a3f2de
+    imagePullPolicy: Always
+    name: knative-operator
+    ports:
+    - containerPort: 9090
+      name: metrics
+      protocol: TCP
+    - containerPort: 8443
+      name: https-webhook
+      protocol: TCP
+    readinessProbe:
+      failureThreshold: 3
+      httpGet:
+        httpHeaders:
+        - name: k-kubelet-probe
+          value: webhook
+        path: /
+        port: 8443
+        scheme: HTTPS
+      periodSeconds: 1
+      successThreshold: 1
+      timeoutSeconds: 1
+    resources: {}
+    securityContext:
+      allowPrivilegeEscalation: false
+      capabilities:
+        drop:
+        - ALL
+      readOnlyRootFilesystem: true
+      runAsNonRoot: true
+      runAsUser: 1000840000
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /apiserver.local.config/certificates
+      name: apiservice-cert
+    - mountPath: /tmp/k8s-webhook-server/serving-certs
+      name: webhook-cert
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-cbxcn
+      readOnly: true
+  dnsPolicy: ClusterFirst
+  enableServiceLinks: true
+  imagePullSecrets:
+  - name: knative-operator-dockercfg-92vvn
+  nodeName: ip-10-0-91-247.ec2.internal
+  preemptionPolicy: PreemptLowerPriority
+  priority: 0
+  restartPolicy: Always
+  schedulerName: default-scheduler
+  securityContext:
+    fsGroup: 1000840000
+    seLinuxOptions:
+      level: s0:c29,c14
+    seccompProfile:
+      type: RuntimeDefault
+  serviceAccount: knative-operator
+  serviceAccountName: knative-operator
+  terminationGracePeriodSeconds: 30
+  tolerations:
+  - effect: NoExecute
+    key: node.kubernetes.io/not-ready
+    operator: Exists
+    tolerationSeconds: 300
+  - effect: NoExecute
+    key: node.kubernetes.io/unreachable
+    operator: Exists
+    tolerationSeconds: 300
+  volumes:
+  - name: apiservice-cert
+    secret:
+      defaultMode: 420
+      items:
+      - key: tls.crt
+        path: apiserver.crt
+      - key: tls.key
+        path: apiserver.key
+      secretName: knative-operator-webhook-service-cert
+  - name: webhook-cert
+    secret:
+      defaultMode: 420
+      items:
+      - key: tls.crt
+        path: tls.crt
+      - key: tls.key
+        path: tls.key
+      secretName: knative-operator-webhook-service-cert
+  - name: kube-api-access-cbxcn
+    projected:
+      defaultMode: 420
+      sources:
+      - serviceAccountToken:
+          expirationSeconds: 3607
+          path: token
+      - configMap:
+          items:
+          - key: ca.crt
+            path: ca.crt
+          name: kube-root-ca.crt
+      - downwardAPI:
+          items:
+          - fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.namespace
+            path: namespace
+      - configMap:
+          items:
+          - key: service-ca.crt
+            path: service-ca.crt
+          name: openshift-service-ca.crt
+status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2024-06-05T10:54:11Z"
+    status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2024-06-05T10:54:25Z"
+    status: "True"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2024-06-05T10:54:25Z"
+    status: "True"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2024-06-05T10:54:11Z"
+    status: "True"
+    type: PodScheduled
+  containerStatuses:
+  - containerID: cri-o://64c6058a4039a9468d9365ed5bd9959429e044c3f0914553033d51730e3730d9
+    image: registry.redhat.io/openshift-serverless-1/serverless-rhel8-operator@sha256:c92dbaae77f0b415c5d0b1f577ed48624bab2cdee901ad4f1615649b50a3f2de
+    imageID: registry.redhat.io/openshift-serverless-1/serverless-rhel8-operator@sha256:c92dbaae77f0b415c5d0b1f577ed48624bab2cdee901ad4f1615649b50a3f2de
+    lastState: {}
+    name: knative-operator
+    ready: true
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2024-06-05T10:54:16Z"
+  hostIP: 10.0.91.247
+  phase: Running
+  podIP: 10.128.2.23
+  podIPs:
+  - ip: 10.128.2.23
+  qosClass: BestEffort
+  startTime: "2024-06-05T10:54:11Z"

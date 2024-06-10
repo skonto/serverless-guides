@@ -1,0 +1,46 @@
+Name:         queue-proxy
+Namespace:    knative-serving
+Labels:       app.kubernetes.io/component=queue-proxy
+              app.kubernetes.io/name=knative-serving
+              app.kubernetes.io/version=release-v1.11
+Annotations:  manifestival: new
+API Version:  caching.internal.knative.dev/v1alpha1
+Kind:         Image
+Metadata:
+  Creation Timestamp:  2024-06-05T10:55:55Z
+  Generation:          1
+  Managed Fields:
+    API Version:  caching.internal.knative.dev/v1alpha1
+    Fields Type:  FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .:
+          f:kubectl.kubernetes.io/last-applied-configuration:
+          f:manifestival:
+        f:labels:
+          .:
+          f:app.kubernetes.io/component:
+          f:app.kubernetes.io/name:
+          f:app.kubernetes.io/version:
+        f:ownerReferences:
+          .:
+          k:{"uid":"af223c8b-7d90-440e-8659-7268e406b26c"}:
+      f:spec:
+        .:
+        f:image:
+    Manager:    manifestival
+    Operation:  Update
+    Time:       2024-06-05T10:56:06Z
+  Owner References:
+    API Version:           operator.knative.dev/v1beta1
+    Block Owner Deletion:  true
+    Controller:            true
+    Kind:                  KnativeServing
+    Name:                  knative-serving
+    UID:                   af223c8b-7d90-440e-8659-7268e406b26c
+  Resource Version:        41644
+  UID:                     c4a8be33-2b2d-497d-a57d-f2c9ffc8dfc3
+Spec:
+  Image:  registry.redhat.io/openshift-serverless-1/serving-queue-rhel8@sha256:a0d0c8517ff470e3afac4c90df5e6541d974507feb50eac9719f87fcf78bba96
+Events:   <none>

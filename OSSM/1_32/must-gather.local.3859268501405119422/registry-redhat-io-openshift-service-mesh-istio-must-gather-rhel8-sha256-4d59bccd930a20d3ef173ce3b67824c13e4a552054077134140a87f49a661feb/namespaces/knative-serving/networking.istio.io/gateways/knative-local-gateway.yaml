@@ -1,0 +1,42 @@
+---
+apiVersion: networking.istio.io/v1beta1
+kind: Gateway
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"networking.istio.io/v1alpha3","kind":"Gateway","metadata":{"annotations":{},"name":"knative-local-gateway","namespace":"knative-serving"},"spec":{"selector":{"knative":"ingressgateway"},"servers":[{"hosts":["*"],"port":{"name":"https","number":8081,"protocol":"HTTPS"},"tls":{"mode":"ISTIO_MUTUAL"}}]}}
+  creationTimestamp: "2024-06-05T10:46:31Z"
+  generation: 1
+  managedFields:
+  - apiVersion: networking.istio.io/v1alpha3
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:kubectl.kubernetes.io/last-applied-configuration: {}
+      f:spec:
+        .: {}
+        f:selector:
+          .: {}
+          f:knative: {}
+        f:servers: {}
+    manager: kubectl-client-side-apply
+    operation: Update
+    time: "2024-06-05T10:46:31Z"
+  name: knative-local-gateway
+  namespace: knative-serving
+  resourceVersion: "36318"
+  uid: 4b207346-8771-45c0-9d8a-4451f9138756
+spec:
+  selector:
+    knative: ingressgateway
+  servers:
+  - hosts:
+    - '*'
+    port:
+      name: https
+      number: 8081
+      protocol: HTTPS
+    tls:
+      mode: ISTIO_MUTUAL

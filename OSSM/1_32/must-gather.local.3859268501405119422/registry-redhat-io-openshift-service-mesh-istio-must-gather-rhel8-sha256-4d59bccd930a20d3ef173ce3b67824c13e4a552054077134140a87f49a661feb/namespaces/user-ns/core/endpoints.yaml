@@ -1,0 +1,181 @@
+---
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      autoscaling.knative.dev/class: kpa.autoscaling.knative.dev
+      autoscaling.knative.dev/minScale: "2"
+      autoscaling.knative.dev/target: "10"
+      autoscaling.knative.dev/targetBurstCapacity: "0"
+      queue.sidecar.serving.knative.dev/resourcePercentage: "0.3"
+      serving.knative.dev/creator: system:admin
+      sidecar.istio.io/inject: "true"
+      sidecar.istio.io/rewriteAppHTTPProbers: "true"
+    creationTimestamp: "2024-06-05T10:59:13Z"
+    labels:
+      app: helloworld-go
+      networking.internal.knative.dev/serverlessservice: helloworld-go-00001
+      networking.internal.knative.dev/serviceType: Public
+      serving.knative.dev/configuration: helloworld-go
+      serving.knative.dev/configurationGeneration: "1"
+      serving.knative.dev/configurationUID: 6402ac10-ce56-4a74-a207-9167495600f6
+      serving.knative.dev/revision: helloworld-go-00001
+      serving.knative.dev/revisionUID: fe3dcdf0-fd1b-42cc-b546-73a365a8bae7
+      serving.knative.dev/service: helloworld-go
+      serving.knative.dev/serviceUID: d30abd09-975d-4327-a440-ef03bb5a8d6e
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:autoscaling.knative.dev/class: {}
+            f:autoscaling.knative.dev/minScale: {}
+            f:autoscaling.knative.dev/target: {}
+            f:autoscaling.knative.dev/targetBurstCapacity: {}
+            f:queue.sidecar.serving.knative.dev/resourcePercentage: {}
+            f:serving.knative.dev/creator: {}
+            f:sidecar.istio.io/inject: {}
+            f:sidecar.istio.io/rewriteAppHTTPProbers: {}
+          f:labels:
+            .: {}
+            f:app: {}
+            f:networking.internal.knative.dev/serverlessservice: {}
+            f:networking.internal.knative.dev/serviceType: {}
+            f:serving.knative.dev/configuration: {}
+            f:serving.knative.dev/configurationGeneration: {}
+            f:serving.knative.dev/configurationUID: {}
+            f:serving.knative.dev/revision: {}
+            f:serving.knative.dev/revisionUID: {}
+            f:serving.knative.dev/service: {}
+            f:serving.knative.dev/serviceUID: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"274c2e6d-ce48-4944-97fa-d9da4ed9ed50"}: {}
+        f:subsets: {}
+      manager: controller
+      operation: Update
+      time: "2024-06-05T10:59:19Z"
+    name: helloworld-go-00001
+    namespace: user-ns
+    ownerReferences:
+    - apiVersion: networking.internal.knative.dev/v1alpha1
+      blockOwnerDeletion: true
+      controller: true
+      kind: ServerlessService
+      name: helloworld-go-00001
+      uid: 274c2e6d-ce48-4944-97fa-d9da4ed9ed50
+    resourceVersion: "44020"
+    uid: 25e099fd-e2c5-4669-95d9-082fe72adf25
+  subsets:
+  - addresses:
+    - ip: 10.129.2.23
+      nodeName: ip-10-0-105-86.ec2.internal
+      targetRef:
+        kind: Pod
+        name: helloworld-go-00001-deployment-5bd78dbc5f-xlp2f
+        namespace: user-ns
+        uid: 698dd6e5-981e-4acf-be36-73aac8b5a11f
+    - ip: 10.131.0.31
+      nodeName: ip-10-0-53-229.ec2.internal
+      targetRef:
+        kind: Pod
+        name: helloworld-go-00001-deployment-5bd78dbc5f-zslnq
+        namespace: user-ns
+        uid: 1eda0de3-63d8-4fa4-bf15-d6cb93464578
+    ports:
+    - name: http
+      port: 8012
+      protocol: TCP
+    - name: http-istio
+      port: 8012
+      protocol: TCP
+    - name: https
+      port: 8112
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2024-06-05T10:59:19Z"
+    creationTimestamp: "2024-06-05T10:59:13Z"
+    labels:
+      app: helloworld-go
+      networking.internal.knative.dev/serverlessservice: helloworld-go-00001
+      networking.internal.knative.dev/serviceType: Private
+      serving.knative.dev/configuration: helloworld-go
+      serving.knative.dev/configurationGeneration: "1"
+      serving.knative.dev/configurationUID: 6402ac10-ce56-4a74-a207-9167495600f6
+      serving.knative.dev/revision: helloworld-go-00001
+      serving.knative.dev/revisionUID: fe3dcdf0-fd1b-42cc-b546-73a365a8bae7
+      serving.knative.dev/service: helloworld-go
+      serving.knative.dev/serviceUID: d30abd09-975d-4327-a440-ef03bb5a8d6e
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:labels:
+            .: {}
+            f:app: {}
+            f:networking.internal.knative.dev/serverlessservice: {}
+            f:networking.internal.knative.dev/serviceType: {}
+            f:serving.knative.dev/configuration: {}
+            f:serving.knative.dev/configurationGeneration: {}
+            f:serving.knative.dev/configurationUID: {}
+            f:serving.knative.dev/revision: {}
+            f:serving.knative.dev/revisionUID: {}
+            f:serving.knative.dev/service: {}
+            f:serving.knative.dev/serviceUID: {}
+        f:subsets: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2024-06-05T10:59:19Z"
+    name: helloworld-go-00001-private
+    namespace: user-ns
+    resourceVersion: "44016"
+    uid: aa01ec13-9236-4be1-ad49-fc040fb6abac
+  subsets:
+  - addresses:
+    - ip: 10.129.2.23
+      nodeName: ip-10-0-105-86.ec2.internal
+      targetRef:
+        kind: Pod
+        name: helloworld-go-00001-deployment-5bd78dbc5f-xlp2f
+        namespace: user-ns
+        uid: 698dd6e5-981e-4acf-be36-73aac8b5a11f
+    - ip: 10.131.0.31
+      nodeName: ip-10-0-53-229.ec2.internal
+      targetRef:
+        kind: Pod
+        name: helloworld-go-00001-deployment-5bd78dbc5f-zslnq
+        namespace: user-ns
+        uid: 1eda0de3-63d8-4fa4-bf15-d6cb93464578
+    ports:
+    - name: http-usermetric
+      port: 9091
+      protocol: TCP
+    - name: http
+      port: 8012
+      protocol: TCP
+    - name: http-queueadm
+      port: 8022
+      protocol: TCP
+    - name: http-istio
+      port: 8012
+      protocol: TCP
+    - name: https
+      port: 8112
+      protocol: TCP
+    - name: http-autometric
+      port: 9090
+      protocol: TCP
+kind: EndpointsList
+metadata:
+  resourceVersion: "54813"

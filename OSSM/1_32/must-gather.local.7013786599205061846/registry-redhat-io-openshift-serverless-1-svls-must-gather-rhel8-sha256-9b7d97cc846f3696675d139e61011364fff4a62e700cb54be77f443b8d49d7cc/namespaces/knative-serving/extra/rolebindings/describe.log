@@ -1,0 +1,115 @@
+Name:         istiod-clusterrole-basic-istio-system
+Labels:       app=istiod
+              app.kubernetes.io/component=istio-discovery
+              app.kubernetes.io/instance=istio-system
+              app.kubernetes.io/managed-by=maistra-istio-operator
+              app.kubernetes.io/name=istio-discovery
+              app.kubernetes.io/part-of=istio
+              maistra-version=2.4.7
+              maistra.io/member-of=istio-system
+              release=istio
+Annotations:  maistra.io/mesh-generation: 2.5.1-1-2
+Role:
+  Kind:  ClusterRole
+  Name:  istiod-clusterrole-basic-istio-system
+Subjects:
+  Kind            Name          Namespace
+  ----            ----          ---------
+  ServiceAccount  istiod-basic  istio-system
+
+
+Name:         istiod-gateway-controller-basic-istio-system
+Labels:       app=istiod
+              app.kubernetes.io/component=istio-discovery
+              app.kubernetes.io/instance=istio-system
+              app.kubernetes.io/managed-by=maistra-istio-operator
+              app.kubernetes.io/name=istio-discovery
+              app.kubernetes.io/part-of=istio
+              maistra-version=2.4.7
+              maistra.io/member-of=istio-system
+              release=istio
+Annotations:  maistra.io/mesh-generation: 2.5.1-1-2
+Role:
+  Kind:  ClusterRole
+  Name:  istiod-gateway-controller-basic-istio-system
+Subjects:
+  Kind            Name          Namespace
+  ----            ----          ---------
+  ServiceAccount  istiod-basic  istio-system
+
+
+Name:         knative-prometheus-k8s
+Labels:       <none>
+Annotations:  manifestival: new
+Role:
+  Kind:  Role
+  Name:  knative-prometheus-k8s
+Subjects:
+  Kind            Name            Namespace
+  ----            ----            ---------
+  ServiceAccount  prometheus-k8s  openshift-monitoring
+
+
+Name:         knative-serving-activator
+Labels:       app.kubernetes.io/component=activator
+              app.kubernetes.io/name=knative-serving
+              app.kubernetes.io/version=release-v1.11
+Annotations:  manifestival: new
+Role:
+  Kind:  Role
+  Name:  knative-serving-activator
+Subjects:
+  Kind            Name       Namespace
+  ----            ----       ---------
+  ServiceAccount  activator  knative-serving
+
+
+Name:         openshift-serverless-view-serving-configmaps
+Labels:       <none>
+Annotations:  manifestival: new
+Role:
+  Kind:  Role
+  Name:  openshift-serverless-view-serving-configmaps
+Subjects:
+  Kind   Name                  Namespace
+  ----   ----                  ---------
+  Group  system:authenticated  
+
+
+Name:         system:deployers
+Labels:       <none>
+Annotations:  openshift.io/description:
+                Allows deploymentconfigs in this namespace to rollout pods in this namespace.  It is auto-managed by a controller; remove subjects to disa...
+Role:
+  Kind:  ClusterRole
+  Name:  system:deployer
+Subjects:
+  Kind            Name      Namespace
+  ----            ----      ---------
+  ServiceAccount  deployer  knative-serving
+
+
+Name:         system:image-builders
+Labels:       <none>
+Annotations:  openshift.io/description:
+                Allows builds in this namespace to push images to this namespace.  It is auto-managed by a controller; remove subjects to disable.
+Role:
+  Kind:  ClusterRole
+  Name:  system:image-builder
+Subjects:
+  Kind            Name     Namespace
+  ----            ----     ---------
+  ServiceAccount  builder  knative-serving
+
+
+Name:         system:image-pullers
+Labels:       <none>
+Annotations:  openshift.io/description:
+                Allows all pods in this namespace to pull images from this namespace.  It is auto-managed by a controller; remove subjects to disable.
+Role:
+  Kind:  ClusterRole
+  Name:  system:image-puller
+Subjects:
+  Kind   Name                                    Namespace
+  ----   ----                                    ---------
+  Group  system:serviceaccounts:knative-serving  

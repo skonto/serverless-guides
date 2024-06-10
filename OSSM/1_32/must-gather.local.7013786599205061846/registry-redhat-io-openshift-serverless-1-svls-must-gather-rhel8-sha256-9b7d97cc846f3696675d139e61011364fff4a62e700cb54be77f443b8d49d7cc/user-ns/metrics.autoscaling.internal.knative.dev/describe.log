@@ -1,0 +1,92 @@
+Name:         helloworld-go-00001
+Namespace:    user-ns
+Labels:       app=helloworld-go
+              serving.knative.dev/configuration=helloworld-go
+              serving.knative.dev/configurationGeneration=1
+              serving.knative.dev/configurationUID=6402ac10-ce56-4a74-a207-9167495600f6
+              serving.knative.dev/revision=helloworld-go-00001
+              serving.knative.dev/revisionUID=fe3dcdf0-fd1b-42cc-b546-73a365a8bae7
+              serving.knative.dev/service=helloworld-go
+              serving.knative.dev/serviceUID=d30abd09-975d-4327-a440-ef03bb5a8d6e
+Annotations:  autoscaling.knative.dev/class: kpa.autoscaling.knative.dev
+              autoscaling.knative.dev/metric: concurrency
+              autoscaling.knative.dev/minScale: 2
+              autoscaling.knative.dev/target: 10
+              autoscaling.knative.dev/targetBurstCapacity: 0
+              queue.sidecar.serving.knative.dev/resourcePercentage: 0.3
+              serving.knative.dev/creator: system:admin
+              sidecar.istio.io/inject: true
+              sidecar.istio.io/rewriteAppHTTPProbers: true
+API Version:  autoscaling.internal.knative.dev/v1alpha1
+Kind:         Metric
+Metadata:
+  Creation Timestamp:  2024-06-05T10:59:13Z
+  Generation:          1
+  Managed Fields:
+    API Version:  autoscaling.internal.knative.dev/v1alpha1
+    Fields Type:  FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .:
+          f:autoscaling.knative.dev/class:
+          f:autoscaling.knative.dev/metric:
+          f:autoscaling.knative.dev/minScale:
+          f:autoscaling.knative.dev/target:
+          f:autoscaling.knative.dev/targetBurstCapacity:
+          f:queue.sidecar.serving.knative.dev/resourcePercentage:
+          f:serving.knative.dev/creator:
+          f:sidecar.istio.io/inject:
+          f:sidecar.istio.io/rewriteAppHTTPProbers:
+        f:labels:
+          .:
+          f:app:
+          f:serving.knative.dev/configuration:
+          f:serving.knative.dev/configurationGeneration:
+          f:serving.knative.dev/configurationUID:
+          f:serving.knative.dev/revision:
+          f:serving.knative.dev/revisionUID:
+          f:serving.knative.dev/service:
+          f:serving.knative.dev/serviceUID:
+        f:ownerReferences:
+          .:
+          k:{"uid":"e1a1d2a8-6e54-4ec6-8d87-4cfd7890ab39"}:
+      f:spec:
+        .:
+        f:panicWindow:
+        f:scrapeTarget:
+        f:stableWindow:
+    Manager:      autoscaler
+    Operation:    Update
+    Time:         2024-06-05T10:59:13Z
+    API Version:  autoscaling.internal.knative.dev/v1alpha1
+    Fields Type:  FieldsV1
+    fieldsV1:
+      f:status:
+        .:
+        f:conditions:
+        f:observedGeneration:
+    Manager:      autoscaler
+    Operation:    Update
+    Subresource:  status
+    Time:         2024-06-05T10:59:13Z
+  Owner References:
+    API Version:           autoscaling.internal.knative.dev/v1alpha1
+    Block Owner Deletion:  true
+    Controller:            true
+    Kind:                  PodAutoscaler
+    Name:                  helloworld-go-00001
+    UID:                   e1a1d2a8-6e54-4ec6-8d87-4cfd7890ab39
+  Resource Version:        43897
+  UID:                     595aa8a7-2cad-4ddb-baa4-afd6ef9dbf2e
+Spec:
+  Panic Window:   6000000000
+  Scrape Target:  helloworld-go-00001-private
+  Stable Window:  60000000000
+Status:
+  Conditions:
+    Last Transition Time:  2024-06-05T10:59:13Z
+    Status:                True
+    Type:                  Ready
+  Observed Generation:     1
+Events:                    <none>

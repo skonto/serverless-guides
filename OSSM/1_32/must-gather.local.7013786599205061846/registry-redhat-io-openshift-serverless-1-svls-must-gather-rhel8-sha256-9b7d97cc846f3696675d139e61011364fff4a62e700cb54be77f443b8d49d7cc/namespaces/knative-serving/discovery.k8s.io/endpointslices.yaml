@@ -1,0 +1,989 @@
+---
+apiVersion: discovery.k8s.io/v1
+items:
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - 10.129.2.17
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: ip-10-0-105-86.ec2.internal
+    targetRef:
+      kind: Pod
+      name: activator-7b646b88cc-fkrcw
+      namespace: knative-serving
+      uid: e4a914b6-97d8-4eda-8650-d3af6cfbc8c8
+    zone: us-east-1f
+  - addresses:
+    - 10.131.0.30
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: ip-10-0-53-229.ec2.internal
+    targetRef:
+      kind: Pod
+      name: activator-7b646b88cc-vntdm
+      namespace: knative-serving
+      uid: 626d8077-8fc7-4eb2-becb-7daec3e60b5f
+    zone: us-east-1d
+  kind: EndpointSlice
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2024-06-05T10:56:20Z"
+    creationTimestamp: "2024-06-05T10:55:55Z"
+    generateName: activator-service-
+    generation: 5
+    labels:
+      app: activator
+      app.kubernetes.io/component: activator
+      app.kubernetes.io/name: knative-serving
+      app.kubernetes.io/version: release-v1.11
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      kubernetes.io/service-name: activator-service
+    managedFields:
+    - apiVersion: discovery.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:addressType: {}
+        f:endpoints: {}
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:app: {}
+            f:app.kubernetes.io/component: {}
+            f:app.kubernetes.io/name: {}
+            f:app.kubernetes.io/version: {}
+            f:endpointslice.kubernetes.io/managed-by: {}
+            f:kubernetes.io/service-name: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"da35b8fd-ea8e-45b5-9b3c-dd9fe9d03a39"}: {}
+        f:ports: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2024-06-05T10:56:20Z"
+    name: activator-service-4kql4
+    namespace: knative-serving
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: activator-service
+      uid: da35b8fd-ea8e-45b5-9b3c-dd9fe9d03a39
+    resourceVersion: "42075"
+    uid: 0e54c2da-ee7c-42fb-b838-299eb00becfd
+  ports:
+  - name: http2
+    port: 8013
+    protocol: TCP
+  - name: https
+    port: 8112
+    protocol: TCP
+  - name: http-profiling
+    port: 8008
+    protocol: TCP
+  - name: http
+    port: 8012
+    protocol: TCP
+  - name: http-metrics
+    port: 9090
+    protocol: TCP
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - 10.129.2.17
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: ip-10-0-105-86.ec2.internal
+    targetRef:
+      kind: Pod
+      name: activator-7b646b88cc-fkrcw
+      namespace: knative-serving
+      uid: e4a914b6-97d8-4eda-8650-d3af6cfbc8c8
+    zone: us-east-1f
+  - addresses:
+    - 10.131.0.30
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: ip-10-0-53-229.ec2.internal
+    targetRef:
+      kind: Pod
+      name: activator-7b646b88cc-vntdm
+      namespace: knative-serving
+      uid: 626d8077-8fc7-4eb2-becb-7daec3e60b5f
+    zone: us-east-1d
+  kind: EndpointSlice
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2024-06-05T10:56:20Z"
+    creationTimestamp: "2024-06-05T10:55:58Z"
+    generateName: activator-sm-service-
+    generation: 5
+    labels:
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      kubernetes.io/service-name: activator-sm-service
+      name: activator-sm-service
+    managedFields:
+    - apiVersion: discovery.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:addressType: {}
+        f:endpoints: {}
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:endpointslice.kubernetes.io/managed-by: {}
+            f:kubernetes.io/service-name: {}
+            f:name: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"60208ab2-27ba-455f-863f-b4bc407af9e8"}: {}
+        f:ports: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2024-06-05T10:56:20Z"
+    name: activator-sm-service-5mnsv
+    namespace: knative-serving
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: activator-sm-service
+      uid: 60208ab2-27ba-455f-863f-b4bc407af9e8
+    resourceVersion: "42071"
+    uid: d18850cb-76bd-4ed8-8c2c-605f570366ca
+  ports:
+  - name: https
+    port: 8444
+    protocol: TCP
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - 10.128.2.25
+    conditions:
+      ready: true
+  kind: EndpointSlice
+  metadata:
+    creationTimestamp: "2024-06-05T10:56:00Z"
+    generateName: autoscaler-bucket-00-of-01-
+    generation: 1
+    labels:
+      endpointslice.kubernetes.io/managed-by: endpointslicemirroring-controller.k8s.io
+      kubernetes.io/service-name: autoscaler-bucket-00-of-01
+    managedFields:
+    - apiVersion: discovery.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:addressType: {}
+        f:endpoints: {}
+        f:metadata:
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:endpointslice.kubernetes.io/managed-by: {}
+            f:kubernetes.io/service-name: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"e80f2b75-c9fb-4a06-8f62-55415b283175"}: {}
+        f:ports: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2024-06-05T10:56:00Z"
+    name: autoscaler-bucket-00-of-01-dhnzp
+    namespace: knative-serving
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Endpoints
+      name: autoscaler-bucket-00-of-01
+      uid: e80f2b75-c9fb-4a06-8f62-55415b283175
+    resourceVersion: "41436"
+    uid: a4d85aa9-28dc-4f63-81c4-ca23891b7b98
+  ports:
+  - name: http
+    port: 8080
+    protocol: TCP
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - 10.128.2.26
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: ip-10-0-91-247.ec2.internal
+    targetRef:
+      kind: Pod
+      name: autoscaler-hpa-684ccf4558-c6grm
+      namespace: knative-serving
+      uid: 44191b27-b938-478e-8bd2-f5e309222d26
+    zone: us-east-1f
+  - addresses:
+    - 10.131.0.26
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: ip-10-0-53-229.ec2.internal
+    targetRef:
+      kind: Pod
+      name: autoscaler-hpa-684ccf4558-nxztv
+      namespace: knative-serving
+      uid: 194f6bb3-f844-4baa-978e-c08f86e404a2
+    zone: us-east-1d
+  kind: EndpointSlice
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2024-06-05T10:56:08Z"
+    creationTimestamp: "2024-06-05T10:55:57Z"
+    generateName: autoscaler-hpa-
+    generation: 4
+    labels:
+      app: autoscaler-hpa
+      app.kubernetes.io/component: autoscaler-hpa
+      app.kubernetes.io/name: knative-serving
+      app.kubernetes.io/version: release-v1.11
+      autoscaling.knative.dev/autoscaler-provider: hpa
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      kubernetes.io/service-name: autoscaler-hpa
+    managedFields:
+    - apiVersion: discovery.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:addressType: {}
+        f:endpoints: {}
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:app: {}
+            f:app.kubernetes.io/component: {}
+            f:app.kubernetes.io/name: {}
+            f:app.kubernetes.io/version: {}
+            f:autoscaling.knative.dev/autoscaler-provider: {}
+            f:endpointslice.kubernetes.io/managed-by: {}
+            f:kubernetes.io/service-name: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"8aef1ebc-25df-46e7-81ce-53b50a6839ef"}: {}
+        f:ports: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2024-06-05T10:56:08Z"
+    name: autoscaler-hpa-rnxk2
+    namespace: knative-serving
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: autoscaler-hpa
+      uid: 8aef1ebc-25df-46e7-81ce-53b50a6839ef
+    resourceVersion: "41732"
+    uid: eee3d8d1-fa3f-4c0d-9c44-56e178c6d486
+  ports:
+  - name: http-profiling
+    port: 8008
+    protocol: TCP
+  - name: http-metrics
+    port: 9090
+    protocol: TCP
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - 10.128.2.26
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: ip-10-0-91-247.ec2.internal
+    targetRef:
+      kind: Pod
+      name: autoscaler-hpa-684ccf4558-c6grm
+      namespace: knative-serving
+      uid: 44191b27-b938-478e-8bd2-f5e309222d26
+    zone: us-east-1f
+  - addresses:
+    - 10.131.0.26
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: ip-10-0-53-229.ec2.internal
+    targetRef:
+      kind: Pod
+      name: autoscaler-hpa-684ccf4558-nxztv
+      namespace: knative-serving
+      uid: 194f6bb3-f844-4baa-978e-c08f86e404a2
+    zone: us-east-1d
+  kind: EndpointSlice
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2024-06-05T10:56:08Z"
+    creationTimestamp: "2024-06-05T10:55:58Z"
+    generateName: autoscaler-hpa-sm-service-
+    generation: 4
+    labels:
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      kubernetes.io/service-name: autoscaler-hpa-sm-service
+      name: autoscaler-hpa-sm-service
+    managedFields:
+    - apiVersion: discovery.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:addressType: {}
+        f:endpoints: {}
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:endpointslice.kubernetes.io/managed-by: {}
+            f:kubernetes.io/service-name: {}
+            f:name: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"bf3ccf99-df20-44ce-9040-9131d593742f"}: {}
+        f:ports: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2024-06-05T10:56:08Z"
+    name: autoscaler-hpa-sm-service-bcnp8
+    namespace: knative-serving
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: autoscaler-hpa-sm-service
+      uid: bf3ccf99-df20-44ce-9040-9131d593742f
+    resourceVersion: "41734"
+    uid: 5ecd2230-98d1-4225-8b51-c26df31bf616
+  ports:
+  - name: https
+    port: 8444
+    protocol: TCP
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - 10.128.2.25
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: ip-10-0-91-247.ec2.internal
+    targetRef:
+      kind: Pod
+      name: autoscaler-588cfb64fb-8csmw
+      namespace: knative-serving
+      uid: efd1357a-d803-4fba-a158-43b6d9b9462d
+    zone: us-east-1f
+  - addresses:
+    - 10.131.0.23
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: ip-10-0-53-229.ec2.internal
+    targetRef:
+      kind: Pod
+      name: autoscaler-588cfb64fb-9nv45
+      namespace: knative-serving
+      uid: 73b40b4b-88e1-431d-8c63-10cf65d56478
+    zone: us-east-1d
+  kind: EndpointSlice
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2024-06-05T10:56:18Z"
+    creationTimestamp: "2024-06-05T10:55:58Z"
+    generateName: autoscaler-sm-service-
+    generation: 5
+    labels:
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      kubernetes.io/service-name: autoscaler-sm-service
+      name: autoscaler-sm-service
+    managedFields:
+    - apiVersion: discovery.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:addressType: {}
+        f:endpoints: {}
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:endpointslice.kubernetes.io/managed-by: {}
+            f:kubernetes.io/service-name: {}
+            f:name: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"3f50412e-b739-4d46-88e1-771c73038abf"}: {}
+        f:ports: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2024-06-05T10:56:18Z"
+    name: autoscaler-sm-service-vw5gz
+    namespace: knative-serving
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: autoscaler-sm-service
+      uid: 3f50412e-b739-4d46-88e1-771c73038abf
+    resourceVersion: "42037"
+    uid: 77743b84-adc1-4b4b-844e-fe04a98e65d1
+  ports:
+  - name: https
+    port: 8444
+    protocol: TCP
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - 10.128.2.25
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: ip-10-0-91-247.ec2.internal
+    targetRef:
+      kind: Pod
+      name: autoscaler-588cfb64fb-8csmw
+      namespace: knative-serving
+      uid: efd1357a-d803-4fba-a158-43b6d9b9462d
+    zone: us-east-1f
+  - addresses:
+    - 10.131.0.23
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: ip-10-0-53-229.ec2.internal
+    targetRef:
+      kind: Pod
+      name: autoscaler-588cfb64fb-9nv45
+      namespace: knative-serving
+      uid: 73b40b4b-88e1-431d-8c63-10cf65d56478
+    zone: us-east-1d
+  kind: EndpointSlice
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2024-06-05T10:56:18Z"
+    creationTimestamp: "2024-06-05T10:55:56Z"
+    generateName: autoscaler-
+    generation: 5
+    labels:
+      app: autoscaler
+      app.kubernetes.io/component: autoscaler
+      app.kubernetes.io/name: knative-serving
+      app.kubernetes.io/version: release-v1.11
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      kubernetes.io/service-name: autoscaler
+    managedFields:
+    - apiVersion: discovery.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:addressType: {}
+        f:endpoints: {}
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:app: {}
+            f:app.kubernetes.io/component: {}
+            f:app.kubernetes.io/name: {}
+            f:app.kubernetes.io/version: {}
+            f:endpointslice.kubernetes.io/managed-by: {}
+            f:kubernetes.io/service-name: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"98479293-fb9a-4793-acc1-ab07e39d128c"}: {}
+        f:ports: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2024-06-05T10:56:18Z"
+    name: autoscaler-tbglh
+    namespace: knative-serving
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: autoscaler
+      uid: 98479293-fb9a-4793-acc1-ab07e39d128c
+    resourceVersion: "42036"
+    uid: e097c4c4-136e-457e-9412-f070149a805c
+  ports:
+  - name: http
+    port: 8080
+    protocol: TCP
+  - name: http-profiling
+    port: 8008
+    protocol: TCP
+  - name: http-metrics
+    port: 9090
+    protocol: TCP
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - 10.128.2.27
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: ip-10-0-91-247.ec2.internal
+    targetRef:
+      kind: Pod
+      name: controller-c85f6bb7-wxvch
+      namespace: knative-serving
+      uid: 44878ff8-8b0c-4402-8e28-329d68e5f1ab
+    zone: us-east-1f
+  - addresses:
+    - 10.131.0.29
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: ip-10-0-53-229.ec2.internal
+    targetRef:
+      kind: Pod
+      name: controller-c85f6bb7-8wsmt
+      namespace: knative-serving
+      uid: bdb28cb1-d6a0-4f08-8230-8592b3437270
+    zone: us-east-1d
+  kind: EndpointSlice
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2024-06-05T10:56:09Z"
+    creationTimestamp: "2024-06-05T10:55:59Z"
+    generateName: controller-sm-service-
+    generation: 11
+    labels:
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      kubernetes.io/service-name: controller-sm-service
+      name: controller-sm-service
+    managedFields:
+    - apiVersion: discovery.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:addressType: {}
+        f:endpoints: {}
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:endpointslice.kubernetes.io/managed-by: {}
+            f:kubernetes.io/service-name: {}
+            f:name: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"9b7c74dc-3587-4d18-a66d-394ac086e374"}: {}
+        f:ports: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2024-06-05T10:56:09Z"
+    name: controller-sm-service-44zd5
+    namespace: knative-serving
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: controller-sm-service
+      uid: 9b7c74dc-3587-4d18-a66d-394ac086e374
+    resourceVersion: "41813"
+    uid: 12dba85b-9e58-4f28-b599-380ecdb4984e
+  ports:
+  - name: https
+    port: 8444
+    protocol: TCP
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - 10.128.2.27
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: ip-10-0-91-247.ec2.internal
+    targetRef:
+      kind: Pod
+      name: controller-c85f6bb7-wxvch
+      namespace: knative-serving
+      uid: 44878ff8-8b0c-4402-8e28-329d68e5f1ab
+    zone: us-east-1f
+  - addresses:
+    - 10.131.0.29
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: ip-10-0-53-229.ec2.internal
+    targetRef:
+      kind: Pod
+      name: controller-c85f6bb7-8wsmt
+      namespace: knative-serving
+      uid: bdb28cb1-d6a0-4f08-8230-8592b3437270
+    zone: us-east-1d
+  kind: EndpointSlice
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2024-06-05T10:56:09Z"
+    creationTimestamp: "2024-06-05T10:55:56Z"
+    generateName: controller-
+    generation: 11
+    labels:
+      app: controller
+      app.kubernetes.io/component: controller
+      app.kubernetes.io/name: knative-serving
+      app.kubernetes.io/version: release-v1.11
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      kubernetes.io/service-name: controller
+    managedFields:
+    - apiVersion: discovery.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:addressType: {}
+        f:endpoints: {}
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:app: {}
+            f:app.kubernetes.io/component: {}
+            f:app.kubernetes.io/name: {}
+            f:app.kubernetes.io/version: {}
+            f:endpointslice.kubernetes.io/managed-by: {}
+            f:kubernetes.io/service-name: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"1a1888e6-7075-41eb-ba40-7fa649672145"}: {}
+        f:ports: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2024-06-05T10:56:09Z"
+    name: controller-xzsw9
+    namespace: knative-serving
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: controller
+      uid: 1a1888e6-7075-41eb-ba40-7fa649672145
+    resourceVersion: "41814"
+    uid: f4bf0ad3-0218-4692-9328-8ad3697f6e08
+  ports:
+  - name: http-profiling
+    port: 8008
+    protocol: TCP
+  - name: http-metrics
+    port: 9090
+    protocol: TCP
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - 10.129.2.21
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: ip-10-0-105-86.ec2.internal
+    targetRef:
+      kind: Pod
+      name: net-istio-webhook-5dfc9b8d7c-l8gx9
+      namespace: knative-serving
+      uid: a1d5c163-0b90-476a-b08a-97e774894ff7
+    zone: us-east-1f
+  - addresses:
+    - 10.131.0.28
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: ip-10-0-53-229.ec2.internal
+    targetRef:
+      kind: Pod
+      name: net-istio-webhook-5dfc9b8d7c-vwl24
+      namespace: knative-serving
+      uid: 7f9241c1-68f5-495c-835c-f07b3baa2587
+    zone: us-east-1d
+  kind: EndpointSlice
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2024-06-05T10:56:08Z"
+    creationTimestamp: "2024-06-05T10:55:58Z"
+    generateName: net-istio-webhook-
+    generation: 5
+    labels:
+      app.kubernetes.io/component: net-istio
+      app.kubernetes.io/name: knative-serving
+      app.kubernetes.io/version: release-v1.11
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      kubernetes.io/service-name: net-istio-webhook
+      networking.knative.dev/ingress-provider: istio
+      role: net-istio-webhook
+    managedFields:
+    - apiVersion: discovery.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:addressType: {}
+        f:endpoints: {}
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:app.kubernetes.io/component: {}
+            f:app.kubernetes.io/name: {}
+            f:app.kubernetes.io/version: {}
+            f:endpointslice.kubernetes.io/managed-by: {}
+            f:kubernetes.io/service-name: {}
+            f:networking.knative.dev/ingress-provider: {}
+            f:role: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"f6cf7112-457b-4da9-8bb0-8bae77a27217"}: {}
+        f:ports: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2024-06-05T10:56:08Z"
+    name: net-istio-webhook-rbthc
+    namespace: knative-serving
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: net-istio-webhook
+      uid: f6cf7112-457b-4da9-8bb0-8bae77a27217
+    resourceVersion: "41755"
+    uid: ff934096-75db-49dc-a2ae-8cce45dbf08f
+  ports:
+  - name: https-webhook
+    port: 8443
+    protocol: TCP
+  - name: http-profiling
+    port: 8008
+    protocol: TCP
+  - name: http-metrics
+    port: 9090
+    protocol: TCP
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - 10.131.0.25
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: ip-10-0-53-229.ec2.internal
+    targetRef:
+      kind: Pod
+      name: webhook-5686f8c6f6-rs9n5
+      namespace: knative-serving
+      uid: ac8dfc19-cc1e-4185-88ad-fd8b7032dd84
+    zone: us-east-1d
+  - addresses:
+    - 10.129.2.22
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: ip-10-0-105-86.ec2.internal
+    targetRef:
+      kind: Pod
+      name: webhook-5686f8c6f6-7q2cx
+      namespace: knative-serving
+      uid: 41d954c9-81e4-4f6e-b986-ea82b0778176
+    zone: us-east-1f
+  kind: EndpointSlice
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2024-06-05T10:56:14Z"
+    creationTimestamp: "2024-06-05T10:55:59Z"
+    generateName: webhook-sm-service-
+    generation: 5
+    labels:
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      kubernetes.io/service-name: webhook-sm-service
+      name: webhook-sm-service
+    managedFields:
+    - apiVersion: discovery.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:addressType: {}
+        f:endpoints: {}
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:endpointslice.kubernetes.io/managed-by: {}
+            f:kubernetes.io/service-name: {}
+            f:name: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"15bdb23c-94f3-4006-9d43-7117c9bc7b04"}: {}
+        f:ports: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2024-06-05T10:56:14Z"
+    name: webhook-sm-service-fhqwj
+    namespace: knative-serving
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: webhook-sm-service
+      uid: 15bdb23c-94f3-4006-9d43-7117c9bc7b04
+    resourceVersion: "41940"
+    uid: 42b4445f-760d-4e25-9b4a-3102f83279f9
+  ports:
+  - name: https
+    port: 8444
+    protocol: TCP
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - 10.131.0.25
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: ip-10-0-53-229.ec2.internal
+    targetRef:
+      kind: Pod
+      name: webhook-5686f8c6f6-rs9n5
+      namespace: knative-serving
+      uid: ac8dfc19-cc1e-4185-88ad-fd8b7032dd84
+    zone: us-east-1d
+  - addresses:
+    - 10.129.2.22
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: ip-10-0-105-86.ec2.internal
+    targetRef:
+      kind: Pod
+      name: webhook-5686f8c6f6-7q2cx
+      namespace: knative-serving
+      uid: 41d954c9-81e4-4f6e-b986-ea82b0778176
+    zone: us-east-1f
+  kind: EndpointSlice
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2024-06-05T10:56:14Z"
+    creationTimestamp: "2024-06-05T10:55:57Z"
+    generateName: webhook-
+    generation: 5
+    labels:
+      app.kubernetes.io/component: webhook
+      app.kubernetes.io/name: knative-serving
+      app.kubernetes.io/version: release-v1.11
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      kubernetes.io/service-name: webhook
+      role: webhook
+    managedFields:
+    - apiVersion: discovery.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:addressType: {}
+        f:endpoints: {}
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:app.kubernetes.io/component: {}
+            f:app.kubernetes.io/name: {}
+            f:app.kubernetes.io/version: {}
+            f:endpointslice.kubernetes.io/managed-by: {}
+            f:kubernetes.io/service-name: {}
+            f:role: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"452acf90-7c3d-4676-829b-533a24378b2e"}: {}
+        f:ports: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2024-06-05T10:56:14Z"
+    name: webhook-znvvz
+    namespace: knative-serving
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: webhook
+      uid: 452acf90-7c3d-4676-829b-533a24378b2e
+    resourceVersion: "41943"
+    uid: ed2c813a-05fd-4345-abf8-f5d597c7aa81
+  ports:
+  - name: https-webhook
+    port: 8443
+    protocol: TCP
+  - name: http-profiling
+    port: 8008
+    protocol: TCP
+  - name: http-metrics
+    port: 9090
+    protocol: TCP
+kind: EndpointSliceList
+metadata:
+  resourceVersion: "53939"

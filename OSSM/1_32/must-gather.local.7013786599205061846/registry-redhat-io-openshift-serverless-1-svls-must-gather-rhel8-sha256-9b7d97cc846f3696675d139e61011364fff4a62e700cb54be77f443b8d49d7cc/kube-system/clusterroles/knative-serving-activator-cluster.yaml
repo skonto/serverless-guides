@@ -1,0 +1,33 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"rbac.authorization.k8s.io/v1","kind":"ClusterRole","metadata":{"labels":{"app.kubernetes.io/name":"knative-serving","app.kubernetes.io/version":"release-v1.11","serving.knative.dev/controller":"true"},"name":"knative-serving-activator-cluster"},"rules":[{"apiGroups":[""],"resources":["services","endpoints"],"verbs":["get","list","watch"]},{"apiGroups":["serving.knative.dev"],"resources":["revisions"],"verbs":["get","list","watch"]}]}
+    manifestival: new
+  creationTimestamp: "2024-06-05T10:55:45Z"
+  labels:
+    app.kubernetes.io/name: knative-serving
+    app.kubernetes.io/version: release-v1.11
+    serving.knative.dev/controller: "true"
+  name: knative-serving-activator-cluster
+  resourceVersion: "41489"
+  uid: 4709733c-6a9a-46d1-aef0-1e03119fdc8d
+rules:
+- apiGroups:
+  - ""
+  resources:
+  - services
+  - endpoints
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - serving.knative.dev
+  resources:
+  - revisions
+  verbs:
+  - get
+  - list
+  - watch

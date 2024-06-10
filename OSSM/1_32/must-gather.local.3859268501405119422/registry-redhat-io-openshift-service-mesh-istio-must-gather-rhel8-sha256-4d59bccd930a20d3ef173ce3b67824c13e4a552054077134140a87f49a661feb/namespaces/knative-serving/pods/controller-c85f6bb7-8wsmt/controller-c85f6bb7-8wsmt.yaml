@@ -1,0 +1,444 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    k8s.ovn.org/pod-networks: '{"default":{"ip_addresses":["10.131.0.29/23"],"mac_address":"0a:58:0a:83:00:1d","gateway_ips":["10.131.0.1"],"routes":[{"dest":"10.128.0.0/14","nextHop":"10.131.0.1"},{"dest":"172.30.0.0/16","nextHop":"10.131.0.1"},{"dest":"100.64.0.0/16","nextHop":"10.131.0.1"}],"ip_address":"10.131.0.29/23","gateway_ip":"10.131.0.1"}}'
+    k8s.v1.cni.cncf.io/network-status: |-
+      [{
+          "name": "ovn-kubernetes",
+          "interface": "eth0",
+          "ips": [
+              "10.131.0.29"
+          ],
+          "mac": "0a:58:0a:83:00:1d",
+          "default": true,
+          "dns": {}
+      }]
+    openshift.io/scc: restricted-v2
+    seccomp.security.alpha.kubernetes.io/pod: runtime/default
+    serving.knative.openshift.io/mounted-cert-version: "40918"
+  creationTimestamp: "2024-06-05T10:56:02Z"
+  generateName: controller-c85f6bb7-
+  labels:
+    app: controller
+    app.kubernetes.io/component: controller
+    app.kubernetes.io/name: knative-serving
+    app.kubernetes.io/version: release-v1.11
+    pod-template-hash: c85f6bb7
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.ovn.org/pod-networks: {}
+    manager: ip-10-0-53-229
+    operation: Update
+    subresource: status
+    time: "2024-06-05T10:56:02Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:serving.knative.openshift.io/mounted-cert-version: {}
+        f:generateName: {}
+        f:labels:
+          .: {}
+          f:app: {}
+          f:app.kubernetes.io/component: {}
+          f:app.kubernetes.io/name: {}
+          f:app.kubernetes.io/version: {}
+          f:pod-template-hash: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"5a4a1e24-7ef6-44a0-bd7b-6707599e55f8"}: {}
+      f:spec:
+        f:affinity:
+          .: {}
+          f:podAntiAffinity:
+            .: {}
+            f:preferredDuringSchedulingIgnoredDuringExecution: {}
+        f:containers:
+          k:{"name":"controller"}:
+            .: {}
+            f:env:
+              .: {}
+              k:{"name":"CONFIG_LOGGING_NAME"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"CONFIG_OBSERVABILITY_NAME"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"HTTP_PROXY"}:
+                .: {}
+                f:name: {}
+              k:{"name":"HTTPS_PROXY"}:
+                .: {}
+                f:name: {}
+              k:{"name":"KUBERNETES_MIN_VERSION"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"METRICS_DOMAIN"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"NO_PROXY"}:
+                .: {}
+                f:name: {}
+              k:{"name":"POD_NAME"}:
+                .: {}
+                f:name: {}
+                f:valueFrom:
+                  .: {}
+                  f:fieldRef: {}
+              k:{"name":"SSL_CERT_DIR"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"SYSTEM_NAMESPACE"}:
+                .: {}
+                f:name: {}
+                f:valueFrom:
+                  .: {}
+                  f:fieldRef: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:livenessProbe:
+              .: {}
+              f:failureThreshold: {}
+              f:httpGet:
+                .: {}
+                f:path: {}
+                f:port: {}
+                f:scheme: {}
+              f:periodSeconds: {}
+              f:successThreshold: {}
+              f:timeoutSeconds: {}
+            f:name: {}
+            f:ports:
+              .: {}
+              k:{"containerPort":8008,"protocol":"TCP"}:
+                .: {}
+                f:containerPort: {}
+                f:name: {}
+                f:protocol: {}
+              k:{"containerPort":8080,"protocol":"TCP"}:
+                .: {}
+                f:containerPort: {}
+                f:name: {}
+                f:protocol: {}
+              k:{"containerPort":9090,"protocol":"TCP"}:
+                .: {}
+                f:containerPort: {}
+                f:name: {}
+                f:protocol: {}
+            f:readinessProbe:
+              .: {}
+              f:failureThreshold: {}
+              f:httpGet:
+                .: {}
+                f:path: {}
+                f:port: {}
+                f:scheme: {}
+              f:periodSeconds: {}
+              f:successThreshold: {}
+              f:timeoutSeconds: {}
+            f:resources:
+              .: {}
+              f:limits:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:securityContext:
+              .: {}
+              f:allowPrivilegeEscalation: {}
+              f:capabilities:
+                .: {}
+                f:drop: {}
+              f:readOnlyRootFilesystem: {}
+              f:runAsNonRoot: {}
+              f:seccompProfile:
+                .: {}
+                f:type: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/custom-certs"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+        f:dnsPolicy: {}
+        f:enableServiceLinks: {}
+        f:restartPolicy: {}
+        f:schedulerName: {}
+        f:securityContext: {}
+        f:serviceAccount: {}
+        f:serviceAccountName: {}
+        f:terminationGracePeriodSeconds: {}
+        f:volumes:
+          .: {}
+          k:{"name":"custom-certs-config-service-ca"}:
+            .: {}
+            f:configMap:
+              .: {}
+              f:defaultMode: {}
+              f:name: {}
+            f:name: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2024-06-05T10:56:02Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.v1.cni.cncf.io/network-status: {}
+    manager: multus-daemon
+    operation: Update
+    subresource: status
+    time: "2024-06-05T10:56:07Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"ContainersReady"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Initialized"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Ready"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+        f:containerStatuses: {}
+        f:hostIP: {}
+        f:phase: {}
+        f:podIP: {}
+        f:podIPs:
+          .: {}
+          k:{"ip":"10.131.0.29"}:
+            .: {}
+            f:ip: {}
+        f:startTime: {}
+    manager: kubelet
+    operation: Update
+    subresource: status
+    time: "2024-06-05T10:56:09Z"
+  name: controller-c85f6bb7-8wsmt
+  namespace: knative-serving
+  ownerReferences:
+  - apiVersion: apps/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: ReplicaSet
+    name: controller-c85f6bb7
+    uid: 5a4a1e24-7ef6-44a0-bd7b-6707599e55f8
+  resourceVersion: "41774"
+  uid: bdb28cb1-d6a0-4f08-8230-8592b3437270
+spec:
+  affinity:
+    podAntiAffinity:
+      preferredDuringSchedulingIgnoredDuringExecution:
+      - podAffinityTerm:
+          labelSelector:
+            matchLabels:
+              app: controller
+          topologyKey: kubernetes.io/hostname
+        weight: 100
+  containers:
+  - env:
+    - name: POD_NAME
+      valueFrom:
+        fieldRef:
+          apiVersion: v1
+          fieldPath: metadata.name
+    - name: SYSTEM_NAMESPACE
+      valueFrom:
+        fieldRef:
+          apiVersion: v1
+          fieldPath: metadata.namespace
+    - name: CONFIG_LOGGING_NAME
+      value: config-logging
+    - name: CONFIG_OBSERVABILITY_NAME
+      value: config-observability
+    - name: METRICS_DOMAIN
+      value: knative.dev/internal/serving
+    - name: SSL_CERT_DIR
+      value: /custom-certs
+    - name: HTTP_PROXY
+    - name: HTTPS_PROXY
+    - name: NO_PROXY
+    - name: KUBERNETES_MIN_VERSION
+      value: v1.0.0
+    image: registry.redhat.io/openshift-serverless-1/serving-controller-rhel8@sha256:4f56e90157c9c9ce5658b9f0946cf786703fd12a24abd091c0e5d6647c00db23
+    imagePullPolicy: IfNotPresent
+    livenessProbe:
+      failureThreshold: 6
+      httpGet:
+        path: /health
+        port: probes
+        scheme: HTTP
+      periodSeconds: 5
+      successThreshold: 1
+      timeoutSeconds: 1
+    name: controller
+    ports:
+    - containerPort: 9090
+      name: metrics
+      protocol: TCP
+    - containerPort: 8008
+      name: profiling
+      protocol: TCP
+    - containerPort: 8080
+      name: probes
+      protocol: TCP
+    readinessProbe:
+      failureThreshold: 3
+      httpGet:
+        path: /readiness
+        port: probes
+        scheme: HTTP
+      periodSeconds: 5
+      successThreshold: 1
+      timeoutSeconds: 1
+    resources:
+      limits:
+        cpu: "1"
+        memory: 1000Mi
+      requests:
+        cpu: 100m
+        memory: 100Mi
+    securityContext:
+      allowPrivilegeEscalation: false
+      capabilities:
+        drop:
+        - ALL
+      readOnlyRootFilesystem: true
+      runAsNonRoot: true
+      runAsUser: 1000720000
+      seccompProfile:
+        type: RuntimeDefault
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /custom-certs
+      name: custom-certs-config-service-ca
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-xlk72
+      readOnly: true
+  dnsPolicy: ClusterFirst
+  enableServiceLinks: true
+  imagePullSecrets:
+  - name: controller-dockercfg-tv7hw
+  nodeName: ip-10-0-53-229.ec2.internal
+  preemptionPolicy: PreemptLowerPriority
+  priority: 0
+  restartPolicy: Always
+  schedulerName: default-scheduler
+  securityContext:
+    fsGroup: 1000720000
+    seLinuxOptions:
+      level: s0:c27,c9
+    seccompProfile:
+      type: RuntimeDefault
+  serviceAccount: controller
+  serviceAccountName: controller
+  terminationGracePeriodSeconds: 30
+  tolerations:
+  - effect: NoExecute
+    key: node.kubernetes.io/not-ready
+    operator: Exists
+    tolerationSeconds: 300
+  - effect: NoExecute
+    key: node.kubernetes.io/unreachable
+    operator: Exists
+    tolerationSeconds: 300
+  - effect: NoSchedule
+    key: node.kubernetes.io/memory-pressure
+    operator: Exists
+  volumes:
+  - configMap:
+      defaultMode: 420
+      name: config-service-ca
+    name: custom-certs-config-service-ca
+  - name: kube-api-access-xlk72
+    projected:
+      defaultMode: 420
+      sources:
+      - serviceAccountToken:
+          expirationSeconds: 3607
+          path: token
+      - configMap:
+          items:
+          - key: ca.crt
+            path: ca.crt
+          name: kube-root-ca.crt
+      - downwardAPI:
+          items:
+          - fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.namespace
+            path: namespace
+      - configMap:
+          items:
+          - key: service-ca.crt
+            path: service-ca.crt
+          name: openshift-service-ca.crt
+status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2024-06-05T10:56:02Z"
+    status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2024-06-05T10:56:09Z"
+    status: "True"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2024-06-05T10:56:09Z"
+    status: "True"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2024-06-05T10:56:02Z"
+    status: "True"
+    type: PodScheduled
+  containerStatuses:
+  - containerID: cri-o://847ef540a93052971a40b384964db47f56cbe5967af4f06c7f40dd90ce141ea9
+    image: registry.redhat.io/openshift-serverless-1/serving-controller-rhel8@sha256:4f56e90157c9c9ce5658b9f0946cf786703fd12a24abd091c0e5d6647c00db23
+    imageID: registry.redhat.io/openshift-serverless-1/serving-controller-rhel8@sha256:4f56e90157c9c9ce5658b9f0946cf786703fd12a24abd091c0e5d6647c00db23
+    lastState: {}
+    name: controller
+    ready: true
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2024-06-05T10:56:07Z"
+  hostIP: 10.0.53.229
+  phase: Running
+  podIP: 10.131.0.29
+  podIPs:
+  - ip: 10.131.0.29
+  qosClass: Burstable
+  startTime: "2024-06-05T10:56:02Z"

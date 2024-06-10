@@ -1,0 +1,3258 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+	<link href="https://unpkg.com/bootstrap-table@1.17.1/dist/bootstrap-table.min.css" rel="stylesheet">
+
+    <title>Events</title>
+	<style type="text/css">
+      body * {
+       font-size: 12px!important;
+      }
+	  .text-overflow() {
+       overflow: hidden;
+	   text-overflow: ellipsis;
+	   white-space: nowrap;
+	  }
+      .truncated {
+        display: inline-block;
+        max-width: 200px;
+        .text-overflow();
+      }
+    </style>
+  </head>
+  <body>
+
+<table
+  id="events"
+  class="table table-bordered table-hover table-sm"
+  data-toggle="table"
+  data-search="true"
+  data-show-search-clear-button="true"
+  data-filter-control="true"
+  data-advanced-search="true"
+  data-id-table="advancedTable"
+  data-pagination="true"
+  data-page-size="100"
+  data-show-columns-toggle-all="true"
+  data-show-pagination-switch="true"
+  data-show-columns="true">
+  <thead>
+    <tr>
+      <th data-width="100" data-field="time" data-filter-control="input" data-sortable="true">Time</th>
+      <th data-width="200" data-field="namespace" data-filter-control="input" data-sortable="true">Namespace</th>
+      <th data-width="200" data-field="component" data-filter-control="input" data-sortable="true">Component</th>
+      <th data-width="200" data-field="relatedobject" data-filter-control="input" data-sortable="true">RelatedObject</th>
+      <th data-field="reason" data-filter-control="input">Reason</th>
+      <th data-field="message" data-filter-control="input" data-escape="true">Message</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:55:56 +0300 EEST" title="First Seen: 00:00:00">13:55:56</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated"></p></td>
+      <td><p class="truncated">controller-85c6957d79-wdl8x</p></td>
+      <td><p class="text-muted">Scheduled</p></td>
+      <td data-formatter="messageFormatter">Successfully assigned knative-serving/controller-85c6957d79-wdl8x to ip-10-0-53-229.ec2.internal</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:45:56 +0300 EEST" title="First Seen: 00:00:00">13:45:56</time></td>
+      <td><p class="truncated">istio-system</p></td>
+      <td><p class="truncated"></p></td>
+      <td><p class="truncated">istio-ingressgateway-7b6954747-qqhbw</p></td>
+      <td><p class="text-muted">Scheduled</p></td>
+      <td data-formatter="messageFormatter">Successfully assigned istio-system/istio-ingressgateway-7b6954747-qqhbw to ip-10-0-91-247.ec2.internal</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:56:11 +0300 EEST" title="First Seen: 00:00:00">13:56:11</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated"></p></td>
+      <td><p class="truncated">webhook-5686f8c6f6-7q2cx</p></td>
+      <td><p class="text-muted">Scheduled</p></td>
+      <td data-formatter="messageFormatter">Successfully assigned knative-serving/webhook-5686f8c6f6-7q2cx to ip-10-0-105-86.ec2.internal</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:55:56 +0300 EEST" title="First Seen: 00:00:00">13:55:56</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated"></p></td>
+      <td><p class="truncated">webhook-5686f8c6f6-rs9n5</p></td>
+      <td><p class="text-muted">Scheduled</p></td>
+      <td data-formatter="messageFormatter">Successfully assigned knative-serving/webhook-5686f8c6f6-rs9n5 to ip-10-0-53-229.ec2.internal</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:55:57 +0300 EEST" title="First Seen: 00:00:00">13:55:57</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated"></p></td>
+      <td><p class="truncated">net-istio-webhook-5dfc9b8d7c-vwl24</p></td>
+      <td><p class="text-muted">Scheduled</p></td>
+      <td data-formatter="messageFormatter">Successfully assigned knative-serving/net-istio-webhook-5dfc9b8d7c-vwl24 to ip-10-0-53-229.ec2.internal</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:45:39 +0300 EEST" title="First Seen: 00:00:00">13:45:39</time></td>
+      <td><p class="truncated">openshift-operators</p></td>
+      <td><p class="truncated"></p></td>
+      <td><p class="truncated">istio-cni-node-v2-4-4xd9w</p></td>
+      <td><p class="text-muted">Scheduled</p></td>
+      <td data-formatter="messageFormatter">Successfully assigned openshift-operators/istio-cni-node-v2-4-4xd9w to ip-10-0-87-81.ec2.internal</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:55:57 +0300 EEST" title="First Seen: 00:00:00">13:55:57</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated"></p></td>
+      <td><p class="truncated">net-istio-webhook-5dfc9b8d7c-l8gx9</p></td>
+      <td><p class="text-muted">Scheduled</p></td>
+      <td data-formatter="messageFormatter">Successfully assigned knative-serving/net-istio-webhook-5dfc9b8d7c-l8gx9 to ip-10-0-105-86.ec2.internal</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:45:56 +0300 EEST" title="First Seen: 00:00:00">13:45:56</time></td>
+      <td><p class="truncated">istio-system</p></td>
+      <td><p class="truncated"></p></td>
+      <td><p class="truncated">istio-egressgateway-856fbd6dfc-t5xwv</p></td>
+      <td><p class="text-muted">Scheduled</p></td>
+      <td data-formatter="messageFormatter">Successfully assigned istio-system/istio-egressgateway-856fbd6dfc-t5xwv to ip-10-0-91-247.ec2.internal</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:45:39 +0300 EEST" title="First Seen: 00:00:00">13:45:39</time></td>
+      <td><p class="truncated">openshift-operators</p></td>
+      <td><p class="truncated"></p></td>
+      <td><p class="truncated">istio-cni-node-v2-4-9ct4z</p></td>
+      <td><p class="text-muted">Scheduled</p></td>
+      <td data-formatter="messageFormatter">Successfully assigned openshift-operators/istio-cni-node-v2-4-9ct4z to ip-10-0-91-247.ec2.internal</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:55:57 +0300 EEST" title="First Seen: 00:00:00">13:55:57</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated"></p></td>
+      <td><p class="truncated">net-istio-controller-96d4b96dd-r5tcz</p></td>
+      <td><p class="text-muted">Scheduled</p></td>
+      <td data-formatter="messageFormatter">Successfully assigned knative-serving/net-istio-controller-96d4b96dd-r5tcz to ip-10-0-105-86.ec2.internal</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:45:39 +0300 EEST" title="First Seen: 00:00:00">13:45:39</time></td>
+      <td><p class="truncated">openshift-operators</p></td>
+      <td><p class="truncated"></p></td>
+      <td><p class="truncated">istio-cni-node-v2-4-c5kc2</p></td>
+      <td><p class="text-muted">Scheduled</p></td>
+      <td data-formatter="messageFormatter">Successfully assigned openshift-operators/istio-cni-node-v2-4-c5kc2 to ip-10-0-116-204.ec2.internal</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:55:57 +0300 EEST" title="First Seen: 00:00:00">13:55:57</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated"></p></td>
+      <td><p class="truncated">net-istio-controller-96d4b96dd-6bwc8</p></td>
+      <td><p class="text-muted">Scheduled</p></td>
+      <td data-formatter="messageFormatter">Successfully assigned knative-serving/net-istio-controller-96d4b96dd-6bwc8 to ip-10-0-53-229.ec2.internal</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:45:39 +0300 EEST" title="First Seen: 00:00:00">13:45:39</time></td>
+      <td><p class="truncated">openshift-operators</p></td>
+      <td><p class="truncated"></p></td>
+      <td><p class="truncated">istio-cni-node-v2-4-pkz2f</p></td>
+      <td><p class="text-muted">Scheduled</p></td>
+      <td data-formatter="messageFormatter">Successfully assigned openshift-operators/istio-cni-node-v2-4-pkz2f to ip-10-0-59-50.ec2.internal</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:55:56 +0300 EEST" title="First Seen: 00:00:00">13:55:56</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated"></p></td>
+      <td><p class="truncated">controller-85c6957d79-g7x8f</p></td>
+      <td><p class="text-muted">Scheduled</p></td>
+      <td data-formatter="messageFormatter">Successfully assigned knative-serving/controller-85c6957d79-g7x8f to ip-10-0-105-86.ec2.internal</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:45:39 +0300 EEST" title="First Seen: 00:00:00">13:45:39</time></td>
+      <td><p class="truncated">openshift-operators</p></td>
+      <td><p class="truncated"></p></td>
+      <td><p class="truncated">istio-cni-node-v2-4-x9hlx</p></td>
+      <td><p class="text-muted">Scheduled</p></td>
+      <td data-formatter="messageFormatter">Successfully assigned openshift-operators/istio-cni-node-v2-4-x9hlx to ip-10-0-53-229.ec2.internal</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:55:56 +0300 EEST" title="First Seen: 00:00:00">13:55:56</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated"></p></td>
+      <td><p class="truncated">autoscaler-588cfb64fb-8csmw</p></td>
+      <td><p class="text-muted">Scheduled</p></td>
+      <td data-formatter="messageFormatter">Successfully assigned knative-serving/autoscaler-588cfb64fb-8csmw to ip-10-0-91-247.ec2.internal</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:55:57 +0300 EEST" title="First Seen: 00:00:00">13:55:57</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated"></p></td>
+      <td><p class="truncated">controller-c85f6bb7-wxvch</p></td>
+      <td><p class="text-muted">Scheduled</p></td>
+      <td data-formatter="messageFormatter">Successfully assigned knative-serving/controller-c85f6bb7-wxvch to ip-10-0-91-247.ec2.internal</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:56:02 +0300 EEST" title="First Seen: 00:00:00">13:56:02</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated"></p></td>
+      <td><p class="truncated">controller-c85f6bb7-8wsmt</p></td>
+      <td><p class="text-muted">Scheduled</p></td>
+      <td data-formatter="messageFormatter">Successfully assigned knative-serving/controller-c85f6bb7-8wsmt to ip-10-0-53-229.ec2.internal</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:59:13 +0300 EEST" title="First Seen: 00:00:00">13:59:13</time></td>
+      <td><p class="truncated">user-ns</p></td>
+      <td><p class="truncated"></p></td>
+      <td><p class="truncated">helloworld-go-00001-deployment-5bd78dbc5f-xlp2f</p></td>
+      <td><p class="text-muted">Scheduled</p></td>
+      <td data-formatter="messageFormatter">Successfully assigned user-ns/helloworld-go-00001-deployment-5bd78dbc5f-xlp2f to ip-10-0-105-86.ec2.internal</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:56:10 +0300 EEST" title="First Seen: 00:00:00">13:56:10</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated"></p></td>
+      <td><p class="truncated">activator-7b646b88cc-vntdm</p></td>
+      <td><p class="text-muted">Scheduled</p></td>
+      <td data-formatter="messageFormatter">Successfully assigned knative-serving/activator-7b646b88cc-vntdm to ip-10-0-53-229.ec2.internal</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:45:39 +0300 EEST" title="First Seen: 00:00:00">13:45:39</time></td>
+      <td><p class="truncated">openshift-operators</p></td>
+      <td><p class="truncated"></p></td>
+      <td><p class="truncated">istio-cni-node-v2-4-wrsw7</p></td>
+      <td><p class="text-muted">Scheduled</p></td>
+      <td data-formatter="messageFormatter">Successfully assigned openshift-operators/istio-cni-node-v2-4-wrsw7 to ip-10-0-105-86.ec2.internal</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:55:57 +0300 EEST" title="First Seen: 00:00:00">13:55:57</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated"></p></td>
+      <td><p class="truncated">autoscaler-hpa-684ccf4558-nxztv</p></td>
+      <td><p class="text-muted">Scheduled</p></td>
+      <td data-formatter="messageFormatter">Successfully assigned knative-serving/autoscaler-hpa-684ccf4558-nxztv to ip-10-0-53-229.ec2.internal</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:44:56 +0300 EEST" title="First Seen: 00:00:00">13:44:56</time></td>
+      <td><p class="truncated">openshift-operators</p></td>
+      <td><p class="truncated"></p></td>
+      <td><p class="truncated">jaeger-operator-5655cc79c-rcsh4</p></td>
+      <td><p class="text-muted">Scheduled</p></td>
+      <td data-formatter="messageFormatter">Successfully assigned openshift-operators/jaeger-operator-5655cc79c-rcsh4 to ip-10-0-91-247.ec2.internal</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:45:40 +0300 EEST" title="First Seen: 00:00:00">13:45:40</time></td>
+      <td><p class="truncated">istio-system</p></td>
+      <td><p class="truncated"></p></td>
+      <td><p class="truncated">istiod-basic-d6d4fdc9f-wczvv</p></td>
+      <td><p class="text-muted">Scheduled</p></td>
+      <td data-formatter="messageFormatter">Successfully assigned istio-system/istiod-basic-d6d4fdc9f-wczvv to ip-10-0-91-247.ec2.internal</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:55:57 +0300 EEST" title="First Seen: 00:00:00">13:55:57</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated"></p></td>
+      <td><p class="truncated">autoscaler-hpa-684ccf4558-c6grm</p></td>
+      <td><p class="text-muted">Scheduled</p></td>
+      <td data-formatter="messageFormatter">Successfully assigned knative-serving/autoscaler-hpa-684ccf4558-c6grm to ip-10-0-91-247.ec2.internal</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:55:56 +0300 EEST" title="First Seen: 00:00:00">13:55:56</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated"></p></td>
+      <td><p class="truncated">autoscaler-588cfb64fb-9nv45</p></td>
+      <td><p class="text-muted">Scheduled</p></td>
+      <td data-formatter="messageFormatter">Successfully assigned knative-serving/autoscaler-588cfb64fb-9nv45 to ip-10-0-53-229.ec2.internal</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:59:13 +0300 EEST" title="First Seen: 00:00:00">13:59:13</time></td>
+      <td><p class="truncated">user-ns</p></td>
+      <td><p class="truncated"></p></td>
+      <td><p class="truncated">helloworld-go-00001-deployment-5bd78dbc5f-zslnq</p></td>
+      <td><p class="text-muted">Scheduled</p></td>
+      <td data-formatter="messageFormatter">Successfully assigned user-ns/helloworld-go-00001-deployment-5bd78dbc5f-zslnq to ip-10-0-53-229.ec2.internal</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:45:00 +0300 EEST" title="First Seen: 00:00:00">13:45:00</time></td>
+      <td><p class="truncated">openshift-operators</p></td>
+      <td><p class="truncated"></p></td>
+      <td><p class="truncated">kiali-operator-6c74649b84-hdnp4</p></td>
+      <td><p class="text-muted">Scheduled</p></td>
+      <td data-formatter="messageFormatter">Successfully assigned openshift-operators/kiali-operator-6c74649b84-hdnp4 to ip-10-0-91-247.ec2.internal</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:55:57 +0300 EEST" title="First Seen: 00:00:00">13:55:57</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated"></p></td>
+      <td><p class="truncated">storage-version-migration-serving-serving-1.11-1.32.1-r28pn</p></td>
+      <td><p class="text-muted">Scheduled</p></td>
+      <td data-formatter="messageFormatter">Successfully assigned knative-serving/storage-version-migration-serving-serving-1.11-1.32.1-r28pn to ip-10-0-105-86.ec2.internal</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:44:58 +0300 EEST" title="First Seen: 00:00:00">13:44:58</time></td>
+      <td><p class="truncated">openshift-operators</p></td>
+      <td><p class="truncated"></p></td>
+      <td><p class="truncated">istio-operator-58c556c9df-wrl9h</p></td>
+      <td><p class="text-muted">Scheduled</p></td>
+      <td data-formatter="messageFormatter">Successfully assigned openshift-operators/istio-operator-58c556c9df-wrl9h to ip-10-0-91-247.ec2.internal</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:55:56 +0300 EEST" title="First Seen: 00:00:00">13:55:56</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated"></p></td>
+      <td><p class="truncated">activator-7b646b88cc-fkrcw</p></td>
+      <td><p class="text-muted">Scheduled</p></td>
+      <td data-formatter="messageFormatter">Successfully assigned knative-serving/activator-7b646b88cc-fkrcw to ip-10-0-105-86.ec2.internal</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:44:51 +0300 EEST" title="First Seen: 13:44:51">13:44:51</time></td>
+      <td><p class="truncated">openshift-operators</p></td>
+      <td><p class="truncated">operator-lifecycle-manager</p></td>
+      <td><p class="truncated">jaeger-operator.v1.57.0-5</p></td>
+      <td><p class="text-muted">RequirementsUnknown</p></td>
+      <td data-formatter="messageFormatter">requirements not yet checked</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:44:51 +0300 EEST" title="First Seen: 13:44:51">13:44:51</time></td>
+      <td><p class="truncated">openshift-operators</p></td>
+      <td><p class="truncated">operator-lifecycle-manager</p></td>
+      <td><p class="truncated">jaeger-operator.v1.57.0-5</p></td>
+      <td><p class="text-muted">RequirementsNotMet</p></td>
+      <td data-formatter="messageFormatter">one or more requirements couldn&#39;t be found</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:44:55 +0300 EEST" title="First Seen: 13:44:55">13:44:55</time></td>
+      <td><p class="truncated">openshift-operators</p></td>
+      <td><p class="truncated">operator-lifecycle-manager</p></td>
+      <td><p class="truncated">jaeger-operator.v1.57.0-5</p></td>
+      <td><p class="text-muted">AllRequirementsMet</p></td>
+      <td data-formatter="messageFormatter">all requirements found, attempting install</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:44:56 +0300 EEST" title="First Seen: 13:44:56">13:44:56</time></td>
+      <td><p class="truncated">openshift-operators</p></td>
+      <td><p class="truncated">deployment-controller</p></td>
+      <td><p class="truncated">jaeger-operator</p></td>
+      <td><p class="text-muted">ScalingReplicaSet</p></td>
+      <td data-formatter="messageFormatter">Scaled up replica set jaeger-operator-5655cc79c to 1</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:44:56 +0300 EEST" title="First Seen: 13:44:56">13:44:56</time></td>
+      <td><p class="truncated">openshift-operators</p></td>
+      <td><p class="truncated">replicaset-controller</p></td>
+      <td><p class="truncated">jaeger-operator-5655cc79c</p></td>
+      <td><p class="text-muted">SuccessfulCreate</p></td>
+      <td data-formatter="messageFormatter">Created pod: jaeger-operator-5655cc79c-rcsh4</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:44:56 +0300 EEST" title="First Seen: 13:44:56">13:44:56</time></td>
+      <td><p class="truncated">openshift-operators</p></td>
+      <td><p class="truncated">operator-lifecycle-manager</p></td>
+      <td><p class="truncated">jaeger-operator.v1.57.0-5</p></td>
+      <td><p class="text-muted">InstallSucceeded</p></td>
+      <td data-formatter="messageFormatter">waiting for install components to report healthy</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:44:57 +0300 EEST" title="First Seen: 13:44:57">13:44:57</time></td>
+      <td><p class="truncated">openshift-operators</p></td>
+      <td><p class="truncated">operator-lifecycle-manager</p></td>
+      <td><p class="truncated">jaeger-operator.v1.57.0-5</p></td>
+      <td><p class="text-muted">InstallWaiting</p></td>
+      <td data-formatter="messageFormatter">installing: waiting for deployment jaeger-operator to become ready: deployment &#34;jaeger-operator&#34; not available: Deployment does not have minimum availability.</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:44:57 +0300 EEST" title="First Seen: 13:44:57">13:44:57</time></td>
+      <td><p class="truncated">openshift-operators</p></td>
+      <td><p class="truncated">operator-lifecycle-manager</p></td>
+      <td><p class="truncated">servicemeshoperator.v2.5.1</p></td>
+      <td><p class="text-muted">RequirementsUnknown</p></td>
+      <td data-formatter="messageFormatter">requirements not yet checked</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:44:58 +0300 EEST" title="First Seen: 13:44:58">13:44:58</time></td>
+      <td><p class="truncated">openshift-operators</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">jaeger-operator-5655cc79c-rcsh4</p></td>
+      <td><p class="text-danger">FailedMount</p></td>
+      <td data-formatter="messageFormatter">MountVolume.SetUp failed for volume &#34;apiservice-cert&#34; : failed to sync secret cache: timed out waiting for the condition</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:44:58 +0300 EEST" title="First Seen: 13:44:58">13:44:58</time></td>
+      <td><p class="truncated">openshift-operators</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">jaeger-operator-5655cc79c-rcsh4</p></td>
+      <td><p class="text-danger">FailedMount</p></td>
+      <td data-formatter="messageFormatter">MountVolume.SetUp failed for volume &#34;webhook-cert&#34; : failed to sync secret cache: timed out waiting for the condition</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:44:58 +0300 EEST" title="First Seen: 13:44:58">13:44:58</time></td>
+      <td><p class="truncated">openshift-operators</p></td>
+      <td><p class="truncated">operator-lifecycle-manager</p></td>
+      <td><p class="truncated">servicemeshoperator.v2.5.1</p></td>
+      <td><p class="text-muted">AllRequirementsMet</p></td>
+      <td data-formatter="messageFormatter">all requirements found, attempting install</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:44:58 +0300 EEST" title="First Seen: 13:44:58">13:44:58</time></td>
+      <td><p class="truncated">openshift-operators</p></td>
+      <td><p class="truncated">operator-lifecycle-manager</p></td>
+      <td><p class="truncated">servicemeshoperator.v2.5.1</p></td>
+      <td><p class="text-muted">InstallWaiting</p></td>
+      <td data-formatter="messageFormatter">installing: waiting for deployment istio-operator to become ready: deployment &#34;istio-operator&#34; not available: Deployment does not have minimum availability.</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:44:58 +0300 EEST" title="First Seen: 13:44:58">13:44:58</time></td>
+      <td><p class="truncated">openshift-operators</p></td>
+      <td><p class="truncated">deployment-controller</p></td>
+      <td><p class="truncated">istio-operator</p></td>
+      <td><p class="text-muted">ScalingReplicaSet</p></td>
+      <td data-formatter="messageFormatter">Scaled up replica set istio-operator-58c556c9df to 1</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:44:58 +0300 EEST" title="First Seen: 13:44:58">13:44:58</time></td>
+      <td><p class="truncated">openshift-operators</p></td>
+      <td><p class="truncated">replicaset-controller</p></td>
+      <td><p class="truncated">istio-operator-58c556c9df</p></td>
+      <td><p class="text-muted">SuccessfulCreate</p></td>
+      <td data-formatter="messageFormatter">Created pod: istio-operator-58c556c9df-wrl9h</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:44:58 +0300 EEST" title="First Seen: 13:44:58">13:44:58</time></td>
+      <td><p class="truncated">openshift-operators</p></td>
+      <td><p class="truncated">multus</p></td>
+      <td><p class="truncated">istio-operator-58c556c9df-wrl9h</p></td>
+      <td><p class="text-muted">AddedInterface</p></td>
+      <td data-formatter="messageFormatter">Add eth0 [10.128.2.15/23] from ovn-kubernetes</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:44:58 +0300 EEST" title="First Seen: 13:44:58">13:44:58</time></td>
+      <td><p class="truncated">openshift-operators</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">jaeger-operator-5655cc79c-rcsh4</p></td>
+      <td><p class="text-muted">Pulling</p></td>
+      <td data-formatter="messageFormatter">Pulling image &#34;registry.redhat.io/rhosdt/jaeger-rhel8-operator@sha256:0d5bab1b26572942eef72f8068dcc1eb219b67896ddc216905c650724f3e45fa&#34;</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:44:58 +0300 EEST" title="First Seen: 13:44:58">13:44:58</time></td>
+      <td><p class="truncated">openshift-operators</p></td>
+      <td><p class="truncated">operator-lifecycle-manager</p></td>
+      <td><p class="truncated">kiali-operator.v1.73.7</p></td>
+      <td><p class="text-muted">RequirementsUnknown</p></td>
+      <td data-formatter="messageFormatter">requirements not yet checked</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:44:58 +0300 EEST" title="First Seen: 13:44:58">13:44:58</time></td>
+      <td><p class="truncated">openshift-operators</p></td>
+      <td><p class="truncated">multus</p></td>
+      <td><p class="truncated">jaeger-operator-5655cc79c-rcsh4</p></td>
+      <td><p class="text-muted">AddedInterface</p></td>
+      <td data-formatter="messageFormatter">Add eth0 [10.128.2.14/23] from ovn-kubernetes</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:44:58 +0300 EEST" title="First Seen: 13:44:58">13:44:58</time></td>
+      <td><p class="truncated">openshift-operators</p></td>
+      <td><p class="truncated">operator-lifecycle-manager</p></td>
+      <td><p class="truncated">servicemeshoperator.v2.5.1</p></td>
+      <td><p class="text-muted">InstallSucceeded</p></td>
+      <td data-formatter="messageFormatter">waiting for install components to report healthy</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:44:59 +0300 EEST" title="First Seen: 13:44:59">13:44:59</time></td>
+      <td><p class="truncated">openshift-operators</p></td>
+      <td><p class="truncated">operator-lifecycle-manager</p></td>
+      <td><p class="truncated">kiali-operator.v1.73.7</p></td>
+      <td><p class="text-muted">AllRequirementsMet</p></td>
+      <td data-formatter="messageFormatter">all requirements found, attempting install</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:45:00 +0300 EEST" title="First Seen: 13:45:00">13:45:00</time></td>
+      <td><p class="truncated">openshift-operators</p></td>
+      <td><p class="truncated">multus</p></td>
+      <td><p class="truncated">kiali-operator-6c74649b84-hdnp4</p></td>
+      <td><p class="text-muted">AddedInterface</p></td>
+      <td data-formatter="messageFormatter">Add eth0 [10.128.2.17/23] from ovn-kubernetes</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:45:00 +0300 EEST" title="First Seen: 13:45:00">13:45:00</time></td>
+      <td><p class="truncated">openshift-operators</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">kiali-operator-6c74649b84-hdnp4</p></td>
+      <td><p class="text-muted">Pulling</p></td>
+      <td data-formatter="messageFormatter">Pulling image &#34;registry.redhat.io/openshift-service-mesh/kiali-rhel8-operator@sha256:efddc0d03a66c1c076b805f93699e41266f0306d781c88f5bc2cae11a544fbc8&#34;</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:45:00 +0300 EEST" title="First Seen: 13:45:00">13:45:00</time></td>
+      <td><p class="truncated">openshift-operators</p></td>
+      <td><p class="truncated">operator-lifecycle-manager</p></td>
+      <td><p class="truncated">kiali-operator.v1.73.7</p></td>
+      <td><p class="text-muted">InstallSucceeded</p></td>
+      <td data-formatter="messageFormatter">waiting for install components to report healthy</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:45:00 +0300 EEST" title="First Seen: 13:45:00">13:45:00</time></td>
+      <td><p class="truncated">openshift-operators</p></td>
+      <td><p class="truncated">replicaset-controller</p></td>
+      <td><p class="truncated">kiali-operator-6c74649b84</p></td>
+      <td><p class="text-muted">SuccessfulCreate</p></td>
+      <td data-formatter="messageFormatter">Created pod: kiali-operator-6c74649b84-hdnp4</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:45:00 +0300 EEST" title="First Seen: 13:45:00">13:45:00</time></td>
+      <td><p class="truncated">openshift-operators</p></td>
+      <td><p class="truncated">deployment-controller</p></td>
+      <td><p class="truncated">kiali-operator</p></td>
+      <td><p class="text-muted">ScalingReplicaSet</p></td>
+      <td data-formatter="messageFormatter">Scaled up replica set kiali-operator-6c74649b84 to 1</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:45:01 +0300 EEST" title="First Seen: 13:45:01">13:45:01</time></td>
+      <td><p class="truncated">openshift-operators</p></td>
+      <td><p class="truncated">operator-lifecycle-manager</p></td>
+      <td><p class="truncated">kiali-operator.v1.73.7</p></td>
+      <td><p class="text-muted">InstallWaiting</p></td>
+      <td data-formatter="messageFormatter">installing: waiting for deployment kiali-operator to become ready: deployment &#34;kiali-operator&#34; not available: Deployment does not have minimum availability.</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:45:05 +0300 EEST" title="First Seen: 13:45:05">13:45:05</time></td>
+      <td><p class="truncated">openshift-operators</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">istio-operator-58c556c9df-wrl9h</p></td>
+      <td><p class="text-muted">Pulled</p></td>
+      <td data-formatter="messageFormatter">Successfully pulled image &#34;registry.redhat.io/openshift-service-mesh/istio-rhel8-operator@sha256:d256a729a61e11dbba4d724612b23d4e5662dbb01f1567dec9fa13adab6287a5&#34; in 6.035s (6.035s including waiting)</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:45:05 +0300 EEST" title="First Seen: 13:45:05">13:45:05</time></td>
+      <td><p class="truncated">openshift-operators</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">jaeger-operator-5655cc79c-rcsh4</p></td>
+      <td><p class="text-muted">Pulled</p></td>
+      <td data-formatter="messageFormatter">Successfully pulled image &#34;registry.redhat.io/rhosdt/jaeger-rhel8-operator@sha256:0d5bab1b26572942eef72f8068dcc1eb219b67896ddc216905c650724f3e45fa&#34; in 6.148s (6.148s including waiting)</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:45:05 +0300 EEST" title="First Seen: 13:45:05">13:45:05</time></td>
+      <td><p class="truncated">openshift-operators</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">jaeger-operator-5655cc79c-rcsh4</p></td>
+      <td><p class="text-muted">Created</p></td>
+      <td data-formatter="messageFormatter">Created container jaeger-operator</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:45:05 +0300 EEST" title="First Seen: 13:45:05">13:45:05</time></td>
+      <td><p class="truncated">openshift-operators</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">jaeger-operator-5655cc79c-rcsh4</p></td>
+      <td><p class="text-muted">Started</p></td>
+      <td data-formatter="messageFormatter">Started container jaeger-operator</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:45:05 +0300 EEST" title="First Seen: 13:45:05">13:45:05</time></td>
+      <td><p class="truncated">openshift-operators</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">jaeger-operator-5655cc79c-rcsh4</p></td>
+      <td><p class="text-muted">Pulling</p></td>
+      <td data-formatter="messageFormatter">Pulling image &#34;registry.redhat.io/openshift4/ose-kube-rbac-proxy@sha256:6b33793126e32e75f4fa02dbb014eaa7458f36c70f316a7383171a02c38509f1&#34;</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:45:05 +0300 EEST" title="First Seen: 13:45:05">13:45:05</time></td>
+      <td><p class="truncated">openshift-operators</p></td>
+      <td><p class="truncated">jaeger-operator-5655cc79c-rcsh4_d837bdac-303a-4afc-b9f1-13fa6d0dd9f0</p></td>
+      <td><p class="truncated">31e04290.jaegertracing.io</p></td>
+      <td><p class="text-muted">LeaderElection</p></td>
+      <td data-formatter="messageFormatter">jaeger-operator-5655cc79c-rcsh4_d837bdac-303a-4afc-b9f1-13fa6d0dd9f0 became leader</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:45:08 +0300 EEST" title="First Seen: 13:45:08">13:45:08</time></td>
+      <td><p class="truncated">openshift-operators</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">istio-operator-58c556c9df-wrl9h</p></td>
+      <td><p class="text-danger">ProbeError</p></td>
+      <td data-formatter="messageFormatter">Readiness probe error: Get &#34;http://10.128.2.15:11200/readyz&#34;: read tcp 10.128.2.2:39314-&gt;10.128.2.15:11200: read: connection reset by peer
+body: 
+</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:45:08 +0300 EEST" title="First Seen: 13:45:08">13:45:08</time></td>
+      <td><p class="truncated">openshift-operators</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">istio-operator-58c556c9df-wrl9h</p></td>
+      <td><p class="text-warning">Unhealthy</p></td>
+      <td data-formatter="messageFormatter">Readiness probe failed: Get &#34;http://10.128.2.15:11200/readyz&#34;: read tcp 10.128.2.2:39314-&gt;10.128.2.15:11200: read: connection reset by peer</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:45:09 +0300 EEST" title="First Seen: 13:45:09">13:45:09</time></td>
+      <td><p class="truncated">openshift-operators</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">istio-operator-58c556c9df-wrl9h</p></td>
+      <td><p class="text-muted">Pulled</p></td>
+      <td data-formatter="messageFormatter">Successfully pulled image &#34;registry.redhat.io/openshift-service-mesh/istio-rhel8-operator@sha256:d256a729a61e11dbba4d724612b23d4e5662dbb01f1567dec9fa13adab6287a5&#34; in 647ms (647ms including waiting)</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:45:09 +0300 EEST" title="First Seen: 13:44:58">13:45:09</time> <small>(x2)</small></td>
+      <td><p class="truncated">openshift-operators</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">istio-operator-58c556c9df-wrl9h</p></td>
+      <td><p class="text-muted">Pulling</p></td>
+      <td data-formatter="messageFormatter">Pulling image &#34;registry.redhat.io/openshift-service-mesh/istio-rhel8-operator@sha256:d256a729a61e11dbba4d724612b23d4e5662dbb01f1567dec9fa13adab6287a5&#34;</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:45:15 +0300 EEST" title="First Seen: 13:45:15">13:45:15</time></td>
+      <td><p class="truncated">openshift-operators</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">jaeger-operator-5655cc79c-rcsh4</p></td>
+      <td><p class="text-muted">Pulled</p></td>
+      <td data-formatter="messageFormatter">Successfully pulled image &#34;registry.redhat.io/openshift4/ose-kube-rbac-proxy@sha256:6b33793126e32e75f4fa02dbb014eaa7458f36c70f316a7383171a02c38509f1&#34; in 9.942s (9.942s including waiting)</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:45:15 +0300 EEST" title="First Seen: 13:45:15">13:45:15</time></td>
+      <td><p class="truncated">openshift-operators</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">kiali-operator-6c74649b84-hdnp4</p></td>
+      <td><p class="text-muted">Started</p></td>
+      <td data-formatter="messageFormatter">Started container operator</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:45:15 +0300 EEST" title="First Seen: 13:45:05">13:45:15</time> <small>(x2)</small></td>
+      <td><p class="truncated">openshift-operators</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">istio-operator-58c556c9df-wrl9h</p></td>
+      <td><p class="text-muted">Started</p></td>
+      <td data-formatter="messageFormatter">Started container istio-operator</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:45:15 +0300 EEST" title="First Seen: 13:45:15">13:45:15</time></td>
+      <td><p class="truncated">openshift-operators</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">kiali-operator-6c74649b84-hdnp4</p></td>
+      <td><p class="text-muted">Created</p></td>
+      <td data-formatter="messageFormatter">Created container operator</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:45:15 +0300 EEST" title="First Seen: 13:45:15">13:45:15</time></td>
+      <td><p class="truncated">openshift-operators</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">jaeger-operator-5655cc79c-rcsh4</p></td>
+      <td><p class="text-muted">Started</p></td>
+      <td data-formatter="messageFormatter">Started container kube-rbac-proxy</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:45:15 +0300 EEST" title="First Seen: 13:45:15">13:45:15</time></td>
+      <td><p class="truncated">openshift-operators</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">jaeger-operator-5655cc79c-rcsh4</p></td>
+      <td><p class="text-muted">Created</p></td>
+      <td data-formatter="messageFormatter">Created container kube-rbac-proxy</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:45:15 +0300 EEST" title="First Seen: 13:45:15">13:45:15</time></td>
+      <td><p class="truncated">openshift-operators</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">kiali-operator-6c74649b84-hdnp4</p></td>
+      <td><p class="text-muted">Pulled</p></td>
+      <td data-formatter="messageFormatter">Successfully pulled image &#34;registry.redhat.io/openshift-service-mesh/kiali-rhel8-operator@sha256:efddc0d03a66c1c076b805f93699e41266f0306d781c88f5bc2cae11a544fbc8&#34; in 14.152s (14.152s including waiting)</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:45:15 +0300 EEST" title="First Seen: 13:45:05">13:45:15</time> <small>(x2)</small></td>
+      <td><p class="truncated">openshift-operators</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">istio-operator-58c556c9df-wrl9h</p></td>
+      <td><p class="text-muted">Created</p></td>
+      <td data-formatter="messageFormatter">Created container istio-operator</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:45:16 +0300 EEST" title="First Seen: 13:45:16">13:45:16</time></td>
+      <td><p class="truncated">openshift-operators</p></td>
+      <td><p class="truncated">operator-lifecycle-manager</p></td>
+      <td><p class="truncated">kiali-operator.v1.73.7</p></td>
+      <td><p class="text-muted">InstallSucceeded</p></td>
+      <td data-formatter="messageFormatter">install strategy completed with no errors</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:45:16 +0300 EEST" title="First Seen: 13:45:06">13:45:16</time> <small>(x3)</small></td>
+      <td><p class="truncated">openshift-operators</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">istio-operator-58c556c9df-wrl9h</p></td>
+      <td><p class="text-warning">Unhealthy</p></td>
+      <td data-formatter="messageFormatter">Readiness probe failed: Get &#34;http://10.128.2.15:11200/readyz&#34;: dial tcp 10.128.2.15:11200: connect: connection refused</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:45:16 +0300 EEST" title="First Seen: 13:45:16">13:45:16</time></td>
+      <td><p class="truncated">openshift-operators</p></td>
+      <td><p class="truncated">operator-lifecycle-manager</p></td>
+      <td><p class="truncated">jaeger-operator.v1.57.0-5</p></td>
+      <td><p class="text-muted">InstallSucceeded</p></td>
+      <td data-formatter="messageFormatter">install strategy completed with no errors</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:45:16 +0300 EEST" title="First Seen: 13:45:06">13:45:16</time> <small>(x3)</small></td>
+      <td><p class="truncated">openshift-operators</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">istio-operator-58c556c9df-wrl9h</p></td>
+      <td><p class="text-danger">ProbeError</p></td>
+      <td data-formatter="messageFormatter">Readiness probe error: Get &#34;http://10.128.2.15:11200/readyz&#34;: dial tcp 10.128.2.15:11200: connect: connection refused
+body: 
+</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:45:19 +0300 EEST" title="First Seen: 13:45:08">13:45:19</time> <small>(x3)</small></td>
+      <td><p class="truncated">openshift-operators</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">istio-operator-58c556c9df-wrl9h</p></td>
+      <td><p class="text-warning">Unhealthy</p></td>
+      <td data-formatter="messageFormatter">Readiness probe failed: Get &#34;http://10.128.2.15:11200/readyz&#34;: context deadline exceeded (Client.Timeout exceeded while awaiting headers)</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:45:19 +0300 EEST" title="First Seen: 13:45:08">13:45:19</time> <small>(x3)</small></td>
+      <td><p class="truncated">openshift-operators</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">istio-operator-58c556c9df-wrl9h</p></td>
+      <td><p class="text-danger">ProbeError</p></td>
+      <td data-formatter="messageFormatter">Readiness probe error: Get &#34;http://10.128.2.15:11200/readyz&#34;: context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+body: 
+</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:45:20 +0300 EEST" title="First Seen: 13:45:20">13:45:20</time></td>
+      <td><p class="truncated">openshift-operators</p></td>
+      <td><p class="truncated">istio-operator-58c556c9df-wrl9h_b0e71948-f67a-4106-b101-19b2bb9ffa30</p></td>
+      <td><p class="truncated">istio-operator-lock</p></td>
+      <td><p class="text-muted">LeaderElection</p></td>
+      <td data-formatter="messageFormatter">istio-operator-58c556c9df-wrl9h_b0e71948-f67a-4106-b101-19b2bb9ffa30 became leader</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:45:28 +0300 EEST" title="First Seen: 13:45:28">13:45:28</time></td>
+      <td><p class="truncated">openshift-operators</p></td>
+      <td><p class="truncated">operator-lifecycle-manager</p></td>
+      <td><p class="truncated">servicemeshoperator.v2.5.1</p></td>
+      <td><p class="text-muted">InstallSucceeded</p></td>
+      <td data-formatter="messageFormatter">install strategy completed with no errors</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:45:37 +0300 EEST" title="First Seen: 13:45:37">13:45:37</time></td>
+      <td><p class="truncated">istio-system</p></td>
+      <td><p class="truncated">servicemeshcontrolplane-controller</p></td>
+      <td><p class="truncated">basic</p></td>
+      <td><p class="text-muted">Installing</p></td>
+      <td data-formatter="messageFormatter">Installing mesh generation 2</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:45:39 +0300 EEST" title="First Seen: 13:45:39">13:45:39</time></td>
+      <td><p class="truncated">openshift-operators</p></td>
+      <td><p class="truncated">daemonset-controller</p></td>
+      <td><p class="truncated">istio-cni-node-v2-4</p></td>
+      <td><p class="text-muted">SuccessfulCreate</p></td>
+      <td data-formatter="messageFormatter">Created pod: istio-cni-node-v2-4-c5kc2</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:45:39 +0300 EEST" title="First Seen: 13:45:39">13:45:39</time></td>
+      <td><p class="truncated">openshift-operators</p></td>
+      <td><p class="truncated">daemonset-controller</p></td>
+      <td><p class="truncated">istio-cni-node-v2-4</p></td>
+      <td><p class="text-muted">SuccessfulCreate</p></td>
+      <td data-formatter="messageFormatter">Created pod: istio-cni-node-v2-4-x9hlx</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:45:39 +0300 EEST" title="First Seen: 13:45:39">13:45:39</time></td>
+      <td><p class="truncated">openshift-operators</p></td>
+      <td><p class="truncated">daemonset-controller</p></td>
+      <td><p class="truncated">istio-cni-node-v2-4</p></td>
+      <td><p class="text-muted">SuccessfulCreate</p></td>
+      <td data-formatter="messageFormatter">Created pod: istio-cni-node-v2-4-4xd9w</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:45:39 +0300 EEST" title="First Seen: 13:45:39">13:45:39</time></td>
+      <td><p class="truncated">openshift-operators</p></td>
+      <td><p class="truncated">daemonset-controller</p></td>
+      <td><p class="truncated">istio-cni-node-v2-4</p></td>
+      <td><p class="text-muted">SuccessfulCreate</p></td>
+      <td data-formatter="messageFormatter">Created pod: istio-cni-node-v2-4-pkz2f</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:45:39 +0300 EEST" title="First Seen: 13:45:39">13:45:39</time></td>
+      <td><p class="truncated">openshift-operators</p></td>
+      <td><p class="truncated">daemonset-controller</p></td>
+      <td><p class="truncated">istio-cni-node-v2-4</p></td>
+      <td><p class="text-muted">SuccessfulCreate</p></td>
+      <td data-formatter="messageFormatter">Created pod: istio-cni-node-v2-4-wrsw7</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:45:39 +0300 EEST" title="First Seen: 13:45:39">13:45:39</time></td>
+      <td><p class="truncated">openshift-operators</p></td>
+      <td><p class="truncated">daemonset-controller</p></td>
+      <td><p class="truncated">istio-cni-node-v2-4</p></td>
+      <td><p class="text-muted">SuccessfulCreate</p></td>
+      <td data-formatter="messageFormatter">Created pod: istio-cni-node-v2-4-9ct4z</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:45:40 +0300 EEST" title="First Seen: 13:45:40">13:45:40</time></td>
+      <td><p class="truncated">openshift-operators</p></td>
+      <td><p class="truncated">multus</p></td>
+      <td><p class="truncated">istio-cni-node-v2-4-pkz2f</p></td>
+      <td><p class="text-muted">AddedInterface</p></td>
+      <td data-formatter="messageFormatter">Add eth0 [10.128.0.63/23] from ovn-kubernetes</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:45:40 +0300 EEST" title="First Seen: 13:45:40">13:45:40</time></td>
+      <td><p class="truncated">istio-system</p></td>
+      <td><p class="truncated">replicaset-controller</p></td>
+      <td><p class="truncated">istiod-basic-d6d4fdc9f</p></td>
+      <td><p class="text-muted">SuccessfulCreate</p></td>
+      <td data-formatter="messageFormatter">Created pod: istiod-basic-d6d4fdc9f-wczvv</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:45:40 +0300 EEST" title="First Seen: 13:45:40">13:45:40</time></td>
+      <td><p class="truncated">openshift-operators</p></td>
+      <td><p class="truncated">multus</p></td>
+      <td><p class="truncated">istio-cni-node-v2-4-4xd9w</p></td>
+      <td><p class="text-muted">AddedInterface</p></td>
+      <td data-formatter="messageFormatter">Add eth0 [10.129.0.74/23] from ovn-kubernetes</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:45:40 +0300 EEST" title="First Seen: 13:45:40">13:45:40</time></td>
+      <td><p class="truncated">openshift-operators</p></td>
+      <td><p class="truncated">multus</p></td>
+      <td><p class="truncated">istio-cni-node-v2-4-wrsw7</p></td>
+      <td><p class="text-muted">AddedInterface</p></td>
+      <td data-formatter="messageFormatter">Add eth0 [10.129.2.14/23] from ovn-kubernetes</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:45:40 +0300 EEST" title="First Seen: 13:45:40">13:45:40</time></td>
+      <td><p class="truncated">openshift-operators</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">istio-cni-node-v2-4-4xd9w</p></td>
+      <td><p class="text-muted">Pulling</p></td>
+      <td data-formatter="messageFormatter">Pulling image &#34;registry.redhat.io/openshift-service-mesh/istio-cni-rhel8@sha256:8e36644dc0f6fe5018b6643cca057ded23aa9b8a026280b864f5f1cc1fa0f259&#34;</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:45:40 +0300 EEST" title="First Seen: 13:45:40">13:45:40</time></td>
+      <td><p class="truncated">openshift-operators</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">istio-cni-node-v2-4-pkz2f</p></td>
+      <td><p class="text-muted">Pulling</p></td>
+      <td data-formatter="messageFormatter">Pulling image &#34;registry.redhat.io/openshift-service-mesh/istio-cni-rhel8@sha256:8e36644dc0f6fe5018b6643cca057ded23aa9b8a026280b864f5f1cc1fa0f259&#34;</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:45:40 +0300 EEST" title="First Seen: 13:45:40">13:45:40</time></td>
+      <td><p class="truncated">openshift-operators</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">istio-cni-node-v2-4-wrsw7</p></td>
+      <td><p class="text-muted">Pulling</p></td>
+      <td data-formatter="messageFormatter">Pulling image &#34;registry.redhat.io/openshift-service-mesh/istio-cni-rhel8@sha256:8e36644dc0f6fe5018b6643cca057ded23aa9b8a026280b864f5f1cc1fa0f259&#34;</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:45:40 +0300 EEST" title="First Seen: 13:45:40">13:45:40</time></td>
+      <td><p class="truncated">openshift-operators</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">istio-cni-node-v2-4-x9hlx</p></td>
+      <td><p class="text-muted">Pulling</p></td>
+      <td data-formatter="messageFormatter">Pulling image &#34;registry.redhat.io/openshift-service-mesh/istio-cni-rhel8@sha256:8e36644dc0f6fe5018b6643cca057ded23aa9b8a026280b864f5f1cc1fa0f259&#34;</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:45:40 +0300 EEST" title="First Seen: 13:45:40">13:45:40</time></td>
+      <td><p class="truncated">istio-system</p></td>
+      <td><p class="truncated">deployment-controller</p></td>
+      <td><p class="truncated">istiod-basic</p></td>
+      <td><p class="text-muted">ScalingReplicaSet</p></td>
+      <td data-formatter="messageFormatter">Scaled up replica set istiod-basic-d6d4fdc9f to 1</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:45:40 +0300 EEST" title="First Seen: 13:45:40">13:45:40</time></td>
+      <td><p class="truncated">openshift-operators</p></td>
+      <td><p class="truncated">multus</p></td>
+      <td><p class="truncated">istio-cni-node-v2-4-x9hlx</p></td>
+      <td><p class="text-muted">AddedInterface</p></td>
+      <td data-formatter="messageFormatter">Add eth0 [10.131.0.22/23] from ovn-kubernetes</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:45:40 +0300 EEST" title="First Seen: 13:45:40">13:45:40</time></td>
+      <td><p class="truncated">openshift-operators</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">istio-cni-node-v2-4-c5kc2</p></td>
+      <td><p class="text-muted">Pulling</p></td>
+      <td data-formatter="messageFormatter">Pulling image &#34;registry.redhat.io/openshift-service-mesh/istio-cni-rhel8@sha256:8e36644dc0f6fe5018b6643cca057ded23aa9b8a026280b864f5f1cc1fa0f259&#34;</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:45:40 +0300 EEST" title="First Seen: 13:45:40">13:45:40</time></td>
+      <td><p class="truncated">openshift-operators</p></td>
+      <td><p class="truncated">multus</p></td>
+      <td><p class="truncated">istio-cni-node-v2-4-9ct4z</p></td>
+      <td><p class="text-muted">AddedInterface</p></td>
+      <td data-formatter="messageFormatter">Add eth0 [10.128.2.18/23] from ovn-kubernetes</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:45:40 +0300 EEST" title="First Seen: 13:45:40">13:45:40</time></td>
+      <td><p class="truncated">openshift-operators</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">istio-cni-node-v2-4-9ct4z</p></td>
+      <td><p class="text-muted">Pulling</p></td>
+      <td data-formatter="messageFormatter">Pulling image &#34;registry.redhat.io/openshift-service-mesh/istio-cni-rhel8@sha256:8e36644dc0f6fe5018b6643cca057ded23aa9b8a026280b864f5f1cc1fa0f259&#34;</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:45:40 +0300 EEST" title="First Seen: 13:45:40">13:45:40</time></td>
+      <td><p class="truncated">openshift-operators</p></td>
+      <td><p class="truncated">multus</p></td>
+      <td><p class="truncated">istio-cni-node-v2-4-c5kc2</p></td>
+      <td><p class="text-muted">AddedInterface</p></td>
+      <td data-formatter="messageFormatter">Add eth0 [10.130.0.65/23] from ovn-kubernetes</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:45:41 +0300 EEST" title="First Seen: 13:45:41">13:45:41</time></td>
+      <td><p class="truncated">istio-system</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">istiod-basic-d6d4fdc9f-wczvv</p></td>
+      <td><p class="text-muted">Pulling</p></td>
+      <td data-formatter="messageFormatter">Pulling image &#34;registry.redhat.io/openshift-service-mesh/pilot-rhel8@sha256:1a8882f482044b38e6d75e322db6d6b80d21525f56fdd08f7f2ee9a58897e742&#34;</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:45:41 +0300 EEST" title="First Seen: 13:45:41">13:45:41</time></td>
+      <td><p class="truncated">istio-system</p></td>
+      <td><p class="truncated">multus</p></td>
+      <td><p class="truncated">istiod-basic-d6d4fdc9f-wczvv</p></td>
+      <td><p class="text-muted">AddedInterface</p></td>
+      <td data-formatter="messageFormatter">Add eth0 [10.128.2.19/23] from ovn-kubernetes</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:45:45 +0300 EEST" title="First Seen: 13:45:45">13:45:45</time></td>
+      <td><p class="truncated">openshift-operators</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">istio-cni-node-v2-4-wrsw7</p></td>
+      <td><p class="text-muted">Created</p></td>
+      <td data-formatter="messageFormatter">Created container install-cni</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:45:45 +0300 EEST" title="First Seen: 13:45:45">13:45:45</time></td>
+      <td><p class="truncated">openshift-operators</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">istio-cni-node-v2-4-wrsw7</p></td>
+      <td><p class="text-muted">Started</p></td>
+      <td data-formatter="messageFormatter">Started container install-cni</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:45:45 +0300 EEST" title="First Seen: 13:45:45">13:45:45</time></td>
+      <td><p class="truncated">openshift-operators</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">istio-cni-node-v2-4-wrsw7</p></td>
+      <td><p class="text-muted">Pulled</p></td>
+      <td data-formatter="messageFormatter">Successfully pulled image &#34;registry.redhat.io/openshift-service-mesh/istio-cni-rhel8@sha256:8e36644dc0f6fe5018b6643cca057ded23aa9b8a026280b864f5f1cc1fa0f259&#34; in 5.288s (5.288s including waiting)</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:45:46 +0300 EEST" title="First Seen: 13:45:46">13:45:46</time></td>
+      <td><p class="truncated">openshift-operators</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">istio-cni-node-v2-4-x9hlx</p></td>
+      <td><p class="text-muted">Started</p></td>
+      <td data-formatter="messageFormatter">Started container install-cni</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:45:46 +0300 EEST" title="First Seen: 13:45:46">13:45:46</time></td>
+      <td><p class="truncated">openshift-operators</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">istio-cni-node-v2-4-x9hlx</p></td>
+      <td><p class="text-muted">Created</p></td>
+      <td data-formatter="messageFormatter">Created container install-cni</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:45:46 +0300 EEST" title="First Seen: 13:45:46">13:45:46</time></td>
+      <td><p class="truncated">openshift-operators</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">istio-cni-node-v2-4-x9hlx</p></td>
+      <td><p class="text-muted">Pulled</p></td>
+      <td data-formatter="messageFormatter">Successfully pulled image &#34;registry.redhat.io/openshift-service-mesh/istio-cni-rhel8@sha256:8e36644dc0f6fe5018b6643cca057ded23aa9b8a026280b864f5f1cc1fa0f259&#34; in 5.74s (5.74s including waiting)</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:45:47 +0300 EEST" title="First Seen: 13:45:47">13:45:47</time></td>
+      <td><p class="truncated">openshift-operators</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">istio-cni-node-v2-4-c5kc2</p></td>
+      <td><p class="text-muted">Pulled</p></td>
+      <td data-formatter="messageFormatter">Successfully pulled image &#34;registry.redhat.io/openshift-service-mesh/istio-cni-rhel8@sha256:8e36644dc0f6fe5018b6643cca057ded23aa9b8a026280b864f5f1cc1fa0f259&#34; in 7.363s (7.363s including waiting)</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:45:47 +0300 EEST" title="First Seen: 13:45:47">13:45:47</time></td>
+      <td><p class="truncated">openshift-operators</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">istio-cni-node-v2-4-pkz2f</p></td>
+      <td><p class="text-muted">Created</p></td>
+      <td data-formatter="messageFormatter">Created container install-cni</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:45:47 +0300 EEST" title="First Seen: 13:45:47">13:45:47</time></td>
+      <td><p class="truncated">openshift-operators</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">istio-cni-node-v2-4-pkz2f</p></td>
+      <td><p class="text-muted">Started</p></td>
+      <td data-formatter="messageFormatter">Started container install-cni</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:45:47 +0300 EEST" title="First Seen: 13:45:47">13:45:47</time></td>
+      <td><p class="truncated">openshift-operators</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">istio-cni-node-v2-4-pkz2f</p></td>
+      <td><p class="text-muted">Pulled</p></td>
+      <td data-formatter="messageFormatter">Successfully pulled image &#34;registry.redhat.io/openshift-service-mesh/istio-cni-rhel8@sha256:8e36644dc0f6fe5018b6643cca057ded23aa9b8a026280b864f5f1cc1fa0f259&#34; in 7.305s (7.305s including waiting)</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:45:47 +0300 EEST" title="First Seen: 13:45:47">13:45:47</time></td>
+      <td><p class="truncated">openshift-operators</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">istio-cni-node-v2-4-c5kc2</p></td>
+      <td><p class="text-muted">Created</p></td>
+      <td data-formatter="messageFormatter">Created container install-cni</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:45:48 +0300 EEST" title="First Seen: 13:45:48">13:45:48</time></td>
+      <td><p class="truncated">openshift-operators</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">istio-cni-node-v2-4-c5kc2</p></td>
+      <td><p class="text-muted">Started</p></td>
+      <td data-formatter="messageFormatter">Started container install-cni</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:45:48 +0300 EEST" title="First Seen: 13:45:48">13:45:48</time></td>
+      <td><p class="truncated">openshift-operators</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">istio-cni-node-v2-4-4xd9w</p></td>
+      <td><p class="text-muted">Started</p></td>
+      <td data-formatter="messageFormatter">Started container install-cni</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:45:48 +0300 EEST" title="First Seen: 13:45:48">13:45:48</time></td>
+      <td><p class="truncated">openshift-operators</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">istio-cni-node-v2-4-4xd9w</p></td>
+      <td><p class="text-muted">Created</p></td>
+      <td data-formatter="messageFormatter">Created container install-cni</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:45:48 +0300 EEST" title="First Seen: 13:45:48">13:45:48</time></td>
+      <td><p class="truncated">openshift-operators</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">istio-cni-node-v2-4-4xd9w</p></td>
+      <td><p class="text-muted">Pulled</p></td>
+      <td data-formatter="messageFormatter">Successfully pulled image &#34;registry.redhat.io/openshift-service-mesh/istio-cni-rhel8@sha256:8e36644dc0f6fe5018b6643cca057ded23aa9b8a026280b864f5f1cc1fa0f259&#34; in 8.418s (8.418s including waiting)</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:45:51 +0300 EEST" title="First Seen: 13:45:51">13:45:51</time></td>
+      <td><p class="truncated">openshift-operators</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">istio-cni-node-v2-4-9ct4z</p></td>
+      <td><p class="text-muted">Pulled</p></td>
+      <td data-formatter="messageFormatter">Successfully pulled image &#34;registry.redhat.io/openshift-service-mesh/istio-cni-rhel8@sha256:8e36644dc0f6fe5018b6643cca057ded23aa9b8a026280b864f5f1cc1fa0f259&#34; in 11.171s (11.171s including waiting)</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:45:51 +0300 EEST" title="First Seen: 13:45:51">13:45:51</time></td>
+      <td><p class="truncated">istio-system</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">istiod-basic-d6d4fdc9f-wczvv</p></td>
+      <td><p class="text-muted">Created</p></td>
+      <td data-formatter="messageFormatter">Created container discovery</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:45:51 +0300 EEST" title="First Seen: 13:45:51">13:45:51</time></td>
+      <td><p class="truncated">istio-system</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">istiod-basic-d6d4fdc9f-wczvv</p></td>
+      <td><p class="text-muted">Pulled</p></td>
+      <td data-formatter="messageFormatter">Successfully pulled image &#34;registry.redhat.io/openshift-service-mesh/pilot-rhel8@sha256:1a8882f482044b38e6d75e322db6d6b80d21525f56fdd08f7f2ee9a58897e742&#34; in 10.278s (10.278s including waiting)</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:45:52 +0300 EEST" title="First Seen: 13:45:52">13:45:52</time></td>
+      <td><p class="truncated">openshift-operators</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">istio-cni-node-v2-4-9ct4z</p></td>
+      <td><p class="text-danger">ProbeError</p></td>
+      <td data-formatter="messageFormatter">Readiness probe error: HTTP probe failed with statuscode: 503
+body: Service Unavailable
+
+</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:45:52 +0300 EEST" title="First Seen: 13:45:52">13:45:52</time></td>
+      <td><p class="truncated">istio-system</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">istiod-basic-d6d4fdc9f-wczvv</p></td>
+      <td><p class="text-muted">Started</p></td>
+      <td data-formatter="messageFormatter">Started container discovery</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:45:52 +0300 EEST" title="First Seen: 13:45:52">13:45:52</time></td>
+      <td><p class="truncated">openshift-operators</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">istio-cni-node-v2-4-9ct4z</p></td>
+      <td><p class="text-warning">Unhealthy</p></td>
+      <td data-formatter="messageFormatter">Readiness probe failed: HTTP probe failed with statuscode: 503</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:45:52 +0300 EEST" title="First Seen: 13:45:52">13:45:52</time></td>
+      <td><p class="truncated">openshift-operators</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">istio-cni-node-v2-4-9ct4z</p></td>
+      <td><p class="text-muted">Created</p></td>
+      <td data-formatter="messageFormatter">Created container install-cni</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:45:52 +0300 EEST" title="First Seen: 13:45:52">13:45:52</time></td>
+      <td><p class="truncated">openshift-operators</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">istio-cni-node-v2-4-9ct4z</p></td>
+      <td><p class="text-muted">Started</p></td>
+      <td data-formatter="messageFormatter">Started container install-cni</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:45:53 +0300 EEST" title="First Seen: 13:45:44">13:45:53</time> <small>(x10)</small></td>
+      <td><p class="truncated">istio-system</p></td>
+      <td><p class="truncated">servicemeshcontrolplane-controller</p></td>
+      <td><p class="truncated">basic</p></td>
+      <td><p class="text-muted">PausingInstall</p></td>
+      <td data-formatter="messageFormatter">Paused until the following components become ready: [istio-discovery]</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:45:53 +0300 EEST" title="First Seen: 13:45:52">13:45:53</time> <small>(x3)</small></td>
+      <td><p class="truncated">istio-system</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">istiod-basic-d6d4fdc9f-wczvv</p></td>
+      <td><p class="text-warning">Unhealthy</p></td>
+      <td data-formatter="messageFormatter">Readiness probe failed: HTTP probe failed with statuscode: 503</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:45:56 +0300 EEST" title="First Seen: 13:45:56">13:45:56</time></td>
+      <td><p class="truncated">istio-system</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">istio-egressgateway-856fbd6dfc-t5xwv</p></td>
+      <td><p class="text-muted">Pulling</p></td>
+      <td data-formatter="messageFormatter">Pulling image &#34;registry.redhat.io/openshift-service-mesh/proxyv2-rhel8@sha256:186619a888331a58729e27e67fbcee236875c1998b6714565238db53e9a1f8bd&#34;</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:45:56 +0300 EEST" title="First Seen: 13:45:56">13:45:56</time></td>
+      <td><p class="truncated">istio-system</p></td>
+      <td><p class="truncated">deployment-controller</p></td>
+      <td><p class="truncated">istio-egressgateway</p></td>
+      <td><p class="text-muted">ScalingReplicaSet</p></td>
+      <td data-formatter="messageFormatter">Scaled up replica set istio-egressgateway-856fbd6dfc to 1</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:45:56 +0300 EEST" title="First Seen: 13:45:56">13:45:56</time></td>
+      <td><p class="truncated">istio-system</p></td>
+      <td><p class="truncated">replicaset-controller</p></td>
+      <td><p class="truncated">istio-egressgateway-856fbd6dfc</p></td>
+      <td><p class="text-muted">SuccessfulCreate</p></td>
+      <td data-formatter="messageFormatter">Created pod: istio-egressgateway-856fbd6dfc-t5xwv</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:45:56 +0300 EEST" title="First Seen: 13:45:56">13:45:56</time></td>
+      <td><p class="truncated">istio-system</p></td>
+      <td><p class="truncated">deployment-controller</p></td>
+      <td><p class="truncated">istio-ingressgateway</p></td>
+      <td><p class="text-muted">ScalingReplicaSet</p></td>
+      <td data-formatter="messageFormatter">Scaled up replica set istio-ingressgateway-7b6954747 to 1</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:45:56 +0300 EEST" title="First Seen: 13:45:56">13:45:56</time></td>
+      <td><p class="truncated">istio-system</p></td>
+      <td><p class="truncated">replicaset-controller</p></td>
+      <td><p class="truncated">istio-ingressgateway-7b6954747</p></td>
+      <td><p class="text-muted">SuccessfulCreate</p></td>
+      <td data-formatter="messageFormatter">Created pod: istio-ingressgateway-7b6954747-qqhbw</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:45:56 +0300 EEST" title="First Seen: 13:45:56">13:45:56</time></td>
+      <td><p class="truncated">istio-system</p></td>
+      <td><p class="truncated">multus</p></td>
+      <td><p class="truncated">istio-ingressgateway-7b6954747-qqhbw</p></td>
+      <td><p class="text-muted">AddedInterface</p></td>
+      <td data-formatter="messageFormatter">Add eth0 [10.128.2.20/23] from ovn-kubernetes</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:45:56 +0300 EEST" title="First Seen: 13:45:56">13:45:56</time></td>
+      <td><p class="truncated">istio-system</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">istio-ingressgateway-7b6954747-qqhbw</p></td>
+      <td><p class="text-muted">Pulling</p></td>
+      <td data-formatter="messageFormatter">Pulling image &#34;registry.redhat.io/openshift-service-mesh/proxyv2-rhel8@sha256:186619a888331a58729e27e67fbcee236875c1998b6714565238db53e9a1f8bd&#34;</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:45:56 +0300 EEST" title="First Seen: 13:45:56">13:45:56</time></td>
+      <td><p class="truncated">istio-system</p></td>
+      <td><p class="truncated">multus</p></td>
+      <td><p class="truncated">istio-egressgateway-856fbd6dfc-t5xwv</p></td>
+      <td><p class="text-muted">AddedInterface</p></td>
+      <td data-formatter="messageFormatter">Add eth0 [10.128.2.21/23] from ovn-kubernetes</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:45:58 +0300 EEST" title="First Seen: 13:45:58">13:45:58</time> <small>(x2)</small></td>
+      <td><p class="truncated">istio-system</p></td>
+      <td><p class="truncated">servicemeshcontrolplane-controller</p></td>
+      <td><p class="truncated">basic</p></td>
+      <td><p class="text-muted">PausingInstall</p></td>
+      <td data-formatter="messageFormatter">Paused until the following components become ready: [istio-egress istio-ingress]</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:46:06 +0300 EEST" title="First Seen: 13:46:06">13:46:06</time></td>
+      <td><p class="truncated">istio-system</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">istio-egressgateway-856fbd6dfc-t5xwv</p></td>
+      <td><p class="text-muted">Pulled</p></td>
+      <td data-formatter="messageFormatter">Successfully pulled image &#34;registry.redhat.io/openshift-service-mesh/proxyv2-rhel8@sha256:186619a888331a58729e27e67fbcee236875c1998b6714565238db53e9a1f8bd&#34; in 9.993s (9.993s including waiting)</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:46:06 +0300 EEST" title="First Seen: 13:46:06">13:46:06</time></td>
+      <td><p class="truncated">istio-system</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">istio-ingressgateway-7b6954747-qqhbw</p></td>
+      <td><p class="text-muted">Pulled</p></td>
+      <td data-formatter="messageFormatter">Successfully pulled image &#34;registry.redhat.io/openshift-service-mesh/proxyv2-rhel8@sha256:186619a888331a58729e27e67fbcee236875c1998b6714565238db53e9a1f8bd&#34; in 10.06s (10.06s including waiting)</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:46:07 +0300 EEST" title="First Seen: 13:46:07">13:46:07</time></td>
+      <td><p class="truncated">istio-system</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">istio-egressgateway-856fbd6dfc-t5xwv</p></td>
+      <td><p class="text-muted">Started</p></td>
+      <td data-formatter="messageFormatter">Started container istio-proxy</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:46:07 +0300 EEST" title="First Seen: 13:46:07">13:46:07</time></td>
+      <td><p class="truncated">istio-system</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">istio-ingressgateway-7b6954747-qqhbw</p></td>
+      <td><p class="text-muted">Started</p></td>
+      <td data-formatter="messageFormatter">Started container istio-proxy</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:46:07 +0300 EEST" title="First Seen: 13:46:07">13:46:07</time></td>
+      <td><p class="truncated">istio-system</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">istio-egressgateway-856fbd6dfc-t5xwv</p></td>
+      <td><p class="text-muted">Created</p></td>
+      <td data-formatter="messageFormatter">Created container istio-proxy</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:46:07 +0300 EEST" title="First Seen: 13:46:07">13:46:07</time></td>
+      <td><p class="truncated">istio-system</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">istio-ingressgateway-7b6954747-qqhbw</p></td>
+      <td><p class="text-muted">Created</p></td>
+      <td data-formatter="messageFormatter">Created container istio-proxy</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:46:08 +0300 EEST" title="First Seen: 13:46:08">13:46:08</time></td>
+      <td><p class="truncated">istio-system</p></td>
+      <td><p class="truncated">servicemeshcontrolplane-controller</p></td>
+      <td><p class="truncated">basic</p></td>
+      <td><p class="text-muted">Pruning</p></td>
+      <td data-formatter="messageFormatter">Pruning obsolete resources</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:46:08 +0300 EEST" title="First Seen: 13:46:08">13:46:08</time></td>
+      <td><p class="truncated">istio-system</p></td>
+      <td><p class="truncated">servicemeshcontrolplane-controller</p></td>
+      <td><p class="truncated">basic</p></td>
+      <td><p class="text-muted">Ready</p></td>
+      <td data-formatter="messageFormatter">All component deployments are Available</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:46:08 +0300 EEST" title="First Seen: 13:46:08">13:46:08</time></td>
+      <td><p class="truncated">istio-system</p></td>
+      <td><p class="truncated">servicemeshcontrolplane-controller</p></td>
+      <td><p class="truncated">basic</p></td>
+      <td><p class="text-muted">Installed</p></td>
+      <td data-formatter="messageFormatter">Successfully installed version 2.5.1-1-2</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:46:08 +0300 EEST" title="First Seen: 13:46:08">13:46:08</time></td>
+      <td><p class="truncated">istio-system</p></td>
+      <td><p class="truncated">servicemeshcontrolplane-controller</p></td>
+      <td><p class="truncated">basic</p></td>
+      <td><p class="text-muted">PausingInstall</p></td>
+      <td data-formatter="messageFormatter">Paused until the following components become ready: [istio-ingress]</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:55:45 +0300 EEST" title="First Seen: 13:55:45">13:55:45</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">knativeserving-controller</p></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="text-muted">FinalizerUpdate</p></td>
+      <td data-formatter="messageFormatter">Updated &#34;knative-serving&#34; finalizers</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:55:45 +0300 EEST" title="First Seen: 13:55:45">13:55:45</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">knativeserving-controller</p></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="text-danger">FinalizerUpdateFailed</p></td>
+      <td data-formatter="messageFormatter">Failed to update finalizers for &#34;knative-serving&#34;: Operation cannot be fulfilled on knativeservings.operator.knative.dev &#34;knative-serving&#34;: the object has been modified; please apply your changes to the latest version and try again</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:55:55 +0300 EEST" title="First Seen: 13:55:55">13:55:55</time> <small>(x2)</small></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">controllermanager</p></td>
+      <td><p class="truncated">activator-pdb</p></td>
+      <td><p class="text-muted">NoPods</p></td>
+      <td data-formatter="messageFormatter">No matching pods found</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:55:55 +0300 EEST" title="First Seen: 13:55:55">13:55:55</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">deployment-controller</p></td>
+      <td><p class="truncated">activator</p></td>
+      <td><p class="text-muted">ScalingReplicaSet</p></td>
+      <td data-formatter="messageFormatter">Scaled up replica set activator-7b646b88cc to 1</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:55:56 +0300 EEST" title="First Seen: 13:55:56">13:55:56</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">controller-85c6957d79-wdl8x</p></td>
+      <td><p class="text-muted">Pulling</p></td>
+      <td data-formatter="messageFormatter">Pulling image &#34;registry.redhat.io/openshift-serverless-1/serving-controller-rhel8@sha256:4f56e90157c9c9ce5658b9f0946cf786703fd12a24abd091c0e5d6647c00db23&#34;</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:55:56 +0300 EEST" title="First Seen: 13:55:56">13:55:56</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">multus</p></td>
+      <td><p class="truncated">controller-85c6957d79-g7x8f</p></td>
+      <td><p class="text-muted">AddedInterface</p></td>
+      <td data-formatter="messageFormatter">Add eth0 [10.129.2.18/23] from ovn-kubernetes</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:55:56 +0300 EEST" title="First Seen: 13:55:56">13:55:56</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">autoscaler-588cfb64fb-8csmw</p></td>
+      <td><p class="text-muted">Pulling</p></td>
+      <td data-formatter="messageFormatter">Pulling image &#34;registry.redhat.io/openshift-serverless-1/serving-autoscaler-rhel8@sha256:260f1d34c34857bbde21a5a4ffb271baa13ac20deb4bc951f79a75f2d4825722&#34;</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:55:56 +0300 EEST" title="First Seen: 13:55:56">13:55:56</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">deployment-controller</p></td>
+      <td><p class="truncated">autoscaler</p></td>
+      <td><p class="text-muted">ScalingReplicaSet</p></td>
+      <td data-formatter="messageFormatter">Scaled up replica set autoscaler-588cfb64fb to 2</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:55:56 +0300 EEST" title="First Seen: 13:55:56">13:55:56</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">multus</p></td>
+      <td><p class="truncated">controller-85c6957d79-wdl8x</p></td>
+      <td><p class="text-muted">AddedInterface</p></td>
+      <td data-formatter="messageFormatter">Add eth0 [10.131.0.24/23] from ovn-kubernetes</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:55:56 +0300 EEST" title="First Seen: 13:55:56">13:55:56</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">multus</p></td>
+      <td><p class="truncated">autoscaler-588cfb64fb-9nv45</p></td>
+      <td><p class="text-muted">AddedInterface</p></td>
+      <td data-formatter="messageFormatter">Add eth0 [10.131.0.23/23] from ovn-kubernetes</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:55:56 +0300 EEST" title="First Seen: 13:55:56">13:55:56</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">autoscaler-588cfb64fb-9nv45</p></td>
+      <td><p class="text-muted">Pulling</p></td>
+      <td data-formatter="messageFormatter">Pulling image &#34;registry.redhat.io/openshift-serverless-1/serving-autoscaler-rhel8@sha256:260f1d34c34857bbde21a5a4ffb271baa13ac20deb4bc951f79a75f2d4825722&#34;</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:55:56 +0300 EEST" title="First Seen: 13:55:56">13:55:56</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">replicaset-controller</p></td>
+      <td><p class="truncated">autoscaler-588cfb64fb</p></td>
+      <td><p class="text-muted">SuccessfulCreate</p></td>
+      <td data-formatter="messageFormatter">Created pod: autoscaler-588cfb64fb-8csmw</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:55:56 +0300 EEST" title="First Seen: 13:55:56">13:55:56</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">multus</p></td>
+      <td><p class="truncated">autoscaler-588cfb64fb-8csmw</p></td>
+      <td><p class="text-muted">AddedInterface</p></td>
+      <td data-formatter="messageFormatter">Add eth0 [10.128.2.25/23] from ovn-kubernetes</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:55:56 +0300 EEST" title="First Seen: 13:55:56">13:55:56</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">replicaset-controller</p></td>
+      <td><p class="truncated">autoscaler-588cfb64fb</p></td>
+      <td><p class="text-muted">SuccessfulCreate</p></td>
+      <td data-formatter="messageFormatter">Created pod: autoscaler-588cfb64fb-9nv45</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:55:56 +0300 EEST" title="First Seen: 13:55:56">13:55:56</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">deployment-controller</p></td>
+      <td><p class="truncated">controller</p></td>
+      <td><p class="text-muted">ScalingReplicaSet</p></td>
+      <td data-formatter="messageFormatter">Scaled up replica set controller-85c6957d79 to 2</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:55:56 +0300 EEST" title="First Seen: 13:55:56">13:55:56</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">controlplane</p></td>
+      <td><p class="truncated">activator-7b646b88cc-fkrcw</p></td>
+      <td><p class="text-danger">ErrorUpdatingResource</p></td>
+      <td data-formatter="messageFormatter">addLogicalPort failed for knative-serving/activator-7b646b88cc-fkrcw: failed to update pod knative-serving/activator-7b646b88cc-fkrcw: Operation cannot be fulfilled on pods &#34;activator-7b646b88cc-fkrcw&#34;: the object has been modified; please apply your changes to the latest version and try again</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:55:56 +0300 EEST" title="First Seen: 13:55:56">13:55:56</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">replicaset-controller</p></td>
+      <td><p class="truncated">activator-7b646b88cc</p></td>
+      <td><p class="text-muted">SuccessfulCreate</p></td>
+      <td data-formatter="messageFormatter">Created pod: activator-7b646b88cc-fkrcw</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:55:56 +0300 EEST" title="First Seen: 13:55:56">13:55:56</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">deployment-controller</p></td>
+      <td><p class="truncated">webhook</p></td>
+      <td><p class="text-muted">ScalingReplicaSet</p></td>
+      <td data-formatter="messageFormatter">Scaled up replica set webhook-5686f8c6f6 to 1</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:55:56 +0300 EEST" title="First Seen: 13:55:56">13:55:56</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">multus</p></td>
+      <td><p class="truncated">activator-7b646b88cc-fkrcw</p></td>
+      <td><p class="text-muted">AddedInterface</p></td>
+      <td data-formatter="messageFormatter">Add eth0 [10.129.2.17/23] from ovn-kubernetes</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:55:56 +0300 EEST" title="First Seen: 13:55:56">13:55:56</time> <small>(x2)</small></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">controllermanager</p></td>
+      <td><p class="truncated">webhook-pdb</p></td>
+      <td><p class="text-muted">NoPods</p></td>
+      <td data-formatter="messageFormatter">No matching pods found</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:55:56 +0300 EEST" title="First Seen: 13:55:56">13:55:56</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">replicaset-controller</p></td>
+      <td><p class="truncated">webhook-5686f8c6f6</p></td>
+      <td><p class="text-muted">SuccessfulCreate</p></td>
+      <td data-formatter="messageFormatter">Created pod: webhook-5686f8c6f6-rs9n5</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:55:56 +0300 EEST" title="First Seen: 13:55:56">13:55:56</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">replicaset-controller</p></td>
+      <td><p class="truncated">controller-85c6957d79</p></td>
+      <td><p class="text-muted">SuccessfulCreate</p></td>
+      <td data-formatter="messageFormatter">Created pod: controller-85c6957d79-wdl8x</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:55:56 +0300 EEST" title="First Seen: 13:55:56">13:55:56</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">replicaset-controller</p></td>
+      <td><p class="truncated">controller-85c6957d79</p></td>
+      <td><p class="text-muted">SuccessfulCreate</p></td>
+      <td data-formatter="messageFormatter">Created pod: controller-85c6957d79-g7x8f</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:55:56 +0300 EEST" title="First Seen: 13:55:56">13:55:56</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">activator-7b646b88cc-fkrcw</p></td>
+      <td><p class="text-muted">Pulling</p></td>
+      <td data-formatter="messageFormatter">Pulling image &#34;registry.redhat.io/openshift-serverless-1/serving-activator-rhel8@sha256:498bbb08dce6b401e1904da74404c5275c915d68ecb7eee5af771dacb699cad4&#34;</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:55:57 +0300 EEST" title="First Seen: 13:55:57">13:55:57</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">replicaset-controller</p></td>
+      <td><p class="truncated">net-istio-webhook-5dfc9b8d7c</p></td>
+      <td><p class="text-muted">SuccessfulCreate</p></td>
+      <td data-formatter="messageFormatter">Created pod: net-istio-webhook-5dfc9b8d7c-vwl24</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:55:57 +0300 EEST" title="First Seen: 13:55:57">13:55:57</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">autoscaler-hpa-684ccf4558-nxztv</p></td>
+      <td><p class="text-muted">Pulling</p></td>
+      <td data-formatter="messageFormatter">Pulling image &#34;registry.redhat.io/openshift-serverless-1/serving-autoscaler-hpa-rhel8@sha256:c3ab3140a7bc7bc1ff89d1bd620cdf1e362c901800ea699291f27029e87697a5&#34;</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:55:57 +0300 EEST" title="First Seen: 13:55:57">13:55:57</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">replicaset-controller</p></td>
+      <td><p class="truncated">net-istio-webhook-5dfc9b8d7c</p></td>
+      <td><p class="text-muted">SuccessfulCreate</p></td>
+      <td data-formatter="messageFormatter">Created pod: net-istio-webhook-5dfc9b8d7c-l8gx9</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:55:57 +0300 EEST" title="First Seen: 13:55:57">13:55:57</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">deployment-controller</p></td>
+      <td><p class="truncated">net-istio-webhook</p></td>
+      <td><p class="text-muted">ScalingReplicaSet</p></td>
+      <td data-formatter="messageFormatter">Scaled up replica set net-istio-webhook-5dfc9b8d7c to 2</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:55:57 +0300 EEST" title="First Seen: 13:55:57">13:55:57</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">multus</p></td>
+      <td><p class="truncated">autoscaler-hpa-684ccf4558-c6grm</p></td>
+      <td><p class="text-muted">AddedInterface</p></td>
+      <td data-formatter="messageFormatter">Add eth0 [10.128.2.26/23] from ovn-kubernetes</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:55:57 +0300 EEST" title="First Seen: 13:55:57">13:55:57</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">deployment-controller</p></td>
+      <td><p class="truncated">net-istio-controller</p></td>
+      <td><p class="text-muted">ScalingReplicaSet</p></td>
+      <td data-formatter="messageFormatter">Scaled up replica set net-istio-controller-96d4b96dd to 2</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:55:57 +0300 EEST" title="First Seen: 13:55:57">13:55:57</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">replicaset-controller</p></td>
+      <td><p class="truncated">net-istio-controller-96d4b96dd</p></td>
+      <td><p class="text-muted">SuccessfulCreate</p></td>
+      <td data-formatter="messageFormatter">Created pod: net-istio-controller-96d4b96dd-6bwc8</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:55:57 +0300 EEST" title="First Seen: 13:55:57">13:55:57</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">autoscaler-hpa-684ccf4558-c6grm</p></td>
+      <td><p class="text-muted">Pulling</p></td>
+      <td data-formatter="messageFormatter">Pulling image &#34;registry.redhat.io/openshift-serverless-1/serving-autoscaler-hpa-rhel8@sha256:c3ab3140a7bc7bc1ff89d1bd620cdf1e362c901800ea699291f27029e87697a5&#34;</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:55:57 +0300 EEST" title="First Seen: 13:55:57">13:55:57</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">multus</p></td>
+      <td><p class="truncated">autoscaler-hpa-684ccf4558-nxztv</p></td>
+      <td><p class="text-muted">AddedInterface</p></td>
+      <td data-formatter="messageFormatter">Add eth0 [10.131.0.26/23] from ovn-kubernetes</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:55:57 +0300 EEST" title="First Seen: 13:55:57">13:55:57</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">multus</p></td>
+      <td><p class="truncated">webhook-5686f8c6f6-rs9n5</p></td>
+      <td><p class="text-muted">AddedInterface</p></td>
+      <td data-formatter="messageFormatter">Add eth0 [10.131.0.25/23] from ovn-kubernetes</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:55:57 +0300 EEST" title="First Seen: 13:55:57">13:55:57</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">job-controller</p></td>
+      <td><p class="truncated">storage-version-migration-serving-serving-1.11-1.32.1</p></td>
+      <td><p class="text-muted">SuccessfulCreate</p></td>
+      <td data-formatter="messageFormatter">Created pod: storage-version-migration-serving-serving-1.11-1.32.1-r28pn</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:55:57 +0300 EEST" title="First Seen: 13:55:57">13:55:57</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">replicaset-controller</p></td>
+      <td><p class="truncated">autoscaler-hpa-684ccf4558</p></td>
+      <td><p class="text-muted">SuccessfulCreate</p></td>
+      <td data-formatter="messageFormatter">Created pod: autoscaler-hpa-684ccf4558-c6grm</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:55:57 +0300 EEST" title="First Seen: 13:55:57">13:55:57</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">replicaset-controller</p></td>
+      <td><p class="truncated">autoscaler-hpa-684ccf4558</p></td>
+      <td><p class="text-muted">SuccessfulCreate</p></td>
+      <td data-formatter="messageFormatter">Created pod: autoscaler-hpa-684ccf4558-nxztv</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:55:57 +0300 EEST" title="First Seen: 13:55:57">13:55:57</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">deployment-controller</p></td>
+      <td><p class="truncated">autoscaler-hpa</p></td>
+      <td><p class="text-muted">ScalingReplicaSet</p></td>
+      <td data-formatter="messageFormatter">Scaled up replica set autoscaler-hpa-684ccf4558 to 2</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:55:57 +0300 EEST" title="First Seen: 13:55:57">13:55:57</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">controller-85c6957d79-g7x8f</p></td>
+      <td><p class="text-muted">Pulling</p></td>
+      <td data-formatter="messageFormatter">Pulling image &#34;registry.redhat.io/openshift-serverless-1/serving-controller-rhel8@sha256:4f56e90157c9c9ce5658b9f0946cf786703fd12a24abd091c0e5d6647c00db23&#34;</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:55:57 +0300 EEST" title="First Seen: 13:55:57">13:55:57</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">replicaset-controller</p></td>
+      <td><p class="truncated">net-istio-controller-96d4b96dd</p></td>
+      <td><p class="text-muted">SuccessfulCreate</p></td>
+      <td data-formatter="messageFormatter">Created pod: net-istio-controller-96d4b96dd-r5tcz</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:55:57 +0300 EEST" title="First Seen: 13:55:57">13:55:57</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">webhook-5686f8c6f6-rs9n5</p></td>
+      <td><p class="text-muted">Pulling</p></td>
+      <td data-formatter="messageFormatter">Pulling image &#34;registry.redhat.io/openshift-serverless-1/serving-webhook-rhel8@sha256:80e3c2d43c694d29b5392b1324522c8cab1431052307214ea794d11dc1450cb3&#34;</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:55:57 +0300 EEST" title="First Seen: 13:55:57">13:55:57</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">replicaset-controller</p></td>
+      <td><p class="truncated">controller-c85f6bb7</p></td>
+      <td><p class="text-muted">SuccessfulCreate</p></td>
+      <td data-formatter="messageFormatter">Created pod: controller-c85f6bb7-wxvch</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:55:57 +0300 EEST" title="First Seen: 13:55:57">13:55:57</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">deployment-controller</p></td>
+      <td><p class="truncated">controller</p></td>
+      <td><p class="text-muted">ScalingReplicaSet</p></td>
+      <td data-formatter="messageFormatter">Scaled up replica set controller-c85f6bb7 to 1</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:55:58 +0300 EEST" title="First Seen: 13:55:58">13:55:58</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">multus</p></td>
+      <td><p class="truncated">controller-c85f6bb7-wxvch</p></td>
+      <td><p class="text-muted">AddedInterface</p></td>
+      <td data-formatter="messageFormatter">Add eth0 [10.128.2.27/23] from ovn-kubernetes</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:55:58 +0300 EEST" title="First Seen: 13:55:58">13:55:58</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">controller-c85f6bb7-wxvch</p></td>
+      <td><p class="text-muted">Pulling</p></td>
+      <td data-formatter="messageFormatter">Pulling image &#34;registry.redhat.io/openshift-serverless-1/serving-controller-rhel8@sha256:4f56e90157c9c9ce5658b9f0946cf786703fd12a24abd091c0e5d6647c00db23&#34;</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:55:58 +0300 EEST" title="First Seen: 13:55:58">13:55:58</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">multus</p></td>
+      <td><p class="truncated">net-istio-controller-96d4b96dd-6bwc8</p></td>
+      <td><p class="text-muted">AddedInterface</p></td>
+      <td data-formatter="messageFormatter">Add eth0 [10.131.0.27/23] from ovn-kubernetes</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:55:58 +0300 EEST" title="First Seen: 13:55:58">13:55:58</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">net-istio-controller-96d4b96dd-6bwc8</p></td>
+      <td><p class="text-muted">Pulling</p></td>
+      <td data-formatter="messageFormatter">Pulling image &#34;registry.redhat.io/openshift-serverless-1/net-istio-controller-rhel8@sha256:bb93b5d5a33e10b6e836f338199b9ae563501af1a5ce9840967ef00009f2a07b&#34;</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:55:58 +0300 EEST" title="First Seen: 13:55:58">13:55:58</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">multus</p></td>
+      <td><p class="truncated">net-istio-controller-96d4b96dd-r5tcz</p></td>
+      <td><p class="text-muted">AddedInterface</p></td>
+      <td data-formatter="messageFormatter">Add eth0 [10.129.2.20/23] from ovn-kubernetes</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:55:58 +0300 EEST" title="First Seen: 13:55:58">13:55:58</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">net-istio-webhook-5dfc9b8d7c-vwl24</p></td>
+      <td><p class="text-muted">Pulling</p></td>
+      <td data-formatter="messageFormatter">Pulling image &#34;registry.redhat.io/openshift-serverless-1/net-istio-webhook-rhel8@sha256:854358e190dff1de84327877fbb9f61fb177a1f46cb2cc0ae79b62af3c252e7f&#34;</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:55:58 +0300 EEST" title="First Seen: 13:55:58">13:55:58</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">net-istio-controller-96d4b96dd-r5tcz</p></td>
+      <td><p class="text-muted">Pulling</p></td>
+      <td data-formatter="messageFormatter">Pulling image &#34;registry.redhat.io/openshift-serverless-1/net-istio-controller-rhel8@sha256:bb93b5d5a33e10b6e836f338199b9ae563501af1a5ce9840967ef00009f2a07b&#34;</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:55:58 +0300 EEST" title="First Seen: 13:55:58">13:55:58</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">multus</p></td>
+      <td><p class="truncated">net-istio-webhook-5dfc9b8d7c-vwl24</p></td>
+      <td><p class="text-muted">AddedInterface</p></td>
+      <td data-formatter="messageFormatter">Add eth0 [10.131.0.28/23] from ovn-kubernetes</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:55:58 +0300 EEST" title="First Seen: 13:55:58">13:55:58</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">net-istio-webhook-5dfc9b8d7c-l8gx9</p></td>
+      <td><p class="text-muted">Pulling</p></td>
+      <td data-formatter="messageFormatter">Pulling image &#34;registry.redhat.io/openshift-serverless-1/net-istio-webhook-rhel8@sha256:854358e190dff1de84327877fbb9f61fb177a1f46cb2cc0ae79b62af3c252e7f&#34;</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:55:58 +0300 EEST" title="First Seen: 13:55:58">13:55:58</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">storage-version-migration-serving-serving-1.11-1.32.1-r28pn</p></td>
+      <td><p class="text-muted">Pulling</p></td>
+      <td data-formatter="messageFormatter">Pulling image &#34;registry.redhat.io/openshift-serverless-1/serving-storage-version-migration-rhel8@sha256:09dd06423043e786e37964d6c8755ebb1b144f00e223b9e75250fc2bcec0eec9&#34;</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:55:58 +0300 EEST" title="First Seen: 13:55:58">13:55:58</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">multus</p></td>
+      <td><p class="truncated">storage-version-migration-serving-serving-1.11-1.32.1-r28pn</p></td>
+      <td><p class="text-muted">AddedInterface</p></td>
+      <td data-formatter="messageFormatter">Add eth0 [10.129.2.19/23] from ovn-kubernetes</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:55:58 +0300 EEST" title="First Seen: 13:55:58">13:55:58</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">multus</p></td>
+      <td><p class="truncated">net-istio-webhook-5dfc9b8d7c-l8gx9</p></td>
+      <td><p class="text-muted">AddedInterface</p></td>
+      <td data-formatter="messageFormatter">Add eth0 [10.129.2.21/23] from ovn-kubernetes</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:55:59 +0300 EEST" title="First Seen: 13:55:59">13:55:59</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">activator-7b646b88cc-fkrcw</p></td>
+      <td><p class="text-muted">Created</p></td>
+      <td data-formatter="messageFormatter">Created container activator</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:55:59 +0300 EEST" title="First Seen: 13:55:59">13:55:59</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">autoscaler-588cfb64fb-8csmw</p></td>
+      <td><p class="text-muted">Pulled</p></td>
+      <td data-formatter="messageFormatter">Successfully pulled image &#34;registry.redhat.io/openshift-serverless-1/serving-autoscaler-rhel8@sha256:260f1d34c34857bbde21a5a4ffb271baa13ac20deb4bc951f79a75f2d4825722&#34; in 2.21s (2.21s including waiting)</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:55:59 +0300 EEST" title="First Seen: 13:55:59">13:55:59</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">activator-7b646b88cc-fkrcw</p></td>
+      <td><p class="text-muted">Pulled</p></td>
+      <td data-formatter="messageFormatter">Successfully pulled image &#34;registry.redhat.io/openshift-serverless-1/serving-activator-rhel8@sha256:498bbb08dce6b401e1904da74404c5275c915d68ecb7eee5af771dacb699cad4&#34; in 2.984s (2.984s including waiting)</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:55:59 +0300 EEST" title="First Seen: 13:55:59">13:55:59</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">controller-85c6957d79-g7x8f</p></td>
+      <td><p class="text-muted">Pulled</p></td>
+      <td data-formatter="messageFormatter">Successfully pulled image &#34;registry.redhat.io/openshift-serverless-1/serving-controller-rhel8@sha256:4f56e90157c9c9ce5658b9f0946cf786703fd12a24abd091c0e5d6647c00db23&#34; in 2.734s (2.734s including waiting)</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:55:59 +0300 EEST" title="First Seen: 13:55:59">13:55:59</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">controller-85c6957d79-g7x8f</p></td>
+      <td><p class="text-muted">Created</p></td>
+      <td data-formatter="messageFormatter">Created container controller</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:55:59 +0300 EEST" title="First Seen: 13:55:59">13:55:59</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">activator-7b646b88cc-fkrcw</p></td>
+      <td><p class="text-muted">Started</p></td>
+      <td data-formatter="messageFormatter">Started container activator</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:55:59 +0300 EEST" title="First Seen: 13:55:59">13:55:59</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">activator-7b646b88cc-fkrcw</p></td>
+      <td><p class="text-muted">Pulling</p></td>
+      <td data-formatter="messageFormatter">Pulling image &#34;registry.redhat.io/openshift-service-mesh/proxyv2-rhel8@sha256:186619a888331a58729e27e67fbcee236875c1998b6714565238db53e9a1f8bd&#34;</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:55:59 +0300 EEST" title="First Seen: 13:55:59">13:55:59</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">autoscaler-588cfb64fb-8csmw</p></td>
+      <td><p class="text-warning">Unhealthy</p></td>
+      <td data-formatter="messageFormatter">Readiness probe failed: HTTP probe failed with statuscode: 500</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:55:59 +0300 EEST" title="First Seen: 13:55:59">13:55:59</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">autoscaler-588cfb64fb-8csmw</p></td>
+      <td><p class="text-muted">Started</p></td>
+      <td data-formatter="messageFormatter">Started container istio-proxy</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:55:59 +0300 EEST" title="First Seen: 13:55:59">13:55:59</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">autoscaler-588cfb64fb-8csmw</p></td>
+      <td><p class="text-muted">Created</p></td>
+      <td data-formatter="messageFormatter">Created container istio-proxy</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:55:59 +0300 EEST" title="First Seen: 13:55:59">13:55:59</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">autoscaler-588cfb64fb-8csmw</p></td>
+      <td><p class="text-muted">Pulled</p></td>
+      <td data-formatter="messageFormatter">Container image &#34;registry.redhat.io/openshift-service-mesh/proxyv2-rhel8@sha256:186619a888331a58729e27e67fbcee236875c1998b6714565238db53e9a1f8bd&#34; already present on machine</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:55:59 +0300 EEST" title="First Seen: 13:55:59">13:55:59</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">autoscaler-588cfb64fb-8csmw</p></td>
+      <td><p class="text-muted">Started</p></td>
+      <td data-formatter="messageFormatter">Started container autoscaler</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:55:59 +0300 EEST" title="First Seen: 13:55:59">13:55:59</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">autoscaler-588cfb64fb-8csmw</p></td>
+      <td><p class="text-muted">Created</p></td>
+      <td data-formatter="messageFormatter">Created container autoscaler</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:56:00 +0300 EEST" title="First Seen: 13:56:00">13:56:00</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">controller-85c6957d79-g7x8f</p></td>
+      <td><p class="text-muted">Started</p></td>
+      <td data-formatter="messageFormatter">Started container controller</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:56:00 +0300 EEST" title="First Seen: 13:56:00">13:56:00</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">secret-controller</p></td>
+      <td><p class="truncated">knative-serving-certs</p></td>
+      <td><p class="text-danger">InternalError</p></td>
+      <td data-formatter="messageFormatter">Operation cannot be fulfilled on secrets &#34;serving-certs-ctrl-ca&#34;: the object has been modified; please apply your changes to the latest version and try again</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:56:00 +0300 EEST" title="First Seen: 13:56:00">13:56:00</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">autoscaler-hpa-684ccf4558-c6grm</p></td>
+      <td><p class="text-muted">Pulled</p></td>
+      <td data-formatter="messageFormatter">Successfully pulled image &#34;registry.redhat.io/openshift-serverless-1/serving-autoscaler-hpa-rhel8@sha256:c3ab3140a7bc7bc1ff89d1bd620cdf1e362c901800ea699291f27029e87697a5&#34; in 2.695s (2.695s including waiting)</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:56:00 +0300 EEST" title="First Seen: 13:56:00">13:56:00</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">autoscaler-hpa-684ccf4558-c6grm</p></td>
+      <td><p class="text-muted">Created</p></td>
+      <td data-formatter="messageFormatter">Created container autoscaler-hpa</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:56:00 +0300 EEST" title="First Seen: 13:56:00">13:56:00</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">controller-c85f6bb7-wxvch</p></td>
+      <td><p class="text-muted">Started</p></td>
+      <td data-formatter="messageFormatter">Started container controller</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:56:00 +0300 EEST" title="First Seen: 13:56:00">13:56:00</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">autoscaler-hpa-684ccf4558-c6grm</p></td>
+      <td><p class="text-muted">Started</p></td>
+      <td data-formatter="messageFormatter">Started container autoscaler-hpa</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:56:00 +0300 EEST" title="First Seen: 13:56:00">13:56:00</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">autoscaler-hpa-684ccf4558-c6grm</p></td>
+      <td><p class="text-warning">Unhealthy</p></td>
+      <td data-formatter="messageFormatter">Readiness probe failed: Get &#34;http://10.128.2.26:8080/readiness&#34;: dial tcp 10.128.2.26:8080: connect: connection refused</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:56:00 +0300 EEST" title="First Seen: 13:56:00">13:56:00</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">controller-c85f6bb7-wxvch</p></td>
+      <td><p class="text-warning">Unhealthy</p></td>
+      <td data-formatter="messageFormatter">Readiness probe failed: Get &#34;http://10.128.2.27:8080/readiness&#34;: dial tcp 10.128.2.27:8080: connect: connection refused</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:56:00 +0300 EEST" title="First Seen: 13:56:00">13:56:00</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">controller-c85f6bb7-wxvch</p></td>
+      <td><p class="text-muted">Pulled</p></td>
+      <td data-formatter="messageFormatter">Successfully pulled image &#34;registry.redhat.io/openshift-serverless-1/serving-controller-rhel8@sha256:4f56e90157c9c9ce5658b9f0946cf786703fd12a24abd091c0e5d6647c00db23&#34; in 2.258s (2.258s including waiting)</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:56:00 +0300 EEST" title="First Seen: 13:56:00">13:56:00</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">controller-c85f6bb7-wxvch</p></td>
+      <td><p class="text-muted">Created</p></td>
+      <td data-formatter="messageFormatter">Created container controller</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:56:01 +0300 EEST" title="First Seen: 13:56:01">13:56:01</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">net-istio-webhook-5dfc9b8d7c-l8gx9</p></td>
+      <td><p class="text-muted">Created</p></td>
+      <td data-formatter="messageFormatter">Created container webhook</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:56:01 +0300 EEST" title="First Seen: 13:56:01">13:56:01</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">net-istio-controller-96d4b96dd-r5tcz</p></td>
+      <td><p class="text-muted">Created</p></td>
+      <td data-formatter="messageFormatter">Created container controller</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:56:01 +0300 EEST" title="First Seen: 13:56:01">13:56:01</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">net-istio-controller-96d4b96dd-r5tcz</p></td>
+      <td><p class="text-muted">Started</p></td>
+      <td data-formatter="messageFormatter">Started container controller</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:56:01 +0300 EEST" title="First Seen: 13:56:01">13:56:01</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">net-istio-webhook-5dfc9b8d7c-l8gx9</p></td>
+      <td><p class="text-muted">Pulled</p></td>
+      <td data-formatter="messageFormatter">Successfully pulled image &#34;registry.redhat.io/openshift-serverless-1/net-istio-webhook-rhel8@sha256:854358e190dff1de84327877fbb9f61fb177a1f46cb2cc0ae79b62af3c252e7f&#34; in 2.848s (2.848s including waiting)</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:56:01 +0300 EEST" title="First Seen: 13:56:01">13:56:01</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">storage-version-migration-serving-serving-1.11-1.32.1-r28pn</p></td>
+      <td><p class="text-muted">Pulled</p></td>
+      <td data-formatter="messageFormatter">Successfully pulled image &#34;registry.redhat.io/openshift-serverless-1/serving-storage-version-migration-rhel8@sha256:09dd06423043e786e37964d6c8755ebb1b144f00e223b9e75250fc2bcec0eec9&#34; in 2.921s (2.921s including waiting)</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:56:01 +0300 EEST" title="First Seen: 13:56:01">13:56:01</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">net-istio-webhook-5dfc9b8d7c-l8gx9</p></td>
+      <td><p class="text-muted">Started</p></td>
+      <td data-formatter="messageFormatter">Started container webhook</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:56:01 +0300 EEST" title="First Seen: 13:56:01">13:56:01</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">storage-version-migration-serving-serving-1.11-1.32.1-r28pn</p></td>
+      <td><p class="text-muted">Started</p></td>
+      <td data-formatter="messageFormatter">Started container migrate</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:56:01 +0300 EEST" title="First Seen: 13:56:01">13:56:01</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">net-istio-controller-96d4b96dd-r5tcz</p></td>
+      <td><p class="text-warning">Unhealthy</p></td>
+      <td data-formatter="messageFormatter">Readiness probe failed: Get &#34;http://10.129.2.20:8080/readiness&#34;: dial tcp 10.129.2.20:8080: connect: connection refused</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:56:01 +0300 EEST" title="First Seen: 13:56:01">13:56:01</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">storage-version-migration-serving-serving-1.11-1.32.1-r28pn</p></td>
+      <td><p class="text-muted">Created</p></td>
+      <td data-formatter="messageFormatter">Created container migrate</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:56:01 +0300 EEST" title="First Seen: 13:56:01">13:56:01</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">net-istio-controller-96d4b96dd-r5tcz</p></td>
+      <td><p class="text-muted">Pulled</p></td>
+      <td data-formatter="messageFormatter">Successfully pulled image &#34;registry.redhat.io/openshift-serverless-1/net-istio-controller-rhel8@sha256:bb93b5d5a33e10b6e836f338199b9ae563501af1a5ce9840967ef00009f2a07b&#34; in 2.644s (2.644s including waiting)</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:56:02 +0300 EEST" title="First Seen: 13:56:02">13:56:02</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">deployment-controller</p></td>
+      <td><p class="truncated">controller</p></td>
+      <td><p class="text-muted">ScalingReplicaSet</p></td>
+      <td data-formatter="messageFormatter">Scaled up replica set controller-c85f6bb7 to 2 from 1</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:56:02 +0300 EEST" title="First Seen: 13:56:02">13:56:02</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">replicaset-controller</p></td>
+      <td><p class="truncated">controller-85c6957d79</p></td>
+      <td><p class="text-muted">SuccessfulDelete</p></td>
+      <td data-formatter="messageFormatter">Deleted pod: controller-85c6957d79-wdl8x</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:56:02 +0300 EEST" title="First Seen: 13:56:02">13:56:02</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">deployment-controller</p></td>
+      <td><p class="truncated">controller</p></td>
+      <td><p class="text-muted">ScalingReplicaSet</p></td>
+      <td data-formatter="messageFormatter">Scaled down replica set controller-85c6957d79 to 1 from 2</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:56:02 +0300 EEST" title="First Seen: 13:56:02">13:56:02</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">replicaset-controller</p></td>
+      <td><p class="truncated">controller-c85f6bb7</p></td>
+      <td><p class="text-muted">SuccessfulCreate</p></td>
+      <td data-formatter="messageFormatter">Created pod: controller-c85f6bb7-8wsmt</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:56:06 +0300 EEST" title="First Seen: 13:56:06">13:56:06</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">activator-7b646b88cc-fkrcw</p></td>
+      <td><p class="text-warning">Unhealthy</p></td>
+      <td data-formatter="messageFormatter">Readiness probe failed: HTTP probe failed with statuscode: 500</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:56:06 +0300 EEST" title="First Seen: 13:56:06">13:56:06</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">activator-7b646b88cc-fkrcw</p></td>
+      <td><p class="text-muted">Created</p></td>
+      <td data-formatter="messageFormatter">Created container istio-proxy</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:56:06 +0300 EEST" title="First Seen: 13:56:06">13:56:06</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">activator-7b646b88cc-fkrcw</p></td>
+      <td><p class="text-muted">Pulled</p></td>
+      <td data-formatter="messageFormatter">Successfully pulled image &#34;registry.redhat.io/openshift-service-mesh/proxyv2-rhel8@sha256:186619a888331a58729e27e67fbcee236875c1998b6714565238db53e9a1f8bd&#34; in 6.649s (6.649s including waiting)</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:56:06 +0300 EEST" title="First Seen: 13:56:06">13:56:06</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">activator-7b646b88cc-fkrcw</p></td>
+      <td><p class="text-muted">Started</p></td>
+      <td data-formatter="messageFormatter">Started container istio-proxy</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:56:07 +0300 EEST" title="First Seen: 13:56:07">13:56:07</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">autoscaler-588cfb64fb-9nv45</p></td>
+      <td><p class="text-muted">Started</p></td>
+      <td data-formatter="messageFormatter">Started container autoscaler</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:56:07 +0300 EEST" title="First Seen: 13:56:07">13:56:07</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">autoscaler-588cfb64fb-9nv45</p></td>
+      <td><p class="text-muted">Pulling</p></td>
+      <td data-formatter="messageFormatter">Pulling image &#34;registry.redhat.io/openshift-service-mesh/proxyv2-rhel8@sha256:186619a888331a58729e27e67fbcee236875c1998b6714565238db53e9a1f8bd&#34;</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:56:07 +0300 EEST" title="First Seen: 13:56:07">13:56:07</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">multus</p></td>
+      <td><p class="truncated">controller-c85f6bb7-8wsmt</p></td>
+      <td><p class="text-muted">AddedInterface</p></td>
+      <td data-formatter="messageFormatter">Add eth0 [10.131.0.29/23] from ovn-kubernetes</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:56:07 +0300 EEST" title="First Seen: 13:56:07">13:56:07</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">autoscaler-588cfb64fb-9nv45</p></td>
+      <td><p class="text-muted">Created</p></td>
+      <td data-formatter="messageFormatter">Created container autoscaler</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:56:07 +0300 EEST" title="First Seen: 13:56:07">13:56:07</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">controller-85c6957d79-wdl8x</p></td>
+      <td><p class="text-muted">Started</p></td>
+      <td data-formatter="messageFormatter">Started container controller</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:56:07 +0300 EEST" title="First Seen: 13:56:07">13:56:07</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">controller-85c6957d79-wdl8x</p></td>
+      <td><p class="text-muted">Created</p></td>
+      <td data-formatter="messageFormatter">Created container controller</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:56:07 +0300 EEST" title="First Seen: 13:56:07">13:56:07</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">controller-85c6957d79-wdl8x</p></td>
+      <td><p class="text-muted">Pulled</p></td>
+      <td data-formatter="messageFormatter">Successfully pulled image &#34;registry.redhat.io/openshift-serverless-1/serving-controller-rhel8@sha256:4f56e90157c9c9ce5658b9f0946cf786703fd12a24abd091c0e5d6647c00db23&#34; in 10.376s (10.376s including waiting)</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:56:07 +0300 EEST" title="First Seen: 13:56:07">13:56:07</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">controller-c85f6bb7-8wsmt</p></td>
+      <td><p class="text-muted">Pulled</p></td>
+      <td data-formatter="messageFormatter">Container image &#34;registry.redhat.io/openshift-serverless-1/serving-controller-rhel8@sha256:4f56e90157c9c9ce5658b9f0946cf786703fd12a24abd091c0e5d6647c00db23&#34; already present on machine</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:56:07 +0300 EEST" title="First Seen: 13:56:07">13:56:07</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">controller-c85f6bb7-8wsmt</p></td>
+      <td><p class="text-muted">Created</p></td>
+      <td data-formatter="messageFormatter">Created container controller</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:56:07 +0300 EEST" title="First Seen: 13:56:07">13:56:07</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">controller-c85f6bb7-8wsmt</p></td>
+      <td><p class="text-muted">Started</p></td>
+      <td data-formatter="messageFormatter">Started container controller</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:56:07 +0300 EEST" title="First Seen: 13:56:07">13:56:07</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">webhook-5686f8c6f6-rs9n5</p></td>
+      <td><p class="text-muted">Pulled</p></td>
+      <td data-formatter="messageFormatter">Successfully pulled image &#34;registry.redhat.io/openshift-serverless-1/serving-webhook-rhel8@sha256:80e3c2d43c694d29b5392b1324522c8cab1431052307214ea794d11dc1450cb3&#34; in 9.795s (9.795s including waiting)</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:56:07 +0300 EEST" title="First Seen: 13:56:07">13:56:07</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">autoscaler-588cfb64fb-9nv45</p></td>
+      <td><p class="text-muted">Pulled</p></td>
+      <td data-formatter="messageFormatter">Successfully pulled image &#34;registry.redhat.io/openshift-serverless-1/serving-autoscaler-rhel8@sha256:260f1d34c34857bbde21a5a4ffb271baa13ac20deb4bc951f79a75f2d4825722&#34; in 10.455s (10.455s including waiting)</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:56:07 +0300 EEST" title="First Seen: 13:56:07">13:56:07</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">net-istio-webhook-5dfc9b8d7c-vwl24</p></td>
+      <td><p class="text-muted">Started</p></td>
+      <td data-formatter="messageFormatter">Started container webhook</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:56:07 +0300 EEST" title="First Seen: 13:56:07">13:56:07</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">net-istio-webhook-5dfc9b8d7c-vwl24</p></td>
+      <td><p class="text-muted">Created</p></td>
+      <td data-formatter="messageFormatter">Created container webhook</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:56:07 +0300 EEST" title="First Seen: 13:56:07">13:56:07</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">job-controller</p></td>
+      <td><p class="truncated">storage-version-migration-serving-serving-1.11-1.32.1</p></td>
+      <td><p class="text-muted">Completed</p></td>
+      <td data-formatter="messageFormatter">Job completed</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:56:07 +0300 EEST" title="First Seen: 13:56:07">13:56:07</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">autoscaler-hpa-684ccf4558-nxztv</p></td>
+      <td><p class="text-muted">Started</p></td>
+      <td data-formatter="messageFormatter">Started container autoscaler-hpa</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:56:07 +0300 EEST" title="First Seen: 13:56:07">13:56:07</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">autoscaler-hpa-684ccf4558-nxztv</p></td>
+      <td><p class="text-muted">Created</p></td>
+      <td data-formatter="messageFormatter">Created container autoscaler-hpa</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:56:07 +0300 EEST" title="First Seen: 13:56:07">13:56:07</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">autoscaler-hpa-684ccf4558-nxztv</p></td>
+      <td><p class="text-muted">Pulled</p></td>
+      <td data-formatter="messageFormatter">Successfully pulled image &#34;registry.redhat.io/openshift-serverless-1/serving-autoscaler-hpa-rhel8@sha256:c3ab3140a7bc7bc1ff89d1bd620cdf1e362c901800ea699291f27029e87697a5&#34; in 9.424s (9.424s including waiting)</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:56:07 +0300 EEST" title="First Seen: 13:56:07">13:56:07</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">webhook-5686f8c6f6-rs9n5</p></td>
+      <td><p class="text-muted">Created</p></td>
+      <td data-formatter="messageFormatter">Created container webhook</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:56:07 +0300 EEST" title="First Seen: 13:56:07">13:56:07</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">net-istio-controller-96d4b96dd-6bwc8</p></td>
+      <td><p class="text-muted">Pulled</p></td>
+      <td data-formatter="messageFormatter">Successfully pulled image &#34;registry.redhat.io/openshift-serverless-1/net-istio-controller-rhel8@sha256:bb93b5d5a33e10b6e836f338199b9ae563501af1a5ce9840967ef00009f2a07b&#34; in 8.552s (8.552s including waiting)</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:56:07 +0300 EEST" title="First Seen: 13:56:07">13:56:07</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">net-istio-controller-96d4b96dd-6bwc8</p></td>
+      <td><p class="text-muted">Created</p></td>
+      <td data-formatter="messageFormatter">Created container controller</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:56:07 +0300 EEST" title="First Seen: 13:56:07">13:56:07</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">net-istio-controller-96d4b96dd-6bwc8</p></td>
+      <td><p class="text-muted">Started</p></td>
+      <td data-formatter="messageFormatter">Started container controller</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:56:07 +0300 EEST" title="First Seen: 13:56:07">13:56:07</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">net-istio-webhook-5dfc9b8d7c-vwl24</p></td>
+      <td><p class="text-muted">Pulled</p></td>
+      <td data-formatter="messageFormatter">Successfully pulled image &#34;registry.redhat.io/openshift-serverless-1/net-istio-webhook-rhel8@sha256:854358e190dff1de84327877fbb9f61fb177a1f46cb2cc0ae79b62af3c252e7f&#34; in 8.783s (8.783s including waiting)</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:56:07 +0300 EEST" title="First Seen: 13:56:07">13:56:07</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">webhook-5686f8c6f6-rs9n5</p></td>
+      <td><p class="text-muted">Started</p></td>
+      <td data-formatter="messageFormatter">Started container webhook</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:56:08 +0300 EEST" title="First Seen: 13:56:08">13:56:08</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">controller-c85f6bb7-8wsmt</p></td>
+      <td><p class="text-warning">Unhealthy</p></td>
+      <td data-formatter="messageFormatter">Readiness probe failed: Get &#34;http://10.131.0.29:8080/readiness&#34;: dial tcp 10.131.0.29:8080: connect: connection refused</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:56:08 +0300 EEST" title="First Seen: 13:56:08">13:56:08</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">net-istio-webhook-5dfc9b8d7c-vwl24</p></td>
+      <td><p class="text-warning">Unhealthy</p></td>
+      <td data-formatter="messageFormatter">Readiness probe failed: Get &#34;https://10.131.0.28:8443/&#34;: dial tcp 10.131.0.28:8443: connect: connection refused</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:56:08 +0300 EEST" title="First Seen: 13:56:08">13:56:08</time> <small>(x2)</small></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">net-istio-controller-96d4b96dd-6bwc8</p></td>
+      <td><p class="text-warning">Unhealthy</p></td>
+      <td data-formatter="messageFormatter">Readiness probe failed: Get &#34;http://10.131.0.27:8080/readiness&#34;: dial tcp 10.131.0.27:8080: connect: connection refused</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:56:08 +0300 EEST" title="First Seen: 13:56:08">13:56:08</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">controller-85c6957d79-wdl8x</p></td>
+      <td><p class="text-danger">Killing</p></td>
+      <td data-formatter="messageFormatter">Stopping container controller</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:56:08 +0300 EEST" title="First Seen: 13:56:08">13:56:08</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">knativeserving-controller</p></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="text-danger">InternalError</p></td>
+      <td data-formatter="messageFormatter">failed to apply non rbac manifest: Internal error occurred: failed calling webhook &#34;config.webhook.serving.knative.dev&#34;: failed to call webhook: Post &#34;https://webhook.knative-serving.svc:443/config-validation?timeout=10s&#34;: no endpoints available for service &#34;webhook&#34;</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:56:08 +0300 EEST" title="First Seen: 13:56:08">13:56:08</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">net-istio-controller-96d4b96dd-6bwc8</p></td>
+      <td><p class="text-warning">Unhealthy</p></td>
+      <td data-formatter="messageFormatter">Liveness probe failed: Get &#34;http://10.131.0.27:8080/health&#34;: dial tcp 10.131.0.27:8080: connect: connection refused</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:56:09 +0300 EEST" title="First Seen: 13:56:09">13:56:09</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">deployment-controller</p></td>
+      <td><p class="truncated">controller</p></td>
+      <td><p class="text-muted">ScalingReplicaSet</p></td>
+      <td data-formatter="messageFormatter">Scaled down replica set controller-85c6957d79 to 0 from 1</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:56:09 +0300 EEST" title="First Seen: 13:56:09">13:56:09</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">controller-85c6957d79-g7x8f</p></td>
+      <td><p class="text-danger">Killing</p></td>
+      <td data-formatter="messageFormatter">Stopping container controller</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:56:09 +0300 EEST" title="First Seen: 13:56:09">13:56:09</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">replicaset-controller</p></td>
+      <td><p class="truncated">controller-85c6957d79</p></td>
+      <td><p class="text-muted">SuccessfulDelete</p></td>
+      <td data-formatter="messageFormatter">Deleted pod: controller-85c6957d79-g7x8f</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:56:10 +0300 EEST" title="First Seen: 13:56:10">13:56:10</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">horizontal-pod-autoscaler</p></td>
+      <td><p class="truncated">activator</p></td>
+      <td><p class="text-muted">SuccessfulRescale</p></td>
+      <td data-formatter="messageFormatter">New size: 2; reason: Current number of replicas below Spec.MinReplicas</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:56:10 +0300 EEST" title="First Seen: 13:56:10">13:56:10</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">replicaset-controller</p></td>
+      <td><p class="truncated">activator-7b646b88cc</p></td>
+      <td><p class="text-muted">SuccessfulCreate</p></td>
+      <td data-formatter="messageFormatter">Created pod: activator-7b646b88cc-vntdm</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:56:10 +0300 EEST" title="First Seen: 13:56:10">13:56:10</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">deployment-controller</p></td>
+      <td><p class="truncated">activator</p></td>
+      <td><p class="text-muted">ScalingReplicaSet</p></td>
+      <td data-formatter="messageFormatter">Scaled up replica set activator-7b646b88cc to 2 from 1</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:56:11 +0300 EEST" title="First Seen: 13:56:11">13:56:11</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">horizontal-pod-autoscaler</p></td>
+      <td><p class="truncated">webhook</p></td>
+      <td><p class="text-muted">SuccessfulRescale</p></td>
+      <td data-formatter="messageFormatter">New size: 2; reason: Current number of replicas below Spec.MinReplicas</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:56:11 +0300 EEST" title="First Seen: 13:56:11">13:56:11</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">multus</p></td>
+      <td><p class="truncated">activator-7b646b88cc-vntdm</p></td>
+      <td><p class="text-muted">AddedInterface</p></td>
+      <td data-formatter="messageFormatter">Add eth0 [10.131.0.30/23] from ovn-kubernetes</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:56:11 +0300 EEST" title="First Seen: 13:56:11">13:56:11</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">replicaset-controller</p></td>
+      <td><p class="truncated">webhook-5686f8c6f6</p></td>
+      <td><p class="text-muted">SuccessfulCreate</p></td>
+      <td data-formatter="messageFormatter">Created pod: webhook-5686f8c6f6-7q2cx</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:56:11 +0300 EEST" title="First Seen: 13:56:11">13:56:11</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">activator-7b646b88cc-vntdm</p></td>
+      <td><p class="text-muted">Pulling</p></td>
+      <td data-formatter="messageFormatter">Pulling image &#34;registry.redhat.io/openshift-serverless-1/serving-activator-rhel8@sha256:498bbb08dce6b401e1904da74404c5275c915d68ecb7eee5af771dacb699cad4&#34;</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:56:11 +0300 EEST" title="First Seen: 13:56:11">13:56:11</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">deployment-controller</p></td>
+      <td><p class="truncated">webhook</p></td>
+      <td><p class="text-muted">ScalingReplicaSet</p></td>
+      <td data-formatter="messageFormatter">Scaled up replica set webhook-5686f8c6f6 to 2 from 1</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:56:12 +0300 EEST" title="First Seen: 13:56:12">13:56:12</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">webhook-5686f8c6f6-7q2cx</p></td>
+      <td><p class="text-muted">Pulling</p></td>
+      <td data-formatter="messageFormatter">Pulling image &#34;registry.redhat.io/openshift-serverless-1/serving-webhook-rhel8@sha256:80e3c2d43c694d29b5392b1324522c8cab1431052307214ea794d11dc1450cb3&#34;</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:56:12 +0300 EEST" title="First Seen: 13:56:12">13:56:12</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">multus</p></td>
+      <td><p class="truncated">webhook-5686f8c6f6-7q2cx</p></td>
+      <td><p class="text-muted">AddedInterface</p></td>
+      <td data-formatter="messageFormatter">Add eth0 [10.129.2.22/23] from ovn-kubernetes</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:56:13 +0300 EEST" title="First Seen: 13:56:13">13:56:13</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">webhook-5686f8c6f6-7q2cx</p></td>
+      <td><p class="text-muted">Started</p></td>
+      <td data-formatter="messageFormatter">Started container webhook</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:56:13 +0300 EEST" title="First Seen: 13:56:13">13:56:13</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">webhook-5686f8c6f6-7q2cx</p></td>
+      <td><p class="text-muted">Created</p></td>
+      <td data-formatter="messageFormatter">Created container webhook</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:56:13 +0300 EEST" title="First Seen: 13:56:13">13:56:13</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">webhook-5686f8c6f6-7q2cx</p></td>
+      <td><p class="text-muted">Pulled</p></td>
+      <td data-formatter="messageFormatter">Successfully pulled image &#34;registry.redhat.io/openshift-serverless-1/serving-webhook-rhel8@sha256:80e3c2d43c694d29b5392b1324522c8cab1431052307214ea794d11dc1450cb3&#34; in 1.511s (1.511s including waiting)</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:56:16 +0300 EEST" title="First Seen: 13:56:16">13:56:16</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">autoscaler-588cfb64fb-9nv45</p></td>
+      <td><p class="text-muted">Started</p></td>
+      <td data-formatter="messageFormatter">Started container istio-proxy</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:56:16 +0300 EEST" title="First Seen: 13:56:16">13:56:16</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">autoscaler-588cfb64fb-9nv45</p></td>
+      <td><p class="text-muted">Created</p></td>
+      <td data-formatter="messageFormatter">Created container istio-proxy</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:56:16 +0300 EEST" title="First Seen: 13:56:16">13:56:16</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">autoscaler-588cfb64fb-9nv45</p></td>
+      <td><p class="text-muted">Pulled</p></td>
+      <td data-formatter="messageFormatter">Successfully pulled image &#34;registry.redhat.io/openshift-service-mesh/proxyv2-rhel8@sha256:186619a888331a58729e27e67fbcee236875c1998b6714565238db53e9a1f8bd&#34; in 8.565s (8.565s including waiting)</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:56:17 +0300 EEST" title="First Seen: 13:56:17">13:56:17</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">activator-7b646b88cc-vntdm</p></td>
+      <td><p class="text-muted">Started</p></td>
+      <td data-formatter="messageFormatter">Started container activator</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:56:17 +0300 EEST" title="First Seen: 13:56:17">13:56:17</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">activator-7b646b88cc-vntdm</p></td>
+      <td><p class="text-muted">Pulled</p></td>
+      <td data-formatter="messageFormatter">Container image &#34;registry.redhat.io/openshift-service-mesh/proxyv2-rhel8@sha256:186619a888331a58729e27e67fbcee236875c1998b6714565238db53e9a1f8bd&#34; already present on machine</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:56:17 +0300 EEST" title="First Seen: 13:56:17">13:56:17</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">activator-7b646b88cc-vntdm</p></td>
+      <td><p class="text-muted">Created</p></td>
+      <td data-formatter="messageFormatter">Created container activator</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:56:17 +0300 EEST" title="First Seen: 13:56:17">13:56:17</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">activator-7b646b88cc-vntdm</p></td>
+      <td><p class="text-muted">Pulled</p></td>
+      <td data-formatter="messageFormatter">Successfully pulled image &#34;registry.redhat.io/openshift-serverless-1/serving-activator-rhel8@sha256:498bbb08dce6b401e1904da74404c5275c915d68ecb7eee5af771dacb699cad4&#34; in 5.993s (5.993s including waiting)</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:56:18 +0300 EEST" title="First Seen: 13:56:18">13:56:18</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">activator-7b646b88cc-vntdm</p></td>
+      <td><p class="text-muted">Started</p></td>
+      <td data-formatter="messageFormatter">Started container istio-proxy</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:56:18 +0300 EEST" title="First Seen: 13:56:18">13:56:18</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">activator-7b646b88cc-vntdm</p></td>
+      <td><p class="text-muted">Created</p></td>
+      <td data-formatter="messageFormatter">Created container istio-proxy</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:56:41 +0300 EEST" title="First Seen: 13:56:26">13:56:41</time> <small>(x2)</small></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">horizontal-pod-autoscaler</p></td>
+      <td><p class="truncated">webhook</p></td>
+      <td><p class="text-danger">FailedComputeMetricsReplicas</p></td>
+      <td data-formatter="messageFormatter">invalid metrics (1 invalid out of 1), first error is: failed to get cpu resource metric value: failed to get cpu utilization: unable to get metrics for resource cpu: no metrics returned from resource metrics API</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:56:41 +0300 EEST" title="First Seen: 13:56:26">13:56:41</time> <small>(x2)</small></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">horizontal-pod-autoscaler</p></td>
+      <td><p class="truncated">webhook</p></td>
+      <td><p class="text-danger">FailedGetResourceMetric</p></td>
+      <td data-formatter="messageFormatter">failed to get cpu utilization: unable to get metrics for resource cpu: no metrics returned from resource metrics API</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:56:42 +0300 EEST" title="First Seen: 13:56:26">13:56:42</time> <small>(x2)</small></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">horizontal-pod-autoscaler</p></td>
+      <td><p class="truncated">activator</p></td>
+      <td><p class="text-danger">FailedComputeMetricsReplicas</p></td>
+      <td data-formatter="messageFormatter">invalid metrics (1 invalid out of 1), first error is: failed to get cpu resource metric value: failed to get cpu utilization: unable to get metrics for resource cpu: no metrics returned from resource metrics API</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:56:42 +0300 EEST" title="First Seen: 13:56:26">13:56:42</time> <small>(x2)</small></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">horizontal-pod-autoscaler</p></td>
+      <td><p class="truncated">activator</p></td>
+      <td><p class="text-danger">FailedGetResourceMetric</p></td>
+      <td data-formatter="messageFormatter">failed to get cpu utilization: unable to get metrics for resource cpu: no metrics returned from resource metrics API</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:59:11 +0300 EEST" title="First Seen: 13:56:56">13:59:11</time> <small>(x10)</small></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">horizontal-pod-autoscaler</p></td>
+      <td><p class="truncated">activator</p></td>
+      <td><p class="text-danger">FailedComputeMetricsReplicas</p></td>
+      <td data-formatter="messageFormatter">invalid metrics (1 invalid out of 1), first error is: failed to get cpu resource metric value: failed to get cpu utilization: did not receive metrics for targeted pods (pods might be unready)</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:59:11 +0300 EEST" title="First Seen: 13:56:56">13:59:11</time> <small>(x10)</small></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">horizontal-pod-autoscaler</p></td>
+      <td><p class="truncated">webhook</p></td>
+      <td><p class="text-danger">FailedGetResourceMetric</p></td>
+      <td data-formatter="messageFormatter">failed to get cpu utilization: did not receive metrics for targeted pods (pods might be unready)</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:59:11 +0300 EEST" title="First Seen: 13:56:56">13:59:11</time> <small>(x10)</small></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">horizontal-pod-autoscaler</p></td>
+      <td><p class="truncated">activator</p></td>
+      <td><p class="text-danger">FailedGetResourceMetric</p></td>
+      <td data-formatter="messageFormatter">failed to get cpu utilization: did not receive metrics for targeted pods (pods might be unready)</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:59:11 +0300 EEST" title="First Seen: 13:56:56">13:59:11</time> <small>(x10)</small></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">horizontal-pod-autoscaler</p></td>
+      <td><p class="truncated">webhook</p></td>
+      <td><p class="text-danger">FailedComputeMetricsReplicas</p></td>
+      <td data-formatter="messageFormatter">invalid metrics (1 invalid out of 1), first error is: failed to get cpu resource metric value: failed to get cpu utilization: did not receive metrics for targeted pods (pods might be unready)</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:59:13 +0300 EEST" title="First Seen: 13:59:13">13:59:13</time></td>
+      <td><p class="truncated">user-ns</p></td>
+      <td><p class="truncated">service-controller</p></td>
+      <td><p class="truncated">helloworld-go</p></td>
+      <td><p class="text-muted">Created</p></td>
+      <td data-formatter="messageFormatter">Created Route &#34;helloworld-go&#34;</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:59:13 +0300 EEST" title="First Seen: 13:59:13">13:59:13</time></td>
+      <td><p class="truncated">user-ns</p></td>
+      <td><p class="truncated">configuration-controller</p></td>
+      <td><p class="truncated">helloworld-go</p></td>
+      <td><p class="text-muted">Created</p></td>
+      <td data-formatter="messageFormatter">Created Revision &#34;helloworld-go-00001&#34;</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:59:13 +0300 EEST" title="First Seen: 13:59:13">13:59:13</time></td>
+      <td><p class="truncated">user-ns</p></td>
+      <td><p class="truncated">route-controller</p></td>
+      <td><p class="truncated">helloworld-go</p></td>
+      <td><p class="text-muted">FinalizerUpdate</p></td>
+      <td data-formatter="messageFormatter">Updated &#34;helloworld-go&#34; finalizers</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:59:13 +0300 EEST" title="First Seen: 13:59:13">13:59:13</time></td>
+      <td><p class="truncated">user-ns</p></td>
+      <td><p class="truncated">service-controller</p></td>
+      <td><p class="truncated">helloworld-go</p></td>
+      <td><p class="text-muted">Created</p></td>
+      <td data-formatter="messageFormatter">Created Configuration &#34;helloworld-go&#34;</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:59:13 +0300 EEST" title="First Seen: 13:59:13">13:59:13</time></td>
+      <td><p class="truncated">user-ns</p></td>
+      <td><p class="truncated">deployment-controller</p></td>
+      <td><p class="truncated">helloworld-go-00001-deployment</p></td>
+      <td><p class="text-muted">ScalingReplicaSet</p></td>
+      <td data-formatter="messageFormatter">Scaled up replica set helloworld-go-00001-deployment-5bd78dbc5f to 2 from 1</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:59:13 +0300 EEST" title="First Seen: 13:59:13">13:59:13</time></td>
+      <td><p class="truncated">user-ns</p></td>
+      <td><p class="truncated">deployment-controller</p></td>
+      <td><p class="truncated">helloworld-go-00001-deployment</p></td>
+      <td><p class="text-muted">ScalingReplicaSet</p></td>
+      <td data-formatter="messageFormatter">Scaled up replica set helloworld-go-00001-deployment-5bd78dbc5f to 1</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:59:13 +0300 EEST" title="First Seen: 13:59:13">13:59:13</time></td>
+      <td><p class="truncated">user-ns</p></td>
+      <td><p class="truncated">replicaset-controller</p></td>
+      <td><p class="truncated">helloworld-go-00001-deployment-5bd78dbc5f</p></td>
+      <td><p class="text-muted">SuccessfulCreate</p></td>
+      <td data-formatter="messageFormatter">Created pod: helloworld-go-00001-deployment-5bd78dbc5f-zslnq</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:59:13 +0300 EEST" title="First Seen: 13:59:13">13:59:13</time></td>
+      <td><p class="truncated">user-ns</p></td>
+      <td><p class="truncated">replicaset-controller</p></td>
+      <td><p class="truncated">helloworld-go-00001-deployment-5bd78dbc5f</p></td>
+      <td><p class="text-muted">SuccessfulCreate</p></td>
+      <td data-formatter="messageFormatter">Created pod: helloworld-go-00001-deployment-5bd78dbc5f-xlp2f</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:59:14 +0300 EEST" title="First Seen: 13:59:14">13:59:14</time></td>
+      <td><p class="truncated">user-ns</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">helloworld-go-00001-deployment-5bd78dbc5f-xlp2f</p></td>
+      <td><p class="text-muted">Created</p></td>
+      <td data-formatter="messageFormatter">Created container user-container</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:59:14 +0300 EEST" title="First Seen: 13:59:14">13:59:14</time></td>
+      <td><p class="truncated">user-ns</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">helloworld-go-00001-deployment-5bd78dbc5f-xlp2f</p></td>
+      <td><p class="text-muted">Pulling</p></td>
+      <td data-formatter="messageFormatter">Pulling image &#34;registry.redhat.io/openshift-serverless-1/serving-queue-rhel8@sha256:a0d0c8517ff470e3afac4c90df5e6541d974507feb50eac9719f87fcf78bba96&#34;</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:59:14 +0300 EEST" title="First Seen: 13:59:14">13:59:14</time></td>
+      <td><p class="truncated">user-ns</p></td>
+      <td><p class="truncated">multus</p></td>
+      <td><p class="truncated">helloworld-go-00001-deployment-5bd78dbc5f-xlp2f</p></td>
+      <td><p class="text-muted">AddedInterface</p></td>
+      <td data-formatter="messageFormatter">Add eth0 [10.129.2.23/23] from ovn-kubernetes</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:59:14 +0300 EEST" title="First Seen: 13:59:14">13:59:14</time></td>
+      <td><p class="truncated">user-ns</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">helloworld-go-00001-deployment-5bd78dbc5f-xlp2f</p></td>
+      <td><p class="text-muted">Pulling</p></td>
+      <td data-formatter="messageFormatter">Pulling image &#34;index.docker.io/skonto/helloworld-go@sha256:dd20d7659c16bdc58c09740a543ef3c36b7c04742a2b6b280a30c2a76dcf6c09&#34;</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:59:14 +0300 EEST" title="First Seen: 13:59:14">13:59:14</time></td>
+      <td><p class="truncated">user-ns</p></td>
+      <td><p class="truncated">multus</p></td>
+      <td><p class="truncated">helloworld-go-00001-deployment-5bd78dbc5f-zslnq</p></td>
+      <td><p class="text-muted">AddedInterface</p></td>
+      <td data-formatter="messageFormatter">Add eth0 [10.131.0.31/23] from ovn-kubernetes</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:59:14 +0300 EEST" title="First Seen: 13:59:14">13:59:14</time></td>
+      <td><p class="truncated">user-ns</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">helloworld-go-00001-deployment-5bd78dbc5f-zslnq</p></td>
+      <td><p class="text-muted">Pulling</p></td>
+      <td data-formatter="messageFormatter">Pulling image &#34;index.docker.io/skonto/helloworld-go@sha256:dd20d7659c16bdc58c09740a543ef3c36b7c04742a2b6b280a30c2a76dcf6c09&#34;</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:59:14 +0300 EEST" title="First Seen: 13:59:14">13:59:14</time></td>
+      <td><p class="truncated">user-ns</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">helloworld-go-00001-deployment-5bd78dbc5f-xlp2f</p></td>
+      <td><p class="text-muted">Pulled</p></td>
+      <td data-formatter="messageFormatter">Successfully pulled image &#34;index.docker.io/skonto/helloworld-go@sha256:dd20d7659c16bdc58c09740a543ef3c36b7c04742a2b6b280a30c2a76dcf6c09&#34; in 675ms (675ms including waiting)</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:59:14 +0300 EEST" title="First Seen: 13:59:14">13:59:14</time></td>
+      <td><p class="truncated">user-ns</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">helloworld-go-00001-deployment-5bd78dbc5f-xlp2f</p></td>
+      <td><p class="text-muted">Started</p></td>
+      <td data-formatter="messageFormatter">Started container user-container</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:59:15 +0300 EEST" title="First Seen: 13:59:15">13:59:15</time></td>
+      <td><p class="truncated">user-ns</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">helloworld-go-00001-deployment-5bd78dbc5f-zslnq</p></td>
+      <td><p class="text-muted">Pulling</p></td>
+      <td data-formatter="messageFormatter">Pulling image &#34;registry.redhat.io/openshift-serverless-1/serving-queue-rhel8@sha256:a0d0c8517ff470e3afac4c90df5e6541d974507feb50eac9719f87fcf78bba96&#34;</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:59:15 +0300 EEST" title="First Seen: 13:59:15">13:59:15</time></td>
+      <td><p class="truncated">user-ns</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">helloworld-go-00001-deployment-5bd78dbc5f-zslnq</p></td>
+      <td><p class="text-muted">Pulled</p></td>
+      <td data-formatter="messageFormatter">Successfully pulled image &#34;index.docker.io/skonto/helloworld-go@sha256:dd20d7659c16bdc58c09740a543ef3c36b7c04742a2b6b280a30c2a76dcf6c09&#34; in 623ms (623ms including waiting)</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:59:15 +0300 EEST" title="First Seen: 13:59:15">13:59:15</time></td>
+      <td><p class="truncated">user-ns</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">helloworld-go-00001-deployment-5bd78dbc5f-zslnq</p></td>
+      <td><p class="text-muted">Created</p></td>
+      <td data-formatter="messageFormatter">Created container user-container</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:59:15 +0300 EEST" title="First Seen: 13:59:15">13:59:15</time></td>
+      <td><p class="truncated">user-ns</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">helloworld-go-00001-deployment-5bd78dbc5f-zslnq</p></td>
+      <td><p class="text-muted">Started</p></td>
+      <td data-formatter="messageFormatter">Started container user-container</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:59:16 +0300 EEST" title="First Seen: 13:59:16">13:59:16</time></td>
+      <td><p class="truncated">user-ns</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">helloworld-go-00001-deployment-5bd78dbc5f-xlp2f</p></td>
+      <td><p class="text-muted">Pulled</p></td>
+      <td data-formatter="messageFormatter">Successfully pulled image &#34;registry.redhat.io/openshift-serverless-1/serving-queue-rhel8@sha256:a0d0c8517ff470e3afac4c90df5e6541d974507feb50eac9719f87fcf78bba96&#34; in 1.688s (1.688s including waiting)</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:59:16 +0300 EEST" title="First Seen: 13:59:16">13:59:16</time></td>
+      <td><p class="truncated">user-ns</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">helloworld-go-00001-deployment-5bd78dbc5f-xlp2f</p></td>
+      <td><p class="text-muted">Started</p></td>
+      <td data-formatter="messageFormatter">Started container istio-proxy</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:59:16 +0300 EEST" title="First Seen: 13:59:16">13:59:16</time></td>
+      <td><p class="truncated">user-ns</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">helloworld-go-00001-deployment-5bd78dbc5f-xlp2f</p></td>
+      <td><p class="text-muted">Started</p></td>
+      <td data-formatter="messageFormatter">Started container queue-proxy</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:59:16 +0300 EEST" title="First Seen: 13:59:16">13:59:16</time></td>
+      <td><p class="truncated">user-ns</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">helloworld-go-00001-deployment-5bd78dbc5f-xlp2f</p></td>
+      <td><p class="text-muted">Created</p></td>
+      <td data-formatter="messageFormatter">Created container queue-proxy</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:59:16 +0300 EEST" title="First Seen: 13:59:16">13:59:16</time></td>
+      <td><p class="truncated">user-ns</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">helloworld-go-00001-deployment-5bd78dbc5f-xlp2f</p></td>
+      <td><p class="text-muted">Pulled</p></td>
+      <td data-formatter="messageFormatter">Container image &#34;registry.redhat.io/openshift-service-mesh/proxyv2-rhel8@sha256:186619a888331a58729e27e67fbcee236875c1998b6714565238db53e9a1f8bd&#34; already present on machine</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:59:16 +0300 EEST" title="First Seen: 13:59:16">13:59:16</time></td>
+      <td><p class="truncated">user-ns</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">helloworld-go-00001-deployment-5bd78dbc5f-xlp2f</p></td>
+      <td><p class="text-muted">Created</p></td>
+      <td data-formatter="messageFormatter">Created container istio-proxy</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:59:18 +0300 EEST" title="First Seen: 13:59:18">13:59:18</time></td>
+      <td><p class="truncated">user-ns</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">helloworld-go-00001-deployment-5bd78dbc5f-zslnq</p></td>
+      <td><p class="text-muted">Pulled</p></td>
+      <td data-formatter="messageFormatter">Container image &#34;registry.redhat.io/openshift-service-mesh/proxyv2-rhel8@sha256:186619a888331a58729e27e67fbcee236875c1998b6714565238db53e9a1f8bd&#34; already present on machine</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:59:18 +0300 EEST" title="First Seen: 13:59:18">13:59:18</time></td>
+      <td><p class="truncated">user-ns</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">helloworld-go-00001-deployment-5bd78dbc5f-zslnq</p></td>
+      <td><p class="text-muted">Created</p></td>
+      <td data-formatter="messageFormatter">Created container istio-proxy</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:59:18 +0300 EEST" title="First Seen: 13:59:18">13:59:18</time></td>
+      <td><p class="truncated">user-ns</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">helloworld-go-00001-deployment-5bd78dbc5f-zslnq</p></td>
+      <td><p class="text-muted">Started</p></td>
+      <td data-formatter="messageFormatter">Started container queue-proxy</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:59:18 +0300 EEST" title="First Seen: 13:59:18">13:59:18</time></td>
+      <td><p class="truncated">user-ns</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">helloworld-go-00001-deployment-5bd78dbc5f-zslnq</p></td>
+      <td><p class="text-muted">Created</p></td>
+      <td data-formatter="messageFormatter">Created container queue-proxy</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:59:18 +0300 EEST" title="First Seen: 13:59:18">13:59:18</time></td>
+      <td><p class="truncated">user-ns</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">helloworld-go-00001-deployment-5bd78dbc5f-zslnq</p></td>
+      <td><p class="text-muted">Pulled</p></td>
+      <td data-formatter="messageFormatter">Successfully pulled image &#34;registry.redhat.io/openshift-serverless-1/serving-queue-rhel8@sha256:a0d0c8517ff470e3afac4c90df5e6541d974507feb50eac9719f87fcf78bba96&#34; in 3.41s (3.41s including waiting)</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:59:19 +0300 EEST" title="First Seen: 13:59:19">13:59:19</time> <small>(x2)</small></td>
+      <td><p class="truncated">user-ns</p></td>
+      <td><p class="truncated">revision-controller</p></td>
+      <td><p class="truncated">helloworld-go-00001</p></td>
+      <td><p class="text-muted">RevisionReady</p></td>
+      <td data-formatter="messageFormatter">Revision becomes ready upon all resources being ready</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:59:19 +0300 EEST" title="First Seen: 13:59:13">13:59:19</time> <small>(x6)</small></td>
+      <td><p class="truncated">user-ns</p></td>
+      <td><p class="truncated">revision-controller</p></td>
+      <td><p class="truncated">helloworld-go-00001</p></td>
+      <td><p class="text-danger">InternalError</p></td>
+      <td data-formatter="messageFormatter">failed to update deployment &#34;helloworld-go-00001-deployment&#34;: Operation cannot be fulfilled on deployments.apps &#34;helloworld-go-00001-deployment&#34;: the object has been modified; please apply your changes to the latest version and try again</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:59:19 +0300 EEST" title="First Seen: 13:59:19">13:59:19</time></td>
+      <td><p class="truncated">user-ns</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">helloworld-go-00001-deployment-5bd78dbc5f-zslnq</p></td>
+      <td><p class="text-muted">Started</p></td>
+      <td data-formatter="messageFormatter">Started container istio-proxy</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:59:19 +0300 EEST" title="First Seen: 13:59:19">13:59:19</time></td>
+      <td><p class="truncated">user-ns</p></td>
+      <td><p class="truncated">configuration-controller</p></td>
+      <td><p class="truncated">helloworld-go</p></td>
+      <td><p class="text-muted">ConfigurationReady</p></td>
+      <td data-formatter="messageFormatter">Configuration becomes ready</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:59:19 +0300 EEST" title="First Seen: 13:59:19">13:59:19</time></td>
+      <td><p class="truncated">user-ns</p></td>
+      <td><p class="truncated">configuration-controller</p></td>
+      <td><p class="truncated">helloworld-go</p></td>
+      <td><p class="text-muted">LatestReadyUpdate</p></td>
+      <td data-formatter="messageFormatter">LatestReadyRevisionName updated to &#34;helloworld-go-00001&#34;</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:59:19 +0300 EEST" title="First Seen: 13:59:19">13:59:19</time></td>
+      <td><p class="truncated">user-ns</p></td>
+      <td><p class="truncated">route-controller</p></td>
+      <td><p class="truncated">helloworld-go</p></td>
+      <td><p class="text-muted">Created</p></td>
+      <td data-formatter="messageFormatter">Created placeholder service &#34;helloworld-go&#34;</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:59:19 +0300 EEST" title="First Seen: 13:59:19">13:59:19</time></td>
+      <td><p class="truncated">user-ns</p></td>
+      <td><p class="truncated">route-controller</p></td>
+      <td><p class="truncated">helloworld-go</p></td>
+      <td><p class="text-muted">Created</p></td>
+      <td data-formatter="messageFormatter">Created Ingress &#34;helloworld-go&#34;</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:59:19 +0300 EEST" title="First Seen: 13:59:19">13:59:19</time></td>
+      <td><p class="truncated">user-ns</p></td>
+      <td><p class="truncated">ingress-controller</p></td>
+      <td><p class="truncated">helloworld-go</p></td>
+      <td><p class="text-muted">FinalizerUpdate</p></td>
+      <td data-formatter="messageFormatter">Updated &#34;helloworld-go&#34; finalizers</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:59:19 +0300 EEST" title="First Seen: 13:59:19">13:59:19</time></td>
+      <td><p class="truncated">user-ns</p></td>
+      <td><p class="truncated">ingress-controller</p></td>
+      <td><p class="truncated">helloworld-go</p></td>
+      <td><p class="text-danger">FinalizerUpdateFailed</p></td>
+      <td data-formatter="messageFormatter">Failed to update finalizers for &#34;helloworld-go&#34;: Operation cannot be fulfilled on ingresses.networking.internal.knative.dev &#34;helloworld-go&#34;: the object has been modified; please apply your changes to the latest version and try again</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:59:19 +0300 EEST" title="First Seen: 13:59:19">13:59:19</time></td>
+      <td><p class="truncated">user-ns</p></td>
+      <td><p class="truncated">ingress-controller</p></td>
+      <td><p class="truncated">helloworld-go</p></td>
+      <td><p class="text-muted">Created</p></td>
+      <td data-formatter="messageFormatter">Created VirtualService &#34;helloworld-go-mesh&#34;</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:59:19 +0300 EEST" title="First Seen: 13:59:19">13:59:19</time></td>
+      <td><p class="truncated">user-ns</p></td>
+      <td><p class="truncated">ingress-controller</p></td>
+      <td><p class="truncated">helloworld-go</p></td>
+      <td><p class="text-muted">FinalizerUpdate</p></td>
+      <td data-formatter="messageFormatter">Updated &#34;helloworld-go&#34; finalizers</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2024-06-05 13:59:19 +0300 EEST" title="First Seen: 13:59:19">13:59:19</time></td>
+      <td><p class="truncated">user-ns</p></td>
+      <td><p class="truncated">ingress-controller</p></td>
+      <td><p class="truncated">helloworld-go</p></td>
+      <td><p class="text-muted">Created</p></td>
+      <td data-formatter="messageFormatter">Created VirtualService &#34;helloworld-go-ingress&#34;</td>
+    </tr>
+    
+  </tbody>
+</table>
+
+    
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <script src="https://unpkg.com/bootstrap-table@1.17.1/dist/bootstrap-table.min.js" crossorigin="anonymous"></script>
+	<script src="https://unpkg.com/bootstrap-table@1.17.1/dist/extensions/toolbar/bootstrap-table-toolbar.min.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/bootstrap-table@1.17.1/dist/extensions/filter-control/bootstrap-table-filter-control.min.js" crossorigin="anonymous"></script>
+
+	<script>
+	function messageFormatter(value, row) {
+    	return '<code>'+value+'</code>'
+  	}
+    $(function() {
+      $('#events').bootstrapTable()
+    })
+	</script>
+  </body>
+</html>

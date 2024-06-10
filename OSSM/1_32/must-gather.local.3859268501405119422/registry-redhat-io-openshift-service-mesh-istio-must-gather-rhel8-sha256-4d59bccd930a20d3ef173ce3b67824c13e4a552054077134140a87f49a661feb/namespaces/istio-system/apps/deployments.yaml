@@ -1,0 +1,1937 @@
+---
+apiVersion: apps/v1
+items:
+- apiVersion: apps/v1
+  kind: Deployment
+  metadata:
+    annotations:
+      deployment.kubernetes.io/revision: "1"
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"apps/v1","kind":"Deployment","metadata":{"annotations":{"maistra.io/mesh-generation":"2.5.1-1-2"},"labels":{"app":"istio-egressgateway","app.kubernetes.io/component":"istio-egress","app.kubernetes.io/instance":"istio-system","app.kubernetes.io/managed-by":"maistra-istio-operator","app.kubernetes.io/name":"istio-egress","app.kubernetes.io/part-of":"istio","app.kubernetes.io/version":"2.5.1-1-2","istio":"egressgateway","istio.io/rev":"basic","maistra-version":"2.4.7","maistra.io/gateway":"istio-egressgateway.istio-system","maistra.io/owner":"istio-system","maistra.io/owner-name":"basic","release":"istio"},"name":"istio-egressgateway","namespace":"istio-system","ownerReferences":[{"apiVersion":"maistra.io/v2","blockOwnerDeletion":true,"controller":true,"kind":"ServiceMeshControlPlane","name":"basic","uid":"b5faf99f-8aeb-4477-aa3e-3f2e4796ec3c"}]},"spec":{"selector":{"matchLabels":{"app":"istio-egressgateway","istio":"egressgateway"}},"strategy":{"rollingUpdate":{"maxSurge":"100%","maxUnavailable":"25%"}},"template":{"metadata":{"annotations":{"prometheus.io/path":"/stats/prometheus","prometheus.io/port":"15020","prometheus.io/scrape":"true","sidecar.istio.io/inject":"false"},"labels":{"app":"istio-egressgateway","chart":"gateways","heritage":"Tiller","istio":"egressgateway","istio.io/rev":"basic","maistra-control-plane":"istio-system","maistra.io/gateway":"istio-egressgateway.istio-system","release":"istio","service.istio.io/canonical-name":"istio-egressgateway","service.istio.io/canonical-revision":"basic","sidecar.istio.io/inject":"false"}},"spec":{"affinity":{"nodeAffinity":{"preferredDuringSchedulingIgnoredDuringExecution":[{"preference":{"matchExpressions":[{"key":"kubernetes.io/arch","operator":"In","values":["amd64"]}]},"weight":2},{"preference":{"matchExpressions":[{"key":"kubernetes.io/arch","operator":"In","values":["arm64"]}]},"weight":2},{"preference":{"matchExpressions":[{"key":"kubernetes.io/arch","operator":"In","values":["ppc64le"]}]},"weight":2},{"preference":{"matchExpressions":[{"key":"kubernetes.io/arch","operator":"In","values":["s390x"]}]},"weight":2}],"requiredDuringSchedulingIgnoredDuringExecution":{"nodeSelectorTerms":[{"matchExpressions":[{"key":"kubernetes.io/arch","operator":"In","values":["amd64","arm64","ppc64le","s390x"]}]}]}}},"containers":[{"args":["proxy","router","--domain","$(POD_NAMESPACE).svc.cluster.local","--proxyLogLevel=warning","--proxyComponentLogLevel=misc:error","--log_output_level=default:warn"],"env":[{"name":"JWT_POLICY","value":"first-party-jwt"},{"name":"PILOT_CERT_PROVIDER","value":"istiod"},{"name":"CA_ADDR","value":"istiod-basic.istio-system.svc:15012"},{"name":"NODE_NAME","valueFrom":{"fieldRef":{"apiVersion":"v1","fieldPath":"spec.nodeName"}}},{"name":"POD_NAME","valueFrom":{"fieldRef":{"apiVersion":"v1","fieldPath":"metadata.name"}}},{"name":"POD_NAMESPACE","valueFrom":{"fieldRef":{"apiVersion":"v1","fieldPath":"metadata.namespace"}}},{"name":"INSTANCE_IP","valueFrom":{"fieldRef":{"apiVersion":"v1","fieldPath":"status.podIP"}}},{"name":"HOST_IP","valueFrom":{"fieldRef":{"apiVersion":"v1","fieldPath":"status.hostIP"}}},{"name":"SERVICE_ACCOUNT","valueFrom":{"fieldRef":{"fieldPath":"spec.serviceAccountName"}}},{"name":"ISTIO_META_WORKLOAD_NAME","value":"istio-egressgateway"},{"name":"ISTIO_META_OWNER","value":"kubernetes://apis/apps/v1/namespaces/istio-system/deployments/istio-egressgateway"},{"name":"ISTIO_META_MESH_ID","value":"cluster.local"},{"name":"TRUST_DOMAIN","value":"cluster.local"},{"name":"ISTIO_META_UNPRIVILEGED_POD","value":"true"},{"name":"ISTIO_META_DNS_AUTO_ALLOCATE","value":"true"},{"name":"ISTIO_META_DNS_CAPTURE","value":"true"},{"name":"PROXY_XDS_VIA_AGENT","value":"true"},{"name":"ISTIO_META_CLUSTER_ID","value":"Kubernetes"}],"image":"registry.redhat.io/openshift-service-mesh/proxyv2-rhel8@sha256:186619a888331a58729e27e67fbcee236875c1998b6714565238db53e9a1f8bd","name":"istio-proxy","ports":[{"containerPort":8080,"name":"http2","protocol":"TCP"},{"containerPort":8443,"name":"https","protocol":"TCP"},{"containerPort":15090,"name":"http-envoy-prom","protocol":"TCP"}],"readinessProbe":{"failureThreshold":30,"httpGet":{"path":"/healthz/ready","port":15021,"scheme":"HTTP"},"initialDelaySeconds":1,"periodSeconds":2,"successThreshold":1,"timeoutSeconds":1},"resources":{"limits":{"cpu":"2000m","memory":"1024Mi"},"requests":{"cpu":"10m","memory":"128Mi"}},"securityContext":{"allowPrivilegeEscalation":false,"capabilities":{"drop":["ALL"]},"privileged":false,"readOnlyRootFilesystem":true},"volumeMounts":[{"mountPath":"/var/run/secrets/workload-spiffe-uds","name":"workload-socket"},{"mountPath":"/var/run/secrets/credential-uds","name":"credential-socket"},{"mountPath":"/var/run/secrets/workload-spiffe-credentials","name":"workload-certs"},{"mountPath":"/etc/istio/proxy","name":"istio-envoy"},{"mountPath":"/etc/istio/config","name":"config-volume"},{"mountPath":"/var/run/secrets/istio","name":"istiod-ca-cert"},{"mountPath":"/var/lib/istio/data","name":"istio-data"},{"mountPath":"/etc/istio/pod","name":"podinfo"},{"mountPath":"/etc/istio/egressgateway-certs","name":"egressgateway-certs","readOnly":true},{"mountPath":"/etc/istio/egressgateway-ca-certs","name":"egressgateway-ca-certs","readOnly":true}]}],"securityContext":{"fsGroup":null,"runAsGroup":null,"runAsNonRoot":true,"runAsUser":null},"serviceAccountName":"istio-egressgateway-service-account","volumes":[{"emptyDir":{},"name":"workload-socket"},{"emptyDir":{},"name":"credential-socket"},{"emptyDir":{},"name":"workload-certs"},{"configMap":{"name":"istio-ca-root-cert"},"name":"istiod-ca-cert"},{"downwardAPI":{"items":[{"fieldRef":{"fieldPath":"metadata.labels"},"path":"labels"},{"fieldRef":{"fieldPath":"metadata.annotations"},"path":"annotations"}]},"name":"podinfo"},{"emptyDir":{},"name":"istio-envoy"},{"emptyDir":{},"name":"istio-data"},{"configMap":{"name":"istio-basic","optional":true},"name":"config-volume"},{"name":"egressgateway-certs","secret":{"optional":true,"secretName":"istio-egressgateway-certs"}},{"name":"egressgateway-ca-certs","secret":{"optional":true,"secretName":"istio-egressgateway-ca-certs"}}]}}}}
+      maistra.io/mesh-generation: 2.5.1-1-2
+    creationTimestamp: "2024-06-05T10:45:56Z"
+    generation: 1
+    labels:
+      app: istio-egressgateway
+      app.kubernetes.io/component: istio-egress
+      app.kubernetes.io/instance: istio-system
+      app.kubernetes.io/managed-by: maistra-istio-operator
+      app.kubernetes.io/name: istio-egress
+      app.kubernetes.io/part-of: istio
+      app.kubernetes.io/version: 2.5.1-1-2
+      istio: egressgateway
+      istio.io/rev: basic
+      maistra-version: 2.4.7
+      maistra.io/gateway: istio-egressgateway.istio-system
+      maistra.io/owner: istio-system
+      maistra.io/owner-name: basic
+      release: istio
+    managedFields:
+    - apiVersion: apps/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:kubectl.kubernetes.io/last-applied-configuration: {}
+            f:maistra.io/mesh-generation: {}
+          f:labels:
+            .: {}
+            f:app: {}
+            f:app.kubernetes.io/component: {}
+            f:app.kubernetes.io/instance: {}
+            f:app.kubernetes.io/managed-by: {}
+            f:app.kubernetes.io/name: {}
+            f:app.kubernetes.io/part-of: {}
+            f:app.kubernetes.io/version: {}
+            f:istio: {}
+            f:istio.io/rev: {}
+            f:maistra-version: {}
+            f:maistra.io/gateway: {}
+            f:maistra.io/owner: {}
+            f:maistra.io/owner-name: {}
+            f:release: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"b5faf99f-8aeb-4477-aa3e-3f2e4796ec3c"}: {}
+        f:spec:
+          f:progressDeadlineSeconds: {}
+          f:replicas: {}
+          f:revisionHistoryLimit: {}
+          f:selector: {}
+          f:strategy:
+            f:rollingUpdate:
+              .: {}
+              f:maxSurge: {}
+              f:maxUnavailable: {}
+            f:type: {}
+          f:template:
+            f:metadata:
+              f:annotations:
+                .: {}
+                f:prometheus.io/path: {}
+                f:prometheus.io/port: {}
+                f:prometheus.io/scrape: {}
+                f:sidecar.istio.io/inject: {}
+              f:labels:
+                .: {}
+                f:app: {}
+                f:chart: {}
+                f:heritage: {}
+                f:istio: {}
+                f:istio.io/rev: {}
+                f:maistra-control-plane: {}
+                f:maistra.io/gateway: {}
+                f:release: {}
+                f:service.istio.io/canonical-name: {}
+                f:service.istio.io/canonical-revision: {}
+                f:sidecar.istio.io/inject: {}
+            f:spec:
+              f:affinity:
+                .: {}
+                f:nodeAffinity:
+                  .: {}
+                  f:preferredDuringSchedulingIgnoredDuringExecution: {}
+                  f:requiredDuringSchedulingIgnoredDuringExecution: {}
+              f:containers:
+                k:{"name":"istio-proxy"}:
+                  .: {}
+                  f:args: {}
+                  f:env:
+                    .: {}
+                    k:{"name":"CA_ADDR"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"HOST_IP"}:
+                      .: {}
+                      f:name: {}
+                      f:valueFrom:
+                        .: {}
+                        f:fieldRef: {}
+                    k:{"name":"INSTANCE_IP"}:
+                      .: {}
+                      f:name: {}
+                      f:valueFrom:
+                        .: {}
+                        f:fieldRef: {}
+                    k:{"name":"ISTIO_META_CLUSTER_ID"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"ISTIO_META_DNS_AUTO_ALLOCATE"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"ISTIO_META_DNS_CAPTURE"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"ISTIO_META_MESH_ID"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"ISTIO_META_OWNER"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"ISTIO_META_UNPRIVILEGED_POD"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"ISTIO_META_WORKLOAD_NAME"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"JWT_POLICY"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"NODE_NAME"}:
+                      .: {}
+                      f:name: {}
+                      f:valueFrom:
+                        .: {}
+                        f:fieldRef: {}
+                    k:{"name":"PILOT_CERT_PROVIDER"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"POD_NAME"}:
+                      .: {}
+                      f:name: {}
+                      f:valueFrom:
+                        .: {}
+                        f:fieldRef: {}
+                    k:{"name":"POD_NAMESPACE"}:
+                      .: {}
+                      f:name: {}
+                      f:valueFrom:
+                        .: {}
+                        f:fieldRef: {}
+                    k:{"name":"PROXY_XDS_VIA_AGENT"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"SERVICE_ACCOUNT"}:
+                      .: {}
+                      f:name: {}
+                      f:valueFrom:
+                        .: {}
+                        f:fieldRef: {}
+                    k:{"name":"TRUST_DOMAIN"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                  f:image: {}
+                  f:imagePullPolicy: {}
+                  f:name: {}
+                  f:ports:
+                    .: {}
+                    k:{"containerPort":8080,"protocol":"TCP"}:
+                      .: {}
+                      f:containerPort: {}
+                      f:name: {}
+                      f:protocol: {}
+                    k:{"containerPort":8443,"protocol":"TCP"}:
+                      .: {}
+                      f:containerPort: {}
+                      f:name: {}
+                      f:protocol: {}
+                    k:{"containerPort":15090,"protocol":"TCP"}:
+                      .: {}
+                      f:containerPort: {}
+                      f:name: {}
+                      f:protocol: {}
+                  f:readinessProbe:
+                    .: {}
+                    f:failureThreshold: {}
+                    f:httpGet:
+                      .: {}
+                      f:path: {}
+                      f:port: {}
+                      f:scheme: {}
+                    f:initialDelaySeconds: {}
+                    f:periodSeconds: {}
+                    f:successThreshold: {}
+                    f:timeoutSeconds: {}
+                  f:resources:
+                    .: {}
+                    f:limits:
+                      .: {}
+                      f:cpu: {}
+                      f:memory: {}
+                    f:requests:
+                      .: {}
+                      f:cpu: {}
+                      f:memory: {}
+                  f:securityContext:
+                    .: {}
+                    f:allowPrivilegeEscalation: {}
+                    f:capabilities:
+                      .: {}
+                      f:drop: {}
+                    f:privileged: {}
+                    f:readOnlyRootFilesystem: {}
+                  f:terminationMessagePath: {}
+                  f:terminationMessagePolicy: {}
+                  f:volumeMounts:
+                    .: {}
+                    k:{"mountPath":"/etc/istio/config"}:
+                      .: {}
+                      f:mountPath: {}
+                      f:name: {}
+                    k:{"mountPath":"/etc/istio/egressgateway-ca-certs"}:
+                      .: {}
+                      f:mountPath: {}
+                      f:name: {}
+                      f:readOnly: {}
+                    k:{"mountPath":"/etc/istio/egressgateway-certs"}:
+                      .: {}
+                      f:mountPath: {}
+                      f:name: {}
+                      f:readOnly: {}
+                    k:{"mountPath":"/etc/istio/pod"}:
+                      .: {}
+                      f:mountPath: {}
+                      f:name: {}
+                    k:{"mountPath":"/etc/istio/proxy"}:
+                      .: {}
+                      f:mountPath: {}
+                      f:name: {}
+                    k:{"mountPath":"/var/lib/istio/data"}:
+                      .: {}
+                      f:mountPath: {}
+                      f:name: {}
+                    k:{"mountPath":"/var/run/secrets/credential-uds"}:
+                      .: {}
+                      f:mountPath: {}
+                      f:name: {}
+                    k:{"mountPath":"/var/run/secrets/istio"}:
+                      .: {}
+                      f:mountPath: {}
+                      f:name: {}
+                    k:{"mountPath":"/var/run/secrets/workload-spiffe-credentials"}:
+                      .: {}
+                      f:mountPath: {}
+                      f:name: {}
+                    k:{"mountPath":"/var/run/secrets/workload-spiffe-uds"}:
+                      .: {}
+                      f:mountPath: {}
+                      f:name: {}
+              f:dnsPolicy: {}
+              f:restartPolicy: {}
+              f:schedulerName: {}
+              f:securityContext:
+                .: {}
+                f:runAsNonRoot: {}
+              f:serviceAccount: {}
+              f:serviceAccountName: {}
+              f:terminationGracePeriodSeconds: {}
+              f:volumes:
+                .: {}
+                k:{"name":"config-volume"}:
+                  .: {}
+                  f:configMap:
+                    .: {}
+                    f:defaultMode: {}
+                    f:name: {}
+                    f:optional: {}
+                  f:name: {}
+                k:{"name":"credential-socket"}:
+                  .: {}
+                  f:emptyDir: {}
+                  f:name: {}
+                k:{"name":"egressgateway-ca-certs"}:
+                  .: {}
+                  f:name: {}
+                  f:secret:
+                    .: {}
+                    f:defaultMode: {}
+                    f:optional: {}
+                    f:secretName: {}
+                k:{"name":"egressgateway-certs"}:
+                  .: {}
+                  f:name: {}
+                  f:secret:
+                    .: {}
+                    f:defaultMode: {}
+                    f:optional: {}
+                    f:secretName: {}
+                k:{"name":"istio-data"}:
+                  .: {}
+                  f:emptyDir: {}
+                  f:name: {}
+                k:{"name":"istio-envoy"}:
+                  .: {}
+                  f:emptyDir: {}
+                  f:name: {}
+                k:{"name":"istiod-ca-cert"}:
+                  .: {}
+                  f:configMap:
+                    .: {}
+                    f:defaultMode: {}
+                    f:name: {}
+                  f:name: {}
+                k:{"name":"podinfo"}:
+                  .: {}
+                  f:downwardAPI:
+                    .: {}
+                    f:defaultMode: {}
+                    f:items: {}
+                  f:name: {}
+                k:{"name":"workload-certs"}:
+                  .: {}
+                  f:emptyDir: {}
+                  f:name: {}
+                k:{"name":"workload-socket"}:
+                  .: {}
+                  f:emptyDir: {}
+                  f:name: {}
+      manager: istio-operator
+      operation: Update
+      time: "2024-06-05T10:45:56Z"
+    - apiVersion: apps/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            f:deployment.kubernetes.io/revision: {}
+        f:status:
+          f:availableReplicas: {}
+          f:conditions:
+            .: {}
+            k:{"type":"Available"}:
+              .: {}
+              f:lastTransitionTime: {}
+              f:lastUpdateTime: {}
+              f:message: {}
+              f:reason: {}
+              f:status: {}
+              f:type: {}
+            k:{"type":"Progressing"}:
+              .: {}
+              f:lastTransitionTime: {}
+              f:lastUpdateTime: {}
+              f:message: {}
+              f:reason: {}
+              f:status: {}
+              f:type: {}
+          f:observedGeneration: {}
+          f:readyReplicas: {}
+          f:replicas: {}
+          f:updatedReplicas: {}
+      manager: kube-controller-manager
+      operation: Update
+      subresource: status
+      time: "2024-06-05T10:46:08Z"
+    name: istio-egressgateway
+    namespace: istio-system
+    ownerReferences:
+    - apiVersion: maistra.io/v2
+      blockOwnerDeletion: true
+      controller: true
+      kind: ServiceMeshControlPlane
+      name: basic
+      uid: b5faf99f-8aeb-4477-aa3e-3f2e4796ec3c
+    resourceVersion: "35560"
+    uid: 154da676-1508-4db8-81c0-25348c740104
+  spec:
+    progressDeadlineSeconds: 600
+    replicas: 1
+    revisionHistoryLimit: 10
+    selector:
+      matchLabels:
+        app: istio-egressgateway
+        istio: egressgateway
+    strategy:
+      rollingUpdate:
+        maxSurge: 100%
+        maxUnavailable: 25%
+      type: RollingUpdate
+    template:
+      metadata:
+        annotations:
+          prometheus.io/path: /stats/prometheus
+          prometheus.io/port: "15020"
+          prometheus.io/scrape: "true"
+          sidecar.istio.io/inject: "false"
+        creationTimestamp: null
+        labels:
+          app: istio-egressgateway
+          chart: gateways
+          heritage: Tiller
+          istio: egressgateway
+          istio.io/rev: basic
+          maistra-control-plane: istio-system
+          maistra.io/gateway: istio-egressgateway.istio-system
+          release: istio
+          service.istio.io/canonical-name: istio-egressgateway
+          service.istio.io/canonical-revision: basic
+          sidecar.istio.io/inject: "false"
+      spec:
+        affinity:
+          nodeAffinity:
+            preferredDuringSchedulingIgnoredDuringExecution:
+            - preference:
+                matchExpressions:
+                - key: kubernetes.io/arch
+                  operator: In
+                  values:
+                  - amd64
+              weight: 2
+            - preference:
+                matchExpressions:
+                - key: kubernetes.io/arch
+                  operator: In
+                  values:
+                  - arm64
+              weight: 2
+            - preference:
+                matchExpressions:
+                - key: kubernetes.io/arch
+                  operator: In
+                  values:
+                  - ppc64le
+              weight: 2
+            - preference:
+                matchExpressions:
+                - key: kubernetes.io/arch
+                  operator: In
+                  values:
+                  - s390x
+              weight: 2
+            requiredDuringSchedulingIgnoredDuringExecution:
+              nodeSelectorTerms:
+              - matchExpressions:
+                - key: kubernetes.io/arch
+                  operator: In
+                  values:
+                  - amd64
+                  - arm64
+                  - ppc64le
+                  - s390x
+        containers:
+        - args:
+          - proxy
+          - router
+          - --domain
+          - $(POD_NAMESPACE).svc.cluster.local
+          - --proxyLogLevel=warning
+          - --proxyComponentLogLevel=misc:error
+          - --log_output_level=default:warn
+          env:
+          - name: JWT_POLICY
+            value: first-party-jwt
+          - name: PILOT_CERT_PROVIDER
+            value: istiod
+          - name: CA_ADDR
+            value: istiod-basic.istio-system.svc:15012
+          - name: NODE_NAME
+            valueFrom:
+              fieldRef:
+                apiVersion: v1
+                fieldPath: spec.nodeName
+          - name: POD_NAME
+            valueFrom:
+              fieldRef:
+                apiVersion: v1
+                fieldPath: metadata.name
+          - name: POD_NAMESPACE
+            valueFrom:
+              fieldRef:
+                apiVersion: v1
+                fieldPath: metadata.namespace
+          - name: INSTANCE_IP
+            valueFrom:
+              fieldRef:
+                apiVersion: v1
+                fieldPath: status.podIP
+          - name: HOST_IP
+            valueFrom:
+              fieldRef:
+                apiVersion: v1
+                fieldPath: status.hostIP
+          - name: SERVICE_ACCOUNT
+            valueFrom:
+              fieldRef:
+                apiVersion: v1
+                fieldPath: spec.serviceAccountName
+          - name: ISTIO_META_WORKLOAD_NAME
+            value: istio-egressgateway
+          - name: ISTIO_META_OWNER
+            value: kubernetes://apis/apps/v1/namespaces/istio-system/deployments/istio-egressgateway
+          - name: ISTIO_META_MESH_ID
+            value: cluster.local
+          - name: TRUST_DOMAIN
+            value: cluster.local
+          - name: ISTIO_META_UNPRIVILEGED_POD
+            value: "true"
+          - name: ISTIO_META_DNS_AUTO_ALLOCATE
+            value: "true"
+          - name: ISTIO_META_DNS_CAPTURE
+            value: "true"
+          - name: PROXY_XDS_VIA_AGENT
+            value: "true"
+          - name: ISTIO_META_CLUSTER_ID
+            value: Kubernetes
+          image: registry.redhat.io/openshift-service-mesh/proxyv2-rhel8@sha256:186619a888331a58729e27e67fbcee236875c1998b6714565238db53e9a1f8bd
+          imagePullPolicy: IfNotPresent
+          name: istio-proxy
+          ports:
+          - containerPort: 8080
+            name: http2
+            protocol: TCP
+          - containerPort: 8443
+            name: https
+            protocol: TCP
+          - containerPort: 15090
+            name: http-envoy-prom
+            protocol: TCP
+          readinessProbe:
+            failureThreshold: 30
+            httpGet:
+              path: /healthz/ready
+              port: 15021
+              scheme: HTTP
+            initialDelaySeconds: 1
+            periodSeconds: 2
+            successThreshold: 1
+            timeoutSeconds: 1
+          resources:
+            limits:
+              cpu: "2"
+              memory: 1Gi
+            requests:
+              cpu: 10m
+              memory: 128Mi
+          securityContext:
+            allowPrivilegeEscalation: false
+            capabilities:
+              drop:
+              - ALL
+            privileged: false
+            readOnlyRootFilesystem: true
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+          volumeMounts:
+          - mountPath: /var/run/secrets/workload-spiffe-uds
+            name: workload-socket
+          - mountPath: /var/run/secrets/credential-uds
+            name: credential-socket
+          - mountPath: /var/run/secrets/workload-spiffe-credentials
+            name: workload-certs
+          - mountPath: /etc/istio/proxy
+            name: istio-envoy
+          - mountPath: /etc/istio/config
+            name: config-volume
+          - mountPath: /var/run/secrets/istio
+            name: istiod-ca-cert
+          - mountPath: /var/lib/istio/data
+            name: istio-data
+          - mountPath: /etc/istio/pod
+            name: podinfo
+          - mountPath: /etc/istio/egressgateway-certs
+            name: egressgateway-certs
+            readOnly: true
+          - mountPath: /etc/istio/egressgateway-ca-certs
+            name: egressgateway-ca-certs
+            readOnly: true
+        dnsPolicy: ClusterFirst
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        securityContext:
+          runAsNonRoot: true
+        serviceAccount: istio-egressgateway-service-account
+        serviceAccountName: istio-egressgateway-service-account
+        terminationGracePeriodSeconds: 30
+        volumes:
+        - emptyDir: {}
+          name: workload-socket
+        - emptyDir: {}
+          name: credential-socket
+        - emptyDir: {}
+          name: workload-certs
+        - configMap:
+            defaultMode: 420
+            name: istio-ca-root-cert
+          name: istiod-ca-cert
+        - downwardAPI:
+            defaultMode: 420
+            items:
+            - fieldRef:
+                apiVersion: v1
+                fieldPath: metadata.labels
+              path: labels
+            - fieldRef:
+                apiVersion: v1
+                fieldPath: metadata.annotations
+              path: annotations
+          name: podinfo
+        - emptyDir: {}
+          name: istio-envoy
+        - emptyDir: {}
+          name: istio-data
+        - configMap:
+            defaultMode: 420
+            name: istio-basic
+            optional: true
+          name: config-volume
+        - name: egressgateway-certs
+          secret:
+            defaultMode: 420
+            optional: true
+            secretName: istio-egressgateway-certs
+        - name: egressgateway-ca-certs
+          secret:
+            defaultMode: 420
+            optional: true
+            secretName: istio-egressgateway-ca-certs
+  status:
+    availableReplicas: 1
+    conditions:
+    - lastTransitionTime: "2024-06-05T10:46:08Z"
+      lastUpdateTime: "2024-06-05T10:46:08Z"
+      message: Deployment has minimum availability.
+      reason: MinimumReplicasAvailable
+      status: "True"
+      type: Available
+    - lastTransitionTime: "2024-06-05T10:45:56Z"
+      lastUpdateTime: "2024-06-05T10:46:08Z"
+      message: ReplicaSet "istio-egressgateway-856fbd6dfc" has successfully progressed.
+      reason: NewReplicaSetAvailable
+      status: "True"
+      type: Progressing
+    observedGeneration: 1
+    readyReplicas: 1
+    replicas: 1
+    updatedReplicas: 1
+- apiVersion: apps/v1
+  kind: Deployment
+  metadata:
+    annotations:
+      deployment.kubernetes.io/revision: "1"
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"apps/v1","kind":"Deployment","metadata":{"annotations":{"maistra.io/mesh-generation":"2.5.1-1-2"},"labels":{"app":"istio-ingressgateway","app.kubernetes.io/component":"istio-ingress","app.kubernetes.io/instance":"istio-system","app.kubernetes.io/managed-by":"maistra-istio-operator","app.kubernetes.io/name":"istio-ingress","app.kubernetes.io/part-of":"istio","app.kubernetes.io/version":"2.5.1-1-2","istio":"ingressgateway","istio.io/rev":"basic","knative":"ingressgateway","maistra-version":"2.4.7","maistra.io/gateway":"istio-ingressgateway.istio-system","maistra.io/owner":"istio-system","maistra.io/owner-name":"basic","release":"istio"},"name":"istio-ingressgateway","namespace":"istio-system","ownerReferences":[{"apiVersion":"maistra.io/v2","blockOwnerDeletion":true,"controller":true,"kind":"ServiceMeshControlPlane","name":"basic","uid":"b5faf99f-8aeb-4477-aa3e-3f2e4796ec3c"}]},"spec":{"selector":{"matchLabels":{"app":"istio-ingressgateway","istio":"ingressgateway","knative":"ingressgateway"}},"strategy":{"rollingUpdate":{"maxSurge":"100%","maxUnavailable":"25%"}},"template":{"metadata":{"annotations":{"prometheus.io/path":"/stats/prometheus","prometheus.io/port":"15020","prometheus.io/scrape":"true","sidecar.istio.io/inject":"false"},"labels":{"app":"istio-ingressgateway","chart":"gateways","heritage":"Tiller","istio":"ingressgateway","istio.io/rev":"basic","knative":"ingressgateway","maistra-control-plane":"istio-system","maistra.io/gateway":"istio-ingressgateway.istio-system","release":"istio","service.istio.io/canonical-name":"istio-ingressgateway","service.istio.io/canonical-revision":"basic","sidecar.istio.io/inject":"false"}},"spec":{"affinity":{"nodeAffinity":{"preferredDuringSchedulingIgnoredDuringExecution":[{"preference":{"matchExpressions":[{"key":"kubernetes.io/arch","operator":"In","values":["amd64"]}]},"weight":2},{"preference":{"matchExpressions":[{"key":"kubernetes.io/arch","operator":"In","values":["arm64"]}]},"weight":2},{"preference":{"matchExpressions":[{"key":"kubernetes.io/arch","operator":"In","values":["ppc64le"]}]},"weight":2},{"preference":{"matchExpressions":[{"key":"kubernetes.io/arch","operator":"In","values":["s390x"]}]},"weight":2}],"requiredDuringSchedulingIgnoredDuringExecution":{"nodeSelectorTerms":[{"matchExpressions":[{"key":"kubernetes.io/arch","operator":"In","values":["amd64","arm64","ppc64le","s390x"]}]}]}}},"containers":[{"args":["proxy","router","--domain","$(POD_NAMESPACE).svc.cluster.local","--proxyLogLevel=warning","--proxyComponentLogLevel=misc:error","--log_output_level=default:warn"],"env":[{"name":"JWT_POLICY","value":"first-party-jwt"},{"name":"PILOT_CERT_PROVIDER","value":"istiod"},{"name":"CA_ADDR","value":"istiod-basic.istio-system.svc:15012"},{"name":"NODE_NAME","valueFrom":{"fieldRef":{"apiVersion":"v1","fieldPath":"spec.nodeName"}}},{"name":"POD_NAME","valueFrom":{"fieldRef":{"apiVersion":"v1","fieldPath":"metadata.name"}}},{"name":"POD_NAMESPACE","valueFrom":{"fieldRef":{"apiVersion":"v1","fieldPath":"metadata.namespace"}}},{"name":"INSTANCE_IP","valueFrom":{"fieldRef":{"apiVersion":"v1","fieldPath":"status.podIP"}}},{"name":"HOST_IP","valueFrom":{"fieldRef":{"apiVersion":"v1","fieldPath":"status.hostIP"}}},{"name":"SERVICE_ACCOUNT","valueFrom":{"fieldRef":{"fieldPath":"spec.serviceAccountName"}}},{"name":"ISTIO_META_WORKLOAD_NAME","value":"istio-ingressgateway"},{"name":"ISTIO_META_OWNER","value":"kubernetes://apis/apps/v1/namespaces/istio-system/deployments/istio-ingressgateway"},{"name":"ISTIO_META_MESH_ID","value":"cluster.local"},{"name":"TRUST_DOMAIN","value":"cluster.local"},{"name":"ISTIO_META_UNPRIVILEGED_POD","value":"true"},{"name":"ISTIO_META_DNS_AUTO_ALLOCATE","value":"true"},{"name":"ISTIO_META_DNS_CAPTURE","value":"true"},{"name":"PROXY_XDS_VIA_AGENT","value":"true"},{"name":"ISTIO_META_CLUSTER_ID","value":"Kubernetes"}],"image":"registry.redhat.io/openshift-service-mesh/proxyv2-rhel8@sha256:186619a888331a58729e27e67fbcee236875c1998b6714565238db53e9a1f8bd","name":"istio-proxy","ports":[{"containerPort":15021,"name":"status-port","protocol":"TCP"},{"containerPort":8080,"name":"http2","protocol":"TCP"},{"containerPort":8443,"name":"https","protocol":"TCP"},{"containerPort":15090,"name":"http-envoy-prom","protocol":"TCP"}],"readinessProbe":{"failureThreshold":30,"httpGet":{"path":"/healthz/ready","port":15021,"scheme":"HTTP"},"initialDelaySeconds":1,"periodSeconds":2,"successThreshold":1,"timeoutSeconds":1},"resources":{"limits":{"cpu":"2000m","memory":"1024Mi"},"requests":{"cpu":"10m","memory":"128Mi"}},"securityContext":{"allowPrivilegeEscalation":false,"capabilities":{"drop":["ALL"]},"privileged":false,"readOnlyRootFilesystem":true},"volumeMounts":[{"mountPath":"/var/run/secrets/workload-spiffe-uds","name":"workload-socket"},{"mountPath":"/var/run/secrets/credential-uds","name":"credential-socket"},{"mountPath":"/var/run/secrets/workload-spiffe-credentials","name":"workload-certs"},{"mountPath":"/etc/istio/proxy","name":"istio-envoy"},{"mountPath":"/etc/istio/config","name":"config-volume"},{"mountPath":"/var/run/secrets/istio","name":"istiod-ca-cert"},{"mountPath":"/var/lib/istio/data","name":"istio-data"},{"mountPath":"/etc/istio/pod","name":"podinfo"},{"mountPath":"/etc/istio/ingressgateway-certs","name":"ingressgateway-certs","readOnly":true},{"mountPath":"/etc/istio/ingressgateway-ca-certs","name":"ingressgateway-ca-certs","readOnly":true}]}],"securityContext":{"fsGroup":null,"runAsGroup":null,"runAsNonRoot":true,"runAsUser":null},"serviceAccountName":"istio-ingressgateway-service-account","volumes":[{"emptyDir":{},"name":"workload-socket"},{"emptyDir":{},"name":"credential-socket"},{"emptyDir":{},"name":"workload-certs"},{"configMap":{"name":"istio-ca-root-cert"},"name":"istiod-ca-cert"},{"downwardAPI":{"items":[{"fieldRef":{"fieldPath":"metadata.labels"},"path":"labels"},{"fieldRef":{"fieldPath":"metadata.annotations"},"path":"annotations"}]},"name":"podinfo"},{"emptyDir":{},"name":"istio-envoy"},{"emptyDir":{},"name":"istio-data"},{"configMap":{"name":"istio-basic","optional":true},"name":"config-volume"},{"name":"ingressgateway-certs","secret":{"optional":true,"secretName":"istio-ingressgateway-certs"}},{"name":"ingressgateway-ca-certs","secret":{"optional":true,"secretName":"istio-ingressgateway-ca-certs"}}]}}}}
+      maistra.io/mesh-generation: 2.5.1-1-2
+    creationTimestamp: "2024-06-05T10:45:55Z"
+    generation: 1
+    labels:
+      app: istio-ingressgateway
+      app.kubernetes.io/component: istio-ingress
+      app.kubernetes.io/instance: istio-system
+      app.kubernetes.io/managed-by: maistra-istio-operator
+      app.kubernetes.io/name: istio-ingress
+      app.kubernetes.io/part-of: istio
+      app.kubernetes.io/version: 2.5.1-1-2
+      istio: ingressgateway
+      istio.io/rev: basic
+      knative: ingressgateway
+      maistra-version: 2.4.7
+      maistra.io/gateway: istio-ingressgateway.istio-system
+      maistra.io/owner: istio-system
+      maistra.io/owner-name: basic
+      release: istio
+    managedFields:
+    - apiVersion: apps/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:kubectl.kubernetes.io/last-applied-configuration: {}
+            f:maistra.io/mesh-generation: {}
+          f:labels:
+            .: {}
+            f:app: {}
+            f:app.kubernetes.io/component: {}
+            f:app.kubernetes.io/instance: {}
+            f:app.kubernetes.io/managed-by: {}
+            f:app.kubernetes.io/name: {}
+            f:app.kubernetes.io/part-of: {}
+            f:app.kubernetes.io/version: {}
+            f:istio: {}
+            f:istio.io/rev: {}
+            f:knative: {}
+            f:maistra-version: {}
+            f:maistra.io/gateway: {}
+            f:maistra.io/owner: {}
+            f:maistra.io/owner-name: {}
+            f:release: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"b5faf99f-8aeb-4477-aa3e-3f2e4796ec3c"}: {}
+        f:spec:
+          f:progressDeadlineSeconds: {}
+          f:replicas: {}
+          f:revisionHistoryLimit: {}
+          f:selector: {}
+          f:strategy:
+            f:rollingUpdate:
+              .: {}
+              f:maxSurge: {}
+              f:maxUnavailable: {}
+            f:type: {}
+          f:template:
+            f:metadata:
+              f:annotations:
+                .: {}
+                f:prometheus.io/path: {}
+                f:prometheus.io/port: {}
+                f:prometheus.io/scrape: {}
+                f:sidecar.istio.io/inject: {}
+              f:labels:
+                .: {}
+                f:app: {}
+                f:chart: {}
+                f:heritage: {}
+                f:istio: {}
+                f:istio.io/rev: {}
+                f:knative: {}
+                f:maistra-control-plane: {}
+                f:maistra.io/gateway: {}
+                f:release: {}
+                f:service.istio.io/canonical-name: {}
+                f:service.istio.io/canonical-revision: {}
+                f:sidecar.istio.io/inject: {}
+            f:spec:
+              f:affinity:
+                .: {}
+                f:nodeAffinity:
+                  .: {}
+                  f:preferredDuringSchedulingIgnoredDuringExecution: {}
+                  f:requiredDuringSchedulingIgnoredDuringExecution: {}
+              f:containers:
+                k:{"name":"istio-proxy"}:
+                  .: {}
+                  f:args: {}
+                  f:env:
+                    .: {}
+                    k:{"name":"CA_ADDR"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"HOST_IP"}:
+                      .: {}
+                      f:name: {}
+                      f:valueFrom:
+                        .: {}
+                        f:fieldRef: {}
+                    k:{"name":"INSTANCE_IP"}:
+                      .: {}
+                      f:name: {}
+                      f:valueFrom:
+                        .: {}
+                        f:fieldRef: {}
+                    k:{"name":"ISTIO_META_CLUSTER_ID"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"ISTIO_META_DNS_AUTO_ALLOCATE"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"ISTIO_META_DNS_CAPTURE"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"ISTIO_META_MESH_ID"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"ISTIO_META_OWNER"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"ISTIO_META_UNPRIVILEGED_POD"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"ISTIO_META_WORKLOAD_NAME"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"JWT_POLICY"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"NODE_NAME"}:
+                      .: {}
+                      f:name: {}
+                      f:valueFrom:
+                        .: {}
+                        f:fieldRef: {}
+                    k:{"name":"PILOT_CERT_PROVIDER"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"POD_NAME"}:
+                      .: {}
+                      f:name: {}
+                      f:valueFrom:
+                        .: {}
+                        f:fieldRef: {}
+                    k:{"name":"POD_NAMESPACE"}:
+                      .: {}
+                      f:name: {}
+                      f:valueFrom:
+                        .: {}
+                        f:fieldRef: {}
+                    k:{"name":"PROXY_XDS_VIA_AGENT"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"SERVICE_ACCOUNT"}:
+                      .: {}
+                      f:name: {}
+                      f:valueFrom:
+                        .: {}
+                        f:fieldRef: {}
+                    k:{"name":"TRUST_DOMAIN"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                  f:image: {}
+                  f:imagePullPolicy: {}
+                  f:name: {}
+                  f:ports:
+                    .: {}
+                    k:{"containerPort":8080,"protocol":"TCP"}:
+                      .: {}
+                      f:containerPort: {}
+                      f:name: {}
+                      f:protocol: {}
+                    k:{"containerPort":8443,"protocol":"TCP"}:
+                      .: {}
+                      f:containerPort: {}
+                      f:name: {}
+                      f:protocol: {}
+                    k:{"containerPort":15021,"protocol":"TCP"}:
+                      .: {}
+                      f:containerPort: {}
+                      f:name: {}
+                      f:protocol: {}
+                    k:{"containerPort":15090,"protocol":"TCP"}:
+                      .: {}
+                      f:containerPort: {}
+                      f:name: {}
+                      f:protocol: {}
+                  f:readinessProbe:
+                    .: {}
+                    f:failureThreshold: {}
+                    f:httpGet:
+                      .: {}
+                      f:path: {}
+                      f:port: {}
+                      f:scheme: {}
+                    f:initialDelaySeconds: {}
+                    f:periodSeconds: {}
+                    f:successThreshold: {}
+                    f:timeoutSeconds: {}
+                  f:resources:
+                    .: {}
+                    f:limits:
+                      .: {}
+                      f:cpu: {}
+                      f:memory: {}
+                    f:requests:
+                      .: {}
+                      f:cpu: {}
+                      f:memory: {}
+                  f:securityContext:
+                    .: {}
+                    f:allowPrivilegeEscalation: {}
+                    f:capabilities:
+                      .: {}
+                      f:drop: {}
+                    f:privileged: {}
+                    f:readOnlyRootFilesystem: {}
+                  f:terminationMessagePath: {}
+                  f:terminationMessagePolicy: {}
+                  f:volumeMounts:
+                    .: {}
+                    k:{"mountPath":"/etc/istio/config"}:
+                      .: {}
+                      f:mountPath: {}
+                      f:name: {}
+                    k:{"mountPath":"/etc/istio/ingressgateway-ca-certs"}:
+                      .: {}
+                      f:mountPath: {}
+                      f:name: {}
+                      f:readOnly: {}
+                    k:{"mountPath":"/etc/istio/ingressgateway-certs"}:
+                      .: {}
+                      f:mountPath: {}
+                      f:name: {}
+                      f:readOnly: {}
+                    k:{"mountPath":"/etc/istio/pod"}:
+                      .: {}
+                      f:mountPath: {}
+                      f:name: {}
+                    k:{"mountPath":"/etc/istio/proxy"}:
+                      .: {}
+                      f:mountPath: {}
+                      f:name: {}
+                    k:{"mountPath":"/var/lib/istio/data"}:
+                      .: {}
+                      f:mountPath: {}
+                      f:name: {}
+                    k:{"mountPath":"/var/run/secrets/credential-uds"}:
+                      .: {}
+                      f:mountPath: {}
+                      f:name: {}
+                    k:{"mountPath":"/var/run/secrets/istio"}:
+                      .: {}
+                      f:mountPath: {}
+                      f:name: {}
+                    k:{"mountPath":"/var/run/secrets/workload-spiffe-credentials"}:
+                      .: {}
+                      f:mountPath: {}
+                      f:name: {}
+                    k:{"mountPath":"/var/run/secrets/workload-spiffe-uds"}:
+                      .: {}
+                      f:mountPath: {}
+                      f:name: {}
+              f:dnsPolicy: {}
+              f:restartPolicy: {}
+              f:schedulerName: {}
+              f:securityContext:
+                .: {}
+                f:runAsNonRoot: {}
+              f:serviceAccount: {}
+              f:serviceAccountName: {}
+              f:terminationGracePeriodSeconds: {}
+              f:volumes:
+                .: {}
+                k:{"name":"config-volume"}:
+                  .: {}
+                  f:configMap:
+                    .: {}
+                    f:defaultMode: {}
+                    f:name: {}
+                    f:optional: {}
+                  f:name: {}
+                k:{"name":"credential-socket"}:
+                  .: {}
+                  f:emptyDir: {}
+                  f:name: {}
+                k:{"name":"ingressgateway-ca-certs"}:
+                  .: {}
+                  f:name: {}
+                  f:secret:
+                    .: {}
+                    f:defaultMode: {}
+                    f:optional: {}
+                    f:secretName: {}
+                k:{"name":"ingressgateway-certs"}:
+                  .: {}
+                  f:name: {}
+                  f:secret:
+                    .: {}
+                    f:defaultMode: {}
+                    f:optional: {}
+                    f:secretName: {}
+                k:{"name":"istio-data"}:
+                  .: {}
+                  f:emptyDir: {}
+                  f:name: {}
+                k:{"name":"istio-envoy"}:
+                  .: {}
+                  f:emptyDir: {}
+                  f:name: {}
+                k:{"name":"istiod-ca-cert"}:
+                  .: {}
+                  f:configMap:
+                    .: {}
+                    f:defaultMode: {}
+                    f:name: {}
+                  f:name: {}
+                k:{"name":"podinfo"}:
+                  .: {}
+                  f:downwardAPI:
+                    .: {}
+                    f:defaultMode: {}
+                    f:items: {}
+                  f:name: {}
+                k:{"name":"workload-certs"}:
+                  .: {}
+                  f:emptyDir: {}
+                  f:name: {}
+                k:{"name":"workload-socket"}:
+                  .: {}
+                  f:emptyDir: {}
+                  f:name: {}
+      manager: istio-operator
+      operation: Update
+      time: "2024-06-05T10:45:55Z"
+    - apiVersion: apps/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            f:deployment.kubernetes.io/revision: {}
+        f:status:
+          f:availableReplicas: {}
+          f:conditions:
+            .: {}
+            k:{"type":"Available"}:
+              .: {}
+              f:lastTransitionTime: {}
+              f:lastUpdateTime: {}
+              f:message: {}
+              f:reason: {}
+              f:status: {}
+              f:type: {}
+            k:{"type":"Progressing"}:
+              .: {}
+              f:lastTransitionTime: {}
+              f:lastUpdateTime: {}
+              f:message: {}
+              f:reason: {}
+              f:status: {}
+              f:type: {}
+          f:observedGeneration: {}
+          f:readyReplicas: {}
+          f:replicas: {}
+          f:updatedReplicas: {}
+      manager: kube-controller-manager
+      operation: Update
+      subresource: status
+      time: "2024-06-05T10:46:08Z"
+    name: istio-ingressgateway
+    namespace: istio-system
+    ownerReferences:
+    - apiVersion: maistra.io/v2
+      blockOwnerDeletion: true
+      controller: true
+      kind: ServiceMeshControlPlane
+      name: basic
+      uid: b5faf99f-8aeb-4477-aa3e-3f2e4796ec3c
+    resourceVersion: "35565"
+    uid: 2939c602-b1f1-4782-9f67-e6691f2a44ce
+  spec:
+    progressDeadlineSeconds: 600
+    replicas: 1
+    revisionHistoryLimit: 10
+    selector:
+      matchLabels:
+        app: istio-ingressgateway
+        istio: ingressgateway
+        knative: ingressgateway
+    strategy:
+      rollingUpdate:
+        maxSurge: 100%
+        maxUnavailable: 25%
+      type: RollingUpdate
+    template:
+      metadata:
+        annotations:
+          prometheus.io/path: /stats/prometheus
+          prometheus.io/port: "15020"
+          prometheus.io/scrape: "true"
+          sidecar.istio.io/inject: "false"
+        creationTimestamp: null
+        labels:
+          app: istio-ingressgateway
+          chart: gateways
+          heritage: Tiller
+          istio: ingressgateway
+          istio.io/rev: basic
+          knative: ingressgateway
+          maistra-control-plane: istio-system
+          maistra.io/gateway: istio-ingressgateway.istio-system
+          release: istio
+          service.istio.io/canonical-name: istio-ingressgateway
+          service.istio.io/canonical-revision: basic
+          sidecar.istio.io/inject: "false"
+      spec:
+        affinity:
+          nodeAffinity:
+            preferredDuringSchedulingIgnoredDuringExecution:
+            - preference:
+                matchExpressions:
+                - key: kubernetes.io/arch
+                  operator: In
+                  values:
+                  - amd64
+              weight: 2
+            - preference:
+                matchExpressions:
+                - key: kubernetes.io/arch
+                  operator: In
+                  values:
+                  - arm64
+              weight: 2
+            - preference:
+                matchExpressions:
+                - key: kubernetes.io/arch
+                  operator: In
+                  values:
+                  - ppc64le
+              weight: 2
+            - preference:
+                matchExpressions:
+                - key: kubernetes.io/arch
+                  operator: In
+                  values:
+                  - s390x
+              weight: 2
+            requiredDuringSchedulingIgnoredDuringExecution:
+              nodeSelectorTerms:
+              - matchExpressions:
+                - key: kubernetes.io/arch
+                  operator: In
+                  values:
+                  - amd64
+                  - arm64
+                  - ppc64le
+                  - s390x
+        containers:
+        - args:
+          - proxy
+          - router
+          - --domain
+          - $(POD_NAMESPACE).svc.cluster.local
+          - --proxyLogLevel=warning
+          - --proxyComponentLogLevel=misc:error
+          - --log_output_level=default:warn
+          env:
+          - name: JWT_POLICY
+            value: first-party-jwt
+          - name: PILOT_CERT_PROVIDER
+            value: istiod
+          - name: CA_ADDR
+            value: istiod-basic.istio-system.svc:15012
+          - name: NODE_NAME
+            valueFrom:
+              fieldRef:
+                apiVersion: v1
+                fieldPath: spec.nodeName
+          - name: POD_NAME
+            valueFrom:
+              fieldRef:
+                apiVersion: v1
+                fieldPath: metadata.name
+          - name: POD_NAMESPACE
+            valueFrom:
+              fieldRef:
+                apiVersion: v1
+                fieldPath: metadata.namespace
+          - name: INSTANCE_IP
+            valueFrom:
+              fieldRef:
+                apiVersion: v1
+                fieldPath: status.podIP
+          - name: HOST_IP
+            valueFrom:
+              fieldRef:
+                apiVersion: v1
+                fieldPath: status.hostIP
+          - name: SERVICE_ACCOUNT
+            valueFrom:
+              fieldRef:
+                apiVersion: v1
+                fieldPath: spec.serviceAccountName
+          - name: ISTIO_META_WORKLOAD_NAME
+            value: istio-ingressgateway
+          - name: ISTIO_META_OWNER
+            value: kubernetes://apis/apps/v1/namespaces/istio-system/deployments/istio-ingressgateway
+          - name: ISTIO_META_MESH_ID
+            value: cluster.local
+          - name: TRUST_DOMAIN
+            value: cluster.local
+          - name: ISTIO_META_UNPRIVILEGED_POD
+            value: "true"
+          - name: ISTIO_META_DNS_AUTO_ALLOCATE
+            value: "true"
+          - name: ISTIO_META_DNS_CAPTURE
+            value: "true"
+          - name: PROXY_XDS_VIA_AGENT
+            value: "true"
+          - name: ISTIO_META_CLUSTER_ID
+            value: Kubernetes
+          image: registry.redhat.io/openshift-service-mesh/proxyv2-rhel8@sha256:186619a888331a58729e27e67fbcee236875c1998b6714565238db53e9a1f8bd
+          imagePullPolicy: IfNotPresent
+          name: istio-proxy
+          ports:
+          - containerPort: 15021
+            name: status-port
+            protocol: TCP
+          - containerPort: 8080
+            name: http2
+            protocol: TCP
+          - containerPort: 8443
+            name: https
+            protocol: TCP
+          - containerPort: 15090
+            name: http-envoy-prom
+            protocol: TCP
+          readinessProbe:
+            failureThreshold: 30
+            httpGet:
+              path: /healthz/ready
+              port: 15021
+              scheme: HTTP
+            initialDelaySeconds: 1
+            periodSeconds: 2
+            successThreshold: 1
+            timeoutSeconds: 1
+          resources:
+            limits:
+              cpu: "2"
+              memory: 1Gi
+            requests:
+              cpu: 10m
+              memory: 128Mi
+          securityContext:
+            allowPrivilegeEscalation: false
+            capabilities:
+              drop:
+              - ALL
+            privileged: false
+            readOnlyRootFilesystem: true
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+          volumeMounts:
+          - mountPath: /var/run/secrets/workload-spiffe-uds
+            name: workload-socket
+          - mountPath: /var/run/secrets/credential-uds
+            name: credential-socket
+          - mountPath: /var/run/secrets/workload-spiffe-credentials
+            name: workload-certs
+          - mountPath: /etc/istio/proxy
+            name: istio-envoy
+          - mountPath: /etc/istio/config
+            name: config-volume
+          - mountPath: /var/run/secrets/istio
+            name: istiod-ca-cert
+          - mountPath: /var/lib/istio/data
+            name: istio-data
+          - mountPath: /etc/istio/pod
+            name: podinfo
+          - mountPath: /etc/istio/ingressgateway-certs
+            name: ingressgateway-certs
+            readOnly: true
+          - mountPath: /etc/istio/ingressgateway-ca-certs
+            name: ingressgateway-ca-certs
+            readOnly: true
+        dnsPolicy: ClusterFirst
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        securityContext:
+          runAsNonRoot: true
+        serviceAccount: istio-ingressgateway-service-account
+        serviceAccountName: istio-ingressgateway-service-account
+        terminationGracePeriodSeconds: 30
+        volumes:
+        - emptyDir: {}
+          name: workload-socket
+        - emptyDir: {}
+          name: credential-socket
+        - emptyDir: {}
+          name: workload-certs
+        - configMap:
+            defaultMode: 420
+            name: istio-ca-root-cert
+          name: istiod-ca-cert
+        - downwardAPI:
+            defaultMode: 420
+            items:
+            - fieldRef:
+                apiVersion: v1
+                fieldPath: metadata.labels
+              path: labels
+            - fieldRef:
+                apiVersion: v1
+                fieldPath: metadata.annotations
+              path: annotations
+          name: podinfo
+        - emptyDir: {}
+          name: istio-envoy
+        - emptyDir: {}
+          name: istio-data
+        - configMap:
+            defaultMode: 420
+            name: istio-basic
+            optional: true
+          name: config-volume
+        - name: ingressgateway-certs
+          secret:
+            defaultMode: 420
+            optional: true
+            secretName: istio-ingressgateway-certs
+        - name: ingressgateway-ca-certs
+          secret:
+            defaultMode: 420
+            optional: true
+            secretName: istio-ingressgateway-ca-certs
+  status:
+    availableReplicas: 1
+    conditions:
+    - lastTransitionTime: "2024-06-05T10:46:08Z"
+      lastUpdateTime: "2024-06-05T10:46:08Z"
+      message: Deployment has minimum availability.
+      reason: MinimumReplicasAvailable
+      status: "True"
+      type: Available
+    - lastTransitionTime: "2024-06-05T10:45:56Z"
+      lastUpdateTime: "2024-06-05T10:46:08Z"
+      message: ReplicaSet "istio-ingressgateway-7b6954747" has successfully progressed.
+      reason: NewReplicaSetAvailable
+      status: "True"
+      type: Progressing
+    observedGeneration: 1
+    readyReplicas: 1
+    replicas: 1
+    updatedReplicas: 1
+- apiVersion: apps/v1
+  kind: Deployment
+  metadata:
+    annotations:
+      deployment.kubernetes.io/revision: "1"
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"apps/v1","kind":"Deployment","metadata":{"annotations":{"maistra.io/mesh-generation":"2.5.1-1-2"},"labels":{"app":"istiod","app.kubernetes.io/component":"istio-discovery","app.kubernetes.io/instance":"istio-system","app.kubernetes.io/managed-by":"maistra-istio-operator","app.kubernetes.io/name":"istio-discovery","app.kubernetes.io/part-of":"istio","app.kubernetes.io/version":"2.5.1-1-2","istio":"pilot","istio.io/rev":"basic","maistra-version":"2.4.7","maistra.io/owner":"istio-system","maistra.io/owner-name":"basic","release":"istio"},"name":"istiod-basic","namespace":"istio-system","ownerReferences":[{"apiVersion":"maistra.io/v2","blockOwnerDeletion":true,"controller":true,"kind":"ServiceMeshControlPlane","name":"basic","uid":"b5faf99f-8aeb-4477-aa3e-3f2e4796ec3c"}]},"spec":{"replicas":1,"selector":{"matchLabels":{"app":"istiod","istio.io/rev":"basic"}},"strategy":{"rollingUpdate":{"maxSurge":"100%","maxUnavailable":"25%"}},"template":{"metadata":{"annotations":{"prometheus.io/port":"15014","prometheus.io/scrape":"true","sidecar.istio.io/inject":"false"},"labels":{"app":"istiod","istio":"istiod","istio.io/rev":"basic","maistra-control-plane":"istio-system","sidecar.istio.io/inject":"false"}},"spec":{"affinity":{"nodeAffinity":{"preferredDuringSchedulingIgnoredDuringExecution":[{"preference":{"matchExpressions":[{"key":"kubernetes.io/arch","operator":"In","values":["amd64"]}]},"weight":2},{"preference":{"matchExpressions":[{"key":"kubernetes.io/arch","operator":"In","values":["arm64"]}]},"weight":2},{"preference":{"matchExpressions":[{"key":"kubernetes.io/arch","operator":"In","values":["ppc64le"]}]},"weight":2},{"preference":{"matchExpressions":[{"key":"kubernetes.io/arch","operator":"In","values":["s390x"]}]},"weight":2}],"requiredDuringSchedulingIgnoredDuringExecution":{"nodeSelectorTerms":[{"matchExpressions":[{"key":"kubernetes.io/arch","operator":"In","values":["amd64","arm64","ppc64le","s390x"]}]}]}}},"containers":[{"args":["discovery","--memberRollName=default","--enableNodeAccess=false","--enableCRDScan=false","--enableIngressClassName=false","--monitoringAddr=:15014","--log_output_level=default:warn","--domain","cluster.local","--keepaliveMaxServerConnectionAge","30m"],"env":[{"name":"ENABLE_IOR","value":"true"},{"name":"PILOT_CA_CERT_CONFIG_MAP_NAME","value":"istio-ca-root-cert"},{"name":"PILOT_ENABLE_GATEWAY_API","value":"false"},{"name":"PILOT_ENABLE_GATEWAY_API_STATUS","value":"false"},{"name":"PILOT_ENABLE_GATEWAY_API_DEPLOYMENT_CONTROLLER","value":"false"},{"name":"PRIORITIZED_LEADER_ELECTION","value":"false"},{"name":"VALIDATION_WEBHOOK_CONFIG_NAME","value":""},{"name":"INJECTION_WEBHOOK_CONFIG_NAME","value":""},{"name":"REVISION","value":"basic"},{"name":"JWT_POLICY","value":"first-party-jwt"},{"name":"PILOT_CERT_PROVIDER","value":"istiod"},{"name":"POD_NAME","valueFrom":{"fieldRef":{"apiVersion":"v1","fieldPath":"metadata.name"}}},{"name":"POD_NAMESPACE","valueFrom":{"fieldRef":{"apiVersion":"v1","fieldPath":"metadata.namespace"}}},{"name":"SERVICE_ACCOUNT","valueFrom":{"fieldRef":{"apiVersion":"v1","fieldPath":"spec.serviceAccountName"}}},{"name":"KUBECONFIG","value":"/var/run/secrets/remote/config"},{"name":"PILOT_ENABLE_FEDERATION","value":"true"},{"name":"PILOT_TRACE_SAMPLING","value":"1"},{"name":"PILOT_ENABLE_PROTOCOL_SNIFFING_FOR_OUTBOUND","value":"false"},{"name":"PILOT_ENABLE_PROTOCOL_SNIFFING_FOR_INBOUND","value":"false"},{"name":"ISTIOD_ADDR","value":"istiod-basic.istio-system.svc:15012"},{"name":"PILOT_ENABLE_STATUS","value":"false"},{"name":"PILOT_ENABLE_ANALYSIS","value":"false"},{"name":"CLUSTER_ID","value":"Kubernetes"}],"image":"registry.redhat.io/openshift-service-mesh/pilot-rhel8@sha256:1a8882f482044b38e6d75e322db6d6b80d21525f56fdd08f7f2ee9a58897e742","name":"discovery","ports":[{"containerPort":8080,"protocol":"TCP"},{"containerPort":15010,"protocol":"TCP"},{"containerPort":15017,"name":"webhook","protocol":"TCP"},{"containerPort":8188,"protocol":"TCP"}],"readinessProbe":{"httpGet":{"path":"/ready","port":8080},"initialDelaySeconds":1,"periodSeconds":3,"timeoutSeconds":5},"resources":{"requests":{"cpu":"10m","memory":"128Mi"}},"securityContext":{"capabilities":{"drop":["ALL"]}},"volumeMounts":[{"mountPath":"/var/run/secrets/istio-dns","name":"local-certs"},{"mountPath":"/etc/cacerts","name":"cacerts","readOnly":true},{"mountPath":"/var/run/secrets/remote","name":"istio-kubeconfig","readOnly":true},{"mountPath":"/var/run/secrets/istiod/tls","name":"istio-csr-dns-cert","readOnly":true},{"mountPath":"/var/run/secrets/istiod/ca","name":"istio-csr-ca-configmap","readOnly":true}],"workingDir":"/"}],"serviceAccountName":"istiod-basic","volumes":[{"emptyDir":{"medium":"Memory"},"name":"local-certs"},{"name":"cacerts","secret":{"optional":true,"secretName":"cacerts"}},{"name":"istio-kubeconfig","secret":{"optional":true,"secretName":"istio-kubeconfig"}},{"name":"istio-csr-dns-cert","secret":{"optional":true,"secretName":"istiod-tls"}},{"configMap":{"defaultMode":420,"name":"istio-ca-root-cert","optional":true},"name":"istio-csr-ca-configmap"}]}}}}
+      maistra.io/mesh-generation: 2.5.1-1-2
+    creationTimestamp: "2024-06-05T10:45:40Z"
+    generation: 1
+    labels:
+      app: istiod
+      app.kubernetes.io/component: istio-discovery
+      app.kubernetes.io/instance: istio-system
+      app.kubernetes.io/managed-by: maistra-istio-operator
+      app.kubernetes.io/name: istio-discovery
+      app.kubernetes.io/part-of: istio
+      app.kubernetes.io/version: 2.5.1-1-2
+      istio: pilot
+      istio.io/rev: basic
+      maistra-version: 2.4.7
+      maistra.io/owner: istio-system
+      maistra.io/owner-name: basic
+      release: istio
+    managedFields:
+    - apiVersion: apps/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:kubectl.kubernetes.io/last-applied-configuration: {}
+            f:maistra.io/mesh-generation: {}
+          f:labels:
+            .: {}
+            f:app: {}
+            f:app.kubernetes.io/component: {}
+            f:app.kubernetes.io/instance: {}
+            f:app.kubernetes.io/managed-by: {}
+            f:app.kubernetes.io/name: {}
+            f:app.kubernetes.io/part-of: {}
+            f:app.kubernetes.io/version: {}
+            f:istio: {}
+            f:istio.io/rev: {}
+            f:maistra-version: {}
+            f:maistra.io/owner: {}
+            f:maistra.io/owner-name: {}
+            f:release: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"b5faf99f-8aeb-4477-aa3e-3f2e4796ec3c"}: {}
+        f:spec:
+          f:progressDeadlineSeconds: {}
+          f:replicas: {}
+          f:revisionHistoryLimit: {}
+          f:selector: {}
+          f:strategy:
+            f:rollingUpdate:
+              .: {}
+              f:maxSurge: {}
+              f:maxUnavailable: {}
+            f:type: {}
+          f:template:
+            f:metadata:
+              f:annotations:
+                .: {}
+                f:prometheus.io/port: {}
+                f:prometheus.io/scrape: {}
+                f:sidecar.istio.io/inject: {}
+              f:labels:
+                .: {}
+                f:app: {}
+                f:istio: {}
+                f:istio.io/rev: {}
+                f:maistra-control-plane: {}
+                f:sidecar.istio.io/inject: {}
+            f:spec:
+              f:affinity:
+                .: {}
+                f:nodeAffinity:
+                  .: {}
+                  f:preferredDuringSchedulingIgnoredDuringExecution: {}
+                  f:requiredDuringSchedulingIgnoredDuringExecution: {}
+              f:containers:
+                k:{"name":"discovery"}:
+                  .: {}
+                  f:args: {}
+                  f:env:
+                    .: {}
+                    k:{"name":"CLUSTER_ID"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"ENABLE_IOR"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"INJECTION_WEBHOOK_CONFIG_NAME"}:
+                      .: {}
+                      f:name: {}
+                    k:{"name":"ISTIOD_ADDR"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"JWT_POLICY"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"KUBECONFIG"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"PILOT_CA_CERT_CONFIG_MAP_NAME"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"PILOT_CERT_PROVIDER"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"PILOT_ENABLE_ANALYSIS"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"PILOT_ENABLE_FEDERATION"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"PILOT_ENABLE_GATEWAY_API"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"PILOT_ENABLE_GATEWAY_API_DEPLOYMENT_CONTROLLER"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"PILOT_ENABLE_GATEWAY_API_STATUS"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"PILOT_ENABLE_PROTOCOL_SNIFFING_FOR_INBOUND"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"PILOT_ENABLE_PROTOCOL_SNIFFING_FOR_OUTBOUND"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"PILOT_ENABLE_STATUS"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"PILOT_TRACE_SAMPLING"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"POD_NAME"}:
+                      .: {}
+                      f:name: {}
+                      f:valueFrom:
+                        .: {}
+                        f:fieldRef: {}
+                    k:{"name":"POD_NAMESPACE"}:
+                      .: {}
+                      f:name: {}
+                      f:valueFrom:
+                        .: {}
+                        f:fieldRef: {}
+                    k:{"name":"PRIORITIZED_LEADER_ELECTION"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"REVISION"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"SERVICE_ACCOUNT"}:
+                      .: {}
+                      f:name: {}
+                      f:valueFrom:
+                        .: {}
+                        f:fieldRef: {}
+                    k:{"name":"VALIDATION_WEBHOOK_CONFIG_NAME"}:
+                      .: {}
+                      f:name: {}
+                  f:image: {}
+                  f:imagePullPolicy: {}
+                  f:name: {}
+                  f:ports:
+                    .: {}
+                    k:{"containerPort":8080,"protocol":"TCP"}:
+                      .: {}
+                      f:containerPort: {}
+                      f:protocol: {}
+                    k:{"containerPort":8188,"protocol":"TCP"}:
+                      .: {}
+                      f:containerPort: {}
+                      f:protocol: {}
+                    k:{"containerPort":15010,"protocol":"TCP"}:
+                      .: {}
+                      f:containerPort: {}
+                      f:protocol: {}
+                    k:{"containerPort":15017,"protocol":"TCP"}:
+                      .: {}
+                      f:containerPort: {}
+                      f:name: {}
+                      f:protocol: {}
+                  f:readinessProbe:
+                    .: {}
+                    f:failureThreshold: {}
+                    f:httpGet:
+                      .: {}
+                      f:path: {}
+                      f:port: {}
+                      f:scheme: {}
+                    f:initialDelaySeconds: {}
+                    f:periodSeconds: {}
+                    f:successThreshold: {}
+                    f:timeoutSeconds: {}
+                  f:resources:
+                    .: {}
+                    f:requests:
+                      .: {}
+                      f:cpu: {}
+                      f:memory: {}
+                  f:securityContext:
+                    .: {}
+                    f:capabilities:
+                      .: {}
+                      f:drop: {}
+                  f:terminationMessagePath: {}
+                  f:terminationMessagePolicy: {}
+                  f:volumeMounts:
+                    .: {}
+                    k:{"mountPath":"/etc/cacerts"}:
+                      .: {}
+                      f:mountPath: {}
+                      f:name: {}
+                      f:readOnly: {}
+                    k:{"mountPath":"/var/run/secrets/istio-dns"}:
+                      .: {}
+                      f:mountPath: {}
+                      f:name: {}
+                    k:{"mountPath":"/var/run/secrets/istiod/ca"}:
+                      .: {}
+                      f:mountPath: {}
+                      f:name: {}
+                      f:readOnly: {}
+                    k:{"mountPath":"/var/run/secrets/istiod/tls"}:
+                      .: {}
+                      f:mountPath: {}
+                      f:name: {}
+                      f:readOnly: {}
+                    k:{"mountPath":"/var/run/secrets/remote"}:
+                      .: {}
+                      f:mountPath: {}
+                      f:name: {}
+                      f:readOnly: {}
+                  f:workingDir: {}
+              f:dnsPolicy: {}
+              f:restartPolicy: {}
+              f:schedulerName: {}
+              f:securityContext: {}
+              f:serviceAccount: {}
+              f:serviceAccountName: {}
+              f:terminationGracePeriodSeconds: {}
+              f:volumes:
+                .: {}
+                k:{"name":"cacerts"}:
+                  .: {}
+                  f:name: {}
+                  f:secret:
+                    .: {}
+                    f:defaultMode: {}
+                    f:optional: {}
+                    f:secretName: {}
+                k:{"name":"istio-csr-ca-configmap"}:
+                  .: {}
+                  f:configMap:
+                    .: {}
+                    f:defaultMode: {}
+                    f:name: {}
+                    f:optional: {}
+                  f:name: {}
+                k:{"name":"istio-csr-dns-cert"}:
+                  .: {}
+                  f:name: {}
+                  f:secret:
+                    .: {}
+                    f:defaultMode: {}
+                    f:optional: {}
+                    f:secretName: {}
+                k:{"name":"istio-kubeconfig"}:
+                  .: {}
+                  f:name: {}
+                  f:secret:
+                    .: {}
+                    f:defaultMode: {}
+                    f:optional: {}
+                    f:secretName: {}
+                k:{"name":"local-certs"}:
+                  .: {}
+                  f:emptyDir:
+                    .: {}
+                    f:medium: {}
+                  f:name: {}
+      manager: istio-operator
+      operation: Update
+      time: "2024-06-05T10:45:40Z"
+    - apiVersion: apps/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            f:deployment.kubernetes.io/revision: {}
+        f:status:
+          f:availableReplicas: {}
+          f:conditions:
+            .: {}
+            k:{"type":"Available"}:
+              .: {}
+              f:lastTransitionTime: {}
+              f:lastUpdateTime: {}
+              f:message: {}
+              f:reason: {}
+              f:status: {}
+              f:type: {}
+            k:{"type":"Progressing"}:
+              .: {}
+              f:lastTransitionTime: {}
+              f:lastUpdateTime: {}
+              f:message: {}
+              f:reason: {}
+              f:status: {}
+              f:type: {}
+          f:observedGeneration: {}
+          f:readyReplicas: {}
+          f:replicas: {}
+          f:updatedReplicas: {}
+      manager: kube-controller-manager
+      operation: Update
+      subresource: status
+      time: "2024-06-05T10:45:54Z"
+    name: istiod-basic
+    namespace: istio-system
+    ownerReferences:
+    - apiVersion: maistra.io/v2
+      blockOwnerDeletion: true
+      controller: true
+      kind: ServiceMeshControlPlane
+      name: basic
+      uid: b5faf99f-8aeb-4477-aa3e-3f2e4796ec3c
+    resourceVersion: "35311"
+    uid: 68743491-be3a-4252-bf0f-ef7b9c7d033d
+  spec:
+    progressDeadlineSeconds: 600
+    replicas: 1
+    revisionHistoryLimit: 10
+    selector:
+      matchLabels:
+        app: istiod
+        istio.io/rev: basic
+    strategy:
+      rollingUpdate:
+        maxSurge: 100%
+        maxUnavailable: 25%
+      type: RollingUpdate
+    template:
+      metadata:
+        annotations:
+          prometheus.io/port: "15014"
+          prometheus.io/scrape: "true"
+          sidecar.istio.io/inject: "false"
+        creationTimestamp: null
+        labels:
+          app: istiod
+          istio: istiod
+          istio.io/rev: basic
+          maistra-control-plane: istio-system
+          sidecar.istio.io/inject: "false"
+      spec:
+        affinity:
+          nodeAffinity:
+            preferredDuringSchedulingIgnoredDuringExecution:
+            - preference:
+                matchExpressions:
+                - key: kubernetes.io/arch
+                  operator: In
+                  values:
+                  - amd64
+              weight: 2
+            - preference:
+                matchExpressions:
+                - key: kubernetes.io/arch
+                  operator: In
+                  values:
+                  - arm64
+              weight: 2
+            - preference:
+                matchExpressions:
+                - key: kubernetes.io/arch
+                  operator: In
+                  values:
+                  - ppc64le
+              weight: 2
+            - preference:
+                matchExpressions:
+                - key: kubernetes.io/arch
+                  operator: In
+                  values:
+                  - s390x
+              weight: 2
+            requiredDuringSchedulingIgnoredDuringExecution:
+              nodeSelectorTerms:
+              - matchExpressions:
+                - key: kubernetes.io/arch
+                  operator: In
+                  values:
+                  - amd64
+                  - arm64
+                  - ppc64le
+                  - s390x
+        containers:
+        - args:
+          - discovery
+          - --memberRollName=default
+          - --enableNodeAccess=false
+          - --enableCRDScan=false
+          - --enableIngressClassName=false
+          - --monitoringAddr=:15014
+          - --log_output_level=default:warn
+          - --domain
+          - cluster.local
+          - --keepaliveMaxServerConnectionAge
+          - 30m
+          env:
+          - name: ENABLE_IOR
+            value: "true"
+          - name: PILOT_CA_CERT_CONFIG_MAP_NAME
+            value: istio-ca-root-cert
+          - name: PILOT_ENABLE_GATEWAY_API
+            value: "false"
+          - name: PILOT_ENABLE_GATEWAY_API_STATUS
+            value: "false"
+          - name: PILOT_ENABLE_GATEWAY_API_DEPLOYMENT_CONTROLLER
+            value: "false"
+          - name: PRIORITIZED_LEADER_ELECTION
+            value: "false"
+          - name: VALIDATION_WEBHOOK_CONFIG_NAME
+          - name: INJECTION_WEBHOOK_CONFIG_NAME
+          - name: REVISION
+            value: basic
+          - name: JWT_POLICY
+            value: first-party-jwt
+          - name: PILOT_CERT_PROVIDER
+            value: istiod
+          - name: POD_NAME
+            valueFrom:
+              fieldRef:
+                apiVersion: v1
+                fieldPath: metadata.name
+          - name: POD_NAMESPACE
+            valueFrom:
+              fieldRef:
+                apiVersion: v1
+                fieldPath: metadata.namespace
+          - name: SERVICE_ACCOUNT
+            valueFrom:
+              fieldRef:
+                apiVersion: v1
+                fieldPath: spec.serviceAccountName
+          - name: KUBECONFIG
+            value: /var/run/secrets/remote/config
+          - name: PILOT_ENABLE_FEDERATION
+            value: "true"
+          - name: PILOT_TRACE_SAMPLING
+            value: "1"
+          - name: PILOT_ENABLE_PROTOCOL_SNIFFING_FOR_OUTBOUND
+            value: "false"
+          - name: PILOT_ENABLE_PROTOCOL_SNIFFING_FOR_INBOUND
+            value: "false"
+          - name: ISTIOD_ADDR
+            value: istiod-basic.istio-system.svc:15012
+          - name: PILOT_ENABLE_STATUS
+            value: "false"
+          - name: PILOT_ENABLE_ANALYSIS
+            value: "false"
+          - name: CLUSTER_ID
+            value: Kubernetes
+          image: registry.redhat.io/openshift-service-mesh/pilot-rhel8@sha256:1a8882f482044b38e6d75e322db6d6b80d21525f56fdd08f7f2ee9a58897e742
+          imagePullPolicy: IfNotPresent
+          name: discovery
+          ports:
+          - containerPort: 8080
+            protocol: TCP
+          - containerPort: 15010
+            protocol: TCP
+          - containerPort: 15017
+            name: webhook
+            protocol: TCP
+          - containerPort: 8188
+            protocol: TCP
+          readinessProbe:
+            failureThreshold: 3
+            httpGet:
+              path: /ready
+              port: 8080
+              scheme: HTTP
+            initialDelaySeconds: 1
+            periodSeconds: 3
+            successThreshold: 1
+            timeoutSeconds: 5
+          resources:
+            requests:
+              cpu: 10m
+              memory: 128Mi
+          securityContext:
+            capabilities:
+              drop:
+              - ALL
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+          volumeMounts:
+          - mountPath: /var/run/secrets/istio-dns
+            name: local-certs
+          - mountPath: /etc/cacerts
+            name: cacerts
+            readOnly: true
+          - mountPath: /var/run/secrets/remote
+            name: istio-kubeconfig
+            readOnly: true
+          - mountPath: /var/run/secrets/istiod/tls
+            name: istio-csr-dns-cert
+            readOnly: true
+          - mountPath: /var/run/secrets/istiod/ca
+            name: istio-csr-ca-configmap
+            readOnly: true
+          workingDir: /
+        dnsPolicy: ClusterFirst
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        securityContext: {}
+        serviceAccount: istiod-basic
+        serviceAccountName: istiod-basic
+        terminationGracePeriodSeconds: 30
+        volumes:
+        - emptyDir:
+            medium: Memory
+          name: local-certs
+        - name: cacerts
+          secret:
+            defaultMode: 420
+            optional: true
+            secretName: cacerts
+        - name: istio-kubeconfig
+          secret:
+            defaultMode: 420
+            optional: true
+            secretName: istio-kubeconfig
+        - name: istio-csr-dns-cert
+          secret:
+            defaultMode: 420
+            optional: true
+            secretName: istiod-tls
+        - configMap:
+            defaultMode: 420
+            name: istio-ca-root-cert
+            optional: true
+          name: istio-csr-ca-configmap
+  status:
+    availableReplicas: 1
+    conditions:
+    - lastTransitionTime: "2024-06-05T10:45:54Z"
+      lastUpdateTime: "2024-06-05T10:45:54Z"
+      message: Deployment has minimum availability.
+      reason: MinimumReplicasAvailable
+      status: "True"
+      type: Available
+    - lastTransitionTime: "2024-06-05T10:45:40Z"
+      lastUpdateTime: "2024-06-05T10:45:54Z"
+      message: ReplicaSet "istiod-basic-d6d4fdc9f" has successfully progressed.
+      reason: NewReplicaSetAvailable
+      status: "True"
+      type: Progressing
+    observedGeneration: 1
+    readyReplicas: 1
+    replicas: 1
+    updatedReplicas: 1
+kind: DeploymentList
+metadata:
+  resourceVersion: "54666"

@@ -1,0 +1,74 @@
+---
+apiVersion: route.openshift.io/v1
+items:
+- apiVersion: route.openshift.io/v1
+  kind: Route
+  metadata:
+    annotations:
+      openshift.io/host.generated: "true"
+      serving.knative.openshift.io/ownerName: knative-serving
+      serving.knative.openshift.io/ownerNamespace: knative-serving
+    creationTimestamp: "2024-06-05T10:55:46Z"
+    managedFields:
+    - apiVersion: route.openshift.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          f:ingress: {}
+      manager: openshift-router
+      operation: Update
+      subresource: status
+      time: "2024-06-05T10:55:46Z"
+    - apiVersion: route.openshift.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:serving.knative.openshift.io/ownerName: {}
+            f:serving.knative.openshift.io/ownerNamespace: {}
+        f:spec:
+          f:port:
+            .: {}
+            f:targetPort: {}
+          f:tls:
+            .: {}
+            f:insecureEdgeTerminationPolicy: {}
+            f:termination: {}
+          f:to:
+            f:kind: {}
+            f:name: {}
+            f:weight: {}
+          f:wildcardPolicy: {}
+      manager: operator
+      operation: Update
+      time: "2024-06-05T10:55:46Z"
+    name: kn
+    namespace: openshift-serverless
+    resourceVersion: "40909"
+    uid: 4a5399fe-0d66-45d7-b20a-f7502a6b3a14
+  spec:
+    host: kn-openshift-serverless.apps.ci-ln-bxslict-76ef8.origin-ci-int-aws.dev.rhcloud.com
+    port:
+      targetPort: http-cli
+    tls:
+      insecureEdgeTerminationPolicy: Redirect
+      termination: edge
+    to:
+      kind: Service
+      name: knative-openshift-metrics-3
+      weight: 100
+    wildcardPolicy: None
+  status:
+    ingress:
+    - conditions:
+      - lastTransitionTime: "2024-06-05T10:55:46Z"
+        status: "True"
+        type: Admitted
+      host: kn-openshift-serverless.apps.ci-ln-bxslict-76ef8.origin-ci-int-aws.dev.rhcloud.com
+      routerCanonicalHostname: router-default.apps.ci-ln-bxslict-76ef8.origin-ci-int-aws.dev.rhcloud.com
+      routerName: default
+      wildcardPolicy: None
+kind: RouteList
+metadata:
+  resourceVersion: "54057"

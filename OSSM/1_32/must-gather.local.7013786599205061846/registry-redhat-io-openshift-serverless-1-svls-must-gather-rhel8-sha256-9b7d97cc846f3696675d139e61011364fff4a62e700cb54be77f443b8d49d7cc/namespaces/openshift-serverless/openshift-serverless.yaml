@@ -1,0 +1,83 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"v1","kind":"Namespace","metadata":{"annotations":{},"name":"openshift-serverless"}}
+    openshift.io/sa.scc.mcs: s0:c29,c14
+    openshift.io/sa.scc.supplemental-groups: 1000840000/10000
+    openshift.io/sa.scc.uid-range: 1000840000/10000
+  creationTimestamp: "2024-06-05T10:53:43Z"
+  labels:
+    kubernetes.io/metadata.name: openshift-serverless
+    olm.operatorgroup.uid/ac355c9b-99f3-44cf-bc5b-78e9f9c51987: ""
+    openshift.io/cluster-monitoring: "true"
+    pod-security.kubernetes.io/audit: restricted
+    pod-security.kubernetes.io/audit-version: v1.24
+    pod-security.kubernetes.io/warn: restricted
+    pod-security.kubernetes.io/warn-version: v1.24
+    security.openshift.io/scc.podSecurityLabelSync: "true"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:labels:
+          f:pod-security.kubernetes.io/audit: {}
+          f:pod-security.kubernetes.io/audit-version: {}
+          f:pod-security.kubernetes.io/warn: {}
+          f:pod-security.kubernetes.io/warn-version: {}
+    manager: pod-security-admission-label-synchronization-controller
+    operation: Apply
+    time: "2024-06-05T10:54:04Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:openshift.io/sa.scc.mcs: {}
+          f:openshift.io/sa.scc.supplemental-groups: {}
+          f:openshift.io/sa.scc.uid-range: {}
+    manager: cluster-policy-controller
+    operation: Update
+    time: "2024-06-05T10:53:43Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:kubectl.kubernetes.io/last-applied-configuration: {}
+        f:labels:
+          .: {}
+          f:kubernetes.io/metadata.name: {}
+    manager: kubectl-client-side-apply
+    operation: Update
+    time: "2024-06-05T10:53:43Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:labels:
+          f:openshift.io/cluster-monitoring: {}
+    manager: operator
+    operation: Update
+    time: "2024-06-05T10:54:28Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:labels:
+          f:olm.operatorgroup.uid/ac355c9b-99f3-44cf-bc5b-78e9f9c51987: {}
+          f:security.openshift.io/scc.podSecurityLabelSync: {}
+    manager: olm
+    operation: Update
+    time: "2024-06-05T10:58:11Z"
+  name: openshift-serverless
+  resourceVersion: "43152"
+  uid: d3f67753-a087-469e-951e-251aec53fe45
+spec:
+  finalizers:
+  - kubernetes
+status:
+  phase: Active

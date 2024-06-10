@@ -1,0 +1,33 @@
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  annotations:
+    openshift.io/description: Allows builds in this namespace to push images to this
+      namespace.  It is auto-managed by a controller; remove subjects to disable.
+  creationTimestamp: "2024-06-05T10:46:24Z"
+  managedFields:
+  - apiVersion: rbac.authorization.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:openshift.io/description: {}
+      f:roleRef: {}
+      f:subjects: {}
+    manager: openshift-controller-manager
+    operation: Update
+    time: "2024-06-05T10:46:24Z"
+  name: system:image-builders
+  namespace: knative-eventing
+  resourceVersion: "35900"
+  uid: 6f876d75-6fbc-49ad-b4b8-c1a0b6bb1dd9
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: system:image-builder
+subjects:
+- kind: ServiceAccount
+  name: builder
+  namespace: knative-eventing

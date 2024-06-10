@@ -1,0 +1,541 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    alm-examples: |-
+      [
+        {
+          "apiVersion": "kiali.io/v1alpha1",
+          "kind": "Kiali",
+          "metadata": {
+            "name": "kiali"
+          },
+          "spec": {
+            "version": "default",
+            "istio_namespace": "istio-system",
+            "deployment": {
+              "logger": {
+                "log_level": "info"
+              },
+              "view_only_mode": false
+            }
+          }
+        },
+        {
+          "apiVersion": "kiali.io/v1alpha1",
+          "kind": "OSSMConsole",
+          "metadata": {
+            "name": "ossmconsole"
+          },
+          "spec": {
+            "version": "default",
+            "kiali": {
+              "serviceName": "",
+              "serviceNamespace": ""
+            }
+          }
+        }
+      ]
+    capabilities: Deep Insights
+    categories: Monitoring,Logging & Tracing
+    certified: "false"
+    containerImage: registry.redhat.io/openshift-service-mesh/kiali-rhel8-operator@sha256:efddc0d03a66c1c076b805f93699e41266f0306d781c88f5bc2cae11a544fbc8
+    createdAt: "2024-04-19T13:18:27Z"
+    description: This productized operator provides Kiali and OSSMC. Kiali is the
+      Istio observability and management Console. OSSMC is the OpenShift Service Mesh
+      Console plugin, powered by Kiali.
+    features.operators.openshift.io/cnf: "false"
+    features.operators.openshift.io/cni: "false"
+    features.operators.openshift.io/csi: "false"
+    features.operators.openshift.io/disconnected: "true"
+    features.operators.openshift.io/fips-compliant: "true"
+    features.operators.openshift.io/proxy-aware: "false"
+    features.operators.openshift.io/tls-profiles: "false"
+    features.operators.openshift.io/token-auth-aws: "false"
+    features.operators.openshift.io/token-auth-azure: "false"
+    features.operators.openshift.io/token-auth-gcp: "false"
+    k8s.ovn.org/pod-networks: '{"default":{"ip_addresses":["10.128.2.17/23"],"mac_address":"0a:58:0a:80:02:11","gateway_ips":["10.128.2.1"],"routes":[{"dest":"10.128.0.0/14","nextHop":"10.128.2.1"},{"dest":"172.30.0.0/16","nextHop":"10.128.2.1"},{"dest":"100.64.0.0/16","nextHop":"10.128.2.1"}],"ip_address":"10.128.2.17/23","gateway_ip":"10.128.2.1"}}'
+    k8s.v1.cni.cncf.io/network-status: |-
+      [{
+          "name": "ovn-kubernetes",
+          "interface": "eth0",
+          "ips": [
+              "10.128.2.17"
+          ],
+          "mac": "0a:58:0a:80:02:11",
+          "default": true,
+          "dns": {}
+      }]
+    olm.operatorGroup: global-operators
+    olm.operatorNamespace: openshift-operators
+    olm.skipRange: '>=1.0.0 <1.73.7'
+    olm.targetNamespaces: ""
+    openshift.io/scc: restricted-v2
+    operatorframework.io/properties: '{"properties":[{"type":"olm.gvk","value":{"group":"kiali.io","kind":"Kiali","version":"v1alpha1"}},{"type":"olm.gvk","value":{"group":"kiali.io","kind":"OSSMConsole","version":"v1alpha1"}},{"type":"olm.package","value":{"packageName":"kiali-ossm","version":"1.73.7"}}]}'
+    operators.openshift.io/infrastructure-features: '["disconnected", "fips"]'
+    operators.openshift.io/valid-subscription: '["OpenShift Container Platform", "OpenShift
+      Platform Plus"]'
+    prometheus.io/path: /metrics
+    prometheus.io/port: "8080"
+    prometheus.io/scrape: "true"
+    repository: https://github.com/kiali/kiali
+    seccomp.security.alpha.kubernetes.io/pod: runtime/default
+    support: Red Hat
+  creationTimestamp: "2024-06-05T10:45:00Z"
+  generateName: kiali-operator-6c74649b84-
+  labels:
+    app: kiali-operator
+    app.kubernetes.io/name: kiali-operator
+    app.kubernetes.io/part-of: kiali-operator
+    app.kubernetes.io/version: v1.73.7
+    name: kiali-operator
+    pod-template-hash: 6c74649b84
+    version: v1.73.7
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.ovn.org/pod-networks: {}
+    manager: ip-10-0-91-247
+    operation: Update
+    subresource: status
+    time: "2024-06-05T10:45:00Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:alm-examples: {}
+          f:capabilities: {}
+          f:categories: {}
+          f:certified: {}
+          f:containerImage: {}
+          f:createdAt: {}
+          f:description: {}
+          f:features.operators.openshift.io/cnf: {}
+          f:features.operators.openshift.io/cni: {}
+          f:features.operators.openshift.io/csi: {}
+          f:features.operators.openshift.io/disconnected: {}
+          f:features.operators.openshift.io/fips-compliant: {}
+          f:features.operators.openshift.io/proxy-aware: {}
+          f:features.operators.openshift.io/tls-profiles: {}
+          f:features.operators.openshift.io/token-auth-aws: {}
+          f:features.operators.openshift.io/token-auth-azure: {}
+          f:features.operators.openshift.io/token-auth-gcp: {}
+          f:olm.operatorGroup: {}
+          f:olm.operatorNamespace: {}
+          f:olm.skipRange: {}
+          f:olm.targetNamespaces: {}
+          f:operatorframework.io/properties: {}
+          f:operators.openshift.io/infrastructure-features: {}
+          f:operators.openshift.io/valid-subscription: {}
+          f:prometheus.io/path: {}
+          f:prometheus.io/port: {}
+          f:prometheus.io/scrape: {}
+          f:repository: {}
+          f:support: {}
+        f:generateName: {}
+        f:labels:
+          .: {}
+          f:app: {}
+          f:app.kubernetes.io/name: {}
+          f:app.kubernetes.io/part-of: {}
+          f:app.kubernetes.io/version: {}
+          f:name: {}
+          f:pod-template-hash: {}
+          f:version: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"51b65547-eee9-43da-a4c5-613843a654a0"}: {}
+      f:spec:
+        f:containers:
+          k:{"name":"operator"}:
+            .: {}
+            f:args: {}
+            f:env:
+              .: {}
+              k:{"name":"ACCESSIBLE_NAMESPACES_LABEL"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"ALLOW_AD_HOC_KIALI_IMAGE"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"ALLOW_AD_HOC_KIALI_NAMESPACE"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"ALLOW_AD_HOC_OSSMCONSOLE_IMAGE"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"ALLOW_ALL_ACCESSIBLE_NAMESPACES"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"ALLOW_SECURITY_CONTEXT_OVERRIDE"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"ANSIBLE_CONFIG"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"ANSIBLE_DEBUG_LOGS"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"ANSIBLE_VERBOSITY_KIALI_KIALI_IO"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"ANSIBLE_VERBOSITY_OSSMCONSOLE_KIALI_IO"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"OPERATOR_CONDITION_NAME"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"POD_NAME"}:
+                .: {}
+                f:name: {}
+                f:valueFrom:
+                  .: {}
+                  f:fieldRef: {}
+              k:{"name":"POD_NAMESPACE"}:
+                .: {}
+                f:name: {}
+                f:valueFrom:
+                  .: {}
+                  f:fieldRef: {}
+              k:{"name":"PROFILE_TASKS_TASK_OUTPUT_LIMIT"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"RELATED_IMAGE_kiali_default"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"RELATED_IMAGE_kiali_v1_48"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"RELATED_IMAGE_kiali_v1_57"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"RELATED_IMAGE_kiali_v1_65"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"RELATED_IMAGE_kiali_v1_73"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"RELATED_IMAGE_ossmconsole_default"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"RELATED_IMAGE_ossmconsole_v1_73"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"WATCH_NAMESPACE"}:
+                .: {}
+                f:name: {}
+                f:valueFrom:
+                  .: {}
+                  f:fieldRef: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:name: {}
+            f:ports:
+              .: {}
+              k:{"containerPort":8080,"protocol":"TCP"}:
+                .: {}
+                f:containerPort: {}
+                f:name: {}
+                f:protocol: {}
+            f:resources:
+              .: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:securityContext:
+              .: {}
+              f:allowPrivilegeEscalation: {}
+              f:capabilities:
+                .: {}
+                f:drop: {}
+              f:privileged: {}
+              f:runAsNonRoot: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/tmp/ansible-operator/runner"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+        f:dnsPolicy: {}
+        f:enableServiceLinks: {}
+        f:restartPolicy: {}
+        f:schedulerName: {}
+        f:securityContext: {}
+        f:serviceAccount: {}
+        f:serviceAccountName: {}
+        f:terminationGracePeriodSeconds: {}
+        f:volumes:
+          .: {}
+          k:{"name":"runner"}:
+            .: {}
+            f:emptyDir: {}
+            f:name: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2024-06-05T10:45:00Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.v1.cni.cncf.io/network-status: {}
+    manager: multus-daemon
+    operation: Update
+    subresource: status
+    time: "2024-06-05T10:45:00Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"ContainersReady"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Initialized"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Ready"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+        f:containerStatuses: {}
+        f:hostIP: {}
+        f:phase: {}
+        f:podIP: {}
+        f:podIPs:
+          .: {}
+          k:{"ip":"10.128.2.17"}:
+            .: {}
+            f:ip: {}
+        f:startTime: {}
+    manager: kubelet
+    operation: Update
+    subresource: status
+    time: "2024-06-05T10:45:16Z"
+  name: kiali-operator-6c74649b84-hdnp4
+  namespace: openshift-operators
+  ownerReferences:
+  - apiVersion: apps/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: ReplicaSet
+    name: kiali-operator-6c74649b84
+    uid: 51b65547-eee9-43da-a4c5-613843a654a0
+  resourceVersion: "34296"
+  uid: bfa72d85-9f5f-4208-b617-d1be4016a091
+spec:
+  containers:
+  - args:
+    - --zap-log-level=info
+    - --leader-election-id=kiali-operator
+    - --watches-file=./watches-os.yaml
+    env:
+    - name: WATCH_NAMESPACE
+      valueFrom:
+        fieldRef:
+          apiVersion: v1
+          fieldPath: metadata.annotations['olm.targetNamespaces']
+    - name: POD_NAME
+      valueFrom:
+        fieldRef:
+          apiVersion: v1
+          fieldPath: metadata.name
+    - name: POD_NAMESPACE
+      valueFrom:
+        fieldRef:
+          apiVersion: v1
+          fieldPath: metadata.namespace
+    - name: ALLOW_AD_HOC_KIALI_NAMESPACE
+      value: "false"
+    - name: ALLOW_AD_HOC_KIALI_IMAGE
+      value: "false"
+    - name: ALLOW_AD_HOC_OSSMCONSOLE_IMAGE
+      value: "false"
+    - name: ALLOW_SECURITY_CONTEXT_OVERRIDE
+      value: "false"
+    - name: ALLOW_ALL_ACCESSIBLE_NAMESPACES
+      value: "true"
+    - name: ACCESSIBLE_NAMESPACES_LABEL
+      value: maistra.io/member-of
+    - name: PROFILE_TASKS_TASK_OUTPUT_LIMIT
+      value: "100"
+    - name: ANSIBLE_DEBUG_LOGS
+      value: "True"
+    - name: ANSIBLE_VERBOSITY_KIALI_KIALI_IO
+      value: "1"
+    - name: ANSIBLE_VERBOSITY_OSSMCONSOLE_KIALI_IO
+      value: "1"
+    - name: ANSIBLE_CONFIG
+      value: /etc/ansible/ansible.cfg
+    - name: RELATED_IMAGE_kiali_default
+      value: registry.redhat.io/openshift-service-mesh/kiali-rhel8@sha256:ddbac1fbac65d603795fcb11546bcfee6e7eb3f94a0707071aa33c5dad246a54
+    - name: RELATED_IMAGE_kiali_v1_73
+      value: registry.redhat.io/openshift-service-mesh/kiali-rhel8@sha256:ddbac1fbac65d603795fcb11546bcfee6e7eb3f94a0707071aa33c5dad246a54
+    - name: RELATED_IMAGE_kiali_v1_65
+      value: registry.redhat.io/openshift-service-mesh/kiali-rhel8@sha256:c3054340d3d3dd214069d5d5cfbfa9e7873d2226f2b4c3157edb0ccd0777b3ad
+    - name: RELATED_IMAGE_kiali_v1_57
+      value: registry.redhat.io/openshift-service-mesh/kiali-rhel8@sha256:30da80779f1b43e7e331c902e4319be43fec52467302ba372af7c3b07256bcf4
+    - name: RELATED_IMAGE_kiali_v1_48
+      value: registry.redhat.io/openshift-service-mesh/kiali-rhel8@sha256:7ef41fb8e5ce2b394d67d8dd06bb23f49e249e0c4371cc49659cf2049ae8ad9a
+    - name: RELATED_IMAGE_ossmconsole_default
+      value: registry.redhat.io/openshift-service-mesh/kiali-ossmc-rhel8@sha256:e1038b249f7776e8b50e044a6ac235d1475e7403094f79555541a2a2e87db2e4
+    - name: RELATED_IMAGE_ossmconsole_v1_73
+      value: registry.redhat.io/openshift-service-mesh/kiali-ossmc-rhel8@sha256:e1038b249f7776e8b50e044a6ac235d1475e7403094f79555541a2a2e87db2e4
+    - name: OPERATOR_CONDITION_NAME
+      value: kiali-operator.v1.73.7
+    image: registry.redhat.io/openshift-service-mesh/kiali-rhel8-operator@sha256:efddc0d03a66c1c076b805f93699e41266f0306d781c88f5bc2cae11a544fbc8
+    imagePullPolicy: IfNotPresent
+    name: operator
+    ports:
+    - containerPort: 8080
+      name: http-metrics
+      protocol: TCP
+    resources:
+      requests:
+        cpu: 10m
+        memory: 64Mi
+    securityContext:
+      allowPrivilegeEscalation: false
+      capabilities:
+        drop:
+        - ALL
+      privileged: false
+      runAsNonRoot: true
+      runAsUser: 1000420000
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /tmp/ansible-operator/runner
+      name: runner
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-5tdml
+      readOnly: true
+  dnsPolicy: ClusterFirst
+  enableServiceLinks: true
+  imagePullSecrets:
+  - name: kiali-operator-dockercfg-nzdc2
+  nodeName: ip-10-0-91-247.ec2.internal
+  preemptionPolicy: PreemptLowerPriority
+  priority: 0
+  restartPolicy: Always
+  schedulerName: default-scheduler
+  securityContext:
+    fsGroup: 1000420000
+    seLinuxOptions:
+      level: s0:c21,c0
+    seccompProfile:
+      type: RuntimeDefault
+  serviceAccount: kiali-operator
+  serviceAccountName: kiali-operator
+  terminationGracePeriodSeconds: 30
+  tolerations:
+  - effect: NoExecute
+    key: node.kubernetes.io/not-ready
+    operator: Exists
+    tolerationSeconds: 300
+  - effect: NoExecute
+    key: node.kubernetes.io/unreachable
+    operator: Exists
+    tolerationSeconds: 300
+  - effect: NoSchedule
+    key: node.kubernetes.io/memory-pressure
+    operator: Exists
+  volumes:
+  - emptyDir: {}
+    name: runner
+  - name: kube-api-access-5tdml
+    projected:
+      defaultMode: 420
+      sources:
+      - serviceAccountToken:
+          expirationSeconds: 3607
+          path: token
+      - configMap:
+          items:
+          - key: ca.crt
+            path: ca.crt
+          name: kube-root-ca.crt
+      - downwardAPI:
+          items:
+          - fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.namespace
+            path: namespace
+      - configMap:
+          items:
+          - key: service-ca.crt
+            path: service-ca.crt
+          name: openshift-service-ca.crt
+status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2024-06-05T10:45:00Z"
+    status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2024-06-05T10:45:16Z"
+    status: "True"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2024-06-05T10:45:16Z"
+    status: "True"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2024-06-05T10:45:00Z"
+    status: "True"
+    type: PodScheduled
+  containerStatuses:
+  - containerID: cri-o://8dd139a1d28246193d9c4f7bcc0b613a0e6a4c84c62ee5fb27620f7875bd83b2
+    image: registry.redhat.io/openshift-service-mesh/kiali-rhel8-operator@sha256:efddc0d03a66c1c076b805f93699e41266f0306d781c88f5bc2cae11a544fbc8
+    imageID: registry.redhat.io/openshift-service-mesh/kiali-rhel8-operator@sha256:4919abb410f858d91bb76654aa682a18ab9b87a6c410c5c437d2678afbbf14ee
+    lastState: {}
+    name: operator
+    ready: true
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2024-06-05T10:45:15Z"
+  hostIP: 10.0.91.247
+  phase: Running
+  podIP: 10.128.2.17
+  podIPs:
+  - ip: 10.128.2.17
+  qosClass: Burstable
+  startTime: "2024-06-05T10:45:00Z"

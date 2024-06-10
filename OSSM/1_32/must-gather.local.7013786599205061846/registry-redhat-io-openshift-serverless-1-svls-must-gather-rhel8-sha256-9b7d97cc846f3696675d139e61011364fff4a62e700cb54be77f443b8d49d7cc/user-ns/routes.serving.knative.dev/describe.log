@@ -1,0 +1,98 @@
+Name:         helloworld-go
+Namespace:    user-ns
+Labels:       serving.knative.dev/service=helloworld-go
+Annotations:  serving.knative.dev/creator: system:admin
+              serving.knative.dev/lastModifier: system:admin
+              serving.knative.openshift.io/enablePassthrough: true
+API Version:  serving.knative.dev/v1
+Kind:         Route
+Metadata:
+  Creation Timestamp:  2024-06-05T10:59:13Z
+  Finalizers:
+    routes.serving.knative.dev
+  Generation:  1
+  Managed Fields:
+    API Version:  serving.knative.dev/v1
+    Fields Type:  FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .:
+          f:serving.knative.dev/creator:
+          f:serving.knative.dev/lastModifier:
+          f:serving.knative.openshift.io/enablePassthrough:
+        f:finalizers:
+          .:
+          v:"routes.serving.knative.dev":
+        f:labels:
+          .:
+          f:serving.knative.dev/service:
+        f:ownerReferences:
+          .:
+          k:{"uid":"d30abd09-975d-4327-a440-ef03bb5a8d6e"}:
+      f:spec:
+        .:
+        f:traffic:
+    Manager:      controller
+    Operation:    Update
+    Time:         2024-06-05T10:59:13Z
+    API Version:  serving.knative.dev/v1
+    Fields Type:  FieldsV1
+    fieldsV1:
+      f:status:
+        .:
+        f:address:
+          .:
+          f:url:
+        f:conditions:
+        f:observedGeneration:
+        f:traffic:
+        f:url:
+    Manager:      controller
+    Operation:    Update
+    Subresource:  status
+    Time:         2024-06-05T10:59:20Z
+  Owner References:
+    API Version:           serving.knative.dev/v1
+    Block Owner Deletion:  true
+    Controller:            true
+    Kind:                  Service
+    Name:                  helloworld-go
+    UID:                   d30abd09-975d-4327-a440-ef03bb5a8d6e
+  Resource Version:        44056
+  UID:                     b11e4c8e-b322-4022-a8b8-00e0ad27c3e9
+Spec:
+  Traffic:
+    Configuration Name:  helloworld-go
+    Latest Revision:     true
+    Percent:             100
+Status:
+  Address:
+    URL:  http://helloworld-go.user-ns.svc.cluster.local
+  Conditions:
+    Last Transition Time:  2024-06-05T10:59:19Z
+    Status:                True
+    Type:                  AllTrafficAssigned
+    Last Transition Time:  2024-06-05T10:59:19Z
+    Message:               autoTLS is not enabled
+    Reason:                TLSNotEnabled
+    Status:                True
+    Type:                  CertificateProvisioned
+    Last Transition Time:  2024-06-05T10:59:20Z
+    Status:                True
+    Type:                  IngressReady
+    Last Transition Time:  2024-06-05T10:59:20Z
+    Status:                True
+    Type:                  Ready
+  Observed Generation:     1
+  Traffic:
+    Latest Revision:  true
+    Percent:          100
+    Revision Name:    helloworld-go-00001
+  URL:                https://helloworld-go-user-ns.apps.ci-ln-bxslict-76ef8.origin-ci-int-aws.dev.rhcloud.com
+Events:
+  Type    Reason           Age   From              Message
+  ----    ------           ----  ----              -------
+  Normal  FinalizerUpdate  17m   route-controller  Updated "helloworld-go" finalizers
+  Normal  Created          17m   route-controller  Created placeholder service "helloworld-go"
+  Normal  Created          17m   route-controller  Created Ingress "helloworld-go"

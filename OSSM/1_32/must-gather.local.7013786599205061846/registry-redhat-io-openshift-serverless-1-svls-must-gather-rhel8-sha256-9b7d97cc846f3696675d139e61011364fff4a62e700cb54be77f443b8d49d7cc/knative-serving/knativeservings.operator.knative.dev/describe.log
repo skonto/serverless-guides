@@ -1,0 +1,106 @@
+Name:         knative-serving
+Namespace:    knative-serving
+Labels:       <none>
+Annotations:  <none>
+API Version:  operator.knative.dev/v1beta1
+Kind:         KnativeServing
+Metadata:
+  Creation Timestamp:  2024-06-05T10:55:45Z
+  Finalizers:
+    knative-serving-openshift
+    knativeservings.operator.knative.dev
+  Generation:  1
+  Managed Fields:
+    API Version:  operator.knative.dev/v1beta1
+    Fields Type:  FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .:
+          f:kubectl.kubernetes.io/last-applied-configuration:
+      f:spec:
+        .:
+        f:deployments:
+        f:ingress:
+          .:
+          f:istio:
+            .:
+            f:enabled:
+    Manager:      kubectl-client-side-apply
+    Operation:    Update
+    Time:         2024-06-05T10:55:45Z
+    API Version:  operator.knative.dev/v1beta1
+    Fields Type:  FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:finalizers:
+          .:
+          v:"knative-serving-openshift":
+          v:"knativeservings.operator.knative.dev":
+    Manager:      operator
+    Operation:    Update
+    Time:         2024-06-05T10:55:45Z
+    API Version:  operator.knative.dev/v1beta1
+    Fields Type:  FieldsV1
+    fieldsV1:
+      f:status:
+        .:
+        f:conditions:
+        f:manifests:
+        f:observedGeneration:
+        f:version:
+    Manager:         operator
+    Operation:       Update
+    Subresource:     status
+    Time:            2024-06-05T10:56:28Z
+  Resource Version:  42195
+  UID:               af223c8b-7d90-440e-8659-7268e406b26c
+Spec:
+  Controller - Custom - Certs:
+    Name:  
+    Type:  
+  Deployments:
+    Annotations:
+      sidecar.istio.io/inject:                 true
+      sidecar.istio.io/rewriteAppHTTPProbers:  true
+    Name:                                      activator
+    Annotations:
+      sidecar.istio.io/inject:                 true
+      sidecar.istio.io/rewriteAppHTTPProbers:  true
+    Name:                                      autoscaler
+  Ingress:
+    Contour:
+      Enabled:  false
+    Istio:
+      Enabled:  true
+    Kourier:
+      Enabled:  false
+  Registry:
+Status:
+  Conditions:
+    Last Transition Time:  2024-06-05T10:56:00Z
+    Status:                True
+    Type:                  DependenciesInstalled
+    Last Transition Time:  2024-06-05T10:56:28Z
+    Status:                True
+    Type:                  DeploymentsAvailable
+    Last Transition Time:  2024-06-05T10:56:00Z
+    Status:                True
+    Type:                  InstallSucceeded
+    Last Transition Time:  2024-06-05T10:56:28Z
+    Status:                True
+    Type:                  Ready
+    Last Transition Time:  2024-06-05T10:55:45Z
+    Status:                True
+    Type:                  VersionMigrationEligible
+  Manifests:
+    /var/run/ko/knative-serving/1.11
+    /var/run/ko/ingress/1.11/istio
+  Observed Generation:  1
+  Version:              1.11
+Events:
+  Type     Reason                 Age   From                       Message
+  ----     ------                 ----  ----                       -------
+  Warning  FinalizerUpdateFailed  20m   knativeserving-controller  Failed to update finalizers for "knative-serving": Operation cannot be fulfilled on knativeservings.operator.knative.dev "knative-serving": the object has been modified; please apply your changes to the latest version and try again
+  Normal   FinalizerUpdate        20m   knativeserving-controller  Updated "knative-serving" finalizers
+  Warning  InternalError          20m   knativeserving-controller  failed to apply non rbac manifest: Internal error occurred: failed calling webhook "config.webhook.serving.knative.dev": failed to call webhook: Post "https://webhook.knative-serving.svc:443/config-validation?timeout=10s": no endpoints available for service "webhook"

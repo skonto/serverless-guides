@@ -1,0 +1,32 @@
+Name:         knative-prometheus-k8s
+Labels:       <none>
+Annotations:  manifestival: new
+PolicyRule:
+  Resources  Non-Resource URLs  Resource Names  Verbs
+  ---------  -----------------  --------------  -----
+  endpoints  []                 []              [get list watch]
+  pods       []                 []              [get list watch]
+  services   []                 []              [get list watch]
+
+
+Name:         knative-serving-activator
+Labels:       app.kubernetes.io/name=knative-serving
+              app.kubernetes.io/version=release-v1.11
+              serving.knative.dev/controller=true
+Annotations:  manifestival: new
+PolicyRule:
+  Resources   Non-Resource URLs  Resource Names           Verbs
+  ---------   -----------------  --------------           -----
+  configmaps  []                 []                       [get list watch]
+  secrets     []                 []                       [get list watch]
+  secrets     []                 [knative-serving-certs]  [get list watch]
+  secrets     []                 [routing-serving-certs]  [get list watch]
+
+
+Name:         openshift-serverless-view-serving-configmaps
+Labels:       <none>
+Annotations:  manifestival: new
+PolicyRule:
+  Resources   Non-Resource URLs  Resource Names       Verbs
+  ---------   -----------------  --------------       -----
+  configmaps  []                 [config-autoscaler]  [get list watch]

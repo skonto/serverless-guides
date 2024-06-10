@@ -1,0 +1,35 @@
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"rbac.authorization.k8s.io/v1","kind":"RoleBinding","metadata":{"name":"knative-prometheus-k8s","namespace":"knative-serving"},"roleRef":{"apiGroup":"rbac.authorization.k8s.io","kind":"Role","name":"knative-prometheus-k8s"},"subjects":[{"kind":"ServiceAccount","name":"prometheus-k8s","namespace":"openshift-monitoring"}]}
+    manifestival: new
+  creationTimestamp: "2024-06-05T10:55:46Z"
+  managedFields:
+  - apiVersion: rbac.authorization.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:kubectl.kubernetes.io/last-applied-configuration: {}
+          f:manifestival: {}
+      f:roleRef: {}
+      f:subjects: {}
+    manager: manifestival
+    operation: Update
+    time: "2024-06-05T10:56:03Z"
+  name: knative-prometheus-k8s
+  namespace: knative-serving
+  resourceVersion: "41602"
+  uid: aaec8f02-9780-4831-9b8f-45523b429f3c
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: knative-prometheus-k8s
+subjects:
+- kind: ServiceAccount
+  name: prometheus-k8s
+  namespace: openshift-monitoring

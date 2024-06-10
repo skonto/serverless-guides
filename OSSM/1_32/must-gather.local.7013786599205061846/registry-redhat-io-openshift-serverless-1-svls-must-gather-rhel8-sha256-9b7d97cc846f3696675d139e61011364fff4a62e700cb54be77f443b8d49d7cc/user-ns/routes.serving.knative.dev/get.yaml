@@ -1,0 +1,58 @@
+apiVersion: v1
+items:
+- apiVersion: serving.knative.dev/v1
+  kind: Route
+  metadata:
+    annotations:
+      serving.knative.dev/creator: system:admin
+      serving.knative.dev/lastModifier: system:admin
+      serving.knative.openshift.io/enablePassthrough: "true"
+    creationTimestamp: "2024-06-05T10:59:13Z"
+    finalizers:
+    - routes.serving.knative.dev
+    generation: 1
+    labels:
+      serving.knative.dev/service: helloworld-go
+    name: helloworld-go
+    namespace: user-ns
+    ownerReferences:
+    - apiVersion: serving.knative.dev/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: helloworld-go
+      uid: d30abd09-975d-4327-a440-ef03bb5a8d6e
+    resourceVersion: "44056"
+    uid: b11e4c8e-b322-4022-a8b8-00e0ad27c3e9
+  spec:
+    traffic:
+    - configurationName: helloworld-go
+      latestRevision: true
+      percent: 100
+  status:
+    address:
+      url: http://helloworld-go.user-ns.svc.cluster.local
+    conditions:
+    - lastTransitionTime: "2024-06-05T10:59:19Z"
+      status: "True"
+      type: AllTrafficAssigned
+    - lastTransitionTime: "2024-06-05T10:59:19Z"
+      message: autoTLS is not enabled
+      reason: TLSNotEnabled
+      status: "True"
+      type: CertificateProvisioned
+    - lastTransitionTime: "2024-06-05T10:59:20Z"
+      status: "True"
+      type: IngressReady
+    - lastTransitionTime: "2024-06-05T10:59:20Z"
+      status: "True"
+      type: Ready
+    observedGeneration: 1
+    traffic:
+    - latestRevision: true
+      percent: 100
+      revisionName: helloworld-go-00001
+    url: https://helloworld-go-user-ns.apps.ci-ln-bxslict-76ef8.origin-ci-int-aws.dev.rhcloud.com
+kind: List
+metadata:
+  resourceVersion: ""

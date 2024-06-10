@@ -1,0 +1,322 @@
+---
+apiVersion: apps/v1
+items:
+- apiVersion: apps/v1
+  kind: DaemonSet
+  metadata:
+    annotations:
+      deprecated.daemonset.template.generation: "1"
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"apps/v1","kind":"DaemonSet","metadata":{"annotations":{},"labels":{"app.kubernetes.io/component":"istio_cni","app.kubernetes.io/instance":"istio_cni","app.kubernetes.io/managed-by":"maistra-istio-operator","app.kubernetes.io/name":"istio_cni","app.kubernetes.io/part-of":"istio","app.kubernetes.io/version":"TODO","k8s-app":"istio-cni-node-v2-4","maistra-version":"2.5.1","maistra.io/owner":"","maistra.io/owner-name":"","release":"istio"},"name":"istio-cni-node-v2-4","namespace":"openshift-operators"},"spec":{"selector":{"matchLabels":{"k8s-app":"istio-cni-node-v2-4"}},"template":{"metadata":{"annotations":{"sidecar.istio.io/inject":"false"},"labels":{"k8s-app":"istio-cni-node-v2-4","release":"istio"}},"spec":{"containers":[{"command":["install-cni"],"env":[{"name":"CNI_CONF_NAME","value":"v2-4-istio-cni.conf"},{"name":"CNI_NETWORK_CONFIG","valueFrom":{"configMapKeyRef":{"key":"cni_network_config","name":"ossm-cni-config-v2-4"}}},{"name":"CNI_NET_DIR","value":"/etc/cni/multus/net.d"},{"name":"CHAINED_CNI_PLUGIN","value":"false"},{"name":"MOUNTED_CNI_NET_DIR","value":"/host/etc/cni/multus/net.d"},{"name":"KUBECFG_FILE_NAME","value":"v2-4-istio-cni.kubeconfig"},{"name":"CNI_BINARIES_PREFIX","value":"v2-4-"}],"image":"registry.redhat.io/openshift-service-mesh/istio-cni-rhel8@sha256:8e36644dc0f6fe5018b6643cca057ded23aa9b8a026280b864f5f1cc1fa0f259","imagePullPolicy":null,"initialDelaySeconds":5,"livenessProbe":{"httpGet":{"path":"/healthz","port":8000}},"name":"install-cni","readinessProbe":{"httpGet":{"path":"/readyz","port":8000}},"resources":{"requests":{"cpu":"10m","memory":"100Mi"}},"securityContext":{"privileged":true},"volumeMounts":[{"mountPath":"/host/opt/cni/bin","name":"cni-bin-dir"},{"mountPath":"/host/etc/cni/","name":"etc-cni-dir"},{"mountPath":"/var/run/istio-cni","name":"cni-log-dir"}]}],"nodeSelector":{"kubernetes.io/os":"linux"},"priorityClassName":"system-node-critical","serviceAccountName":"ossm-cni","terminationGracePeriodSeconds":5,"tolerations":[{"effect":"NoSchedule","operator":"Exists"},{"key":"CriticalAddonsOnly","operator":"Exists"},{"effect":"NoExecute","operator":"Exists"}],"volumes":[{"hostPath":{"path":"/var/lib/cni/bin"},"name":"cni-bin-dir"},{"hostPath":{"path":"/etc/cni"},"name":"etc-cni-dir"},{"hostPath":{"path":"/var/run/istio-cni"},"name":"cni-log-dir"}]}},"updateStrategy":{"rollingUpdate":{"maxUnavailable":1},"type":"RollingUpdate"}}}
+    creationTimestamp: "2024-06-05T10:45:39Z"
+    generation: 1
+    labels:
+      app.kubernetes.io/component: istio_cni
+      app.kubernetes.io/instance: istio_cni
+      app.kubernetes.io/managed-by: maistra-istio-operator
+      app.kubernetes.io/name: istio_cni
+      app.kubernetes.io/part-of: istio
+      app.kubernetes.io/version: TODO
+      k8s-app: istio-cni-node-v2-4
+      maistra-version: 2.5.1
+      maistra.io/owner: ""
+      maistra.io/owner-name: ""
+      release: istio
+    managedFields:
+    - apiVersion: apps/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:deprecated.daemonset.template.generation: {}
+            f:kubectl.kubernetes.io/last-applied-configuration: {}
+          f:labels:
+            .: {}
+            f:app.kubernetes.io/component: {}
+            f:app.kubernetes.io/instance: {}
+            f:app.kubernetes.io/managed-by: {}
+            f:app.kubernetes.io/name: {}
+            f:app.kubernetes.io/part-of: {}
+            f:app.kubernetes.io/version: {}
+            f:k8s-app: {}
+            f:maistra-version: {}
+            f:maistra.io/owner: {}
+            f:maistra.io/owner-name: {}
+            f:release: {}
+        f:spec:
+          f:revisionHistoryLimit: {}
+          f:selector: {}
+          f:template:
+            f:metadata:
+              f:annotations:
+                .: {}
+                f:sidecar.istio.io/inject: {}
+              f:labels:
+                .: {}
+                f:k8s-app: {}
+                f:release: {}
+            f:spec:
+              f:containers:
+                k:{"name":"install-cni"}:
+                  .: {}
+                  f:command: {}
+                  f:env:
+                    .: {}
+                    k:{"name":"CHAINED_CNI_PLUGIN"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"CNI_BINARIES_PREFIX"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"CNI_CONF_NAME"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"CNI_NET_DIR"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"CNI_NETWORK_CONFIG"}:
+                      .: {}
+                      f:name: {}
+                      f:valueFrom:
+                        .: {}
+                        f:configMapKeyRef: {}
+                    k:{"name":"KUBECFG_FILE_NAME"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"MOUNTED_CNI_NET_DIR"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                  f:image: {}
+                  f:imagePullPolicy: {}
+                  f:livenessProbe:
+                    .: {}
+                    f:failureThreshold: {}
+                    f:httpGet:
+                      .: {}
+                      f:path: {}
+                      f:port: {}
+                      f:scheme: {}
+                    f:periodSeconds: {}
+                    f:successThreshold: {}
+                    f:timeoutSeconds: {}
+                  f:name: {}
+                  f:readinessProbe:
+                    .: {}
+                    f:failureThreshold: {}
+                    f:httpGet:
+                      .: {}
+                      f:path: {}
+                      f:port: {}
+                      f:scheme: {}
+                    f:periodSeconds: {}
+                    f:successThreshold: {}
+                    f:timeoutSeconds: {}
+                  f:resources:
+                    .: {}
+                    f:requests:
+                      .: {}
+                      f:cpu: {}
+                      f:memory: {}
+                  f:securityContext:
+                    .: {}
+                    f:privileged: {}
+                  f:terminationMessagePath: {}
+                  f:terminationMessagePolicy: {}
+                  f:volumeMounts:
+                    .: {}
+                    k:{"mountPath":"/host/etc/cni/"}:
+                      .: {}
+                      f:mountPath: {}
+                      f:name: {}
+                    k:{"mountPath":"/host/opt/cni/bin"}:
+                      .: {}
+                      f:mountPath: {}
+                      f:name: {}
+                    k:{"mountPath":"/var/run/istio-cni"}:
+                      .: {}
+                      f:mountPath: {}
+                      f:name: {}
+              f:dnsPolicy: {}
+              f:nodeSelector: {}
+              f:priorityClassName: {}
+              f:restartPolicy: {}
+              f:schedulerName: {}
+              f:securityContext: {}
+              f:serviceAccount: {}
+              f:serviceAccountName: {}
+              f:terminationGracePeriodSeconds: {}
+              f:tolerations: {}
+              f:volumes:
+                .: {}
+                k:{"name":"cni-bin-dir"}:
+                  .: {}
+                  f:hostPath:
+                    .: {}
+                    f:path: {}
+                    f:type: {}
+                  f:name: {}
+                k:{"name":"cni-log-dir"}:
+                  .: {}
+                  f:hostPath:
+                    .: {}
+                    f:path: {}
+                    f:type: {}
+                  f:name: {}
+                k:{"name":"etc-cni-dir"}:
+                  .: {}
+                  f:hostPath:
+                    .: {}
+                    f:path: {}
+                    f:type: {}
+                  f:name: {}
+          f:updateStrategy:
+            f:rollingUpdate:
+              .: {}
+              f:maxSurge: {}
+              f:maxUnavailable: {}
+            f:type: {}
+      manager: istio-operator
+      operation: Update
+      time: "2024-06-05T10:45:39Z"
+    - apiVersion: apps/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          f:currentNumberScheduled: {}
+          f:desiredNumberScheduled: {}
+          f:numberAvailable: {}
+          f:numberReady: {}
+          f:observedGeneration: {}
+          f:updatedNumberScheduled: {}
+      manager: kube-controller-manager
+      operation: Update
+      subresource: status
+      time: "2024-06-05T10:45:53Z"
+    name: istio-cni-node-v2-4
+    namespace: openshift-operators
+    resourceVersion: "35292"
+    uid: 6b942067-8aec-45b0-82d4-3e0ab08caefe
+  spec:
+    revisionHistoryLimit: 10
+    selector:
+      matchLabels:
+        k8s-app: istio-cni-node-v2-4
+    template:
+      metadata:
+        annotations:
+          sidecar.istio.io/inject: "false"
+        creationTimestamp: null
+        labels:
+          k8s-app: istio-cni-node-v2-4
+          release: istio
+      spec:
+        containers:
+        - command:
+          - install-cni
+          env:
+          - name: CNI_CONF_NAME
+            value: v2-4-istio-cni.conf
+          - name: CNI_NETWORK_CONFIG
+            valueFrom:
+              configMapKeyRef:
+                key: cni_network_config
+                name: ossm-cni-config-v2-4
+          - name: CNI_NET_DIR
+            value: /etc/cni/multus/net.d
+          - name: CHAINED_CNI_PLUGIN
+            value: "false"
+          - name: MOUNTED_CNI_NET_DIR
+            value: /host/etc/cni/multus/net.d
+          - name: KUBECFG_FILE_NAME
+            value: v2-4-istio-cni.kubeconfig
+          - name: CNI_BINARIES_PREFIX
+            value: v2-4-
+          image: registry.redhat.io/openshift-service-mesh/istio-cni-rhel8@sha256:8e36644dc0f6fe5018b6643cca057ded23aa9b8a026280b864f5f1cc1fa0f259
+          imagePullPolicy: IfNotPresent
+          livenessProbe:
+            failureThreshold: 3
+            httpGet:
+              path: /healthz
+              port: 8000
+              scheme: HTTP
+            periodSeconds: 10
+            successThreshold: 1
+            timeoutSeconds: 1
+          name: install-cni
+          readinessProbe:
+            failureThreshold: 3
+            httpGet:
+              path: /readyz
+              port: 8000
+              scheme: HTTP
+            periodSeconds: 10
+            successThreshold: 1
+            timeoutSeconds: 1
+          resources:
+            requests:
+              cpu: 10m
+              memory: 100Mi
+          securityContext:
+            privileged: true
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+          volumeMounts:
+          - mountPath: /host/opt/cni/bin
+            name: cni-bin-dir
+          - mountPath: /host/etc/cni/
+            name: etc-cni-dir
+          - mountPath: /var/run/istio-cni
+            name: cni-log-dir
+        dnsPolicy: ClusterFirst
+        nodeSelector:
+          kubernetes.io/os: linux
+        priorityClassName: system-node-critical
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        securityContext: {}
+        serviceAccount: ossm-cni
+        serviceAccountName: ossm-cni
+        terminationGracePeriodSeconds: 5
+        tolerations:
+        - effect: NoSchedule
+          operator: Exists
+        - key: CriticalAddonsOnly
+          operator: Exists
+        - effect: NoExecute
+          operator: Exists
+        volumes:
+        - hostPath:
+            path: /var/lib/cni/bin
+            type: ""
+          name: cni-bin-dir
+        - hostPath:
+            path: /etc/cni
+            type: ""
+          name: etc-cni-dir
+        - hostPath:
+            path: /var/run/istio-cni
+            type: ""
+          name: cni-log-dir
+    updateStrategy:
+      rollingUpdate:
+        maxSurge: 0
+        maxUnavailable: 1
+      type: RollingUpdate
+  status:
+    currentNumberScheduled: 6
+    desiredNumberScheduled: 6
+    numberAvailable: 6
+    numberMisscheduled: 0
+    numberReady: 6
+    observedGeneration: 1
+    updatedNumberScheduled: 6
+kind: DaemonSetList
+metadata:
+  resourceVersion: "54612"

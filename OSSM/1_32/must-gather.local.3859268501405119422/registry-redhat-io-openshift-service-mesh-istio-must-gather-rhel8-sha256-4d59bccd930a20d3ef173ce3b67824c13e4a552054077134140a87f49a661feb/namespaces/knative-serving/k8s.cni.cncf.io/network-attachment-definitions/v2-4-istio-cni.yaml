@@ -1,0 +1,27 @@
+apiVersion: k8s.cni.cncf.io/v1
+kind: NetworkAttachmentDefinition
+metadata:
+  creationTimestamp: "2024-06-05T10:46:23Z"
+  generation: 1
+  labels:
+    maistra.io/member-of: istio-system
+  managedFields:
+  - apiVersion: k8s.cni.cncf.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:labels:
+          .: {}
+          f:maistra.io/member-of: {}
+      f:spec:
+        .: {}
+        f:config: {}
+    manager: istio-operator
+    operation: Update
+    time: "2024-06-05T10:46:23Z"
+  name: v2-4-istio-cni
+  namespace: knative-serving
+  resourceVersion: "35753"
+  uid: 24ffa1f1-b5cc-4f8b-818a-aecc359a3671
+spec:
+  config: ""

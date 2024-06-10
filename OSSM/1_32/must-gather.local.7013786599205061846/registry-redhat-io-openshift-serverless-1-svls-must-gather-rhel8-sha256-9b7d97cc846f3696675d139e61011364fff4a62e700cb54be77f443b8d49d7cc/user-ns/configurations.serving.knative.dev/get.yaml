@@ -1,0 +1,68 @@
+apiVersion: v1
+items:
+- apiVersion: serving.knative.dev/v1
+  kind: Configuration
+  metadata:
+    annotations:
+      serving.knative.dev/creator: system:admin
+      serving.knative.dev/lastModifier: system:admin
+      serving.knative.dev/routes: helloworld-go
+      serving.knative.openshift.io/enablePassthrough: "true"
+    creationTimestamp: "2024-06-05T10:59:13Z"
+    generation: 1
+    labels:
+      serving.knative.dev/service: helloworld-go
+      serving.knative.dev/serviceUID: d30abd09-975d-4327-a440-ef03bb5a8d6e
+    name: helloworld-go
+    namespace: user-ns
+    ownerReferences:
+    - apiVersion: serving.knative.dev/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: helloworld-go
+      uid: d30abd09-975d-4327-a440-ef03bb5a8d6e
+    resourceVersion: "44028"
+    uid: 6402ac10-ce56-4a74-a207-9167495600f6
+  spec:
+    template:
+      metadata:
+        annotations:
+          autoscaling.knative.dev/minScale: "2"
+          autoscaling.knative.dev/target: "10"
+          autoscaling.knative.dev/targetBurstCapacity: "0"
+          queue.sidecar.serving.knative.dev/resourcePercentage: "0.3"
+          sidecar.istio.io/inject: "true"
+          sidecar.istio.io/rewriteAppHTTPProbers: "true"
+        creationTimestamp: null
+        labels:
+          app: helloworld-go
+      spec:
+        containerConcurrency: 0
+        containers:
+        - env:
+          - name: TARGET
+            value: Go Sample v1
+          image: docker.io/skonto/helloworld-go
+          imagePullPolicy: Always
+          name: user-container
+          readinessProbe:
+            successThreshold: 1
+            tcpSocket:
+              port: 0
+          resources:
+            requests:
+              cpu: 200m
+        enableServiceLinks: false
+        timeoutSeconds: 300
+  status:
+    conditions:
+    - lastTransitionTime: "2024-06-05T10:59:19Z"
+      status: "True"
+      type: Ready
+    latestCreatedRevisionName: helloworld-go-00001
+    latestReadyRevisionName: helloworld-go-00001
+    observedGeneration: 1
+kind: List
+metadata:
+  resourceVersion: ""

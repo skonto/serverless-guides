@@ -1,0 +1,125 @@
+Name:         helloworld-go
+Namespace:    user-ns
+Labels:       serving.knative.dev/service=helloworld-go
+              serving.knative.dev/serviceUID=d30abd09-975d-4327-a440-ef03bb5a8d6e
+Annotations:  serving.knative.dev/creator: system:admin
+              serving.knative.dev/lastModifier: system:admin
+              serving.knative.dev/routes: helloworld-go
+              serving.knative.openshift.io/enablePassthrough: true
+API Version:  serving.knative.dev/v1
+Kind:         Configuration
+Metadata:
+  Creation Timestamp:  2024-06-05T10:59:13Z
+  Generation:          1
+  Managed Fields:
+    API Version:  serving.knative.dev/v1
+    Fields Type:  FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .:
+          f:serving.knative.dev/creator:
+          f:serving.knative.dev/lastModifier:
+          f:serving.knative.dev/routes:
+          f:serving.knative.openshift.io/enablePassthrough:
+        f:labels:
+          .:
+          f:serving.knative.dev/service:
+          f:serving.knative.dev/serviceUID:
+        f:ownerReferences:
+          .:
+          k:{"uid":"d30abd09-975d-4327-a440-ef03bb5a8d6e"}:
+      f:spec:
+        .:
+        f:template:
+          .:
+          f:metadata:
+            .:
+            f:annotations:
+              .:
+              f:autoscaling.knative.dev/minScale:
+              f:autoscaling.knative.dev/target:
+              f:autoscaling.knative.dev/targetBurstCapacity:
+              f:queue.sidecar.serving.knative.dev/resourcePercentage:
+              f:sidecar.istio.io/inject:
+              f:sidecar.istio.io/rewriteAppHTTPProbers:
+            f:creationTimestamp:
+            f:labels:
+              .:
+              f:app:
+          f:spec:
+            .:
+            f:containerConcurrency:
+            f:containers:
+            f:enableServiceLinks:
+            f:timeoutSeconds:
+    Manager:      controller
+    Operation:    Update
+    Time:         2024-06-05T10:59:13Z
+    API Version:  serving.knative.dev/v1
+    Fields Type:  FieldsV1
+    fieldsV1:
+      f:status:
+        .:
+        f:conditions:
+        f:latestCreatedRevisionName:
+        f:latestReadyRevisionName:
+        f:observedGeneration:
+    Manager:      controller
+    Operation:    Update
+    Subresource:  status
+    Time:         2024-06-05T10:59:19Z
+  Owner References:
+    API Version:           serving.knative.dev/v1
+    Block Owner Deletion:  true
+    Controller:            true
+    Kind:                  Service
+    Name:                  helloworld-go
+    UID:                   d30abd09-975d-4327-a440-ef03bb5a8d6e
+  Resource Version:        44028
+  UID:                     6402ac10-ce56-4a74-a207-9167495600f6
+Spec:
+  Template:
+    Metadata:
+      Annotations:
+        autoscaling.knative.dev/minScale:                      2
+        autoscaling.knative.dev/target:                        10
+        autoscaling.knative.dev/targetBurstCapacity:           0
+        queue.sidecar.serving.knative.dev/resourcePercentage:  0.3
+        sidecar.istio.io/inject:                               true
+        sidecar.istio.io/rewriteAppHTTPProbers:                true
+      Creation Timestamp:                                      <nil>
+      Labels:
+        App:  helloworld-go
+    Spec:
+      Container Concurrency:  0
+      Containers:
+        Env:
+          Name:             TARGET
+          Value:            Go Sample v1
+        Image:              docker.io/skonto/helloworld-go
+        Image Pull Policy:  Always
+        Name:               user-container
+        Readiness Probe:
+          Success Threshold:  1
+          Tcp Socket:
+            Port:  0
+        Resources:
+          Requests:
+            Cpu:             200m
+      Enable Service Links:  false
+      Timeout Seconds:       300
+Status:
+  Conditions:
+    Last Transition Time:        2024-06-05T10:59:19Z
+    Status:                      True
+    Type:                        Ready
+  Latest Created Revision Name:  helloworld-go-00001
+  Latest Ready Revision Name:    helloworld-go-00001
+  Observed Generation:           1
+Events:
+  Type    Reason              Age   From                      Message
+  ----    ------              ----  ----                      -------
+  Normal  Created             17m   configuration-controller  Created Revision "helloworld-go-00001"
+  Normal  ConfigurationReady  16m   configuration-controller  Configuration becomes ready
+  Normal  LatestReadyUpdate   16m   configuration-controller  LatestReadyRevisionName updated to "helloworld-go-00001"

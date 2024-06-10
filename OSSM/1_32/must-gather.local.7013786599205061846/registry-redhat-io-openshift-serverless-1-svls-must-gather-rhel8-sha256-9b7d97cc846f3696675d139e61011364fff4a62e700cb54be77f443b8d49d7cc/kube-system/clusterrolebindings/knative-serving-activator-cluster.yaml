@@ -1,0 +1,23 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"rbac.authorization.k8s.io/v1","kind":"ClusterRoleBinding","metadata":{"labels":{"app.kubernetes.io/component":"activator","app.kubernetes.io/name":"knative-serving","app.kubernetes.io/version":"release-v1.11"},"name":"knative-serving-activator-cluster"},"roleRef":{"apiGroup":"rbac.authorization.k8s.io","kind":"ClusterRole","name":"knative-serving-activator-cluster"},"subjects":[{"kind":"ServiceAccount","name":"activator","namespace":"knative-serving"}]}
+    manifestival: new
+  creationTimestamp: "2024-06-05T10:55:46Z"
+  labels:
+    app.kubernetes.io/component: activator
+    app.kubernetes.io/name: knative-serving
+    app.kubernetes.io/version: release-v1.11
+  name: knative-serving-activator-cluster
+  resourceVersion: "41599"
+  uid: d2426973-d3bc-4c47-8544-d1ba5e9e0348
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: knative-serving-activator-cluster
+subjects:
+- kind: ServiceAccount
+  name: activator
+  namespace: knative-serving

@@ -1,0 +1,95 @@
+apiVersion: v1
+items:
+- apiVersion: v1
+  imagePullSecrets:
+  - name: activator-dockercfg-dqc5h
+  kind: ServiceAccount
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"v1","kind":"ServiceAccount","metadata":{"labels":{"app.kubernetes.io/component":"activator","app.kubernetes.io/name":"knative-serving","app.kubernetes.io/version":"release-v1.11"},"name":"activator","namespace":"knative-serving","ownerReferences":[{"apiVersion":"operator.knative.dev/v1beta1","blockOwnerDeletion":true,"controller":true,"kind":"KnativeServing","name":"knative-serving","uid":"af223c8b-7d90-440e-8659-7268e406b26c"}]}}
+      manifestival: new
+    creationTimestamp: "2024-06-05T10:55:49Z"
+    labels:
+      app.kubernetes.io/component: activator
+      app.kubernetes.io/name: knative-serving
+      app.kubernetes.io/version: release-v1.11
+    name: activator
+    namespace: knative-serving
+    ownerReferences:
+    - apiVersion: operator.knative.dev/v1beta1
+      blockOwnerDeletion: true
+      controller: true
+      kind: KnativeServing
+      name: knative-serving
+      uid: af223c8b-7d90-440e-8659-7268e406b26c
+    resourceVersion: "41618"
+    uid: ecea82d9-1cca-47ec-a809-4eb1ab1b091d
+  secrets:
+  - name: activator-dockercfg-dqc5h
+- apiVersion: v1
+  imagePullSecrets:
+  - name: builder-dockercfg-vs2n2
+  kind: ServiceAccount
+  metadata:
+    creationTimestamp: "2024-06-05T10:46:22Z"
+    name: builder
+    namespace: knative-serving
+    resourceVersion: "35739"
+    uid: a3d2670f-cf3f-457d-927e-aa37f15c4275
+  secrets:
+  - name: builder-dockercfg-vs2n2
+- apiVersion: v1
+  imagePullSecrets:
+  - name: controller-dockercfg-tv7hw
+  kind: ServiceAccount
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"v1","kind":"ServiceAccount","metadata":{"labels":{"app.kubernetes.io/component":"controller","app.kubernetes.io/name":"knative-serving","app.kubernetes.io/version":"release-v1.11"},"name":"controller","namespace":"knative-serving","ownerReferences":[{"apiVersion":"operator.knative.dev/v1beta1","blockOwnerDeletion":true,"controller":true,"kind":"KnativeServing","name":"knative-serving","uid":"af223c8b-7d90-440e-8659-7268e406b26c"}]}}
+      manifestival: new
+    creationTimestamp: "2024-06-05T10:55:48Z"
+    labels:
+      app.kubernetes.io/component: controller
+      app.kubernetes.io/name: knative-serving
+      app.kubernetes.io/version: release-v1.11
+    name: controller
+    namespace: knative-serving
+    ownerReferences:
+    - apiVersion: operator.knative.dev/v1beta1
+      blockOwnerDeletion: true
+      controller: true
+      kind: KnativeServing
+      name: knative-serving
+      uid: af223c8b-7d90-440e-8659-7268e406b26c
+    resourceVersion: "41616"
+    uid: 9ee59a98-aa32-47df-a7ae-fd87dfb42d30
+  secrets:
+  - name: controller-dockercfg-tv7hw
+- apiVersion: v1
+  imagePullSecrets:
+  - name: default-dockercfg-nfknp
+  kind: ServiceAccount
+  metadata:
+    creationTimestamp: "2024-06-05T10:46:22Z"
+    name: default
+    namespace: knative-serving
+    resourceVersion: "35737"
+    uid: f6186719-e3ce-4412-94c1-b5739ad43833
+  secrets:
+  - name: default-dockercfg-nfknp
+- apiVersion: v1
+  imagePullSecrets:
+  - name: deployer-dockercfg-ctk7j
+  kind: ServiceAccount
+  metadata:
+    creationTimestamp: "2024-06-05T10:46:22Z"
+    name: deployer
+    namespace: knative-serving
+    resourceVersion: "35732"
+    uid: 0e715d8f-4ab7-4032-8bcd-44901766648b
+  secrets:
+  - name: deployer-dockercfg-ctk7j
+kind: List
+metadata:
+  resourceVersion: ""

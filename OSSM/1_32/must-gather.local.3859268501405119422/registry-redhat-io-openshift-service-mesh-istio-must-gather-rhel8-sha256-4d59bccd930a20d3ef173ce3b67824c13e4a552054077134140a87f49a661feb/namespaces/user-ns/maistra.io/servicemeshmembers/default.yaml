@@ -1,0 +1,66 @@
+apiVersion: maistra.io/v1
+kind: ServiceMeshMember
+metadata:
+  annotations:
+    maistra.io/created-by: servicemeshmemberroll-controller
+  creationTimestamp: "2024-06-05T10:58:32Z"
+  finalizers:
+  - maistra.io/istio-operator
+  generation: 1
+  managedFields:
+  - apiVersion: maistra.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:maistra.io/created-by: {}
+        f:finalizers:
+          .: {}
+          v:"maistra.io/istio-operator": {}
+      f:spec:
+        .: {}
+        f:controlPlaneRef:
+          .: {}
+          f:name: {}
+          f:namespace: {}
+    manager: istio-operator
+    operation: Update
+    time: "2024-06-05T10:58:33Z"
+  - apiVersion: maistra.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:annotations:
+          .: {}
+          f:controlPlaneRef: {}
+        f:conditions: {}
+        f:meshGeneration: {}
+        f:meshReconciledVersion: {}
+        f:observedGeneration: {}
+    manager: istio-operator
+    operation: Update
+    subresource: status
+    time: "2024-06-05T10:58:33Z"
+  name: default
+  namespace: user-ns
+  resourceVersion: "43403"
+  uid: 60ffe09a-ce9d-49b9-a886-936dc0e9d278
+spec:
+  controlPlaneRef:
+    name: basic
+    namespace: istio-system
+status:
+  annotations:
+    controlPlaneRef: istio-system/basic
+  conditions:
+  - lastTransitionTime: "2024-06-05T10:58:33Z"
+    status: "True"
+    type: Reconciled
+  - lastTransitionTime: "2024-06-05T10:58:33Z"
+    status: "True"
+    type: Ready
+  meshGeneration: 2
+  meshReconciledVersion: 2.5.1-1-2
+  observedGeneration: 1

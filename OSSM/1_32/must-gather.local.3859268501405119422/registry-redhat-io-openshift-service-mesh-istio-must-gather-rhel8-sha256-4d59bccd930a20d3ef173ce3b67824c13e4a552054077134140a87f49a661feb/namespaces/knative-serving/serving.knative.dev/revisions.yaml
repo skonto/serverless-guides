@@ -1,0 +1,7 @@
+---
+apiVersion: serving.knative.dev/v1
+items: []
+kind: RevisionList
+metadata:
+  continue: ""
+  resourceVersion: "54734"

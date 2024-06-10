@@ -1,0 +1,180 @@
+---
+apiVersion: admissionregistration.k8s.io/v1
+kind: ValidatingWebhookConfiguration
+metadata:
+  annotations:
+    service.beta.openshift.io/inject-cabundle: "true"
+  creationTimestamp: "2024-06-05T10:45:07Z"
+  generation: 4
+  managedFields:
+  - apiVersion: admissionregistration.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:service.beta.openshift.io/inject-cabundle: {}
+      f:webhooks:
+        .: {}
+        k:{"name":"smcp.validation.maistra.io"}:
+          .: {}
+          f:admissionReviewVersions: {}
+          f:clientConfig:
+            .: {}
+            f:service:
+              .: {}
+              f:name: {}
+              f:namespace: {}
+              f:path: {}
+              f:port: {}
+          f:failurePolicy: {}
+          f:matchPolicy: {}
+          f:name: {}
+          f:namespaceSelector: {}
+          f:objectSelector: {}
+          f:rules: {}
+          f:sideEffects: {}
+          f:timeoutSeconds: {}
+        k:{"name":"smm.validation.maistra.io"}:
+          .: {}
+          f:admissionReviewVersions: {}
+          f:clientConfig:
+            .: {}
+            f:service:
+              .: {}
+              f:name: {}
+              f:namespace: {}
+              f:path: {}
+              f:port: {}
+          f:failurePolicy: {}
+          f:matchPolicy: {}
+          f:name: {}
+          f:namespaceSelector: {}
+          f:objectSelector: {}
+          f:rules: {}
+          f:sideEffects: {}
+          f:timeoutSeconds: {}
+        k:{"name":"smmr.validation.maistra.io"}:
+          .: {}
+          f:admissionReviewVersions: {}
+          f:clientConfig:
+            .: {}
+            f:service:
+              .: {}
+              f:name: {}
+              f:namespace: {}
+              f:path: {}
+              f:port: {}
+          f:failurePolicy: {}
+          f:matchPolicy: {}
+          f:name: {}
+          f:namespaceSelector: {}
+          f:objectSelector: {}
+          f:rules: {}
+          f:sideEffects: {}
+          f:timeoutSeconds: {}
+    manager: istio-operator
+    operation: Update
+    time: "2024-06-05T10:45:07Z"
+  - apiVersion: admissionregistration.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:webhooks:
+        k:{"name":"smcp.validation.maistra.io"}:
+          f:clientConfig:
+            f:caBundle: {}
+        k:{"name":"smm.validation.maistra.io"}:
+          f:clientConfig:
+            f:caBundle: {}
+        k:{"name":"smmr.validation.maistra.io"}:
+          f:clientConfig:
+            f:caBundle: {}
+    manager: service-ca-operator
+    operation: Update
+    time: "2024-06-05T10:45:17Z"
+  name: openshift-operators.servicemesh-resources.maistra.io
+  resourceVersion: "34393"
+  uid: 762b7fde-0b86-4a02-a7be-df80fab35999
+webhooks:
+- admissionReviewVersions:
+  - v1beta1
+  clientConfig:
+    caBundle: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURVVENDQWptZ0F3SUJBZ0lJVXRWdE5UajNwdFV3RFFZSktvWklodmNOQVFFTEJRQXdOakUwTURJR0ExVUUKQXd3cmIzQmxibk5vYVdaMExYTmxjblpwWTJVdGMyVnlkbWx1WnkxemFXZHVaWEpBTVRjeE56VTRNalUzTWpBZQpGdzB5TkRBMk1EVXhNREUyTVRGYUZ3MHlOakE0TURReE1ERTJNVEphTURZeE5EQXlCZ05WQkFNTUsyOXdaVzV6CmFHbG1kQzF6WlhKMmFXTmxMWE5sY25acGJtY3RjMmxuYm1WeVFERTNNVGMxT0RJMU56SXdnZ0VpTUEwR0NTcUcKU0liM0RRRUJBUVVBQTRJQkR3QXdnZ0VLQW9JQkFRRGdBbDh6SWxVUjdPcTZNS0NJMlNLR0FYUlEyRnRwSHZlNwpSZm9Zb2JWekVjWFdUdnVhVGlQcFJYSXIvbDJqaEdWT0EyTU5ZbVpXQkp2YlA5ZjNRQnVmcUxtUXBFRWs2ZWVMCms5Yis4RlVzZ3ZsNnpDWHdGMW9NNUVvcDZ3VWxMcWJ1SUdka2pyU1kvYUFabGdFVHFMRUpFSExSOWpURmxKK1cKYW9iOG1UeHZWSkVqUHc4SUlDU3hVc21xV1B0MGhrcjVPN1lCNFIyNXp2ZXptWVNIRkRkNTlQaytqU3g3QmZxbAp5L1RuYzFHRVN6L0g0NGg2dXU5QnZuZ1lpTUlnbHRBMVo5cmcvWVhnalhGdklhYUp4Y1JtelFPeWxGdGVJT1dRCjlQYWZ0WmVieXQ1MXRMVk96MDdCbk85VlNab0gyd1c5R1NlQTVOQytFSEVnazRNQS9VTlJBZ01CQUFHall6QmgKTUE0R0ExVWREd0VCL3dRRUF3SUNwREFQQmdOVkhSTUJBZjhFQlRBREFRSC9NQjBHQTFVZERnUVdCQlNQVXFBYwo3eW9ISFU1c25DSDRYTWl3R1dkS2F6QWZCZ05WSFNNRUdEQVdnQlNQVXFBYzd5b0hIVTVzbkNINFhNaXdHV2RLCmF6QU5CZ2txaGtpRzl3MEJBUXNGQUFPQ0FRRUFIWXcrQm5KOGJwTXMvZ2NJYWtqSkJDV0cxVXptY21vcm9GNFIKYlg2dmJzY3VrbGVtK0FSOTQrMWpyTGJ4U0FpSVh3cFdURVZ5Z0pqL0FPNzB6cjdnNHVNVHBPN1JaTW9nUVdvRApzNE9OeStJUkhvWkhDZFQ3bFZwZ2ZCNXRDZ2RTSzF0dXI3dzVXSzd1MnFkMXZIYTNwREZpcXJJQWpjNkRRQlFzCjhQSnd3T2MrcTYvSDMvN3pSRU1PNExUblRsTGZoQ0duTHFGWWlYK2ptOUdnanBOMVVxN2d0WS8xbmdhM3BNUE0KUFI2aFh6SHlmbDh2STY5T3V6Y0VzZ3BuU1h3M1JqMWtPVnJ6MTJYYWdWNFdSbk5NaWc3RS9zbW9qTzJaZFVZTQpnWXQyOER6TE9mSC9ET09uVEh6Z29rd1J1bTllVmkvenVId2JDb1NOaDBsK1kwYjNSQT09Ci0tLS0tRU5EIENFUlRJRklDQVRFLS0tLS0K
+    service:
+      name: maistra-admission-controller
+      namespace: openshift-operators
+      path: /validate-smcp
+      port: 443
+  failurePolicy: Fail
+  matchPolicy: Equivalent
+  name: smcp.validation.maistra.io
+  namespaceSelector: {}
+  objectSelector: {}
+  rules:
+  - apiGroups:
+    - maistra.io
+    apiVersions:
+    - v1
+    - v2
+    operations:
+    - CREATE
+    - UPDATE
+    resources:
+    - servicemeshcontrolplanes
+    scope: '*'
+  sideEffects: None
+  timeoutSeconds: 10
+- admissionReviewVersions:
+  - v1beta1
+  clientConfig:
+    caBundle: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURVVENDQWptZ0F3SUJBZ0lJVXRWdE5UajNwdFV3RFFZSktvWklodmNOQVFFTEJRQXdOakUwTURJR0ExVUUKQXd3cmIzQmxibk5vYVdaMExYTmxjblpwWTJVdGMyVnlkbWx1WnkxemFXZHVaWEpBTVRjeE56VTRNalUzTWpBZQpGdzB5TkRBMk1EVXhNREUyTVRGYUZ3MHlOakE0TURReE1ERTJNVEphTURZeE5EQXlCZ05WQkFNTUsyOXdaVzV6CmFHbG1kQzF6WlhKMmFXTmxMWE5sY25acGJtY3RjMmxuYm1WeVFERTNNVGMxT0RJMU56SXdnZ0VpTUEwR0NTcUcKU0liM0RRRUJBUVVBQTRJQkR3QXdnZ0VLQW9JQkFRRGdBbDh6SWxVUjdPcTZNS0NJMlNLR0FYUlEyRnRwSHZlNwpSZm9Zb2JWekVjWFdUdnVhVGlQcFJYSXIvbDJqaEdWT0EyTU5ZbVpXQkp2YlA5ZjNRQnVmcUxtUXBFRWs2ZWVMCms5Yis4RlVzZ3ZsNnpDWHdGMW9NNUVvcDZ3VWxMcWJ1SUdka2pyU1kvYUFabGdFVHFMRUpFSExSOWpURmxKK1cKYW9iOG1UeHZWSkVqUHc4SUlDU3hVc21xV1B0MGhrcjVPN1lCNFIyNXp2ZXptWVNIRkRkNTlQaytqU3g3QmZxbAp5L1RuYzFHRVN6L0g0NGg2dXU5QnZuZ1lpTUlnbHRBMVo5cmcvWVhnalhGdklhYUp4Y1JtelFPeWxGdGVJT1dRCjlQYWZ0WmVieXQ1MXRMVk96MDdCbk85VlNab0gyd1c5R1NlQTVOQytFSEVnazRNQS9VTlJBZ01CQUFHall6QmgKTUE0R0ExVWREd0VCL3dRRUF3SUNwREFQQmdOVkhSTUJBZjhFQlRBREFRSC9NQjBHQTFVZERnUVdCQlNQVXFBYwo3eW9ISFU1c25DSDRYTWl3R1dkS2F6QWZCZ05WSFNNRUdEQVdnQlNQVXFBYzd5b0hIVTVzbkNINFhNaXdHV2RLCmF6QU5CZ2txaGtpRzl3MEJBUXNGQUFPQ0FRRUFIWXcrQm5KOGJwTXMvZ2NJYWtqSkJDV0cxVXptY21vcm9GNFIKYlg2dmJzY3VrbGVtK0FSOTQrMWpyTGJ4U0FpSVh3cFdURVZ5Z0pqL0FPNzB6cjdnNHVNVHBPN1JaTW9nUVdvRApzNE9OeStJUkhvWkhDZFQ3bFZwZ2ZCNXRDZ2RTSzF0dXI3dzVXSzd1MnFkMXZIYTNwREZpcXJJQWpjNkRRQlFzCjhQSnd3T2MrcTYvSDMvN3pSRU1PNExUblRsTGZoQ0duTHFGWWlYK2ptOUdnanBOMVVxN2d0WS8xbmdhM3BNUE0KUFI2aFh6SHlmbDh2STY5T3V6Y0VzZ3BuU1h3M1JqMWtPVnJ6MTJYYWdWNFdSbk5NaWc3RS9zbW9qTzJaZFVZTQpnWXQyOER6TE9mSC9ET09uVEh6Z29rd1J1bTllVmkvenVId2JDb1NOaDBsK1kwYjNSQT09Ci0tLS0tRU5EIENFUlRJRklDQVRFLS0tLS0K
+    service:
+      name: maistra-admission-controller
+      namespace: openshift-operators
+      path: /validate-smmr
+      port: 443
+  failurePolicy: Fail
+  matchPolicy: Equivalent
+  name: smmr.validation.maistra.io
+  namespaceSelector: {}
+  objectSelector: {}
+  rules:
+  - apiGroups:
+    - maistra.io
+    apiVersions:
+    - v1
+    operations:
+    - CREATE
+    - UPDATE
+    resources:
+    - servicemeshmemberrolls
+    scope: '*'
+  sideEffects: None
+  timeoutSeconds: 10
+- admissionReviewVersions:
+  - v1beta1
+  clientConfig:
+    caBundle: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURVVENDQWptZ0F3SUJBZ0lJVXRWdE5UajNwdFV3RFFZSktvWklodmNOQVFFTEJRQXdOakUwTURJR0ExVUUKQXd3cmIzQmxibk5vYVdaMExYTmxjblpwWTJVdGMyVnlkbWx1WnkxemFXZHVaWEpBTVRjeE56VTRNalUzTWpBZQpGdzB5TkRBMk1EVXhNREUyTVRGYUZ3MHlOakE0TURReE1ERTJNVEphTURZeE5EQXlCZ05WQkFNTUsyOXdaVzV6CmFHbG1kQzF6WlhKMmFXTmxMWE5sY25acGJtY3RjMmxuYm1WeVFERTNNVGMxT0RJMU56SXdnZ0VpTUEwR0NTcUcKU0liM0RRRUJBUVVBQTRJQkR3QXdnZ0VLQW9JQkFRRGdBbDh6SWxVUjdPcTZNS0NJMlNLR0FYUlEyRnRwSHZlNwpSZm9Zb2JWekVjWFdUdnVhVGlQcFJYSXIvbDJqaEdWT0EyTU5ZbVpXQkp2YlA5ZjNRQnVmcUxtUXBFRWs2ZWVMCms5Yis4RlVzZ3ZsNnpDWHdGMW9NNUVvcDZ3VWxMcWJ1SUdka2pyU1kvYUFabGdFVHFMRUpFSExSOWpURmxKK1cKYW9iOG1UeHZWSkVqUHc4SUlDU3hVc21xV1B0MGhrcjVPN1lCNFIyNXp2ZXptWVNIRkRkNTlQaytqU3g3QmZxbAp5L1RuYzFHRVN6L0g0NGg2dXU5QnZuZ1lpTUlnbHRBMVo5cmcvWVhnalhGdklhYUp4Y1JtelFPeWxGdGVJT1dRCjlQYWZ0WmVieXQ1MXRMVk96MDdCbk85VlNab0gyd1c5R1NlQTVOQytFSEVnazRNQS9VTlJBZ01CQUFHall6QmgKTUE0R0ExVWREd0VCL3dRRUF3SUNwREFQQmdOVkhSTUJBZjhFQlRBREFRSC9NQjBHQTFVZERnUVdCQlNQVXFBYwo3eW9ISFU1c25DSDRYTWl3R1dkS2F6QWZCZ05WSFNNRUdEQVdnQlNQVXFBYzd5b0hIVTVzbkNINFhNaXdHV2RLCmF6QU5CZ2txaGtpRzl3MEJBUXNGQUFPQ0FRRUFIWXcrQm5KOGJwTXMvZ2NJYWtqSkJDV0cxVXptY21vcm9GNFIKYlg2dmJzY3VrbGVtK0FSOTQrMWpyTGJ4U0FpSVh3cFdURVZ5Z0pqL0FPNzB6cjdnNHVNVHBPN1JaTW9nUVdvRApzNE9OeStJUkhvWkhDZFQ3bFZwZ2ZCNXRDZ2RTSzF0dXI3dzVXSzd1MnFkMXZIYTNwREZpcXJJQWpjNkRRQlFzCjhQSnd3T2MrcTYvSDMvN3pSRU1PNExUblRsTGZoQ0duTHFGWWlYK2ptOUdnanBOMVVxN2d0WS8xbmdhM3BNUE0KUFI2aFh6SHlmbDh2STY5T3V6Y0VzZ3BuU1h3M1JqMWtPVnJ6MTJYYWdWNFdSbk5NaWc3RS9zbW9qTzJaZFVZTQpnWXQyOER6TE9mSC9ET09uVEh6Z29rd1J1bTllVmkvenVId2JDb1NOaDBsK1kwYjNSQT09Ci0tLS0tRU5EIENFUlRJRklDQVRFLS0tLS0K
+    service:
+      name: maistra-admission-controller
+      namespace: openshift-operators
+      path: /validate-smm
+      port: 443
+  failurePolicy: Fail
+  matchPolicy: Equivalent
+  name: smm.validation.maistra.io
+  namespaceSelector: {}
+  objectSelector: {}
+  rules:
+  - apiGroups:
+    - maistra.io
+    apiVersions:
+    - v1
+    operations:
+    - CREATE
+    - UPDATE
+    resources:
+    - servicemeshmembers
+    scope: '*'
+  sideEffects: None
+  timeoutSeconds: 10

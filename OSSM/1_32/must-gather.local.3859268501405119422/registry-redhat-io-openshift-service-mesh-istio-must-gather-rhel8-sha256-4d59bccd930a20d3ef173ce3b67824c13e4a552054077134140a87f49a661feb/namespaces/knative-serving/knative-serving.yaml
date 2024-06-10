@@ -1,0 +1,81 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"v1","kind":"Namespace","metadata":{"annotations":{},"name":"knative-serving"}}
+    openshift.io/sa.scc.mcs: s0:c27,c9
+    openshift.io/sa.scc.supplemental-groups: 1000720000/10000
+    openshift.io/sa.scc.uid-range: 1000720000/10000
+  creationTimestamp: "2024-06-05T10:46:22Z"
+  labels:
+    kubernetes.io/metadata.name: knative-serving
+    maistra.io/member-of: istio-system
+    openshift.io/cluster-monitoring: "false"
+    pod-security.kubernetes.io/audit: restricted
+    pod-security.kubernetes.io/audit-version: v1.24
+    pod-security.kubernetes.io/warn: restricted
+    pod-security.kubernetes.io/warn-version: v1.24
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:labels:
+          f:pod-security.kubernetes.io/audit: {}
+          f:pod-security.kubernetes.io/audit-version: {}
+          f:pod-security.kubernetes.io/warn: {}
+          f:pod-security.kubernetes.io/warn-version: {}
+    manager: pod-security-admission-label-synchronization-controller
+    operation: Apply
+    time: "2024-06-05T10:46:22Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:openshift.io/sa.scc.mcs: {}
+          f:openshift.io/sa.scc.supplemental-groups: {}
+          f:openshift.io/sa.scc.uid-range: {}
+    manager: cluster-policy-controller
+    operation: Update
+    time: "2024-06-05T10:46:22Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:kubectl.kubernetes.io/last-applied-configuration: {}
+        f:labels:
+          .: {}
+          f:kubernetes.io/metadata.name: {}
+    manager: kubectl-client-side-apply
+    operation: Update
+    time: "2024-06-05T10:46:22Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:labels:
+          f:maistra.io/member-of: {}
+    manager: istio-operator
+    operation: Update
+    time: "2024-06-05T10:46:23Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:labels:
+          f:openshift.io/cluster-monitoring: {}
+    manager: operator
+    operation: Update
+    time: "2024-06-05T10:55:45Z"
+  name: knative-serving
+  resourceVersion: "40892"
+  uid: cc5f36a3-6caf-4c05-9970-3d3ad14aef24
+spec:
+  finalizers:
+  - kubernetes
+status:
+  phase: Active

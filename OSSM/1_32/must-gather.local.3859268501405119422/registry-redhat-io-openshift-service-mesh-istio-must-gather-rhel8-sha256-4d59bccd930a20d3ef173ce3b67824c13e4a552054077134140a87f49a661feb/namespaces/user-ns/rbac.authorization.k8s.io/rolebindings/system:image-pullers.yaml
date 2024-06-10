@@ -1,0 +1,33 @@
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  annotations:
+    openshift.io/description: Allows all pods in this namespace to pull images from
+      this namespace.  It is auto-managed by a controller; remove subjects to disable.
+  creationTimestamp: "2024-06-05T10:56:21Z"
+  managedFields:
+  - apiVersion: rbac.authorization.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:openshift.io/description: {}
+      f:roleRef: {}
+      f:subjects: {}
+    manager: openshift-controller-manager
+    operation: Update
+    time: "2024-06-05T10:56:20Z"
+  name: system:image-pullers
+  namespace: user-ns
+  resourceVersion: "42123"
+  uid: dd36f850-252e-45cc-b6bd-07d0a2b22ab7
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: system:image-puller
+subjects:
+- apiGroup: rbac.authorization.k8s.io
+  kind: Group
+  name: system:serviceaccounts:user-ns

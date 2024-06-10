@@ -1,0 +1,17 @@
+2024-06-05T10:56:07.767510590Z 2024/06/05 10:56:07 Registering 3 clients
+2024-06-05T10:56:07.767613203Z 2024/06/05 10:56:07 Registering 4 informer factories
+2024-06-05T10:56:07.767661694Z 2024/06/05 10:56:07 Registering 4 informers
+2024-06-05T10:56:07.767689235Z 2024/06/05 10:56:07 Registering 1 controllers
+2024-06-05T10:56:07.779834403Z {"severity":"INFO","timestamp":"2024-06-05T10:56:07.779767591Z","caller":"logging/config.go:80","message":"Unable to read vcs.revision from binary"}
+2024-06-05T10:56:07.779854803Z {"severity":"INFO","timestamp":"2024-06-05T10:56:07.779819102Z","logger":"hpaautoscaler","caller":"profiling/server.go:65","message":"Profiling enabled: false"}
+2024-06-05T10:56:07.783173848Z {"severity":"INFO","timestamp":"2024-06-05T10:56:07.783135667Z","logger":"hpaautoscaler","caller":"leaderelection/context.go:47","message":"Running with Standard leader election"}
+2024-06-05T10:56:07.785958308Z {"severity":"INFO","timestamp":"2024-06-05T10:56:07.785912077Z","logger":"hpaautoscaler","caller":"hpa/controller.go:69","message":"Setting up ConfigMap receivers"}
+2024-06-05T10:56:07.786090092Z {"severity":"INFO","timestamp":"2024-06-05T10:56:07.78603052Z","logger":"hpaautoscaler","caller":"hpa/controller.go:82","message":"Setting up hpa-class event handlers"}
+2024-06-05T10:56:07.790525184Z {"severity":"INFO","timestamp":"2024-06-05T10:56:07.790484013Z","logger":"hpaautoscaler","caller":"sharedmain/main.go:283","message":"Starting configuration manager..."}
+2024-06-05T10:56:07.894477743Z {"level":"info","ts":1717584967.8908591,"logger":"fallback","caller":"injection/injection.go:63","msg":"Starting informers..."}
+2024-06-05T10:56:07.991977467Z {"severity":"INFO","timestamp":"2024-06-05T10:56:07.991884335Z","logger":"hpaautoscaler","caller":"sharedmain/main.go:311","message":"Starting controllers..."}
+2024-06-05T10:56:07.991977467Z {"severity":"INFO","timestamp":"2024-06-05T10:56:07.991959417Z","logger":"hpaautoscaler","caller":"injection/health_check.go:43","message":"Probes server listening on port 8080"}
+2024-06-05T10:56:07.992099020Z {"severity":"INFO","timestamp":"2024-06-05T10:56:07.992040809Z","logger":"hpaautoscaler","caller":"leaderelection/context.go:149","message":"hpaautoscaler.knative.dev.serving.pkg.reconciler.autoscaling.hpa.reconciler.00-of-01 will run in leader-elected mode with id \"autoscaler-hpa-684ccf4558-nxztv_36831d92-8b85-4e8c-b240-d3e542566262\""}
+2024-06-05T10:56:07.992114261Z {"severity":"INFO","timestamp":"2024-06-05T10:56:07.99209787Z","logger":"hpaautoscaler","caller":"controller/controller.go:486","message":"Starting controller and workers","knative.dev/controller":"knative.dev.serving.pkg.reconciler.autoscaling.hpa.Reconciler","knative.dev/kind":"autoscaling.internal.knative.dev.PodAutoscaler"}
+2024-06-05T10:56:07.992124741Z {"severity":"INFO","timestamp":"2024-06-05T10:56:07.99211103Z","logger":"hpaautoscaler","caller":"controller/controller.go:496","message":"Started workers","knative.dev/controller":"knative.dev.serving.pkg.reconciler.autoscaling.hpa.Reconciler","knative.dev/kind":"autoscaling.internal.knative.dev.PodAutoscaler"}
+2024-06-05T10:56:07.992181682Z I0605 10:56:07.992144       1 leaderelection.go:248] attempting to acquire leader lease knative-serving/hpaautoscaler.knative.dev.serving.pkg.reconciler.autoscaling.hpa.reconciler.00-of-01...

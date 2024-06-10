@@ -1,0 +1,18 @@
+2024-06-05T10:56:16.633781409Z 2024-06-05T10:56:16.633725Z	info	dns	Starting local udp DNS server on 127.0.0.1:15053
+2024-06-05T10:56:16.634063605Z 2024-06-05T10:56:16.634047Z	info	dns	Starting local tcp DNS server on 127.0.0.1:15053
+2024-06-05T10:56:16.634214840Z 2024-06-05T10:56:16.634200Z	info	citadelclient	Citadel client using custom root cert: var/run/secrets/istio/root-cert.pem
+2024-06-05T10:56:16.652785381Z 2024-06-05T10:56:16.652744Z	info	ads	All caches have been synced up in 24.941763ms, marking server ready
+2024-06-05T10:56:16.653198871Z 2024-06-05T10:56:16.653176Z	info	xdsproxy	Initializing with upstream address "istiod-basic.istio-system.svc:15012" and cluster "Kubernetes"
+2024-06-05T10:56:16.653768956Z 2024-06-05T10:56:16.653735Z	info	sds	Starting SDS grpc server
+2024-06-05T10:56:16.723613129Z 2024-06-05T10:56:16.723551Z	info	xdsproxy	connected to upstream XDS server: istiod-basic.istio-system.svc:15012
+2024-06-05T10:56:16.754867322Z 2024-06-05T10:56:16.754833Z	info	ads	ADS: new connection for node:autoscaler-588cfb64fb-9nv45.knative-serving-1
+2024-06-05T10:56:16.755976630Z 2024-06-05T10:56:16.755954Z	info	ads	ADS: new connection for node:autoscaler-588cfb64fb-9nv45.knative-serving-2
+2024-06-05T10:56:16.848000824Z 2024-06-05T10:56:16.847922Z	info	cache	generated new workload certificate	latency=194.342891ms ttl=23h59m59.152086428s
+2024-06-05T10:56:16.848000824Z 2024-06-05T10:56:16.847949Z	info	cache	Root cert has changed, start rotating root cert
+2024-06-05T10:56:16.848000824Z 2024-06-05T10:56:16.847964Z	info	ads	XDS: Incremental Pushing:0 ConnectedEndpoints:2 Version:
+2024-06-05T10:56:16.848031435Z 2024-06-05T10:56:16.848009Z	info	cache	returned workload trust anchor from cache	ttl=23h59m59.151993466s
+2024-06-05T10:56:16.848031435Z 2024-06-05T10:56:16.848020Z	info	cache	returned workload certificate from cache	ttl=23h59m59.151981495s
+2024-06-05T10:56:16.848155338Z 2024-06-05T10:56:16.848128Z	info	cache	returned workload trust anchor from cache	ttl=23h59m59.151876963s
+2024-06-05T10:56:16.848231690Z 2024-06-05T10:56:16.848211Z	info	ads	SDS: PUSH request for node:autoscaler-588cfb64fb-9nv45.knative-serving resources:1 size:4.0kB resource:default
+2024-06-05T10:56:16.848289432Z 2024-06-05T10:56:16.848263Z	info	ads	SDS: PUSH request for node:autoscaler-588cfb64fb-9nv45.knative-serving resources:1 size:1.1kB resource:ROOTCA
+2024-06-05T10:56:16.848332613Z 2024-06-05T10:56:16.848310Z	info	cache	returned workload trust anchor from cache	ttl=23h59m59.151691678s

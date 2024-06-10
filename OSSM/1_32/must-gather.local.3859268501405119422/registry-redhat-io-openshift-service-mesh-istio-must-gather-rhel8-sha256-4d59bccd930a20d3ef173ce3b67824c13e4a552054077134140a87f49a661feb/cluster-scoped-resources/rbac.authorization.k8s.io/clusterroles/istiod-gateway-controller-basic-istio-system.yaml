@@ -1,0 +1,74 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"rbac.authorization.k8s.io/v1","kind":"ClusterRole","metadata":{"annotations":{"maistra.io/mesh-generation":"2.5.1-1-2"},"labels":{"app":"istiod","app.kubernetes.io/component":"istio-discovery","app.kubernetes.io/instance":"istio-system","app.kubernetes.io/managed-by":"maistra-istio-operator","app.kubernetes.io/name":"istio-discovery","app.kubernetes.io/part-of":"istio","app.kubernetes.io/version":"2.5.1-1-2","maistra-version":"2.4.7","maistra.io/owner":"istio-system","maistra.io/owner-name":"basic","release":"istio"},"name":"istiod-gateway-controller-basic-istio-system"},"rules":[{"apiGroups":["apps"],"resources":["deployments"],"verbs":["get","watch","list","update","patch","create","delete"]},{"apiGroups":[""],"resources":["services"],"verbs":["get","watch","list","update","patch","create","delete"]}]}
+    maistra.io/mesh-generation: 2.5.1-1-2
+  creationTimestamp: "2024-06-05T10:45:40Z"
+  labels:
+    app: istiod
+    app.kubernetes.io/component: istio-discovery
+    app.kubernetes.io/instance: istio-system
+    app.kubernetes.io/managed-by: maistra-istio-operator
+    app.kubernetes.io/name: istio-discovery
+    app.kubernetes.io/part-of: istio
+    app.kubernetes.io/version: 2.5.1-1-2
+    maistra-version: 2.4.7
+    maistra.io/owner: istio-system
+    maistra.io/owner-name: basic
+    release: istio
+  managedFields:
+  - apiVersion: rbac.authorization.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:kubectl.kubernetes.io/last-applied-configuration: {}
+          f:maistra.io/mesh-generation: {}
+        f:labels:
+          .: {}
+          f:app: {}
+          f:app.kubernetes.io/component: {}
+          f:app.kubernetes.io/instance: {}
+          f:app.kubernetes.io/managed-by: {}
+          f:app.kubernetes.io/name: {}
+          f:app.kubernetes.io/part-of: {}
+          f:app.kubernetes.io/version: {}
+          f:maistra-version: {}
+          f:maistra.io/owner: {}
+          f:maistra.io/owner-name: {}
+          f:release: {}
+      f:rules: {}
+    manager: istio-operator
+    operation: Update
+    time: "2024-06-05T10:45:40Z"
+  name: istiod-gateway-controller-basic-istio-system
+  resourceVersion: "35011"
+  uid: 856641ef-8e8e-43c9-a910-d7d40bd7370e
+rules:
+- apiGroups:
+  - apps
+  resources:
+  - deployments
+  verbs:
+  - get
+  - watch
+  - list
+  - update
+  - patch
+  - create
+  - delete
+- apiGroups:
+  - ""
+  resources:
+  - services
+  verbs:
+  - get
+  - watch
+  - list
+  - update
+  - patch
+  - create
+  - delete

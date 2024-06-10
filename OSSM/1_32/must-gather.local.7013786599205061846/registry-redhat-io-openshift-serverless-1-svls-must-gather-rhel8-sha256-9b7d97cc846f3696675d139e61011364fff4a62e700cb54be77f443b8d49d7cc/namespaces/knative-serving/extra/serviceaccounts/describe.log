@@ -1,0 +1,52 @@
+Name:                activator
+Namespace:           knative-serving
+Labels:              app.kubernetes.io/component=activator
+                     app.kubernetes.io/name=knative-serving
+                     app.kubernetes.io/version=release-v1.11
+Annotations:         manifestival: new
+Image pull secrets:  activator-dockercfg-dqc5h
+Mountable secrets:   activator-dockercfg-dqc5h
+Tokens:              activator-token-7mk9j
+Events:              <none>
+
+
+Name:                builder
+Namespace:           knative-serving
+Labels:              <none>
+Annotations:         <none>
+Image pull secrets:  builder-dockercfg-vs2n2
+Mountable secrets:   builder-dockercfg-vs2n2
+Tokens:              builder-token-xb9kj
+Events:              <none>
+
+
+Name:                controller
+Namespace:           knative-serving
+Labels:              app.kubernetes.io/component=controller
+                     app.kubernetes.io/name=knative-serving
+                     app.kubernetes.io/version=release-v1.11
+Annotations:         manifestival: new
+Image pull secrets:  controller-dockercfg-tv7hw
+Mountable secrets:   controller-dockercfg-tv7hw
+Tokens:              controller-token-6rfj2
+Events:              <none>
+
+
+Name:                default
+Namespace:           knative-serving
+Labels:              <none>
+Annotations:         <none>
+Image pull secrets:  default-dockercfg-nfknp
+Mountable secrets:   default-dockercfg-nfknp
+Tokens:              default-token-58nmm
+Events:              <none>
+
+
+Name:                deployer
+Namespace:           knative-serving
+Labels:              <none>
+Annotations:         <none>
+Image pull secrets:  deployer-dockercfg-ctk7j
+Mountable secrets:   deployer-dockercfg-ctk7j
+Tokens:              deployer-token-htk8b
+Events:              <none>

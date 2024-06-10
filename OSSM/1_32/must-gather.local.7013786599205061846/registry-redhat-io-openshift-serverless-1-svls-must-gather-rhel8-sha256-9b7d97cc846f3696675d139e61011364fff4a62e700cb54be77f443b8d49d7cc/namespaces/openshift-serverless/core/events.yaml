@@ -1,0 +1,1852 @@
+---
+apiVersion: v1
+items:
+- action: Binding
+  apiVersion: v1
+  eventTime: "2024-06-05T10:54:12.162446Z"
+  firstTimestamp: null
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: knative-openshift-545686887b-bx4wx
+    namespace: openshift-serverless
+    resourceVersion: "39608"
+    uid: dcf00c3e-9609-42cb-b6ca-7f3f1ab87e38
+  kind: Event
+  lastTimestamp: null
+  message: Successfully assigned openshift-serverless/knative-openshift-545686887b-bx4wx
+    to ip-10-0-105-86.ec2.internal
+  metadata:
+    creationTimestamp: "2024-06-05T10:54:12Z"
+    managedFields:
+    - apiVersion: events.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:action: {}
+        f:eventTime: {}
+        f:note: {}
+        f:reason: {}
+        f:regarding: {}
+        f:reportingController: {}
+        f:reportingInstance: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2024-06-05T10:54:12Z"
+    name: knative-openshift-545686887b-bx4wx.17d61652a8bc1b8c
+    namespace: openshift-serverless
+    resourceVersion: "39610"
+    uid: 8d5d6647-1ecd-4ac8-ad56-561925a862eb
+  reason: Scheduled
+  reportingComponent: default-scheduler
+  reportingInstance: default-scheduler-ip-10-0-116-204
+  source: {}
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-06-05T10:54:12Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: knative-openshift-545686887b-bx4wx
+    namespace: openshift-serverless
+    resourceVersion: "39615"
+    uid: dcf00c3e-9609-42cb-b6ca-7f3f1ab87e38
+  kind: Event
+  lastTimestamp: "2024-06-05T10:54:12Z"
+  message: Add eth0 [10.129.2.15/23] from ovn-kubernetes
+  metadata:
+    creationTimestamp: "2024-06-05T10:54:12Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: multus-daemon
+      operation: Update
+      time: "2024-06-05T10:54:12Z"
+    name: knative-openshift-545686887b-bx4wx.17d61652cce49a9c
+    namespace: openshift-serverless
+    resourceVersion: "39636"
+    uid: 547d4b17-c3f8-4e10-8a35-0212b7d26d4d
+  reason: AddedInterface
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: multus
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-06-05T10:54:12Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.initContainers{cli-artifacts}
+    kind: Pod
+    name: knative-openshift-545686887b-bx4wx
+    namespace: openshift-serverless
+    resourceVersion: "39609"
+    uid: dcf00c3e-9609-42cb-b6ca-7f3f1ab87e38
+  kind: Event
+  lastTimestamp: "2024-06-05T10:54:12Z"
+  message: Pulling image "registry.redhat.io/openshift-serverless-1/kn-cli-artifacts-rhel8@sha256:73f0e84235a401319734ab3dd0074533e2364d5043e7afa711ce0c40ca3d71bb"
+  metadata:
+    creationTimestamp: "2024-06-05T10:54:12Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-06-05T10:54:12Z"
+    name: knative-openshift-545686887b-bx4wx.17d61652d0bc625d
+    namespace: openshift-serverless
+    resourceVersion: "39639"
+    uid: ad11d254-be35-40f4-9b00-de7793f4d40a
+  reason: Pulling
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-105-86.ec2.internal
+  source:
+    component: kubelet
+    host: ip-10-0-105-86.ec2.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-06-05T10:54:17Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.initContainers{cli-artifacts}
+    kind: Pod
+    name: knative-openshift-545686887b-bx4wx
+    namespace: openshift-serverless
+    resourceVersion: "39609"
+    uid: dcf00c3e-9609-42cb-b6ca-7f3f1ab87e38
+  kind: Event
+  lastTimestamp: "2024-06-05T10:54:17Z"
+  message: Successfully pulled image "registry.redhat.io/openshift-serverless-1/kn-cli-artifacts-rhel8@sha256:73f0e84235a401319734ab3dd0074533e2364d5043e7afa711ce0c40ca3d71bb"
+    in 4.57s (4.57s including waiting)
+  metadata:
+    creationTimestamp: "2024-06-05T10:54:17Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-06-05T10:54:17Z"
+    name: knative-openshift-545686887b-bx4wx.17d61653e12a6381
+    namespace: openshift-serverless
+    resourceVersion: "39816"
+    uid: eb85588a-5cbb-4d5a-927d-5e0b0c7d11a2
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-105-86.ec2.internal
+  source:
+    component: kubelet
+    host: ip-10-0-105-86.ec2.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-06-05T10:54:17Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.initContainers{cli-artifacts}
+    kind: Pod
+    name: knative-openshift-545686887b-bx4wx
+    namespace: openshift-serverless
+    resourceVersion: "39609"
+    uid: dcf00c3e-9609-42cb-b6ca-7f3f1ab87e38
+  kind: Event
+  lastTimestamp: "2024-06-05T10:54:17Z"
+  message: Created container cli-artifacts
+  metadata:
+    creationTimestamp: "2024-06-05T10:54:17Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-06-05T10:54:17Z"
+    name: knative-openshift-545686887b-bx4wx.17d61653e6b7235f
+    namespace: openshift-serverless
+    resourceVersion: "39818"
+    uid: d02da158-5ebe-4072-bc74-3914bd8b2f29
+  reason: Created
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-105-86.ec2.internal
+  source:
+    component: kubelet
+    host: ip-10-0-105-86.ec2.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-06-05T10:54:17Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.initContainers{cli-artifacts}
+    kind: Pod
+    name: knative-openshift-545686887b-bx4wx
+    namespace: openshift-serverless
+    resourceVersion: "39609"
+    uid: dcf00c3e-9609-42cb-b6ca-7f3f1ab87e38
+  kind: Event
+  lastTimestamp: "2024-06-05T10:54:17Z"
+  message: Started container cli-artifacts
+  metadata:
+    creationTimestamp: "2024-06-05T10:54:17Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-06-05T10:54:17Z"
+    name: knative-openshift-545686887b-bx4wx.17d61653e79bee3e
+    namespace: openshift-serverless
+    resourceVersion: "39820"
+    uid: a8c102b4-3f31-4225-835f-38207fc408a9
+  reason: Started
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-105-86.ec2.internal
+  source:
+    component: kubelet
+    host: ip-10-0-105-86.ec2.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-06-05T10:54:18Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{knative-openshift}
+    kind: Pod
+    name: knative-openshift-545686887b-bx4wx
+    namespace: openshift-serverless
+    resourceVersion: "39609"
+    uid: dcf00c3e-9609-42cb-b6ca-7f3f1ab87e38
+  kind: Event
+  lastTimestamp: "2024-06-05T10:54:18Z"
+  message: Pulling image "registry.redhat.io/openshift-serverless-1/knative-rhel8-operator@sha256:97ac614ae943b8fa4ba7f1b69fba48172928e19c4ee993203d56388965590ade"
+  metadata:
+    creationTimestamp: "2024-06-05T10:54:18Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-06-05T10:54:18Z"
+    name: knative-openshift-545686887b-bx4wx.17d6165425c7866e
+    namespace: openshift-serverless
+    resourceVersion: "39855"
+    uid: a7b199c5-3b3f-4815-a491-5e2b5dd37819
+  reason: Pulling
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-105-86.ec2.internal
+  source:
+    component: kubelet
+    host: ip-10-0-105-86.ec2.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-06-05T10:54:21Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{knative-openshift}
+    kind: Pod
+    name: knative-openshift-545686887b-bx4wx
+    namespace: openshift-serverless
+    resourceVersion: "39609"
+    uid: dcf00c3e-9609-42cb-b6ca-7f3f1ab87e38
+  kind: Event
+  lastTimestamp: "2024-06-05T10:54:21Z"
+  message: Successfully pulled image "registry.redhat.io/openshift-serverless-1/knative-rhel8-operator@sha256:97ac614ae943b8fa4ba7f1b69fba48172928e19c4ee993203d56388965590ade"
+    in 3.415s (3.415s including waiting)
+  metadata:
+    creationTimestamp: "2024-06-05T10:54:21Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-06-05T10:54:21Z"
+    name: knative-openshift-545686887b-bx4wx.17d61654f155214e
+    namespace: openshift-serverless
+    resourceVersion: "39913"
+    uid: cd5235be-22f7-4155-9496-4c4761ddad57
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-105-86.ec2.internal
+  source:
+    component: kubelet
+    host: ip-10-0-105-86.ec2.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-06-05T10:54:22Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{knative-openshift}
+    kind: Pod
+    name: knative-openshift-545686887b-bx4wx
+    namespace: openshift-serverless
+    resourceVersion: "39609"
+    uid: dcf00c3e-9609-42cb-b6ca-7f3f1ab87e38
+  kind: Event
+  lastTimestamp: "2024-06-05T10:54:22Z"
+  message: Created container knative-openshift
+  metadata:
+    creationTimestamp: "2024-06-05T10:54:22Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-06-05T10:54:22Z"
+    name: knative-openshift-545686887b-bx4wx.17d61654f6c03fed
+    namespace: openshift-serverless
+    resourceVersion: "39916"
+    uid: 58d4aada-a6df-4b3b-83ac-044a67200262
+  reason: Created
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-105-86.ec2.internal
+  source:
+    component: kubelet
+    host: ip-10-0-105-86.ec2.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-06-05T10:54:22Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{knative-openshift}
+    kind: Pod
+    name: knative-openshift-545686887b-bx4wx
+    namespace: openshift-serverless
+    resourceVersion: "39609"
+    uid: dcf00c3e-9609-42cb-b6ca-7f3f1ab87e38
+  kind: Event
+  lastTimestamp: "2024-06-05T10:54:22Z"
+  message: Started container knative-openshift
+  metadata:
+    creationTimestamp: "2024-06-05T10:54:22Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-06-05T10:54:22Z"
+    name: knative-openshift-545686887b-bx4wx.17d61654f7b44811
+    namespace: openshift-serverless
+    resourceVersion: "39917"
+    uid: 81036ae7-cb89-4f89-8492-dbbee05c8b06
+  reason: Started
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-105-86.ec2.internal
+  source:
+    component: kubelet
+    host: ip-10-0-105-86.ec2.internal
+  type: Normal
+- apiVersion: v1
+  count: 2
+  eventTime: null
+  firstTimestamp: "2024-06-05T10:54:22Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{knative-openshift}
+    kind: Pod
+    name: knative-openshift-545686887b-bx4wx
+    namespace: openshift-serverless
+    resourceVersion: "39609"
+    uid: dcf00c3e-9609-42cb-b6ca-7f3f1ab87e38
+  kind: Event
+  lastTimestamp: "2024-06-05T10:54:23Z"
+  message: "Readiness probe error: Get \"http://10.129.2.15:8687/readyz\": dial tcp
+    10.129.2.15:8687: connect: connection refused\nbody: \n"
+  metadata:
+    creationTimestamp: "2024-06-05T10:54:22Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-06-05T10:54:23Z"
+    name: knative-openshift-545686887b-bx4wx.17d61655147aa119
+    namespace: openshift-serverless
+    resourceVersion: "39944"
+    uid: 50f83432-9499-4cd8-8ff1-f8727672f008
+  reason: ProbeError
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-105-86.ec2.internal
+  source:
+    component: kubelet
+    host: ip-10-0-105-86.ec2.internal
+  type: Warning
+- apiVersion: v1
+  count: 2
+  eventTime: null
+  firstTimestamp: "2024-06-05T10:54:22Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{knative-openshift}
+    kind: Pod
+    name: knative-openshift-545686887b-bx4wx
+    namespace: openshift-serverless
+    resourceVersion: "39609"
+    uid: dcf00c3e-9609-42cb-b6ca-7f3f1ab87e38
+  kind: Event
+  lastTimestamp: "2024-06-05T10:54:23Z"
+  message: 'Readiness probe failed: Get "http://10.129.2.15:8687/readyz": dial tcp
+    10.129.2.15:8687: connect: connection refused'
+  metadata:
+    creationTimestamp: "2024-06-05T10:54:22Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-06-05T10:54:23Z"
+    name: knative-openshift-545686887b-bx4wx.17d61655147b3594
+    namespace: openshift-serverless
+    resourceVersion: "39945"
+    uid: 336fbe24-dfab-462e-81e6-80a1aaef0d3d
+  reason: Unhealthy
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-105-86.ec2.internal
+  source:
+    component: kubelet
+    host: ip-10-0-105-86.ec2.internal
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-06-05T10:54:12Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: ReplicaSet
+    name: knative-openshift-545686887b
+    namespace: openshift-serverless
+    resourceVersion: "39603"
+    uid: 6cb8d864-5429-4108-8be3-1be3024735cd
+  kind: Event
+  lastTimestamp: "2024-06-05T10:54:12Z"
+  message: 'Created pod: knative-openshift-545686887b-bx4wx'
+  metadata:
+    creationTimestamp: "2024-06-05T10:54:12Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2024-06-05T10:54:12Z"
+    name: knative-openshift-545686887b.17d61652a9492567
+    namespace: openshift-serverless
+    resourceVersion: "39613"
+    uid: 58115579-830e-41b1-8031-5ee7a42ea245
+  reason: SuccessfulCreate
+  reportingComponent: replicaset-controller
+  reportingInstance: ""
+  source:
+    component: replicaset-controller
+  type: Normal
+- action: Binding
+  apiVersion: v1
+  eventTime: "2024-06-05T10:54:13.195944Z"
+  firstTimestamp: null
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: knative-openshift-ingress-97b46bb9-rv5js
+    namespace: openshift-serverless
+    resourceVersion: "39660"
+    uid: 21bfc6ba-c1f7-41d9-ade6-1002f689617d
+  kind: Event
+  lastTimestamp: null
+  message: Successfully assigned openshift-serverless/knative-openshift-ingress-97b46bb9-rv5js
+    to ip-10-0-91-247.ec2.internal
+  metadata:
+    creationTimestamp: "2024-06-05T10:54:13Z"
+    managedFields:
+    - apiVersion: events.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:action: {}
+        f:eventTime: {}
+        f:note: {}
+        f:reason: {}
+        f:regarding: {}
+        f:reportingController: {}
+        f:reportingInstance: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2024-06-05T10:54:13Z"
+    name: knative-openshift-ingress-97b46bb9-rv5js.17d61652e6560e38
+    namespace: openshift-serverless
+    resourceVersion: "39664"
+    uid: 7c6e539c-5377-495c-a4d0-1c58ec1792f5
+  reason: Scheduled
+  reportingComponent: default-scheduler
+  reportingInstance: default-scheduler-ip-10-0-116-204
+  source: {}
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-06-05T10:54:13Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: knative-openshift-ingress-97b46bb9-rv5js
+    namespace: openshift-serverless
+    resourceVersion: "39668"
+    uid: 21bfc6ba-c1f7-41d9-ade6-1002f689617d
+  kind: Event
+  lastTimestamp: "2024-06-05T10:54:13Z"
+  message: Add eth0 [10.128.2.24/23] from ovn-kubernetes
+  metadata:
+    creationTimestamp: "2024-06-05T10:54:13Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: multus-daemon
+      operation: Update
+      time: "2024-06-05T10:54:13Z"
+    name: knative-openshift-ingress-97b46bb9-rv5js.17d616530a132f21
+    namespace: openshift-serverless
+    resourceVersion: "39689"
+    uid: 6f01289d-c311-4589-9721-c4461650849d
+  reason: AddedInterface
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: multus
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-06-05T10:54:13Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{knative-openshift-ingress}
+    kind: Pod
+    name: knative-openshift-ingress-97b46bb9-rv5js
+    namespace: openshift-serverless
+    resourceVersion: "39661"
+    uid: 21bfc6ba-c1f7-41d9-ade6-1002f689617d
+  kind: Event
+  lastTimestamp: "2024-06-05T10:54:13Z"
+  message: Pulling image "registry.redhat.io/openshift-serverless-1/ingress-rhel8-operator@sha256:124c3d5d4d8ff7adb19fe565a8fa26f7577a21b75979171daa0af7b2aa10ac8d"
+  metadata:
+    creationTimestamp: "2024-06-05T10:54:13Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-06-05T10:54:13Z"
+    name: knative-openshift-ingress-97b46bb9-rv5js.17d616530b897838
+    namespace: openshift-serverless
+    resourceVersion: "39691"
+    uid: e7e03746-2afa-4c9d-851a-66f65cc91ab5
+  reason: Pulling
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-91-247.ec2.internal
+  source:
+    component: kubelet
+    host: ip-10-0-91-247.ec2.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-06-05T10:54:17Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{knative-openshift-ingress}
+    kind: Pod
+    name: knative-openshift-ingress-97b46bb9-rv5js
+    namespace: openshift-serverless
+    resourceVersion: "39661"
+    uid: 21bfc6ba-c1f7-41d9-ade6-1002f689617d
+  kind: Event
+  lastTimestamp: "2024-06-05T10:54:17Z"
+  message: Successfully pulled image "registry.redhat.io/openshift-serverless-1/ingress-rhel8-operator@sha256:124c3d5d4d8ff7adb19fe565a8fa26f7577a21b75979171daa0af7b2aa10ac8d"
+    in 3.693s (3.693s including waiting)
+  metadata:
+    creationTimestamp: "2024-06-05T10:54:17Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-06-05T10:54:17Z"
+    name: knative-openshift-ingress-97b46bb9-rv5js.17d61653e7a9c846
+    namespace: openshift-serverless
+    resourceVersion: "39821"
+    uid: 890ac5f5-5def-4bb4-806d-eae65f8f166c
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-91-247.ec2.internal
+  source:
+    component: kubelet
+    host: ip-10-0-91-247.ec2.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-06-05T10:54:17Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{knative-openshift-ingress}
+    kind: Pod
+    name: knative-openshift-ingress-97b46bb9-rv5js
+    namespace: openshift-serverless
+    resourceVersion: "39661"
+    uid: 21bfc6ba-c1f7-41d9-ade6-1002f689617d
+  kind: Event
+  lastTimestamp: "2024-06-05T10:54:17Z"
+  message: Created container knative-openshift-ingress
+  metadata:
+    creationTimestamp: "2024-06-05T10:54:17Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-06-05T10:54:17Z"
+    name: knative-openshift-ingress-97b46bb9-rv5js.17d61653ec638e2d
+    namespace: openshift-serverless
+    resourceVersion: "39828"
+    uid: 67bcee9f-a407-4acc-85c4-61dc491dca7c
+  reason: Created
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-91-247.ec2.internal
+  source:
+    component: kubelet
+    host: ip-10-0-91-247.ec2.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-06-05T10:54:17Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{knative-openshift-ingress}
+    kind: Pod
+    name: knative-openshift-ingress-97b46bb9-rv5js
+    namespace: openshift-serverless
+    resourceVersion: "39661"
+    uid: 21bfc6ba-c1f7-41d9-ade6-1002f689617d
+  kind: Event
+  lastTimestamp: "2024-06-05T10:54:17Z"
+  message: Started container knative-openshift-ingress
+  metadata:
+    creationTimestamp: "2024-06-05T10:54:17Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-06-05T10:54:17Z"
+    name: knative-openshift-ingress-97b46bb9-rv5js.17d61653edf5b5c7
+    namespace: openshift-serverless
+    resourceVersion: "39831"
+    uid: d173c60a-249d-4782-ade7-0d799461e2e3
+  reason: Started
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-91-247.ec2.internal
+  source:
+    component: kubelet
+    host: ip-10-0-91-247.ec2.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-06-05T10:54:13Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: ReplicaSet
+    name: knative-openshift-ingress-97b46bb9
+    namespace: openshift-serverless
+    resourceVersion: "39656"
+    uid: fd24893a-4219-4ba1-8db3-75fb32a32d29
+  kind: Event
+  lastTimestamp: "2024-06-05T10:54:13Z"
+  message: 'Created pod: knative-openshift-ingress-97b46bb9-rv5js'
+  metadata:
+    creationTimestamp: "2024-06-05T10:54:13Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2024-06-05T10:54:13Z"
+    name: knative-openshift-ingress-97b46bb9.17d61652e5416654
+    namespace: openshift-serverless
+    resourceVersion: "39663"
+    uid: 8989263b-61c3-4414-b75f-2c586f024aae
+  reason: SuccessfulCreate
+  reportingComponent: replicaset-controller
+  reportingInstance: ""
+  source:
+    component: replicaset-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-06-05T10:54:13Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: knative-openshift-ingress
+    namespace: openshift-serverless
+    resourceVersion: "39655"
+    uid: 316ed887-6fcf-41e6-98e1-e38ae6225720
+  kind: Event
+  lastTimestamp: "2024-06-05T10:54:13Z"
+  message: Scaled up replica set knative-openshift-ingress-97b46bb9 to 1
+  metadata:
+    creationTimestamp: "2024-06-05T10:54:13Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2024-06-05T10:54:13Z"
+    name: knative-openshift-ingress.17d61652e3d656ae
+    namespace: openshift-serverless
+    resourceVersion: "39658"
+    uid: 6cec5218-247b-4fa5-9db3-b3c1024a16d6
+  reason: ScalingReplicaSet
+  reportingComponent: deployment-controller
+  reportingInstance: ""
+  source:
+    component: deployment-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-06-05T10:54:12Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: knative-openshift
+    namespace: openshift-serverless
+    resourceVersion: "39602"
+    uid: 373c4065-c09d-46de-a925-d97b3c018053
+  kind: Event
+  lastTimestamp: "2024-06-05T10:54:12Z"
+  message: Scaled up replica set knative-openshift-545686887b to 1
+  metadata:
+    creationTimestamp: "2024-06-05T10:54:12Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2024-06-05T10:54:12Z"
+    name: knative-openshift.17d61652a3dcc3dc
+    namespace: openshift-serverless
+    resourceVersion: "39605"
+    uid: eaf7eaa2-2b06-4934-8f23-0749610ffc4a
+  reason: ScalingReplicaSet
+  reportingComponent: deployment-controller
+  reportingInstance: ""
+  source:
+    component: deployment-controller
+  type: Normal
+- action: Binding
+  apiVersion: v1
+  eventTime: "2024-06-05T10:54:11.331950Z"
+  firstTimestamp: null
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: knative-operator-webhook-5cf7789dbd-qmpnp
+    namespace: openshift-serverless
+    resourceVersion: "39573"
+    uid: e2547b9a-664c-421f-b8a4-77fbd211c461
+  kind: Event
+  lastTimestamp: null
+  message: Successfully assigned openshift-serverless/knative-operator-webhook-5cf7789dbd-qmpnp
+    to ip-10-0-91-247.ec2.internal
+  metadata:
+    creationTimestamp: "2024-06-05T10:54:11Z"
+    managedFields:
+    - apiVersion: events.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:action: {}
+        f:eventTime: {}
+        f:note: {}
+        f:reason: {}
+        f:regarding: {}
+        f:reportingController: {}
+        f:reportingInstance: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2024-06-05T10:54:11Z"
+    name: knative-operator-webhook-5cf7789dbd-qmpnp.17d61652773bbe70
+    namespace: openshift-serverless
+    resourceVersion: "39579"
+    uid: 83326e15-ce4f-415e-b719-8f12b39341aa
+  reason: Scheduled
+  reportingComponent: default-scheduler
+  reportingInstance: default-scheduler-ip-10-0-116-204
+  source: {}
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-06-05T10:54:12Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: knative-operator-webhook-5cf7789dbd-qmpnp
+    namespace: openshift-serverless
+    resourceVersion: "39585"
+    uid: e2547b9a-664c-421f-b8a4-77fbd211c461
+  kind: Event
+  lastTimestamp: "2024-06-05T10:54:12Z"
+  message: Add eth0 [10.128.2.23/23] from ovn-kubernetes
+  metadata:
+    creationTimestamp: "2024-06-05T10:54:12Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: multus-daemon
+      operation: Update
+      time: "2024-06-05T10:54:12Z"
+    name: knative-operator-webhook-5cf7789dbd-qmpnp.17d61652acce294f
+    namespace: openshift-serverless
+    resourceVersion: "39617"
+    uid: b48be061-a9a1-485a-95c2-4b59b3310cb4
+  reason: AddedInterface
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: multus
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-06-05T10:54:12Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{knative-operator}
+    kind: Pod
+    name: knative-operator-webhook-5cf7789dbd-qmpnp
+    namespace: openshift-serverless
+    resourceVersion: "39576"
+    uid: e2547b9a-664c-421f-b8a4-77fbd211c461
+  kind: Event
+  lastTimestamp: "2024-06-05T10:54:12Z"
+  message: Pulling image "registry.redhat.io/openshift-serverless-1/serverless-rhel8-operator@sha256:c92dbaae77f0b415c5d0b1f577ed48624bab2cdee901ad4f1615649b50a3f2de"
+  metadata:
+    creationTimestamp: "2024-06-05T10:54:12Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-06-05T10:54:12Z"
+    name: knative-operator-webhook-5cf7789dbd-qmpnp.17d61652aeca45f1
+    namespace: openshift-serverless
+    resourceVersion: "39619"
+    uid: 77f6542c-7c2d-4c15-bd43-f1b96604203c
+  reason: Pulling
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-91-247.ec2.internal
+  source:
+    component: kubelet
+    host: ip-10-0-91-247.ec2.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-06-05T10:54:16Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{knative-operator}
+    kind: Pod
+    name: knative-operator-webhook-5cf7789dbd-qmpnp
+    namespace: openshift-serverless
+    resourceVersion: "39576"
+    uid: e2547b9a-664c-421f-b8a4-77fbd211c461
+  kind: Event
+  lastTimestamp: "2024-06-05T10:54:16Z"
+  message: Successfully pulled image "registry.redhat.io/openshift-serverless-1/serverless-rhel8-operator@sha256:c92dbaae77f0b415c5d0b1f577ed48624bab2cdee901ad4f1615649b50a3f2de"
+    in 4.338s (4.338s including waiting)
+  metadata:
+    creationTimestamp: "2024-06-05T10:54:16Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-06-05T10:54:16Z"
+    name: knative-operator-webhook-5cf7789dbd-qmpnp.17d61653b1603e3a
+    namespace: openshift-serverless
+    resourceVersion: "39783"
+    uid: 4cc827de-9385-4d40-a580-ca84d7353c3d
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-91-247.ec2.internal
+  source:
+    component: kubelet
+    host: ip-10-0-91-247.ec2.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-06-05T10:54:16Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{knative-operator}
+    kind: Pod
+    name: knative-operator-webhook-5cf7789dbd-qmpnp
+    namespace: openshift-serverless
+    resourceVersion: "39576"
+    uid: e2547b9a-664c-421f-b8a4-77fbd211c461
+  kind: Event
+  lastTimestamp: "2024-06-05T10:54:16Z"
+  message: Created container knative-operator
+  metadata:
+    creationTimestamp: "2024-06-05T10:54:16Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-06-05T10:54:16Z"
+    name: knative-operator-webhook-5cf7789dbd-qmpnp.17d61653b653691d
+    namespace: openshift-serverless
+    resourceVersion: "39787"
+    uid: 3dcfc0b7-415d-4265-9293-38422aee676d
+  reason: Created
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-91-247.ec2.internal
+  source:
+    component: kubelet
+    host: ip-10-0-91-247.ec2.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-06-05T10:54:16Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{knative-operator}
+    kind: Pod
+    name: knative-operator-webhook-5cf7789dbd-qmpnp
+    namespace: openshift-serverless
+    resourceVersion: "39576"
+    uid: e2547b9a-664c-421f-b8a4-77fbd211c461
+  kind: Event
+  lastTimestamp: "2024-06-05T10:54:16Z"
+  message: Started container knative-operator
+  metadata:
+    creationTimestamp: "2024-06-05T10:54:16Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-06-05T10:54:16Z"
+    name: knative-operator-webhook-5cf7789dbd-qmpnp.17d61653b733efa1
+    namespace: openshift-serverless
+    resourceVersion: "39788"
+    uid: 2036f56c-7493-47d1-9b31-169815ec64d8
+  reason: Started
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-91-247.ec2.internal
+  source:
+    component: kubelet
+    host: ip-10-0-91-247.ec2.internal
+  type: Normal
+- apiVersion: v1
+  count: 10
+  eventTime: null
+  firstTimestamp: "2024-06-05T10:54:17Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{knative-operator}
+    kind: Pod
+    name: knative-operator-webhook-5cf7789dbd-qmpnp
+    namespace: openshift-serverless
+    resourceVersion: "39576"
+    uid: e2547b9a-664c-421f-b8a4-77fbd211c461
+  kind: Event
+  lastTimestamp: "2024-06-05T10:54:24Z"
+  message: "Readiness probe error: Get \"https://10.128.2.23:8443/\": dial tcp 10.128.2.23:8443:
+    connect: connection refused\nbody: \n"
+  metadata:
+    creationTimestamp: "2024-06-05T10:54:17Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-06-05T10:54:24Z"
+    name: knative-operator-webhook-5cf7789dbd-qmpnp.17d6165401639ab1
+    namespace: openshift-serverless
+    resourceVersion: "39970"
+    uid: 70d00921-ebae-49f7-9fc8-f79a4aaed59e
+  reason: ProbeError
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-91-247.ec2.internal
+  source:
+    component: kubelet
+    host: ip-10-0-91-247.ec2.internal
+  type: Warning
+- apiVersion: v1
+  count: 10
+  eventTime: null
+  firstTimestamp: "2024-06-05T10:54:17Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{knative-operator}
+    kind: Pod
+    name: knative-operator-webhook-5cf7789dbd-qmpnp
+    namespace: openshift-serverless
+    resourceVersion: "39576"
+    uid: e2547b9a-664c-421f-b8a4-77fbd211c461
+  kind: Event
+  lastTimestamp: "2024-06-05T10:54:24Z"
+  message: 'Readiness probe failed: Get "https://10.128.2.23:8443/": dial tcp 10.128.2.23:8443:
+    connect: connection refused'
+  metadata:
+    creationTimestamp: "2024-06-05T10:54:17Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-06-05T10:54:24Z"
+    name: knative-operator-webhook-5cf7789dbd-qmpnp.17d6165401642950
+    namespace: openshift-serverless
+    resourceVersion: "39972"
+    uid: 62fea4ea-149a-48fb-be41-40ba54fca5f1
+  reason: Unhealthy
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-91-247.ec2.internal
+  source:
+    component: kubelet
+    host: ip-10-0-91-247.ec2.internal
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-06-05T10:54:11Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: ReplicaSet
+    name: knative-operator-webhook-5cf7789dbd
+    namespace: openshift-serverless
+    resourceVersion: "39568"
+    uid: ebeb07ad-28e8-431f-9e7e-25cbe206d1de
+  kind: Event
+  lastTimestamp: "2024-06-05T10:54:11Z"
+  message: 'Created pod: knative-operator-webhook-5cf7789dbd-qmpnp'
+  metadata:
+    creationTimestamp: "2024-06-05T10:54:11Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2024-06-05T10:54:11Z"
+    name: knative-operator-webhook-5cf7789dbd.17d6165275f59c97
+    namespace: openshift-serverless
+    resourceVersion: "39577"
+    uid: 25bbe020-2627-496e-9b29-228de6719d17
+  reason: SuccessfulCreate
+  reportingComponent: replicaset-controller
+  reportingInstance: ""
+  source:
+    component: replicaset-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-06-05T10:54:11Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: knative-operator-webhook
+    namespace: openshift-serverless
+    resourceVersion: "39566"
+    uid: 5557a53f-9fb4-430e-9531-f27a13666c06
+  kind: Event
+  lastTimestamp: "2024-06-05T10:54:11Z"
+  message: Scaled up replica set knative-operator-webhook-5cf7789dbd to 1
+  metadata:
+    creationTimestamp: "2024-06-05T10:54:11Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2024-06-05T10:54:11Z"
+    name: knative-operator-webhook.17d61652731f912c
+    namespace: openshift-serverless
+    resourceVersion: "39570"
+    uid: c156fdf9-2f28-4c12-85f4-9304a7860f68
+  reason: ScalingReplicaSet
+  reportingComponent: deployment-controller
+  reportingInstance: ""
+  source:
+    component: deployment-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-06-05T10:54:28Z"
+  involvedObject:
+    apiVersion: coordination.k8s.io/v1
+    kind: Lease
+    name: knative-serving-openshift-lock
+    namespace: openshift-serverless
+    resourceVersion: "40049"
+    uid: 5dbbf7e3-b942-43c9-8432-97d09795409a
+  kind: Event
+  lastTimestamp: "2024-06-05T10:54:28Z"
+  message: knative-openshift-545686887b-bx4wx_aef0fbe5-5bfa-42bc-a887-b68bb23c13c0
+    became leader
+  metadata:
+    creationTimestamp: "2024-06-05T10:54:28Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: operator
+      operation: Update
+      time: "2024-06-05T10:54:28Z"
+    name: knative-serving-openshift-lock.17d61656721d1c9f
+    namespace: openshift-serverless
+    resourceVersion: "40051"
+    uid: 5ca6c7b6-be03-472f-941d-9a3d04a84a2c
+  reason: LeaderElection
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: knative-openshift-545686887b-bx4wx_aef0fbe5-5bfa-42bc-a887-b68bb23c13c0
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-06-05T10:54:05Z"
+  involvedObject:
+    apiVersion: operators.coreos.com/v1alpha1
+    kind: ClusterServiceVersion
+    name: serverless-operator.v1.32.1
+    namespace: openshift-serverless
+    resourceVersion: "39386"
+    uid: 45b99ce2-e457-4ed7-a4ec-bad80f9aa5e4
+  kind: Event
+  lastTimestamp: "2024-06-05T10:54:05Z"
+  message: requirements not yet checked
+  metadata:
+    creationTimestamp: "2024-06-05T10:54:05Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: olm
+      operation: Update
+      time: "2024-06-05T10:54:05Z"
+    name: serverless-operator.v1.32.1.17d6165100eebb6d
+    namespace: openshift-serverless
+    resourceVersion: "39394"
+    uid: cfe73f64-afa0-4435-8b9a-e6a31a14419b
+  reason: RequirementsUnknown
+  reportingComponent: operator-lifecycle-manager
+  reportingInstance: ""
+  source:
+    component: operator-lifecycle-manager
+  type: Normal
+- apiVersion: v1
+  count: 2
+  eventTime: null
+  firstTimestamp: "2024-06-05T10:54:05Z"
+  involvedObject:
+    apiVersion: operators.coreos.com/v1alpha1
+    kind: ClusterServiceVersion
+    name: serverless-operator.v1.32.1
+    namespace: openshift-serverless
+    resourceVersion: "39397"
+    uid: 45b99ce2-e457-4ed7-a4ec-bad80f9aa5e4
+  kind: Event
+  lastTimestamp: "2024-06-05T10:54:07Z"
+  message: one or more requirements couldn't be found
+  metadata:
+    creationTimestamp: "2024-06-05T10:54:05Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: olm
+      operation: Update
+      time: "2024-06-05T10:54:07Z"
+    name: serverless-operator.v1.32.1.17d616511833d261
+    namespace: openshift-serverless
+    resourceVersion: "39452"
+    uid: 66352d6a-6522-4bc4-af09-64b2e6f76fa9
+  reason: RequirementsNotMet
+  reportingComponent: operator-lifecycle-manager
+  reportingInstance: ""
+  source:
+    component: operator-lifecycle-manager
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-06-05T10:54:10Z"
+  involvedObject:
+    apiVersion: operators.coreos.com/v1alpha1
+    kind: ClusterServiceVersion
+    name: serverless-operator.v1.32.1
+    namespace: openshift-serverless
+    resourceVersion: "39453"
+    uid: 45b99ce2-e457-4ed7-a4ec-bad80f9aa5e4
+  kind: Event
+  lastTimestamp: "2024-06-05T10:54:10Z"
+  message: all requirements found, attempting install
+  metadata:
+    creationTimestamp: "2024-06-05T10:54:10Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: olm
+      operation: Update
+      time: "2024-06-05T10:54:10Z"
+    name: serverless-operator.v1.32.1.17d616523c2277d6
+    namespace: openshift-serverless
+    resourceVersion: "39522"
+    uid: c1021046-c686-47fd-96c1-cf8cce5cca0c
+  reason: AllRequirementsMet
+  reportingComponent: operator-lifecycle-manager
+  reportingInstance: ""
+  source:
+    component: operator-lifecycle-manager
+  type: Normal
+- apiVersion: v1
+  count: 2
+  eventTime: null
+  firstTimestamp: "2024-06-05T10:54:13Z"
+  involvedObject:
+    apiVersion: operators.coreos.com/v1alpha1
+    kind: ClusterServiceVersion
+    name: serverless-operator.v1.32.1
+    namespace: openshift-serverless
+    resourceVersion: "39524"
+    uid: 45b99ce2-e457-4ed7-a4ec-bad80f9aa5e4
+  kind: Event
+  lastTimestamp: "2024-06-05T10:54:17Z"
+  message: waiting for install components to report healthy
+  metadata:
+    creationTimestamp: "2024-06-05T10:54:13Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: olm
+      operation: Update
+      time: "2024-06-05T10:54:17Z"
+    name: serverless-operator.v1.32.1.17d61652fc7f41f8
+    namespace: openshift-serverless
+    resourceVersion: "39815"
+    uid: 06d47495-acd2-471e-80a4-45ec6b36ca4f
+  reason: InstallSucceeded
+  reportingComponent: operator-lifecycle-manager
+  reportingInstance: ""
+  source:
+    component: operator-lifecycle-manager
+  type: Normal
+- apiVersion: v1
+  count: 2
+  eventTime: null
+  firstTimestamp: "2024-06-05T10:54:14Z"
+  involvedObject:
+    apiVersion: operators.coreos.com/v1alpha1
+    kind: ClusterServiceVersion
+    name: serverless-operator.v1.32.1
+    namespace: openshift-serverless
+    resourceVersion: "39686"
+    uid: 45b99ce2-e457-4ed7-a4ec-bad80f9aa5e4
+  kind: Event
+  lastTimestamp: "2024-06-05T10:54:17Z"
+  message: 'installing: waiting for deployment knative-operator-webhook to become
+    ready: deployment "knative-operator-webhook" not available: Deployment does not
+    have minimum availability.'
+  metadata:
+    creationTimestamp: "2024-06-05T10:54:14Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: olm
+      operation: Update
+      time: "2024-06-05T10:54:17Z"
+    name: serverless-operator.v1.32.1.17d616531d2cd688
+    namespace: openshift-serverless
+    resourceVersion: "39848"
+    uid: 0a91a1c6-ab79-4461-934c-670b4698d14c
+  reason: InstallWaiting
+  reportingComponent: operator-lifecycle-manager
+  reportingInstance: ""
+  source:
+    component: operator-lifecycle-manager
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-06-05T10:54:15Z"
+  involvedObject:
+    apiVersion: operators.coreos.com/v1alpha1
+    kind: ClusterServiceVersion
+    name: serverless-operator.v1.32.1
+    namespace: openshift-serverless
+    resourceVersion: "39703"
+    uid: 45b99ce2-e457-4ed7-a4ec-bad80f9aa5e4
+  kind: Event
+  lastTimestamp: "2024-06-05T10:54:15Z"
+  message: 'Webhook install failed: conversionWebhook not ready'
+  metadata:
+    creationTimestamp: "2024-06-05T10:54:15Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: olm
+      operation: Update
+      time: "2024-06-05T10:54:15Z"
+    name: serverless-operator.v1.32.1.17d6165354792f4f
+    namespace: openshift-serverless
+    resourceVersion: "39721"
+    uid: 684ca8ce-fa20-4747-a4b7-ccfa421251af
+  reason: InstallWaiting
+  reportingComponent: operator-lifecycle-manager
+  reportingInstance: ""
+  source:
+    component: operator-lifecycle-manager
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-06-05T10:54:26Z"
+  involvedObject:
+    apiVersion: operators.coreos.com/v1alpha1
+    kind: ClusterServiceVersion
+    name: serverless-operator.v1.32.1
+    namespace: openshift-serverless
+    resourceVersion: "39851"
+    uid: 45b99ce2-e457-4ed7-a4ec-bad80f9aa5e4
+  kind: Event
+  lastTimestamp: "2024-06-05T10:54:26Z"
+  message: 'installing: waiting for deployment knative-openshift to become ready:
+    deployment "knative-openshift" not available: Deployment does not have minimum
+    availability.'
+  metadata:
+    creationTimestamp: "2024-06-05T10:54:26Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: olm
+      operation: Update
+      time: "2024-06-05T10:54:26Z"
+    name: serverless-operator.v1.32.1.17d61655f81936aa
+    namespace: openshift-serverless
+    resourceVersion: "40009"
+    uid: b4b26121-317e-42e1-9529-c05af028dfeb
+  reason: InstallWaiting
+  reportingComponent: operator-lifecycle-manager
+  reportingInstance: ""
+  source:
+    component: operator-lifecycle-manager
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-06-05T10:54:33Z"
+  involvedObject:
+    apiVersion: operators.coreos.com/v1alpha1
+    kind: ClusterServiceVersion
+    name: serverless-operator.v1.32.1
+    namespace: openshift-serverless
+    resourceVersion: "40013"
+    uid: 45b99ce2-e457-4ed7-a4ec-bad80f9aa5e4
+  kind: Event
+  lastTimestamp: "2024-06-05T10:54:33Z"
+  message: install strategy completed with no errors
+  metadata:
+    creationTimestamp: "2024-06-05T10:54:33Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: olm
+      operation: Update
+      time: "2024-06-05T10:54:33Z"
+    name: serverless-operator.v1.32.1.17d616578d334a3c
+    namespace: openshift-serverless
+    resourceVersion: "40138"
+    uid: 2aa154b2-a52d-4ad4-bf11-fd0d252b7fe6
+  reason: InstallSucceeded
+  reportingComponent: operator-lifecycle-manager
+  reportingInstance: ""
+  source:
+    component: operator-lifecycle-manager
+  type: Normal
+kind: EventList
+metadata:
+  resourceVersion: "54060"
