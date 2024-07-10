@@ -1,0 +1,30 @@
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: flan-small
+spec:
+  template:
+    metadata:
+      annotations:
+        autoscaling.knative.dev/minScale: '1'
+        autoscaling.knative.dev/target: '10'
+        serving.knative.dev/progress-deadline: 600s
+      labels:
+        app: flan-small
+    spec:
+      containerConcurrency: 100
+      containers:
+        - image: 'docker.io/skonto/flan-t5-small:gpu'
+          imagePullPolicy: Always
+          name: user-container
+          readinessProbe:
+            httpGet:
+              path: /ping
+              port: 8080
+            initialDelaySeconds: 300
+            successThreshold: 1
+          resources: {}
+      enableServiceLinks: false
+      timeoutSeconds: 300
+
+
