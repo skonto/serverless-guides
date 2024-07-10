@@ -1,0 +1,8 @@
+{
+    "revision": "refs/main",
+    "device_map": "auto",
+    "offload_folder": "offload",
+    "offload_state_dict": true,
+    "torch_dtype":"float16",
+    "max_length":"80"
+}
