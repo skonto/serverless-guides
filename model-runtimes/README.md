@@ -3,9 +3,9 @@
 Adapted from 
 https://github.com/pytorch/serve/blob/v0.11.0/examples/large_models/Huggingface_accelerate/Readme.md
 
+```bash
 Login into huggingface hub with token by running the below command
 
-```bash
 huggingface-cli login
 
 #paste the token generated from huggingface hub.
