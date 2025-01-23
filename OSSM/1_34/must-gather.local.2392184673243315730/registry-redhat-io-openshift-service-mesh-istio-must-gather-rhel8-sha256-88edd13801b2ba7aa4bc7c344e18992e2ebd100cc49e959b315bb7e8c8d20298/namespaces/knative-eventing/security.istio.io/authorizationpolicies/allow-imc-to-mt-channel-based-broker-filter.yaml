@@ -1,0 +1,49 @@
+---
+apiVersion: security.istio.io/v1beta1
+kind: AuthorizationPolicy
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"security.istio.io/v1beta1","kind":"AuthorizationPolicy","metadata":{"annotations":{},"name":"allow-imc-to-mt-channel-based-broker-filter","namespace":"knative-eventing"},"spec":{"action":"ALLOW","rules":[{"from":[{"source":{"namespaces":["knative-eventing"],"principals":["cluster.local/ns/knative-eventing/sa/imc-dispatcher"]}}],"to":[{"operation":{"methods":["POST"]}}]}],"selector":{"matchLabels":{"app.kubernetes.io/component":"broker-filter"}}}}
+  creationTimestamp: "2025-01-09T14:46:19Z"
+  generation: 1
+  managedFields:
+  - apiVersion: security.istio.io/v1beta1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:kubectl.kubernetes.io/last-applied-configuration: {}
+      f:spec:
+        .: {}
+        f:action: {}
+        f:rules: {}
+        f:selector:
+          .: {}
+          f:matchLabels:
+            .: {}
+            f:app.kubernetes.io/component: {}
+    manager: kubectl-client-side-apply
+    operation: Update
+    time: "2025-01-09T14:46:19Z"
+  name: allow-imc-to-mt-channel-based-broker-filter
+  namespace: knative-eventing
+  resourceVersion: "43636"
+  uid: 7851c894-2321-4e70-984b-4d1aec7be18e
+spec:
+  action: ALLOW
+  rules:
+  - from:
+    - source:
+        namespaces:
+        - knative-eventing
+        principals:
+        - cluster.local/ns/knative-eventing/sa/imc-dispatcher
+    to:
+    - operation:
+        methods:
+        - POST
+  selector:
+    matchLabels:
+      app.kubernetes.io/component: broker-filter

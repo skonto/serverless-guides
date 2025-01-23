@@ -1,0 +1,23 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"rbac.authorization.k8s.io/v1","kind":"ClusterRoleBinding","metadata":{"labels":{"app.kubernetes.io/component":"controller","app.kubernetes.io/name":"knative-serving","app.kubernetes.io/version":"release-v1.14"},"name":"knative-serving-controller-admin"},"roleRef":{"apiGroup":"rbac.authorization.k8s.io","kind":"ClusterRole","name":"knative-serving-admin"},"subjects":[{"kind":"ServiceAccount","name":"controller","namespace":"knative-serving"}]}
+    manifestival: new
+  creationTimestamp: "2025-01-09T14:58:15Z"
+  labels:
+    app.kubernetes.io/component: controller
+    app.kubernetes.io/name: knative-serving
+    app.kubernetes.io/version: release-v1.14
+  name: knative-serving-controller-admin
+  resourceVersion: "52284"
+  uid: 7d85665e-cdc4-4680-80b5-d3e0ccc69f55
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: knative-serving-admin
+subjects:
+- kind: ServiceAccount
+  name: controller
+  namespace: knative-serving

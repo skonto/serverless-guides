@@ -1,0 +1,101 @@
+---
+apiVersion: serving.knative.dev/v1
+items:
+- apiVersion: serving.knative.dev/v1
+  kind: Route
+  metadata:
+    annotations:
+      serving.knative.dev/creator: system:admin
+      serving.knative.dev/lastModifier: system:admin
+      serving.knative.openshift.io/enablePassthrough: "true"
+    creationTimestamp: "2025-01-09T14:59:40Z"
+    finalizers:
+    - routes.serving.knative.dev
+    generation: 1
+    labels:
+      serving.knative.dev/service: helloworld-go
+    managedFields:
+    - apiVersion: serving.knative.dev/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:serving.knative.dev/creator: {}
+            f:serving.knative.dev/lastModifier: {}
+            f:serving.knative.openshift.io/enablePassthrough: {}
+          f:finalizers:
+            .: {}
+            v:"routes.serving.knative.dev": {}
+          f:labels:
+            .: {}
+            f:serving.knative.dev/service: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"79f8a230-4abb-4fe0-9275-ba946e239b2f"}: {}
+        f:spec:
+          .: {}
+          f:traffic: {}
+      manager: controller
+      operation: Update
+      time: "2025-01-09T14:59:40Z"
+    - apiVersion: serving.knative.dev/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          .: {}
+          f:address:
+            .: {}
+            f:url: {}
+          f:conditions: {}
+          f:observedGeneration: {}
+          f:traffic: {}
+          f:url: {}
+      manager: controller
+      operation: Update
+      subresource: status
+      time: "2025-01-09T14:59:46Z"
+    name: helloworld-go
+    namespace: serving-tests
+    ownerReferences:
+    - apiVersion: serving.knative.dev/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: helloworld-go
+      uid: 79f8a230-4abb-4fe0-9275-ba946e239b2f
+    resourceVersion: "53729"
+    uid: df3f94ba-08f4-4e25-a0ce-a05da7e31e86
+  spec:
+    traffic:
+    - configurationName: helloworld-go
+      latestRevision: true
+      percent: 100
+  status:
+    address:
+      url: http://helloworld-go.serving-tests.svc.cluster.local
+    conditions:
+    - lastTransitionTime: "2025-01-09T14:59:45Z"
+      status: "True"
+      type: AllTrafficAssigned
+    - lastTransitionTime: "2025-01-09T14:59:45Z"
+      message: external-domain-tls is not enabled
+      reason: TLSNotEnabled
+      status: "True"
+      type: CertificateProvisioned
+    - lastTransitionTime: "2025-01-09T14:59:46Z"
+      status: "True"
+      type: IngressReady
+    - lastTransitionTime: "2025-01-09T14:59:46Z"
+      status: "True"
+      type: Ready
+    observedGeneration: 1
+    traffic:
+    - latestRevision: true
+      percent: 100
+      revisionName: helloworld-go-00001
+    url: https://helloworld-go-serving-tests.apps.ci-ln-6bt60xt-76ef8.aws-2.ci.openshift.org
+kind: RouteList
+metadata:
+  continue: ""
+  resourceVersion: "60835"

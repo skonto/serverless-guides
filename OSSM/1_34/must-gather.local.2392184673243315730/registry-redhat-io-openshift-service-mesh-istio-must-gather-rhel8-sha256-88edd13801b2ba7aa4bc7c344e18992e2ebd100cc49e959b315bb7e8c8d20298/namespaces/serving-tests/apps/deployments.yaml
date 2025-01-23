@@ -1,0 +1,881 @@
+---
+apiVersion: apps/v1
+items:
+- apiVersion: apps/v1
+  kind: Deployment
+  metadata:
+    annotations:
+      autoscaling.knative.dev/minScale: "1"
+      autoscaling.knative.dev/target: "10"
+      deployment.kubernetes.io/revision: "1"
+      serving.knative.dev/creator: system:admin
+      sidecar.istio.io/inject: "true"
+      sidecar.istio.io/rewriteAppHTTPProbers: "true"
+    creationTimestamp: "2025-01-09T14:59:40Z"
+    generation: 1
+    labels:
+      app: helloworld-go
+      service.istio.io/canonical-name: helloworld-go
+      service.istio.io/canonical-revision: helloworld-go-00001
+      serving.knative.dev/configuration: helloworld-go
+      serving.knative.dev/configurationGeneration: "1"
+      serving.knative.dev/configurationUID: d8b4cafc-e336-457b-abc6-86dba0837c51
+      serving.knative.dev/revision: helloworld-go-00001
+      serving.knative.dev/revisionUID: 772bf5ab-4091-44df-ba8a-1ee4d6ea97b9
+      serving.knative.dev/service: helloworld-go
+      serving.knative.dev/serviceUID: 79f8a230-4abb-4fe0-9275-ba946e239b2f
+    managedFields:
+    - apiVersion: apps/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:autoscaling.knative.dev/minScale: {}
+            f:autoscaling.knative.dev/target: {}
+            f:serving.knative.dev/creator: {}
+            f:sidecar.istio.io/inject: {}
+            f:sidecar.istio.io/rewriteAppHTTPProbers: {}
+          f:labels:
+            .: {}
+            f:app: {}
+            f:serving.knative.dev/configuration: {}
+            f:serving.knative.dev/configurationGeneration: {}
+            f:serving.knative.dev/configurationUID: {}
+            f:serving.knative.dev/revision: {}
+            f:serving.knative.dev/revisionUID: {}
+            f:serving.knative.dev/service: {}
+            f:serving.knative.dev/serviceUID: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"772bf5ab-4091-44df-ba8a-1ee4d6ea97b9"}: {}
+        f:spec:
+          f:progressDeadlineSeconds: {}
+          f:replicas: {}
+          f:revisionHistoryLimit: {}
+          f:selector: {}
+          f:strategy:
+            f:rollingUpdate:
+              .: {}
+              f:maxSurge: {}
+              f:maxUnavailable: {}
+            f:type: {}
+          f:template:
+            f:metadata:
+              f:annotations:
+                .: {}
+                f:autoscaling.knative.dev/minScale: {}
+                f:autoscaling.knative.dev/target: {}
+                f:serving.knative.dev/creator: {}
+                f:sidecar.istio.io/inject: {}
+                f:sidecar.istio.io/rewriteAppHTTPProbers: {}
+              f:labels:
+                .: {}
+                f:app: {}
+                f:serving.knative.dev/configuration: {}
+                f:serving.knative.dev/configurationGeneration: {}
+                f:serving.knative.dev/configurationUID: {}
+                f:serving.knative.dev/revision: {}
+                f:serving.knative.dev/revisionUID: {}
+                f:serving.knative.dev/service: {}
+                f:serving.knative.dev/serviceUID: {}
+            f:spec:
+              f:containers:
+                k:{"name":"queue-proxy"}:
+                  .: {}
+                  f:env:
+                    .: {}
+                    k:{"name":"CONTAINER_CONCURRENCY"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"ENABLE_HTTP_FULL_DUPLEX"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"ENABLE_HTTP2_AUTO_DETECTION"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"ENABLE_MULTI_CONTAINER_PROBES"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"ENABLE_PROFILING"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"HOST_IP"}:
+                      .: {}
+                      f:name: {}
+                      f:valueFrom:
+                        .: {}
+                        f:fieldRef: {}
+                    k:{"name":"METRICS_COLLECTOR_ADDRESS"}:
+                      .: {}
+                      f:name: {}
+                    k:{"name":"METRICS_DOMAIN"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"QUEUE_SERVING_PORT"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"QUEUE_SERVING_TLS_PORT"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"REVISION_IDLE_TIMEOUT_SECONDS"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"REVISION_RESPONSE_START_TIMEOUT_SECONDS"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"REVISION_TIMEOUT_SECONDS"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"ROOT_CA"}:
+                      .: {}
+                      f:name: {}
+                    k:{"name":"SERVING_CONFIGURATION"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"SERVING_ENABLE_PROBE_REQUEST_LOG"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"SERVING_ENABLE_REQUEST_LOG"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"SERVING_LOGGING_CONFIG"}:
+                      .: {}
+                      f:name: {}
+                    k:{"name":"SERVING_LOGGING_LEVEL"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"SERVING_NAMESPACE"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"SERVING_POD"}:
+                      .: {}
+                      f:name: {}
+                      f:valueFrom:
+                        .: {}
+                        f:fieldRef: {}
+                    k:{"name":"SERVING_POD_IP"}:
+                      .: {}
+                      f:name: {}
+                      f:valueFrom:
+                        .: {}
+                        f:fieldRef: {}
+                    k:{"name":"SERVING_READINESS_PROBE"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"SERVING_REQUEST_LOG_TEMPLATE"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"SERVING_REQUEST_METRICS_BACKEND"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"SERVING_REQUEST_METRICS_REPORTING_PERIOD_SECONDS"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"SERVING_REVISION"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"SERVING_SERVICE"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"SYSTEM_NAMESPACE"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"TRACING_CONFIG_BACKEND"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"TRACING_CONFIG_DEBUG"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"TRACING_CONFIG_SAMPLE_RATE"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"TRACING_CONFIG_ZIPKIN_ENDPOINT"}:
+                      .: {}
+                      f:name: {}
+                    k:{"name":"USER_PORT"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                  f:image: {}
+                  f:imagePullPolicy: {}
+                  f:name: {}
+                  f:ports:
+                    .: {}
+                    k:{"containerPort":8012,"protocol":"TCP"}:
+                      .: {}
+                      f:containerPort: {}
+                      f:name: {}
+                      f:protocol: {}
+                    k:{"containerPort":8022,"protocol":"TCP"}:
+                      .: {}
+                      f:containerPort: {}
+                      f:name: {}
+                      f:protocol: {}
+                    k:{"containerPort":8112,"protocol":"TCP"}:
+                      .: {}
+                      f:containerPort: {}
+                      f:name: {}
+                      f:protocol: {}
+                    k:{"containerPort":9090,"protocol":"TCP"}:
+                      .: {}
+                      f:containerPort: {}
+                      f:name: {}
+                      f:protocol: {}
+                    k:{"containerPort":9091,"protocol":"TCP"}:
+                      .: {}
+                      f:containerPort: {}
+                      f:name: {}
+                      f:protocol: {}
+                  f:readinessProbe:
+                    .: {}
+                    f:failureThreshold: {}
+                    f:httpGet:
+                      .: {}
+                      f:httpHeaders: {}
+                      f:path: {}
+                      f:port: {}
+                      f:scheme: {}
+                    f:periodSeconds: {}
+                    f:successThreshold: {}
+                    f:timeoutSeconds: {}
+                  f:resources:
+                    .: {}
+                    f:requests:
+                      .: {}
+                      f:cpu: {}
+                  f:securityContext:
+                    .: {}
+                    f:allowPrivilegeEscalation: {}
+                    f:capabilities:
+                      .: {}
+                      f:drop: {}
+                    f:readOnlyRootFilesystem: {}
+                    f:runAsNonRoot: {}
+                  f:terminationMessagePath: {}
+                  f:terminationMessagePolicy: {}
+                k:{"name":"user-container"}:
+                  .: {}
+                  f:env:
+                    .: {}
+                    k:{"name":"K_CONFIGURATION"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"K_REVISION"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"K_SERVICE"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"PORT"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"TARGET"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                  f:image: {}
+                  f:imagePullPolicy: {}
+                  f:lifecycle:
+                    .: {}
+                    f:preStop:
+                      .: {}
+                      f:httpGet:
+                        .: {}
+                        f:path: {}
+                        f:port: {}
+                        f:scheme: {}
+                  f:name: {}
+                  f:ports:
+                    .: {}
+                    k:{"containerPort":8080,"protocol":"TCP"}:
+                      .: {}
+                      f:containerPort: {}
+                      f:name: {}
+                      f:protocol: {}
+                  f:resources:
+                    .: {}
+                    f:requests:
+                      .: {}
+                      f:cpu: {}
+                  f:terminationMessagePath: {}
+                  f:terminationMessagePolicy: {}
+              f:dnsPolicy: {}
+              f:enableServiceLinks: {}
+              f:restartPolicy: {}
+              f:schedulerName: {}
+              f:securityContext: {}
+              f:terminationGracePeriodSeconds: {}
+      manager: controller
+      operation: Update
+      time: "2025-01-09T14:59:40Z"
+    - apiVersion: apps/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            f:deployment.kubernetes.io/revision: {}
+        f:status:
+          f:availableReplicas: {}
+          f:conditions:
+            .: {}
+            k:{"type":"Available"}:
+              .: {}
+              f:lastTransitionTime: {}
+              f:lastUpdateTime: {}
+              f:message: {}
+              f:reason: {}
+              f:status: {}
+              f:type: {}
+            k:{"type":"Progressing"}:
+              .: {}
+              f:lastTransitionTime: {}
+              f:lastUpdateTime: {}
+              f:message: {}
+              f:reason: {}
+              f:status: {}
+              f:type: {}
+          f:observedGeneration: {}
+          f:readyReplicas: {}
+          f:replicas: {}
+          f:updatedReplicas: {}
+      manager: kube-controller-manager
+      operation: Update
+      subresource: status
+      time: "2025-01-09T14:59:45Z"
+    name: helloworld-go-00001-deployment
+    namespace: serving-tests
+    ownerReferences:
+    - apiVersion: serving.knative.dev/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Revision
+      name: helloworld-go-00001
+      uid: 772bf5ab-4091-44df-ba8a-1ee4d6ea97b9
+    resourceVersion: "53697"
+    uid: 2aa08218-67c0-444c-850c-aec021cab608
+  spec:
+    progressDeadlineSeconds: 120
+    replicas: 1
+    revisionHistoryLimit: 10
+    selector:
+      matchLabels:
+        serving.knative.dev/revisionUID: 772bf5ab-4091-44df-ba8a-1ee4d6ea97b9
+    strategy:
+      rollingUpdate:
+        maxSurge: 25%
+        maxUnavailable: 0
+      type: RollingUpdate
+    template:
+      metadata:
+        annotations:
+          autoscaling.knative.dev/minScale: "1"
+          autoscaling.knative.dev/target: "10"
+          serving.knative.dev/creator: system:admin
+          sidecar.istio.io/inject: "true"
+          sidecar.istio.io/rewriteAppHTTPProbers: "true"
+        creationTimestamp: null
+        labels:
+          app: helloworld-go
+          service.istio.io/canonical-name: helloworld-go
+          service.istio.io/canonical-revision: helloworld-go-00001
+          serving.knative.dev/configuration: helloworld-go
+          serving.knative.dev/configurationGeneration: "1"
+          serving.knative.dev/configurationUID: d8b4cafc-e336-457b-abc6-86dba0837c51
+          serving.knative.dev/revision: helloworld-go-00001
+          serving.knative.dev/revisionUID: 772bf5ab-4091-44df-ba8a-1ee4d6ea97b9
+          serving.knative.dev/service: helloworld-go
+          serving.knative.dev/serviceUID: 79f8a230-4abb-4fe0-9275-ba946e239b2f
+      spec:
+        containers:
+        - env:
+          - name: TARGET
+            value: Go Sample v1
+          - name: PORT
+            value: "8080"
+          - name: K_REVISION
+            value: helloworld-go-00001
+          - name: K_CONFIGURATION
+            value: helloworld-go
+          - name: K_SERVICE
+            value: helloworld-go
+          image: index.docker.io/skonto/helloworld-go@sha256:dd20d7659c16bdc58c09740a543ef3c36b7c04742a2b6b280a30c2a76dcf6c09
+          imagePullPolicy: Always
+          lifecycle:
+            preStop:
+              httpGet:
+                path: /wait-for-drain
+                port: 8022
+                scheme: HTTP
+          name: user-container
+          ports:
+          - containerPort: 8080
+            name: user-port
+            protocol: TCP
+          resources:
+            requests:
+              cpu: 200m
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: FallbackToLogsOnError
+        - env:
+          - name: SERVING_NAMESPACE
+            value: serving-tests
+          - name: SERVING_SERVICE
+            value: helloworld-go
+          - name: SERVING_CONFIGURATION
+            value: helloworld-go
+          - name: SERVING_REVISION
+            value: helloworld-go-00001
+          - name: QUEUE_SERVING_PORT
+            value: "8012"
+          - name: QUEUE_SERVING_TLS_PORT
+            value: "8112"
+          - name: CONTAINER_CONCURRENCY
+            value: "0"
+          - name: REVISION_TIMEOUT_SECONDS
+            value: "300"
+          - name: REVISION_RESPONSE_START_TIMEOUT_SECONDS
+            value: "0"
+          - name: REVISION_IDLE_TIMEOUT_SECONDS
+            value: "0"
+          - name: SERVING_POD
+            valueFrom:
+              fieldRef:
+                apiVersion: v1
+                fieldPath: metadata.name
+          - name: SERVING_POD_IP
+            valueFrom:
+              fieldRef:
+                apiVersion: v1
+                fieldPath: status.podIP
+          - name: SERVING_LOGGING_CONFIG
+          - name: SERVING_LOGGING_LEVEL
+            value: debug
+          - name: SERVING_REQUEST_LOG_TEMPLATE
+            value: '{"httpRequest": {"requestMethod": "{{.Request.Method}}", "requestUrl":
+              "{{js .Request.RequestURI}}", "requestSize": "{{.Request.ContentLength}}",
+              "status": {{.Response.Code}}, "responseSize": "{{.Response.Size}}",
+              "userAgent": "{{js .Request.UserAgent}}", "remoteIp": "{{js .Request.RemoteAddr}}",
+              "serverIp": "{{.Revision.PodIP}}", "referer": "{{js .Request.Referer}}",
+              "latency": "{{.Response.Latency}}s", "protocol": "{{.Request.Proto}}"},
+              "traceId": "{{index .Request.Header "X-B3-Traceid"}}"}'
+          - name: SERVING_ENABLE_REQUEST_LOG
+            value: "true"
+          - name: SERVING_REQUEST_METRICS_BACKEND
+            value: prometheus
+          - name: SERVING_REQUEST_METRICS_REPORTING_PERIOD_SECONDS
+            value: "5"
+          - name: TRACING_CONFIG_BACKEND
+            value: none
+          - name: TRACING_CONFIG_ZIPKIN_ENDPOINT
+          - name: TRACING_CONFIG_DEBUG
+            value: "false"
+          - name: TRACING_CONFIG_SAMPLE_RATE
+            value: "0.1"
+          - name: USER_PORT
+            value: "8080"
+          - name: SYSTEM_NAMESPACE
+            value: knative-serving
+          - name: METRICS_DOMAIN
+            value: knative.dev/internal/serving
+          - name: SERVING_READINESS_PROBE
+            value: '{"tcpSocket":{"port":8080,"host":"127.0.0.1"},"successThreshold":1}'
+          - name: ENABLE_PROFILING
+            value: "false"
+          - name: SERVING_ENABLE_PROBE_REQUEST_LOG
+            value: "true"
+          - name: METRICS_COLLECTOR_ADDRESS
+          - name: HOST_IP
+            valueFrom:
+              fieldRef:
+                apiVersion: v1
+                fieldPath: status.hostIP
+          - name: ENABLE_HTTP2_AUTO_DETECTION
+            value: "false"
+          - name: ENABLE_HTTP_FULL_DUPLEX
+            value: "false"
+          - name: ROOT_CA
+          - name: ENABLE_MULTI_CONTAINER_PROBES
+            value: "false"
+          image: registry.ci.openshift.org/openshift/knative-serving-queue:knative-v1.14
+          imagePullPolicy: IfNotPresent
+          name: queue-proxy
+          ports:
+          - containerPort: 8022
+            name: http-queueadm
+            protocol: TCP
+          - containerPort: 9090
+            name: http-autometric
+            protocol: TCP
+          - containerPort: 9091
+            name: http-usermetric
+            protocol: TCP
+          - containerPort: 8012
+            name: queue-port
+            protocol: TCP
+          - containerPort: 8112
+            name: https-port
+            protocol: TCP
+          readinessProbe:
+            failureThreshold: 3
+            httpGet:
+              httpHeaders:
+              - name: K-Network-Probe
+                value: queue
+              path: /
+              port: 8012
+              scheme: HTTP
+            periodSeconds: 10
+            successThreshold: 1
+            timeoutSeconds: 1
+          resources:
+            requests:
+              cpu: 25m
+          securityContext:
+            allowPrivilegeEscalation: false
+            capabilities:
+              drop:
+              - ALL
+            readOnlyRootFilesystem: true
+            runAsNonRoot: true
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+        dnsPolicy: ClusterFirst
+        enableServiceLinks: false
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        securityContext: {}
+        terminationGracePeriodSeconds: 300
+  status:
+    availableReplicas: 1
+    conditions:
+    - lastTransitionTime: "2025-01-09T14:59:45Z"
+      lastUpdateTime: "2025-01-09T14:59:45Z"
+      message: Deployment has minimum availability.
+      reason: MinimumReplicasAvailable
+      status: "True"
+      type: Available
+    - lastTransitionTime: "2025-01-09T14:59:40Z"
+      lastUpdateTime: "2025-01-09T14:59:45Z"
+      message: ReplicaSet "helloworld-go-00001-deployment-6bf65bcf4d" has successfully
+        progressed.
+      reason: NewReplicaSetAvailable
+      status: "True"
+      type: Progressing
+    observedGeneration: 1
+    readyReplicas: 1
+    replicas: 1
+    updatedReplicas: 1
+- apiVersion: apps/v1
+  kind: Deployment
+  metadata:
+    annotations:
+      deployment.kubernetes.io/revision: "1"
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"apps/v1","kind":"Deployment","metadata":{"annotations":{},"labels":{"samples.knative.dev/release":"devel"},"name":"webhook","namespace":"serving-tests"},"spec":{"replicas":1,"selector":{"matchLabels":{"app":"webhook","role":"webhook"}},"template":{"metadata":{"labels":{"app":"webhook","role":"webhook","samples.knative.dev/release":"devel"}},"spec":{"affinity":{"podAntiAffinity":{"preferredDuringSchedulingIgnoredDuringExecution":[{"podAffinityTerm":{"labelSelector":{"matchLabels":{"app":"webhook"}},"topologyKey":"kubernetes.io/hostname"},"weight":100}]}},"containers":[{"env":[{"name":"SYSTEM_NAMESPACE","valueFrom":{"fieldRef":{"fieldPath":"metadata.namespace"}}},{"name":"KUBERNETES_MIN_VERSION","value":"v1.0.0"},{"name":"CONFIG_LOGGING_NAME","value":"config-logging"},{"name":"METRICS_DOMAIN","value":"knative.dev/samples"},{"name":"WEBHOOK_NAME","value":"webhook"}],"image":"registry.ci.openshift.org/knative/serverless-metadata-webhook:main","livenessProbe":{"httpGet":{"httpHeaders":[{"name":"k-kubelet-probe","value":"webhook"}],"port":8443,"scheme":"HTTPS"},"periodSeconds":1},"name":"webhook","readinessProbe":{"httpGet":{"httpHeaders":[{"name":"k-kubelet-probe","value":"webhook"}],"port":8443,"scheme":"HTTPS"},"periodSeconds":1},"resources":{"limits":{"cpu":"200m","memory":"200Mi"},"requests":{"cpu":"20m","memory":"20Mi"}},"securityContext":{"allowPrivilegeEscalation":false,"capabilities":{"drop":["all"]},"readOnlyRootFilesystem":true,"runAsNonRoot":true}}],"serviceAccountName":"controller","terminationGracePeriodSeconds":300}}}}
+    creationTimestamp: "2025-01-09T14:58:19Z"
+    generation: 1
+    labels:
+      samples.knative.dev/release: devel
+    managedFields:
+    - apiVersion: apps/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:kubectl.kubernetes.io/last-applied-configuration: {}
+          f:labels:
+            .: {}
+            f:samples.knative.dev/release: {}
+        f:spec:
+          f:progressDeadlineSeconds: {}
+          f:replicas: {}
+          f:revisionHistoryLimit: {}
+          f:selector: {}
+          f:strategy:
+            f:rollingUpdate:
+              .: {}
+              f:maxSurge: {}
+              f:maxUnavailable: {}
+            f:type: {}
+          f:template:
+            f:metadata:
+              f:labels:
+                .: {}
+                f:app: {}
+                f:role: {}
+                f:samples.knative.dev/release: {}
+            f:spec:
+              f:affinity:
+                .: {}
+                f:podAntiAffinity:
+                  .: {}
+                  f:preferredDuringSchedulingIgnoredDuringExecution: {}
+              f:containers:
+                k:{"name":"webhook"}:
+                  .: {}
+                  f:env:
+                    .: {}
+                    k:{"name":"CONFIG_LOGGING_NAME"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"KUBERNETES_MIN_VERSION"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"METRICS_DOMAIN"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"SYSTEM_NAMESPACE"}:
+                      .: {}
+                      f:name: {}
+                      f:valueFrom:
+                        .: {}
+                        f:fieldRef: {}
+                    k:{"name":"WEBHOOK_NAME"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                  f:image: {}
+                  f:imagePullPolicy: {}
+                  f:livenessProbe:
+                    .: {}
+                    f:failureThreshold: {}
+                    f:httpGet:
+                      .: {}
+                      f:httpHeaders: {}
+                      f:path: {}
+                      f:port: {}
+                      f:scheme: {}
+                    f:periodSeconds: {}
+                    f:successThreshold: {}
+                    f:timeoutSeconds: {}
+                  f:name: {}
+                  f:readinessProbe:
+                    .: {}
+                    f:failureThreshold: {}
+                    f:httpGet:
+                      .: {}
+                      f:httpHeaders: {}
+                      f:path: {}
+                      f:port: {}
+                      f:scheme: {}
+                    f:periodSeconds: {}
+                    f:successThreshold: {}
+                    f:timeoutSeconds: {}
+                  f:resources:
+                    .: {}
+                    f:limits:
+                      .: {}
+                      f:cpu: {}
+                      f:memory: {}
+                    f:requests:
+                      .: {}
+                      f:cpu: {}
+                      f:memory: {}
+                  f:securityContext:
+                    .: {}
+                    f:allowPrivilegeEscalation: {}
+                    f:capabilities:
+                      .: {}
+                      f:drop: {}
+                    f:readOnlyRootFilesystem: {}
+                    f:runAsNonRoot: {}
+                  f:terminationMessagePath: {}
+                  f:terminationMessagePolicy: {}
+              f:dnsPolicy: {}
+              f:restartPolicy: {}
+              f:schedulerName: {}
+              f:securityContext: {}
+              f:serviceAccount: {}
+              f:serviceAccountName: {}
+              f:terminationGracePeriodSeconds: {}
+      manager: kubectl-client-side-apply
+      operation: Update
+      time: "2025-01-09T14:58:19Z"
+    - apiVersion: apps/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            f:deployment.kubernetes.io/revision: {}
+        f:status:
+          f:conditions:
+            .: {}
+            k:{"type":"Available"}:
+              .: {}
+              f:lastTransitionTime: {}
+              f:lastUpdateTime: {}
+              f:message: {}
+              f:reason: {}
+              f:status: {}
+              f:type: {}
+            k:{"type":"Progressing"}:
+              .: {}
+              f:lastTransitionTime: {}
+              f:lastUpdateTime: {}
+              f:message: {}
+              f:reason: {}
+              f:status: {}
+              f:type: {}
+          f:observedGeneration: {}
+          f:replicas: {}
+          f:unavailableReplicas: {}
+          f:updatedReplicas: {}
+      manager: kube-controller-manager
+      operation: Update
+      subresource: status
+      time: "2025-01-09T15:08:20Z"
+    name: webhook
+    namespace: serving-tests
+    resourceVersion: "58968"
+    uid: f9bf890a-cada-4276-a260-921857c66c40
+  spec:
+    progressDeadlineSeconds: 600
+    replicas: 1
+    revisionHistoryLimit: 10
+    selector:
+      matchLabels:
+        app: webhook
+        role: webhook
+    strategy:
+      rollingUpdate:
+        maxSurge: 25%
+        maxUnavailable: 25%
+      type: RollingUpdate
+    template:
+      metadata:
+        creationTimestamp: null
+        labels:
+          app: webhook
+          role: webhook
+          samples.knative.dev/release: devel
+      spec:
+        affinity:
+          podAntiAffinity:
+            preferredDuringSchedulingIgnoredDuringExecution:
+            - podAffinityTerm:
+                labelSelector:
+                  matchLabels:
+                    app: webhook
+                topologyKey: kubernetes.io/hostname
+              weight: 100
+        containers:
+        - env:
+          - name: SYSTEM_NAMESPACE
+            valueFrom:
+              fieldRef:
+                apiVersion: v1
+                fieldPath: metadata.namespace
+          - name: KUBERNETES_MIN_VERSION
+            value: v1.0.0
+          - name: CONFIG_LOGGING_NAME
+            value: config-logging
+          - name: METRICS_DOMAIN
+            value: knative.dev/samples
+          - name: WEBHOOK_NAME
+            value: webhook
+          image: registry.ci.openshift.org/knative/serverless-metadata-webhook:main
+          imagePullPolicy: IfNotPresent
+          livenessProbe:
+            failureThreshold: 3
+            httpGet:
+              httpHeaders:
+              - name: k-kubelet-probe
+                value: webhook
+              path: /
+              port: 8443
+              scheme: HTTPS
+            periodSeconds: 1
+            successThreshold: 1
+            timeoutSeconds: 1
+          name: webhook
+          readinessProbe:
+            failureThreshold: 3
+            httpGet:
+              httpHeaders:
+              - name: k-kubelet-probe
+                value: webhook
+              path: /
+              port: 8443
+              scheme: HTTPS
+            periodSeconds: 1
+            successThreshold: 1
+            timeoutSeconds: 1
+          resources:
+            limits:
+              cpu: 200m
+              memory: 200Mi
+            requests:
+              cpu: 20m
+              memory: 20Mi
+          securityContext:
+            allowPrivilegeEscalation: false
+            capabilities:
+              drop:
+              - all
+            readOnlyRootFilesystem: true
+            runAsNonRoot: true
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+        dnsPolicy: ClusterFirst
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        securityContext: {}
+        serviceAccount: controller
+        serviceAccountName: controller
+        terminationGracePeriodSeconds: 300
+  status:
+    conditions:
+    - lastTransitionTime: "2025-01-09T14:58:19Z"
+      lastUpdateTime: "2025-01-09T14:58:19Z"
+      message: Deployment does not have minimum availability.
+      reason: MinimumReplicasUnavailable
+      status: "False"
+      type: Available
+    - lastTransitionTime: "2025-01-09T15:08:20Z"
+      lastUpdateTime: "2025-01-09T15:08:20Z"
+      message: ReplicaSet "webhook-56f4877fcb" has timed out progressing.
+      reason: ProgressDeadlineExceeded
+      status: "False"
+      type: Progressing
+    observedGeneration: 1
+    replicas: 1
+    unavailableReplicas: 1
+    updatedReplicas: 1
+kind: DeploymentList
+metadata:
+  resourceVersion: "60835"

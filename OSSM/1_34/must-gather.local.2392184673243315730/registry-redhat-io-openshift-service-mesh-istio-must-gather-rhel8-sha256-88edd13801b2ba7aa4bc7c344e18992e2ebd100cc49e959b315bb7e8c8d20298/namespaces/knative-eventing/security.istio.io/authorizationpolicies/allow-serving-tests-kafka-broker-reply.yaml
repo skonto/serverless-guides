@@ -1,0 +1,53 @@
+---
+apiVersion: security.istio.io/v1beta1
+kind: AuthorizationPolicy
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"security.istio.io/v1beta1","kind":"AuthorizationPolicy","metadata":{"annotations":{},"name":"allow-serving-tests-kafka-broker-reply","namespace":"knative-eventing"},"spec":{"action":"ALLOW","rules":[{"from":[{"source":{"namespaces":["knative-eventing"],"principals":["cluster.local/ns/knative-eventing/sa/knative-kafka-broker-data-plane"]}}],"to":[{"operation":{"paths":["/serving-tests/*"]}}],"when":[{"key":"request.headers[Kn-Namespace]","values":["serving-tests"]}]}],"selector":{"matchLabels":{"app.kubernetes.io/component":"kafka-broker-receiver"}}}}
+  creationTimestamp: "2025-01-09T14:46:58Z"
+  generation: 1
+  managedFields:
+  - apiVersion: security.istio.io/v1beta1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:kubectl.kubernetes.io/last-applied-configuration: {}
+      f:spec:
+        .: {}
+        f:action: {}
+        f:rules: {}
+        f:selector:
+          .: {}
+          f:matchLabels:
+            .: {}
+            f:app.kubernetes.io/component: {}
+    manager: kubectl-client-side-apply
+    operation: Update
+    time: "2025-01-09T14:46:58Z"
+  name: allow-serving-tests-kafka-broker-reply
+  namespace: knative-eventing
+  resourceVersion: "43984"
+  uid: 6f8b13b1-8af2-445b-9d1c-44f69b8777af
+spec:
+  action: ALLOW
+  rules:
+  - from:
+    - source:
+        namespaces:
+        - knative-eventing
+        principals:
+        - cluster.local/ns/knative-eventing/sa/knative-kafka-broker-data-plane
+    to:
+    - operation:
+        paths:
+        - /serving-tests/*
+    when:
+    - key: request.headers[Kn-Namespace]
+      values:
+      - serving-tests
+  selector:
+    matchLabels:
+      app.kubernetes.io/component: kafka-broker-receiver

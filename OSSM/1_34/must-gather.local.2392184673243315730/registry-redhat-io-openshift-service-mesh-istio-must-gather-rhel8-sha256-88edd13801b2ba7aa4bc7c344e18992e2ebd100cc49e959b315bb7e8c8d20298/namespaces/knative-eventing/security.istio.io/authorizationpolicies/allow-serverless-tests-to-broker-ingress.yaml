@@ -1,0 +1,92 @@
+---
+apiVersion: security.istio.io/v1beta1
+kind: AuthorizationPolicy
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"security.istio.io/v1beta1","kind":"AuthorizationPolicy","metadata":{"annotations":{},"name":"allow-serverless-tests-to-broker-ingress","namespace":"knative-eventing"},"spec":{"action":"ALLOW","rules":[{"from":[{"source":{"namespaces":["serverless-tests"]}}],"to":[{"operation":{"paths":["/serverless-tests/*"]}},{"operation":{"hosts":["*.serverless-tests","*.serverless-tests.svc","*.serverless-tests.svc.cluster.local"]}}]},{"from":[{"source":{"namespaces":["knative-eventing"],"principals":["cluster.local/ns/knative-eventing/sa/pingsource-mt-adapter","cluster.local/ns/knative-eventing/sa/imc-dispatcher","cluster.local/ns/knative-eventing/sa/mt-broker-filter","cluster.local/ns/knative-eventing/sa/knative-kafka-source-data-plane","cluster.local/ns/knative-eventing/sa/knative-kafka-broker-data-plane","cluster.local/ns/knative-eventing/sa/knative-kafka-channel-data-plane"]}}],"to":[{"operation":{"hosts":["*.serverless-tests","*.serverless-tests.svc","*.serverless-tests.svc.cluster.local"]}}],"when":[{"key":"request.headers[Kn-Namespace]","values":["serverless-tests"]}]},{"from":[{"source":{"namespaces":["knative-eventing"],"principals":["cluster.local/ns/knative-eventing/sa/pingsource-mt-adapter","cluster.local/ns/knative-eventing/sa/imc-dispatcher","cluster.local/ns/knative-eventing/sa/mt-broker-filter","cluster.local/ns/knative-eventing/sa/knative-kafka-source-data-plane","cluster.local/ns/knative-eventing/sa/knative-kafka-broker-data-plane","cluster.local/ns/knative-eventing/sa/knative-kafka-channel-data-plane"]}}],"to":[{"operation":{"paths":["/serverless-tests/*"]}}],"when":[{"key":"request.headers[Kn-Namespace]","values":["serverless-tests"]}]}],"selector":{"matchLabels":{"app.kubernetes.io/component":"broker-ingress"}}}}
+  creationTimestamp: "2025-01-09T14:46:56Z"
+  generation: 1
+  managedFields:
+  - apiVersion: security.istio.io/v1beta1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:kubectl.kubernetes.io/last-applied-configuration: {}
+      f:spec:
+        .: {}
+        f:action: {}
+        f:rules: {}
+        f:selector:
+          .: {}
+          f:matchLabels:
+            .: {}
+            f:app.kubernetes.io/component: {}
+    manager: kubectl-client-side-apply
+    operation: Update
+    time: "2025-01-09T14:46:56Z"
+  name: allow-serverless-tests-to-broker-ingress
+  namespace: knative-eventing
+  resourceVersion: "43968"
+  uid: 09ee5254-7293-4689-b89f-962021438229
+spec:
+  action: ALLOW
+  rules:
+  - from:
+    - source:
+        namespaces:
+        - serverless-tests
+    to:
+    - operation:
+        paths:
+        - /serverless-tests/*
+    - operation:
+        hosts:
+        - '*.serverless-tests'
+        - '*.serverless-tests.svc'
+        - '*.serverless-tests.svc.cluster.local'
+  - from:
+    - source:
+        namespaces:
+        - knative-eventing
+        principals:
+        - cluster.local/ns/knative-eventing/sa/pingsource-mt-adapter
+        - cluster.local/ns/knative-eventing/sa/imc-dispatcher
+        - cluster.local/ns/knative-eventing/sa/mt-broker-filter
+        - cluster.local/ns/knative-eventing/sa/knative-kafka-source-data-plane
+        - cluster.local/ns/knative-eventing/sa/knative-kafka-broker-data-plane
+        - cluster.local/ns/knative-eventing/sa/knative-kafka-channel-data-plane
+    to:
+    - operation:
+        hosts:
+        - '*.serverless-tests'
+        - '*.serverless-tests.svc'
+        - '*.serverless-tests.svc.cluster.local'
+    when:
+    - key: request.headers[Kn-Namespace]
+      values:
+      - serverless-tests
+  - from:
+    - source:
+        namespaces:
+        - knative-eventing
+        principals:
+        - cluster.local/ns/knative-eventing/sa/pingsource-mt-adapter
+        - cluster.local/ns/knative-eventing/sa/imc-dispatcher
+        - cluster.local/ns/knative-eventing/sa/mt-broker-filter
+        - cluster.local/ns/knative-eventing/sa/knative-kafka-source-data-plane
+        - cluster.local/ns/knative-eventing/sa/knative-kafka-broker-data-plane
+        - cluster.local/ns/knative-eventing/sa/knative-kafka-channel-data-plane
+    to:
+    - operation:
+        paths:
+        - /serverless-tests/*
+    when:
+    - key: request.headers[Kn-Namespace]
+      values:
+      - serverless-tests
+  selector:
+    matchLabels:
+      app.kubernetes.io/component: broker-ingress

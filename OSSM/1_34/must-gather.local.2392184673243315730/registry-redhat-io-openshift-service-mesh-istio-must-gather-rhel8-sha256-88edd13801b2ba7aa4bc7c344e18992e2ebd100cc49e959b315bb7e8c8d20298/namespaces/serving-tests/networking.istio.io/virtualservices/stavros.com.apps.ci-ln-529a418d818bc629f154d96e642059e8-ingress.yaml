@@ -1,0 +1,96 @@
+---
+apiVersion: networking.istio.io/v1beta1
+kind: VirtualService
+metadata:
+  annotations:
+    networking.knative.dev/ingress.class: istio.ingress.networking.knative.dev
+    serving.knative.dev/creator: system:admin
+    serving.knative.dev/lastModifier: system:admin
+  creationTimestamp: "2025-01-09T15:00:43Z"
+  generation: 1
+  labels:
+    networking.internal.knative.dev/ingress: stavros.com.apps.ci-ln-6bt60xt-76ef8.aws-2.ci.openshift.org
+  managedFields:
+  - apiVersion: networking.istio.io/v1beta1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:networking.knative.dev/ingress.class: {}
+          f:serving.knative.dev/creator: {}
+          f:serving.knative.dev/lastModifier: {}
+        f:labels:
+          .: {}
+          f:networking.internal.knative.dev/ingress: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"e7650249-4d54-4d4e-8d66-d58bbcf64844"}: {}
+      f:spec:
+        .: {}
+        f:gateways: {}
+        f:hosts: {}
+        f:http: {}
+    manager: controller
+    operation: Update
+    time: "2025-01-09T15:00:43Z"
+  name: stavros.com.apps.ci-ln-529a418d818bc629f154d96e642059e8-ingress
+  namespace: serving-tests
+  ownerReferences:
+  - apiVersion: networking.internal.knative.dev/v1alpha1
+    blockOwnerDeletion: true
+    controller: true
+    kind: Ingress
+    name: stavros.com.apps.ci-ln-6bt60xt-76ef8.aws-2.ci.openshift.org
+    uid: e7650249-4d54-4d4e-8d66-d58bbcf64844
+  resourceVersion: "54305"
+  uid: e6d9dbc2-6dd0-4252-9fb1-6006db3b523d
+spec:
+  gateways:
+  - serving-tests/1986073809-3797421420
+  hosts:
+  - stavros.com.apps.ci-ln-6bt60xt-76ef8.aws-2.ci.openshift.org
+  http:
+  - headers:
+      request:
+        set:
+          K-Network-Hash: 393c447295fd84aa831ecd26ef8ec79c2ab978a6914bafcfec48dfd93b5ce465
+    match:
+    - authority:
+        prefix: stavros.com.apps.ci-ln-6bt60xt-76ef8.aws-2.ci.openshift.org
+      gateways:
+      - serving-tests/1986073809-3797421420
+      headers:
+        K-Network-Hash:
+          exact: override
+    retries: {}
+    rewrite:
+      authority: helloworld-go.serving-tests.svc.cluster.local
+    route:
+    - destination:
+        host: helloworld-go.serving-tests.svc.cluster.local
+        port:
+          number: 80
+      headers:
+        request:
+          set:
+            K-Original-Host: stavros.com.apps.ci-ln-6bt60xt-76ef8.aws-2.ci.openshift.org
+      weight: 100
+  - match:
+    - authority:
+        prefix: stavros.com.apps.ci-ln-6bt60xt-76ef8.aws-2.ci.openshift.org
+      gateways:
+      - serving-tests/1986073809-3797421420
+    retries: {}
+    rewrite:
+      authority: helloworld-go.serving-tests.svc.cluster.local
+    route:
+    - destination:
+        host: helloworld-go.serving-tests.svc.cluster.local
+        port:
+          number: 80
+      headers:
+        request:
+          set:
+            K-Original-Host: stavros.com.apps.ci-ln-6bt60xt-76ef8.aws-2.ci.openshift.org
+      weight: 100

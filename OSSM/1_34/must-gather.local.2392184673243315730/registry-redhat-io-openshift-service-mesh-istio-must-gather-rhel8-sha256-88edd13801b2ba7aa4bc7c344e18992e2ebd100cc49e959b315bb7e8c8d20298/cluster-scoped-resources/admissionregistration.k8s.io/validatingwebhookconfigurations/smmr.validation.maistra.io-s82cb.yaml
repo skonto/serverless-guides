@@ -1,0 +1,84 @@
+---
+apiVersion: admissionregistration.k8s.io/v1
+kind: ValidatingWebhookConfiguration
+metadata:
+  creationTimestamp: "2025-01-09T14:45:00Z"
+  generateName: smmr.validation.maistra.io-
+  generation: 1
+  labels:
+    olm.managed: "true"
+    olm.owner: servicemeshoperator.v2.6.4
+    olm.owner.kind: ClusterServiceVersion
+    olm.owner.namespace: openshift-operators
+    olm.webhook-description-generate-name: smmr.validation.maistra.io
+    olm.webhook-description-hash: 9G7O92MU6JI0MvlKPoaZDP0PEu56mhQJcizaGN
+  managedFields:
+  - apiVersion: admissionregistration.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:generateName: {}
+        f:labels:
+          .: {}
+          f:olm.managed: {}
+          f:olm.owner: {}
+          f:olm.owner.kind: {}
+          f:olm.owner.namespace: {}
+          f:olm.webhook-description-generate-name: {}
+          f:olm.webhook-description-hash: {}
+      f:webhooks:
+        .: {}
+        k:{"name":"smmr.validation.maistra.io"}:
+          .: {}
+          f:admissionReviewVersions: {}
+          f:clientConfig:
+            .: {}
+            f:caBundle: {}
+            f:service:
+              .: {}
+              f:name: {}
+              f:namespace: {}
+              f:path: {}
+              f:port: {}
+          f:failurePolicy: {}
+          f:matchPolicy: {}
+          f:name: {}
+          f:namespaceSelector: {}
+          f:objectSelector: {}
+          f:rules: {}
+          f:sideEffects: {}
+          f:timeoutSeconds: {}
+    manager: olm
+    operation: Update
+    time: "2025-01-09T14:45:00Z"
+  name: smmr.validation.maistra.io-s82cb
+  resourceVersion: "40911"
+  uid: 4e26cb1f-c17c-403c-9e17-76a1812894af
+webhooks:
+- admissionReviewVersions:
+  - v1beta1
+  clientConfig:
+    caBundle: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUJ1akNDQVdDZ0F3SUJBZ0lJQ2svalQ4bE54UFV3Q2dZSUtvWkl6ajBFQXdJd1FURVdNQlFHQTFVRUNoTU4KVW1Wa0lFaGhkQ3dnU1c1akxqRW5NQ1VHQTFVRUF4TWViMnh0TFhObGJHWnphV2R1WldRdFlUUm1aVE0wWm1NNQpOR1JqTkdZMU1CNFhEVEkxTURFd09URTBORFV3TUZvWERUSTNNREV3T1RFME5EVXdNRm93UVRFV01CUUdBMVVFCkNoTU5VbVZrSUVoaGRDd2dTVzVqTGpFbk1DVUdBMVVFQXhNZWIyeHRMWE5sYkdaemFXZHVaV1F0WVRSbVpUTTAKWm1NNU5HUmpOR1kxTUZrd0V3WUhLb1pJemowQ0FRWUlLb1pJemowREFRY0RRZ0FFQUwwS0dYVUhEa2ZXeEJ3dgpnRVRjOVlrU1RYMGRHUzNvenloMUp1ZjhpRkh1WnUvd0pOK3JNV1JHTWE0RlhuVGdTeC8zNXZRNm9YWFlFNVJYCnBUN0IxS05DTUVBd0RnWURWUjBQQVFIL0JBUURBZ0lFTUE4R0ExVWRFd0VCL3dRRk1BTUJBZjh3SFFZRFZSME8KQkJZRUZENDFLMW5TdW5uL2VrREtmY25pYTJyTGIrQ2tNQW9HQ0NxR1NNNDlCQU1DQTBnQU1FVUNJUURqRkIxUwpVR1V3L0NCVGJMV3F0YW1pcUJ5bmkvUS9MTldkS0xveFNiL2xxd0lnWWw5RUNFbFFIVG0rYmJVbmtXWUNLa2tyClhvRTA5aE1BdUF6M2xMSU85dGs9Ci0tLS0tRU5EIENFUlRJRklDQVRFLS0tLS0K
+    service:
+      name: istio-operator-service
+      namespace: openshift-operators
+      path: /validate-smmr
+      port: 443
+  failurePolicy: Fail
+  matchPolicy: Equivalent
+  name: smmr.validation.maistra.io
+  namespaceSelector: {}
+  objectSelector: {}
+  rules:
+  - apiGroups:
+    - maistra.io
+    apiVersions:
+    - v1
+    operations:
+    - CREATE
+    - UPDATE
+    resources:
+    - servicemeshmemberrolls
+    scope: '*'
+  sideEffects: None
+  timeoutSeconds: 10

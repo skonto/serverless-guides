@@ -1,0 +1,614 @@
+---
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2025-01-09T14:58:57Z"
+    creationTimestamp: "2025-01-09T14:58:22Z"
+    labels:
+      app: activator
+      app.kubernetes.io/component: activator
+      app.kubernetes.io/name: knative-serving
+      app.kubernetes.io/version: release-v1.14
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:labels:
+            .: {}
+            f:app: {}
+            f:app.kubernetes.io/component: {}
+            f:app.kubernetes.io/name: {}
+            f:app.kubernetes.io/version: {}
+        f:subsets: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2025-01-09T14:58:57Z"
+    name: activator-service
+    namespace: knative-serving
+    resourceVersion: "53081"
+    uid: 7ce6c387-d642-4a08-8366-3499ede0d99a
+  subsets:
+  - addresses:
+    - ip: 10.129.2.17
+      nodeName: ip-10-0-118-213.ec2.internal
+      targetRef:
+        kind: Pod
+        name: activator-57c5775dc-7v8qc
+        namespace: knative-serving
+        uid: f95cda82-b938-4d88-8497-01e28db3d2b7
+    - ip: 10.131.0.26
+      nodeName: ip-10-0-63-72.ec2.internal
+      targetRef:
+        kind: Pod
+        name: activator-57c5775dc-zxbg9
+        namespace: knative-serving
+        uid: 4451f417-1bf7-4d73-a4c7-a66cac153e4e
+    ports:
+    - name: http2
+      port: 8013
+      protocol: TCP
+    - name: http-metrics
+      port: 9090
+      protocol: TCP
+    - name: http
+      port: 8012
+      protocol: TCP
+    - name: https
+      port: 8112
+      protocol: TCP
+    - name: http-profiling
+      port: 8008
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2025-01-09T14:58:57Z"
+    creationTimestamp: "2025-01-09T14:58:24Z"
+    labels:
+      name: activator-sm-service
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:labels:
+            .: {}
+            f:name: {}
+        f:subsets: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2025-01-09T14:58:57Z"
+    name: activator-sm-service
+    namespace: knative-serving
+    resourceVersion: "53077"
+    uid: 7bb83ebc-f475-42d6-b589-6920666f596f
+  subsets:
+  - addresses:
+    - ip: 10.129.2.17
+      nodeName: ip-10-0-118-213.ec2.internal
+      targetRef:
+        kind: Pod
+        name: activator-57c5775dc-7v8qc
+        namespace: knative-serving
+        uid: f95cda82-b938-4d88-8497-01e28db3d2b7
+    - ip: 10.131.0.26
+      nodeName: ip-10-0-63-72.ec2.internal
+      targetRef:
+        kind: Pod
+        name: activator-57c5775dc-zxbg9
+        namespace: knative-serving
+        uid: 4451f417-1bf7-4d73-a4c7-a66cac153e4e
+    ports:
+    - name: https
+      port: 8444
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2025-01-09T14:58:41Z"
+    creationTimestamp: "2025-01-09T14:58:22Z"
+    labels:
+      app: autoscaler
+      app.kubernetes.io/component: autoscaler
+      app.kubernetes.io/name: knative-serving
+      app.kubernetes.io/version: release-v1.14
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:labels:
+            .: {}
+            f:app: {}
+            f:app.kubernetes.io/component: {}
+            f:app.kubernetes.io/name: {}
+            f:app.kubernetes.io/version: {}
+        f:subsets: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2025-01-09T14:58:41Z"
+    name: autoscaler
+    namespace: knative-serving
+    resourceVersion: "52712"
+    uid: 0e581de0-6ec0-4d85-b549-7ca0bb6ee35a
+  subsets:
+  - addresses:
+    - ip: 10.128.2.32
+      nodeName: ip-10-0-25-180.ec2.internal
+      targetRef:
+        kind: Pod
+        name: autoscaler-67654f944f-s7bhw
+        namespace: knative-serving
+        uid: 60792f44-3955-40fc-abfc-b66c6debd173
+    - ip: 10.129.2.19
+      nodeName: ip-10-0-118-213.ec2.internal
+      targetRef:
+        kind: Pod
+        name: autoscaler-67654f944f-nkv26
+        namespace: knative-serving
+        uid: acbd9c52-c1e0-41ae-a814-f556f0e33d87
+    ports:
+    - name: http-metrics
+      port: 9090
+      protocol: TCP
+    - name: http-profiling
+      port: 8008
+      protocol: TCP
+    - name: http
+      port: 8080
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    creationTimestamp: "2025-01-09T14:58:40Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:subsets: {}
+      manager: autoscaler
+      operation: Update
+      time: "2025-01-09T14:58:40Z"
+    name: autoscaler-bucket-00-of-01
+    namespace: knative-serving
+    resourceVersion: "52611"
+    uid: 468d1ac6-f82c-4634-af07-84c0249b09e5
+  subsets:
+  - addresses:
+    - ip: 10.129.2.19
+    ports:
+    - name: http
+      port: 8080
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2025-01-09T14:58:41Z"
+    creationTimestamp: "2025-01-09T14:58:23Z"
+    labels:
+      app: autoscaler-hpa
+      app.kubernetes.io/component: autoscaler-hpa
+      app.kubernetes.io/name: knative-serving
+      app.kubernetes.io/version: release-v1.14
+      autoscaling.knative.dev/autoscaler-provider: hpa
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:labels:
+            .: {}
+            f:app: {}
+            f:app.kubernetes.io/component: {}
+            f:app.kubernetes.io/name: {}
+            f:app.kubernetes.io/version: {}
+            f:autoscaling.knative.dev/autoscaler-provider: {}
+        f:subsets: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2025-01-09T14:58:41Z"
+    name: autoscaler-hpa
+    namespace: knative-serving
+    resourceVersion: "52705"
+    uid: c19d8661-f67e-447d-baa1-c912aede4326
+  subsets:
+  - addresses:
+    - ip: 10.128.2.33
+      nodeName: ip-10-0-25-180.ec2.internal
+      targetRef:
+        kind: Pod
+        name: autoscaler-hpa-597557bd7b-6dsl9
+        namespace: knative-serving
+        uid: 040cace3-d331-4749-bc09-dca9f74952d8
+    - ip: 10.130.2.23
+      nodeName: ip-10-0-83-16.ec2.internal
+      targetRef:
+        kind: Pod
+        name: autoscaler-hpa-597557bd7b-9j47x
+        namespace: knative-serving
+        uid: b0c1ef12-1625-466d-af02-ad041aee2331
+    ports:
+    - name: http-metrics
+      port: 9090
+      protocol: TCP
+    - name: http-profiling
+      port: 8008
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2025-01-09T14:58:41Z"
+    creationTimestamp: "2025-01-09T14:58:25Z"
+    labels:
+      name: autoscaler-hpa-sm-service
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:labels:
+            .: {}
+            f:name: {}
+        f:subsets: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2025-01-09T14:58:41Z"
+    name: autoscaler-hpa-sm-service
+    namespace: knative-serving
+    resourceVersion: "52708"
+    uid: 39660ce3-654b-4464-b817-7f13a8372319
+  subsets:
+  - addresses:
+    - ip: 10.128.2.33
+      nodeName: ip-10-0-25-180.ec2.internal
+      targetRef:
+        kind: Pod
+        name: autoscaler-hpa-597557bd7b-6dsl9
+        namespace: knative-serving
+        uid: 040cace3-d331-4749-bc09-dca9f74952d8
+    - ip: 10.130.2.23
+      nodeName: ip-10-0-83-16.ec2.internal
+      targetRef:
+        kind: Pod
+        name: autoscaler-hpa-597557bd7b-9j47x
+        namespace: knative-serving
+        uid: b0c1ef12-1625-466d-af02-ad041aee2331
+    ports:
+    - name: https
+      port: 8444
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2025-01-09T14:58:41Z"
+    creationTimestamp: "2025-01-09T14:58:25Z"
+    labels:
+      name: autoscaler-sm-service
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:labels:
+            .: {}
+            f:name: {}
+        f:subsets: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2025-01-09T14:58:41Z"
+    name: autoscaler-sm-service
+    namespace: knative-serving
+    resourceVersion: "52714"
+    uid: 51991456-0edf-4878-866c-70fbc4438a62
+  subsets:
+  - addresses:
+    - ip: 10.128.2.32
+      nodeName: ip-10-0-25-180.ec2.internal
+      targetRef:
+        kind: Pod
+        name: autoscaler-67654f944f-s7bhw
+        namespace: knative-serving
+        uid: 60792f44-3955-40fc-abfc-b66c6debd173
+    - ip: 10.129.2.19
+      nodeName: ip-10-0-118-213.ec2.internal
+      targetRef:
+        kind: Pod
+        name: autoscaler-67654f944f-nkv26
+        namespace: knative-serving
+        uid: acbd9c52-c1e0-41ae-a814-f556f0e33d87
+    ports:
+    - name: https
+      port: 8444
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    creationTimestamp: "2025-01-09T14:58:22Z"
+    labels:
+      app: controller
+      app.kubernetes.io/component: controller
+      app.kubernetes.io/name: knative-serving
+      app.kubernetes.io/version: release-v1.14
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:labels:
+            .: {}
+            f:app: {}
+            f:app.kubernetes.io/component: {}
+            f:app.kubernetes.io/name: {}
+            f:app.kubernetes.io/version: {}
+        f:subsets: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2025-01-09T14:58:44Z"
+    name: controller
+    namespace: knative-serving
+    resourceVersion: "52828"
+    uid: fad3f7ac-c816-4071-a55c-63637dfd1142
+  subsets:
+  - addresses:
+    - ip: 10.128.2.35
+      nodeName: ip-10-0-25-180.ec2.internal
+      targetRef:
+        kind: Pod
+        name: controller-84d56ccfc4-ffm5k
+        namespace: knative-serving
+        uid: c9e628d4-9b10-4996-b5b3-6cfb7b60faa0
+    - ip: 10.129.2.21
+      nodeName: ip-10-0-118-213.ec2.internal
+      targetRef:
+        kind: Pod
+        name: controller-84d56ccfc4-q2kkb
+        namespace: knative-serving
+        uid: a4582568-aaac-48a0-938f-f5f3d22b895a
+    ports:
+    - name: http-metrics
+      port: 9090
+      protocol: TCP
+    - name: http-profiling
+      port: 8008
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    creationTimestamp: "2025-01-09T14:58:25Z"
+    labels:
+      name: controller-sm-service
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:labels:
+            .: {}
+            f:name: {}
+        f:subsets: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2025-01-09T14:58:44Z"
+    name: controller-sm-service
+    namespace: knative-serving
+    resourceVersion: "52826"
+    uid: 423811ff-b393-4167-81cb-429fa9e8f95a
+  subsets:
+  - addresses:
+    - ip: 10.128.2.35
+      nodeName: ip-10-0-25-180.ec2.internal
+      targetRef:
+        kind: Pod
+        name: controller-84d56ccfc4-ffm5k
+        namespace: knative-serving
+        uid: c9e628d4-9b10-4996-b5b3-6cfb7b60faa0
+    - ip: 10.129.2.21
+      nodeName: ip-10-0-118-213.ec2.internal
+      targetRef:
+        kind: Pod
+        name: controller-84d56ccfc4-q2kkb
+        namespace: knative-serving
+        uid: a4582568-aaac-48a0-938f-f5f3d22b895a
+    ports:
+    - name: https
+      port: 8444
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2025-01-09T14:58:36Z"
+    creationTimestamp: "2025-01-09T14:58:24Z"
+    labels:
+      app.kubernetes.io/component: net-istio
+      app.kubernetes.io/name: knative-serving
+      app.kubernetes.io/version: release-v1.14
+      networking.knative.dev/ingress-provider: istio
+      role: net-istio-webhook
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:labels:
+            .: {}
+            f:app.kubernetes.io/component: {}
+            f:app.kubernetes.io/name: {}
+            f:app.kubernetes.io/version: {}
+            f:networking.knative.dev/ingress-provider: {}
+            f:role: {}
+        f:subsets: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2025-01-09T14:58:36Z"
+    name: net-istio-webhook
+    namespace: knative-serving
+    resourceVersion: "52467"
+    uid: dacf5748-c56c-479c-8c93-82b9fe67eb04
+  subsets:
+  - addresses:
+    - ip: 10.129.2.20
+      nodeName: ip-10-0-118-213.ec2.internal
+      targetRef:
+        kind: Pod
+        name: net-istio-webhook-5fbccdd7d5-6wpfd
+        namespace: knative-serving
+        uid: 6bdcf05a-17e3-4935-93e5-992d69a8e448
+    - ip: 10.131.0.24
+      nodeName: ip-10-0-63-72.ec2.internal
+      targetRef:
+        kind: Pod
+        name: net-istio-webhook-5fbccdd7d5-6n9c9
+        namespace: knative-serving
+        uid: 015d5af4-2016-4565-9b6b-6c5fee8a5edb
+    ports:
+    - name: http-metrics
+      port: 9090
+      protocol: TCP
+    - name: https-webhook
+      port: 8443
+      protocol: TCP
+    - name: http-profiling
+      port: 8008
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2025-01-09T14:58:44Z"
+    creationTimestamp: "2025-01-09T14:58:23Z"
+    labels:
+      app: webhook
+      app.kubernetes.io/component: webhook
+      app.kubernetes.io/name: knative-serving
+      app.kubernetes.io/version: release-v1.14
+      role: webhook
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:labels:
+            .: {}
+            f:app: {}
+            f:app.kubernetes.io/component: {}
+            f:app.kubernetes.io/name: {}
+            f:app.kubernetes.io/version: {}
+            f:role: {}
+        f:subsets: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2025-01-09T14:58:44Z"
+    name: webhook
+    namespace: knative-serving
+    resourceVersion: "52804"
+    uid: 7623d482-f272-4c5f-89a1-aa736dc12e6b
+  subsets:
+  - addresses:
+    - ip: 10.130.2.25
+      nodeName: ip-10-0-83-16.ec2.internal
+      targetRef:
+        kind: Pod
+        name: webhook-7bccb96f5b-p5w68
+        namespace: knative-serving
+        uid: 9a5a313e-f2b9-4745-8bc8-f32f24aa6cf1
+    - ip: 10.131.0.22
+      nodeName: ip-10-0-63-72.ec2.internal
+      targetRef:
+        kind: Pod
+        name: webhook-7bccb96f5b-tksl4
+        namespace: knative-serving
+        uid: 56a1c212-d872-49bd-a90c-89af2d99c2d2
+    ports:
+    - name: http-metrics
+      port: 9090
+      protocol: TCP
+    - name: https-webhook
+      port: 8443
+      protocol: TCP
+    - name: http-profiling
+      port: 8008
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2025-01-09T14:58:44Z"
+    creationTimestamp: "2025-01-09T14:58:25Z"
+    labels:
+      name: webhook-sm-service
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:labels:
+            .: {}
+            f:name: {}
+        f:subsets: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2025-01-09T14:58:44Z"
+    name: webhook-sm-service
+    namespace: knative-serving
+    resourceVersion: "52802"
+    uid: 29b0c314-4aa1-4cfa-ba22-7e202d9856c7
+  subsets:
+  - addresses:
+    - ip: 10.130.2.25
+      nodeName: ip-10-0-83-16.ec2.internal
+      targetRef:
+        kind: Pod
+        name: webhook-7bccb96f5b-p5w68
+        namespace: knative-serving
+        uid: 9a5a313e-f2b9-4745-8bc8-f32f24aa6cf1
+    - ip: 10.131.0.22
+      nodeName: ip-10-0-63-72.ec2.internal
+      targetRef:
+        kind: Pod
+        name: webhook-7bccb96f5b-tksl4
+        namespace: knative-serving
+        uid: 56a1c212-d872-49bd-a90c-89af2d99c2d2
+    ports:
+    - name: https
+      port: 8444
+      protocol: TCP
+kind: EndpointsList
+metadata:
+  resourceVersion: "62180"

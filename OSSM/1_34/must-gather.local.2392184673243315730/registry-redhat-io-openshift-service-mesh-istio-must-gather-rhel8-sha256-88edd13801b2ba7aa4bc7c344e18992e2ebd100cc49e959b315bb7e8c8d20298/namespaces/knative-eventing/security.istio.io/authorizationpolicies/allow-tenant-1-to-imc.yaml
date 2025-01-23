@@ -1,0 +1,92 @@
+---
+apiVersion: security.istio.io/v1beta1
+kind: AuthorizationPolicy
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"security.istio.io/v1beta1","kind":"AuthorizationPolicy","metadata":{"annotations":{},"name":"allow-tenant-1-to-imc","namespace":"knative-eventing"},"spec":{"action":"ALLOW","rules":[{"from":[{"source":{"namespaces":["tenant-1"]}}],"to":[{"operation":{"paths":["/tenant-1/*"]}},{"operation":{"hosts":["*.tenant-1","*.tenant-1.svc","*.tenant-1.svc.cluster.local"]}}]},{"from":[{"source":{"namespaces":["knative-eventing"],"principals":["cluster.local/ns/knative-eventing/sa/pingsource-mt-adapter","cluster.local/ns/knative-eventing/sa/imc-dispatcher","cluster.local/ns/knative-eventing/sa/mt-broker-filter","cluster.local/ns/knative-eventing/sa/knative-kafka-source-data-plane","cluster.local/ns/knative-eventing/sa/knative-kafka-broker-data-plane","cluster.local/ns/knative-eventing/sa/knative-kafka-channel-data-plane"]}}],"to":[{"operation":{"hosts":["*.tenant-1","*.tenant-1.svc","*.tenant-1.svc.cluster.local"]}}],"when":[{"key":"request.headers[Kn-Namespace]","values":["tenant-1"]}]},{"from":[{"source":{"namespaces":["knative-eventing"],"principals":["cluster.local/ns/knative-eventing/sa/pingsource-mt-adapter","cluster.local/ns/knative-eventing/sa/imc-dispatcher","cluster.local/ns/knative-eventing/sa/mt-broker-filter","cluster.local/ns/knative-eventing/sa/knative-kafka-source-data-plane","cluster.local/ns/knative-eventing/sa/knative-kafka-broker-data-plane","cluster.local/ns/knative-eventing/sa/knative-kafka-channel-data-plane"]}}],"to":[{"operation":{"paths":["/tenant-1/*"]}}],"when":[{"key":"request.headers[Kn-Namespace]","values":["tenant-1"]}]}],"selector":{"matchLabels":{"app.kubernetes.io/component":"imc-dispatcher"}}}}
+  creationTimestamp: "2025-01-09T14:47:04Z"
+  generation: 1
+  managedFields:
+  - apiVersion: security.istio.io/v1beta1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:kubectl.kubernetes.io/last-applied-configuration: {}
+      f:spec:
+        .: {}
+        f:action: {}
+        f:rules: {}
+        f:selector:
+          .: {}
+          f:matchLabels:
+            .: {}
+            f:app.kubernetes.io/component: {}
+    manager: kubectl-client-side-apply
+    operation: Update
+    time: "2025-01-09T14:47:04Z"
+  name: allow-tenant-1-to-imc
+  namespace: knative-eventing
+  resourceVersion: "44033"
+  uid: 2ebf43f6-5de6-4000-aa76-d56e9a5d3287
+spec:
+  action: ALLOW
+  rules:
+  - from:
+    - source:
+        namespaces:
+        - tenant-1
+    to:
+    - operation:
+        paths:
+        - /tenant-1/*
+    - operation:
+        hosts:
+        - '*.tenant-1'
+        - '*.tenant-1.svc'
+        - '*.tenant-1.svc.cluster.local'
+  - from:
+    - source:
+        namespaces:
+        - knative-eventing
+        principals:
+        - cluster.local/ns/knative-eventing/sa/pingsource-mt-adapter
+        - cluster.local/ns/knative-eventing/sa/imc-dispatcher
+        - cluster.local/ns/knative-eventing/sa/mt-broker-filter
+        - cluster.local/ns/knative-eventing/sa/knative-kafka-source-data-plane
+        - cluster.local/ns/knative-eventing/sa/knative-kafka-broker-data-plane
+        - cluster.local/ns/knative-eventing/sa/knative-kafka-channel-data-plane
+    to:
+    - operation:
+        hosts:
+        - '*.tenant-1'
+        - '*.tenant-1.svc'
+        - '*.tenant-1.svc.cluster.local'
+    when:
+    - key: request.headers[Kn-Namespace]
+      values:
+      - tenant-1
+  - from:
+    - source:
+        namespaces:
+        - knative-eventing
+        principals:
+        - cluster.local/ns/knative-eventing/sa/pingsource-mt-adapter
+        - cluster.local/ns/knative-eventing/sa/imc-dispatcher
+        - cluster.local/ns/knative-eventing/sa/mt-broker-filter
+        - cluster.local/ns/knative-eventing/sa/knative-kafka-source-data-plane
+        - cluster.local/ns/knative-eventing/sa/knative-kafka-broker-data-plane
+        - cluster.local/ns/knative-eventing/sa/knative-kafka-channel-data-plane
+    to:
+    - operation:
+        paths:
+        - /tenant-1/*
+    when:
+    - key: request.headers[Kn-Namespace]
+      values:
+      - tenant-1
+  selector:
+    matchLabels:
+      app.kubernetes.io/component: imc-dispatcher

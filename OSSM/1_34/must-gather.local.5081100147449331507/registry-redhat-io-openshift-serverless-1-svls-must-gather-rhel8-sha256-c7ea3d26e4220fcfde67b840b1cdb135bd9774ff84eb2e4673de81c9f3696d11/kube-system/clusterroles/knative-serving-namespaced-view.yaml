@@ -1,0 +1,27 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"rbac.authorization.k8s.io/v1","kind":"ClusterRole","metadata":{"labels":{"app.kubernetes.io/name":"knative-serving","app.kubernetes.io/version":"release-v1.14","rbac.authorization.k8s.io/aggregate-to-view":"true"},"name":"knative-serving-namespaced-view"},"rules":[{"apiGroups":["serving.knative.dev","networking.internal.knative.dev","autoscaling.internal.knative.dev","caching.internal.knative.dev"],"resources":["*"],"verbs":["get","list","watch"]}]}
+    manifestival: new
+  creationTimestamp: "2025-01-09T14:58:15Z"
+  labels:
+    app.kubernetes.io/name: knative-serving
+    app.kubernetes.io/version: release-v1.14
+    rbac.authorization.k8s.io/aggregate-to-view: "true"
+  name: knative-serving-namespaced-view
+  resourceVersion: "52245"
+  uid: b7d0b98a-74f3-47b5-86f8-b9037b8f4ac9
+rules:
+- apiGroups:
+  - serving.knative.dev
+  - networking.internal.knative.dev
+  - autoscaling.internal.knative.dev
+  - caching.internal.knative.dev
+  resources:
+  - '*'
+  verbs:
+  - get
+  - list
+  - watch

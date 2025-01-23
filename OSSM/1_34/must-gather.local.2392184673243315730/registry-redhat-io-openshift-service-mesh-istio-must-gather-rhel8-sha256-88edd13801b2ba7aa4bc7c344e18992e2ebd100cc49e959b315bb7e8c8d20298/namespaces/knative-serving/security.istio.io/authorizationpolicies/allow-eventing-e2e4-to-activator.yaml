@@ -1,0 +1,70 @@
+---
+apiVersion: security.istio.io/v1beta1
+kind: AuthorizationPolicy
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"security.istio.io/v1beta1","kind":"AuthorizationPolicy","metadata":{"annotations":{},"name":"allow-eventing-e2e4-to-activator","namespace":"knative-serving"},"spec":{"action":"ALLOW","rules":[{"from":[{"source":{"namespaces":["eventing-e2e4"]}}],"to":[{"operation":{"hosts":["*.eventing-e2e4","*.eventing-e2e4.svc","*.eventing-e2e4.svc.cluster.local"]}}]},{"from":[{"source":{"namespaces":["knative-eventing"],"principals":["cluster.local/ns/knative-eventing/sa/pingsource-mt-adapter","cluster.local/ns/knative-eventing/sa/imc-dispatcher","cluster.local/ns/knative-eventing/sa/mt-broker-filter","cluster.local/ns/knative-eventing/sa/knative-kafka-source-data-plane","cluster.local/ns/knative-eventing/sa/knative-kafka-broker-data-plane","cluster.local/ns/knative-eventing/sa/knative-kafka-channel-data-plane"]}}],"to":[{"operation":{"hosts":["*.eventing-e2e4","*.eventing-e2e4.svc","*.eventing-e2e4.svc.cluster.local"]}}],"when":[{"key":"request.headers[Kn-Namespace]","values":["eventing-e2e4"]}]}],"selector":{"matchLabels":{"app.kubernetes.io/component":"activator"}}}}
+  creationTimestamp: "2025-01-09T14:46:46Z"
+  generation: 1
+  managedFields:
+  - apiVersion: security.istio.io/v1beta1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:kubectl.kubernetes.io/last-applied-configuration: {}
+      f:spec:
+        .: {}
+        f:action: {}
+        f:rules: {}
+        f:selector:
+          .: {}
+          f:matchLabels:
+            .: {}
+            f:app.kubernetes.io/component: {}
+    manager: kubectl-client-side-apply
+    operation: Update
+    time: "2025-01-09T14:46:46Z"
+  name: allow-eventing-e2e4-to-activator
+  namespace: knative-serving
+  resourceVersion: "43885"
+  uid: e1a1d8c5-636c-49eb-9d07-fde65ef8b771
+spec:
+  action: ALLOW
+  rules:
+  - from:
+    - source:
+        namespaces:
+        - eventing-e2e4
+    to:
+    - operation:
+        hosts:
+        - '*.eventing-e2e4'
+        - '*.eventing-e2e4.svc'
+        - '*.eventing-e2e4.svc.cluster.local'
+  - from:
+    - source:
+        namespaces:
+        - knative-eventing
+        principals:
+        - cluster.local/ns/knative-eventing/sa/pingsource-mt-adapter
+        - cluster.local/ns/knative-eventing/sa/imc-dispatcher
+        - cluster.local/ns/knative-eventing/sa/mt-broker-filter
+        - cluster.local/ns/knative-eventing/sa/knative-kafka-source-data-plane
+        - cluster.local/ns/knative-eventing/sa/knative-kafka-broker-data-plane
+        - cluster.local/ns/knative-eventing/sa/knative-kafka-channel-data-plane
+    to:
+    - operation:
+        hosts:
+        - '*.eventing-e2e4'
+        - '*.eventing-e2e4.svc'
+        - '*.eventing-e2e4.svc.cluster.local'
+    when:
+    - key: request.headers[Kn-Namespace]
+      values:
+      - eventing-e2e4
+  selector:
+    matchLabels:
+      app.kubernetes.io/component: activator

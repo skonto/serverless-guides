@@ -1,0 +1,219 @@
+---
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2025-01-09T14:45:20Z"
+    creationTimestamp: "2025-01-09T14:45:09Z"
+    labels:
+      name: istio-operator
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:labels:
+            .: {}
+            f:name: {}
+        f:subsets: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2025-01-09T14:45:20Z"
+    name: istio-operator-metrics
+    namespace: openshift-operators
+    resourceVersion: "41800"
+    uid: 46201107-4eec-49a0-ab34-653affff7c77
+  subsets:
+  - addresses:
+    - ip: 10.128.2.26
+      nodeName: ip-10-0-25-180.ec2.internal
+      targetRef:
+        kind: Pod
+        name: istio-operator-68d4d58fb4-4r875
+        namespace: openshift-operators
+        uid: 64034e3a-5802-4144-b387-fb5b07563258
+    ports:
+    - name: http-metrics
+      port: 8383
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2025-01-09T14:45:20Z"
+    creationTimestamp: "2025-01-09T14:45:00Z"
+    labels:
+      olm.managed: "true"
+      operators.coreos.com/servicemeshoperator.openshift-operators: ""
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:labels:
+            .: {}
+            f:olm.managed: {}
+            f:operators.coreos.com/servicemeshoperator.openshift-operators: {}
+        f:subsets: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2025-01-09T14:45:20Z"
+    name: istio-operator-service
+    namespace: openshift-operators
+    resourceVersion: "41799"
+    uid: 7c827413-f571-4bd2-bdff-a5c5d92b9f5c
+  subsets:
+  - addresses:
+    - ip: 10.128.2.26
+      nodeName: ip-10-0-25-180.ec2.internal
+      targetRef:
+        kind: Pod
+        name: istio-operator-68d4d58fb4-4r875
+        namespace: openshift-operators
+        uid: 64034e3a-5802-4144-b387-fb5b07563258
+    ports:
+    - name: "443"
+      port: 11999
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2025-01-09T14:45:20Z"
+    creationTimestamp: "2025-01-09T14:45:02Z"
+    labels:
+      app.kubernetes.io/component: metrics
+      name: jaeger-operator
+      olm.managed: "true"
+      operators.coreos.com/jaeger-product.openshift-operators: ""
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:labels:
+            .: {}
+            f:app.kubernetes.io/component: {}
+            f:name: {}
+            f:olm.managed: {}
+            f:operators.coreos.com/jaeger-product.openshift-operators: {}
+        f:subsets: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2025-01-09T14:45:20Z"
+    name: jaeger-operator-metrics
+    namespace: openshift-operators
+    resourceVersion: "41780"
+    uid: 5d644adb-b35f-4e98-8aa1-f827df8b3d7a
+  subsets:
+  - addresses:
+    - ip: 10.128.2.27
+      nodeName: ip-10-0-25-180.ec2.internal
+      targetRef:
+        kind: Pod
+        name: jaeger-operator-574b9f9bd8-khzg6
+        namespace: openshift-operators
+        uid: 36fed241-2c73-4704-b2e3-cb3b4c4c640e
+    ports:
+    - name: https
+      port: 8443
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2025-01-09T14:45:20Z"
+    creationTimestamp: "2025-01-09T14:45:05Z"
+    labels:
+      olm.managed: "true"
+      operators.coreos.com/jaeger-product.openshift-operators: ""
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:labels:
+            .: {}
+            f:olm.managed: {}
+            f:operators.coreos.com/jaeger-product.openshift-operators: {}
+        f:subsets: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2025-01-09T14:45:20Z"
+    name: jaeger-operator-service
+    namespace: openshift-operators
+    resourceVersion: "41781"
+    uid: 23f60212-86d6-4df2-a575-edebbb4b657d
+  subsets:
+  - addresses:
+    - ip: 10.128.2.27
+      nodeName: ip-10-0-25-180.ec2.internal
+      targetRef:
+        kind: Pod
+        name: jaeger-operator-574b9f9bd8-khzg6
+        namespace: openshift-operators
+        uid: 36fed241-2c73-4704-b2e3-cb3b4c4c640e
+    ports:
+    - name: "443"
+      port: 9443
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2025-01-09T14:45:20Z"
+    creationTimestamp: "2025-01-09T14:45:00Z"
+    labels:
+      name: jaeger-operator
+      olm.managed: "true"
+      operators.coreos.com/jaeger-product.openshift-operators: ""
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:labels:
+            .: {}
+            f:name: {}
+            f:olm.managed: {}
+            f:operators.coreos.com/jaeger-product.openshift-operators: {}
+        f:subsets: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2025-01-09T14:45:20Z"
+    name: jaeger-operator-webhook-service
+    namespace: openshift-operators
+    resourceVersion: "41777"
+    uid: c67bdd81-3332-4737-9815-39a5b5f9a8e4
+  subsets:
+  - addresses:
+    - ip: 10.128.2.27
+      nodeName: ip-10-0-25-180.ec2.internal
+      targetRef:
+        kind: Pod
+        name: jaeger-operator-574b9f9bd8-khzg6
+        namespace: openshift-operators
+        uid: 36fed241-2c73-4704-b2e3-cb3b4c4c640e
+    ports:
+    - port: 9443
+      protocol: TCP
+kind: EndpointsList
+metadata:
+  resourceVersion: "60380"

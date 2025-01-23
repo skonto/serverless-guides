@@ -1,0 +1,66 @@
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"rbac.authorization.k8s.io/v1","kind":"Role","metadata":{"labels":{"app.kubernetes.io/name":"knative-serving","app.kubernetes.io/version":"release-v1.14","serving.knative.dev/controller":"true"},"name":"knative-serving-activator","namespace":"knative-serving","ownerReferences":[{"apiVersion":"operator.knative.dev/v1beta1","blockOwnerDeletion":true,"controller":true,"kind":"KnativeServing","name":"knative-serving","uid":"aed016d4-b7c0-4f05-ace9-ef4eec4aeb9c"}]},"rules":[{"apiGroups":[""],"resources":["configmaps","secrets"],"verbs":["get","list","watch"]},{"apiGroups":[""],"resourceNames":["routing-serving-certs","knative-serving-certs"],"resources":["secrets"],"verbs":["get","list","watch"]}]}
+    manifestival: new
+  creationTimestamp: "2025-01-09T14:58:15Z"
+  labels:
+    app.kubernetes.io/name: knative-serving
+    app.kubernetes.io/version: release-v1.14
+    serving.knative.dev/controller: "true"
+  managedFields:
+  - apiVersion: rbac.authorization.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:kubectl.kubernetes.io/last-applied-configuration: {}
+          f:manifestival: {}
+        f:labels:
+          .: {}
+          f:app.kubernetes.io/name: {}
+          f:app.kubernetes.io/version: {}
+          f:serving.knative.dev/controller: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"aed016d4-b7c0-4f05-ace9-ef4eec4aeb9c"}: {}
+      f:rules: {}
+    manager: manifestival
+    operation: Update
+    time: "2025-01-09T14:58:27Z"
+  name: knative-serving-activator
+  namespace: knative-serving
+  ownerReferences:
+  - apiVersion: operator.knative.dev/v1beta1
+    blockOwnerDeletion: true
+    controller: true
+    kind: KnativeServing
+    name: knative-serving
+    uid: aed016d4-b7c0-4f05-ace9-ef4eec4aeb9c
+  resourceVersion: "52227"
+  uid: 91c8eb27-0fcf-4565-966a-c428096058d6
+rules:
+- apiGroups:
+  - ""
+  resources:
+  - configmaps
+  - secrets
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - ""
+  resourceNames:
+  - routing-serving-certs
+  - knative-serving-certs
+  resources:
+  - secrets
+  verbs:
+  - get
+  - list
+  - watch

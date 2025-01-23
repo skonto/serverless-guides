@@ -1,0 +1,54 @@
+---
+apiVersion: monitoring.coreos.com/v1
+items:
+- apiVersion: monitoring.coreos.com/v1
+  kind: ServiceMonitor
+  metadata:
+    creationTimestamp: "2025-01-09T14:45:09Z"
+    generation: 1
+    labels:
+      name: istio-operator
+    managedFields:
+    - apiVersion: monitoring.coreos.com/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:labels:
+            .: {}
+            f:name: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"7237d3e3-dd03-4918-891f-6a701a026698"}: {}
+        f:spec:
+          .: {}
+          f:endpoints: {}
+          f:namespaceSelector: {}
+          f:selector: {}
+      manager: istio-operator
+      operation: Update
+      time: "2025-01-09T14:45:09Z"
+    name: istio-operator-metrics
+    namespace: openshift-operators
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: istio-operator-metrics
+      uid: 7237d3e3-dd03-4918-891f-6a701a026698
+    resourceVersion: "41404"
+    uid: eb16bdfb-5d80-44d5-9d67-40af6c8a7877
+  spec:
+    endpoints:
+    - bearerTokenSecret:
+        key: ""
+        name: ""
+      port: http-metrics
+    namespaceSelector: {}
+    selector:
+      matchLabels:
+        name: istio-operator
+kind: ServiceMonitorList
+metadata:
+  continue: ""
+  resourceVersion: "60381"

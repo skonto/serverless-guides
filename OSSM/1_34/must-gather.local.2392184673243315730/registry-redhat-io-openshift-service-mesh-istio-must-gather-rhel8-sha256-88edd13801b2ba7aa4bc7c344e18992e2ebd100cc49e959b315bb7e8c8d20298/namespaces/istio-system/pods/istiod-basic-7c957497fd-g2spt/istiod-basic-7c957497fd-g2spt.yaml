@@ -1,0 +1,646 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    k8s.ovn.org/pod-networks: '{"default":{"ip_addresses":["10.129.2.15/23"],"mac_address":"0a:58:0a:81:02:0f","gateway_ips":["10.129.2.1"],"routes":[{"dest":"10.128.0.0/14","nextHop":"10.129.2.1"},{"dest":"172.30.0.0/16","nextHop":"10.129.2.1"},{"dest":"100.64.0.0/16","nextHop":"10.129.2.1"}],"ip_address":"10.129.2.15/23","gateway_ip":"10.129.2.1","role":"primary"}}'
+    k8s.v1.cni.cncf.io/network-status: |-
+      [{
+          "name": "ovn-kubernetes",
+          "interface": "eth0",
+          "ips": [
+              "10.129.2.15"
+          ],
+          "mac": "0a:58:0a:81:02:0f",
+          "default": true,
+          "dns": {}
+      }]
+    openshift.io/scc: restricted-v2
+    prometheus.io/port: "15014"
+    prometheus.io/scrape: "true"
+    seccomp.security.alpha.kubernetes.io/pod: runtime/default
+    sidecar.istio.io/inject: "false"
+  creationTimestamp: "2025-01-09T14:45:30Z"
+  generateName: istiod-basic-7c957497fd-
+  labels:
+    app: istiod
+    istio: istiod
+    istio.io/rev: basic
+    maistra-control-plane: istio-system
+    pod-template-hash: 7c957497fd
+    sidecar.istio.io/inject: "false"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.ovn.org/pod-networks: {}
+    manager: ip-10-0-118-213
+    operation: Update
+    subresource: status
+    time: "2025-01-09T14:45:30Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:prometheus.io/port: {}
+          f:prometheus.io/scrape: {}
+          f:sidecar.istio.io/inject: {}
+        f:generateName: {}
+        f:labels:
+          .: {}
+          f:app: {}
+          f:istio: {}
+          f:istio.io/rev: {}
+          f:maistra-control-plane: {}
+          f:pod-template-hash: {}
+          f:sidecar.istio.io/inject: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"4caf8148-21dd-44df-82e5-6eacac5b449b"}: {}
+      f:spec:
+        f:affinity:
+          .: {}
+          f:nodeAffinity:
+            .: {}
+            f:preferredDuringSchedulingIgnoredDuringExecution: {}
+            f:requiredDuringSchedulingIgnoredDuringExecution: {}
+        f:containers:
+          k:{"name":"discovery"}:
+            .: {}
+            f:args: {}
+            f:env:
+              .: {}
+              k:{"name":"CLUSTER_ID"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"ENABLE_IOR"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"INJECTION_WEBHOOK_CONFIG_NAME"}:
+                .: {}
+                f:name: {}
+              k:{"name":"ISTIOD_ADDR"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"JWT_POLICY"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"KUBECONFIG"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"PILOT_CA_CERT_CONFIG_MAP_NAME"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"PILOT_CERT_PROVIDER"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"PILOT_ENABLE_ANALYSIS"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"PILOT_ENABLE_FEDERATION"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"PILOT_ENABLE_GATEWAY_API"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"PILOT_ENABLE_GATEWAY_API_DEPLOYMENT_CONTROLLER"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"PILOT_ENABLE_GATEWAY_API_STATUS"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"PILOT_ENABLE_PROTOCOL_SNIFFING_FOR_INBOUND"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"PILOT_ENABLE_PROTOCOL_SNIFFING_FOR_OUTBOUND"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"PILOT_ENABLE_STATUS"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"PILOT_TRACE_SAMPLING"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"POD_NAME"}:
+                .: {}
+                f:name: {}
+                f:valueFrom:
+                  .: {}
+                  f:fieldRef: {}
+              k:{"name":"POD_NAMESPACE"}:
+                .: {}
+                f:name: {}
+                f:valueFrom:
+                  .: {}
+                  f:fieldRef: {}
+              k:{"name":"PRIORITIZED_LEADER_ELECTION"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"REVISION"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"SERVICE_ACCOUNT"}:
+                .: {}
+                f:name: {}
+                f:valueFrom:
+                  .: {}
+                  f:fieldRef: {}
+              k:{"name":"VALIDATION_WEBHOOK_CONFIG_NAME"}:
+                .: {}
+                f:name: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:name: {}
+            f:ports:
+              .: {}
+              k:{"containerPort":8080,"protocol":"TCP"}:
+                .: {}
+                f:containerPort: {}
+                f:protocol: {}
+              k:{"containerPort":8188,"protocol":"TCP"}:
+                .: {}
+                f:containerPort: {}
+                f:protocol: {}
+              k:{"containerPort":15010,"protocol":"TCP"}:
+                .: {}
+                f:containerPort: {}
+                f:protocol: {}
+              k:{"containerPort":15017,"protocol":"TCP"}:
+                .: {}
+                f:containerPort: {}
+                f:name: {}
+                f:protocol: {}
+            f:readinessProbe:
+              .: {}
+              f:failureThreshold: {}
+              f:httpGet:
+                .: {}
+                f:path: {}
+                f:port: {}
+                f:scheme: {}
+              f:initialDelaySeconds: {}
+              f:periodSeconds: {}
+              f:successThreshold: {}
+              f:timeoutSeconds: {}
+            f:resources:
+              .: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:securityContext:
+              .: {}
+              f:capabilities:
+                .: {}
+                f:drop: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/etc/cacerts"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+                f:readOnly: {}
+              k:{"mountPath":"/var/run/secrets/istio-dns"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+              k:{"mountPath":"/var/run/secrets/istiod/ca"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+                f:readOnly: {}
+              k:{"mountPath":"/var/run/secrets/istiod/tls"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+                f:readOnly: {}
+              k:{"mountPath":"/var/run/secrets/remote"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+                f:readOnly: {}
+            f:workingDir: {}
+        f:dnsPolicy: {}
+        f:enableServiceLinks: {}
+        f:restartPolicy: {}
+        f:schedulerName: {}
+        f:securityContext: {}
+        f:serviceAccount: {}
+        f:serviceAccountName: {}
+        f:terminationGracePeriodSeconds: {}
+        f:volumes:
+          .: {}
+          k:{"name":"cacerts"}:
+            .: {}
+            f:name: {}
+            f:secret:
+              .: {}
+              f:defaultMode: {}
+              f:optional: {}
+              f:secretName: {}
+          k:{"name":"istio-csr-ca-configmap"}:
+            .: {}
+            f:configMap:
+              .: {}
+              f:defaultMode: {}
+              f:name: {}
+              f:optional: {}
+            f:name: {}
+          k:{"name":"istio-csr-dns-cert"}:
+            .: {}
+            f:name: {}
+            f:secret:
+              .: {}
+              f:defaultMode: {}
+              f:optional: {}
+              f:secretName: {}
+          k:{"name":"istio-kubeconfig"}:
+            .: {}
+            f:name: {}
+            f:secret:
+              .: {}
+              f:defaultMode: {}
+              f:optional: {}
+              f:secretName: {}
+          k:{"name":"local-certs"}:
+            .: {}
+            f:emptyDir:
+              .: {}
+              f:medium: {}
+            f:name: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2025-01-09T14:45:30Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.v1.cni.cncf.io/network-status: {}
+    manager: multus-daemon
+    operation: Update
+    subresource: status
+    time: "2025-01-09T14:45:31Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"ContainersReady"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Initialized"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"PodReadyToStartContainers"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Ready"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+        f:containerStatuses: {}
+        f:hostIP: {}
+        f:hostIPs: {}
+        f:phase: {}
+        f:podIP: {}
+        f:podIPs:
+          .: {}
+          k:{"ip":"10.129.2.15"}:
+            .: {}
+            f:ip: {}
+        f:startTime: {}
+    manager: kubelet
+    operation: Update
+    subresource: status
+    time: "2025-01-09T14:45:42Z"
+  name: istiod-basic-7c957497fd-g2spt
+  namespace: istio-system
+  ownerReferences:
+  - apiVersion: apps/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: ReplicaSet
+    name: istiod-basic-7c957497fd
+    uid: 4caf8148-21dd-44df-82e5-6eacac5b449b
+  resourceVersion: "42590"
+  uid: 310a2635-f93c-482b-843c-f17e96deb530
+spec:
+  affinity:
+    nodeAffinity:
+      preferredDuringSchedulingIgnoredDuringExecution:
+      - preference:
+          matchExpressions:
+          - key: kubernetes.io/arch
+            operator: In
+            values:
+            - amd64
+        weight: 2
+      - preference:
+          matchExpressions:
+          - key: kubernetes.io/arch
+            operator: In
+            values:
+            - arm64
+        weight: 2
+      - preference:
+          matchExpressions:
+          - key: kubernetes.io/arch
+            operator: In
+            values:
+            - ppc64le
+        weight: 2
+      - preference:
+          matchExpressions:
+          - key: kubernetes.io/arch
+            operator: In
+            values:
+            - s390x
+        weight: 2
+      requiredDuringSchedulingIgnoredDuringExecution:
+        nodeSelectorTerms:
+        - matchExpressions:
+          - key: kubernetes.io/arch
+            operator: In
+            values:
+            - amd64
+            - arm64
+            - ppc64le
+            - s390x
+  containers:
+  - args:
+    - discovery
+    - --memberRollName=default
+    - --enableNodeAccess=false
+    - --enableCRDScan=false
+    - --enableIngressClassName=false
+    - --monitoringAddr=:15014
+    - --log_output_level=default:warn
+    - --domain
+    - cluster.local
+    - --keepaliveMaxServerConnectionAge
+    - 30m
+    env:
+    - name: ENABLE_IOR
+      value: "true"
+    - name: PILOT_CA_CERT_CONFIG_MAP_NAME
+      value: istio-ca-root-cert
+    - name: PILOT_ENABLE_GATEWAY_API
+      value: "false"
+    - name: PILOT_ENABLE_GATEWAY_API_STATUS
+      value: "false"
+    - name: PILOT_ENABLE_GATEWAY_API_DEPLOYMENT_CONTROLLER
+      value: "false"
+    - name: PRIORITIZED_LEADER_ELECTION
+      value: "false"
+    - name: VALIDATION_WEBHOOK_CONFIG_NAME
+    - name: INJECTION_WEBHOOK_CONFIG_NAME
+    - name: REVISION
+      value: basic
+    - name: JWT_POLICY
+      value: first-party-jwt
+    - name: PILOT_CERT_PROVIDER
+      value: istiod
+    - name: POD_NAME
+      valueFrom:
+        fieldRef:
+          apiVersion: v1
+          fieldPath: metadata.name
+    - name: POD_NAMESPACE
+      valueFrom:
+        fieldRef:
+          apiVersion: v1
+          fieldPath: metadata.namespace
+    - name: SERVICE_ACCOUNT
+      valueFrom:
+        fieldRef:
+          apiVersion: v1
+          fieldPath: spec.serviceAccountName
+    - name: KUBECONFIG
+      value: /var/run/secrets/remote/config
+    - name: PILOT_ENABLE_FEDERATION
+      value: "true"
+    - name: PILOT_TRACE_SAMPLING
+      value: "1"
+    - name: PILOT_ENABLE_PROTOCOL_SNIFFING_FOR_OUTBOUND
+      value: "false"
+    - name: PILOT_ENABLE_PROTOCOL_SNIFFING_FOR_INBOUND
+      value: "false"
+    - name: ISTIOD_ADDR
+      value: istiod-basic.istio-system.svc:15012
+    - name: PILOT_ENABLE_STATUS
+      value: "false"
+    - name: PILOT_ENABLE_ANALYSIS
+      value: "false"
+    - name: CLUSTER_ID
+      value: Kubernetes
+    image: registry.redhat.io/openshift-service-mesh/pilot-rhel8@sha256:6765bccf823aaced95f7ed9b3650a8a795c69343096f3b7f6e1550270a2ed398
+    imagePullPolicy: IfNotPresent
+    name: discovery
+    ports:
+    - containerPort: 8080
+      protocol: TCP
+    - containerPort: 15010
+      protocol: TCP
+    - containerPort: 15017
+      name: webhook
+      protocol: TCP
+    - containerPort: 8188
+      protocol: TCP
+    readinessProbe:
+      failureThreshold: 3
+      httpGet:
+        path: /ready
+        port: 8080
+        scheme: HTTP
+      initialDelaySeconds: 1
+      periodSeconds: 3
+      successThreshold: 1
+      timeoutSeconds: 5
+    resources:
+      requests:
+        cpu: 10m
+        memory: 128Mi
+    securityContext:
+      allowPrivilegeEscalation: false
+      capabilities:
+        drop:
+        - ALL
+      runAsNonRoot: true
+      runAsUser: 1000710000
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /var/run/secrets/istio-dns
+      name: local-certs
+    - mountPath: /etc/cacerts
+      name: cacerts
+      readOnly: true
+    - mountPath: /var/run/secrets/remote
+      name: istio-kubeconfig
+      readOnly: true
+    - mountPath: /var/run/secrets/istiod/tls
+      name: istio-csr-dns-cert
+      readOnly: true
+    - mountPath: /var/run/secrets/istiod/ca
+      name: istio-csr-ca-configmap
+      readOnly: true
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-kh9qq
+      readOnly: true
+    workingDir: /
+  dnsPolicy: ClusterFirst
+  enableServiceLinks: true
+  imagePullSecrets:
+  - name: istiod-basic-dockercfg-fpm5b
+  nodeName: ip-10-0-118-213.ec2.internal
+  preemptionPolicy: PreemptLowerPriority
+  priority: 0
+  restartPolicy: Always
+  schedulerName: default-scheduler
+  securityContext:
+    fsGroup: 1000710000
+    seLinuxOptions:
+      level: s0:c27,c4
+    seccompProfile:
+      type: RuntimeDefault
+  serviceAccount: istiod-basic
+  serviceAccountName: istiod-basic
+  terminationGracePeriodSeconds: 30
+  tolerations:
+  - effect: NoExecute
+    key: node.kubernetes.io/not-ready
+    operator: Exists
+    tolerationSeconds: 300
+  - effect: NoExecute
+    key: node.kubernetes.io/unreachable
+    operator: Exists
+    tolerationSeconds: 300
+  - effect: NoSchedule
+    key: node.kubernetes.io/memory-pressure
+    operator: Exists
+  volumes:
+  - emptyDir:
+      medium: Memory
+    name: local-certs
+  - name: cacerts
+    secret:
+      defaultMode: 420
+      optional: true
+      secretName: cacerts
+  - name: istio-kubeconfig
+    secret:
+      defaultMode: 420
+      optional: true
+      secretName: istio-kubeconfig
+  - name: istio-csr-dns-cert
+    secret:
+      defaultMode: 420
+      optional: true
+      secretName: istiod-tls
+  - configMap:
+      defaultMode: 420
+      name: istio-ca-root-cert
+      optional: true
+    name: istio-csr-ca-configmap
+  - name: kube-api-access-kh9qq
+    projected:
+      defaultMode: 420
+      sources:
+      - serviceAccountToken:
+          expirationSeconds: 3607
+          path: token
+      - configMap:
+          items:
+          - key: ca.crt
+            path: ca.crt
+          name: kube-root-ca.crt
+      - downwardAPI:
+          items:
+          - fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.namespace
+            path: namespace
+      - configMap:
+          items:
+          - key: service-ca.crt
+            path: service-ca.crt
+          name: openshift-service-ca.crt
+status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2025-01-09T14:45:41Z"
+    status: "True"
+    type: PodReadyToStartContainers
+  - lastProbeTime: null
+    lastTransitionTime: "2025-01-09T14:45:30Z"
+    status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2025-01-09T14:45:42Z"
+    status: "True"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2025-01-09T14:45:42Z"
+    status: "True"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2025-01-09T14:45:30Z"
+    status: "True"
+    type: PodScheduled
+  containerStatuses:
+  - containerID: cri-o://98afbfdcae8a05f7d79336a982d9cf8fd381bc8432511c4afcfeaecee717080c
+    image: registry.redhat.io/openshift-service-mesh/pilot-rhel8@sha256:6765bccf823aaced95f7ed9b3650a8a795c69343096f3b7f6e1550270a2ed398
+    imageID: registry.redhat.io/openshift-service-mesh/pilot-rhel8@sha256:6765bccf823aaced95f7ed9b3650a8a795c69343096f3b7f6e1550270a2ed398
+    lastState: {}
+    name: discovery
+    ready: true
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2025-01-09T14:45:41Z"
+  hostIP: 10.0.118.213
+  hostIPs:
+  - ip: 10.0.118.213
+  phase: Running
+  podIP: 10.129.2.15
+  podIPs:
+  - ip: 10.129.2.15
+  qosClass: Burstable
+  startTime: "2025-01-09T14:45:30Z"

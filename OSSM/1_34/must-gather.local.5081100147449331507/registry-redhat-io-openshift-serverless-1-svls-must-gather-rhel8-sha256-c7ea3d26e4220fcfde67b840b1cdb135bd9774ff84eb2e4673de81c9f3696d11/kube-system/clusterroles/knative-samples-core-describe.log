@@ -1,0 +1,20 @@
+Name:         knative-samples-core
+Labels:       samples.knative.dev/controller=true
+              samples.knative.dev/release=devel
+Annotations:  <none>
+PolicyRule:
+  Resources                                                     Non-Resource URLs  Resource Names  Verbs
+  ---------                                                     -----------------  --------------  -----
+  configmaps                                                    []                 []              [get list create update delete patch watch]
+  events                                                        []                 []              [get list create update delete patch watch]
+  namespaces                                                    []                 []              [get list create update delete patch watch]
+  pods                                                          []                 []              [get list create update delete patch watch]
+  secrets                                                       []                 []              [get list create update delete patch watch]
+  services                                                      []                 []              [get list create update delete patch watch]
+  mutatingwebhookconfigurations.admissionregistration.k8s.io    []                 []              [get list create update delete patch watch]
+  validatingwebhookconfigurations.admissionregistration.k8s.io  []                 []              [get list create update delete patch watch]
+  customresourcedefinitions.apiextensions.k8s.io                []                 []              [get list create update delete patch watch]
+  deployments.apps/finalizers                                   []                 []              [get list create update delete patch watch]
+  deployments.apps                                              []                 []              [get list create update delete patch watch]
+  leases.coordination.k8s.io                                    []                 []              [get list create update delete patch watch]
+  namespaces/finalizers                                         []                 []              [update]

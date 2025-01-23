@@ -1,0 +1,12 @@
+Name:         knative-serving-namespaced-edit
+Labels:       app.kubernetes.io/name=knative-serving
+              app.kubernetes.io/version=release-v1.14
+              rbac.authorization.k8s.io/aggregate-to-edit=true
+Annotations:  manifestival: new
+PolicyRule:
+  Resources                           Non-Resource URLs  Resource Names  Verbs
+  ---------                           -----------------  --------------  -----
+  *.serving.knative.dev               []                 []              [create update patch delete]
+  *.autoscaling.internal.knative.dev  []                 []              [get list watch]
+  *.caching.internal.knative.dev      []                 []              [get list watch]
+  *.networking.internal.knative.dev   []                 []              [get list watch]

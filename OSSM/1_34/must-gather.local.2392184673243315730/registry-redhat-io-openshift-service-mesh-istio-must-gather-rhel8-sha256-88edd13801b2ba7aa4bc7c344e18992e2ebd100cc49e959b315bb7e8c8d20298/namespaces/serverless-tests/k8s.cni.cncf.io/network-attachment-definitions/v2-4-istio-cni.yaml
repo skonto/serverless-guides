@@ -1,0 +1,27 @@
+apiVersion: k8s.cni.cncf.io/v1
+kind: NetworkAttachmentDefinition
+metadata:
+  creationTimestamp: "2025-01-09T14:46:13Z"
+  generation: 1
+  labels:
+    maistra.io/member-of: istio-system
+  managedFields:
+  - apiVersion: k8s.cni.cncf.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:labels:
+          .: {}
+          f:maistra.io/member-of: {}
+      f:spec:
+        .: {}
+        f:config: {}
+    manager: istio-operator
+    operation: Update
+    time: "2025-01-09T14:46:13Z"
+  name: v2-4-istio-cni
+  namespace: serverless-tests
+  resourceVersion: "43550"
+  uid: 30e3989f-aca9-4a89-8ad8-c61378f8fe82
+spec:
+  config: ""

@@ -1,0 +1,28 @@
+Name:                builder
+Namespace:           knative-eventing
+Labels:              <none>
+Annotations:         openshift.io/internal-registry-pull-secret-ref: builder-dockercfg-57hlr
+Image pull secrets:  builder-dockercfg-57hlr
+Mountable secrets:   builder-dockercfg-57hlr
+Tokens:              <none>
+Events:              <none>
+
+
+Name:                default
+Namespace:           knative-eventing
+Labels:              <none>
+Annotations:         openshift.io/internal-registry-pull-secret-ref: default-dockercfg-vmvbm
+Image pull secrets:  default-dockercfg-vmvbm
+Mountable secrets:   default-dockercfg-vmvbm
+Tokens:              <none>
+Events:              <none>
+
+
+Name:                deployer
+Namespace:           knative-eventing
+Labels:              <none>
+Annotations:         openshift.io/internal-registry-pull-secret-ref: deployer-dockercfg-9dffc
+Image pull secrets:  deployer-dockercfg-9dffc
+Mountable secrets:   deployer-dockercfg-9dffc
+Tokens:              <none>
+Events:              <none>

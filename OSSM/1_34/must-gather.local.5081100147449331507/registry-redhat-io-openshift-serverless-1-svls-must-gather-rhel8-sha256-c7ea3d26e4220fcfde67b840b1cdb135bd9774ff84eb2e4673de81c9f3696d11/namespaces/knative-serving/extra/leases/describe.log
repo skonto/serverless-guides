@@ -1,0 +1,638 @@
+Name:         autoscaler-bucket-00-of-01
+Namespace:    knative-serving
+Labels:       <none>
+Annotations:  <none>
+API Version:  coordination.k8s.io/v1
+Kind:         Lease
+Metadata:
+  Creation Timestamp:  2025-01-09T14:58:40Z
+  Managed Fields:
+    API Version:  coordination.k8s.io/v1
+    Fields Type:  FieldsV1
+    fieldsV1:
+      f:spec:
+        f:acquireTime:
+        f:holderIdentity:
+        f:leaseDurationSeconds:
+        f:leaseTransitions:
+        f:renewTime:
+    Manager:         autoscaler
+    Operation:       Update
+    Time:            2025-01-09T15:13:51Z
+  Resource Version:  62183
+  UID:               8b8eb0c3-1d4e-4cff-a910-d5d2690cac73
+Spec:
+  Acquire Time:            2025-01-09T14:58:40.524439Z
+  Holder Identity:         autoscaler-67654f944f-nkv26_10.129.2.19
+  Lease Duration Seconds:  60
+  Lease Transitions:       0
+  Renew Time:              2025-01-09T15:13:51.587513Z
+Events:                    <none>
+
+
+Name:         controller.knative.dev.serving.pkg.reconciler.configuration.reconciler.00-of-01
+Namespace:    knative-serving
+Labels:       <none>
+Annotations:  <none>
+API Version:  coordination.k8s.io/v1
+Kind:         Lease
+Metadata:
+  Creation Timestamp:  2025-01-09T14:58:31Z
+  Managed Fields:
+    API Version:  coordination.k8s.io/v1
+    Fields Type:  FieldsV1
+    fieldsV1:
+      f:spec:
+        f:acquireTime:
+        f:holderIdentity:
+        f:leaseDurationSeconds:
+        f:leaseTransitions:
+        f:renewTime:
+    Manager:         controller
+    Operation:       Update
+    Time:            2025-01-09T15:13:42Z
+  Resource Version:  62103
+  UID:               597d937f-4714-4529-81f7-65d24163b838
+Spec:
+  Acquire Time:            2025-01-09T14:58:31.092133Z
+  Holder Identity:         controller-84d56ccfc4-ffm5k_1959e426-d8fd-4081-bd24-d7c6bc26dca5
+  Lease Duration Seconds:  60
+  Lease Transitions:       0
+  Renew Time:              2025-01-09T15:13:42.192992Z
+Events:                    <none>
+
+
+Name:         controller.knative.dev.serving.pkg.reconciler.domainmapping.reconciler.00-of-01
+Namespace:    knative-serving
+Labels:       <none>
+Annotations:  <none>
+API Version:  coordination.k8s.io/v1
+Kind:         Lease
+Metadata:
+  Creation Timestamp:  2025-01-09T14:58:31Z
+  Managed Fields:
+    API Version:  coordination.k8s.io/v1
+    Fields Type:  FieldsV1
+    fieldsV1:
+      f:spec:
+        f:acquireTime:
+        f:holderIdentity:
+        f:leaseDurationSeconds:
+        f:leaseTransitions:
+        f:renewTime:
+    Manager:         controller
+    Operation:       Update
+    Time:            2025-01-09T15:13:42Z
+  Resource Version:  62099
+  UID:               81737f1a-632e-4bd5-928b-c38bc7140716
+Spec:
+  Acquire Time:            2025-01-09T14:58:31.091927Z
+  Holder Identity:         controller-84d56ccfc4-ffm5k_abb03c0a-0464-46fa-befd-b99368cb0e07
+  Lease Duration Seconds:  60
+  Lease Transitions:       0
+  Renew Time:              2025-01-09T15:13:42.197575Z
+Events:                    <none>
+
+
+Name:         controller.knative.dev.serving.pkg.reconciler.gc.reconciler.00-of-01
+Namespace:    knative-serving
+Labels:       <none>
+Annotations:  <none>
+API Version:  coordination.k8s.io/v1
+Kind:         Lease
+Metadata:
+  Creation Timestamp:  2025-01-09T14:58:31Z
+  Managed Fields:
+    API Version:  coordination.k8s.io/v1
+    Fields Type:  FieldsV1
+    fieldsV1:
+      f:spec:
+        f:acquireTime:
+        f:holderIdentity:
+        f:leaseDurationSeconds:
+        f:leaseTransitions:
+        f:renewTime:
+    Manager:         controller
+    Operation:       Update
+    Time:            2025-01-09T15:13:42Z
+  Resource Version:  62104
+  UID:               3d684057-228b-4d2d-80df-e4707daf4e4a
+Spec:
+  Acquire Time:            2025-01-09T14:58:31.092843Z
+  Holder Identity:         controller-84d56ccfc4-ffm5k_0dd4a74f-45cb-4328-85ef-43e7ba49ed65
+  Lease Duration Seconds:  60
+  Lease Transitions:       0
+  Renew Time:              2025-01-09T15:13:42.195205Z
+Events:                    <none>
+
+
+Name:         controller.knative.dev.serving.pkg.reconciler.labeler.reconciler.00-of-01
+Namespace:    knative-serving
+Labels:       <none>
+Annotations:  <none>
+API Version:  coordination.k8s.io/v1
+Kind:         Lease
+Metadata:
+  Creation Timestamp:  2025-01-09T14:58:31Z
+  Managed Fields:
+    API Version:  coordination.k8s.io/v1
+    Fields Type:  FieldsV1
+    fieldsV1:
+      f:spec:
+        f:acquireTime:
+        f:holderIdentity:
+        f:leaseDurationSeconds:
+        f:leaseTransitions:
+        f:renewTime:
+    Manager:         controller
+    Operation:       Update
+    Time:            2025-01-09T15:13:42Z
+  Resource Version:  62101
+  UID:               250ca7c6-3676-4a4b-a703-50ea64d6cf64
+Spec:
+  Acquire Time:            2025-01-09T14:58:31.092301Z
+  Holder Identity:         controller-84d56ccfc4-ffm5k_642bc4b5-5f5b-4a31-aa1b-67790d7a6f65
+  Lease Duration Seconds:  60
+  Lease Transitions:       0
+  Renew Time:              2025-01-09T15:13:42.191847Z
+Events:                    <none>
+
+
+Name:         controller.knative.dev.serving.pkg.reconciler.nscert.reconciler.00-of-01
+Namespace:    knative-serving
+Labels:       <none>
+Annotations:  <none>
+API Version:  coordination.k8s.io/v1
+Kind:         Lease
+Metadata:
+  Creation Timestamp:  2025-01-09T14:58:31Z
+  Managed Fields:
+    API Version:  coordination.k8s.io/v1
+    Fields Type:  FieldsV1
+    fieldsV1:
+      f:spec:
+        f:acquireTime:
+        f:holderIdentity:
+        f:leaseDurationSeconds:
+        f:leaseTransitions:
+        f:renewTime:
+    Manager:         controller
+    Operation:       Update
+    Time:            2025-01-09T15:13:42Z
+  Resource Version:  62097
+  UID:               0a68e59b-4323-4232-8d6f-5dca9aa28bed
+Spec:
+  Acquire Time:            2025-01-09T14:58:31.092941Z
+  Holder Identity:         controller-84d56ccfc4-ffm5k_316c78dc-6a3f-45c7-a74c-adcdb0a76e78
+  Lease Duration Seconds:  60
+  Lease Transitions:       0
+  Renew Time:              2025-01-09T15:13:42.115285Z
+Events:                    <none>
+
+
+Name:         controller.knative.dev.serving.pkg.reconciler.revision.reconciler.00-of-01
+Namespace:    knative-serving
+Labels:       <none>
+Annotations:  <none>
+API Version:  coordination.k8s.io/v1
+Kind:         Lease
+Metadata:
+  Creation Timestamp:  2025-01-09T14:58:31Z
+  Managed Fields:
+    API Version:  coordination.k8s.io/v1
+    Fields Type:  FieldsV1
+    fieldsV1:
+      f:spec:
+        f:acquireTime:
+        f:holderIdentity:
+        f:leaseDurationSeconds:
+        f:leaseTransitions:
+        f:renewTime:
+    Manager:         controller
+    Operation:       Update
+    Time:            2025-01-09T15:13:42Z
+  Resource Version:  62098
+  UID:               304b4d84-09a3-4ba6-83a8-fa65d3087816
+Spec:
+  Acquire Time:            2025-01-09T14:58:31.092442Z
+  Holder Identity:         controller-84d56ccfc4-ffm5k_e1813d0d-b5dc-4be4-b0e0-1979484664fe
+  Lease Duration Seconds:  60
+  Lease Transitions:       0
+  Renew Time:              2025-01-09T15:13:42.118873Z
+Events:                    <none>
+
+
+Name:         controller.knative.dev.serving.pkg.reconciler.route.reconciler.00-of-01
+Namespace:    knative-serving
+Labels:       <none>
+Annotations:  <none>
+API Version:  coordination.k8s.io/v1
+Kind:         Lease
+Metadata:
+  Creation Timestamp:  2025-01-09T14:58:31Z
+  Managed Fields:
+    API Version:  coordination.k8s.io/v1
+    Fields Type:  FieldsV1
+    fieldsV1:
+      f:spec:
+        f:acquireTime:
+        f:holderIdentity:
+        f:leaseDurationSeconds:
+        f:leaseTransitions:
+        f:renewTime:
+    Manager:         controller
+    Operation:       Update
+    Time:            2025-01-09T15:13:42Z
+  Resource Version:  62102
+  UID:               08166643-d7ad-4559-b549-593b9b49194b
+Spec:
+  Acquire Time:            2025-01-09T14:58:31.092539Z
+  Holder Identity:         controller-84d56ccfc4-ffm5k_d084d56c-8894-4baf-a3e8-af4af036e31a
+  Lease Duration Seconds:  60
+  Lease Transitions:       0
+  Renew Time:              2025-01-09T15:13:42.152171Z
+Events:                    <none>
+
+
+Name:         controller.knative.dev.serving.pkg.reconciler.serverlessservice.reconciler.00-of-01
+Namespace:    knative-serving
+Labels:       <none>
+Annotations:  <none>
+API Version:  coordination.k8s.io/v1
+Kind:         Lease
+Metadata:
+  Creation Timestamp:  2025-01-09T14:58:31Z
+  Managed Fields:
+    API Version:  coordination.k8s.io/v1
+    Fields Type:  FieldsV1
+    fieldsV1:
+      f:spec:
+        f:acquireTime:
+        f:holderIdentity:
+        f:leaseDurationSeconds:
+        f:leaseTransitions:
+        f:renewTime:
+    Manager:         controller
+    Operation:       Update
+    Time:            2025-01-09T15:13:42Z
+  Resource Version:  62100
+  UID:               f73e2d49-2c31-4c48-b0be-d5ebe39cbb1e
+Spec:
+  Acquire Time:            2025-01-09T14:58:31.092636Z
+  Holder Identity:         controller-84d56ccfc4-ffm5k_ed0517f1-76df-480d-a021-a2760528f280
+  Lease Duration Seconds:  60
+  Lease Transitions:       0
+  Renew Time:              2025-01-09T15:13:42.185545Z
+Events:                    <none>
+
+
+Name:         controller.knative.dev.serving.pkg.reconciler.service.reconciler.00-of-01
+Namespace:    knative-serving
+Labels:       <none>
+Annotations:  <none>
+API Version:  coordination.k8s.io/v1
+Kind:         Lease
+Metadata:
+  Creation Timestamp:  2025-01-09T14:58:31Z
+  Managed Fields:
+    API Version:  coordination.k8s.io/v1
+    Fields Type:  FieldsV1
+    fieldsV1:
+      f:spec:
+        f:acquireTime:
+        f:holderIdentity:
+        f:leaseDurationSeconds:
+        f:leaseTransitions:
+        f:renewTime:
+    Manager:         controller
+    Operation:       Update
+    Time:            2025-01-09T15:13:42Z
+  Resource Version:  62096
+  UID:               cdd03526-c3b9-4eaf-a2cc-f56a46fa0db1
+Spec:
+  Acquire Time:            2025-01-09T14:58:31.092740Z
+  Holder Identity:         controller-84d56ccfc4-ffm5k_fa7e052a-0de3-4ffb-a22d-8c4ef68ee6fb
+  Lease Duration Seconds:  60
+  Lease Transitions:       0
+  Renew Time:              2025-01-09T15:13:42.116544Z
+Events:                    <none>
+
+
+Name:         hpaautoscaler.knative.dev.serving.pkg.reconciler.autoscaling.hpa.reconciler.00-of-01
+Namespace:    knative-serving
+Labels:       <none>
+Annotations:  <none>
+API Version:  coordination.k8s.io/v1
+Kind:         Lease
+Metadata:
+  Creation Timestamp:  2025-01-09T14:58:31Z
+  Managed Fields:
+    API Version:  coordination.k8s.io/v1
+    Fields Type:  FieldsV1
+    fieldsV1:
+      f:spec:
+        f:acquireTime:
+        f:holderIdentity:
+        f:leaseDurationSeconds:
+        f:leaseTransitions:
+        f:renewTime:
+    Manager:         autoscaler-hpa
+    Operation:       Update
+    Time:            2025-01-09T15:13:42Z
+  Resource Version:  62110
+  UID:               0110712f-29a9-4e65-84b5-ff8ed72e8642
+Spec:
+  Acquire Time:            2025-01-09T14:58:31.513760Z
+  Holder Identity:         autoscaler-hpa-597557bd7b-6dsl9_e45a1492-0faa-48a8-874e-8ba210d1995b
+  Lease Duration Seconds:  60
+  Lease Transitions:       0
+  Renew Time:              2025-01-09T15:13:42.619027Z
+Events:                    <none>
+
+
+Name:         net-istio-controller.knative.dev.net-istio.pkg.reconciler.ingress.reconciler.00-of-01
+Namespace:    knative-serving
+Labels:       <none>
+Annotations:  <none>
+API Version:  coordination.k8s.io/v1
+Kind:         Lease
+Metadata:
+  Creation Timestamp:  2025-01-09T14:58:34Z
+  Managed Fields:
+    API Version:  coordination.k8s.io/v1
+    Fields Type:  FieldsV1
+    fieldsV1:
+      f:spec:
+        f:acquireTime:
+        f:holderIdentity:
+        f:leaseDurationSeconds:
+        f:leaseTransitions:
+        f:renewTime:
+    Manager:         controller
+    Operation:       Update
+    Time:            2025-01-09T15:13:45Z
+  Resource Version:  62144
+  UID:               e9efb93c-9251-4622-8ada-1e69311f5ebe
+Spec:
+  Acquire Time:            2025-01-09T14:58:34.130618Z
+  Holder Identity:         net-istio-controller-7f99bfd446-qnvk9_7dab7abf-019d-47d1-b993-033f389672ab
+  Lease Duration Seconds:  60
+  Lease Transitions:       0
+  Renew Time:              2025-01-09T15:13:45.240595Z
+Events:                    <none>
+
+
+Name:         net-istio-controller.knative.dev.net-istio.pkg.reconciler.serverlessservice.reconciler.00-of-01
+Namespace:    knative-serving
+Labels:       <none>
+Annotations:  <none>
+API Version:  coordination.k8s.io/v1
+Kind:         Lease
+Metadata:
+  Creation Timestamp:  2025-01-09T14:58:34Z
+  Managed Fields:
+    API Version:  coordination.k8s.io/v1
+    Fields Type:  FieldsV1
+    fieldsV1:
+      f:spec:
+        f:acquireTime:
+        f:holderIdentity:
+        f:leaseDurationSeconds:
+        f:leaseTransitions:
+        f:renewTime:
+    Manager:         controller
+    Operation:       Update
+    Time:            2025-01-09T15:13:45Z
+  Resource Version:  62145
+  UID:               64c95202-ccef-46c3-96fb-5401c10922af
+Spec:
+  Acquire Time:            2025-01-09T14:58:34.130452Z
+  Holder Identity:         net-istio-controller-7f99bfd446-qnvk9_3dae342c-ffcc-498d-a359-79fb5777e335
+  Lease Duration Seconds:  60
+  Lease Transitions:       0
+  Renew Time:              2025-01-09T15:13:45.253456Z
+Events:                    <none>
+
+
+Name:         net-istio-webhook.configmapwebhook.00-of-01
+Namespace:    knative-serving
+Labels:       <none>
+Annotations:  <none>
+API Version:  coordination.k8s.io/v1
+Kind:         Lease
+Metadata:
+  Creation Timestamp:  2025-01-09T14:58:33Z
+  Managed Fields:
+    API Version:  coordination.k8s.io/v1
+    Fields Type:  FieldsV1
+    fieldsV1:
+      f:spec:
+        f:acquireTime:
+        f:holderIdentity:
+        f:leaseDurationSeconds:
+        f:leaseTransitions:
+        f:renewTime:
+    Manager:         webhook
+    Operation:       Update
+    Time:            2025-01-09T15:13:44Z
+  Resource Version:  62136
+  UID:               4c35d63c-2080-4691-8238-cd4e59e6d81e
+Spec:
+  Acquire Time:            2025-01-09T14:58:33.788079Z
+  Holder Identity:         net-istio-webhook-5fbccdd7d5-6wpfd_ea2e015d-3fe5-4066-a5cb-dbd01c895641
+  Lease Duration Seconds:  60
+  Lease Transitions:       0
+  Renew Time:              2025-01-09T15:13:44.853807Z
+Events:                    <none>
+
+
+Name:         net-istio-webhook.defaultingwebhook.00-of-01
+Namespace:    knative-serving
+Labels:       <none>
+Annotations:  <none>
+API Version:  coordination.k8s.io/v1
+Kind:         Lease
+Metadata:
+  Creation Timestamp:  2025-01-09T14:58:33Z
+  Managed Fields:
+    API Version:  coordination.k8s.io/v1
+    Fields Type:  FieldsV1
+    fieldsV1:
+      f:spec:
+        f:acquireTime:
+        f:holderIdentity:
+        f:leaseDurationSeconds:
+        f:leaseTransitions:
+        f:renewTime:
+    Manager:         webhook
+    Operation:       Update
+    Time:            2025-01-09T15:13:44Z
+  Resource Version:  62137
+  UID:               25751556-aea6-44ec-b53e-32875fc3ada6
+Spec:
+  Acquire Time:            2025-01-09T14:58:33.788335Z
+  Holder Identity:         net-istio-webhook-5fbccdd7d5-6wpfd_0e127107-9943-472c-be7f-d0751bb98fa5
+  Lease Duration Seconds:  60
+  Lease Transitions:       0
+  Renew Time:              2025-01-09T15:13:44.853891Z
+Events:                    <none>
+
+
+Name:         net-istio-webhook.webhookcertificates.00-of-01
+Namespace:    knative-serving
+Labels:       <none>
+Annotations:  <none>
+API Version:  coordination.k8s.io/v1
+Kind:         Lease
+Metadata:
+  Creation Timestamp:  2025-01-09T14:58:33Z
+  Managed Fields:
+    API Version:  coordination.k8s.io/v1
+    Fields Type:  FieldsV1
+    fieldsV1:
+      f:spec:
+        f:acquireTime:
+        f:holderIdentity:
+        f:leaseDurationSeconds:
+        f:leaseTransitions:
+        f:renewTime:
+    Manager:         webhook
+    Operation:       Update
+    Time:            2025-01-09T15:13:44Z
+  Resource Version:  62135
+  UID:               032d9f8d-41bc-46f4-bd32-bd275acbd624
+Spec:
+  Acquire Time:            2025-01-09T14:58:33.788257Z
+  Holder Identity:         net-istio-webhook-5fbccdd7d5-6wpfd_4951b7a1-1990-46ef-8941-de96f3ec7767
+  Lease Duration Seconds:  60
+  Lease Transitions:       0
+  Renew Time:              2025-01-09T15:13:44.851464Z
+Events:                    <none>
+
+
+Name:         webhook.configmapwebhook.00-of-01
+Namespace:    knative-serving
+Labels:       <none>
+Annotations:  <none>
+API Version:  coordination.k8s.io/v1
+Kind:         Lease
+Metadata:
+  Creation Timestamp:  2025-01-09T14:58:36Z
+  Managed Fields:
+    API Version:  coordination.k8s.io/v1
+    Fields Type:  FieldsV1
+    fieldsV1:
+      f:spec:
+        f:acquireTime:
+        f:holderIdentity:
+        f:leaseDurationSeconds:
+        f:leaseTransitions:
+        f:renewTime:
+    Manager:         webhook
+    Operation:       Update
+    Time:            2025-01-09T15:13:47Z
+  Resource Version:  62159
+  UID:               3aa5b006-1ffe-4aa7-ac8d-64c7f42a2b61
+Spec:
+  Acquire Time:            2025-01-09T14:58:36.067546Z
+  Holder Identity:         webhook-7bccb96f5b-tksl4_6ce435c6-f7cd-464b-8f58-a6feffd8da87
+  Lease Duration Seconds:  60
+  Lease Transitions:       0
+  Renew Time:              2025-01-09T15:13:47.088627Z
+Events:                    <none>
+
+
+Name:         webhook.defaultingwebhook.00-of-01
+Namespace:    knative-serving
+Labels:       <none>
+Annotations:  <none>
+API Version:  coordination.k8s.io/v1
+Kind:         Lease
+Metadata:
+  Creation Timestamp:  2025-01-09T14:58:36Z
+  Managed Fields:
+    API Version:  coordination.k8s.io/v1
+    Fields Type:  FieldsV1
+    fieldsV1:
+      f:spec:
+        f:acquireTime:
+        f:holderIdentity:
+        f:leaseDurationSeconds:
+        f:leaseTransitions:
+        f:renewTime:
+    Manager:         webhook
+    Operation:       Update
+    Time:            2025-01-09T15:13:47Z
+  Resource Version:  62160
+  UID:               f2077104-5b35-4822-b9ff-4a8d877e0b5c
+Spec:
+  Acquire Time:            2025-01-09T14:58:36.067946Z
+  Holder Identity:         webhook-7bccb96f5b-tksl4_39cca09a-a118-434b-a4ca-3aa329b15f7c
+  Lease Duration Seconds:  60
+  Lease Transitions:       0
+  Renew Time:              2025-01-09T15:13:47.088541Z
+Events:                    <none>
+
+
+Name:         webhook.validationwebhook.00-of-01
+Namespace:    knative-serving
+Labels:       <none>
+Annotations:  <none>
+API Version:  coordination.k8s.io/v1
+Kind:         Lease
+Metadata:
+  Creation Timestamp:  2025-01-09T14:58:36Z
+  Managed Fields:
+    API Version:  coordination.k8s.io/v1
+    Fields Type:  FieldsV1
+    fieldsV1:
+      f:spec:
+        f:acquireTime:
+        f:holderIdentity:
+        f:leaseDurationSeconds:
+        f:leaseTransitions:
+        f:renewTime:
+    Manager:         webhook
+    Operation:       Update
+    Time:            2025-01-09T15:13:47Z
+  Resource Version:  62158
+  UID:               c327a6dc-a5d1-4a5f-8eab-66a4100ecd26
+Spec:
+  Acquire Time:            2025-01-09T14:58:36.068060Z
+  Holder Identity:         webhook-7bccb96f5b-tksl4_ce06f18b-e4d6-481b-85f1-003b5649165d
+  Lease Duration Seconds:  60
+  Lease Transitions:       0
+  Renew Time:              2025-01-09T15:13:47.088691Z
+Events:                    <none>
+
+
+Name:         webhook.webhookcertificates.00-of-01
+Namespace:    knative-serving
+Labels:       <none>
+Annotations:  <none>
+API Version:  coordination.k8s.io/v1
+Kind:         Lease
+Metadata:
+  Creation Timestamp:  2025-01-09T14:58:36Z
+  Managed Fields:
+    API Version:  coordination.k8s.io/v1
+    Fields Type:  FieldsV1
+    fieldsV1:
+      f:spec:
+        f:acquireTime:
+        f:holderIdentity:
+        f:leaseDurationSeconds:
+        f:leaseTransitions:
+        f:renewTime:
+    Manager:         webhook
+    Operation:       Update
+    Time:            2025-01-09T15:13:47Z
+  Resource Version:  62157
+  UID:               90ff5606-9b0e-4d7f-9430-96050a9caf11
+Spec:
+  Acquire Time:            2025-01-09T14:58:36.067823Z
+  Holder Identity:         webhook-7bccb96f5b-tksl4_33681033-3764-4eea-aa9d-1daea8edc5f1
+  Lease Duration Seconds:  60
+  Lease Transitions:       0
+  Renew Time:              2025-01-09T15:13:47.087290Z
+Events:                    <none>

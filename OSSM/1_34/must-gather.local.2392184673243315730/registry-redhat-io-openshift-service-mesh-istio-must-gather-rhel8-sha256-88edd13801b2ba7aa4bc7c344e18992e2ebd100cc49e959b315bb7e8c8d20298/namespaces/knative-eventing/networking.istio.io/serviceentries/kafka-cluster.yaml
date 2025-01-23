@@ -1,0 +1,53 @@
+apiVersion: networking.istio.io/v1beta1
+kind: ServiceEntry
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"networking.istio.io/v1alpha3","kind":"ServiceEntry","metadata":{"annotations":{},"name":"kafka-cluster","namespace":"knative-eventing"},"spec":{"exportTo":["."],"hosts":["my-cluster-kafka-bootstrap.kafka"],"location":"MESH_EXTERNAL","ports":[{"name":"tcp-plain","number":9092,"protocol":"TCP"},{"name":"tls","number":9093,"protocol":"TCP"},{"name":"saslssl","number":9094,"protocol":"TCP"},{"name":"saslplain","number":9095,"protocol":"TCP"},{"name":"sslnoauth","number":9096,"protocol":"TCP"}],"resolution":"NONE"}}
+  creationTimestamp: "2025-01-09T14:47:15Z"
+  generation: 1
+  managedFields:
+  - apiVersion: networking.istio.io/v1alpha3
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:kubectl.kubernetes.io/last-applied-configuration: {}
+      f:spec:
+        .: {}
+        f:exportTo: {}
+        f:hosts: {}
+        f:location: {}
+        f:ports: {}
+        f:resolution: {}
+    manager: kubectl-client-side-apply
+    operation: Update
+    time: "2025-01-09T14:47:15Z"
+  name: kafka-cluster
+  namespace: knative-eventing
+  resourceVersion: "44124"
+  uid: ff44d989-e15a-4ab4-b0e6-47f33bb45662
+spec:
+  exportTo:
+  - .
+  hosts:
+  - my-cluster-kafka-bootstrap.kafka
+  location: MESH_EXTERNAL
+  ports:
+  - name: tcp-plain
+    number: 9092
+    protocol: TCP
+  - name: tls
+    number: 9093
+    protocol: TCP
+  - name: saslssl
+    number: 9094
+    protocol: TCP
+  - name: saslplain
+    number: 9095
+    protocol: TCP
+  - name: sslnoauth
+    number: 9096
+    protocol: TCP
+  resolution: NONE

@@ -1,0 +1,36 @@
+apiVersion: networking.istio.io/v1beta1
+kind: DestinationRule
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"networking.istio.io/v1beta1","kind":"DestinationRule","metadata":{"annotations":{},"name":"disable-mtls-zipkin","namespace":"knative-eventing"},"spec":{"host":"zipkin.knative-eventing.svc.cluster.local","trafficPolicy":{"tls":{"mode":"DISABLE"}}}}
+  creationTimestamp: "2025-01-09T14:47:14Z"
+  generation: 1
+  managedFields:
+  - apiVersion: networking.istio.io/v1beta1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:kubectl.kubernetes.io/last-applied-configuration: {}
+      f:spec:
+        .: {}
+        f:host: {}
+        f:trafficPolicy:
+          .: {}
+          f:tls:
+            .: {}
+            f:mode: {}
+    manager: kubectl-client-side-apply
+    operation: Update
+    time: "2025-01-09T14:47:14Z"
+  name: disable-mtls-zipkin
+  namespace: knative-eventing
+  resourceVersion: "44114"
+  uid: 876e32d8-55d1-44ca-b986-01f6c4764fdb
+spec:
+  host: zipkin.knative-eventing.svc.cluster.local
+  trafficPolicy:
+    tls:
+      mode: DISABLE

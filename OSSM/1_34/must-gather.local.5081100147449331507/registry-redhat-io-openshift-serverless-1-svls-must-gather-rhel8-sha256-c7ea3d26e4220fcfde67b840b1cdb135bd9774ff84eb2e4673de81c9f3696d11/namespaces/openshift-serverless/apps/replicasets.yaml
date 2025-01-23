@@ -1,0 +1,1746 @@
+---
+apiVersion: apps/v1
+items:
+- apiVersion: apps/v1
+  kind: ReplicaSet
+  metadata:
+    annotations:
+      deployment.kubernetes.io/desired-replicas: "1"
+      deployment.kubernetes.io/max-replicas: "2"
+      deployment.kubernetes.io/revision: "1"
+    creationTimestamp: "2025-01-09T14:57:50Z"
+    generation: 1
+    labels:
+      name: knative-openshift
+      pod-template-hash: 5fc65bff85
+    managedFields:
+    - apiVersion: apps/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:deployment.kubernetes.io/desired-replicas: {}
+            f:deployment.kubernetes.io/max-replicas: {}
+            f:deployment.kubernetes.io/revision: {}
+          f:labels:
+            .: {}
+            f:name: {}
+            f:pod-template-hash: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"d21b3060-67c9-406e-9021-e078ed787a4f"}: {}
+        f:spec:
+          f:replicas: {}
+          f:selector: {}
+          f:template:
+            f:metadata:
+              f:annotations:
+                .: {}
+                f:alm-examples: {}
+                f:capabilities: {}
+                f:categories: {}
+                f:certified: {}
+                f:createdAt: {}
+                f:description: {}
+                f:features.operators.openshift.io/disconnected: {}
+                f:features.operators.openshift.io/fips-compliant: {}
+                f:features.operators.openshift.io/proxy-aware: {}
+                f:features.operators.openshift.io/tls-profiles: {}
+                f:features.operators.openshift.io/token-auth-aws: {}
+                f:features.operators.openshift.io/token-auth-azure: {}
+                f:features.operators.openshift.io/token-auth-gcp: {}
+                f:olm.operatorGroup: {}
+                f:olm.operatorNamespace: {}
+                f:olm.skipRange: {}
+                f:olm.targetNamespaces: {}
+                f:olmcahash: {}
+                f:operatorframework.io/properties: {}
+                f:operatorframework.io/suggested-namespace: {}
+                f:operators.openshift.io/infrastructure-features: {}
+                f:operators.openshift.io/must-gather-image: {}
+                f:operators.openshift.io/valid-subscription: {}
+                f:repository: {}
+                f:support: {}
+              f:labels:
+                .: {}
+                f:name: {}
+                f:pod-template-hash: {}
+            f:spec:
+              f:containers:
+                k:{"name":"knative-openshift"}:
+                  .: {}
+                  f:env:
+                    .: {}
+                    k:{"name":"CURRENT_VERSION"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"DASHBOARDS_ROOT_MANIFEST_PATH"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"DEPLOYMENT_NAME"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"ENABLE_PPROF"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"IMAGE_APISERVER_RA_IMAGE"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"IMAGE_DISPATCHER_IMAGE"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"IMAGE_KN_CLIENT"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"IMAGE_KN_PLUGIN_EVENT_SENDER"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"IMAGE_KN_PLUGIN_FUNC_NODEJS_20_MINIMAL"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"IMAGE_KN_PLUGIN_FUNC_OPENJDK_21"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"IMAGE_KN_PLUGIN_FUNC_PYTHON_39"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"IMAGE_KN_PLUGIN_FUNC_TEKTON_BUILDAH"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"IMAGE_KN_PLUGIN_FUNC_TEKTON_S2I"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"IMAGE_KN_PLUGIN_FUNC_UTIL"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"IMAGE_KUBE_RBAC_PROXY"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"IMAGE_activator"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"IMAGE_autoscaler"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"IMAGE_autoscaler-hpa"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"IMAGE_controller__controller"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"IMAGE_eventing-controller__eventing-controller"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"IMAGE_eventing-istio-controller__eventing-istio-controller"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"IMAGE_eventing-webhook__eventing-webhook"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"IMAGE_eventmesh-backend__controller"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"IMAGE_imc-controller__controller"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"IMAGE_imc-dispatcher__dispatcher"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"IMAGE_kourier-gateway"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"IMAGE_mt-broker-controller__mt-broker-controller"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"IMAGE_mt-broker-filter__filter"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"IMAGE_mt-broker-ingress__ingress"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"IMAGE_net-istio-controller__controller"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"IMAGE_net-istio-webhook__webhook"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"IMAGE_net-kourier-controller__controller"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"IMAGE_pingsource-mt-adapter__dispatcher"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"IMAGE_queue-proxy"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"IMAGE_storage-version-migration-eventing-__migrate"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"IMAGE_storage-version-migration-serving-__migrate"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"IMAGE_webhook__webhook"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"KAFKA_IMAGE_kafka-broker-dispatcher__kafka-broker-dispatcher"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"KAFKA_IMAGE_kafka-broker-receiver__kafka-broker-receiver"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"KAFKA_IMAGE_kafka-channel-dispatcher__kafka-channel-dispatcher"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"KAFKA_IMAGE_kafka-channel-receiver__kafka-channel-receiver"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"KAFKA_IMAGE_kafka-controller-post-install__post-install"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"KAFKA_IMAGE_kafka-controller__controller"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"KAFKA_IMAGE_kafka-sink-receiver__kafka-sink-receiver"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"KAFKA_IMAGE_kafka-source-dispatcher__kafka-source-dispatcher"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"KAFKA_IMAGE_kafka-webhook-eventing__kafka-webhook-eventing"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"KAFKA_IMAGE_knative-kafka-storage-version-migrator__migrate"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"KAFKABROKER_MANIFEST_PATH"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"KAFKACHANNEL_MANIFEST_PATH"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"KAFKACONTROLLER_MANIFEST_PATH"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"KAFKASINK_MANIFEST_PATH"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"KAFKASOURCE_MANIFEST_PATH"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"KNATIVE_EVENTING_KAFKA_BROKER_VERSION"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"KNATIVE_EVENTING_VERSION"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"KNATIVE_SERVING_VERSION"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"KUBERNETES_MIN_VERSION"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"NAMESPACE"}:
+                      .: {}
+                      f:name: {}
+                      f:valueFrom:
+                        .: {}
+                        f:fieldRef: {}
+                    k:{"name":"OPERATOR_CONDITION_NAME"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"OPERATOR_NAME"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"POD_NAME"}:
+                      .: {}
+                      f:name: {}
+                      f:valueFrom:
+                        .: {}
+                        f:fieldRef: {}
+                    k:{"name":"QUICKSTART_MANIFEST_PATH"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"REQUIRED_EVENTING_NAMESPACE"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"REQUIRED_KAFKA_NAMESPACE"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"REQUIRED_SERVING_NAMESPACE"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"SOURCES_GENERATE_SERVICE_MONITORS"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"SOURCES_USE_CLUSTER_MONITORING"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"WATCH_NAMESPACE"}:
+                      .: {}
+                      f:name: {}
+                  f:image: {}
+                  f:imagePullPolicy: {}
+                  f:livenessProbe:
+                    .: {}
+                    f:failureThreshold: {}
+                    f:httpGet:
+                      .: {}
+                      f:path: {}
+                      f:port: {}
+                      f:scheme: {}
+                    f:periodSeconds: {}
+                    f:successThreshold: {}
+                    f:timeoutSeconds: {}
+                  f:name: {}
+                  f:ports:
+                    .: {}
+                    k:{"containerPort":8080,"protocol":"TCP"}:
+                      .: {}
+                      f:containerPort: {}
+                      f:name: {}
+                      f:protocol: {}
+                  f:readinessProbe:
+                    .: {}
+                    f:failureThreshold: {}
+                    f:httpGet:
+                      .: {}
+                      f:path: {}
+                      f:port: {}
+                      f:scheme: {}
+                    f:periodSeconds: {}
+                    f:successThreshold: {}
+                    f:timeoutSeconds: {}
+                  f:resources: {}
+                  f:securityContext:
+                    .: {}
+                    f:allowPrivilegeEscalation: {}
+                    f:capabilities:
+                      .: {}
+                      f:drop: {}
+                    f:readOnlyRootFilesystem: {}
+                    f:runAsNonRoot: {}
+                  f:terminationMessagePath: {}
+                  f:terminationMessagePolicy: {}
+                  f:volumeMounts:
+                    .: {}
+                    k:{"mountPath":"/apiserver.local.config/certificates"}:
+                      .: {}
+                      f:mountPath: {}
+                      f:name: {}
+                    k:{"mountPath":"/cli-artifacts"}:
+                      .: {}
+                      f:mountPath: {}
+                      f:name: {}
+                    k:{"mountPath":"/tmp/k8s-webhook-server/serving-certs"}:
+                      .: {}
+                      f:mountPath: {}
+                      f:name: {}
+              f:dnsPolicy: {}
+              f:initContainers:
+                .: {}
+                k:{"name":"cli-artifacts"}:
+                  .: {}
+                  f:command: {}
+                  f:image: {}
+                  f:imagePullPolicy: {}
+                  f:name: {}
+                  f:resources: {}
+                  f:securityContext:
+                    .: {}
+                    f:allowPrivilegeEscalation: {}
+                    f:capabilities:
+                      .: {}
+                      f:drop: {}
+                    f:runAsNonRoot: {}
+                  f:terminationMessagePath: {}
+                  f:terminationMessagePolicy: {}
+                  f:volumeMounts:
+                    .: {}
+                    k:{"mountPath":"/cli-artifacts"}:
+                      .: {}
+                      f:mountPath: {}
+                      f:name: {}
+              f:restartPolicy: {}
+              f:schedulerName: {}
+              f:securityContext: {}
+              f:serviceAccount: {}
+              f:serviceAccountName: {}
+              f:terminationGracePeriodSeconds: {}
+              f:volumes:
+                .: {}
+                k:{"name":"apiservice-cert"}:
+                  .: {}
+                  f:name: {}
+                  f:secret:
+                    .: {}
+                    f:defaultMode: {}
+                    f:items: {}
+                    f:secretName: {}
+                k:{"name":"cli-artifacts"}:
+                  .: {}
+                  f:emptyDir: {}
+                  f:name: {}
+                k:{"name":"webhook-cert"}:
+                  .: {}
+                  f:name: {}
+                  f:secret:
+                    .: {}
+                    f:defaultMode: {}
+                    f:items: {}
+                    f:secretName: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2025-01-09T14:57:50Z"
+    - apiVersion: apps/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          f:availableReplicas: {}
+          f:fullyLabeledReplicas: {}
+          f:observedGeneration: {}
+          f:readyReplicas: {}
+          f:replicas: {}
+      manager: kube-controller-manager
+      operation: Update
+      subresource: status
+      time: "2025-01-09T14:58:05Z"
+    name: knative-openshift-5fc65bff85
+    namespace: openshift-serverless
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Deployment
+      name: knative-openshift
+      uid: d21b3060-67c9-406e-9021-e078ed787a4f
+    resourceVersion: "51379"
+    uid: bd20691d-7f5b-477a-acd4-e07db07ced42
+  spec:
+    replicas: 1
+    selector:
+      matchLabels:
+        name: knative-openshift
+        pod-template-hash: 5fc65bff85
+    template:
+      metadata:
+        annotations:
+          alm-examples: |-
+            [
+              {
+                "apiVersion": "operator.knative.dev/v1beta1",
+                "kind": "KnativeServing",
+                "metadata": {
+                  "name": "knative-serving"
+                },
+                "spec": {
+                }
+              },
+              {
+                "apiVersion": "operator.knative.dev/v1beta1",
+                "kind": "KnativeEventing",
+                "metadata": {
+                  "name": "knative-eventing"
+                },
+                "spec": {
+                }
+              },
+              {
+                "apiVersion": "operator.serverless.openshift.io/v1alpha1",
+                "kind": "KnativeKafka",
+                "metadata": {
+                  "name": "knative-kafka"
+                },
+                "spec": {
+                  "broker": {
+                    "enabled": false,
+                    "defaultConfig": {
+                      "numPartitions": 10,
+                      "replicationFactor": 3,
+                      "bootstrapServers": "REPLACE_WITH_COMMA_SEPARATED_KAFKA_BOOTSTRAP_SERVERS"
+                    }
+                  },
+                  "source": {
+                    "enabled": false
+                  },
+                  "sink": {
+                    "enabled": false
+                  },
+                  "channel": {
+                    "enabled": false,
+                    "bootstrapServers": "REPLACE_WITH_COMMA_SEPARATED_KAFKA_BOOTSTRAP_SERVERS"
+                  }
+                }
+              }
+            ]
+          capabilities: Full Lifecycle
+          categories: Networking,Integration & Delivery,Cloud Provider,Developer Tools
+          certified: "false"
+          createdAt: "2020-04-20T17:00:00Z"
+          description: Deploy and manage event-driven serverless applications and
+            functions using Knative.
+          features.operators.openshift.io/disconnected: "true"
+          features.operators.openshift.io/fips-compliant: "false"
+          features.operators.openshift.io/proxy-aware: "true"
+          features.operators.openshift.io/tls-profiles: "false"
+          features.operators.openshift.io/token-auth-aws: "false"
+          features.operators.openshift.io/token-auth-azure: "false"
+          features.operators.openshift.io/token-auth-gcp: "false"
+          olm.operatorGroup: serverless
+          olm.operatorNamespace: openshift-serverless
+          olm.skipRange: '>=1.34.0 <1.34.1'
+          olm.targetNamespaces: ""
+          olmcahash: e5a235e72045e73943a10e1fd5e1162d97a8b23078b784fc9b50f1457bef508d
+          operatorframework.io/properties: '{"properties":[{"type":"olm.gvk","value":{"group":"operator.knative.dev","kind":"KnativeEventing","version":"v1beta1"}},{"type":"olm.gvk","value":{"group":"operator.knative.dev","kind":"KnativeServing","version":"v1beta1"}},{"type":"olm.gvk","value":{"group":"operator.serverless.openshift.io","kind":"KnativeKafka","version":"v1alpha1"}},{"type":"olm.package","value":{"packageName":"serverless-operator","version":"1.34.1"}}]}'
+          operatorframework.io/suggested-namespace: openshift-serverless
+          operators.openshift.io/infrastructure-features: '["disconnected", "proxy-aware"]'
+          operators.openshift.io/must-gather-image: quay.io/openshift-knative/must-gather
+          operators.openshift.io/valid-subscription: '["OpenShift Container Platform",
+            "OpenShift Platform Plus"]'
+          repository: https://github.com/openshift-knative/serverless-operator
+          support: Red Hat
+        creationTimestamp: null
+        labels:
+          name: knative-openshift
+          pod-template-hash: 5fc65bff85
+      spec:
+        containers:
+        - env:
+          - name: WATCH_NAMESPACE
+          - name: NAMESPACE
+            valueFrom:
+              fieldRef:
+                apiVersion: v1
+                fieldPath: metadata.namespace
+          - name: DEPLOYMENT_NAME
+            value: knative-openshift
+          - name: POD_NAME
+            valueFrom:
+              fieldRef:
+                apiVersion: v1
+                fieldPath: metadata.name
+          - name: OPERATOR_NAME
+            value: knative-openshift
+          - name: REQUIRED_SERVING_NAMESPACE
+            value: knative-serving
+          - name: REQUIRED_EVENTING_NAMESPACE
+            value: knative-eventing
+          - name: REQUIRED_KAFKA_NAMESPACE
+            value: knative-eventing
+          - name: KAFKACHANNEL_MANIFEST_PATH
+            value: deploy/resources/knativekafka/channel
+          - name: KAFKASOURCE_MANIFEST_PATH
+            value: deploy/resources/knativekafka/source
+          - name: KAFKACONTROLLER_MANIFEST_PATH
+            value: deploy/resources/knativekafka/controller
+          - name: KAFKABROKER_MANIFEST_PATH
+            value: deploy/resources/knativekafka/broker
+          - name: KAFKASINK_MANIFEST_PATH
+            value: deploy/resources/knativekafka/sink
+          - name: QUICKSTART_MANIFEST_PATH
+            value: deploy/resources/quickstart/serverless-application-quickstart.yaml
+          - name: DASHBOARDS_ROOT_MANIFEST_PATH
+            value: deploy/resources/dashboards
+          - name: SOURCES_USE_CLUSTER_MONITORING
+            value: "true"
+          - name: SOURCES_GENERATE_SERVICE_MONITORS
+            value: "true"
+          - name: ENABLE_PPROF
+            value: "false"
+          - name: KUBERNETES_MIN_VERSION
+            value: v1.0.0
+          - name: IMAGE_queue-proxy
+            value: registry.ci.openshift.org/openshift/knative-serving-queue:knative-v1.14
+          - name: IMAGE_activator
+            value: registry.ci.openshift.org/openshift/knative-serving-activator:knative-v1.14
+          - name: IMAGE_autoscaler
+            value: registry.ci.openshift.org/openshift/knative-serving-autoscaler:knative-v1.14
+          - name: IMAGE_autoscaler-hpa
+            value: registry.ci.openshift.org/openshift/knative-serving-autoscaler-hpa:knative-v1.14
+          - name: IMAGE_controller__controller
+            value: registry.ci.openshift.org/openshift/knative-serving-controller:knative-v1.14
+          - name: IMAGE_webhook__webhook
+            value: registry.ci.openshift.org/openshift/knative-serving-webhook:knative-v1.14
+          - name: IMAGE_storage-version-migration-serving-__migrate
+            value: registry.ci.openshift.org/openshift/knative-serving-storage-version-migration:knative-v1.14
+          - name: IMAGE_kourier-gateway
+            value: quay.io/maistra-dev/proxyv2-ubi8:2.4-latest
+          - name: IMAGE_net-kourier-controller__controller
+            value: registry.ci.openshift.org/openshift/net-kourier-kourier:knative-v1.14
+          - name: IMAGE_net-istio-controller__controller
+            value: registry.ci.openshift.org/openshift/net-istio-controller:knative-v1.14
+          - name: IMAGE_net-istio-webhook__webhook
+            value: registry.ci.openshift.org/openshift/net-istio-webhook:knative-v1.14
+          - name: IMAGE_eventing-controller__eventing-controller
+            value: registry.ci.openshift.org/openshift/knative-eventing-controller:knative-v1.14
+          - name: IMAGE_eventing-istio-controller__eventing-istio-controller
+            value: registry.ci.openshift.org/openshift/knative-eventing-istio-controller:knative-v1.14
+          - name: IMAGE_eventing-webhook__eventing-webhook
+            value: registry.ci.openshift.org/openshift/knative-eventing-webhook:knative-v1.14
+          - name: IMAGE_storage-version-migration-eventing-__migrate
+            value: registry.ci.openshift.org/openshift/knative-eventing-migrate:knative-v1.14
+          - name: IMAGE_mt-broker-controller__mt-broker-controller
+            value: registry.ci.openshift.org/openshift/knative-eventing-mtchannel-broker:knative-v1.14
+          - name: IMAGE_mt-broker-filter__filter
+            value: registry.ci.openshift.org/openshift/knative-eventing-filter:knative-v1.14
+          - name: IMAGE_mt-broker-ingress__ingress
+            value: registry.ci.openshift.org/openshift/knative-eventing-ingress:knative-v1.14
+          - name: IMAGE_imc-controller__controller
+            value: registry.ci.openshift.org/openshift/knative-eventing-channel-controller:knative-v1.14
+          - name: IMAGE_imc-dispatcher__dispatcher
+            value: registry.ci.openshift.org/openshift/knative-eventing-channel-dispatcher:knative-v1.14
+          - name: IMAGE_pingsource-mt-adapter__dispatcher
+            value: registry.ci.openshift.org/openshift/knative-eventing-mtping:knative-v1.14
+          - name: IMAGE_APISERVER_RA_IMAGE
+            value: registry.ci.openshift.org/openshift/knative-eventing-apiserver-receive-adapter:knative-v1.14
+          - name: IMAGE_DISPATCHER_IMAGE
+            value: registry.ci.openshift.org/openshift/knative-eventing-channel-dispatcher:knative-v1.14
+          - name: IMAGE_eventmesh-backend__controller
+            value: registry.ci.openshift.org/openshift/knative-backstage-plugins-eventmesh:knative-v1.14
+          - name: IMAGE_KUBE_RBAC_PROXY
+            value: registry.ci.openshift.org/origin/4.15:kube-rbac-proxy
+          - name: IMAGE_KN_PLUGIN_EVENT_SENDER
+            value: registry.ci.openshift.org/knative/release-1.14:client-plugin-event-sender
+          - name: IMAGE_KN_CLIENT
+            value: registry.ci.openshift.org/openshift/knative-v1.14.0:knative-client
+          - name: IMAGE_KN_PLUGIN_FUNC_UTIL
+            value: quay.io/boson/alpine-socat:1.7.4.3-r1-non-root
+          - name: IMAGE_KN_PLUGIN_FUNC_TEKTON_S2I
+            value: registry.redhat.io/source-to-image/source-to-image-rhel8@sha256:6a6025914296a62fdf2092c3a40011bd9b966a6806b094d51eec5e1bd5026ef4
+          - name: IMAGE_KN_PLUGIN_FUNC_TEKTON_BUILDAH
+            value: registry.redhat.io/rhel8/buildah@sha256:3d505d9c0f5d4cd5a4ec03b8d038656c6cdbdf5191e00ce6388f7e0e4d2f1b74
+          - name: IMAGE_KN_PLUGIN_FUNC_NODEJS_20_MINIMAL
+            value: registry.access.redhat.com/ubi8/nodejs-20-minimal@sha256:a2a7e399aaf09a48c28f40820da16709b62aee6f2bc703116b9345fab5830861
+          - name: IMAGE_KN_PLUGIN_FUNC_OPENJDK_21
+            value: registry.access.redhat.com/ubi8/openjdk-21@sha256:441897a1f691c7d4b3a67bb3e0fea83e18352214264cb383fd057bbbd5ed863c
+          - name: IMAGE_KN_PLUGIN_FUNC_PYTHON_39
+            value: registry.access.redhat.com/ubi8/python-39@sha256:27e795fd6b1b77de70d1dc73a65e4c790650748a9cfda138fdbd194b3d6eea3d
+          - name: KAFKA_IMAGE_kafka-broker-receiver__kafka-broker-receiver
+            value: registry.ci.openshift.org/openshift/knative-eventing-kafka-broker-receiver:knative-v1.14
+          - name: KAFKA_IMAGE_kafka-broker-dispatcher__kafka-broker-dispatcher
+            value: registry.ci.openshift.org/openshift/knative-eventing-kafka-broker-dispatcher:knative-v1.14
+          - name: KAFKA_IMAGE_kafka-channel-receiver__kafka-channel-receiver
+            value: registry.ci.openshift.org/openshift/knative-eventing-kafka-broker-receiver:knative-v1.14
+          - name: KAFKA_IMAGE_kafka-channel-dispatcher__kafka-channel-dispatcher
+            value: registry.ci.openshift.org/openshift/knative-eventing-kafka-broker-dispatcher:knative-v1.14
+          - name: KAFKA_IMAGE_kafka-controller__controller
+            value: registry.ci.openshift.org/openshift/knative-eventing-kafka-broker-kafka-controller:knative-v1.14
+          - name: KAFKA_IMAGE_kafka-sink-receiver__kafka-sink-receiver
+            value: registry.ci.openshift.org/openshift/knative-eventing-kafka-broker-receiver:knative-v1.14
+          - name: KAFKA_IMAGE_kafka-source-dispatcher__kafka-source-dispatcher
+            value: registry.ci.openshift.org/openshift/knative-eventing-kafka-broker-dispatcher:knative-v1.14
+          - name: KAFKA_IMAGE_kafka-webhook-eventing__kafka-webhook-eventing
+            value: registry.ci.openshift.org/openshift/knative-eventing-kafka-broker-webhook-kafka:knative-v1.14
+          - name: KAFKA_IMAGE_kafka-controller-post-install__post-install
+            value: registry.ci.openshift.org/openshift/knative-eventing-kafka-broker-post-install:knative-v1.14
+          - name: KAFKA_IMAGE_knative-kafka-storage-version-migrator__migrate
+            value: registry.ci.openshift.org/openshift/knative-eventing-migrate:knative-v1.14
+          - name: CURRENT_VERSION
+            value: 1.34.1
+          - name: KNATIVE_SERVING_VERSION
+            value: "1.14"
+          - name: KNATIVE_EVENTING_VERSION
+            value: "1.14"
+          - name: KNATIVE_EVENTING_KAFKA_BROKER_VERSION
+            value: "1.14"
+          - name: OPERATOR_CONDITION_NAME
+            value: serverless-operator.v1.34.1
+          image: docker.io/skonto/serverless-knative-operator
+          imagePullPolicy: Always
+          livenessProbe:
+            failureThreshold: 3
+            httpGet:
+              path: /healthz
+              port: 8687
+              scheme: HTTP
+            periodSeconds: 10
+            successThreshold: 1
+            timeoutSeconds: 1
+          name: knative-openshift
+          ports:
+          - containerPort: 8080
+            name: http-cli
+            protocol: TCP
+          readinessProbe:
+            failureThreshold: 3
+            httpGet:
+              path: /readyz
+              port: 8687
+              scheme: HTTP
+            periodSeconds: 10
+            successThreshold: 1
+            timeoutSeconds: 1
+          resources: {}
+          securityContext:
+            allowPrivilegeEscalation: false
+            capabilities:
+              drop:
+              - ALL
+            readOnlyRootFilesystem: true
+            runAsNonRoot: true
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+          volumeMounts:
+          - mountPath: /cli-artifacts
+            name: cli-artifacts
+          - mountPath: /apiserver.local.config/certificates
+            name: apiservice-cert
+          - mountPath: /tmp/k8s-webhook-server/serving-certs
+            name: webhook-cert
+        dnsPolicy: ClusterFirst
+        initContainers:
+        - command:
+          - sh
+          - -c
+          - rm -rf /cli-artifacts/* && cp /usr/share/kn/**/* /cli-artifacts && chmod
+            444 /cli-artifacts/*
+          image: registry.ci.openshift.org/openshift/knative-v1.14.0:kn-cli-artifacts
+          imagePullPolicy: Always
+          name: cli-artifacts
+          resources: {}
+          securityContext:
+            allowPrivilegeEscalation: false
+            capabilities:
+              drop:
+              - ALL
+            runAsNonRoot: true
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+          volumeMounts:
+          - mountPath: /cli-artifacts
+            name: cli-artifacts
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        securityContext: {}
+        serviceAccount: knative-openshift
+        serviceAccountName: knative-openshift
+        terminationGracePeriodSeconds: 30
+        volumes:
+        - emptyDir: {}
+          name: cli-artifacts
+        - name: apiservice-cert
+          secret:
+            defaultMode: 420
+            items:
+            - key: tls.crt
+              path: apiserver.crt
+            - key: tls.key
+              path: apiserver.key
+            secretName: knative-openshift-service-cert
+        - name: webhook-cert
+          secret:
+            defaultMode: 420
+            items:
+            - key: tls.crt
+              path: tls.crt
+            - key: tls.key
+              path: tls.key
+            secretName: knative-openshift-service-cert
+  status:
+    availableReplicas: 1
+    fullyLabeledReplicas: 1
+    observedGeneration: 1
+    readyReplicas: 1
+    replicas: 1
+- apiVersion: apps/v1
+  kind: ReplicaSet
+  metadata:
+    annotations:
+      deployment.kubernetes.io/desired-replicas: "1"
+      deployment.kubernetes.io/max-replicas: "2"
+      deployment.kubernetes.io/revision: "1"
+    creationTimestamp: "2025-01-09T14:57:50Z"
+    generation: 1
+    labels:
+      name: knative-openshift-ingress
+      pod-template-hash: 7dbfc8dbcd
+    managedFields:
+    - apiVersion: apps/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:deployment.kubernetes.io/desired-replicas: {}
+            f:deployment.kubernetes.io/max-replicas: {}
+            f:deployment.kubernetes.io/revision: {}
+          f:labels:
+            .: {}
+            f:name: {}
+            f:pod-template-hash: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"628e0794-491e-44f6-9137-07f2bd28f6f0"}: {}
+        f:spec:
+          f:replicas: {}
+          f:selector: {}
+          f:template:
+            f:metadata:
+              f:annotations:
+                .: {}
+                f:alm-examples: {}
+                f:capabilities: {}
+                f:categories: {}
+                f:certified: {}
+                f:createdAt: {}
+                f:description: {}
+                f:features.operators.openshift.io/disconnected: {}
+                f:features.operators.openshift.io/fips-compliant: {}
+                f:features.operators.openshift.io/proxy-aware: {}
+                f:features.operators.openshift.io/tls-profiles: {}
+                f:features.operators.openshift.io/token-auth-aws: {}
+                f:features.operators.openshift.io/token-auth-azure: {}
+                f:features.operators.openshift.io/token-auth-gcp: {}
+                f:olm.operatorGroup: {}
+                f:olm.operatorNamespace: {}
+                f:olm.skipRange: {}
+                f:olm.targetNamespaces: {}
+                f:operatorframework.io/properties: {}
+                f:operatorframework.io/suggested-namespace: {}
+                f:operators.openshift.io/infrastructure-features: {}
+                f:operators.openshift.io/must-gather-image: {}
+                f:operators.openshift.io/valid-subscription: {}
+                f:repository: {}
+                f:support: {}
+              f:labels:
+                .: {}
+                f:name: {}
+                f:pod-template-hash: {}
+            f:spec:
+              f:containers:
+                k:{"name":"knative-openshift-ingress"}:
+                  .: {}
+                  f:env:
+                    .: {}
+                    k:{"name":"KUBERNETES_MIN_VERSION"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"METRICS_DOMAIN"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"OPERATOR_CONDITION_NAME"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"OPERATOR_NAME"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"POD_NAME"}:
+                      .: {}
+                      f:name: {}
+                      f:valueFrom:
+                        .: {}
+                        f:fieldRef: {}
+                    k:{"name":"ROUTE_HAPROXY_TIMEOUT"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"SYSTEM_NAMESPACE"}:
+                      .: {}
+                      f:name: {}
+                      f:valueFrom:
+                        .: {}
+                        f:fieldRef: {}
+                    k:{"name":"WATCH_NAMESPACE"}:
+                      .: {}
+                      f:name: {}
+                  f:image: {}
+                  f:imagePullPolicy: {}
+                  f:name: {}
+                  f:ports:
+                    .: {}
+                    k:{"containerPort":9090,"protocol":"TCP"}:
+                      .: {}
+                      f:containerPort: {}
+                      f:name: {}
+                      f:protocol: {}
+                  f:resources: {}
+                  f:securityContext:
+                    .: {}
+                    f:allowPrivilegeEscalation: {}
+                    f:capabilities:
+                      .: {}
+                      f:drop: {}
+                    f:readOnlyRootFilesystem: {}
+                    f:runAsNonRoot: {}
+                  f:terminationMessagePath: {}
+                  f:terminationMessagePolicy: {}
+              f:dnsPolicy: {}
+              f:restartPolicy: {}
+              f:schedulerName: {}
+              f:securityContext: {}
+              f:serviceAccount: {}
+              f:serviceAccountName: {}
+              f:terminationGracePeriodSeconds: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2025-01-09T14:57:50Z"
+    - apiVersion: apps/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          f:availableReplicas: {}
+          f:fullyLabeledReplicas: {}
+          f:observedGeneration: {}
+          f:readyReplicas: {}
+          f:replicas: {}
+      manager: kube-controller-manager
+      operation: Update
+      subresource: status
+      time: "2025-01-09T14:57:54Z"
+    name: knative-openshift-ingress-7dbfc8dbcd
+    namespace: openshift-serverless
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Deployment
+      name: knative-openshift-ingress
+      uid: 628e0794-491e-44f6-9137-07f2bd28f6f0
+    resourceVersion: "51146"
+    uid: 921fad2c-0357-4423-aa0b-24d421052cd2
+  spec:
+    replicas: 1
+    selector:
+      matchLabels:
+        name: knative-openshift-ingress
+        pod-template-hash: 7dbfc8dbcd
+    template:
+      metadata:
+        annotations:
+          alm-examples: |-
+            [
+              {
+                "apiVersion": "operator.knative.dev/v1beta1",
+                "kind": "KnativeServing",
+                "metadata": {
+                  "name": "knative-serving"
+                },
+                "spec": {
+                }
+              },
+              {
+                "apiVersion": "operator.knative.dev/v1beta1",
+                "kind": "KnativeEventing",
+                "metadata": {
+                  "name": "knative-eventing"
+                },
+                "spec": {
+                }
+              },
+              {
+                "apiVersion": "operator.serverless.openshift.io/v1alpha1",
+                "kind": "KnativeKafka",
+                "metadata": {
+                  "name": "knative-kafka"
+                },
+                "spec": {
+                  "broker": {
+                    "enabled": false,
+                    "defaultConfig": {
+                      "numPartitions": 10,
+                      "replicationFactor": 3,
+                      "bootstrapServers": "REPLACE_WITH_COMMA_SEPARATED_KAFKA_BOOTSTRAP_SERVERS"
+                    }
+                  },
+                  "source": {
+                    "enabled": false
+                  },
+                  "sink": {
+                    "enabled": false
+                  },
+                  "channel": {
+                    "enabled": false,
+                    "bootstrapServers": "REPLACE_WITH_COMMA_SEPARATED_KAFKA_BOOTSTRAP_SERVERS"
+                  }
+                }
+              }
+            ]
+          capabilities: Full Lifecycle
+          categories: Networking,Integration & Delivery,Cloud Provider,Developer Tools
+          certified: "false"
+          createdAt: "2020-04-20T17:00:00Z"
+          description: Deploy and manage event-driven serverless applications and
+            functions using Knative.
+          features.operators.openshift.io/disconnected: "true"
+          features.operators.openshift.io/fips-compliant: "false"
+          features.operators.openshift.io/proxy-aware: "true"
+          features.operators.openshift.io/tls-profiles: "false"
+          features.operators.openshift.io/token-auth-aws: "false"
+          features.operators.openshift.io/token-auth-azure: "false"
+          features.operators.openshift.io/token-auth-gcp: "false"
+          olm.operatorGroup: serverless
+          olm.operatorNamespace: openshift-serverless
+          olm.skipRange: '>=1.34.0 <1.34.1'
+          olm.targetNamespaces: ""
+          operatorframework.io/properties: '{"properties":[{"type":"olm.gvk","value":{"group":"operator.knative.dev","kind":"KnativeEventing","version":"v1beta1"}},{"type":"olm.gvk","value":{"group":"operator.knative.dev","kind":"KnativeServing","version":"v1beta1"}},{"type":"olm.gvk","value":{"group":"operator.serverless.openshift.io","kind":"KnativeKafka","version":"v1alpha1"}},{"type":"olm.package","value":{"packageName":"serverless-operator","version":"1.34.1"}}]}'
+          operatorframework.io/suggested-namespace: openshift-serverless
+          operators.openshift.io/infrastructure-features: '["disconnected", "proxy-aware"]'
+          operators.openshift.io/must-gather-image: quay.io/openshift-knative/must-gather
+          operators.openshift.io/valid-subscription: '["OpenShift Container Platform",
+            "OpenShift Platform Plus"]'
+          repository: https://github.com/openshift-knative/serverless-operator
+          support: Red Hat
+        creationTimestamp: null
+        labels:
+          name: knative-openshift-ingress
+          pod-template-hash: 7dbfc8dbcd
+      spec:
+        containers:
+        - env:
+          - name: METRICS_DOMAIN
+            value: knative.dev/serving
+          - name: WATCH_NAMESPACE
+          - name: POD_NAME
+            valueFrom:
+              fieldRef:
+                apiVersion: v1
+                fieldPath: metadata.name
+          - name: OPERATOR_NAME
+            value: knative-openshift-ingress
+          - name: SYSTEM_NAMESPACE
+            valueFrom:
+              fieldRef:
+                apiVersion: v1
+                fieldPath: metadata.namespace
+          - name: KUBERNETES_MIN_VERSION
+            value: v1.0.0
+          - name: ROUTE_HAPROXY_TIMEOUT
+            value: "600"
+          - name: OPERATOR_CONDITION_NAME
+            value: serverless-operator.v1.34.1
+          image: docker.io/skonto/serverless-ingress
+          imagePullPolicy: Always
+          name: knative-openshift-ingress
+          ports:
+          - containerPort: 9090
+            name: metrics
+            protocol: TCP
+          resources: {}
+          securityContext:
+            allowPrivilegeEscalation: false
+            capabilities:
+              drop:
+              - ALL
+            readOnlyRootFilesystem: true
+            runAsNonRoot: true
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+        dnsPolicy: ClusterFirst
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        securityContext: {}
+        serviceAccount: knative-openshift-ingress
+        serviceAccountName: knative-openshift-ingress
+        terminationGracePeriodSeconds: 30
+  status:
+    availableReplicas: 1
+    fullyLabeledReplicas: 1
+    observedGeneration: 1
+    readyReplicas: 1
+    replicas: 1
+- apiVersion: apps/v1
+  kind: ReplicaSet
+  metadata:
+    annotations:
+      deployment.kubernetes.io/desired-replicas: "1"
+      deployment.kubernetes.io/max-replicas: "2"
+      deployment.kubernetes.io/revision: "1"
+    creationTimestamp: "2025-01-09T14:57:49Z"
+    generation: 1
+    labels:
+      name: knative-operator
+      pod-template-hash: 7655d96d78
+      serverless.openshift.io/is: webhook
+    managedFields:
+    - apiVersion: apps/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:deployment.kubernetes.io/desired-replicas: {}
+            f:deployment.kubernetes.io/max-replicas: {}
+            f:deployment.kubernetes.io/revision: {}
+          f:labels:
+            .: {}
+            f:name: {}
+            f:pod-template-hash: {}
+            f:serverless.openshift.io/is: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"e4df820d-2ca4-4ee2-9a8b-50d361f8ca2e"}: {}
+        f:spec:
+          f:replicas: {}
+          f:selector: {}
+          f:template:
+            f:metadata:
+              f:annotations:
+                .: {}
+                f:alm-examples: {}
+                f:capabilities: {}
+                f:categories: {}
+                f:certified: {}
+                f:createdAt: {}
+                f:description: {}
+                f:features.operators.openshift.io/disconnected: {}
+                f:features.operators.openshift.io/fips-compliant: {}
+                f:features.operators.openshift.io/proxy-aware: {}
+                f:features.operators.openshift.io/tls-profiles: {}
+                f:features.operators.openshift.io/token-auth-aws: {}
+                f:features.operators.openshift.io/token-auth-azure: {}
+                f:features.operators.openshift.io/token-auth-gcp: {}
+                f:olm.operatorGroup: {}
+                f:olm.operatorNamespace: {}
+                f:olm.skipRange: {}
+                f:olm.targetNamespaces: {}
+                f:olmcahash: {}
+                f:operatorframework.io/properties: {}
+                f:operatorframework.io/suggested-namespace: {}
+                f:operators.openshift.io/infrastructure-features: {}
+                f:operators.openshift.io/must-gather-image: {}
+                f:operators.openshift.io/valid-subscription: {}
+                f:repository: {}
+                f:sidecar.istio.io/inject: {}
+                f:support: {}
+              f:labels:
+                .: {}
+                f:name: {}
+                f:pod-template-hash: {}
+                f:serverless.openshift.io/is: {}
+            f:spec:
+              f:containers:
+                k:{"name":"knative-operator"}:
+                  .: {}
+                  f:env:
+                    .: {}
+                    k:{"name":"CURRENT_VERSION"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"IMAGE_APISERVER_RA_IMAGE"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"IMAGE_DISPATCHER_IMAGE"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"IMAGE_KN_CLIENT"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"IMAGE_KN_PLUGIN_EVENT_SENDER"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"IMAGE_KN_PLUGIN_FUNC_NODEJS_20_MINIMAL"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"IMAGE_KN_PLUGIN_FUNC_OPENJDK_21"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"IMAGE_KN_PLUGIN_FUNC_PYTHON_39"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"IMAGE_KN_PLUGIN_FUNC_TEKTON_BUILDAH"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"IMAGE_KN_PLUGIN_FUNC_TEKTON_S2I"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"IMAGE_KN_PLUGIN_FUNC_UTIL"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"IMAGE_KUBE_RBAC_PROXY"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"IMAGE_activator"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"IMAGE_autoscaler"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"IMAGE_autoscaler-hpa"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"IMAGE_controller__controller"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"IMAGE_eventing-controller__eventing-controller"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"IMAGE_eventing-istio-controller__eventing-istio-controller"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"IMAGE_eventing-webhook__eventing-webhook"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"IMAGE_eventmesh-backend__controller"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"IMAGE_imc-controller__controller"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"IMAGE_imc-dispatcher__dispatcher"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"IMAGE_kourier-gateway"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"IMAGE_mt-broker-controller__mt-broker-controller"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"IMAGE_mt-broker-filter__filter"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"IMAGE_mt-broker-ingress__ingress"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"IMAGE_net-istio-controller__controller"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"IMAGE_net-istio-webhook__webhook"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"IMAGE_net-kourier-controller__controller"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"IMAGE_pingsource-mt-adapter__dispatcher"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"IMAGE_queue-proxy"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"IMAGE_storage-version-migration-eventing-__migrate"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"IMAGE_storage-version-migration-serving-__migrate"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"IMAGE_webhook__webhook"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"KNATIVE_EVENTING_KAFKA_BROKER_VERSION"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"KNATIVE_EVENTING_VERSION"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"KNATIVE_SERVING_VERSION"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"KUBERNETES_MIN_VERSION"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"METRICS_DOMAIN"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"OPERATOR_CONDITION_NAME"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"OPERATOR_NAME"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"POD_NAME"}:
+                      .: {}
+                      f:name: {}
+                      f:valueFrom:
+                        .: {}
+                        f:fieldRef: {}
+                    k:{"name":"REQUIRED_EVENTING_NAMESPACE"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"REQUIRED_SERVING_NAMESPACE"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"SERVICE_MONITOR_RBAC_MANIFEST_PATH"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"SYSTEM_NAMESPACE"}:
+                      .: {}
+                      f:name: {}
+                      f:valueFrom:
+                        .: {}
+                        f:fieldRef: {}
+                    k:{"name":"USE_OLM_TLS"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"WEBHOOK_NAME"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                  f:image: {}
+                  f:imagePullPolicy: {}
+                  f:name: {}
+                  f:ports:
+                    .: {}
+                    k:{"containerPort":8443,"protocol":"TCP"}:
+                      .: {}
+                      f:containerPort: {}
+                      f:name: {}
+                      f:protocol: {}
+                    k:{"containerPort":9090,"protocol":"TCP"}:
+                      .: {}
+                      f:containerPort: {}
+                      f:name: {}
+                      f:protocol: {}
+                  f:readinessProbe:
+                    .: {}
+                    f:failureThreshold: {}
+                    f:httpGet:
+                      .: {}
+                      f:httpHeaders: {}
+                      f:path: {}
+                      f:port: {}
+                      f:scheme: {}
+                    f:periodSeconds: {}
+                    f:successThreshold: {}
+                    f:timeoutSeconds: {}
+                  f:resources: {}
+                  f:securityContext:
+                    .: {}
+                    f:allowPrivilegeEscalation: {}
+                    f:capabilities:
+                      .: {}
+                      f:drop: {}
+                    f:readOnlyRootFilesystem: {}
+                    f:runAsNonRoot: {}
+                  f:terminationMessagePath: {}
+                  f:terminationMessagePolicy: {}
+                  f:volumeMounts:
+                    .: {}
+                    k:{"mountPath":"/apiserver.local.config/certificates"}:
+                      .: {}
+                      f:mountPath: {}
+                      f:name: {}
+                    k:{"mountPath":"/tmp/k8s-webhook-server/serving-certs"}:
+                      .: {}
+                      f:mountPath: {}
+                      f:name: {}
+              f:dnsPolicy: {}
+              f:restartPolicy: {}
+              f:schedulerName: {}
+              f:securityContext: {}
+              f:serviceAccount: {}
+              f:serviceAccountName: {}
+              f:terminationGracePeriodSeconds: {}
+              f:volumes:
+                .: {}
+                k:{"name":"apiservice-cert"}:
+                  .: {}
+                  f:name: {}
+                  f:secret:
+                    .: {}
+                    f:defaultMode: {}
+                    f:items: {}
+                    f:secretName: {}
+                k:{"name":"webhook-cert"}:
+                  .: {}
+                  f:name: {}
+                  f:secret:
+                    .: {}
+                    f:defaultMode: {}
+                    f:items: {}
+                    f:secretName: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2025-01-09T14:57:49Z"
+    - apiVersion: apps/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          f:availableReplicas: {}
+          f:fullyLabeledReplicas: {}
+          f:observedGeneration: {}
+          f:readyReplicas: {}
+          f:replicas: {}
+      manager: kube-controller-manager
+      operation: Update
+      subresource: status
+      time: "2025-01-09T14:57:54Z"
+    name: knative-operator-webhook-7655d96d78
+    namespace: openshift-serverless
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Deployment
+      name: knative-operator-webhook
+      uid: e4df820d-2ca4-4ee2-9a8b-50d361f8ca2e
+    resourceVersion: "51142"
+    uid: be687a51-9a2e-42c2-8868-56a3c245723f
+  spec:
+    replicas: 1
+    selector:
+      matchLabels:
+        name: knative-operator
+        pod-template-hash: 7655d96d78
+        serverless.openshift.io/is: webhook
+    template:
+      metadata:
+        annotations:
+          alm-examples: |-
+            [
+              {
+                "apiVersion": "operator.knative.dev/v1beta1",
+                "kind": "KnativeServing",
+                "metadata": {
+                  "name": "knative-serving"
+                },
+                "spec": {
+                }
+              },
+              {
+                "apiVersion": "operator.knative.dev/v1beta1",
+                "kind": "KnativeEventing",
+                "metadata": {
+                  "name": "knative-eventing"
+                },
+                "spec": {
+                }
+              },
+              {
+                "apiVersion": "operator.serverless.openshift.io/v1alpha1",
+                "kind": "KnativeKafka",
+                "metadata": {
+                  "name": "knative-kafka"
+                },
+                "spec": {
+                  "broker": {
+                    "enabled": false,
+                    "defaultConfig": {
+                      "numPartitions": 10,
+                      "replicationFactor": 3,
+                      "bootstrapServers": "REPLACE_WITH_COMMA_SEPARATED_KAFKA_BOOTSTRAP_SERVERS"
+                    }
+                  },
+                  "source": {
+                    "enabled": false
+                  },
+                  "sink": {
+                    "enabled": false
+                  },
+                  "channel": {
+                    "enabled": false,
+                    "bootstrapServers": "REPLACE_WITH_COMMA_SEPARATED_KAFKA_BOOTSTRAP_SERVERS"
+                  }
+                }
+              }
+            ]
+          capabilities: Full Lifecycle
+          categories: Networking,Integration & Delivery,Cloud Provider,Developer Tools
+          certified: "false"
+          createdAt: "2020-04-20T17:00:00Z"
+          description: Deploy and manage event-driven serverless applications and
+            functions using Knative.
+          features.operators.openshift.io/disconnected: "true"
+          features.operators.openshift.io/fips-compliant: "false"
+          features.operators.openshift.io/proxy-aware: "true"
+          features.operators.openshift.io/tls-profiles: "false"
+          features.operators.openshift.io/token-auth-aws: "false"
+          features.operators.openshift.io/token-auth-azure: "false"
+          features.operators.openshift.io/token-auth-gcp: "false"
+          olm.operatorGroup: serverless
+          olm.operatorNamespace: openshift-serverless
+          olm.skipRange: '>=1.34.0 <1.34.1'
+          olm.targetNamespaces: ""
+          olmcahash: e5a235e72045e73943a10e1fd5e1162d97a8b23078b784fc9b50f1457bef508d
+          operatorframework.io/properties: '{"properties":[{"type":"olm.gvk","value":{"group":"operator.knative.dev","kind":"KnativeEventing","version":"v1beta1"}},{"type":"olm.gvk","value":{"group":"operator.knative.dev","kind":"KnativeServing","version":"v1beta1"}},{"type":"olm.gvk","value":{"group":"operator.serverless.openshift.io","kind":"KnativeKafka","version":"v1alpha1"}},{"type":"olm.package","value":{"packageName":"serverless-operator","version":"1.34.1"}}]}'
+          operatorframework.io/suggested-namespace: openshift-serverless
+          operators.openshift.io/infrastructure-features: '["disconnected", "proxy-aware"]'
+          operators.openshift.io/must-gather-image: quay.io/openshift-knative/must-gather
+          operators.openshift.io/valid-subscription: '["OpenShift Container Platform",
+            "OpenShift Platform Plus"]'
+          repository: https://github.com/openshift-knative/serverless-operator
+          sidecar.istio.io/inject: "false"
+          support: Red Hat
+        creationTimestamp: null
+        labels:
+          name: knative-operator
+          pod-template-hash: 7655d96d78
+          serverless.openshift.io/is: webhook
+      spec:
+        containers:
+        - env:
+          - name: POD_NAME
+            valueFrom:
+              fieldRef:
+                apiVersion: v1
+                fieldPath: metadata.name
+          - name: OPERATOR_NAME
+            value: knative-operator
+          - name: SYSTEM_NAMESPACE
+            valueFrom:
+              fieldRef:
+                apiVersion: v1
+                fieldPath: metadata.namespace
+          - name: METRICS_DOMAIN
+            value: knative.dev/serving-operator
+          - name: REQUIRED_SERVING_NAMESPACE
+            value: knative-serving
+          - name: REQUIRED_EVENTING_NAMESPACE
+            value: knative-eventing
+          - name: SERVICE_MONITOR_RBAC_MANIFEST_PATH
+            value: /var/run/ko/monitoring/rbac-proxy.yaml
+          - name: WEBHOOK_NAME
+            value: knative-operator-service
+          - name: USE_OLM_TLS
+            value: "true"
+          - name: KUBERNETES_MIN_VERSION
+            value: v1.0.0
+          - name: IMAGE_queue-proxy
+            value: registry.ci.openshift.org/openshift/knative-serving-queue:knative-v1.14
+          - name: IMAGE_activator
+            value: registry.ci.openshift.org/openshift/knative-serving-activator:knative-v1.14
+          - name: IMAGE_autoscaler
+            value: registry.ci.openshift.org/openshift/knative-serving-autoscaler:knative-v1.14
+          - name: IMAGE_autoscaler-hpa
+            value: registry.ci.openshift.org/openshift/knative-serving-autoscaler-hpa:knative-v1.14
+          - name: IMAGE_controller__controller
+            value: registry.ci.openshift.org/openshift/knative-serving-controller:knative-v1.14
+          - name: IMAGE_webhook__webhook
+            value: registry.ci.openshift.org/openshift/knative-serving-webhook:knative-v1.14
+          - name: IMAGE_storage-version-migration-serving-__migrate
+            value: registry.ci.openshift.org/openshift/knative-serving-storage-version-migration:knative-v1.14
+          - name: IMAGE_kourier-gateway
+            value: quay.io/maistra-dev/proxyv2-ubi8:2.4-latest
+          - name: IMAGE_net-kourier-controller__controller
+            value: registry.ci.openshift.org/openshift/net-kourier-kourier:knative-v1.14
+          - name: IMAGE_net-istio-controller__controller
+            value: registry.ci.openshift.org/openshift/net-istio-controller:knative-v1.14
+          - name: IMAGE_net-istio-webhook__webhook
+            value: registry.ci.openshift.org/openshift/net-istio-webhook:knative-v1.14
+          - name: IMAGE_eventing-controller__eventing-controller
+            value: registry.ci.openshift.org/openshift/knative-eventing-controller:knative-v1.14
+          - name: IMAGE_eventing-istio-controller__eventing-istio-controller
+            value: registry.ci.openshift.org/openshift/knative-eventing-istio-controller:knative-v1.14
+          - name: IMAGE_eventing-webhook__eventing-webhook
+            value: registry.ci.openshift.org/openshift/knative-eventing-webhook:knative-v1.14
+          - name: IMAGE_storage-version-migration-eventing-__migrate
+            value: registry.ci.openshift.org/openshift/knative-eventing-migrate:knative-v1.14
+          - name: IMAGE_mt-broker-controller__mt-broker-controller
+            value: registry.ci.openshift.org/openshift/knative-eventing-mtchannel-broker:knative-v1.14
+          - name: IMAGE_mt-broker-filter__filter
+            value: registry.ci.openshift.org/openshift/knative-eventing-filter:knative-v1.14
+          - name: IMAGE_mt-broker-ingress__ingress
+            value: registry.ci.openshift.org/openshift/knative-eventing-ingress:knative-v1.14
+          - name: IMAGE_imc-controller__controller
+            value: registry.ci.openshift.org/openshift/knative-eventing-channel-controller:knative-v1.14
+          - name: IMAGE_imc-dispatcher__dispatcher
+            value: registry.ci.openshift.org/openshift/knative-eventing-channel-dispatcher:knative-v1.14
+          - name: IMAGE_pingsource-mt-adapter__dispatcher
+            value: registry.ci.openshift.org/openshift/knative-eventing-mtping:knative-v1.14
+          - name: IMAGE_APISERVER_RA_IMAGE
+            value: registry.ci.openshift.org/openshift/knative-eventing-apiserver-receive-adapter:knative-v1.14
+          - name: IMAGE_DISPATCHER_IMAGE
+            value: registry.ci.openshift.org/openshift/knative-eventing-channel-dispatcher:knative-v1.14
+          - name: IMAGE_eventmesh-backend__controller
+            value: registry.ci.openshift.org/openshift/knative-backstage-plugins-eventmesh:knative-v1.14
+          - name: IMAGE_KUBE_RBAC_PROXY
+            value: registry.ci.openshift.org/origin/4.15:kube-rbac-proxy
+          - name: IMAGE_KN_PLUGIN_EVENT_SENDER
+            value: registry.ci.openshift.org/knative/release-1.14:client-plugin-event-sender
+          - name: IMAGE_KN_CLIENT
+            value: registry.ci.openshift.org/openshift/knative-v1.14.0:knative-client
+          - name: IMAGE_KN_PLUGIN_FUNC_UTIL
+            value: quay.io/boson/alpine-socat:1.7.4.3-r1-non-root
+          - name: IMAGE_KN_PLUGIN_FUNC_TEKTON_S2I
+            value: registry.redhat.io/source-to-image/source-to-image-rhel8@sha256:6a6025914296a62fdf2092c3a40011bd9b966a6806b094d51eec5e1bd5026ef4
+          - name: IMAGE_KN_PLUGIN_FUNC_TEKTON_BUILDAH
+            value: registry.redhat.io/rhel8/buildah@sha256:3d505d9c0f5d4cd5a4ec03b8d038656c6cdbdf5191e00ce6388f7e0e4d2f1b74
+          - name: IMAGE_KN_PLUGIN_FUNC_NODEJS_20_MINIMAL
+            value: registry.access.redhat.com/ubi8/nodejs-20-minimal@sha256:a2a7e399aaf09a48c28f40820da16709b62aee6f2bc703116b9345fab5830861
+          - name: IMAGE_KN_PLUGIN_FUNC_OPENJDK_21
+            value: registry.access.redhat.com/ubi8/openjdk-21@sha256:441897a1f691c7d4b3a67bb3e0fea83e18352214264cb383fd057bbbd5ed863c
+          - name: IMAGE_KN_PLUGIN_FUNC_PYTHON_39
+            value: registry.access.redhat.com/ubi8/python-39@sha256:27e795fd6b1b77de70d1dc73a65e4c790650748a9cfda138fdbd194b3d6eea3d
+          - name: CURRENT_VERSION
+            value: 1.34.1
+          - name: KNATIVE_SERVING_VERSION
+            value: "1.14"
+          - name: KNATIVE_EVENTING_VERSION
+            value: "1.14"
+          - name: KNATIVE_EVENTING_KAFKA_BROKER_VERSION
+            value: "1.14"
+          - name: OPERATOR_CONDITION_NAME
+            value: serverless-operator.v1.34.1
+          image: docker.io/skonto/serverless-openshift-knative-operator
+          imagePullPolicy: Always
+          name: knative-operator
+          ports:
+          - containerPort: 9090
+            name: metrics
+            protocol: TCP
+          - containerPort: 8443
+            name: https-webhook
+            protocol: TCP
+          readinessProbe:
+            failureThreshold: 3
+            httpGet:
+              httpHeaders:
+              - name: k-kubelet-probe
+                value: webhook
+              path: /
+              port: 8443
+              scheme: HTTPS
+            periodSeconds: 1
+            successThreshold: 1
+            timeoutSeconds: 1
+          resources: {}
+          securityContext:
+            allowPrivilegeEscalation: false
+            capabilities:
+              drop:
+              - ALL
+            readOnlyRootFilesystem: true
+            runAsNonRoot: true
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+          volumeMounts:
+          - mountPath: /apiserver.local.config/certificates
+            name: apiservice-cert
+          - mountPath: /tmp/k8s-webhook-server/serving-certs
+            name: webhook-cert
+        dnsPolicy: ClusterFirst
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        securityContext: {}
+        serviceAccount: knative-operator
+        serviceAccountName: knative-operator
+        terminationGracePeriodSeconds: 30
+        volumes:
+        - name: apiservice-cert
+          secret:
+            defaultMode: 420
+            items:
+            - key: tls.crt
+              path: apiserver.crt
+            - key: tls.key
+              path: apiserver.key
+            secretName: knative-operator-webhook-service-cert
+        - name: webhook-cert
+          secret:
+            defaultMode: 420
+            items:
+            - key: tls.crt
+              path: tls.crt
+            - key: tls.key
+              path: tls.key
+            secretName: knative-operator-webhook-service-cert
+  status:
+    availableReplicas: 1
+    fullyLabeledReplicas: 1
+    observedGeneration: 1
+    readyReplicas: 1
+    replicas: 1
+kind: ReplicaSetList
+metadata:
+  resourceVersion: "62283"

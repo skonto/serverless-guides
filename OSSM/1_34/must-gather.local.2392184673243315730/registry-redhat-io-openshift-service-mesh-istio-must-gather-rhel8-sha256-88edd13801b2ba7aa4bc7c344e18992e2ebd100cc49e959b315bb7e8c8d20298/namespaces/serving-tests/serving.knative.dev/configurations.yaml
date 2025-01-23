@@ -1,0 +1,124 @@
+---
+apiVersion: serving.knative.dev/v1
+items:
+- apiVersion: serving.knative.dev/v1
+  kind: Configuration
+  metadata:
+    annotations:
+      serving.knative.dev/creator: system:admin
+      serving.knative.dev/lastModifier: system:admin
+      serving.knative.dev/routes: helloworld-go
+      serving.knative.openshift.io/enablePassthrough: "true"
+    creationTimestamp: "2025-01-09T14:59:40Z"
+    generation: 1
+    labels:
+      serving.knative.dev/service: helloworld-go
+      serving.knative.dev/serviceUID: 79f8a230-4abb-4fe0-9275-ba946e239b2f
+    managedFields:
+    - apiVersion: serving.knative.dev/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:serving.knative.dev/creator: {}
+            f:serving.knative.dev/lastModifier: {}
+            f:serving.knative.dev/routes: {}
+            f:serving.knative.openshift.io/enablePassthrough: {}
+          f:labels:
+            .: {}
+            f:serving.knative.dev/service: {}
+            f:serving.knative.dev/serviceUID: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"79f8a230-4abb-4fe0-9275-ba946e239b2f"}: {}
+        f:spec:
+          .: {}
+          f:template:
+            .: {}
+            f:metadata:
+              .: {}
+              f:annotations:
+                .: {}
+                f:autoscaling.knative.dev/minScale: {}
+                f:autoscaling.knative.dev/target: {}
+                f:sidecar.istio.io/inject: {}
+                f:sidecar.istio.io/rewriteAppHTTPProbers: {}
+              f:creationTimestamp: {}
+              f:labels:
+                .: {}
+                f:app: {}
+            f:spec:
+              .: {}
+              f:containerConcurrency: {}
+              f:containers: {}
+              f:enableServiceLinks: {}
+              f:timeoutSeconds: {}
+      manager: controller
+      operation: Update
+      time: "2025-01-09T14:59:40Z"
+    - apiVersion: serving.knative.dev/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          .: {}
+          f:conditions: {}
+          f:latestCreatedRevisionName: {}
+          f:latestReadyRevisionName: {}
+          f:observedGeneration: {}
+      manager: controller
+      operation: Update
+      subresource: status
+      time: "2025-01-09T14:59:45Z"
+    name: helloworld-go
+    namespace: serving-tests
+    ownerReferences:
+    - apiVersion: serving.knative.dev/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: helloworld-go
+      uid: 79f8a230-4abb-4fe0-9275-ba946e239b2f
+    resourceVersion: "53705"
+    uid: d8b4cafc-e336-457b-abc6-86dba0837c51
+  spec:
+    template:
+      metadata:
+        annotations:
+          autoscaling.knative.dev/minScale: "1"
+          autoscaling.knative.dev/target: "10"
+          sidecar.istio.io/inject: "true"
+          sidecar.istio.io/rewriteAppHTTPProbers: "true"
+        creationTimestamp: null
+        labels:
+          app: helloworld-go
+      spec:
+        containerConcurrency: 0
+        containers:
+        - env:
+          - name: TARGET
+            value: Go Sample v1
+          image: docker.io/skonto/helloworld-go
+          imagePullPolicy: Always
+          name: user-container
+          readinessProbe:
+            successThreshold: 1
+            tcpSocket:
+              port: 0
+          resources:
+            requests:
+              cpu: 200m
+        enableServiceLinks: false
+        timeoutSeconds: 300
+  status:
+    conditions:
+    - lastTransitionTime: "2025-01-09T14:59:45Z"
+      status: "True"
+      type: Ready
+    latestCreatedRevisionName: helloworld-go-00001
+    latestReadyRevisionName: helloworld-go-00001
+    observedGeneration: 1
+kind: ConfigurationList
+metadata:
+  continue: ""
+  resourceVersion: "60835"

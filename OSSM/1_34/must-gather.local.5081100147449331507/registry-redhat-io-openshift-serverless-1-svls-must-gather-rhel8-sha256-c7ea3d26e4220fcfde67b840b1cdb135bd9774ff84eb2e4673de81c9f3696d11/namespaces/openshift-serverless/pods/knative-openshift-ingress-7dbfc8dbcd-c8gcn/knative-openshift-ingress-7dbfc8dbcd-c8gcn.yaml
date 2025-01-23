@@ -1,0 +1,422 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    alm-examples: |-
+      [
+        {
+          "apiVersion": "operator.knative.dev/v1beta1",
+          "kind": "KnativeServing",
+          "metadata": {
+            "name": "knative-serving"
+          },
+          "spec": {
+          }
+        },
+        {
+          "apiVersion": "operator.knative.dev/v1beta1",
+          "kind": "KnativeEventing",
+          "metadata": {
+            "name": "knative-eventing"
+          },
+          "spec": {
+          }
+        },
+        {
+          "apiVersion": "operator.serverless.openshift.io/v1alpha1",
+          "kind": "KnativeKafka",
+          "metadata": {
+            "name": "knative-kafka"
+          },
+          "spec": {
+            "broker": {
+              "enabled": false,
+              "defaultConfig": {
+                "numPartitions": 10,
+                "replicationFactor": 3,
+                "bootstrapServers": "REPLACE_WITH_COMMA_SEPARATED_KAFKA_BOOTSTRAP_SERVERS"
+              }
+            },
+            "source": {
+              "enabled": false
+            },
+            "sink": {
+              "enabled": false
+            },
+            "channel": {
+              "enabled": false,
+              "bootstrapServers": "REPLACE_WITH_COMMA_SEPARATED_KAFKA_BOOTSTRAP_SERVERS"
+            }
+          }
+        }
+      ]
+    capabilities: Full Lifecycle
+    categories: Networking,Integration & Delivery,Cloud Provider,Developer Tools
+    certified: "false"
+    createdAt: "2020-04-20T17:00:00Z"
+    description: Deploy and manage event-driven serverless applications and functions
+      using Knative.
+    features.operators.openshift.io/disconnected: "true"
+    features.operators.openshift.io/fips-compliant: "false"
+    features.operators.openshift.io/proxy-aware: "true"
+    features.operators.openshift.io/tls-profiles: "false"
+    features.operators.openshift.io/token-auth-aws: "false"
+    features.operators.openshift.io/token-auth-azure: "false"
+    features.operators.openshift.io/token-auth-gcp: "false"
+    k8s.ovn.org/pod-networks: '{"default":{"ip_addresses":["10.130.2.21/23"],"mac_address":"0a:58:0a:82:02:15","gateway_ips":["10.130.2.1"],"routes":[{"dest":"10.128.0.0/14","nextHop":"10.130.2.1"},{"dest":"172.30.0.0/16","nextHop":"10.130.2.1"},{"dest":"100.64.0.0/16","nextHop":"10.130.2.1"}],"ip_address":"10.130.2.21/23","gateway_ip":"10.130.2.1","role":"primary"}}'
+    k8s.v1.cni.cncf.io/network-status: |-
+      [{
+          "name": "ovn-kubernetes",
+          "interface": "eth0",
+          "ips": [
+              "10.130.2.21"
+          ],
+          "mac": "0a:58:0a:82:02:15",
+          "default": true,
+          "dns": {}
+      }]
+    olm.operatorGroup: serverless
+    olm.operatorNamespace: openshift-serverless
+    olm.skipRange: '>=1.34.0 <1.34.1'
+    olm.targetNamespaces: ""
+    openshift.io/scc: restricted-v2
+    operatorframework.io/properties: '{"properties":[{"type":"olm.gvk","value":{"group":"operator.knative.dev","kind":"KnativeEventing","version":"v1beta1"}},{"type":"olm.gvk","value":{"group":"operator.knative.dev","kind":"KnativeServing","version":"v1beta1"}},{"type":"olm.gvk","value":{"group":"operator.serverless.openshift.io","kind":"KnativeKafka","version":"v1alpha1"}},{"type":"olm.package","value":{"packageName":"serverless-operator","version":"1.34.1"}}]}'
+    operatorframework.io/suggested-namespace: openshift-serverless
+    operators.openshift.io/infrastructure-features: '["disconnected", "proxy-aware"]'
+    operators.openshift.io/must-gather-image: quay.io/openshift-knative/must-gather
+    operators.openshift.io/valid-subscription: '["OpenShift Container Platform", "OpenShift
+      Platform Plus"]'
+    repository: https://github.com/openshift-knative/serverless-operator
+    seccomp.security.alpha.kubernetes.io/pod: runtime/default
+    support: Red Hat
+  creationTimestamp: "2025-01-09T14:57:50Z"
+  generateName: knative-openshift-ingress-7dbfc8dbcd-
+  labels:
+    name: knative-openshift-ingress
+    pod-template-hash: 7dbfc8dbcd
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.ovn.org/pod-networks: {}
+    manager: ip-10-0-83-16
+    operation: Update
+    subresource: status
+    time: "2025-01-09T14:57:50Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:alm-examples: {}
+          f:capabilities: {}
+          f:categories: {}
+          f:certified: {}
+          f:createdAt: {}
+          f:description: {}
+          f:features.operators.openshift.io/disconnected: {}
+          f:features.operators.openshift.io/fips-compliant: {}
+          f:features.operators.openshift.io/proxy-aware: {}
+          f:features.operators.openshift.io/tls-profiles: {}
+          f:features.operators.openshift.io/token-auth-aws: {}
+          f:features.operators.openshift.io/token-auth-azure: {}
+          f:features.operators.openshift.io/token-auth-gcp: {}
+          f:olm.operatorGroup: {}
+          f:olm.operatorNamespace: {}
+          f:olm.skipRange: {}
+          f:olm.targetNamespaces: {}
+          f:operatorframework.io/properties: {}
+          f:operatorframework.io/suggested-namespace: {}
+          f:operators.openshift.io/infrastructure-features: {}
+          f:operators.openshift.io/must-gather-image: {}
+          f:operators.openshift.io/valid-subscription: {}
+          f:repository: {}
+          f:support: {}
+        f:generateName: {}
+        f:labels:
+          .: {}
+          f:name: {}
+          f:pod-template-hash: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"921fad2c-0357-4423-aa0b-24d421052cd2"}: {}
+      f:spec:
+        f:containers:
+          k:{"name":"knative-openshift-ingress"}:
+            .: {}
+            f:env:
+              .: {}
+              k:{"name":"KUBERNETES_MIN_VERSION"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"METRICS_DOMAIN"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"OPERATOR_CONDITION_NAME"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"OPERATOR_NAME"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"POD_NAME"}:
+                .: {}
+                f:name: {}
+                f:valueFrom:
+                  .: {}
+                  f:fieldRef: {}
+              k:{"name":"ROUTE_HAPROXY_TIMEOUT"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"SYSTEM_NAMESPACE"}:
+                .: {}
+                f:name: {}
+                f:valueFrom:
+                  .: {}
+                  f:fieldRef: {}
+              k:{"name":"WATCH_NAMESPACE"}:
+                .: {}
+                f:name: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:name: {}
+            f:ports:
+              .: {}
+              k:{"containerPort":9090,"protocol":"TCP"}:
+                .: {}
+                f:containerPort: {}
+                f:name: {}
+                f:protocol: {}
+            f:resources: {}
+            f:securityContext:
+              .: {}
+              f:allowPrivilegeEscalation: {}
+              f:capabilities:
+                .: {}
+                f:drop: {}
+              f:readOnlyRootFilesystem: {}
+              f:runAsNonRoot: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+        f:dnsPolicy: {}
+        f:enableServiceLinks: {}
+        f:restartPolicy: {}
+        f:schedulerName: {}
+        f:securityContext: {}
+        f:serviceAccount: {}
+        f:serviceAccountName: {}
+        f:terminationGracePeriodSeconds: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2025-01-09T14:57:50Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.v1.cni.cncf.io/network-status: {}
+    manager: multus-daemon
+    operation: Update
+    subresource: status
+    time: "2025-01-09T14:57:51Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"ContainersReady"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Initialized"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"PodReadyToStartContainers"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Ready"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+        f:containerStatuses: {}
+        f:hostIP: {}
+        f:hostIPs: {}
+        f:phase: {}
+        f:podIP: {}
+        f:podIPs:
+          .: {}
+          k:{"ip":"10.130.2.21"}:
+            .: {}
+            f:ip: {}
+        f:startTime: {}
+    manager: kubelet
+    operation: Update
+    subresource: status
+    time: "2025-01-09T14:57:54Z"
+  name: knative-openshift-ingress-7dbfc8dbcd-c8gcn
+  namespace: openshift-serverless
+  ownerReferences:
+  - apiVersion: apps/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: ReplicaSet
+    name: knative-openshift-ingress-7dbfc8dbcd
+    uid: 921fad2c-0357-4423-aa0b-24d421052cd2
+  resourceVersion: "51143"
+  uid: be20ae78-a006-4547-83a8-177a73ede917
+spec:
+  containers:
+  - env:
+    - name: METRICS_DOMAIN
+      value: knative.dev/serving
+    - name: WATCH_NAMESPACE
+    - name: POD_NAME
+      valueFrom:
+        fieldRef:
+          apiVersion: v1
+          fieldPath: metadata.name
+    - name: OPERATOR_NAME
+      value: knative-openshift-ingress
+    - name: SYSTEM_NAMESPACE
+      valueFrom:
+        fieldRef:
+          apiVersion: v1
+          fieldPath: metadata.namespace
+    - name: KUBERNETES_MIN_VERSION
+      value: v1.0.0
+    - name: ROUTE_HAPROXY_TIMEOUT
+      value: "600"
+    - name: OPERATOR_CONDITION_NAME
+      value: serverless-operator.v1.34.1
+    image: docker.io/skonto/serverless-ingress
+    imagePullPolicy: Always
+    name: knative-openshift-ingress
+    ports:
+    - containerPort: 9090
+      name: metrics
+      protocol: TCP
+    resources: {}
+    securityContext:
+      allowPrivilegeEscalation: false
+      capabilities:
+        drop:
+        - ALL
+      readOnlyRootFilesystem: true
+      runAsNonRoot: true
+      runAsUser: 1000850000
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-lcj6k
+      readOnly: true
+  dnsPolicy: ClusterFirst
+  enableServiceLinks: true
+  imagePullSecrets:
+  - name: knative-openshift-ingress-dockercfg-p4h2x
+  nodeName: ip-10-0-83-16.ec2.internal
+  preemptionPolicy: PreemptLowerPriority
+  priority: 0
+  restartPolicy: Always
+  schedulerName: default-scheduler
+  securityContext:
+    fsGroup: 1000850000
+    seLinuxOptions:
+      level: s0:c29,c19
+    seccompProfile:
+      type: RuntimeDefault
+  serviceAccount: knative-openshift-ingress
+  serviceAccountName: knative-openshift-ingress
+  terminationGracePeriodSeconds: 30
+  tolerations:
+  - effect: NoExecute
+    key: node.kubernetes.io/not-ready
+    operator: Exists
+    tolerationSeconds: 300
+  - effect: NoExecute
+    key: node.kubernetes.io/unreachable
+    operator: Exists
+    tolerationSeconds: 300
+  volumes:
+  - name: kube-api-access-lcj6k
+    projected:
+      defaultMode: 420
+      sources:
+      - serviceAccountToken:
+          expirationSeconds: 3607
+          path: token
+      - configMap:
+          items:
+          - key: ca.crt
+            path: ca.crt
+          name: kube-root-ca.crt
+      - downwardAPI:
+          items:
+          - fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.namespace
+            path: namespace
+      - configMap:
+          items:
+          - key: service-ca.crt
+            path: service-ca.crt
+          name: openshift-service-ca.crt
+status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2025-01-09T14:57:54Z"
+    status: "True"
+    type: PodReadyToStartContainers
+  - lastProbeTime: null
+    lastTransitionTime: "2025-01-09T14:57:50Z"
+    status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2025-01-09T14:57:54Z"
+    status: "True"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2025-01-09T14:57:54Z"
+    status: "True"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2025-01-09T14:57:50Z"
+    status: "True"
+    type: PodScheduled
+  containerStatuses:
+  - containerID: cri-o://8e02f3f3f67b387118f544105f3e174ee31557076209574aac16b1046ad53b79
+    image: docker.io/skonto/serverless-ingress:latest
+    imageID: docker.io/skonto/serverless-ingress@sha256:1381901cbd8ed3b0010487f913d2cf1b510530f77a609952ce2780af1a84739c
+    lastState: {}
+    name: knative-openshift-ingress
+    ready: true
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2025-01-09T14:57:53Z"
+  hostIP: 10.0.83.16
+  phase: Running
+  podIP: 10.130.2.21
+  podIPs:
+  - ip: 10.130.2.21
+  qosClass: BestEffort
+  startTime: "2025-01-09T14:57:50Z"

@@ -1,0 +1,96 @@
+Name:         stavros.com.apps.ci-ln-6bt60xt-76ef8.aws-2.ci.openshift.org
+Namespace:    serving-tests
+Labels:       <none>
+Annotations:  serving.knative.dev/creator: system:admin
+              serving.knative.dev/lastModifier: system:admin
+API Version:  serving.knative.dev/v1beta1
+Kind:         DomainMapping
+Metadata:
+  Creation Timestamp:  2025-01-09T15:00:43Z
+  Finalizers:
+    domainmappings.serving.knative.dev
+  Generation:  1
+  Managed Fields:
+    API Version:  serving.knative.dev/v1beta1
+    Fields Type:  FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:finalizers:
+          .:
+          v:"domainmappings.serving.knative.dev":
+    Manager:      controller
+    Operation:    Update
+    Time:         2025-01-09T15:00:43Z
+    API Version:  serving.knative.dev/v1beta1
+    Fields Type:  FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .:
+          f:kubectl.kubernetes.io/last-applied-configuration:
+      f:spec:
+        .:
+        f:ref:
+          .:
+          f:apiVersion:
+          f:kind:
+          f:name:
+        f:tls:
+          .:
+          f:secretName:
+    Manager:      kubectl-client-side-apply
+    Operation:    Update
+    Time:         2025-01-09T15:00:43Z
+    API Version:  serving.knative.dev/v1beta1
+    Fields Type:  FieldsV1
+    fieldsV1:
+      f:status:
+        .:
+        f:address:
+          .:
+          f:url:
+        f:conditions:
+        f:observedGeneration:
+        f:url:
+    Manager:         controller
+    Operation:       Update
+    Subresource:     status
+    Time:            2025-01-09T15:00:44Z
+  Resource Version:  54317
+  UID:               b0bebd24-7a79-46e2-b6b7-3554ac45c972
+Spec:
+  Ref:
+    API Version:  serving.knative.dev/v1
+    Kind:         Service
+    Name:         helloworld-go
+    Namespace:    serving-tests
+  Tls:
+    Secret Name:  hello
+Status:
+  Address:
+    URL:  https://stavros.com.apps.ci-ln-6bt60xt-76ef8.aws-2.ci.openshift.org
+  Conditions:
+    Last Transition Time:  2025-01-09T15:00:43Z
+    Message:               TLS certificate was provided externally
+    Reason:                CertificateExternallyProvided
+    Status:                True
+    Type:                  CertificateProvisioned
+    Last Transition Time:  2025-01-09T15:00:43Z
+    Status:                True
+    Type:                  DomainClaimed
+    Last Transition Time:  2025-01-09T15:00:44Z
+    Status:                True
+    Type:                  IngressReady
+    Last Transition Time:  2025-01-09T15:00:44Z
+    Status:                True
+    Type:                  Ready
+    Last Transition Time:  2025-01-09T15:00:43Z
+    Status:                True
+    Type:                  ReferenceResolved
+  Observed Generation:     1
+  URL:                     https://stavros.com.apps.ci-ln-6bt60xt-76ef8.aws-2.ci.openshift.org
+Events:
+  Type    Reason           Age   From                      Message
+  ----    ------           ----  ----                      -------
+  Normal  FinalizerUpdate  13m   domainmapping-controller  Updated "stavros.com.apps.ci-ln-6bt60xt-76ef8.aws-2.ci.openshift.org" finalizers
+  Normal  Created          13m   domainmapping-controller  Created Ingress "stavros.com.apps.ci-ln-6bt60xt-76ef8.aws-2.ci.openshift.org"

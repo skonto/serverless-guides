@@ -1,0 +1,180 @@
+apiVersion: maistra.io/v1
+kind: ServiceMeshMemberRoll
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"maistra.io/v1","kind":"ServiceMeshMemberRoll","metadata":{"annotations":{},"name":"default","namespace":"istio-system"},"spec":{"members":["knative-serving","knative-eventing","serving-tests","serving-tests-alt","serverless-tests","eventing-e2e0","eventing-e2e1","eventing-e2e2","eventing-e2e3","eventing-e2e4","tenant-1","tenant-2"]}}
+  creationTimestamp: "2025-01-09T14:46:13Z"
+  finalizers:
+  - maistra.io/istio-operator
+  generation: 1
+  managedFields:
+  - apiVersion: maistra.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:finalizers:
+          .: {}
+          v:"maistra.io/istio-operator": {}
+    manager: istio-operator
+    operation: Update
+    time: "2025-01-09T14:46:13Z"
+  - apiVersion: maistra.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:annotations:
+          .: {}
+          f:configuredMemberCount: {}
+        f:conditions: {}
+        f:configuredMembers: {}
+        f:memberStatuses: {}
+        f:members: {}
+        f:meshGeneration: {}
+        f:meshReconciledVersion: {}
+        f:observedGeneration: {}
+        f:pendingMembers: {}
+        f:terminatingMembers: {}
+    manager: istio-operator
+    operation: Update
+    subresource: status
+    time: "2025-01-09T14:46:13Z"
+  - apiVersion: maistra.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:kubectl.kubernetes.io/last-applied-configuration: {}
+      f:spec:
+        .: {}
+        f:members: {}
+    manager: kubectl-client-side-apply
+    operation: Update
+    time: "2025-01-09T14:46:13Z"
+  name: default
+  namespace: istio-system
+  resourceVersion: "43582"
+  uid: 93669a0b-9bdb-4bcc-a2c8-624ecc065c05
+spec:
+  members:
+  - knative-serving
+  - knative-eventing
+  - serving-tests
+  - serving-tests-alt
+  - serverless-tests
+  - eventing-e2e0
+  - eventing-e2e1
+  - eventing-e2e2
+  - eventing-e2e3
+  - eventing-e2e4
+  - tenant-1
+  - tenant-2
+status:
+  annotations:
+    configuredMemberCount: 10/12
+  conditions:
+  - lastTransitionTime: "2025-01-09T14:46:13Z"
+    message: 'The following namespaces are not yet configured: [eventing-e2e0 eventing-e2e3]'
+    reason: ReconcileError
+    status: "False"
+    type: Ready
+  configuredMembers:
+  - eventing-e2e1
+  - eventing-e2e2
+  - eventing-e2e4
+  - knative-eventing
+  - knative-serving
+  - serverless-tests
+  - serving-tests
+  - serving-tests-alt
+  - tenant-1
+  - tenant-2
+  memberStatuses:
+  - conditions:
+    - lastTransitionTime: "2025-01-09T14:46:13Z"
+      message: 'could not create NetworkAttachmentDefinition eventing-e2e0/v2-4-istio-cni:
+        network-attachment-definitions.k8s.cni.cncf.io "v2-4-istio-cni" already exists'
+      reason: ErrorConfiguringNamespace
+      status: "False"
+      type: Reconciled
+    namespace: eventing-e2e0
+  - conditions:
+    - lastTransitionTime: "2025-01-09T14:46:13Z"
+      status: "True"
+      type: Reconciled
+    namespace: eventing-e2e1
+  - conditions:
+    - lastTransitionTime: "2025-01-09T14:46:13Z"
+      status: "True"
+      type: Reconciled
+    namespace: eventing-e2e2
+  - conditions:
+    - lastTransitionTime: "2025-01-09T14:46:13Z"
+      message: 'could not create NetworkAttachmentDefinition eventing-e2e3/v2-4-istio-cni:
+        network-attachment-definitions.k8s.cni.cncf.io "v2-4-istio-cni" already exists'
+      reason: ErrorConfiguringNamespace
+      status: "False"
+      type: Reconciled
+    namespace: eventing-e2e3
+  - conditions:
+    - lastTransitionTime: "2025-01-09T14:46:13Z"
+      status: "True"
+      type: Reconciled
+    namespace: eventing-e2e4
+  - conditions:
+    - lastTransitionTime: "2025-01-09T14:46:13Z"
+      status: "True"
+      type: Reconciled
+    namespace: knative-eventing
+  - conditions:
+    - lastTransitionTime: "2025-01-09T14:46:13Z"
+      status: "True"
+      type: Reconciled
+    namespace: knative-serving
+  - conditions:
+    - lastTransitionTime: "2025-01-09T14:46:13Z"
+      status: "True"
+      type: Reconciled
+    namespace: serverless-tests
+  - conditions:
+    - lastTransitionTime: "2025-01-09T14:46:13Z"
+      status: "True"
+      type: Reconciled
+    namespace: serving-tests
+  - conditions:
+    - lastTransitionTime: "2025-01-09T14:46:13Z"
+      status: "True"
+      type: Reconciled
+    namespace: serving-tests-alt
+  - conditions:
+    - lastTransitionTime: "2025-01-09T14:46:13Z"
+      status: "True"
+      type: Reconciled
+    namespace: tenant-1
+  - conditions:
+    - lastTransitionTime: "2025-01-09T14:46:13Z"
+      status: "True"
+      type: Reconciled
+    namespace: tenant-2
+  members:
+  - eventing-e2e0
+  - eventing-e2e1
+  - eventing-e2e2
+  - eventing-e2e3
+  - eventing-e2e4
+  - knative-eventing
+  - knative-serving
+  - serverless-tests
+  - serving-tests
+  - serving-tests-alt
+  - tenant-1
+  - tenant-2
+  meshGeneration: 2
+  meshReconciledVersion: 2.6.4-1-2
+  observedGeneration: 1
+  pendingMembers:
+  - eventing-e2e0
+  - eventing-e2e3
+  terminatingMembers: []

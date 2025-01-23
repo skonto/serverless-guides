@@ -1,0 +1,44 @@
+apiVersion: security.istio.io/v1beta1
+kind: AuthorizationPolicy
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"security.istio.io/v1beta1","kind":"AuthorizationPolicy","metadata":{"annotations":{},"name":"allow-from-knative-and-istio","namespace":"serverless-tests"},"spec":{"action":"ALLOW","rules":[{"from":[{"source":{"namespaces":["serverless-tests","knative-serving","istio-system"]}}]},{"from":[{"source":{"namespaces":["knative-eventing"]}}],"when":[{"key":"request.headers[Kn-Namespace]","values":["serverless-tests"]}]}]}}
+  creationTimestamp: "2025-01-09T14:46:51Z"
+  generation: 1
+  managedFields:
+  - apiVersion: security.istio.io/v1beta1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:kubectl.kubernetes.io/last-applied-configuration: {}
+      f:spec:
+        .: {}
+        f:action: {}
+        f:rules: {}
+    manager: kubectl-client-side-apply
+    operation: Update
+    time: "2025-01-09T14:46:51Z"
+  name: allow-from-knative-and-istio
+  namespace: serverless-tests
+  resourceVersion: "43931"
+  uid: 9df2370e-9fc4-4f5a-992a-42a1ed1fc599
+spec:
+  action: ALLOW
+  rules:
+  - from:
+    - source:
+        namespaces:
+        - serverless-tests
+        - knative-serving
+        - istio-system
+  - from:
+    - source:
+        namespaces:
+        - knative-eventing
+    when:
+    - key: request.headers[Kn-Namespace]
+      values:
+      - serverless-tests

@@ -1,0 +1,210 @@
+Name:         knative-serving
+Namespace:    knative-serving
+Labels:       <none>
+Annotations:  <none>
+API Version:  operator.knative.dev/v1beta1
+Kind:         KnativeServing
+Metadata:
+  Creation Timestamp:  2025-01-09T14:58:14Z
+  Finalizers:
+    knative-serving-openshift
+    knativeservings.operator.knative.dev
+  Generation:  1
+  Managed Fields:
+    API Version:  operator.knative.dev/v1beta1
+    Fields Type:  FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:finalizers:
+          .:
+          v:"knative-serving-openshift":
+    Manager:      knative-operator
+    Operation:    Update
+    Time:         2025-01-09T14:58:14Z
+    API Version:  operator.knative.dev/v1beta1
+    Fields Type:  FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .:
+          f:kubectl.kubernetes.io/last-applied-configuration:
+      f:spec:
+        .:
+        f:config:
+          .:
+          f:autoscaler:
+            .:
+            f:container-concurrency-target-default:
+            f:container-concurrency-target-percentage:
+            f:enable-scale-to-zero:
+            f:max-scale-up-rate:
+            f:panic-threshold-percentage:
+            f:panic-window:
+            f:panic-window-percentage:
+            f:scale-to-zero-grace-period:
+            f:stable-window:
+            f:tick-interval:
+          f:certmanager:
+            .:
+            f:clusterLocalIssuerRef:
+            f:systemInternalIssuerRef:
+          f:defaults:
+            .:
+            f:revision-timeout-seconds:
+          f:deployment:
+            .:
+            f:progressDeadline:
+            f:registriesSkippingTagResolving:
+          f:gc:
+            .:
+            f:stale-revision-create-delay:
+            f:stale-revision-lastpinned-debounce:
+            f:stale-revision-minimum-generations:
+            f:stale-revision-timeout:
+          f:logging:
+            .:
+            f:loglevel.activator:
+            f:loglevel.autoscaler:
+            f:loglevel.controller:
+            f:loglevel.hpaautoscaler:
+            f:loglevel.queueproxy:
+            f:loglevel.webhook:
+          f:observability:
+            .:
+            f:logging.enable-probe-request-log:
+            f:logging.enable-request-log:
+            f:logging.enable-var-log-collection:
+            f:logging.request-log-template:
+            f:metrics.backend-destination:
+          f:tracing:
+            .:
+            f:backend:
+            f:sample-rate:
+        f:deployments:
+        f:ingress:
+          .:
+          f:istio:
+            .:
+            f:enabled:
+    Manager:      kubectl-client-side-apply
+    Operation:    Update
+    Time:         2025-01-09T14:58:14Z
+    API Version:  operator.knative.dev/v1beta1
+    Fields Type:  FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:finalizers:
+          v:"knativeservings.operator.knative.dev":
+    Manager:      openshift-knative-operator
+    Operation:    Update
+    Time:         2025-01-09T14:58:14Z
+    API Version:  operator.knative.dev/v1beta1
+    Fields Type:  FieldsV1
+    fieldsV1:
+      f:status:
+        .:
+        f:conditions:
+        f:manifests:
+        f:observedGeneration:
+        f:version:
+    Manager:         openshift-knative-operator
+    Operation:       Update
+    Subresource:     status
+    Time:            2025-01-09T14:59:01Z
+  Resource Version:  53147
+  UID:               aed016d4-b7c0-4f05-ace9-ef4eec4aeb9c
+Spec:
+  Config:
+    Autoscaler:
+      Container - Concurrency - Target - Default:     100
+      Container - Concurrency - Target - Percentage:  1.0
+      Enable - Scale - To - Zero:                     true
+      Max - Scale - Up - Rate:                        10
+      Panic - Threshold - Percentage:                 200.0
+      Panic - Window:                                 6s
+      Panic - Window - Percentage:                    10.0
+      Scale - To - Zero - Grace - Period:             30s
+      Stable - Window:                                60s
+      Tick - Interval:                                2s
+    Certmanager:
+      Cluster Local Issuer Ref:  kind: ClusterIssuer
+name: knative-selfsigned-issuer
+
+      System Internal Issuer Ref:  kind: ClusterIssuer
+name: knative-selfsigned-issuer
+
+    Defaults:
+      Revision - Timeout - Seconds:  300
+    Deployment:
+      Progress Deadline:                  120s
+      Registries Skipping Tag Resolving:  ko.local,dev.local
+    Gc:
+      Stale - Revision - Create - Delay:         24h
+      Stale - Revision - Lastpinned - Debounce:  5h
+      Stale - Revision - Minimum - Generations:  1
+      Stale - Revision - Timeout:                15h
+    Logging:
+      loglevel.activator:      debug
+      loglevel.autoscaler:     debug
+      loglevel.controller:     debug
+      loglevel.hpaautoscaler:  debug
+      loglevel.queueproxy:     debug
+      loglevel.webhook:        debug
+    Observability:
+      logging.enable-probe-request-log:   true
+      logging.enable-request-log:         true
+      logging.enable-var-log-collection:  false
+      logging.request-log-template:       {"httpRequest": {"requestMethod": "{{.Request.Method}}", "requestUrl": "{{js .Request.RequestURI}}", "requestSize": "{{.Request.ContentLength}}", "status": {{.Response.Code}}, "responseSize": "{{.Response.Size}}", "userAgent": "{{js .Request.UserAgent}}", "remoteIp": "{{js .Request.RemoteAddr}}", "serverIp": "{{.Revision.PodIP}}", "referer": "{{js .Request.Referer}}", "latency": "{{.Response.Latency}}s", "protocol": "{{.Request.Proto}}"}, "traceId": "{{index .Request.Header "X-B3-Traceid"}}"}
+      metrics.backend-destination:        prometheus
+    Tracing:
+      Backend:        none
+      Sample - Rate:  0.1
+  Controller - Custom - Certs:
+    Name:  
+    Type:  
+  Deployments:
+    Annotations:
+      sidecar.istio.io/inject:                 true
+      sidecar.istio.io/rewriteAppHTTPProbers:  true
+    Name:                                      activator
+    Annotations:
+      sidecar.istio.io/inject:                 true
+      sidecar.istio.io/rewriteAppHTTPProbers:  true
+    Name:                                      autoscaler
+  Ingress:
+    Contour:
+      Enabled:  false
+    Istio:
+      Enabled:  true
+    Kourier:
+      Enabled:  false
+  Registry:
+Status:
+  Conditions:
+    Last Transition Time:  2025-01-09T14:58:26Z
+    Status:                True
+    Type:                  DependenciesInstalled
+    Last Transition Time:  2025-01-09T14:59:01Z
+    Status:                True
+    Type:                  DeploymentsAvailable
+    Last Transition Time:  2025-01-09T14:59:01Z
+    Status:                True
+    Type:                  InstallSucceeded
+    Last Transition Time:  2025-01-09T14:59:01Z
+    Status:                True
+    Type:                  Ready
+    Last Transition Time:  2025-01-09T14:58:14Z
+    Status:                True
+    Type:                  VersionMigrationEligible
+  Manifests:
+    /var/run/ko/knative-serving/latest
+    /var/run/ko/ingress/latest/istio
+  Observed Generation:  1
+  Version:              1.14
+Events:
+  Type     Reason                 Age                From                       Message
+  ----     ------                 ----               ----                       -------
+  Warning  FinalizerUpdateFailed  15m                knativeserving-controller  Failed to update finalizers for "knative-serving": Operation cannot be fulfilled on knativeservings.operator.knative.dev "knative-serving": the object has been modified; please apply your changes to the latest version and try again
+  Normal   FinalizerUpdate        15m                knativeserving-controller  Updated "knative-serving" finalizers
+  Warning  InternalError          15m (x2 over 15m)  knativeserving-controller  failed to apply non rbac manifest: Internal error occurred: failed calling webhook "webhook.serving.knative.dev": failed to call webhook: Post "https://webhook.knative-serving.svc:443/?timeout=10s": no endpoints available for service "webhook"
+  Warning  InternalError          15m (x2 over 15m)  knativeserving-controller  failed to apply non rbac manifest: Internal error occurred: failed calling webhook "webhook.serving.knative.dev": failed to call webhook: Post "https://webhook.knative-serving.svc:443/defaulting?timeout=10s": no endpoints available for service "webhook"

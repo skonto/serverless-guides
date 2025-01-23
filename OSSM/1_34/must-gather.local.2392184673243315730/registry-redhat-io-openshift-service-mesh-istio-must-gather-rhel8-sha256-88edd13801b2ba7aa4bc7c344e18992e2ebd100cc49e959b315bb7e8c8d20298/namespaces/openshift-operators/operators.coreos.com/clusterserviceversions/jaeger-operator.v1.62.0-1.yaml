@@ -1,0 +1,999 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: ClusterServiceVersion
+metadata:
+  annotations:
+    alm-examples: |-
+      [
+        {
+          "apiVersion": "jaegertracing.io/v1",
+          "kind": "Jaeger",
+          "metadata": {
+            "name": "my-jaeger"
+          },
+          "spec": {
+            "strategy": "allInOne"
+          }
+        }
+      ]
+    capabilities: Deep Insights
+    categories: Logging & Tracing
+    certified: "false"
+    containerImage: registry.redhat.io/rhosdt/jaeger-rhel8-operator@sha256:2116ed082118c44914fd1309ed1c8d0f4aaf006903ba6eb40b2637de2b66a74e
+    createdAt: 11 Dec 2024, 15:20
+    description: Provides tracing, monitoring and troubleshooting for microservices-based
+      distributed systems
+    features.operators.openshift.io/cnf: "false"
+    features.operators.openshift.io/cni: "false"
+    features.operators.openshift.io/csi: "false"
+    features.operators.openshift.io/disconnected: "true"
+    features.operators.openshift.io/fips-compliant: "false"
+    features.operators.openshift.io/proxy-aware: "true"
+    features.operators.openshift.io/tls-profiles: "false"
+    features.operators.openshift.io/token-auth-aws: "false"
+    features.operators.openshift.io/token-auth-azure: "false"
+    features.operators.openshift.io/token-auth-gcp: "false"
+    olm.operatorGroup: global-operators
+    olm.operatorNamespace: openshift-operators
+    olm.skipRange: '>=1.13.0 <1.62.0-1'
+    olm.targetNamespaces: ""
+    operatorframework.io/cluster-monitoring: "true"
+    operatorframework.io/properties: '{"properties":[{"type":"olm.gvk","value":{"group":"jaegertracing.io","kind":"Jaeger","version":"v1"}},{"type":"olm.package","value":{"packageName":"jaeger-product","version":"1.62.0-1"}}]}'
+    operatorframework.io/suggested-namespace: openshift-distributed-tracing
+    operators.openshift.io/infrastructure-features: '["disconnected"]'
+    operators.openshift.io/valid-subscription: '["OpenShift Container Platform", "OpenShift
+      Platform Plus"]'
+    operators.operatorframework.io/builder: operator-sdk-v1.32.0
+    operators.operatorframework.io/project_layout: go.kubebuilder.io/v3
+    repository: https://github.com/os-observability/konflux-jaeger
+    support: Red Hat
+  creationTimestamp: "2025-01-09T14:45:00Z"
+  finalizers:
+  - operators.coreos.com/csv-cleanup
+  generation: 1
+  labels:
+    olm.managed: "true"
+    operatorframework.io/arch.amd64: supported
+    operatorframework.io/arch.arm64: supported
+    operatorframework.io/arch.ppc64le: supported
+    operatorframework.io/arch.s390x: supported
+    operatorframework.io/os.linux: supported
+    operators.coreos.com/jaeger-product.openshift-operators: ""
+  managedFields:
+  - apiVersion: operators.coreos.com/v1alpha1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:alm-examples: {}
+          f:capabilities: {}
+          f:categories: {}
+          f:certified: {}
+          f:containerImage: {}
+          f:createdAt: {}
+          f:description: {}
+          f:features.operators.openshift.io/cnf: {}
+          f:features.operators.openshift.io/cni: {}
+          f:features.operators.openshift.io/csi: {}
+          f:features.operators.openshift.io/disconnected: {}
+          f:features.operators.openshift.io/fips-compliant: {}
+          f:features.operators.openshift.io/proxy-aware: {}
+          f:features.operators.openshift.io/tls-profiles: {}
+          f:features.operators.openshift.io/token-auth-aws: {}
+          f:features.operators.openshift.io/token-auth-azure: {}
+          f:features.operators.openshift.io/token-auth-gcp: {}
+          f:olm.skipRange: {}
+          f:operatorframework.io/cluster-monitoring: {}
+          f:operatorframework.io/properties: {}
+          f:operatorframework.io/suggested-namespace: {}
+          f:operators.openshift.io/infrastructure-features: {}
+          f:operators.openshift.io/valid-subscription: {}
+          f:operators.operatorframework.io/builder: {}
+          f:operators.operatorframework.io/project_layout: {}
+          f:repository: {}
+          f:support: {}
+        f:labels:
+          .: {}
+          f:olm.managed: {}
+          f:operatorframework.io/arch.amd64: {}
+          f:operatorframework.io/arch.arm64: {}
+          f:operatorframework.io/arch.ppc64le: {}
+          f:operatorframework.io/arch.s390x: {}
+          f:operatorframework.io/os.linux: {}
+      f:spec:
+        .: {}
+        f:apiservicedefinitions: {}
+        f:cleanup:
+          .: {}
+          f:enabled: {}
+        f:customresourcedefinitions:
+          .: {}
+          f:owned: {}
+        f:description: {}
+        f:displayName: {}
+        f:icon: {}
+        f:install:
+          .: {}
+          f:spec:
+            .: {}
+            f:clusterPermissions: {}
+            f:deployments: {}
+            f:permissions: {}
+          f:strategy: {}
+        f:installModes: {}
+        f:keywords: {}
+        f:links: {}
+        f:maintainers: {}
+        f:maturity: {}
+        f:minKubeVersion: {}
+        f:provider:
+          .: {}
+          f:name: {}
+        f:relatedImages: {}
+        f:replaces: {}
+        f:selector: {}
+        f:version: {}
+        f:webhookdefinitions: {}
+    manager: catalog
+    operation: Update
+    time: "2025-01-09T14:45:00Z"
+  - apiVersion: operators.coreos.com/v1alpha1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:olm.operatorGroup: {}
+          f:olm.operatorNamespace: {}
+          f:olm.targetNamespaces: {}
+        f:finalizers:
+          .: {}
+          v:"operators.coreos.com/csv-cleanup": {}
+        f:labels:
+          f:operators.coreos.com/jaeger-product.openshift-operators: {}
+    manager: olm
+    operation: Update
+    time: "2025-01-09T14:45:03Z"
+  - apiVersion: operators.coreos.com/v1alpha1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:certsLastUpdated: {}
+        f:certsRotateAt: {}
+        f:cleanup: {}
+        f:conditions: {}
+        f:lastTransitionTime: {}
+        f:lastUpdateTime: {}
+        f:message: {}
+        f:phase: {}
+        f:reason: {}
+        f:requirementStatus: {}
+    manager: olm
+    operation: Update
+    subresource: status
+    time: "2025-01-09T14:45:22Z"
+  name: jaeger-operator.v1.62.0-1
+  namespace: openshift-operators
+  resourceVersion: "41832"
+  uid: f111ea29-ca49-429a-a050-4597cfbb7e98
+spec:
+  apiservicedefinitions: {}
+  cleanup:
+    enabled: false
+  customresourcedefinitions:
+    owned:
+    - description: Jaeger is the Schema for the jaegers API
+      displayName: Jaeger
+      kind: Jaeger
+      name: jaegers.jaegertracing.io
+      resources:
+      - kind: ConfigMaps
+        name: ""
+        version: v1
+      - kind: CronJob
+        name: ""
+        version: v1beta1
+      - kind: DaemonSets
+        name: ""
+        version: apps/v1
+      - kind: Deployment
+        name: ""
+        version: apps/v1
+      - kind: Ingress
+        name: ""
+        version: networking/v1
+      - kind: Pod
+        name: ""
+        version: v1
+      - kind: Service
+        name: ""
+        version: v1
+      - kind: StatefulSets
+        name: ""
+        version: apps/v1
+      specDescriptors:
+      - displayName: Strategy
+        path: allInOne.strategy
+      - displayName: Strategy
+        path: collector.strategy
+      - displayName: Strategy
+        path: query.strategy
+      - displayName: Strategy
+        path: strategy
+      statusDescriptors:
+      - displayName: Phase
+        path: phase
+      - displayName: Version
+        path: version
+      version: v1
+  description: |-
+    Red Hat OpenShift distributed tracing platform based on Jaeger. Jaeger is project inspired by [Dapper](https://research.google.com/pubs/pub36356.html) and [OpenZipkin](http://zipkin.io/). It is a distributed tracing system released as open source by Uber Technologies. It is used for monitoring and troubleshooting microservices-based distributed systems.
+
+    ### Core capabilities
+    Jaeger is used for monitoring and troubleshooting microservices-based distributed systems, including:
+    * Distributed context propagation
+    * Distributed transaction monitoring
+    * Root cause analysis
+    * Service dependency analysis
+    * Performance / latency optimization
+    * OpenTracing compatible data model
+    * Multiple storage backends: Elasticsearch, Memory.
+
+    ### Operator features
+
+    * **Multiple modes** - Provides `allInOne`, `production` and `streaming` [modes of deployment](https://www.jaegertracing.io/docs/latest/operator/#deployment-strategies).
+
+    * **Configuration** - The Operator manages [configuration information](https://www.jaegertracing.io/docs/latest/operator/#configuring-the-custom-resource) when installing Jaeger instances.
+
+    * **Storage** - [Configure storage](https://www.jaegertracing.io/docs/latest/operator/#storage-options) used by Jaeger. By default, `memory` is used. Other options include `elasticsearch`. The operator can delegate creation of an Elasticsearch cluster to the Elasticsearch Operator if deployed.
+
+    * **Agent** - can be deployed as [sidecar](https://www.jaegertracing.io/docs/latest/operator/#auto-injecting-jaeger-agent-sidecars) (default) and/or [daemonset](https://www.jaegertracing.io/docs/latest/operator/#installing-the-agent-as-daemonset).
+
+    * **UI** - Optionally setup secure route to provide [access to the Jaeger UI](https://www.jaegertracing.io/docs/latest/operator/#accessing-the-jaeger-console-ui).
+
+    ### Before you start
+    1. Ensure that the appropriate storage solution, that will be used by the Jaeger instance, is available and configured.
+    2. If intending to deploy an Elasticsearch cluster via the Jaeger custom resource, then the Elasticsearch Operator must first be installed.
+
+    ### Support & Troubleshooting
+
+    Red Hat OpenShift distributed tracing Jaeger is available and supported as part of a Red Hat OpenShift subscription.
+    Checking the [Red Hat Documentation](https://docs.redhat.com/en/documentation/openshift_container_platform/4.17/html/distributed_tracing/distributed-tracing-platform-jaeger) is recommended when installing, configuring, and managing the Operator and instances.
+    Support is provided to Red Hat OpenShift entitled customers subject to the [Production Scope for Coverage](https://access.redhat.com/support/offerings/production/soc) and the [Red Hat OpenShift distributed tracing Life Cycle](https://access.redhat.com/support/policy/updates/openshift#jaeger).
+  displayName: Red Hat OpenShift distributed tracing platform
+  icon:
+  - base64data: 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
+    mediatype: image/png
+  install:
+    spec:
+      clusterPermissions:
+      - rules:
+        - apiGroups:
+          - authentication.k8s.io
+          resources:
+          - tokenreviews
+          verbs:
+          - create
+        - apiGroups:
+          - authorization.k8s.io
+          resources:
+          - subjectaccessreviews
+          verbs:
+          - create
+        - apiGroups:
+          - apps
+          resources:
+          - daemonsets
+          - deployments
+          - replicasets
+          - statefulsets
+          verbs:
+          - create
+          - delete
+          - get
+          - list
+          - patch
+          - update
+          - watch
+        - apiGroups:
+          - apps
+          resources:
+          - deployments
+          verbs:
+          - create
+          - delete
+          - get
+          - list
+          - patch
+          - update
+          - watch
+        - apiGroups:
+          - apps
+          resources:
+          - deployments/status
+          verbs:
+          - get
+          - patch
+          - update
+        - apiGroups:
+          - autoscaling
+          resources:
+          - horizontalpodautoscalers
+          verbs:
+          - create
+          - delete
+          - get
+          - list
+          - patch
+          - update
+          - watch
+        - apiGroups:
+          - batch
+          resources:
+          - cronjobs
+          - jobs
+          verbs:
+          - create
+          - delete
+          - get
+          - list
+          - patch
+          - update
+          - watch
+        - apiGroups:
+          - console.openshift.io
+          resources:
+          - consolelinks
+          verbs:
+          - create
+          - delete
+          - get
+          - list
+          - patch
+          - update
+          - watch
+        - apiGroups:
+          - coordination.k8s.io
+          resources:
+          - leases
+          verbs:
+          - create
+          - get
+          - list
+          - update
+        - apiGroups:
+          - ""
+          resources:
+          - configmaps
+          - persistentvolumeclaims
+          - pods
+          - secrets
+          - serviceaccounts
+          - services
+          - services/finalizers
+          verbs:
+          - create
+          - delete
+          - get
+          - list
+          - patch
+          - update
+          - watch
+        - apiGroups:
+          - ""
+          resources:
+          - namespaces
+          verbs:
+          - create
+          - delete
+          - get
+          - list
+          - patch
+          - update
+          - watch
+        - apiGroups:
+          - ""
+          resources:
+          - namespaces/status
+          verbs:
+          - get
+          - patch
+          - update
+        - apiGroups:
+          - extensions
+          resources:
+          - ingresses
+          verbs:
+          - create
+          - delete
+          - get
+          - list
+          - patch
+          - update
+          - watch
+        - apiGroups:
+          - image.openshift.io
+          resources:
+          - imagestreams
+          verbs:
+          - get
+          - list
+          - watch
+        - apiGroups:
+          - jaegertracing.io
+          resources:
+          - jaegers
+          verbs:
+          - create
+          - delete
+          - get
+          - list
+          - patch
+          - update
+          - watch
+        - apiGroups:
+          - jaegertracing.io
+          resources:
+          - jaegers/finalizers
+          verbs:
+          - update
+        - apiGroups:
+          - jaegertracing.io
+          resources:
+          - jaegers/status
+          verbs:
+          - get
+          - patch
+          - update
+        - apiGroups:
+          - kafka.strimzi.io
+          resources:
+          - kafkas
+          - kafkausers
+          verbs:
+          - create
+          - delete
+          - get
+          - list
+          - patch
+          - update
+          - watch
+        - apiGroups:
+          - logging.openshift.io
+          resources:
+          - elasticsearch
+          verbs:
+          - create
+          - delete
+          - get
+          - list
+          - patch
+          - update
+          - watch
+        - apiGroups:
+          - logging.openshift.io
+          resources:
+          - elasticsearches
+          verbs:
+          - create
+          - delete
+          - get
+          - list
+          - patch
+          - update
+          - watch
+        - apiGroups:
+          - monitoring.coreos.com
+          resources:
+          - servicemonitors
+          verbs:
+          - create
+          - delete
+          - get
+          - list
+          - patch
+          - update
+          - watch
+        - apiGroups:
+          - networking.k8s.io
+          resources:
+          - ingressclasses
+          - ingresses
+          verbs:
+          - create
+          - delete
+          - get
+          - list
+          - patch
+          - update
+          - watch
+        - apiGroups:
+          - rbac.authorization.k8s.io
+          resources:
+          - clusterrolebindings
+          verbs:
+          - create
+          - delete
+          - get
+          - list
+          - patch
+          - update
+          - watch
+        - apiGroups:
+          - route.openshift.io
+          resources:
+          - routes
+          verbs:
+          - create
+          - delete
+          - get
+          - list
+          - patch
+          - update
+          - watch
+        - apiGroups:
+          - route.openshift.io
+          resources:
+          - routes/custom-host
+          verbs:
+          - create
+        serviceAccountName: jaeger-operator
+      deployments:
+      - label:
+          name: jaeger-operator
+        name: jaeger-operator
+        spec:
+          replicas: 1
+          selector:
+            matchLabels:
+              name: jaeger-operator
+          strategy: {}
+          template:
+            metadata:
+              creationTimestamp: null
+              labels:
+                name: jaeger-operator
+            spec:
+              containers:
+              - args:
+                - start
+                - --health-probe-bind-address=:8081
+                - --leader-elect
+                - --platform=openshift
+                - --openshift-oauth-proxy-imagestream-ns=openshift
+                - --openshift-oauth-proxy-imagestream-name=oauth-proxy
+                - --documentation-url=https://docs.redhat.com/en/documentation/openshift_container_platform/4.17/html/distributed_tracing/distributed-tracing-platform-jaeger
+                env:
+                - name: WATCH_NAMESPACE
+                  valueFrom:
+                    fieldRef:
+                      fieldPath: metadata.annotations['olm.targetNamespaces']
+                - name: POD_NAMESPACE
+                  valueFrom:
+                    fieldRef:
+                      fieldPath: metadata.namespace
+                - name: OPERATOR_NAME
+                  value: jaeger-operator
+                - name: LOG-LEVEL
+                  value: DEBUG
+                - name: KAFKA-PROVISIONING-MINIMAL
+                  value: "true"
+                - name: RELATED_IMAGE_JAEGER_AGENT
+                  value: registry.redhat.io/rhosdt/jaeger-agent-rhel8@sha256:6c1da8adfa47bfc023133d9a91e9b48862f97d2d4fd0dc1799e52a8d8ed5fd5a
+                - name: RELATED_IMAGE_JAEGER_QUERY
+                  value: registry.redhat.io/rhosdt/jaeger-query-rhel8@sha256:2d6aaa213f6f7153478d932cef03837fd1a62ba8ecf0049db5608f1f9cbc4e4a
+                - name: RELATED_IMAGE_JAEGER_COLLECTOR
+                  value: registry.redhat.io/rhosdt/jaeger-collector-rhel8@sha256:0bc8e7dcaa9d837fe2416eb69de659dd2949a528e8395c9b2430e969784b618b
+                - name: RELATED_IMAGE_JAEGER_INGESTER
+                  value: registry.redhat.io/rhosdt/jaeger-ingester-rhel8@sha256:50840f62efa5503badb00176b105fcbb202918ca6da2b66e06d1d44988699c8a
+                - name: RELATED_IMAGE_JAEGER_ALL_IN_ONE
+                  value: registry.redhat.io/rhosdt/jaeger-all-in-one-rhel8@sha256:ae14102c3de2b41abdccde141c45af071ad8631f87547206cec893908cce80b5
+                - name: RELATED_IMAGE_JAEGER_ES_INDEX_CLEANER
+                  value: registry.redhat.io/rhosdt/jaeger-es-index-cleaner-rhel8@sha256:943c6da86a1e71e0ff4b3af8acbd660ac8de3d7b1a4b8da6268dafeeaf8a840a
+                - name: RELATED_IMAGE_JAEGER_ES_ROLLOVER
+                  value: registry.redhat.io/rhosdt/jaeger-es-rollover-rhel8@sha256:eb3ceeaa509e8db3c98176b05dbdb22d6e88f946437320c6b18900ff43a99551
+                - name: RELATED_IMAGE_OPENSHIFT_OAUTH_PROXY
+                  value: registry.redhat.io/openshift4/ose-oauth-proxy@sha256:234af927030921ab8f7333f61f967b4b4dee37a1b3cf85689e9e63240dd62800
+                - name: RELATED_IMAGE_OSE_KUBE_RBAC_PROXY
+                  value: registry.redhat.io/openshift4/ose-kube-rbac-proxy@sha256:7efeeb8b29872a6f0271f651d7ae02c91daea16d853c50e374c310f044d8c76c
+                - name: POD_NAME
+                  valueFrom:
+                    fieldRef:
+                      fieldPath: metadata.name
+                image: registry.redhat.io/rhosdt/jaeger-rhel8-operator@sha256:2116ed082118c44914fd1309ed1c8d0f4aaf006903ba6eb40b2637de2b66a74e
+                livenessProbe:
+                  httpGet:
+                    path: /healthz
+                    port: 8081
+                  initialDelaySeconds: 15
+                  periodSeconds: 20
+                name: jaeger-operator
+                ports:
+                - containerPort: 9443
+                  name: webhook-server
+                  protocol: TCP
+                - containerPort: 8383
+                  name: http-metrics
+                  protocol: TCP
+                readinessProbe:
+                  httpGet:
+                    path: /readyz
+                    port: 8081
+                  initialDelaySeconds: 5
+                  periodSeconds: 10
+                resources:
+                  requests:
+                    cpu: 100m
+                    memory: 128Mi
+                securityContext:
+                  allowPrivilegeEscalation: false
+                volumeMounts:
+                - mountPath: /tmp/k8s-webhook-server/serving-certs
+                  name: cert
+                  readOnly: true
+              - args:
+                - --secure-listen-address=0.0.0.0:8443
+                - --upstream=http://127.0.0.1:8383/
+                - --logtostderr=true
+                - --v=0
+                image: registry.redhat.io/openshift4/ose-kube-rbac-proxy@sha256:7efeeb8b29872a6f0271f651d7ae02c91daea16d853c50e374c310f044d8c76c
+                name: kube-rbac-proxy
+                ports:
+                - containerPort: 8443
+                  name: https
+                  protocol: TCP
+                resources:
+                  limits:
+                    cpu: 500m
+                    memory: 128Mi
+                  requests:
+                    cpu: 5m
+                    memory: 64Mi
+              securityContext:
+                runAsNonRoot: true
+              serviceAccountName: jaeger-operator
+              terminationGracePeriodSeconds: 10
+              volumes:
+              - name: cert
+                secret:
+                  defaultMode: 420
+                  secretName: jaeger-operator-service-cert
+      permissions:
+      - rules:
+        - apiGroups:
+          - ""
+          resources:
+          - configmaps
+          verbs:
+          - get
+          - list
+          - watch
+          - create
+          - update
+          - patch
+          - delete
+        - apiGroups:
+          - coordination.k8s.io
+          resources:
+          - leases
+          verbs:
+          - get
+          - list
+          - watch
+          - create
+          - update
+          - patch
+          - delete
+        - apiGroups:
+          - ""
+          resources:
+          - events
+          verbs:
+          - create
+          - patch
+        serviceAccountName: jaeger-operator
+    strategy: deployment
+  installModes:
+  - supported: false
+    type: OwnNamespace
+  - supported: false
+    type: SingleNamespace
+  - supported: false
+    type: MultiNamespace
+  - supported: true
+    type: AllNamespaces
+  keywords:
+  - tracing
+  - monitoring
+  - troubleshooting
+  links:
+  - name: Jaeger Operator Source Code
+    url: https://github.com/jaegertracing/jaeger-operator
+  maintainers:
+  - email: support@redhat.com
+    name: Red Hat support
+  maturity: alpha
+  minKubeVersion: 1.19.0
+  provider:
+    name: Red Hat
+  relatedImages:
+  - image: registry.redhat.io/rhosdt/jaeger-rhel8-operator@sha256:2116ed082118c44914fd1309ed1c8d0f4aaf006903ba6eb40b2637de2b66a74e
+    name: jaeger-operator
+  - image: registry.redhat.io/rhosdt/jaeger-collector-rhel8@sha256:0bc8e7dcaa9d837fe2416eb69de659dd2949a528e8395c9b2430e969784b618b
+    name: jaeger-collector
+  - image: registry.redhat.io/rhosdt/jaeger-query-rhel8@sha256:2d6aaa213f6f7153478d932cef03837fd1a62ba8ecf0049db5608f1f9cbc4e4a
+    name: jaeger-query
+  - image: registry.redhat.io/rhosdt/jaeger-agent-rhel8@sha256:6c1da8adfa47bfc023133d9a91e9b48862f97d2d4fd0dc1799e52a8d8ed5fd5a
+    name: jaeger-agent
+  - image: registry.redhat.io/rhosdt/jaeger-ingester-rhel8@sha256:50840f62efa5503badb00176b105fcbb202918ca6da2b66e06d1d44988699c8a
+    name: jaeger-ingester
+  - image: registry.redhat.io/rhosdt/jaeger-all-in-one-rhel8@sha256:ae14102c3de2b41abdccde141c45af071ad8631f87547206cec893908cce80b5
+    name: jaeger-all-in-one
+  - image: registry.redhat.io/rhosdt/jaeger-es-index-cleaner-rhel8@sha256:943c6da86a1e71e0ff4b3af8acbd660ac8de3d7b1a4b8da6268dafeeaf8a840a
+    name: jaeger-es-index-cleaner
+  - image: registry.redhat.io/rhosdt/jaeger-es-rollover-rhel8@sha256:eb3ceeaa509e8db3c98176b05dbdb22d6e88f946437320c6b18900ff43a99551
+    name: jaeger-es-rollover
+  - image: registry.redhat.io/openshift4/ose-kube-rbac-proxy@sha256:7efeeb8b29872a6f0271f651d7ae02c91daea16d853c50e374c310f044d8c76c
+    name: ose-rbac-proxy
+  - image: registry.redhat.io/openshift4/ose-oauth-proxy@sha256:234af927030921ab8f7333f61f967b4b4dee37a1b3cf85689e9e63240dd62800
+    name: ose-oauth-proxy
+  replaces: jaeger-operator.v1.57.0-10-0.1730817420.p
+  selector:
+    matchLabels:
+      name: jaeger-operator
+  version: 1.62.0-1
+  webhookdefinitions:
+  - admissionReviewVersions:
+    - v1
+    containerPort: 443
+    deploymentName: jaeger-operator
+    failurePolicy: Ignore
+    generateName: deployment.sidecar-injector.jaegertracing.io
+    objectSelector:
+      matchExpressions:
+      - key: name
+        operator: NotIn
+        values:
+        - jaeger-operator
+    rules:
+    - apiGroups:
+      - apps
+      apiVersions:
+      - v1
+      operations:
+      - CREATE
+      - UPDATE
+      resources:
+      - deployments
+    sideEffects: None
+    targetPort: 9443
+    type: MutatingAdmissionWebhook
+    webhookPath: /mutate-v1-deployment
+  - admissionReviewVersions:
+    - v1
+    containerPort: 443
+    deploymentName: jaeger-operator
+    failurePolicy: Fail
+    generateName: mjaeger.kb.io
+    rules:
+    - apiGroups:
+      - jaegertracing.io
+      apiVersions:
+      - v1
+      operations:
+      - CREATE
+      - UPDATE
+      resources:
+      - jaegers
+    sideEffects: None
+    targetPort: 9443
+    type: MutatingAdmissionWebhook
+    webhookPath: /mutate-jaegertracing-io-v1-jaeger
+  - admissionReviewVersions:
+    - v1
+    containerPort: 443
+    deploymentName: jaeger-operator
+    failurePolicy: Fail
+    generateName: vjaeger.kb.io
+    rules:
+    - apiGroups:
+      - jaegertracing.io
+      apiVersions:
+      - v1
+      operations:
+      - CREATE
+      - UPDATE
+      resources:
+      - jaegers
+    sideEffects: None
+    targetPort: 9443
+    type: ValidatingAdmissionWebhook
+    webhookPath: /validate-jaegertracing-io-v1-jaeger
+status:
+  certsLastUpdated: "2025-01-09T14:45:05Z"
+  certsRotateAt: "2027-01-08T14:45:05Z"
+  cleanup: {}
+  conditions:
+  - lastTransitionTime: "2025-01-09T14:45:00Z"
+    lastUpdateTime: "2025-01-09T14:45:00Z"
+    message: requirements not yet checked
+    phase: Pending
+    reason: RequirementsUnknown
+  - lastTransitionTime: "2025-01-09T14:45:00Z"
+    lastUpdateTime: "2025-01-09T14:45:00Z"
+    message: one or more requirements couldn't be found
+    phase: Pending
+    reason: RequirementsNotMet
+  - lastTransitionTime: "2025-01-09T14:45:03Z"
+    lastUpdateTime: "2025-01-09T14:45:03Z"
+    message: all requirements found, attempting install
+    phase: InstallReady
+    reason: AllRequirementsMet
+  - lastTransitionTime: "2025-01-09T14:45:05Z"
+    lastUpdateTime: "2025-01-09T14:45:05Z"
+    message: waiting for install components to report healthy
+    phase: Installing
+    reason: InstallSucceeded
+  - lastTransitionTime: "2025-01-09T14:45:05Z"
+    lastUpdateTime: "2025-01-09T14:45:06Z"
+    message: 'installing: waiting for deployment jaeger-operator to become ready:
+      deployment "jaeger-operator" not available: Deployment does not have minimum
+      availability.'
+    phase: Installing
+    reason: InstallWaiting
+  - lastTransitionTime: "2025-01-09T14:45:21Z"
+    lastUpdateTime: "2025-01-09T14:45:21Z"
+    message: install strategy completed with no errors
+    phase: Succeeded
+    reason: InstallSucceeded
+  lastTransitionTime: "2025-01-09T14:45:21Z"
+  lastUpdateTime: "2025-01-09T14:45:21Z"
+  message: install strategy completed with no errors
+  phase: Succeeded
+  reason: InstallSucceeded
+  requirementStatus:
+  - group: operators.coreos.com
+    kind: ClusterServiceVersion
+    message: CSV minKubeVersion (1.19.0) less than server version (v1.30.4)
+    name: jaeger-operator.v1.62.0-1
+    status: Present
+    version: v1alpha1
+  - group: apiextensions.k8s.io
+    kind: CustomResourceDefinition
+    message: CRD is present and Established condition is true
+    name: jaegers.jaegertracing.io
+    status: Present
+    uuid: 7ec8d7d6-83fc-49ad-89ca-68107b92f965
+    version: v1
+  - dependents:
+    - group: rbac.authorization.k8s.io
+      kind: PolicyRule
+      message: cluster rule:{"verbs":["create"],"apiGroups":["authentication.k8s.io"],"resources":["tokenreviews"]}
+      status: Satisfied
+      version: v1
+    - group: rbac.authorization.k8s.io
+      kind: PolicyRule
+      message: cluster rule:{"verbs":["create"],"apiGroups":["authorization.k8s.io"],"resources":["subjectaccessreviews"]}
+      status: Satisfied
+      version: v1
+    - group: rbac.authorization.k8s.io
+      kind: PolicyRule
+      message: cluster rule:{"verbs":["create","delete","get","list","patch","update","watch"],"apiGroups":["apps"],"resources":["daemonsets","deployments","replicasets","statefulsets"]}
+      status: Satisfied
+      version: v1
+    - group: rbac.authorization.k8s.io
+      kind: PolicyRule
+      message: cluster rule:{"verbs":["create","delete","get","list","patch","update","watch"],"apiGroups":["apps"],"resources":["deployments"]}
+      status: Satisfied
+      version: v1
+    - group: rbac.authorization.k8s.io
+      kind: PolicyRule
+      message: cluster rule:{"verbs":["get","patch","update"],"apiGroups":["apps"],"resources":["deployments/status"]}
+      status: Satisfied
+      version: v1
+    - group: rbac.authorization.k8s.io
+      kind: PolicyRule
+      message: cluster rule:{"verbs":["create","delete","get","list","patch","update","watch"],"apiGroups":["autoscaling"],"resources":["horizontalpodautoscalers"]}
+      status: Satisfied
+      version: v1
+    - group: rbac.authorization.k8s.io
+      kind: PolicyRule
+      message: cluster rule:{"verbs":["create","delete","get","list","patch","update","watch"],"apiGroups":["batch"],"resources":["cronjobs","jobs"]}
+      status: Satisfied
+      version: v1
+    - group: rbac.authorization.k8s.io
+      kind: PolicyRule
+      message: cluster rule:{"verbs":["create","delete","get","list","patch","update","watch"],"apiGroups":["console.openshift.io"],"resources":["consolelinks"]}
+      status: Satisfied
+      version: v1
+    - group: rbac.authorization.k8s.io
+      kind: PolicyRule
+      message: cluster rule:{"verbs":["create","get","list","update"],"apiGroups":["coordination.k8s.io"],"resources":["leases"]}
+      status: Satisfied
+      version: v1
+    - group: rbac.authorization.k8s.io
+      kind: PolicyRule
+      message: cluster rule:{"verbs":["create","delete","get","list","patch","update","watch"],"apiGroups":[""],"resources":["configmaps","persistentvolumeclaims","pods","secrets","serviceaccounts","services","services/finalizers"]}
+      status: Satisfied
+      version: v1
+    - group: rbac.authorization.k8s.io
+      kind: PolicyRule
+      message: cluster rule:{"verbs":["create","delete","get","list","patch","update","watch"],"apiGroups":[""],"resources":["namespaces"]}
+      status: Satisfied
+      version: v1
+    - group: rbac.authorization.k8s.io
+      kind: PolicyRule
+      message: cluster rule:{"verbs":["get","patch","update"],"apiGroups":[""],"resources":["namespaces/status"]}
+      status: Satisfied
+      version: v1
+    - group: rbac.authorization.k8s.io
+      kind: PolicyRule
+      message: cluster rule:{"verbs":["create","delete","get","list","patch","update","watch"],"apiGroups":["extensions"],"resources":["ingresses"]}
+      status: Satisfied
+      version: v1
+    - group: rbac.authorization.k8s.io
+      kind: PolicyRule
+      message: cluster rule:{"verbs":["get","list","watch"],"apiGroups":["image.openshift.io"],"resources":["imagestreams"]}
+      status: Satisfied
+      version: v1
+    - group: rbac.authorization.k8s.io
+      kind: PolicyRule
+      message: cluster rule:{"verbs":["create","delete","get","list","patch","update","watch"],"apiGroups":["jaegertracing.io"],"resources":["jaegers"]}
+      status: Satisfied
+      version: v1
+    - group: rbac.authorization.k8s.io
+      kind: PolicyRule
+      message: cluster rule:{"verbs":["update"],"apiGroups":["jaegertracing.io"],"resources":["jaegers/finalizers"]}
+      status: Satisfied
+      version: v1
+    - group: rbac.authorization.k8s.io
+      kind: PolicyRule
+      message: cluster rule:{"verbs":["get","patch","update"],"apiGroups":["jaegertracing.io"],"resources":["jaegers/status"]}
+      status: Satisfied
+      version: v1
+    - group: rbac.authorization.k8s.io
+      kind: PolicyRule
+      message: cluster rule:{"verbs":["create","delete","get","list","patch","update","watch"],"apiGroups":["kafka.strimzi.io"],"resources":["kafkas","kafkausers"]}
+      status: Satisfied
+      version: v1
+    - group: rbac.authorization.k8s.io
+      kind: PolicyRule
+      message: cluster rule:{"verbs":["create","delete","get","list","patch","update","watch"],"apiGroups":["logging.openshift.io"],"resources":["elasticsearch"]}
+      status: Satisfied
+      version: v1
+    - group: rbac.authorization.k8s.io
+      kind: PolicyRule
+      message: cluster rule:{"verbs":["create","delete","get","list","patch","update","watch"],"apiGroups":["logging.openshift.io"],"resources":["elasticsearches"]}
+      status: Satisfied
+      version: v1
+    - group: rbac.authorization.k8s.io
+      kind: PolicyRule
+      message: cluster rule:{"verbs":["create","delete","get","list","patch","update","watch"],"apiGroups":["monitoring.coreos.com"],"resources":["servicemonitors"]}
+      status: Satisfied
+      version: v1
+    - group: rbac.authorization.k8s.io
+      kind: PolicyRule
+      message: cluster rule:{"verbs":["create","delete","get","list","patch","update","watch"],"apiGroups":["networking.k8s.io"],"resources":["ingressclasses","ingresses"]}
+      status: Satisfied
+      version: v1
+    - group: rbac.authorization.k8s.io
+      kind: PolicyRule
+      message: cluster rule:{"verbs":["create","delete","get","list","patch","update","watch"],"apiGroups":["rbac.authorization.k8s.io"],"resources":["clusterrolebindings"]}
+      status: Satisfied
+      version: v1
+    - group: rbac.authorization.k8s.io
+      kind: PolicyRule
+      message: cluster rule:{"verbs":["create","delete","get","list","patch","update","watch"],"apiGroups":["route.openshift.io"],"resources":["routes"]}
+      status: Satisfied
+      version: v1
+    - group: rbac.authorization.k8s.io
+      kind: PolicyRule
+      message: cluster rule:{"verbs":["create"],"apiGroups":["route.openshift.io"],"resources":["routes/custom-host"]}
+      status: Satisfied
+      version: v1
+    group: ""
+    kind: ServiceAccount
+    message: ""
+    name: jaeger-operator
+    status: Present
+    version: v1

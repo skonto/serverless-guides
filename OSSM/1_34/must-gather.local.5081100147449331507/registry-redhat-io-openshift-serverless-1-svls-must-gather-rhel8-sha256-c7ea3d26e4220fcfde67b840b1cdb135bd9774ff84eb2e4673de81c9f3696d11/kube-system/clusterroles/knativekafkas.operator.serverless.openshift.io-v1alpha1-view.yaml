@@ -1,0 +1,27 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  creationTimestamp: "2025-01-09T14:58:08Z"
+  labels:
+    olm.managed: "true"
+    olm.opgroup.permissions/aggregate-to-bcd12f4466e2f513-view: "true"
+    rbac.authorization.k8s.io/aggregate-to-view: "true"
+  name: knativekafkas.operator.serverless.openshift.io-v1alpha1-view
+  ownerReferences:
+  - apiVersion: apiextensions.k8s.io/v1
+    blockOwnerDeletion: false
+    controller: false
+    kind: customresourcedefinition
+    name: knativekafkas.operator.serverless.openshift.io
+    uid: 74088dc3-0c91-49e0-95e6-ba6096f2bee1
+  resourceVersion: "51467"
+  uid: 8769a811-334e-4f0d-b99f-7cd86a7d1f9e
+rules:
+- apiGroups:
+  - operator.serverless.openshift.io
+  resources:
+  - knativekafkas
+  verbs:
+  - get
+  - list
+  - watch

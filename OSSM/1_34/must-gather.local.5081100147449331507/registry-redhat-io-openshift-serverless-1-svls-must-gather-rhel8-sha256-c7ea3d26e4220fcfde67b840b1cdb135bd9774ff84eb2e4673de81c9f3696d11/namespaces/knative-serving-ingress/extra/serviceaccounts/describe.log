@@ -1,0 +1,28 @@
+Name:                builder
+Namespace:           knative-serving-ingress
+Labels:              <none>
+Annotations:         openshift.io/internal-registry-pull-secret-ref: builder-dockercfg-z9m8w
+Image pull secrets:  builder-dockercfg-z9m8w
+Mountable secrets:   builder-dockercfg-z9m8w
+Tokens:              <none>
+Events:              <none>
+
+
+Name:                default
+Namespace:           knative-serving-ingress
+Labels:              <none>
+Annotations:         openshift.io/internal-registry-pull-secret-ref: default-dockercfg-w8k6p
+Image pull secrets:  default-dockercfg-w8k6p
+Mountable secrets:   default-dockercfg-w8k6p
+Tokens:              <none>
+Events:              <none>
+
+
+Name:                deployer
+Namespace:           knative-serving-ingress
+Labels:              <none>
+Annotations:         openshift.io/internal-registry-pull-secret-ref: deployer-dockercfg-kjhkp
+Image pull secrets:  deployer-dockercfg-kjhkp
+Mountable secrets:   deployer-dockercfg-kjhkp
+Tokens:              <none>
+Events:              <none>

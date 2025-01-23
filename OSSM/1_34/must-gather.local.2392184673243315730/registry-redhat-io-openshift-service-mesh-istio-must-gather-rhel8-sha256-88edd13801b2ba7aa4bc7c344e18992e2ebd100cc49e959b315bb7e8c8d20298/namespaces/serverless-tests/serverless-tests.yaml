@@ -1,0 +1,63 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"v1","kind":"Namespace","metadata":{"annotations":{},"labels":{"maistra.io/member-of":"istio-system"},"name":"serverless-tests"}}
+    openshift.io/sa.scc.mcs: s0:c28,c7
+    openshift.io/sa.scc.supplemental-groups: 1000770000/10000
+    openshift.io/sa.scc.uid-range: 1000770000/10000
+  creationTimestamp: "2025-01-09T14:46:09Z"
+  labels:
+    kubernetes.io/metadata.name: serverless-tests
+    maistra.io/member-of: istio-system
+    pod-security.kubernetes.io/audit: restricted
+    pod-security.kubernetes.io/audit-version: latest
+    pod-security.kubernetes.io/warn: restricted
+    pod-security.kubernetes.io/warn-version: latest
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:labels:
+          f:pod-security.kubernetes.io/audit: {}
+          f:pod-security.kubernetes.io/audit-version: {}
+          f:pod-security.kubernetes.io/warn: {}
+          f:pod-security.kubernetes.io/warn-version: {}
+    manager: pod-security-admission-label-synchronization-controller
+    operation: Apply
+    time: "2025-01-09T14:46:09Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:openshift.io/sa.scc.mcs: {}
+          f:openshift.io/sa.scc.supplemental-groups: {}
+          f:openshift.io/sa.scc.uid-range: {}
+    manager: cluster-policy-controller
+    operation: Update
+    time: "2025-01-09T14:46:09Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:kubectl.kubernetes.io/last-applied-configuration: {}
+        f:labels:
+          .: {}
+          f:kubernetes.io/metadata.name: {}
+          f:maistra.io/member-of: {}
+    manager: kubectl-client-side-apply
+    operation: Update
+    time: "2025-01-09T14:46:09Z"
+  name: serverless-tests
+  resourceVersion: "43185"
+  uid: 51b9874b-3a05-46a3-89c0-db2dfc99021e
+spec:
+  finalizers:
+  - kubernetes
+status:
+  phase: Active

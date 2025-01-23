@@ -1,0 +1,57 @@
+Name:         routing-serving-certs
+Namespace:    knative-serving
+Labels:       app.kubernetes.io/component=net-istio
+              app.kubernetes.io/name=knative-serving
+              app.kubernetes.io/version=release-v1.14
+              knative.dev/install-knative-certificate=true
+              networking.knative.dev/certificate-type=system-internal
+              networking.knative.dev/ingress-provider=istio
+Annotations:  manifestival: new
+              networking.knative.dev/certificate.class: cert-manager.certificate.networking.knative.dev
+API Version:  networking.internal.knative.dev/v1alpha1
+Kind:         Certificate
+Metadata:
+  Creation Timestamp:  2025-01-09T14:58:18Z
+  Generation:          8
+  Managed Fields:
+    API Version:  networking.internal.knative.dev/v1alpha1
+    Fields Type:  FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .:
+          f:kubectl.kubernetes.io/last-applied-configuration:
+          f:manifestival:
+          f:networking.knative.dev/certificate.class:
+        f:labels:
+          .:
+          f:app.kubernetes.io/component:
+          f:app.kubernetes.io/name:
+          f:app.kubernetes.io/version:
+          f:knative.dev/install-knative-certificate:
+          f:networking.knative.dev/certificate-type:
+          f:networking.knative.dev/ingress-provider:
+        f:ownerReferences:
+          .:
+          k:{"uid":"aed016d4-b7c0-4f05-ace9-ef4eec4aeb9c"}:
+      f:spec:
+        .:
+        f:dnsNames:
+        f:secretName:
+    Manager:    manifestival
+    Operation:  Update
+    Time:       2025-01-09T14:59:08Z
+  Owner References:
+    API Version:           operator.knative.dev/v1beta1
+    Block Owner Deletion:  true
+    Controller:            true
+    Kind:                  KnativeServing
+    Name:                  knative-serving
+    UID:                   aed016d4-b7c0-4f05-ace9-ef4eec4aeb9c
+  Resource Version:        53220
+  UID:                     7bc81934-ffe8-46bc-9add-8b27d91f5362
+Spec:
+  Dns Names:
+    kn-routing
+  Secret Name:  routing-serving-certs
+Events:         <none>

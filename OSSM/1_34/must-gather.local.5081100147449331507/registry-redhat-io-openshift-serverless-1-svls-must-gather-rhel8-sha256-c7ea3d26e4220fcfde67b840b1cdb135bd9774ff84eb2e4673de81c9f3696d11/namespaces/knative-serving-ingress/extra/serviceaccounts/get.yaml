@@ -1,0 +1,47 @@
+apiVersion: v1
+items:
+- apiVersion: v1
+  imagePullSecrets:
+  - name: builder-dockercfg-z9m8w
+  kind: ServiceAccount
+  metadata:
+    annotations:
+      openshift.io/internal-registry-pull-secret-ref: builder-dockercfg-z9m8w
+    creationTimestamp: "2025-01-09T14:54:02Z"
+    name: builder
+    namespace: knative-serving-ingress
+    resourceVersion: "48226"
+    uid: a2275df1-4ac6-4806-b69e-505544216b71
+  secrets:
+  - name: builder-dockercfg-z9m8w
+- apiVersion: v1
+  imagePullSecrets:
+  - name: default-dockercfg-w8k6p
+  kind: ServiceAccount
+  metadata:
+    annotations:
+      openshift.io/internal-registry-pull-secret-ref: default-dockercfg-w8k6p
+    creationTimestamp: "2025-01-09T14:54:02Z"
+    name: default
+    namespace: knative-serving-ingress
+    resourceVersion: "48230"
+    uid: ef12c24a-b092-4473-8c89-f9a40e6eb992
+  secrets:
+  - name: default-dockercfg-w8k6p
+- apiVersion: v1
+  imagePullSecrets:
+  - name: deployer-dockercfg-kjhkp
+  kind: ServiceAccount
+  metadata:
+    annotations:
+      openshift.io/internal-registry-pull-secret-ref: deployer-dockercfg-kjhkp
+    creationTimestamp: "2025-01-09T14:54:02Z"
+    name: deployer
+    namespace: knative-serving-ingress
+    resourceVersion: "48229"
+    uid: 350d4d5f-471d-476e-9783-7cc3be4ed0bd
+  secrets:
+  - name: deployer-dockercfg-kjhkp
+kind: List
+metadata:
+  resourceVersion: ""

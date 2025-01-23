@@ -1,0 +1,32 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"rbac.authorization.k8s.io/v1","kind":"ClusterRole","metadata":{"labels":{"app.kubernetes.io/component":"net-istio","app.kubernetes.io/name":"knative-serving","app.kubernetes.io/version":"release-v1.14","networking.knative.dev/ingress-provider":"istio","serving.knative.dev/controller":"true"},"name":"knative-serving-istio"},"rules":[{"apiGroups":["networking.istio.io"],"resources":["virtualservices","gateways","destinationrules"],"verbs":["get","list","create","update","delete","patch","watch"]}]}
+    manifestival: new
+  creationTimestamp: "2025-01-09T14:58:15Z"
+  labels:
+    app.kubernetes.io/component: net-istio
+    app.kubernetes.io/name: knative-serving
+    app.kubernetes.io/version: release-v1.14
+    networking.knative.dev/ingress-provider: istio
+    serving.knative.dev/controller: "true"
+  name: knative-serving-istio
+  resourceVersion: "52263"
+  uid: e7623c4d-1de7-44cb-9d96-7e077f71f800
+rules:
+- apiGroups:
+  - networking.istio.io
+  resources:
+  - virtualservices
+  - gateways
+  - destinationrules
+  verbs:
+  - get
+  - list
+  - create
+  - update
+  - delete
+  - patch
+  - watch

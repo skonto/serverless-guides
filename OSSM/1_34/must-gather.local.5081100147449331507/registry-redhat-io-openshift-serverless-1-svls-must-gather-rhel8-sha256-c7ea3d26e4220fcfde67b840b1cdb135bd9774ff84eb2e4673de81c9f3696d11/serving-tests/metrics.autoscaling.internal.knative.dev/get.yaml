@@ -1,0 +1,48 @@
+apiVersion: v1
+items:
+- apiVersion: autoscaling.internal.knative.dev/v1alpha1
+  kind: Metric
+  metadata:
+    annotations:
+      autoscaling.knative.dev/class: kpa.autoscaling.knative.dev
+      autoscaling.knative.dev/metric: concurrency
+      autoscaling.knative.dev/minScale: "1"
+      autoscaling.knative.dev/target: "10"
+      serving.knative.dev/creator: system:admin
+      sidecar.istio.io/inject: "true"
+      sidecar.istio.io/rewriteAppHTTPProbers: "true"
+    creationTimestamp: "2025-01-09T14:59:41Z"
+    generation: 1
+    labels:
+      app: helloworld-go
+      serving.knative.dev/configuration: helloworld-go
+      serving.knative.dev/configurationGeneration: "1"
+      serving.knative.dev/configurationUID: d8b4cafc-e336-457b-abc6-86dba0837c51
+      serving.knative.dev/revision: helloworld-go-00001
+      serving.knative.dev/revisionUID: 772bf5ab-4091-44df-ba8a-1ee4d6ea97b9
+      serving.knative.dev/service: helloworld-go
+      serving.knative.dev/serviceUID: 79f8a230-4abb-4fe0-9275-ba946e239b2f
+    name: helloworld-go-00001
+    namespace: serving-tests
+    ownerReferences:
+    - apiVersion: autoscaling.internal.knative.dev/v1alpha1
+      blockOwnerDeletion: true
+      controller: true
+      kind: PodAutoscaler
+      name: helloworld-go-00001
+      uid: 6bebd244-1f6a-4a1a-ba90-fe9fbe858014
+    resourceVersion: "53617"
+    uid: a9a218d5-316f-49da-9fa2-60cf19924957
+  spec:
+    panicWindow: 6000000000
+    scrapeTarget: helloworld-go-00001-private
+    stableWindow: 60000000000
+  status:
+    conditions:
+    - lastTransitionTime: "2025-01-09T14:59:41Z"
+      status: "True"
+      type: Ready
+    observedGeneration: 1
+kind: List
+metadata:
+  resourceVersion: ""

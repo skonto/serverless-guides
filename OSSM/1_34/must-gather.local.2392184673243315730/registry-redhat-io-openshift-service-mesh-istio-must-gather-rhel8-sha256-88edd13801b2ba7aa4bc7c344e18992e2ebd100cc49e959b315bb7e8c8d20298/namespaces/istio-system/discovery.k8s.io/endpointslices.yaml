@@ -1,0 +1,364 @@
+---
+apiVersion: discovery.k8s.io/v1
+items:
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - 10.128.2.29
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: ip-10-0-25-180.ec2.internal
+    targetRef:
+      kind: Pod
+      name: istio-egressgateway-848fc88df9-ftrc5
+      namespace: istio-system
+      uid: a56dc3ad-a171-4ff5-a141-ac9597d369db
+    zone: us-east-1b
+  kind: EndpointSlice
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2025-01-09T14:45:54Z"
+    creationTimestamp: "2025-01-09T14:45:43Z"
+    generateName: istio-egressgateway-
+    generation: 2
+    labels:
+      app: istio-egressgateway
+      app.kubernetes.io/component: istio-egress
+      app.kubernetes.io/instance: istio-system
+      app.kubernetes.io/managed-by: maistra-istio-operator
+      app.kubernetes.io/name: istio-egress
+      app.kubernetes.io/part-of: istio
+      app.kubernetes.io/version: 2.6.4-1-2
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      istio: egressgateway
+      istio.io/rev: basic
+      kubernetes.io/service-name: istio-egressgateway
+      maistra-version: 2.4.13
+      maistra.io/owner: istio-system
+      maistra.io/owner-name: basic
+      release: istio
+    managedFields:
+    - apiVersion: discovery.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:addressType: {}
+        f:endpoints: {}
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:app: {}
+            f:app.kubernetes.io/component: {}
+            f:app.kubernetes.io/instance: {}
+            f:app.kubernetes.io/managed-by: {}
+            f:app.kubernetes.io/name: {}
+            f:app.kubernetes.io/part-of: {}
+            f:app.kubernetes.io/version: {}
+            f:endpointslice.kubernetes.io/managed-by: {}
+            f:istio: {}
+            f:istio.io/rev: {}
+            f:kubernetes.io/service-name: {}
+            f:maistra-version: {}
+            f:maistra.io/owner: {}
+            f:maistra.io/owner-name: {}
+            f:release: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"4e8848ac-675e-4d90-830a-deb9035ce9ab"}: {}
+        f:ports: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2025-01-09T14:45:54Z"
+    name: istio-egressgateway-mg9nt
+    namespace: istio-system
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: istio-egressgateway
+      uid: 4e8848ac-675e-4d90-830a-deb9035ce9ab
+    resourceVersion: "42857"
+    uid: 300489ac-6309-4d87-b22c-95614ada0a0c
+  ports:
+  - name: http2
+    port: 8080
+    protocol: TCP
+  - name: https
+    port: 8443
+    protocol: TCP
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - 10.129.2.16
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: ip-10-0-118-213.ec2.internal
+    targetRef:
+      kind: Pod
+      name: istio-ingressgateway-6ff46986d5-qkpqr
+      namespace: istio-system
+      uid: 187bf425-84a0-47ad-a34d-96891e4b4509
+    zone: us-east-1d
+  kind: EndpointSlice
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2025-01-09T14:45:54Z"
+    creationTimestamp: "2025-01-09T14:45:43Z"
+    generateName: istio-ingressgateway-
+    generation: 3
+    labels:
+      app: istio-ingressgateway
+      app.kubernetes.io/component: istio-ingress
+      app.kubernetes.io/instance: istio-system
+      app.kubernetes.io/managed-by: maistra-istio-operator
+      app.kubernetes.io/name: istio-ingress
+      app.kubernetes.io/part-of: istio
+      app.kubernetes.io/version: 2.6.4-1-2
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      istio: ingressgateway
+      istio.io/rev: basic
+      knative: ingressgateway
+      kubernetes.io/service-name: istio-ingressgateway
+      maistra-version: 2.4.13
+      maistra.io/owner: istio-system
+      maistra.io/owner-name: basic
+      release: istio
+    managedFields:
+    - apiVersion: discovery.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:addressType: {}
+        f:endpoints: {}
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:app: {}
+            f:app.kubernetes.io/component: {}
+            f:app.kubernetes.io/instance: {}
+            f:app.kubernetes.io/managed-by: {}
+            f:app.kubernetes.io/name: {}
+            f:app.kubernetes.io/part-of: {}
+            f:app.kubernetes.io/version: {}
+            f:endpointslice.kubernetes.io/managed-by: {}
+            f:istio: {}
+            f:istio.io/rev: {}
+            f:knative: {}
+            f:kubernetes.io/service-name: {}
+            f:maistra-version: {}
+            f:maistra.io/owner: {}
+            f:maistra.io/owner-name: {}
+            f:release: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"ffa5ac99-3196-4e25-9a91-524c5ed14e5f"}: {}
+        f:ports: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2025-01-09T14:45:54Z"
+    name: istio-ingressgateway-z7szs
+    namespace: istio-system
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: istio-ingressgateway
+      uid: ffa5ac99-3196-4e25-9a91-524c5ed14e5f
+    resourceVersion: "42872"
+    uid: deffd00f-d517-423e-bed9-43eb68844f9e
+  ports:
+  - name: http2
+    port: 8080
+    protocol: TCP
+  - name: https
+    port: 8443
+    protocol: TCP
+  - name: status-port
+    port: 15021
+    protocol: TCP
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - 10.129.2.15
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: ip-10-0-118-213.ec2.internal
+    targetRef:
+      kind: Pod
+      name: istiod-basic-7c957497fd-g2spt
+      namespace: istio-system
+      uid: 310a2635-f93c-482b-843c-f17e96deb530
+    zone: us-east-1d
+  kind: EndpointSlice
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2025-01-09T14:45:42Z"
+    creationTimestamp: "2025-01-09T14:45:30Z"
+    generateName: istiod-basic-
+    generation: 3
+    labels:
+      app: istiod
+      app.kubernetes.io/component: istio-discovery
+      app.kubernetes.io/instance: istio-system
+      app.kubernetes.io/managed-by: maistra-istio-operator
+      app.kubernetes.io/name: istio-discovery
+      app.kubernetes.io/part-of: istio
+      app.kubernetes.io/version: 2.6.4-1-2
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      istio: pilot
+      istio.io/rev: basic
+      kubernetes.io/service-name: istiod-basic
+      maistra-version: 2.4.13
+      maistra.io/owner: istio-system
+      maistra.io/owner-name: basic
+      release: istio
+    managedFields:
+    - apiVersion: discovery.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:addressType: {}
+        f:endpoints: {}
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:app: {}
+            f:app.kubernetes.io/component: {}
+            f:app.kubernetes.io/instance: {}
+            f:app.kubernetes.io/managed-by: {}
+            f:app.kubernetes.io/name: {}
+            f:app.kubernetes.io/part-of: {}
+            f:app.kubernetes.io/version: {}
+            f:endpointslice.kubernetes.io/managed-by: {}
+            f:istio: {}
+            f:istio.io/rev: {}
+            f:kubernetes.io/service-name: {}
+            f:maistra-version: {}
+            f:maistra.io/owner: {}
+            f:maistra.io/owner-name: {}
+            f:release: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"b982d081-3f20-4668-b6f7-a298758073e2"}: {}
+        f:ports: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2025-01-09T14:45:42Z"
+    name: istiod-basic-gllsw
+    namespace: istio-system
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: istiod-basic
+      uid: b982d081-3f20-4668-b6f7-a298758073e2
+    resourceVersion: "42591"
+    uid: 1f8d579b-69eb-411b-ab3c-380f3a720335
+  ports:
+  - name: https-dns
+    port: 15012
+    protocol: TCP
+  - name: https-webhook
+    port: 15017
+    protocol: TCP
+  - name: http-discovery
+    port: 8188
+    protocol: TCP
+  - name: grpc-xds
+    port: 15010
+    protocol: TCP
+  - name: http-monitoring
+    port: 15014
+    protocol: TCP
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - 10.129.2.16
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: ip-10-0-118-213.ec2.internal
+    targetRef:
+      kind: Pod
+      name: istio-ingressgateway-6ff46986d5-qkpqr
+      namespace: istio-system
+      uid: 187bf425-84a0-47ad-a34d-96891e4b4509
+    zone: us-east-1d
+  kind: EndpointSlice
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2025-01-09T14:46:15Z"
+    creationTimestamp: "2025-01-09T14:46:15Z"
+    generateName: knative-local-gateway-
+    generation: 1
+    labels:
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      experimental.istio.io/disable-gateway-port-translation: "true"
+      kubernetes.io/service-name: knative-local-gateway
+    managedFields:
+    - apiVersion: discovery.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:addressType: {}
+        f:endpoints: {}
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:endpointslice.kubernetes.io/managed-by: {}
+            f:experimental.istio.io/disable-gateway-port-translation: {}
+            f:kubernetes.io/service-name: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"6f5f76e6-7ea8-44dc-9ff2-de6e913b2597"}: {}
+        f:ports: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2025-01-09T14:46:15Z"
+    name: knative-local-gateway-gnp67
+    namespace: istio-system
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: knative-local-gateway
+      uid: 6f5f76e6-7ea8-44dc-9ff2-de6e913b2597
+    resourceVersion: "43607"
+    uid: 0ab9f029-3186-4423-9348-8abe2445d50d
+  ports:
+  - name: https
+    port: 8444
+    protocol: TCP
+  - name: http2
+    port: 8081
+    protocol: TCP
+kind: EndpointSliceList
+metadata:
+  resourceVersion: "60432"

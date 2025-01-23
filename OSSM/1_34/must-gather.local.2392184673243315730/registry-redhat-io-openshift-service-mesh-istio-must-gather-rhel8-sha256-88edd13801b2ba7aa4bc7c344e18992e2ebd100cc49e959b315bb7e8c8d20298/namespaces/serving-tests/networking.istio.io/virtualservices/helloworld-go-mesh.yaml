@@ -1,0 +1,104 @@
+---
+apiVersion: networking.istio.io/v1beta1
+kind: VirtualService
+metadata:
+  annotations:
+    networking.internal.knative.dev/rollout: '{"configurations":[{"configurationName":"helloworld-go","percent":100,"revisions":[{"revisionName":"helloworld-go-00001","percent":100}],"stepParams":{}}]}'
+    networking.knative.dev/ingress.class: istio.ingress.networking.knative.dev
+    serving.knative.dev/creator: system:admin
+    serving.knative.dev/lastModifier: system:admin
+    serving.knative.openshift.io/enablePassthrough: "true"
+  creationTimestamp: "2025-01-09T14:59:45Z"
+  generation: 1
+  labels:
+    networking.internal.knative.dev/ingress: helloworld-go
+    serving.knative.dev/route: helloworld-go
+    serving.knative.dev/routeNamespace: serving-tests
+  managedFields:
+  - apiVersion: networking.istio.io/v1beta1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:networking.internal.knative.dev/rollout: {}
+          f:networking.knative.dev/ingress.class: {}
+          f:serving.knative.dev/creator: {}
+          f:serving.knative.dev/lastModifier: {}
+          f:serving.knative.openshift.io/enablePassthrough: {}
+        f:labels:
+          .: {}
+          f:networking.internal.knative.dev/ingress: {}
+          f:serving.knative.dev/route: {}
+          f:serving.knative.dev/routeNamespace: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"25a9fdea-a9c3-4d27-8003-9730f995aeb1"}: {}
+      f:spec:
+        .: {}
+        f:gateways: {}
+        f:hosts: {}
+        f:http: {}
+    manager: controller
+    operation: Update
+    time: "2025-01-09T14:59:45Z"
+  name: helloworld-go-mesh
+  namespace: serving-tests
+  ownerReferences:
+  - apiVersion: networking.internal.knative.dev/v1alpha1
+    blockOwnerDeletion: true
+    controller: true
+    kind: Ingress
+    name: helloworld-go
+    uid: 25a9fdea-a9c3-4d27-8003-9730f995aeb1
+  resourceVersion: "53719"
+  uid: 8388bbca-9dcf-4d94-82ec-4dd2c8a93305
+spec:
+  gateways:
+  - mesh
+  hosts:
+  - helloworld-go.serving-tests
+  - helloworld-go.serving-tests.svc
+  - helloworld-go.serving-tests.svc.cluster.local
+  http:
+  - headers:
+      request:
+        set:
+          K-Network-Hash: d0d60795996625faa272a1614964f58d5056297c0aa945f1f6806cf45bb6072d
+    match:
+    - authority:
+        prefix: helloworld-go.serving-tests
+      gateways:
+      - mesh
+      headers:
+        K-Network-Hash:
+          exact: override
+    retries: {}
+    route:
+    - destination:
+        host: helloworld-go-00001.serving-tests.svc.cluster.local
+        port:
+          number: 80
+      headers:
+        request:
+          set:
+            Knative-Serving-Namespace: serving-tests
+            Knative-Serving-Revision: helloworld-go-00001
+      weight: 100
+  - match:
+    - authority:
+        prefix: helloworld-go.serving-tests
+      gateways:
+      - mesh
+    retries: {}
+    route:
+    - destination:
+        host: helloworld-go-00001.serving-tests.svc.cluster.local
+        port:
+          number: 80
+      headers:
+        request:
+          set:
+            Knative-Serving-Namespace: serving-tests
+            Knative-Serving-Revision: helloworld-go-00001
+      weight: 100

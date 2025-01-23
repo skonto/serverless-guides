@@ -1,0 +1,123 @@
+apiVersion: v1
+items:
+- apiVersion: rbac.authorization.k8s.io/v1
+  kind: RoleBinding
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"rbac.authorization.k8s.io/v1","kind":"RoleBinding","metadata":{"annotations":{"maistra.io/mesh-generation":"2.6.4-1-2"},"labels":{"app":"istiod","app.kubernetes.io/component":"istio-discovery","app.kubernetes.io/instance":"istio-system","app.kubernetes.io/managed-by":"maistra-istio-operator","app.kubernetes.io/name":"istio-discovery","app.kubernetes.io/part-of":"istio","app.kubernetes.io/version":"2.6.4-1-2","maistra-version":"2.4.13","maistra.io/owner":"istio-system","maistra.io/owner-name":"basic","release":"istio"},"name":"istiod-clusterrole-basic-istio-system","namespace":"istio-system","ownerReferences":[{"apiVersion":"maistra.io/v2","blockOwnerDeletion":true,"controller":true,"kind":"ServiceMeshControlPlane","name":"basic","uid":"21f282b4-77ab-422e-9775-4fe19054e00d"}]},"roleRef":{"apiGroup":"rbac.authorization.k8s.io","kind":"ClusterRole","name":"istiod-clusterrole-basic-istio-system"},"subjects":[{"kind":"ServiceAccount","name":"istiod-basic","namespace":"istio-system"}]}
+      maistra.io/mesh-generation: 2.6.4-1-2
+    creationTimestamp: "2025-01-09T14:46:13Z"
+    labels:
+      app: istiod
+      app.kubernetes.io/component: istio-discovery
+      app.kubernetes.io/instance: istio-system
+      app.kubernetes.io/managed-by: maistra-istio-operator
+      app.kubernetes.io/name: istio-discovery
+      app.kubernetes.io/part-of: istio
+      maistra-version: 2.4.13
+      maistra.io/member-of: istio-system
+      release: istio
+    name: istiod-clusterrole-basic-istio-system
+    namespace: knative-eventing
+    resourceVersion: "43508"
+    uid: e04c3b75-e5ae-4f40-a751-55c6763c376b
+  roleRef:
+    apiGroup: rbac.authorization.k8s.io
+    kind: ClusterRole
+    name: istiod-clusterrole-basic-istio-system
+  subjects:
+  - kind: ServiceAccount
+    name: istiod-basic
+    namespace: istio-system
+- apiVersion: rbac.authorization.k8s.io/v1
+  kind: RoleBinding
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"rbac.authorization.k8s.io/v1","kind":"RoleBinding","metadata":{"annotations":{"maistra.io/mesh-generation":"2.6.4-1-2"},"labels":{"app":"istiod","app.kubernetes.io/component":"istio-discovery","app.kubernetes.io/instance":"istio-system","app.kubernetes.io/managed-by":"maistra-istio-operator","app.kubernetes.io/name":"istio-discovery","app.kubernetes.io/part-of":"istio","app.kubernetes.io/version":"2.6.4-1-2","maistra-version":"2.4.13","maistra.io/owner":"istio-system","maistra.io/owner-name":"basic","release":"istio"},"name":"istiod-gateway-controller-basic-istio-system","namespace":"istio-system","ownerReferences":[{"apiVersion":"maistra.io/v2","blockOwnerDeletion":true,"controller":true,"kind":"ServiceMeshControlPlane","name":"basic","uid":"21f282b4-77ab-422e-9775-4fe19054e00d"}]},"roleRef":{"apiGroup":"rbac.authorization.k8s.io","kind":"ClusterRole","name":"istiod-gateway-controller-basic-istio-system"},"subjects":[{"kind":"ServiceAccount","name":"istiod-basic","namespace":"istio-system"}]}
+      maistra.io/mesh-generation: 2.6.4-1-2
+    creationTimestamp: "2025-01-09T14:46:13Z"
+    labels:
+      app: istiod
+      app.kubernetes.io/component: istio-discovery
+      app.kubernetes.io/instance: istio-system
+      app.kubernetes.io/managed-by: maistra-istio-operator
+      app.kubernetes.io/name: istio-discovery
+      app.kubernetes.io/part-of: istio
+      maistra-version: 2.4.13
+      maistra.io/member-of: istio-system
+      release: istio
+    name: istiod-gateway-controller-basic-istio-system
+    namespace: knative-eventing
+    resourceVersion: "43500"
+    uid: 23792b62-d344-478a-8997-4e898b103143
+  roleRef:
+    apiGroup: rbac.authorization.k8s.io
+    kind: ClusterRole
+    name: istiod-gateway-controller-basic-istio-system
+  subjects:
+  - kind: ServiceAccount
+    name: istiod-basic
+    namespace: istio-system
+- apiVersion: rbac.authorization.k8s.io/v1
+  kind: RoleBinding
+  metadata:
+    annotations:
+      openshift.io/description: Allows deploymentconfigs in this namespace to rollout
+        pods in this namespace.  It is auto-managed by a controller; remove subjects
+        to disable.
+    creationTimestamp: "2025-01-09T14:46:08Z"
+    name: system:deployers
+    namespace: knative-eventing
+    resourceVersion: "43094"
+    uid: ebb6c6d6-cf9a-49ac-a564-d1c9662bdf33
+  roleRef:
+    apiGroup: rbac.authorization.k8s.io
+    kind: ClusterRole
+    name: system:deployer
+  subjects:
+  - kind: ServiceAccount
+    name: deployer
+    namespace: knative-eventing
+- apiVersion: rbac.authorization.k8s.io/v1
+  kind: RoleBinding
+  metadata:
+    annotations:
+      openshift.io/description: Allows builds in this namespace to push images to
+        this namespace.  It is auto-managed by a controller; remove subjects to disable.
+    creationTimestamp: "2025-01-09T14:46:08Z"
+    name: system:image-builders
+    namespace: knative-eventing
+    resourceVersion: "43096"
+    uid: 2f5f8260-ebe6-4d40-94a8-566745d4978d
+  roleRef:
+    apiGroup: rbac.authorization.k8s.io
+    kind: ClusterRole
+    name: system:image-builder
+  subjects:
+  - kind: ServiceAccount
+    name: builder
+    namespace: knative-eventing
+- apiVersion: rbac.authorization.k8s.io/v1
+  kind: RoleBinding
+  metadata:
+    annotations:
+      openshift.io/description: Allows all pods in this namespace to pull images from
+        this namespace.  It is auto-managed by a controller; remove subjects to disable.
+    creationTimestamp: "2025-01-09T14:46:08Z"
+    name: system:image-pullers
+    namespace: knative-eventing
+    resourceVersion: "43095"
+    uid: a7d8f99e-59ac-4c23-b16b-e463cb46e4fd
+  roleRef:
+    apiGroup: rbac.authorization.k8s.io
+    kind: ClusterRole
+    name: system:image-puller
+  subjects:
+  - apiGroup: rbac.authorization.k8s.io
+    kind: Group
+    name: system:serviceaccounts:knative-eventing
+kind: List
+metadata:
+  resourceVersion: ""

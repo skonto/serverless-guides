@@ -1,0 +1,32 @@
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  creationTimestamp: "2025-01-09T14:45:29Z"
+  managedFields:
+  - apiVersion: rbac.authorization.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"21f282b4-77ab-422e-9775-4fe19054e00d"}: {}
+      f:roleRef: {}
+    manager: istio-operator
+    operation: Update
+    time: "2025-01-09T14:45:29Z"
+  name: mesh-users
+  namespace: istio-system
+  ownerReferences:
+  - apiVersion: maistra.io/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: ServiceMeshControlPlane
+    name: basic
+    uid: 21f282b4-77ab-422e-9775-4fe19054e00d
+  resourceVersion: "42262"
+  uid: 645c8c9c-e80c-473a-8cb4-f09629ed8ad1
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: mesh-user

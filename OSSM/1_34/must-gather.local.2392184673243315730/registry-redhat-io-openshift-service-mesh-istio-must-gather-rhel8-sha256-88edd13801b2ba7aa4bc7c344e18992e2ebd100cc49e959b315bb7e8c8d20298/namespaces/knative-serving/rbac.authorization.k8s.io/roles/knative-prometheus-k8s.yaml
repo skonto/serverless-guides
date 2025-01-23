@@ -1,0 +1,37 @@
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"rbac.authorization.k8s.io/v1","kind":"Role","metadata":{"name":"knative-prometheus-k8s","namespace":"knative-serving"},"rules":[{"apiGroups":[""],"resources":["services","endpoints","pods"],"verbs":["get","list","watch"]}]}
+    manifestival: new
+  creationTimestamp: "2025-01-09T14:58:15Z"
+  managedFields:
+  - apiVersion: rbac.authorization.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:kubectl.kubernetes.io/last-applied-configuration: {}
+          f:manifestival: {}
+      f:rules: {}
+    manager: manifestival
+    operation: Update
+    time: "2025-01-09T14:58:29Z"
+  name: knative-prometheus-k8s
+  namespace: knative-serving
+  resourceVersion: "52266"
+  uid: 4e467d08-7e8d-4c38-bf8d-f84cacc464de
+rules:
+- apiGroups:
+  - ""
+  resources:
+  - services
+  - endpoints
+  - pods
+  verbs:
+  - get
+  - list
+  - watch

@@ -1,0 +1,2058 @@
+---
+apiVersion: v1
+items:
+- action: Binding
+  apiVersion: v1
+  eventTime: "2025-01-09T14:59:40.793337Z"
+  firstTimestamp: null
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: helloworld-go-00001-deployment-6bf65bcf4d-gkqzn
+    namespace: serving-tests
+    resourceVersion: "53593"
+    uid: 640f38a4-b8ed-4b33-afc2-3f11756e717f
+  kind: Event
+  lastTimestamp: null
+  message: Successfully assigned serving-tests/helloworld-go-00001-deployment-6bf65bcf4d-gkqzn
+    to ip-10-0-63-72.ec2.internal
+  metadata:
+    creationTimestamp: "2025-01-09T14:59:40Z"
+    managedFields:
+    - apiVersion: events.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:action: {}
+        f:eventTime: {}
+        f:note: {}
+        f:reason: {}
+        f:regarding: {}
+        f:reportingController: {}
+        f:reportingInstance: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2025-01-09T14:59:40Z"
+    name: helloworld-go-00001-deployment-6bf65bcf4d-gkqzn.18190e3bacd21a60
+    namespace: serving-tests
+    resourceVersion: "53599"
+    uid: a57bf69e-1795-4220-bac1-d10b68c95a83
+  reason: Scheduled
+  reportingComponent: default-scheduler
+  reportingInstance: default-scheduler-ip-10-0-13-186
+  source: {}
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-01-09T14:59:41Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: helloworld-go-00001-deployment-6bf65bcf4d-gkqzn
+    namespace: serving-tests
+    resourceVersion: "53604"
+    uid: 640f38a4-b8ed-4b33-afc2-3f11756e717f
+  kind: Event
+  lastTimestamp: "2025-01-09T14:59:41Z"
+  message: Add eth0 [10.131.0.27/23] from ovn-kubernetes
+  metadata:
+    creationTimestamp: "2025-01-09T14:59:41Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: multus-daemon
+      operation: Update
+      time: "2025-01-09T14:59:41Z"
+    name: helloworld-go-00001-deployment-6bf65bcf4d-gkqzn.18190e3bd1c50190
+    namespace: serving-tests
+    resourceVersion: "53635"
+    uid: 502de15e-3cf3-4aa8-b8b4-989a84c029b2
+  reason: AddedInterface
+  reportingComponent: multus
+  reportingInstance: ""
+  source:
+    component: multus
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-01-09T14:59:41Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{user-container}
+    kind: Pod
+    name: helloworld-go-00001-deployment-6bf65bcf4d-gkqzn
+    namespace: serving-tests
+    resourceVersion: "53596"
+    uid: 640f38a4-b8ed-4b33-afc2-3f11756e717f
+  kind: Event
+  lastTimestamp: "2025-01-09T14:59:41Z"
+  message: Pulling image "index.docker.io/skonto/helloworld-go@sha256:dd20d7659c16bdc58c09740a543ef3c36b7c04742a2b6b280a30c2a76dcf6c09"
+  metadata:
+    creationTimestamp: "2025-01-09T14:59:41Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-01-09T14:59:41Z"
+    name: helloworld-go-00001-deployment-6bf65bcf4d-gkqzn.18190e3bd7ba8125
+    namespace: serving-tests
+    resourceVersion: "53637"
+    uid: 82cfaf55-a14e-44e0-9d83-f8319138faa4
+  reason: Pulling
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-63-72.ec2.internal
+  source:
+    component: kubelet
+    host: ip-10-0-63-72.ec2.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-01-09T14:59:42Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{user-container}
+    kind: Pod
+    name: helloworld-go-00001-deployment-6bf65bcf4d-gkqzn
+    namespace: serving-tests
+    resourceVersion: "53596"
+    uid: 640f38a4-b8ed-4b33-afc2-3f11756e717f
+  kind: Event
+  lastTimestamp: "2025-01-09T14:59:42Z"
+  message: 'Successfully pulled image "index.docker.io/skonto/helloworld-go@sha256:dd20d7659c16bdc58c09740a543ef3c36b7c04742a2b6b280a30c2a76dcf6c09"
+    in 775ms (775ms including waiting). Image size: 14043968 bytes.'
+  metadata:
+    creationTimestamp: "2025-01-09T14:59:42Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-01-09T14:59:42Z"
+    name: helloworld-go-00001-deployment-6bf65bcf4d-gkqzn.18190e3c05f3542b
+    namespace: serving-tests
+    resourceVersion: "53643"
+    uid: a7fab19b-850c-486c-9960-89b137e266a4
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-63-72.ec2.internal
+  source:
+    component: kubelet
+    host: ip-10-0-63-72.ec2.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-01-09T14:59:42Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{user-container}
+    kind: Pod
+    name: helloworld-go-00001-deployment-6bf65bcf4d-gkqzn
+    namespace: serving-tests
+    resourceVersion: "53596"
+    uid: 640f38a4-b8ed-4b33-afc2-3f11756e717f
+  kind: Event
+  lastTimestamp: "2025-01-09T14:59:42Z"
+  message: Created container user-container
+  metadata:
+    creationTimestamp: "2025-01-09T14:59:42Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-01-09T14:59:42Z"
+    name: helloworld-go-00001-deployment-6bf65bcf4d-gkqzn.18190e3c0c6c3a2f
+    namespace: serving-tests
+    resourceVersion: "53647"
+    uid: b94081a6-b4d5-479d-8cff-4e44709bcc98
+  reason: Created
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-63-72.ec2.internal
+  source:
+    component: kubelet
+    host: ip-10-0-63-72.ec2.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-01-09T14:59:42Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{user-container}
+    kind: Pod
+    name: helloworld-go-00001-deployment-6bf65bcf4d-gkqzn
+    namespace: serving-tests
+    resourceVersion: "53596"
+    uid: 640f38a4-b8ed-4b33-afc2-3f11756e717f
+  kind: Event
+  lastTimestamp: "2025-01-09T14:59:42Z"
+  message: Started container user-container
+  metadata:
+    creationTimestamp: "2025-01-09T14:59:42Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-01-09T14:59:42Z"
+    name: helloworld-go-00001-deployment-6bf65bcf4d-gkqzn.18190e3c0d3b4296
+    namespace: serving-tests
+    resourceVersion: "53648"
+    uid: b0d5acca-6b81-4014-a765-211cb15df9f0
+  reason: Started
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-63-72.ec2.internal
+  source:
+    component: kubelet
+    host: ip-10-0-63-72.ec2.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-01-09T14:59:42Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{queue-proxy}
+    kind: Pod
+    name: helloworld-go-00001-deployment-6bf65bcf4d-gkqzn
+    namespace: serving-tests
+    resourceVersion: "53596"
+    uid: 640f38a4-b8ed-4b33-afc2-3f11756e717f
+  kind: Event
+  lastTimestamp: "2025-01-09T14:59:42Z"
+  message: Pulling image "registry.ci.openshift.org/openshift/knative-serving-queue:knative-v1.14"
+  metadata:
+    creationTimestamp: "2025-01-09T14:59:42Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-01-09T14:59:42Z"
+    name: helloworld-go-00001-deployment-6bf65bcf4d-gkqzn.18190e3c0d45863b
+    namespace: serving-tests
+    resourceVersion: "53649"
+    uid: 05d563b3-8f66-4921-a368-e6cd31e16e6d
+  reason: Pulling
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-63-72.ec2.internal
+  source:
+    component: kubelet
+    host: ip-10-0-63-72.ec2.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-01-09T14:59:44Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{queue-proxy}
+    kind: Pod
+    name: helloworld-go-00001-deployment-6bf65bcf4d-gkqzn
+    namespace: serving-tests
+    resourceVersion: "53596"
+    uid: 640f38a4-b8ed-4b33-afc2-3f11756e717f
+  kind: Event
+  lastTimestamp: "2025-01-09T14:59:44Z"
+  message: 'Successfully pulled image "registry.ci.openshift.org/openshift/knative-serving-queue:knative-v1.14"
+    in 2.164s (2.164s including waiting). Image size: 128772304 bytes.'
+  metadata:
+    creationTimestamp: "2025-01-09T14:59:44Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-01-09T14:59:44Z"
+    name: helloworld-go-00001-deployment-6bf65bcf4d-gkqzn.18190e3c8e46f169
+    namespace: serving-tests
+    resourceVersion: "53671"
+    uid: 23707189-9d67-4df9-9fa7-1176ef6142e9
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-63-72.ec2.internal
+  source:
+    component: kubelet
+    host: ip-10-0-63-72.ec2.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-01-09T14:59:44Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{queue-proxy}
+    kind: Pod
+    name: helloworld-go-00001-deployment-6bf65bcf4d-gkqzn
+    namespace: serving-tests
+    resourceVersion: "53596"
+    uid: 640f38a4-b8ed-4b33-afc2-3f11756e717f
+  kind: Event
+  lastTimestamp: "2025-01-09T14:59:44Z"
+  message: Created container queue-proxy
+  metadata:
+    creationTimestamp: "2025-01-09T14:59:44Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-01-09T14:59:44Z"
+    name: helloworld-go-00001-deployment-6bf65bcf4d-gkqzn.18190e3c95637036
+    namespace: serving-tests
+    resourceVersion: "53675"
+    uid: c60e0213-d173-4b7a-85d6-50ceb3a10a55
+  reason: Created
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-63-72.ec2.internal
+  source:
+    component: kubelet
+    host: ip-10-0-63-72.ec2.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-01-09T14:59:44Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{queue-proxy}
+    kind: Pod
+    name: helloworld-go-00001-deployment-6bf65bcf4d-gkqzn
+    namespace: serving-tests
+    resourceVersion: "53596"
+    uid: 640f38a4-b8ed-4b33-afc2-3f11756e717f
+  kind: Event
+  lastTimestamp: "2025-01-09T14:59:44Z"
+  message: Started container queue-proxy
+  metadata:
+    creationTimestamp: "2025-01-09T14:59:44Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-01-09T14:59:44Z"
+    name: helloworld-go-00001-deployment-6bf65bcf4d-gkqzn.18190e3c96277657
+    namespace: serving-tests
+    resourceVersion: "53676"
+    uid: 699f1ac5-050e-423f-86da-129ce4bfd368
+  reason: Started
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-63-72.ec2.internal
+  source:
+    component: kubelet
+    host: ip-10-0-63-72.ec2.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-01-09T14:59:44Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{istio-proxy}
+    kind: Pod
+    name: helloworld-go-00001-deployment-6bf65bcf4d-gkqzn
+    namespace: serving-tests
+    resourceVersion: "53596"
+    uid: 640f38a4-b8ed-4b33-afc2-3f11756e717f
+  kind: Event
+  lastTimestamp: "2025-01-09T14:59:44Z"
+  message: Container image "registry.redhat.io/openshift-service-mesh/proxyv2-rhel8@sha256:4580f9a5da2c0ff7c881703095ab946b896f1703b6140c79091301648304cc37"
+    already present on machine
+  metadata:
+    creationTimestamp: "2025-01-09T14:59:44Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-01-09T14:59:44Z"
+    name: helloworld-go-00001-deployment-6bf65bcf4d-gkqzn.18190e3c9630ba14
+    namespace: serving-tests
+    resourceVersion: "53677"
+    uid: 36316f5b-2db3-412c-8e35-3bcb19ea3718
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-63-72.ec2.internal
+  source:
+    component: kubelet
+    host: ip-10-0-63-72.ec2.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-01-09T14:59:44Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{istio-proxy}
+    kind: Pod
+    name: helloworld-go-00001-deployment-6bf65bcf4d-gkqzn
+    namespace: serving-tests
+    resourceVersion: "53596"
+    uid: 640f38a4-b8ed-4b33-afc2-3f11756e717f
+  kind: Event
+  lastTimestamp: "2025-01-09T14:59:44Z"
+  message: Created container istio-proxy
+  metadata:
+    creationTimestamp: "2025-01-09T14:59:44Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-01-09T14:59:44Z"
+    name: helloworld-go-00001-deployment-6bf65bcf4d-gkqzn.18190e3c9c3aff2e
+    namespace: serving-tests
+    resourceVersion: "53678"
+    uid: c8812e39-ec7e-4fee-9d22-900423e5662b
+  reason: Created
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-63-72.ec2.internal
+  source:
+    component: kubelet
+    host: ip-10-0-63-72.ec2.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-01-09T14:59:44Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{istio-proxy}
+    kind: Pod
+    name: helloworld-go-00001-deployment-6bf65bcf4d-gkqzn
+    namespace: serving-tests
+    resourceVersion: "53596"
+    uid: 640f38a4-b8ed-4b33-afc2-3f11756e717f
+  kind: Event
+  lastTimestamp: "2025-01-09T14:59:44Z"
+  message: Started container istio-proxy
+  metadata:
+    creationTimestamp: "2025-01-09T14:59:44Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-01-09T14:59:44Z"
+    name: helloworld-go-00001-deployment-6bf65bcf4d-gkqzn.18190e3c9cf9957a
+    namespace: serving-tests
+    resourceVersion: "53679"
+    uid: 5de19a59-c636-4095-9b9d-b9c7ef1abb0e
+  reason: Started
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-63-72.ec2.internal
+  source:
+    component: kubelet
+    host: ip-10-0-63-72.ec2.internal
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-01-09T14:59:40Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: ReplicaSet
+    name: helloworld-go-00001-deployment-6bf65bcf4d
+    namespace: serving-tests
+    resourceVersion: "53585"
+    uid: b215b1c9-9a0c-467a-8504-64a55c18345e
+  kind: Event
+  lastTimestamp: "2025-01-09T14:59:40Z"
+  message: 'Created pod: helloworld-go-00001-deployment-6bf65bcf4d-gkqzn'
+  metadata:
+    creationTimestamp: "2025-01-09T14:59:40Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2025-01-09T14:59:40Z"
+    name: helloworld-go-00001-deployment-6bf65bcf4d.18190e3bac490523
+    namespace: serving-tests
+    resourceVersion: "53595"
+    uid: 1fca7d0f-f849-4d97-b854-61022c51ddaf
+  reason: SuccessfulCreate
+  reportingComponent: replicaset-controller
+  reportingInstance: ""
+  source:
+    component: replicaset-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-01-09T14:59:40Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: helloworld-go-00001-deployment
+    namespace: serving-tests
+    resourceVersion: "53583"
+    uid: 2aa08218-67c0-444c-850c-aec021cab608
+  kind: Event
+  lastTimestamp: "2025-01-09T14:59:40Z"
+  message: Scaled up replica set helloworld-go-00001-deployment-6bf65bcf4d to 1
+  metadata:
+    creationTimestamp: "2025-01-09T14:59:40Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2025-01-09T14:59:40Z"
+    name: helloworld-go-00001-deployment.18190e3ba9815055
+    namespace: serving-tests
+    resourceVersion: "53588"
+    uid: 69fa798c-a146-4a48-a2cb-0ce94cb93120
+  reason: ScalingReplicaSet
+  reportingComponent: deployment-controller
+  reportingInstance: ""
+  source:
+    component: deployment-controller
+  type: Normal
+- apiVersion: v1
+  count: 2
+  eventTime: null
+  firstTimestamp: "2025-01-09T14:59:40Z"
+  involvedObject:
+    apiVersion: serving.knative.dev/v1
+    kind: Revision
+    name: helloworld-go-00001
+    namespace: serving-tests
+    resourceVersion: "53590"
+    uid: 772bf5ab-4091-44df-ba8a-1ee4d6ea97b9
+  kind: Event
+  lastTimestamp: "2025-01-09T14:59:45Z"
+  message: 'failed to update deployment "helloworld-go-00001-deployment": Operation
+    cannot be fulfilled on deployments.apps "helloworld-go-00001-deployment": the
+    object has been modified; please apply your changes to the latest version and
+    try again'
+  metadata:
+    creationTimestamp: "2025-01-09T14:59:40Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: controller
+      operation: Update
+      time: "2025-01-09T14:59:45Z"
+    name: helloworld-go-00001.18190e3bac7bdbbb
+    namespace: serving-tests
+    resourceVersion: "53699"
+    uid: 48f8a33a-3ed8-4b60-9e0d-db397deab2ab
+  reason: InternalError
+  reportingComponent: revision-controller
+  reportingInstance: ""
+  source:
+    component: revision-controller
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-01-09T14:59:45Z"
+  involvedObject:
+    apiVersion: serving.knative.dev/v1
+    kind: Revision
+    name: helloworld-go-00001
+    namespace: serving-tests
+    resourceVersion: "53632"
+    uid: 772bf5ab-4091-44df-ba8a-1ee4d6ea97b9
+  kind: Event
+  lastTimestamp: "2025-01-09T14:59:45Z"
+  message: Revision becomes ready upon all resources being ready
+  metadata:
+    creationTimestamp: "2025-01-09T14:59:45Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: controller
+      operation: Update
+      time: "2025-01-09T14:59:45Z"
+    name: helloworld-go-00001.18190e3cd1b40539
+    namespace: serving-tests
+    resourceVersion: "53700"
+    uid: d4c778e0-f279-47bd-b55c-54153f31b078
+  reason: RevisionReady
+  reportingComponent: revision-controller
+  reportingInstance: ""
+  source:
+    component: revision-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-01-09T14:59:40Z"
+  involvedObject:
+    apiVersion: serving.knative.dev/v1
+    kind: Service
+    name: helloworld-go
+    namespace: serving-tests
+    resourceVersion: "53564"
+    uid: 79f8a230-4abb-4fe0-9275-ba946e239b2f
+  kind: Event
+  lastTimestamp: "2025-01-09T14:59:40Z"
+  message: Created Configuration "helloworld-go"
+  metadata:
+    creationTimestamp: "2025-01-09T14:59:40Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: controller
+      operation: Update
+      time: "2025-01-09T14:59:40Z"
+    name: helloworld-go.18190e3b989e8527
+    namespace: serving-tests
+    resourceVersion: "53567"
+    uid: ccc9c251-55a8-486f-8669-64e4389d04c2
+  reason: Created
+  reportingComponent: service-controller
+  reportingInstance: ""
+  source:
+    component: service-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-01-09T14:59:40Z"
+  involvedObject:
+    apiVersion: serving.knative.dev/v1
+    kind: Service
+    name: helloworld-go
+    namespace: serving-tests
+    resourceVersion: "53564"
+    uid: 79f8a230-4abb-4fe0-9275-ba946e239b2f
+  kind: Event
+  lastTimestamp: "2025-01-09T14:59:40Z"
+  message: Created Route "helloworld-go"
+  metadata:
+    creationTimestamp: "2025-01-09T14:59:40Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: controller
+      operation: Update
+      time: "2025-01-09T14:59:40Z"
+    name: helloworld-go.18190e3b9927a26c
+    namespace: serving-tests
+    resourceVersion: "53569"
+    uid: bb93fd3b-4fd2-487a-826e-32830b31b819
+  reason: Created
+  reportingComponent: service-controller
+  reportingInstance: ""
+  source:
+    component: service-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-01-09T14:59:40Z"
+  involvedObject:
+    apiVersion: serving.knative.dev/v1
+    kind: Configuration
+    name: helloworld-go
+    namespace: serving-tests
+    resourceVersion: "53565"
+    uid: d8b4cafc-e336-457b-abc6-86dba0837c51
+  kind: Event
+  lastTimestamp: "2025-01-09T14:59:40Z"
+  message: Created Revision "helloworld-go-00001"
+  metadata:
+    creationTimestamp: "2025-01-09T14:59:40Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: controller
+      operation: Update
+      time: "2025-01-09T14:59:40Z"
+    name: helloworld-go.18190e3b99643b7b
+    namespace: serving-tests
+    resourceVersion: "53570"
+    uid: 0ce16044-09c3-469c-a603-23477ed06e3a
+  reason: Created
+  reportingComponent: configuration-controller
+  reportingInstance: ""
+  source:
+    component: configuration-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-01-09T14:59:40Z"
+  involvedObject:
+    apiVersion: serving.knative.dev/v1
+    kind: Route
+    name: helloworld-go
+    namespace: serving-tests
+    resourceVersion: "53571"
+    uid: df3f94ba-08f4-4e25-a0ce-a05da7e31e86
+  kind: Event
+  lastTimestamp: "2025-01-09T14:59:40Z"
+  message: Updated "helloworld-go" finalizers
+  metadata:
+    creationTimestamp: "2025-01-09T14:59:40Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: controller
+      operation: Update
+      time: "2025-01-09T14:59:40Z"
+    name: helloworld-go.18190e3b99e9f8e9
+    namespace: serving-tests
+    resourceVersion: "53575"
+    uid: 74cffce3-00c3-4752-8d32-13e8b136d8e0
+  reason: FinalizerUpdate
+  reportingComponent: route-controller
+  reportingInstance: ""
+  source:
+    component: route-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-01-09T14:59:40Z"
+  involvedObject:
+    apiVersion: serving.knative.dev/v1
+    kind: Route
+    name: helloworld-go
+    namespace: serving-tests
+    resourceVersion: "53566"
+    uid: df3f94ba-08f4-4e25-a0ce-a05da7e31e86
+  kind: Event
+  lastTimestamp: "2025-01-09T14:59:40Z"
+  message: 'Failed to update finalizers for "helloworld-go": Operation cannot be fulfilled
+    on routes.serving.knative.dev "helloworld-go": the object has been modified; please
+    apply your changes to the latest version and try again'
+  metadata:
+    creationTimestamp: "2025-01-09T14:59:40Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: controller
+      operation: Update
+      time: "2025-01-09T14:59:40Z"
+    name: helloworld-go.18190e3b9a7df062
+    namespace: serving-tests
+    resourceVersion: "53576"
+    uid: a87f1762-b388-408b-abbe-874613388458
+  reason: FinalizerUpdateFailed
+  reportingComponent: route-controller
+  reportingInstance: ""
+  source:
+    component: route-controller
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-01-09T14:59:45Z"
+  involvedObject:
+    apiVersion: serving.knative.dev/v1
+    kind: Configuration
+    name: helloworld-go
+    namespace: serving-tests
+    resourceVersion: "53574"
+    uid: d8b4cafc-e336-457b-abc6-86dba0837c51
+  kind: Event
+  lastTimestamp: "2025-01-09T14:59:45Z"
+  message: Configuration becomes ready
+  metadata:
+    creationTimestamp: "2025-01-09T14:59:45Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: controller
+      operation: Update
+      time: "2025-01-09T14:59:45Z"
+    name: helloworld-go.18190e3cd277d2e3
+    namespace: serving-tests
+    resourceVersion: "53702"
+    uid: 6a8b42b4-18a2-4009-8eb4-29a19620ca19
+  reason: ConfigurationReady
+  reportingComponent: configuration-controller
+  reportingInstance: ""
+  source:
+    component: configuration-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-01-09T14:59:45Z"
+  involvedObject:
+    apiVersion: serving.knative.dev/v1
+    kind: Configuration
+    name: helloworld-go
+    namespace: serving-tests
+    resourceVersion: "53574"
+    uid: d8b4cafc-e336-457b-abc6-86dba0837c51
+  kind: Event
+  lastTimestamp: "2025-01-09T14:59:45Z"
+  message: LatestReadyRevisionName updated to "helloworld-go-00001"
+  metadata:
+    creationTimestamp: "2025-01-09T14:59:45Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: controller
+      operation: Update
+      time: "2025-01-09T14:59:45Z"
+    name: helloworld-go.18190e3cd277ecbf
+    namespace: serving-tests
+    resourceVersion: "53704"
+    uid: a1ab5708-ede9-401b-af04-d0f290c7f9d9
+  reason: LatestReadyUpdate
+  reportingComponent: configuration-controller
+  reportingInstance: ""
+  source:
+    component: configuration-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-01-09T14:59:45Z"
+  involvedObject:
+    apiVersion: serving.knative.dev/v1
+    kind: Route
+    name: helloworld-go
+    namespace: serving-tests
+    resourceVersion: "53578"
+    uid: df3f94ba-08f4-4e25-a0ce-a05da7e31e86
+  kind: Event
+  lastTimestamp: "2025-01-09T14:59:45Z"
+  message: Created placeholder service "helloworld-go"
+  metadata:
+    creationTimestamp: "2025-01-09T14:59:45Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: controller
+      operation: Update
+      time: "2025-01-09T14:59:45Z"
+    name: helloworld-go.18190e3cd39f814a
+    namespace: serving-tests
+    resourceVersion: "53708"
+    uid: a514f013-367f-422f-a0c0-f565ae929f9c
+  reason: Created
+  reportingComponent: route-controller
+  reportingInstance: ""
+  source:
+    component: route-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-01-09T14:59:45Z"
+  involvedObject:
+    apiVersion: serving.knative.dev/v1
+    kind: Route
+    name: helloworld-go
+    namespace: serving-tests
+    resourceVersion: "53578"
+    uid: df3f94ba-08f4-4e25-a0ce-a05da7e31e86
+  kind: Event
+  lastTimestamp: "2025-01-09T14:59:45Z"
+  message: Created Ingress "helloworld-go"
+  metadata:
+    creationTimestamp: "2025-01-09T14:59:45Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: controller
+      operation: Update
+      time: "2025-01-09T14:59:45Z"
+    name: helloworld-go.18190e3cd44b729a
+    namespace: serving-tests
+    resourceVersion: "53710"
+    uid: 24168281-18d4-474a-9550-01a1ebf76ff1
+  reason: Created
+  reportingComponent: route-controller
+  reportingInstance: ""
+  source:
+    component: route-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-01-09T14:59:45Z"
+  involvedObject:
+    apiVersion: networking.internal.knative.dev/v1alpha1
+    kind: Ingress
+    name: helloworld-go
+    namespace: serving-tests
+    resourceVersion: "53712"
+    uid: 25a9fdea-a9c3-4d27-8003-9730f995aeb1
+  kind: Event
+  lastTimestamp: "2025-01-09T14:59:45Z"
+  message: Updated "helloworld-go" finalizers
+  metadata:
+    creationTimestamp: "2025-01-09T14:59:45Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: ingress
+      operation: Update
+      time: "2025-01-09T14:59:45Z"
+    name: helloworld-go.18190e3cd52991f7
+    namespace: serving-tests
+    resourceVersion: "53713"
+    uid: a17e2536-961d-4dd9-80ce-041c39d88602
+  reason: FinalizerUpdate
+  reportingComponent: ingress-controller
+  reportingInstance: ""
+  source:
+    component: ingress-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-01-09T14:59:45Z"
+  involvedObject:
+    apiVersion: networking.internal.knative.dev/v1alpha1
+    kind: Ingress
+    name: helloworld-go
+    namespace: serving-tests
+    resourceVersion: "53709"
+    uid: 25a9fdea-a9c3-4d27-8003-9730f995aeb1
+  kind: Event
+  lastTimestamp: "2025-01-09T14:59:45Z"
+  message: 'Failed to update finalizers for "helloworld-go": Operation cannot be fulfilled
+    on ingresses.networking.internal.knative.dev "helloworld-go": the object has been
+    modified; please apply your changes to the latest version and try again'
+  metadata:
+    creationTimestamp: "2025-01-09T14:59:45Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: controller
+      operation: Update
+      time: "2025-01-09T14:59:45Z"
+    name: helloworld-go.18190e3cd55f7175
+    namespace: serving-tests
+    resourceVersion: "53717"
+    uid: 5fed29fe-6a05-44c5-8950-10602d714b7a
+  reason: FinalizerUpdateFailed
+  reportingComponent: ingress-controller
+  reportingInstance: ""
+  source:
+    component: ingress-controller
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-01-09T14:59:45Z"
+  involvedObject:
+    apiVersion: networking.internal.knative.dev/v1alpha1
+    kind: Ingress
+    name: helloworld-go
+    namespace: serving-tests
+    resourceVersion: "53716"
+    uid: 25a9fdea-a9c3-4d27-8003-9730f995aeb1
+  kind: Event
+  lastTimestamp: "2025-01-09T14:59:45Z"
+  message: Updated "helloworld-go" finalizers
+  metadata:
+    creationTimestamp: "2025-01-09T14:59:45Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: controller
+      operation: Update
+      time: "2025-01-09T14:59:45Z"
+    name: helloworld-go.18190e3cd63688da
+    namespace: serving-tests
+    resourceVersion: "53718"
+    uid: 7a60cd9d-e22b-43cf-9464-79fbab3ce682
+  reason: FinalizerUpdate
+  reportingComponent: ingress-controller
+  reportingInstance: ""
+  source:
+    component: ingress-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-01-09T14:59:45Z"
+  involvedObject:
+    apiVersion: networking.internal.knative.dev/v1alpha1
+    kind: Ingress
+    name: helloworld-go
+    namespace: serving-tests
+    resourceVersion: "53716"
+    uid: 25a9fdea-a9c3-4d27-8003-9730f995aeb1
+  kind: Event
+  lastTimestamp: "2025-01-09T14:59:45Z"
+  message: Created VirtualService "helloworld-go-mesh"
+  metadata:
+    creationTimestamp: "2025-01-09T14:59:45Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: controller
+      operation: Update
+      time: "2025-01-09T14:59:45Z"
+    name: helloworld-go.18190e3cd73620b7
+    namespace: serving-tests
+    resourceVersion: "53720"
+    uid: 5f1361b3-7c5c-4a1c-b8e5-283b987ee02e
+  reason: Created
+  reportingComponent: ingress-controller
+  reportingInstance: ""
+  source:
+    component: ingress-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-01-09T14:59:45Z"
+  involvedObject:
+    apiVersion: networking.internal.knative.dev/v1alpha1
+    kind: Ingress
+    name: helloworld-go
+    namespace: serving-tests
+    resourceVersion: "53716"
+    uid: 25a9fdea-a9c3-4d27-8003-9730f995aeb1
+  kind: Event
+  lastTimestamp: "2025-01-09T14:59:45Z"
+  message: Created VirtualService "helloworld-go-ingress"
+  metadata:
+    creationTimestamp: "2025-01-09T14:59:45Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: controller
+      operation: Update
+      time: "2025-01-09T14:59:45Z"
+    name: helloworld-go.18190e3cd7de2577
+    namespace: serving-tests
+    resourceVersion: "53722"
+    uid: 156faeca-e66c-42cf-9a63-3ebc2f04aae2
+  reason: Created
+  reportingComponent: ingress-controller
+  reportingInstance: ""
+  source:
+    component: ingress-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-01-09T15:00:43Z"
+  involvedObject:
+    apiVersion: serving.knative.dev/v1beta1
+    kind: DomainMapping
+    name: stavros.com.apps.ci-ln-6bt60xt-76ef8.aws-2.ci.openshift.org
+    namespace: serving-tests
+    resourceVersion: "54288"
+    uid: b0bebd24-7a79-46e2-b6b7-3554ac45c972
+  kind: Event
+  lastTimestamp: "2025-01-09T15:00:43Z"
+  message: Updated "stavros.com.apps.ci-ln-6bt60xt-76ef8.aws-2.ci.openshift.org" finalizers
+  metadata:
+    creationTimestamp: "2025-01-09T15:00:43Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: controller
+      operation: Update
+      time: "2025-01-09T15:00:43Z"
+    name: stavros.com.apps.ci-ln-6bt60xt-76ef8.aws-2.ci.openshift.org.18190e4a524a1aae
+    namespace: serving-tests
+    resourceVersion: "54290"
+    uid: b4c215ec-1c6b-4782-81a1-a9110a5bac7b
+  reason: FinalizerUpdate
+  reportingComponent: domainmapping-controller
+  reportingInstance: ""
+  source:
+    component: domainmapping-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-01-09T15:00:43Z"
+  involvedObject:
+    apiVersion: serving.knative.dev/v1beta1
+    kind: DomainMapping
+    name: stavros.com.apps.ci-ln-6bt60xt-76ef8.aws-2.ci.openshift.org
+    namespace: serving-tests
+    resourceVersion: "54288"
+    uid: b0bebd24-7a79-46e2-b6b7-3554ac45c972
+  kind: Event
+  lastTimestamp: "2025-01-09T15:00:43Z"
+  message: Created Ingress "stavros.com.apps.ci-ln-6bt60xt-76ef8.aws-2.ci.openshift.org"
+  metadata:
+    creationTimestamp: "2025-01-09T15:00:43Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: controller
+      operation: Update
+      time: "2025-01-09T15:00:43Z"
+    name: stavros.com.apps.ci-ln-6bt60xt-76ef8.aws-2.ci.openshift.org.18190e4a59c30e39
+    namespace: serving-tests
+    resourceVersion: "54295"
+    uid: 5ecce586-c94a-41dc-9c61-518423ea7538
+  reason: Created
+  reportingComponent: domainmapping-controller
+  reportingInstance: ""
+  source:
+    component: domainmapping-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-01-09T15:00:43Z"
+  involvedObject:
+    apiVersion: networking.internal.knative.dev/v1alpha1
+    kind: Ingress
+    name: stavros.com.apps.ci-ln-6bt60xt-76ef8.aws-2.ci.openshift.org
+    namespace: serving-tests
+    resourceVersion: "54296"
+    uid: e7650249-4d54-4d4e-8d66-d58bbcf64844
+  kind: Event
+  lastTimestamp: "2025-01-09T15:00:43Z"
+  message: Updated "stavros.com.apps.ci-ln-6bt60xt-76ef8.aws-2.ci.openshift.org" finalizers
+  metadata:
+    creationTimestamp: "2025-01-09T15:00:43Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: ingress
+      operation: Update
+      time: "2025-01-09T15:00:43Z"
+    name: stavros.com.apps.ci-ln-6bt60xt-76ef8.aws-2.ci.openshift.org.18190e4a5a9bed5a
+    namespace: serving-tests
+    resourceVersion: "54297"
+    uid: e0e3bb7b-0432-42c5-8f6f-b412f74a1486
+  reason: FinalizerUpdate
+  reportingComponent: ingress-controller
+  reportingInstance: ""
+  source:
+    component: ingress-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-01-09T15:00:43Z"
+  involvedObject:
+    apiVersion: networking.internal.knative.dev/v1alpha1
+    kind: Ingress
+    name: stavros.com.apps.ci-ln-6bt60xt-76ef8.aws-2.ci.openshift.org
+    namespace: serving-tests
+    resourceVersion: "54294"
+    uid: e7650249-4d54-4d4e-8d66-d58bbcf64844
+  kind: Event
+  lastTimestamp: "2025-01-09T15:00:43Z"
+  message: 'Failed to update finalizers for "stavros.com.apps.ci-ln-6bt60xt-76ef8.aws-2.ci.openshift.org":
+    Operation cannot be fulfilled on ingresses.networking.internal.knative.dev "stavros.com.apps.ci-ln-6bt60xt-76ef8.aws-2.ci.openshift.org":
+    the object has been modified; please apply your changes to the latest version
+    and try again'
+  metadata:
+    creationTimestamp: "2025-01-09T15:00:43Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: controller
+      operation: Update
+      time: "2025-01-09T15:00:43Z"
+    name: stavros.com.apps.ci-ln-6bt60xt-76ef8.aws-2.ci.openshift.org.18190e4a5ac8730f
+    namespace: serving-tests
+    resourceVersion: "54298"
+    uid: 05f7500b-9458-4369-a4b8-77d7a2a73a14
+  reason: FinalizerUpdateFailed
+  reportingComponent: ingress-controller
+  reportingInstance: ""
+  source:
+    component: ingress-controller
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-01-09T15:00:43Z"
+  involvedObject:
+    apiVersion: networking.internal.knative.dev/v1alpha1
+    kind: Ingress
+    name: stavros.com.apps.ci-ln-6bt60xt-76ef8.aws-2.ci.openshift.org
+    namespace: serving-tests
+    resourceVersion: "54299"
+    uid: e7650249-4d54-4d4e-8d66-d58bbcf64844
+  kind: Event
+  lastTimestamp: "2025-01-09T15:00:43Z"
+  message: Updated "stavros.com.apps.ci-ln-6bt60xt-76ef8.aws-2.ci.openshift.org" finalizers
+  metadata:
+    creationTimestamp: "2025-01-09T15:00:43Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: controller
+      operation: Update
+      time: "2025-01-09T15:00:43Z"
+    name: stavros.com.apps.ci-ln-6bt60xt-76ef8.aws-2.ci.openshift.org.18190e4a5b7c78de
+    namespace: serving-tests
+    resourceVersion: "54301"
+    uid: 37ecc603-a1ee-455e-ba4d-330e3a6a4340
+  reason: FinalizerUpdate
+  reportingComponent: ingress-controller
+  reportingInstance: ""
+  source:
+    component: ingress-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-01-09T15:00:43Z"
+  involvedObject:
+    apiVersion: networking.internal.knative.dev/v1alpha1
+    kind: Ingress
+    name: stavros.com.apps.ci-ln-6bt60xt-76ef8.aws-2.ci.openshift.org
+    namespace: serving-tests
+    resourceVersion: "54299"
+    uid: e7650249-4d54-4d4e-8d66-d58bbcf64844
+  kind: Event
+  lastTimestamp: "2025-01-09T15:00:43Z"
+  message: Created VirtualService "stavros.com.apps.ci-ln-529a418d818bc629f154d96e642059e8-ingress"
+  metadata:
+    creationTimestamp: "2025-01-09T15:00:43Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: controller
+      operation: Update
+      time: "2025-01-09T15:00:43Z"
+    name: stavros.com.apps.ci-ln-6bt60xt-76ef8.aws-2.ci.openshift.org.18190e4a5dfdec0b
+    namespace: serving-tests
+    resourceVersion: "54306"
+    uid: 62d17298-090e-4ded-b27c-02e3aa05b63f
+  reason: Created
+  reportingComponent: ingress-controller
+  reportingInstance: ""
+  source:
+    component: ingress-controller
+  type: Normal
+- action: Binding
+  apiVersion: v1
+  eventTime: "2025-01-09T14:58:19.617347Z"
+  firstTimestamp: null
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: webhook-56f4877fcb-r57ck
+    namespace: serving-tests
+    resourceVersion: "51813"
+    uid: b722ba36-4fce-4161-84bd-bfd5db20935b
+  kind: Event
+  lastTimestamp: null
+  message: Successfully assigned serving-tests/webhook-56f4877fcb-r57ck to ip-10-0-63-72.ec2.internal
+  metadata:
+    creationTimestamp: "2025-01-09T14:58:19Z"
+    managedFields:
+    - apiVersion: events.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:action: {}
+        f:eventTime: {}
+        f:note: {}
+        f:reason: {}
+        f:regarding: {}
+        f:reportingController: {}
+        f:reportingInstance: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2025-01-09T14:58:19Z"
+    name: webhook-56f4877fcb-r57ck.18190e28c65ac64b
+    namespace: serving-tests
+    resourceVersion: "51819"
+    uid: 031e209c-137a-4062-ab47-8fd863ef7701
+  reason: Scheduled
+  reportingComponent: default-scheduler
+  reportingInstance: default-scheduler-ip-10-0-13-186
+  source: {}
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-01-09T14:58:20Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: webhook-56f4877fcb-r57ck
+    namespace: serving-tests
+    resourceVersion: "51821"
+    uid: b722ba36-4fce-4161-84bd-bfd5db20935b
+  kind: Event
+  lastTimestamp: "2025-01-09T14:58:20Z"
+  message: Add eth0 [10.131.0.20/23] from ovn-kubernetes
+  metadata:
+    creationTimestamp: "2025-01-09T14:58:20Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: multus-daemon
+      operation: Update
+      time: "2025-01-09T14:58:20Z"
+    name: webhook-56f4877fcb-r57ck.18190e28eaa99ae7
+    namespace: serving-tests
+    resourceVersion: "51828"
+    uid: 7dd699eb-1873-40d4-98a8-63d68c8c8ab6
+  reason: AddedInterface
+  reportingComponent: multus
+  reportingInstance: ""
+  source:
+    component: multus
+  type: Normal
+- apiVersion: v1
+  count: 4
+  eventTime: null
+  firstTimestamp: "2025-01-09T14:58:20Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{webhook}
+    kind: Pod
+    name: webhook-56f4877fcb-r57ck
+    namespace: serving-tests
+    resourceVersion: "51814"
+    uid: b722ba36-4fce-4161-84bd-bfd5db20935b
+  kind: Event
+  lastTimestamp: "2025-01-09T14:59:49Z"
+  message: Pulling image "registry.ci.openshift.org/knative/serverless-metadata-webhook:main"
+  metadata:
+    creationTimestamp: "2025-01-09T14:58:20Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-01-09T14:59:49Z"
+    name: webhook-56f4877fcb-r57ck.18190e28ec1986b8
+    namespace: serving-tests
+    resourceVersion: "53756"
+    uid: d1c8cb2a-439f-4c22-a0fb-301036187ee7
+  reason: Pulling
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-63-72.ec2.internal
+  source:
+    component: kubelet
+    host: ip-10-0-63-72.ec2.internal
+  type: Normal
+- apiVersion: v1
+  count: 4
+  eventTime: null
+  firstTimestamp: "2025-01-09T14:58:20Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{webhook}
+    kind: Pod
+    name: webhook-56f4877fcb-r57ck
+    namespace: serving-tests
+    resourceVersion: "51814"
+    uid: b722ba36-4fce-4161-84bd-bfd5db20935b
+  kind: Event
+  lastTimestamp: "2025-01-09T14:59:49Z"
+  message: 'Failed to pull image "registry.ci.openshift.org/knative/serverless-metadata-webhook:main":
+    reading manifest main in registry.ci.openshift.org/knative/serverless-metadata-webhook:
+    manifest unknown'
+  metadata:
+    creationTimestamp: "2025-01-09T14:58:20Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-01-09T14:59:49Z"
+    name: webhook-56f4877fcb-r57ck.18190e28f0e88ded
+    namespace: serving-tests
+    resourceVersion: "53757"
+    uid: 067649ba-8457-44e8-b6b9-e3263bdd1d69
+  reason: Failed
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-63-72.ec2.internal
+  source:
+    component: kubelet
+    host: ip-10-0-63-72.ec2.internal
+  type: Warning
+- apiVersion: v1
+  count: 4
+  eventTime: null
+  firstTimestamp: "2025-01-09T14:58:20Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{webhook}
+    kind: Pod
+    name: webhook-56f4877fcb-r57ck
+    namespace: serving-tests
+    resourceVersion: "51814"
+    uid: b722ba36-4fce-4161-84bd-bfd5db20935b
+  kind: Event
+  lastTimestamp: "2025-01-09T14:59:49Z"
+  message: 'Error: ErrImagePull'
+  metadata:
+    creationTimestamp: "2025-01-09T14:58:20Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-01-09T14:59:49Z"
+    name: webhook-56f4877fcb-r57ck.18190e28f0e8c94d
+    namespace: serving-tests
+    resourceVersion: "53758"
+    uid: 13a6b2e5-97d7-44e6-92e8-ff3ba8cf19ac
+  reason: Failed
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-63-72.ec2.internal
+  source:
+    component: kubelet
+    host: ip-10-0-63-72.ec2.internal
+  type: Warning
+- apiVersion: v1
+  count: 43
+  eventTime: null
+  firstTimestamp: "2025-01-09T14:58:21Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{webhook}
+    kind: Pod
+    name: webhook-56f4877fcb-r57ck
+    namespace: serving-tests
+    resourceVersion: "51814"
+    uid: b722ba36-4fce-4161-84bd-bfd5db20935b
+  kind: Event
+  lastTimestamp: "2025-01-09T15:08:24Z"
+  message: Back-off pulling image "registry.ci.openshift.org/knative/serverless-metadata-webhook:main"
+  metadata:
+    creationTimestamp: "2025-01-09T14:58:21Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-01-09T15:08:24Z"
+    name: webhook-56f4877fcb-r57ck.18190e292896546e
+    namespace: serving-tests
+    resourceVersion: "59013"
+    uid: d6e08f68-2873-4200-8603-a50aca75b291
+  reason: BackOff
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-63-72.ec2.internal
+  source:
+    component: kubelet
+    host: ip-10-0-63-72.ec2.internal
+  type: Normal
+- apiVersion: v1
+  count: 6
+  eventTime: null
+  firstTimestamp: "2025-01-09T14:58:21Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{webhook}
+    kind: Pod
+    name: webhook-56f4877fcb-r57ck
+    namespace: serving-tests
+    resourceVersion: "51814"
+    uid: b722ba36-4fce-4161-84bd-bfd5db20935b
+  kind: Event
+  lastTimestamp: "2025-01-09T15:00:02Z"
+  message: 'Error: ImagePullBackOff'
+  metadata:
+    creationTimestamp: "2025-01-09T14:58:21Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2025-01-09T15:00:02Z"
+    name: webhook-56f4877fcb-r57ck.18190e2928969655
+    namespace: serving-tests
+    resourceVersion: "53906"
+    uid: 87308fec-b02a-4938-8291-2db7ae764ef0
+  reason: Failed
+  reportingComponent: kubelet
+  reportingInstance: ip-10-0-63-72.ec2.internal
+  source:
+    component: kubelet
+    host: ip-10-0-63-72.ec2.internal
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-01-09T14:58:19Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: ReplicaSet
+    name: webhook-56f4877fcb
+    namespace: serving-tests
+    resourceVersion: "51809"
+    uid: 29ab9c13-a1d0-4c23-9a7c-02ee1efd32e0
+  kind: Event
+  lastTimestamp: "2025-01-09T14:58:19Z"
+  message: 'Created pod: webhook-56f4877fcb-r57ck'
+  metadata:
+    creationTimestamp: "2025-01-09T14:58:19Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2025-01-09T14:58:19Z"
+    name: webhook-56f4877fcb.18190e28c5eb9d62
+    namespace: serving-tests
+    resourceVersion: "51816"
+    uid: 6cebbb00-e9fc-44eb-977f-e5e50610bc8b
+  reason: SuccessfulCreate
+  reportingComponent: replicaset-controller
+  reportingInstance: ""
+  source:
+    component: replicaset-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-01-09T14:58:19Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: webhook
+    namespace: serving-tests
+    resourceVersion: "51808"
+    uid: f9bf890a-cada-4276-a260-921857c66c40
+  kind: Event
+  lastTimestamp: "2025-01-09T14:58:19Z"
+  message: Scaled up replica set webhook-56f4877fcb to 1
+  metadata:
+    creationTimestamp: "2025-01-09T14:58:19Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2025-01-09T14:58:19Z"
+    name: webhook.18190e28c42ea401
+    namespace: serving-tests
+    resourceVersion: "51811"
+    uid: 3a241cce-e90f-4219-95b0-41da1cad9ea2
+  reason: ScalingReplicaSet
+  reportingComponent: deployment-controller
+  reportingInstance: ""
+  source:
+    component: deployment-controller
+  type: Normal
+kind: EventList
+metadata:
+  resourceVersion: "60835"

@@ -1,0 +1,100 @@
+---
+apiVersion: serving.knative.dev/v1beta1
+items:
+- apiVersion: serving.knative.dev/v1beta1
+  kind: DomainMapping
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"serving.knative.dev/v1beta1","kind":"DomainMapping","metadata":{"annotations":{},"name":"stavros.com.apps.ci-ln-6bt60xt-76ef8.aws-2.ci.openshift.org","namespace":"serving-tests"},"spec":{"ref":{"apiVersion":"serving.knative.dev/v1","kind":"Service","name":"helloworld-go"},"tls":{"secretName":"hello"}}}
+      serving.knative.dev/creator: system:admin
+      serving.knative.dev/lastModifier: system:admin
+    creationTimestamp: "2025-01-09T15:00:43Z"
+    finalizers:
+    - domainmappings.serving.knative.dev
+    generation: 1
+    managedFields:
+    - apiVersion: serving.knative.dev/v1beta1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:finalizers:
+            .: {}
+            v:"domainmappings.serving.knative.dev": {}
+      manager: controller
+      operation: Update
+      time: "2025-01-09T15:00:43Z"
+    - apiVersion: serving.knative.dev/v1beta1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:kubectl.kubernetes.io/last-applied-configuration: {}
+        f:spec:
+          .: {}
+          f:ref:
+            .: {}
+            f:apiVersion: {}
+            f:kind: {}
+            f:name: {}
+          f:tls:
+            .: {}
+            f:secretName: {}
+      manager: kubectl-client-side-apply
+      operation: Update
+      time: "2025-01-09T15:00:43Z"
+    - apiVersion: serving.knative.dev/v1beta1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          .: {}
+          f:address:
+            .: {}
+            f:url: {}
+          f:conditions: {}
+          f:observedGeneration: {}
+          f:url: {}
+      manager: controller
+      operation: Update
+      subresource: status
+      time: "2025-01-09T15:00:44Z"
+    name: stavros.com.apps.ci-ln-6bt60xt-76ef8.aws-2.ci.openshift.org
+    namespace: serving-tests
+    resourceVersion: "54317"
+    uid: b0bebd24-7a79-46e2-b6b7-3554ac45c972
+  spec:
+    ref:
+      apiVersion: serving.knative.dev/v1
+      kind: Service
+      name: helloworld-go
+      namespace: serving-tests
+    tls:
+      secretName: hello
+  status:
+    address:
+      url: https://stavros.com.apps.ci-ln-6bt60xt-76ef8.aws-2.ci.openshift.org
+    conditions:
+    - lastTransitionTime: "2025-01-09T15:00:43Z"
+      message: TLS certificate was provided externally
+      reason: CertificateExternallyProvided
+      status: "True"
+      type: CertificateProvisioned
+    - lastTransitionTime: "2025-01-09T15:00:43Z"
+      status: "True"
+      type: DomainClaimed
+    - lastTransitionTime: "2025-01-09T15:00:44Z"
+      status: "True"
+      type: IngressReady
+    - lastTransitionTime: "2025-01-09T15:00:44Z"
+      status: "True"
+      type: Ready
+    - lastTransitionTime: "2025-01-09T15:00:43Z"
+      status: "True"
+      type: ReferenceResolved
+    observedGeneration: 1
+    url: https://stavros.com.apps.ci-ln-6bt60xt-76ef8.aws-2.ci.openshift.org
+kind: DomainMappingList
+metadata:
+  continue: ""
+  resourceVersion: "60835"

@@ -1,0 +1,47 @@
+apiVersion: v1
+items:
+- apiVersion: v1
+  imagePullSecrets:
+  - name: builder-dockercfg-57hlr
+  kind: ServiceAccount
+  metadata:
+    annotations:
+      openshift.io/internal-registry-pull-secret-ref: builder-dockercfg-57hlr
+    creationTimestamp: "2025-01-09T14:46:07Z"
+    name: builder
+    namespace: knative-eventing
+    resourceVersion: "43093"
+    uid: ee36249e-e40c-43b1-ab7e-8325af503401
+  secrets:
+  - name: builder-dockercfg-57hlr
+- apiVersion: v1
+  imagePullSecrets:
+  - name: default-dockercfg-vmvbm
+  kind: ServiceAccount
+  metadata:
+    annotations:
+      openshift.io/internal-registry-pull-secret-ref: default-dockercfg-vmvbm
+    creationTimestamp: "2025-01-09T14:46:07Z"
+    name: default
+    namespace: knative-eventing
+    resourceVersion: "43091"
+    uid: ae7bca01-15d8-41ec-b687-dde1f19fe705
+  secrets:
+  - name: default-dockercfg-vmvbm
+- apiVersion: v1
+  imagePullSecrets:
+  - name: deployer-dockercfg-9dffc
+  kind: ServiceAccount
+  metadata:
+    annotations:
+      openshift.io/internal-registry-pull-secret-ref: deployer-dockercfg-9dffc
+    creationTimestamp: "2025-01-09T14:46:07Z"
+    name: deployer
+    namespace: knative-eventing
+    resourceVersion: "43089"
+    uid: e321c675-cc18-44c4-b764-ab8dd98c655f
+  secrets:
+  - name: deployer-dockercfg-9dffc
+kind: List
+metadata:
+  resourceVersion: ""

@@ -1,0 +1,52 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"rbac.authorization.k8s.io/v1","kind":"ClusterRoleBinding","metadata":{"annotations":{},"labels":{"app.kubernetes.io/component":"istio_cni","app.kubernetes.io/instance":"istio_cni","app.kubernetes.io/managed-by":"maistra-istio-operator","app.kubernetes.io/name":"istio_cni","app.kubernetes.io/part-of":"istio","app.kubernetes.io/version":"TODO","maistra-version":"2.6.4","maistra.io/owner":"","maistra.io/owner-name":""},"name":"ossm-cni"},"roleRef":{"apiGroup":"rbac.authorization.k8s.io","kind":"ClusterRole","name":"ossm-cni"},"subjects":[{"kind":"ServiceAccount","name":"ossm-cni","namespace":"openshift-operators"}]}
+  creationTimestamp: "2025-01-09T14:45:29Z"
+  labels:
+    app.kubernetes.io/component: istio_cni
+    app.kubernetes.io/instance: istio_cni
+    app.kubernetes.io/managed-by: maistra-istio-operator
+    app.kubernetes.io/name: istio_cni
+    app.kubernetes.io/part-of: istio
+    app.kubernetes.io/version: TODO
+    maistra-version: 2.6.4
+    maistra.io/owner: ""
+    maistra.io/owner-name: ""
+  managedFields:
+  - apiVersion: rbac.authorization.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:kubectl.kubernetes.io/last-applied-configuration: {}
+        f:labels:
+          .: {}
+          f:app.kubernetes.io/component: {}
+          f:app.kubernetes.io/instance: {}
+          f:app.kubernetes.io/managed-by: {}
+          f:app.kubernetes.io/name: {}
+          f:app.kubernetes.io/part-of: {}
+          f:app.kubernetes.io/version: {}
+          f:maistra-version: {}
+          f:maistra.io/owner: {}
+          f:maistra.io/owner-name: {}
+      f:roleRef: {}
+      f:subjects: {}
+    manager: istio-operator
+    operation: Update
+    time: "2025-01-09T14:45:29Z"
+  name: ossm-cni
+  resourceVersion: "42212"
+  uid: 5ad34303-36ed-447f-af8b-70917125811a
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: ossm-cni
+subjects:
+- kind: ServiceAccount
+  name: ossm-cni
+  namespace: openshift-operators

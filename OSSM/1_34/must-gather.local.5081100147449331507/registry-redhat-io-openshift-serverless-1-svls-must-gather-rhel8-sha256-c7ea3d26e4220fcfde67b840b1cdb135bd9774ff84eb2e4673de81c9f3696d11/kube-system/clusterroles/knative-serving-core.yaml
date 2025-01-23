@@ -1,0 +1,166 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"rbac.authorization.k8s.io/v1","kind":"ClusterRole","metadata":{"labels":{"app.kubernetes.io/name":"knative-serving","app.kubernetes.io/version":"release-v1.14","serving.knative.dev/controller":"true"},"name":"knative-serving-core"},"rules":[{"apiGroups":[""],"resources":["pods","namespaces","secrets","configmaps","endpoints","services","events","serviceaccounts"],"verbs":["get","list","create","update","delete","patch","watch"]},{"apiGroups":[""],"resources":["endpoints/restricted"],"verbs":["create"]},{"apiGroups":[""],"resources":["namespaces/finalizers"],"verbs":["update"]},{"apiGroups":["apps"],"resources":["deployments","deployments/finalizers"],"verbs":["get","list","create","update","delete","patch","watch"]},{"apiGroups":["admissionregistration.k8s.io"],"resources":["mutatingwebhookconfigurations","validatingwebhookconfigurations"],"verbs":["get","list","create","update","delete","patch","watch"]},{"apiGroups":["apiextensions.k8s.io"],"resources":["customresourcedefinitions","customresourcedefinitions/status"],"verbs":["get","list","create","update","delete","patch","watch"]},{"apiGroups":["autoscaling"],"resources":["horizontalpodautoscalers"],"verbs":["get","list","create","update","delete","patch","watch"]},{"apiGroups":["coordination.k8s.io"],"resources":["leases"],"verbs":["get","list","create","update","delete","patch","watch"]},{"apiGroups":["serving.knative.dev","autoscaling.internal.knative.dev","networking.internal.knative.dev"],"resources":["*","*/status","*/finalizers"],"verbs":["get","list","create","update","delete","deletecollection","patch","watch"]},{"apiGroups":["caching.internal.knative.dev"],"resources":["images"],"verbs":["get","list","create","update","delete","patch","watch"]},{"apiGroups":["cert-manager.io"],"resources":["certificates","clusterissuers","certificaterequests","issuers"],"verbs":["get","list","create","update","delete","patch","watch"]},{"apiGroups":["acme.cert-manager.io"],"resources":["challenges"],"verbs":["get","list","create","update","delete","patch","watch"]}]}
+    manifestival: new
+  creationTimestamp: "2025-01-09T14:58:15Z"
+  labels:
+    app.kubernetes.io/name: knative-serving
+    app.kubernetes.io/version: release-v1.14
+    serving.knative.dev/controller: "true"
+  name: knative-serving-core
+  resourceVersion: "52252"
+  uid: 6db297eb-0cc2-4c51-af5d-d4cc0a0054c5
+rules:
+- apiGroups:
+  - ""
+  resources:
+  - pods
+  - namespaces
+  - secrets
+  - configmaps
+  - endpoints
+  - services
+  - events
+  - serviceaccounts
+  verbs:
+  - get
+  - list
+  - create
+  - update
+  - delete
+  - patch
+  - watch
+- apiGroups:
+  - ""
+  resources:
+  - endpoints/restricted
+  verbs:
+  - create
+- apiGroups:
+  - ""
+  resources:
+  - namespaces/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - apps
+  resources:
+  - deployments
+  - deployments/finalizers
+  verbs:
+  - get
+  - list
+  - create
+  - update
+  - delete
+  - patch
+  - watch
+- apiGroups:
+  - admissionregistration.k8s.io
+  resources:
+  - mutatingwebhookconfigurations
+  - validatingwebhookconfigurations
+  verbs:
+  - get
+  - list
+  - create
+  - update
+  - delete
+  - patch
+  - watch
+- apiGroups:
+  - apiextensions.k8s.io
+  resources:
+  - customresourcedefinitions
+  - customresourcedefinitions/status
+  verbs:
+  - get
+  - list
+  - create
+  - update
+  - delete
+  - patch
+  - watch
+- apiGroups:
+  - autoscaling
+  resources:
+  - horizontalpodautoscalers
+  verbs:
+  - get
+  - list
+  - create
+  - update
+  - delete
+  - patch
+  - watch
+- apiGroups:
+  - coordination.k8s.io
+  resources:
+  - leases
+  verbs:
+  - get
+  - list
+  - create
+  - update
+  - delete
+  - patch
+  - watch
+- apiGroups:
+  - serving.knative.dev
+  - autoscaling.internal.knative.dev
+  - networking.internal.knative.dev
+  resources:
+  - '*'
+  - '*/status'
+  - '*/finalizers'
+  verbs:
+  - get
+  - list
+  - create
+  - update
+  - delete
+  - deletecollection
+  - patch
+  - watch
+- apiGroups:
+  - caching.internal.knative.dev
+  resources:
+  - images
+  verbs:
+  - get
+  - list
+  - create
+  - update
+  - delete
+  - patch
+  - watch
+- apiGroups:
+  - cert-manager.io
+  resources:
+  - certificates
+  - clusterissuers
+  - certificaterequests
+  - issuers
+  verbs:
+  - get
+  - list
+  - create
+  - update
+  - delete
+  - patch
+  - watch
+- apiGroups:
+  - acme.cert-manager.io
+  resources:
+  - challenges
+  verbs:
+  - get
+  - list
+  - create
+  - update
+  - delete
+  - patch
+  - watch

@@ -1,0 +1,72 @@
+apiVersion: maistra.io/v1
+kind: ServiceMeshMember
+metadata:
+  annotations:
+    maistra.io/created-by: servicemeshmemberroll-controller
+  creationTimestamp: "2025-01-09T14:46:13Z"
+  finalizers:
+  - maistra.io/istio-operator
+  generation: 1
+  managedFields:
+  - apiVersion: maistra.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:maistra.io/created-by: {}
+        f:finalizers:
+          .: {}
+          v:"maistra.io/istio-operator": {}
+      f:spec:
+        .: {}
+        f:controlPlaneRef:
+          .: {}
+          f:name: {}
+          f:namespace: {}
+    manager: istio-operator
+    operation: Update
+    time: "2025-01-09T14:46:13Z"
+  - apiVersion: maistra.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:annotations:
+          .: {}
+          f:controlPlaneRef: {}
+        f:conditions: {}
+        f:meshGeneration: {}
+        f:meshReconciledVersion: {}
+        f:observedGeneration: {}
+    manager: istio-operator
+    operation: Update
+    subresource: status
+    time: "2025-01-09T14:46:13Z"
+  name: default
+  namespace: eventing-e2e3
+  resourceVersion: "43528"
+  uid: ded5a74e-ffbf-491f-9622-232dbc0ea2f7
+spec:
+  controlPlaneRef:
+    name: basic
+    namespace: istio-system
+status:
+  annotations:
+    controlPlaneRef: istio-system/basic
+  conditions:
+  - lastTransitionTime: "2025-01-09T14:46:13Z"
+    message: 'could not create NetworkAttachmentDefinition eventing-e2e3/v2-4-istio-cni:
+      network-attachment-definitions.k8s.cni.cncf.io "v2-4-istio-cni" already exists'
+    reason: ErrorConfiguringNamespace
+    status: "False"
+    type: Reconciled
+  - lastTransitionTime: "2025-01-09T14:46:13Z"
+    message: 'could not create NetworkAttachmentDefinition eventing-e2e3/v2-4-istio-cni:
+      network-attachment-definitions.k8s.cni.cncf.io "v2-4-istio-cni" already exists'
+    reason: ErrorConfiguringNamespace
+    status: "False"
+    type: Ready
+  meshGeneration: 2
+  meshReconciledVersion: 2.6.4-1-2
+  observedGeneration: 1

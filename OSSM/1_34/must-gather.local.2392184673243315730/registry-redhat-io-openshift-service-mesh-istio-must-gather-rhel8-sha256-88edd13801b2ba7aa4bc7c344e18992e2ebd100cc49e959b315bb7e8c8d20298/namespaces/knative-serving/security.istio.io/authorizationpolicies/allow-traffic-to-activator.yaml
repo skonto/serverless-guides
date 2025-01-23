@@ -1,0 +1,44 @@
+---
+apiVersion: security.istio.io/v1beta1
+kind: AuthorizationPolicy
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"security.istio.io/v1beta1","kind":"AuthorizationPolicy","metadata":{"annotations":{},"name":"allow-traffic-to-activator","namespace":"knative-serving"},"spec":{"action":"ALLOW","rules":[{"from":[{"source":{"namespaces":["knative-serving","istio-system"]}}]}],"selector":{"matchLabels":{"app":"activator"}}}}
+  creationTimestamp: "2025-01-09T14:46:22Z"
+  generation: 1
+  managedFields:
+  - apiVersion: security.istio.io/v1beta1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:kubectl.kubernetes.io/last-applied-configuration: {}
+      f:spec:
+        .: {}
+        f:action: {}
+        f:rules: {}
+        f:selector:
+          .: {}
+          f:matchLabels:
+            .: {}
+            f:app: {}
+    manager: kubectl-client-side-apply
+    operation: Update
+    time: "2025-01-09T14:46:22Z"
+  name: allow-traffic-to-activator
+  namespace: knative-serving
+  resourceVersion: "43659"
+  uid: 144071b7-2637-471f-888e-63bef9e68ee7
+spec:
+  action: ALLOW
+  rules:
+  - from:
+    - source:
+        namespaces:
+        - knative-serving
+        - istio-system
+  selector:
+    matchLabels:
+      app: activator

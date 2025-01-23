@@ -1,0 +1,63 @@
+apiVersion: v1
+items:
+- apiVersion: rbac.authorization.k8s.io/v1
+  kind: RoleBinding
+  metadata:
+    annotations:
+      openshift.io/description: Allows deploymentconfigs in this namespace to rollout
+        pods in this namespace.  It is auto-managed by a controller; remove subjects
+        to disable.
+    creationTimestamp: "2025-01-09T14:54:02Z"
+    name: system:deployers
+    namespace: knative-serving-ingress
+    resourceVersion: "48234"
+    uid: f41ef574-b20f-4c72-8361-8a727124302a
+  roleRef:
+    apiGroup: rbac.authorization.k8s.io
+    kind: ClusterRole
+    name: system:deployer
+  subjects:
+  - kind: ServiceAccount
+    name: deployer
+    namespace: knative-serving-ingress
+- apiVersion: rbac.authorization.k8s.io/v1
+  kind: RoleBinding
+  metadata:
+    annotations:
+      openshift.io/description: Allows builds in this namespace to push images to
+        this namespace.  It is auto-managed by a controller; remove subjects to disable.
+    creationTimestamp: "2025-01-09T14:54:02Z"
+    name: system:image-builders
+    namespace: knative-serving-ingress
+    resourceVersion: "48232"
+    uid: 33db49d2-d816-4f9a-abc5-788af0c6df17
+  roleRef:
+    apiGroup: rbac.authorization.k8s.io
+    kind: ClusterRole
+    name: system:image-builder
+  subjects:
+  - kind: ServiceAccount
+    name: builder
+    namespace: knative-serving-ingress
+- apiVersion: rbac.authorization.k8s.io/v1
+  kind: RoleBinding
+  metadata:
+    annotations:
+      openshift.io/description: Allows all pods in this namespace to pull images from
+        this namespace.  It is auto-managed by a controller; remove subjects to disable.
+    creationTimestamp: "2025-01-09T14:54:02Z"
+    name: system:image-pullers
+    namespace: knative-serving-ingress
+    resourceVersion: "48233"
+    uid: 6c982926-e2da-4fe0-9165-ada0a1e96ca7
+  roleRef:
+    apiGroup: rbac.authorization.k8s.io
+    kind: ClusterRole
+    name: system:image-puller
+  subjects:
+  - apiGroup: rbac.authorization.k8s.io
+    kind: Group
+    name: system:serviceaccounts:knative-serving-ingress
+kind: List
+metadata:
+  resourceVersion: ""

@@ -1,0 +1,267 @@
+Name:         helloworld-go
+Namespace:    serving-tests
+Labels:       serving.knative.dev/route=helloworld-go
+              serving.knative.dev/routeNamespace=serving-tests
+              serving.knative.dev/service=helloworld-go
+Annotations:  networking.internal.knative.dev/rollout:
+                {"configurations":[{"configurationName":"helloworld-go","percent":100,"revisions":[{"revisionName":"helloworld-go-00001","percent":100}],"...
+              networking.knative.dev/ingress.class: istio.ingress.networking.knative.dev
+              serving.knative.dev/creator: system:admin
+              serving.knative.dev/lastModifier: system:admin
+              serving.knative.openshift.io/enablePassthrough: true
+API Version:  networking.internal.knative.dev/v1alpha1
+Kind:         Ingress
+Metadata:
+  Creation Timestamp:  2025-01-09T14:59:45Z
+  Finalizers:
+    ocp-ingress
+    ingresses.networking.internal.knative.dev
+  Generation:  1
+  Managed Fields:
+    API Version:  networking.internal.knative.dev/v1alpha1
+    Fields Type:  FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .:
+          f:networking.internal.knative.dev/rollout:
+          f:networking.knative.dev/ingress.class:
+          f:serving.knative.dev/creator:
+          f:serving.knative.dev/lastModifier:
+          f:serving.knative.openshift.io/enablePassthrough:
+        f:finalizers:
+          v:"ingresses.networking.internal.knative.dev":
+        f:labels:
+          .:
+          f:serving.knative.dev/route:
+          f:serving.knative.dev/routeNamespace:
+          f:serving.knative.dev/service:
+        f:ownerReferences:
+          .:
+          k:{"uid":"df3f94ba-08f4-4e25-a0ce-a05da7e31e86"}:
+      f:spec:
+        .:
+        f:httpOption:
+        f:rules:
+    Manager:      controller
+    Operation:    Update
+    Time:         2025-01-09T14:59:45Z
+    API Version:  networking.internal.knative.dev/v1alpha1
+    Fields Type:  FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:finalizers:
+          .:
+          v:"ocp-ingress":
+    Manager:      ingress
+    Operation:    Update
+    Time:         2025-01-09T14:59:45Z
+    API Version:  networking.internal.knative.dev/v1alpha1
+    Fields Type:  FieldsV1
+    fieldsV1:
+      f:status:
+        .:
+        f:conditions:
+        f:observedGeneration:
+        f:privateLoadBalancer:
+          .:
+          f:ingress:
+        f:publicLoadBalancer:
+          .:
+          f:ingress:
+    Manager:      controller
+    Operation:    Update
+    Subresource:  status
+    Time:         2025-01-09T14:59:46Z
+  Owner References:
+    API Version:           serving.knative.dev/v1
+    Block Owner Deletion:  true
+    Controller:            true
+    Kind:                  Route
+    Name:                  helloworld-go
+    UID:                   df3f94ba-08f4-4e25-a0ce-a05da7e31e86
+  Resource Version:        53726
+  UID:                     25a9fdea-a9c3-4d27-8003-9730f995aeb1
+Spec:
+  Http Option:  Enabled
+  Rules:
+    Hosts:
+      helloworld-go.serving-tests
+      helloworld-go.serving-tests.svc
+      helloworld-go.serving-tests.svc.cluster.local
+    Http:
+      Paths:
+        Splits:
+          Append Headers:
+            Knative - Serving - Namespace:  serving-tests
+            Knative - Serving - Revision:   helloworld-go-00001
+          Percent:                          100
+          Service Name:                     helloworld-go-00001
+          Service Namespace:                serving-tests
+          Service Port:                     80
+    Visibility:                             ClusterLocal
+    Hosts:
+      helloworld-go-serving-tests.apps.ci-ln-6bt60xt-76ef8.aws-2.ci.openshift.org
+    Http:
+      Paths:
+        Splits:
+          Append Headers:
+            Knative - Serving - Namespace:  serving-tests
+            Knative - Serving - Revision:   helloworld-go-00001
+          Percent:                          100
+          Service Name:                     helloworld-go-00001
+          Service Namespace:                serving-tests
+          Service Port:                     80
+    Visibility:                             ExternalIP
+Status:
+  Conditions:
+    Last Transition Time:  2025-01-09T14:59:46Z
+    Status:                True
+    Type:                  LoadBalancerReady
+    Last Transition Time:  2025-01-09T14:59:45Z
+    Status:                True
+    Type:                  NetworkConfigured
+    Last Transition Time:  2025-01-09T14:59:46Z
+    Status:                True
+    Type:                  Ready
+  Observed Generation:     1
+  Private Load Balancer:
+    Ingress:
+      Domain Internal:  knative-local-gateway.istio-system.svc.cluster.local
+  Public Load Balancer:
+    Ingress:
+      Domain Internal:  istio-ingressgateway.istio-system.svc.cluster.local
+Events:
+  Type     Reason                 Age   From                Message
+  ----     ------                 ----  ----                -------
+  Normal   FinalizerUpdate        14m   ingress-controller  Updated "helloworld-go" finalizers
+  Warning  FinalizerUpdateFailed  14m   ingress-controller  Failed to update finalizers for "helloworld-go": Operation cannot be fulfilled on ingresses.networking.internal.knative.dev "helloworld-go": the object has been modified; please apply your changes to the latest version and try again
+  Normal   FinalizerUpdate        14m   ingress-controller  Updated "helloworld-go" finalizers
+  Normal   Created                14m   ingress-controller  Created VirtualService "helloworld-go-mesh"
+  Normal   Created                14m   ingress-controller  Created VirtualService "helloworld-go-ingress"
+
+
+Name:         stavros.com.apps.ci-ln-6bt60xt-76ef8.aws-2.ci.openshift.org
+Namespace:    serving-tests
+Labels:       serving.knative.dev/domainMappingNamespace=serving-tests
+              serving.knative.dev/domainMappingUID=b0bebd24-7a79-46e2-b6b7-3554ac45c972
+Annotations:  networking.knative.dev/ingress.class: istio.ingress.networking.knative.dev
+              serving.knative.dev/creator: system:admin
+              serving.knative.dev/lastModifier: system:admin
+API Version:  networking.internal.knative.dev/v1alpha1
+Kind:         Ingress
+Metadata:
+  Creation Timestamp:  2025-01-09T15:00:43Z
+  Finalizers:
+    ocp-ingress
+    ingresses.networking.internal.knative.dev
+  Generation:  1
+  Managed Fields:
+    API Version:  networking.internal.knative.dev/v1alpha1
+    Fields Type:  FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .:
+          f:networking.knative.dev/ingress.class:
+          f:serving.knative.dev/creator:
+          f:serving.knative.dev/lastModifier:
+        f:finalizers:
+          v:"ingresses.networking.internal.knative.dev":
+        f:labels:
+          .:
+          f:serving.knative.dev/domainMappingNamespace:
+          f:serving.knative.dev/domainMappingUID:
+        f:ownerReferences:
+          .:
+          k:{"uid":"b0bebd24-7a79-46e2-b6b7-3554ac45c972"}:
+      f:spec:
+        .:
+        f:httpOption:
+        f:rules:
+        f:tls:
+    Manager:      controller
+    Operation:    Update
+    Time:         2025-01-09T15:00:43Z
+    API Version:  networking.internal.knative.dev/v1alpha1
+    Fields Type:  FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:finalizers:
+          .:
+          v:"ocp-ingress":
+    Manager:      ingress
+    Operation:    Update
+    Time:         2025-01-09T15:00:43Z
+    API Version:  networking.internal.knative.dev/v1alpha1
+    Fields Type:  FieldsV1
+    fieldsV1:
+      f:status:
+        .:
+        f:conditions:
+        f:observedGeneration:
+        f:privateLoadBalancer:
+          .:
+          f:ingress:
+        f:publicLoadBalancer:
+          .:
+          f:ingress:
+    Manager:      controller
+    Operation:    Update
+    Subresource:  status
+    Time:         2025-01-09T15:00:44Z
+  Owner References:
+    API Version:           serving.knative.dev/v1beta1
+    Block Owner Deletion:  true
+    Controller:            true
+    Kind:                  DomainMapping
+    Name:                  stavros.com.apps.ci-ln-6bt60xt-76ef8.aws-2.ci.openshift.org
+    UID:                   b0bebd24-7a79-46e2-b6b7-3554ac45c972
+  Resource Version:        54316
+  UID:                     e7650249-4d54-4d4e-8d66-d58bbcf64844
+Spec:
+  Http Option:  Enabled
+  Rules:
+    Hosts:
+      stavros.com.apps.ci-ln-6bt60xt-76ef8.aws-2.ci.openshift.org
+    Http:
+      Paths:
+        Rewrite Host:  helloworld-go.serving-tests.svc.cluster.local
+        Splits:
+          Append Headers:
+            K - Original - Host:  stavros.com.apps.ci-ln-6bt60xt-76ef8.aws-2.ci.openshift.org
+          Percent:                100
+          Service Name:           helloworld-go
+          Service Namespace:      serving-tests
+          Service Port:           80
+    Visibility:                   ExternalIP
+  Tls:
+    Hosts:
+      stavros.com.apps.ci-ln-6bt60xt-76ef8.aws-2.ci.openshift.org
+    Secret Name:       hello
+    Secret Namespace:  serving-tests
+Status:
+  Conditions:
+    Last Transition Time:  2025-01-09T15:00:44Z
+    Status:                True
+    Type:                  LoadBalancerReady
+    Last Transition Time:  2025-01-09T15:00:43Z
+    Status:                True
+    Type:                  NetworkConfigured
+    Last Transition Time:  2025-01-09T15:00:44Z
+    Status:                True
+    Type:                  Ready
+  Observed Generation:     1
+  Private Load Balancer:
+    Ingress:
+      Domain Internal:  knative-local-gateway.istio-system.svc.cluster.local
+  Public Load Balancer:
+    Ingress:
+      Domain Internal:  istio-ingressgateway.istio-system.svc.cluster.local
+Events:
+  Type     Reason                 Age   From                Message
+  ----     ------                 ----  ----                -------
+  Normal   FinalizerUpdate        13m   ingress-controller  Updated "stavros.com.apps.ci-ln-6bt60xt-76ef8.aws-2.ci.openshift.org" finalizers
+  Warning  FinalizerUpdateFailed  13m   ingress-controller  Failed to update finalizers for "stavros.com.apps.ci-ln-6bt60xt-76ef8.aws-2.ci.openshift.org": Operation cannot be fulfilled on ingresses.networking.internal.knative.dev "stavros.com.apps.ci-ln-6bt60xt-76ef8.aws-2.ci.openshift.org": the object has been modified; please apply your changes to the latest version and try again
+  Normal   FinalizerUpdate        13m   ingress-controller  Updated "stavros.com.apps.ci-ln-6bt60xt-76ef8.aws-2.ci.openshift.org" finalizers
+  Normal   Created                13m   ingress-controller  Created VirtualService "stavros.com.apps.ci-ln-529a418d818bc629f154d96e642059e8-ingress"

@@ -1,0 +1,225 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"rbac.authorization.k8s.io/v1","kind":"ClusterRole","metadata":{"annotations":{"maistra.io/mesh-generation":"2.6.4-1-2"},"labels":{"app":"istiod","app.kubernetes.io/component":"istio-discovery","app.kubernetes.io/instance":"istio-system","app.kubernetes.io/managed-by":"maistra-istio-operator","app.kubernetes.io/name":"istio-discovery","app.kubernetes.io/part-of":"istio","app.kubernetes.io/version":"2.6.4-1-2","maistra-version":"2.4.13","maistra.io/owner":"istio-system","maistra.io/owner-name":"basic","release":"istio"},"name":"istiod-clusterrole-basic-istio-system"},"rules":[{"apiGroups":["config.istio.io","security.istio.io","networking.istio.io","authentication.istio.io","rbac.istio.io","telemetry.istio.io","extensions.istio.io"],"resources":["*"],"verbs":["get","watch","list"]},{"apiGroups":["networking.istio.io"],"resources":["workloadentries"],"verbs":["get","watch","list","update","patch","create","delete"]},{"apiGroups":["networking.istio.io"],"resources":["workloadentries/status"],"verbs":["get","watch","list","update","patch","create","delete"]},{"apiGroups":["apiextensions.k8s.io"],"resources":["customresourcedefinitions"],"verbs":["get","list","watch"]},{"apiGroups":[""],"resources":["pods","nodes","services","namespaces","endpoints"],"verbs":["get","list","watch"]},{"apiGroups":["discovery.k8s.io"],"resources":["endpointslices"],"verbs":["get","list","watch"]},{"apiGroups":["networking.k8s.io"],"resources":["ingresses","ingressclasses"],"verbs":["get","list","watch"]},{"apiGroups":["networking.k8s.io"],"resources":["ingresses/status"],"verbs":["*"]},{"apiGroups":[""],"resources":["configmaps"],"verbs":["create","get","list","watch","update"]},{"apiGroups":["authorization.k8s.io"],"resources":["subjectaccessreviews"],"verbs":["create"]},{"apiGroups":["networking.x-k8s.io","gateway.networking.k8s.io"],"resources":["*"],"verbs":["get","watch","list"]},{"apiGroups":["networking.x-k8s.io","gateway.networking.k8s.io"],"resources":["*"],"verbs":["update","patch"]},{"apiGroups":["gateway.networking.k8s.io"],"resources":["gatewayclasses"],"verbs":["create","update","patch","delete"]},{"apiGroups":[""],"resources":["secrets"],"verbs":["get","watch","list"]},{"apiGroups":["maistra.io"],"resources":["servicemeshmemberrolls"],"verbs":["get","list","watch"]},{"apiGroups":["route.openshift.io"],"resources":["routes","routes/custom-host"],"verbs":["get","list","watch","create","delete","update"]},{"apiGroups":["multicluster.x-k8s.io"],"resources":["serviceexports"],"verbs":["get","watch","list","create","delete"]},{"apiGroups":["multicluster.x-k8s.io"],"resources":["serviceimports"],"verbs":["get","watch","list"]},{"apiGroups":[""],"resources":["pods/finalizers"],"verbs":["update"]}]}
+    maistra.io/mesh-generation: 2.6.4-1-2
+  creationTimestamp: "2025-01-09T14:45:30Z"
+  labels:
+    app: istiod
+    app.kubernetes.io/component: istio-discovery
+    app.kubernetes.io/instance: istio-system
+    app.kubernetes.io/managed-by: maistra-istio-operator
+    app.kubernetes.io/name: istio-discovery
+    app.kubernetes.io/part-of: istio
+    app.kubernetes.io/version: 2.6.4-1-2
+    maistra-version: 2.4.13
+    maistra.io/owner: istio-system
+    maistra.io/owner-name: basic
+    release: istio
+  managedFields:
+  - apiVersion: rbac.authorization.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:kubectl.kubernetes.io/last-applied-configuration: {}
+          f:maistra.io/mesh-generation: {}
+        f:labels:
+          .: {}
+          f:app: {}
+          f:app.kubernetes.io/component: {}
+          f:app.kubernetes.io/instance: {}
+          f:app.kubernetes.io/managed-by: {}
+          f:app.kubernetes.io/name: {}
+          f:app.kubernetes.io/part-of: {}
+          f:app.kubernetes.io/version: {}
+          f:maistra-version: {}
+          f:maistra.io/owner: {}
+          f:maistra.io/owner-name: {}
+          f:release: {}
+      f:rules: {}
+    manager: istio-operator
+    operation: Update
+    time: "2025-01-09T14:45:30Z"
+  name: istiod-clusterrole-basic-istio-system
+  resourceVersion: "42271"
+  uid: fda938d2-19eb-4568-991d-8c4501a9d359
+rules:
+- apiGroups:
+  - config.istio.io
+  - security.istio.io
+  - networking.istio.io
+  - authentication.istio.io
+  - rbac.istio.io
+  - telemetry.istio.io
+  - extensions.istio.io
+  resources:
+  - '*'
+  verbs:
+  - get
+  - watch
+  - list
+- apiGroups:
+  - networking.istio.io
+  resources:
+  - workloadentries
+  verbs:
+  - get
+  - watch
+  - list
+  - update
+  - patch
+  - create
+  - delete
+- apiGroups:
+  - networking.istio.io
+  resources:
+  - workloadentries/status
+  verbs:
+  - get
+  - watch
+  - list
+  - update
+  - patch
+  - create
+  - delete
+- apiGroups:
+  - apiextensions.k8s.io
+  resources:
+  - customresourcedefinitions
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - ""
+  resources:
+  - pods
+  - nodes
+  - services
+  - namespaces
+  - endpoints
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - discovery.k8s.io
+  resources:
+  - endpointslices
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - networking.k8s.io
+  resources:
+  - ingresses
+  - ingressclasses
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - networking.k8s.io
+  resources:
+  - ingresses/status
+  verbs:
+  - '*'
+- apiGroups:
+  - ""
+  resources:
+  - configmaps
+  verbs:
+  - create
+  - get
+  - list
+  - watch
+  - update
+- apiGroups:
+  - authorization.k8s.io
+  resources:
+  - subjectaccessreviews
+  verbs:
+  - create
+- apiGroups:
+  - networking.x-k8s.io
+  - gateway.networking.k8s.io
+  resources:
+  - '*'
+  verbs:
+  - get
+  - watch
+  - list
+- apiGroups:
+  - networking.x-k8s.io
+  - gateway.networking.k8s.io
+  resources:
+  - '*'
+  verbs:
+  - update
+  - patch
+- apiGroups:
+  - gateway.networking.k8s.io
+  resources:
+  - gatewayclasses
+  verbs:
+  - create
+  - update
+  - patch
+  - delete
+- apiGroups:
+  - ""
+  resources:
+  - secrets
+  verbs:
+  - get
+  - watch
+  - list
+- apiGroups:
+  - maistra.io
+  resources:
+  - servicemeshmemberrolls
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - route.openshift.io
+  resources:
+  - routes
+  - routes/custom-host
+  verbs:
+  - get
+  - list
+  - watch
+  - create
+  - delete
+  - update
+- apiGroups:
+  - multicluster.x-k8s.io
+  resources:
+  - serviceexports
+  verbs:
+  - get
+  - watch
+  - list
+  - create
+  - delete
+- apiGroups:
+  - multicluster.x-k8s.io
+  resources:
+  - serviceimports
+  verbs:
+  - get
+  - watch
+  - list
+- apiGroups:
+  - ""
+  resources:
+  - pods/finalizers
+  verbs:
+  - update

@@ -1,0 +1,1377 @@
+2025-01-09T14:45:13.360443579Z 2025-01-09T14:45:13Z	INFO	Versions	{"os": "linux", "arch": "amd64", "version": "go1.22.9 (Red Hat 1.22.9-1.module+el8.10.0+22500+aee717ef)", "jaeger-operator": "v1.62.0", "identity": "openshift-operators.jaeger-operator", "jaeger": "1.62.0"}
+2025-01-09T14:45:13.360596797Z 2025-01-09T14:45:13Z	INFO	setup	watching namespace(s)	{"namespaces": ""}
+2025-01-09T14:45:13.380935151Z 2025-01-09T14:45:13Z	INFO	The 'platform' option is explicitly set	{"platform": "OpenShift"}
+2025-01-09T14:45:13.383093832Z 2025-01-09T14:45:13Z	INFO	error getting batch/v1beta1 api list: the server could not find the requested resource
+2025-01-09T14:45:13.383093832Z 2025-01-09T14:45:13Z	INFO	found the cronjobs api in batch/v1
+2025-01-09T14:45:13.383984422Z 2025-01-09T14:45:13Z	INFO	found the horizontalpodautoscalers api in autoscaling/v2
+2025-01-09T14:45:13.384022674Z 2025-01-09T14:45:13Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:45:13.384022674Z 2025-01-09T14:45:13Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:45:13.404796733Z 2025-01-09T14:45:13Z	INFO	The service account running this operator has the role 'system:auth-delegator', enabling OAuth Proxy's 'delegate-urls' option
+2025-01-09T14:45:13.405724825Z 2025-01-09T14:45:13Z	INFO	finished the first auto-detection
+2025-01-09T14:45:13.405787378Z 2025-01-09T14:45:13Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:45:13.449451834Z 2025-01-09T14:45:13Z	INFO	controller-runtime.builder	Registering a mutating webhook	{"GVK": "jaegertracing.io/v1, Kind=Jaeger", "path": "/mutate-jaegertracing-io-v1-jaeger"}
+2025-01-09T14:45:13.449534889Z 2025-01-09T14:45:13Z	INFO	controller-runtime.webhook	Registering webhook	{"path": "/mutate-jaegertracing-io-v1-jaeger"}
+2025-01-09T14:45:13.449549620Z 2025-01-09T14:45:13Z	INFO	controller-runtime.builder	Registering a validating webhook	{"GVK": "jaegertracing.io/v1, Kind=Jaeger", "path": "/validate-jaegertracing-io-v1-jaeger"}
+2025-01-09T14:45:13.449588292Z 2025-01-09T14:45:13Z	INFO	controller-runtime.webhook	Registering webhook	{"path": "/validate-jaegertracing-io-v1-jaeger"}
+2025-01-09T14:45:13.449652446Z 2025-01-09T14:45:13Z	INFO	controller-runtime.webhook	Registering webhook	{"path": "/mutate-v1-deployment"}
+2025-01-09T14:45:13.449903680Z 2025-01-09T14:45:13Z	INFO	controller-runtime.metrics	Starting metrics server
+2025-01-09T14:45:13.450013306Z 2025-01-09T14:45:13Z	INFO	controller-runtime.metrics	Serving metrics server	{"bindAddress": "0.0.0.0:8383", "secure": false}
+2025-01-09T14:45:13.450060588Z 2025-01-09T14:45:13Z	INFO	starting server	{"kind": "health probe", "addr": "[::]:8081"}
+2025-01-09T14:45:13.450104041Z 2025-01-09T14:45:13Z	INFO	controller-runtime.webhook	Starting webhook server
+2025-01-09T14:45:13.450225678Z I0109 14:45:13.450189       1 leaderelection.go:250] attempting to acquire leader lease openshift-operators/31e04290.jaegertracing.io...
+2025-01-09T14:45:13.450353885Z 2025-01-09T14:45:13Z	INFO	controller-runtime.certwatcher	Updated current TLS certificate
+2025-01-09T14:45:13.450442850Z 2025-01-09T14:45:13Z	INFO	controller-runtime.webhook	Serving webhook server	{"host": "", "port": 9443}
+2025-01-09T14:45:13.450442850Z 2025-01-09T14:45:13Z	INFO	controller-runtime.certwatcher	Starting certificate watcher
+2025-01-09T14:45:13.460945141Z I0109 14:45:13.460886       1 leaderelection.go:260] successfully acquired lease openshift-operators/31e04290.jaegertracing.io
+2025-01-09T14:45:13.461170193Z 2025-01-09T14:45:13Z	DEBUG	events	jaeger-operator-574b9f9bd8-khzg6_59d3c731-b909-4c40-9026-07049ef14595 became leader	{"type": "Normal", "object": {"kind":"Lease","namespace":"openshift-operators","name":"31e04290.jaegertracing.io","uid":"2b0ff0b0-b641-4fcb-b391-97fb897cb195","apiVersion":"coordination.k8s.io/v1","resourceVersion":"41536"}, "reason": "LeaderElection"}
+2025-01-09T14:45:13.461297751Z 2025-01-09T14:45:13Z	INFO	Starting EventSource	{"controller": "jaeger", "controllerGroup": "jaegertracing.io", "controllerKind": "Jaeger", "source": "kind source: *v1.Jaeger"}
+2025-01-09T14:45:13.461297751Z 2025-01-09T14:45:13Z	INFO	Starting EventSource	{"controller": "namespace", "controllerGroup": "", "controllerKind": "Namespace", "source": "kind source: *v1.Namespace"}
+2025-01-09T14:45:13.461315072Z 2025-01-09T14:45:13Z	INFO	Starting EventSource	{"controller": "jaeger", "controllerGroup": "jaegertracing.io", "controllerKind": "Jaeger", "source": "kind source: *v1.Jaeger"}
+2025-01-09T14:45:13.461315072Z 2025-01-09T14:45:13Z	INFO	Starting Controller	{"controller": "jaeger", "controllerGroup": "jaegertracing.io", "controllerKind": "Jaeger"}
+2025-01-09T14:45:13.461362824Z 2025-01-09T14:45:13Z	INFO	Starting Controller	{"controller": "namespace", "controllerGroup": "", "controllerKind": "Namespace"}
+2025-01-09T14:45:13.561758070Z 2025-01-09T14:45:13Z	INFO	Starting workers	{"controller": "namespace", "controllerGroup": "", "controllerKind": "Namespace", "worker count": 1}
+2025-01-09T14:45:13.561758070Z 2025-01-09T14:45:13Z	INFO	Starting workers	{"controller": "jaeger", "controllerGroup": "jaegertracing.io", "controllerKind": "Jaeger", "worker count": 1}
+2025-01-09T14:45:13.561850655Z 2025-01-09T14:45:13Z	INFO	Reconciling Namespace	{"namespace": "", "name": "openshift-etcd"}
+2025-01-09T14:45:13.567401138Z 2025-01-09T14:45:13Z	INFO	Reconciling Namespace	{"namespace": "", "name": "openshift-cloud-controller-manager-operator"}
+2025-01-09T14:45:13.573476229Z 2025-01-09T14:45:13Z	INFO	Reconciling Namespace	{"namespace": "", "name": "openshift-cluster-storage-operator"}
+2025-01-09T14:45:13.580758719Z 2025-01-09T14:45:13Z	INFO	Reconciling Namespace	{"namespace": "", "name": "openshift-cluster-csi-drivers"}
+2025-01-09T14:45:13.586963978Z 2025-01-09T14:45:13Z	INFO	Reconciling Namespace	{"namespace": "", "name": "openshift-cluster-version"}
+2025-01-09T14:45:13.592052774Z 2025-01-09T14:45:13Z	INFO	Reconciling Namespace	{"namespace": "", "name": "openshift-host-network"}
+2025-01-09T14:45:13.598159688Z 2025-01-09T14:45:13Z	INFO	Reconciling Namespace	{"namespace": "", "name": "openshift-kube-apiserver"}
+2025-01-09T14:45:13.619268695Z 2025-01-09T14:45:13Z	INFO	Reconciling Namespace	{"namespace": "", "name": "openshift-operator-lifecycle-manager"}
+2025-01-09T14:45:13.626409257Z 2025-01-09T14:45:13Z	INFO	Reconciling Namespace	{"namespace": "", "name": "openshift-cloud-controller-manager"}
+2025-01-09T14:45:13.632285287Z 2025-01-09T14:45:13Z	INFO	Reconciling Namespace	{"namespace": "", "name": "openshift-cloud-network-config-controller"}
+2025-01-09T14:45:13.638188069Z 2025-01-09T14:45:13Z	INFO	Reconciling Namespace	{"namespace": "", "name": "openshift-kube-scheduler"}
+2025-01-09T14:45:13.644696065Z 2025-01-09T14:45:13Z	INFO	Reconciling Namespace	{"namespace": "", "name": "openshift-machine-api"}
+2025-01-09T14:45:13.652172345Z 2025-01-09T14:45:13Z	INFO	Reconciling Namespace	{"namespace": "", "name": "openshift-authentication"}
+2025-01-09T14:45:13.657657664Z 2025-01-09T14:45:13Z	INFO	Reconciling Namespace	{"namespace": "", "name": "openshift-cloud-platform-infra"}
+2025-01-09T14:45:13.673116653Z 2025-01-09T14:45:13Z	INFO	Reconciling Namespace	{"namespace": "", "name": "openshift-ingress-canary"}
+2025-01-09T14:45:13.681428391Z 2025-01-09T14:45:13Z	INFO	Reconciling Namespace	{"namespace": "", "name": "openshift-kube-apiserver-operator"}
+2025-01-09T14:45:13.687408967Z 2025-01-09T14:45:13Z	INFO	Reconciling Namespace	{"namespace": "", "name": "openshift-network-operator"}
+2025-01-09T14:45:13.692421919Z 2025-01-09T14:45:13Z	INFO	Reconciling Namespace	{"namespace": "", "name": "openshift-nutanix-infra"}
+2025-01-09T14:45:13.698768206Z 2025-01-09T14:45:13Z	INFO	Reconciling Namespace	{"namespace": "", "name": "openshift-ovirt-infra"}
+2025-01-09T14:45:13.707667007Z 2025-01-09T14:45:13Z	INFO	Reconciling Namespace	{"namespace": "", "name": "openshift-user-workload-monitoring"}
+2025-01-09T14:45:13.720499648Z 2025-01-09T14:45:13Z	INFO	Reconciling Namespace	{"namespace": "", "name": "default"}
+2025-01-09T14:45:13.725548642Z 2025-01-09T14:45:13Z	INFO	Reconciling Namespace	{"namespace": "", "name": "openshift-config-managed"}
+2025-01-09T14:45:13.733504460Z 2025-01-09T14:45:13Z	INFO	Reconciling Namespace	{"namespace": "", "name": "openshift-network-diagnostics"}
+2025-01-09T14:45:13.748617899Z 2025-01-09T14:45:13Z	INFO	Reconciling Namespace	{"namespace": "", "name": "openshift-operators"}
+2025-01-09T14:45:13.754899753Z 2025-01-09T14:45:13Z	INFO	Reconciling Namespace	{"namespace": "", "name": "openshift-service-ca"}
+2025-01-09T14:45:13.763449884Z 2025-01-09T14:45:13Z	INFO	Reconciling Namespace	{"namespace": "", "name": "openshift-console-user-settings"}
+2025-01-09T14:45:13.780809660Z 2025-01-09T14:45:13Z	INFO	Reconciling Namespace	{"namespace": "", "name": "openshift-controller-manager-operator"}
+2025-01-09T14:45:13.796891105Z 2025-01-09T14:45:13Z	INFO	Reconciling Namespace	{"namespace": "", "name": "openshift-config"}
+2025-01-09T14:45:13.809841473Z 2025-01-09T14:45:13Z	INFO	Reconciling Namespace	{"namespace": "", "name": "openshift-config-operator"}
+2025-01-09T14:45:13.815799138Z 2025-01-09T14:45:13Z	INFO	Reconciling Namespace	{"namespace": "", "name": "openshift-console"}
+2025-01-09T14:45:13.838306714Z 2025-01-09T14:45:13Z	INFO	Reconciling Namespace	{"namespace": "", "name": "openshift-dns-operator"}
+2025-01-09T14:45:13.845792535Z 2025-01-09T14:45:13Z	INFO	Reconciling Namespace	{"namespace": "", "name": "openshift-network-console"}
+2025-01-09T14:45:13.852510022Z 2025-01-09T14:45:13Z	INFO	Reconciling Namespace	{"namespace": "", "name": "openshift-route-controller-manager"}
+2025-01-09T14:45:13.857607309Z 2025-01-09T14:45:13Z	INFO	Reconciling Namespace	{"namespace": "", "name": "kube-node-lease"}
+2025-01-09T14:45:13.865668843Z 2025-01-09T14:45:13Z	INFO	Reconciling Namespace	{"namespace": "", "name": "openshift-cluster-node-tuning-operator"}
+2025-01-09T14:45:13.878946089Z 2025-01-09T14:45:13Z	INFO	Reconciling Namespace	{"namespace": "", "name": "openshift-kube-scheduler-operator"}
+2025-01-09T14:45:13.886989902Z 2025-01-09T14:45:13Z	INFO	Reconciling Namespace	{"namespace": "", "name": "openshift-image-registry"}
+2025-01-09T14:45:13.923555048Z 2025-01-09T14:45:13Z	INFO	Reconciling Namespace	{"namespace": "", "name": "openshift-kube-controller-manager"}
+2025-01-09T14:45:13.969952238Z 2025-01-09T14:45:13Z	INFO	Reconciling Namespace	{"namespace": "", "name": "openshift-e2e-loki"}
+2025-01-09T14:45:14.020133780Z 2025-01-09T14:45:14Z	INFO	Reconciling Namespace	{"namespace": "", "name": "openshift-oauth-apiserver"}
+2025-01-09T14:45:14.071080625Z 2025-01-09T14:45:14Z	INFO	Reconciling Namespace	{"namespace": "", "name": "openshift-cluster-samples-operator"}
+2025-01-09T14:45:14.119325698Z 2025-01-09T14:45:14Z	INFO	Reconciling Namespace	{"namespace": "", "name": "openshift-dns"}
+2025-01-09T14:45:14.168603210Z 2025-01-09T14:45:14Z	INFO	Reconciling Namespace	{"namespace": "", "name": "openshift-insights"}
+2025-01-09T14:45:14.225316220Z 2025-01-09T14:45:14Z	INFO	Reconciling Namespace	{"namespace": "", "name": "openshift-monitoring"}
+2025-01-09T14:45:14.315167213Z 2025-01-09T14:45:14Z	INFO	Reconciling Namespace	{"namespace": "", "name": "openshift-network-node-identity"}
+2025-01-09T14:45:14.333085061Z 2025-01-09T14:45:14Z	INFO	Reconciling Namespace	{"namespace": "", "name": "openshift-cluster-machine-approver"}
+2025-01-09T14:45:14.378330675Z 2025-01-09T14:45:14Z	INFO	Reconciling Namespace	{"namespace": "", "name": "openshift-console-operator"}
+2025-01-09T14:45:14.421318773Z 2025-01-09T14:45:14Z	INFO	Reconciling Namespace	{"namespace": "", "name": "openshift-etcd-operator"}
+2025-01-09T14:45:14.478380272Z 2025-01-09T14:45:14Z	INFO	Reconciling Namespace	{"namespace": "", "name": "openshift-marketplace"}
+2025-01-09T14:45:14.532153226Z 2025-01-09T14:45:14Z	INFO	Reconciling Namespace	{"namespace": "", "name": "openshift-node"}
+2025-01-09T14:45:14.570012606Z 2025-01-09T14:45:14Z	INFO	Reconciling Namespace	{"namespace": "", "name": "openshift"}
+2025-01-09T14:45:14.619608995Z 2025-01-09T14:45:14Z	INFO	Reconciling Namespace	{"namespace": "", "name": "openshift-authentication-operator"}
+2025-01-09T14:45:14.670711149Z 2025-01-09T14:45:14Z	INFO	Reconciling Namespace	{"namespace": "", "name": "openshift-vsphere-infra"}
+2025-01-09T14:45:14.731160348Z 2025-01-09T14:45:14Z	INFO	Reconciling Namespace	{"namespace": "", "name": "openshift-controller-manager"}
+2025-01-09T14:45:14.769460162Z 2025-01-09T14:45:14Z	INFO	Reconciling Namespace	{"namespace": "", "name": "openshift-ingress"}
+2025-01-09T14:45:14.830204108Z 2025-01-09T14:45:14Z	INFO	Reconciling Namespace	{"namespace": "", "name": "openshift-kube-storage-version-migrator-operator"}
+2025-01-09T14:45:14.872479536Z 2025-01-09T14:45:14Z	INFO	Reconciling Namespace	{"namespace": "", "name": "openshift-openstack-infra"}
+2025-01-09T14:45:14.918919788Z 2025-01-09T14:45:14Z	INFO	Reconciling Namespace	{"namespace": "", "name": "openshift-multus"}
+2025-01-09T14:45:14.968200049Z 2025-01-09T14:45:14Z	INFO	Reconciling Namespace	{"namespace": "", "name": "openshift-ovn-kubernetes"}
+2025-01-09T14:45:15.028406346Z 2025-01-09T14:45:15Z	INFO	Reconciling Namespace	{"namespace": "", "name": "kube-system"}
+2025-01-09T14:45:15.068398475Z 2025-01-09T14:45:15Z	INFO	Reconciling Namespace	{"namespace": "", "name": "openshift-machine-config-operator"}
+2025-01-09T14:45:15.123011947Z 2025-01-09T14:45:15Z	INFO	Reconciling Namespace	{"namespace": "", "name": "openshift-infra"}
+2025-01-09T14:45:15.169033355Z 2025-01-09T14:45:15Z	INFO	Reconciling Namespace	{"namespace": "", "name": "openshift-kube-storage-version-migrator"}
+2025-01-09T14:45:15.231729841Z 2025-01-09T14:45:15Z	INFO	Reconciling Namespace	{"namespace": "", "name": "openshift-service-ca-operator"}
+2025-01-09T14:45:15.275386997Z 2025-01-09T14:45:15Z	INFO	Reconciling Namespace	{"namespace": "", "name": "openshift-apiserver"}
+2025-01-09T14:45:15.318405666Z 2025-01-09T14:45:15Z	INFO	Reconciling Namespace	{"namespace": "", "name": "openshift-cloud-credential-operator"}
+2025-01-09T14:45:15.378973092Z 2025-01-09T14:45:15Z	INFO	Reconciling Namespace	{"namespace": "", "name": "openshift-ingress-operator"}
+2025-01-09T14:45:15.437063230Z 2025-01-09T14:45:15Z	INFO	Reconciling Namespace	{"namespace": "", "name": "openshift-kni-infra"}
+2025-01-09T14:45:15.470069146Z 2025-01-09T14:45:15Z	INFO	Reconciling Namespace	{"namespace": "", "name": "openshift-kube-controller-manager-operator"}
+2025-01-09T14:45:15.518848629Z 2025-01-09T14:45:15Z	INFO	Reconciling Namespace	{"namespace": "", "name": "kube-public"}
+2025-01-09T14:45:15.567751289Z 2025-01-09T14:45:15Z	INFO	Reconciling Namespace	{"namespace": "", "name": "openshift-apiserver-operator"}
+2025-01-09T14:45:18.373105776Z 2025-01-09T14:45:18Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:45:18.373105776Z 2025-01-09T14:45:18Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:45:18.406773249Z 2025-01-09T14:45:18Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:45:20.801739744Z 2025-01-09T14:45:20Z	INFO	verify deployment	{"namespace": "openshift-network-console"}
+2025-01-09T14:45:22.260473255Z 2025-01-09T14:45:22Z	INFO	Reconciling Namespace	{"namespace": "", "name": "istio-system"}
+2025-01-09T14:45:22.292810834Z 2025-01-09T14:45:22Z	INFO	Reconciling Namespace	{"namespace": "", "name": "istio-system"}
+2025-01-09T14:45:22.342180130Z 2025-01-09T14:45:22Z	INFO	Reconciling Namespace	{"namespace": "", "name": "istio-system"}
+2025-01-09T14:45:23.372402621Z 2025-01-09T14:45:23Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:45:23.372402621Z 2025-01-09T14:45:23Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:45:23.405951078Z 2025-01-09T14:45:23Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:45:25.128012979Z 2025-01-09T14:45:25Z	INFO	verify deployment	{"namespace": "openshift-machine-config-operator"}
+2025-01-09T14:45:28.371385239Z 2025-01-09T14:45:28Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:45:28.371385239Z 2025-01-09T14:45:28Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:45:28.406656053Z 2025-01-09T14:45:28Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:45:28.609346902Z 2025-01-09T14:45:28Z	INFO	Reconciling Namespace	{"namespace": "", "name": "istio-system"}
+2025-01-09T14:45:30.248220134Z 2025-01-09T14:45:30Z	INFO	verify deployment	{"namespace": "istio-system"}
+2025-01-09T14:45:30.896929968Z 2025-01-09T14:45:30Z	INFO	verify deployment	{"namespace": "openshift-machine-config-operator"}
+2025-01-09T14:45:33.372861777Z 2025-01-09T14:45:33Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:45:33.372861777Z 2025-01-09T14:45:33Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:45:33.406890211Z 2025-01-09T14:45:33Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:45:36.598817618Z 2025-01-09T14:45:36Z	INFO	verify deployment	{"namespace": "openshift-machine-config-operator"}
+2025-01-09T14:45:38.372561446Z 2025-01-09T14:45:38Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:45:38.372561446Z 2025-01-09T14:45:38Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:45:38.406278812Z 2025-01-09T14:45:38Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:45:42.376698722Z 2025-01-09T14:45:42Z	INFO	verify deployment	{"namespace": "openshift-machine-config-operator"}
+2025-01-09T14:45:43.242437622Z 2025-01-09T14:45:43Z	INFO	verify deployment	{"namespace": "istio-system"}
+2025-01-09T14:45:43.360004125Z 2025-01-09T14:45:43Z	INFO	verify deployment	{"namespace": "istio-system"}
+2025-01-09T14:45:43.374939594Z 2025-01-09T14:45:43Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:45:43.374939594Z 2025-01-09T14:45:43Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:45:43.406492029Z 2025-01-09T14:45:43Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:45:48.077502390Z 2025-01-09T14:45:48Z	INFO	verify deployment	{"namespace": "openshift-machine-config-operator"}
+2025-01-09T14:45:48.375199176Z 2025-01-09T14:45:48Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:45:48.375199176Z 2025-01-09T14:45:48Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:45:48.406837780Z 2025-01-09T14:45:48Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:45:53.381530012Z 2025-01-09T14:45:53Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:45:53.381530012Z 2025-01-09T14:45:53Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:45:53.406641318Z 2025-01-09T14:45:53Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:45:53.775552029Z 2025-01-09T14:45:53Z	INFO	verify deployment	{"namespace": "openshift-machine-config-operator"}
+2025-01-09T14:45:58.381233376Z 2025-01-09T14:45:58Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:45:58.381233376Z 2025-01-09T14:45:58Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:45:58.406189553Z 2025-01-09T14:45:58Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:45:59.462732566Z 2025-01-09T14:45:59Z	INFO	verify deployment	{"namespace": "openshift-machine-config-operator"}
+2025-01-09T14:46:02.267616173Z 2025-01-09T14:46:02Z	INFO	Reconciling Namespace	{"namespace": "", "name": "cert-manager"}
+2025-01-09T14:46:02.313257491Z 2025-01-09T14:46:02Z	INFO	Reconciling Namespace	{"namespace": "", "name": "cert-manager"}
+2025-01-09T14:46:02.326071330Z 2025-01-09T14:46:02Z	INFO	Reconciling Namespace	{"namespace": "", "name": "cert-manager"}
+2025-01-09T14:46:03.372772816Z 2025-01-09T14:46:03Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:46:03.372772816Z 2025-01-09T14:46:03Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:46:03.406395368Z 2025-01-09T14:46:03Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:46:05.177643862Z 2025-01-09T14:46:05Z	INFO	verify deployment	{"namespace": "openshift-machine-config-operator"}
+2025-01-09T14:46:07.685706483Z 2025-01-09T14:46:07Z	INFO	Reconciling Namespace	{"namespace": "", "name": "knative-serving"}
+2025-01-09T14:46:07.706694275Z 2025-01-09T14:46:07Z	INFO	Reconciling Namespace	{"namespace": "", "name": "knative-serving"}
+2025-01-09T14:46:07.730936449Z 2025-01-09T14:46:07Z	INFO	Reconciling Namespace	{"namespace": "", "name": "knative-serving"}
+2025-01-09T14:46:07.978868805Z 2025-01-09T14:46:07Z	INFO	Reconciling Namespace	{"namespace": "", "name": "knative-eventing"}
+2025-01-09T14:46:07.998339327Z 2025-01-09T14:46:07Z	INFO	Reconciling Namespace	{"namespace": "", "name": "knative-eventing"}
+2025-01-09T14:46:08.029007362Z 2025-01-09T14:46:08Z	INFO	Reconciling Namespace	{"namespace": "", "name": "knative-eventing"}
+2025-01-09T14:46:08.372515331Z 2025-01-09T14:46:08Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:46:08.372515331Z 2025-01-09T14:46:08Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:46:08.402113799Z 2025-01-09T14:46:08Z	INFO	Reconciling Namespace	{"namespace": "", "name": "serving-tests"}
+2025-01-09T14:46:08.406312892Z 2025-01-09T14:46:08Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:46:08.424285214Z 2025-01-09T14:46:08Z	INFO	Reconciling Namespace	{"namespace": "", "name": "serving-tests"}
+2025-01-09T14:46:08.445837086Z 2025-01-09T14:46:08Z	INFO	Reconciling Namespace	{"namespace": "", "name": "serving-tests"}
+2025-01-09T14:46:08.813337837Z 2025-01-09T14:46:08Z	INFO	Reconciling Namespace	{"namespace": "", "name": "serving-tests-alt"}
+2025-01-09T14:46:08.836882574Z 2025-01-09T14:46:08Z	INFO	Reconciling Namespace	{"namespace": "", "name": "serving-tests-alt"}
+2025-01-09T14:46:08.853441011Z 2025-01-09T14:46:08Z	INFO	Reconciling Namespace	{"namespace": "", "name": "serving-tests-alt"}
+2025-01-09T14:46:09.116688929Z 2025-01-09T14:46:09Z	INFO	Reconciling Namespace	{"namespace": "", "name": "serverless-tests"}
+2025-01-09T14:46:09.129032821Z 2025-01-09T14:46:09Z	INFO	Reconciling Namespace	{"namespace": "", "name": "serverless-tests"}
+2025-01-09T14:46:09.145768232Z 2025-01-09T14:46:09Z	INFO	Reconciling Namespace	{"namespace": "", "name": "serverless-tests"}
+2025-01-09T14:46:09.527564992Z 2025-01-09T14:46:09Z	INFO	Reconciling Namespace	{"namespace": "", "name": "eventing-e2e0"}
+2025-01-09T14:46:09.543591453Z 2025-01-09T14:46:09Z	INFO	Reconciling Namespace	{"namespace": "", "name": "eventing-e2e0"}
+2025-01-09T14:46:09.560559627Z 2025-01-09T14:46:09Z	INFO	Reconciling Namespace	{"namespace": "", "name": "eventing-e2e0"}
+2025-01-09T14:46:09.943833700Z 2025-01-09T14:46:09Z	INFO	Reconciling Namespace	{"namespace": "", "name": "eventing-e2e1"}
+2025-01-09T14:46:09.966151655Z 2025-01-09T14:46:09Z	INFO	Reconciling Namespace	{"namespace": "", "name": "eventing-e2e1"}
+2025-01-09T14:46:09.979891488Z 2025-01-09T14:46:09Z	INFO	Reconciling Namespace	{"namespace": "", "name": "eventing-e2e1"}
+2025-01-09T14:46:10.348043200Z 2025-01-09T14:46:10Z	INFO	Reconciling Namespace	{"namespace": "", "name": "eventing-e2e2"}
+2025-01-09T14:46:10.367998482Z 2025-01-09T14:46:10Z	INFO	Reconciling Namespace	{"namespace": "", "name": "eventing-e2e2"}
+2025-01-09T14:46:10.390433484Z 2025-01-09T14:46:10Z	INFO	Reconciling Namespace	{"namespace": "", "name": "eventing-e2e2"}
+2025-01-09T14:46:10.655347611Z 2025-01-09T14:46:10Z	INFO	Reconciling Namespace	{"namespace": "", "name": "eventing-e2e3"}
+2025-01-09T14:46:10.680680006Z 2025-01-09T14:46:10Z	INFO	Reconciling Namespace	{"namespace": "", "name": "eventing-e2e3"}
+2025-01-09T14:46:10.687396894Z 2025-01-09T14:46:10Z	INFO	Reconciling Namespace	{"namespace": "", "name": "eventing-e2e3"}
+2025-01-09T14:46:10.905989736Z 2025-01-09T14:46:10Z	INFO	verify deployment	{"namespace": "openshift-machine-config-operator"}
+2025-01-09T14:46:11.073692526Z 2025-01-09T14:46:11Z	INFO	Reconciling Namespace	{"namespace": "", "name": "eventing-e2e4"}
+2025-01-09T14:46:11.086409171Z 2025-01-09T14:46:11Z	INFO	Reconciling Namespace	{"namespace": "", "name": "eventing-e2e4"}
+2025-01-09T14:46:11.103116011Z 2025-01-09T14:46:11Z	INFO	Reconciling Namespace	{"namespace": "", "name": "eventing-e2e4"}
+2025-01-09T14:46:11.472953848Z 2025-01-09T14:46:11Z	INFO	Reconciling Namespace	{"namespace": "", "name": "tenant-1"}
+2025-01-09T14:46:11.490578240Z 2025-01-09T14:46:11Z	INFO	Reconciling Namespace	{"namespace": "", "name": "tenant-1"}
+2025-01-09T14:46:11.507778867Z 2025-01-09T14:46:11Z	INFO	Reconciling Namespace	{"namespace": "", "name": "tenant-1"}
+2025-01-09T14:46:11.881847992Z 2025-01-09T14:46:11Z	INFO	Reconciling Namespace	{"namespace": "", "name": "tenant-2"}
+2025-01-09T14:46:11.897325492Z 2025-01-09T14:46:11Z	INFO	Reconciling Namespace	{"namespace": "", "name": "tenant-2"}
+2025-01-09T14:46:11.911408754Z 2025-01-09T14:46:11Z	INFO	Reconciling Namespace	{"namespace": "", "name": "tenant-2"}
+2025-01-09T14:46:13.373122943Z 2025-01-09T14:46:13Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:46:13.373122943Z 2025-01-09T14:46:13Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:46:13.406467087Z 2025-01-09T14:46:13Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:46:13.544909263Z 2025-01-09T14:46:13Z	INFO	Reconciling Namespace	{"namespace": "", "name": "eventing-e2e3"}
+2025-01-09T14:46:13.578399706Z 2025-01-09T14:46:13Z	INFO	Reconciling Namespace	{"namespace": "", "name": "eventing-e2e0"}
+2025-01-09T14:46:13.613559713Z 2025-01-09T14:46:13Z	INFO	Reconciling Namespace	{"namespace": "", "name": "eventing-e2e4"}
+2025-01-09T14:46:13.649362826Z 2025-01-09T14:46:13Z	INFO	Reconciling Namespace	{"namespace": "", "name": "eventing-e2e1"}
+2025-01-09T14:46:13.672428843Z 2025-01-09T14:46:13Z	INFO	Reconciling Namespace	{"namespace": "", "name": "knative-eventing"}
+2025-01-09T14:46:13.679566305Z 2025-01-09T14:46:13Z	INFO	Reconciling Namespace	{"namespace": "", "name": "eventing-e2e2"}
+2025-01-09T14:46:13.698712842Z 2025-01-09T14:46:13Z	INFO	Reconciling Namespace	{"namespace": "", "name": "knative-serving"}
+2025-01-09T14:46:13.751455458Z 2025-01-09T14:46:13Z	INFO	Reconciling Namespace	{"namespace": "", "name": "tenant-1"}
+2025-01-09T14:46:13.778020921Z 2025-01-09T14:46:13Z	INFO	Reconciling Namespace	{"namespace": "", "name": "tenant-2"}
+2025-01-09T14:46:16.617908651Z 2025-01-09T14:46:16Z	INFO	verify deployment	{"namespace": "openshift-machine-config-operator"}
+2025-01-09T14:46:18.371938876Z 2025-01-09T14:46:18Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:46:18.371938876Z 2025-01-09T14:46:18Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:46:18.406713803Z 2025-01-09T14:46:18Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:46:22.299662157Z 2025-01-09T14:46:22Z	INFO	verify deployment	{"namespace": "openshift-machine-config-operator"}
+2025-01-09T14:46:23.371947839Z 2025-01-09T14:46:23Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:46:23.371947839Z 2025-01-09T14:46:23Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:46:23.406360095Z 2025-01-09T14:46:23Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:46:27.988777232Z 2025-01-09T14:46:27Z	INFO	verify deployment	{"namespace": "openshift-machine-config-operator"}
+2025-01-09T14:46:28.369724297Z 2025-01-09T14:46:28Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:46:28.369724297Z 2025-01-09T14:46:28Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:46:28.405976097Z 2025-01-09T14:46:28Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:46:33.373521718Z 2025-01-09T14:46:33Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:46:33.373521718Z 2025-01-09T14:46:33Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:46:33.406654107Z 2025-01-09T14:46:33Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:46:33.674351542Z 2025-01-09T14:46:33Z	INFO	verify deployment	{"namespace": "openshift-machine-config-operator"}
+2025-01-09T14:46:38.372785715Z 2025-01-09T14:46:38Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:46:38.372785715Z 2025-01-09T14:46:38Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:46:38.406123866Z 2025-01-09T14:46:38Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:46:39.361351746Z 2025-01-09T14:46:39Z	INFO	verify deployment	{"namespace": "openshift-machine-config-operator"}
+2025-01-09T14:46:43.370260000Z 2025-01-09T14:46:43Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:46:43.370260000Z 2025-01-09T14:46:43Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:46:43.406489934Z 2025-01-09T14:46:43Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:46:48.372091398Z 2025-01-09T14:46:48Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:46:48.372091398Z 2025-01-09T14:46:48Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:46:48.406099097Z 2025-01-09T14:46:48Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:46:53.373776427Z 2025-01-09T14:46:53Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:46:53.373776427Z 2025-01-09T14:46:53Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:46:53.406537776Z 2025-01-09T14:46:53Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:46:58.373909083Z 2025-01-09T14:46:58Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:46:58.374010979Z 2025-01-09T14:46:58Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:46:58.406280180Z 2025-01-09T14:46:58Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:47:03.369722833Z 2025-01-09T14:47:03Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:47:03.369722833Z 2025-01-09T14:47:03Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:47:03.406563472Z 2025-01-09T14:47:03Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:47:08.370851318Z 2025-01-09T14:47:08Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:47:08.370851318Z 2025-01-09T14:47:08Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:47:08.406265455Z 2025-01-09T14:47:08Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:47:13.373991199Z 2025-01-09T14:47:13Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:47:13.373991199Z 2025-01-09T14:47:13Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:47:13.405961873Z 2025-01-09T14:47:13Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:47:18.371741746Z 2025-01-09T14:47:18Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:47:18.371741746Z 2025-01-09T14:47:18Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:47:18.406803054Z 2025-01-09T14:47:18Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:47:23.373854049Z 2025-01-09T14:47:23Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:47:23.373854049Z 2025-01-09T14:47:23Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:47:23.405844273Z 2025-01-09T14:47:23Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:47:28.370399949Z 2025-01-09T14:47:28Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:47:28.370399949Z 2025-01-09T14:47:28Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:47:28.405844548Z 2025-01-09T14:47:28Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:47:33.369996170Z 2025-01-09T14:47:33Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:47:33.369996170Z 2025-01-09T14:47:33Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:47:33.406196942Z 2025-01-09T14:47:33Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:47:38.373393695Z 2025-01-09T14:47:38Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:47:38.373393695Z 2025-01-09T14:47:38Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:47:38.406197792Z 2025-01-09T14:47:38Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:47:43.369269814Z 2025-01-09T14:47:43Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:47:43.369269814Z 2025-01-09T14:47:43Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:47:43.406668993Z 2025-01-09T14:47:43Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:47:48.372553076Z 2025-01-09T14:47:48Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:47:48.372553076Z 2025-01-09T14:47:48Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:47:48.406210682Z 2025-01-09T14:47:48Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:47:53.373378651Z 2025-01-09T14:47:53Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:47:53.373378651Z 2025-01-09T14:47:53Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:47:53.406294665Z 2025-01-09T14:47:53Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:47:58.371479962Z 2025-01-09T14:47:58Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:47:58.371479962Z 2025-01-09T14:47:58Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:47:58.406337799Z 2025-01-09T14:47:58Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:48:03.369140515Z 2025-01-09T14:48:03Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:48:03.369140515Z 2025-01-09T14:48:03Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:48:03.406277861Z 2025-01-09T14:48:03Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:48:08.371862611Z 2025-01-09T14:48:08Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:48:08.371862611Z 2025-01-09T14:48:08Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:48:08.406582120Z 2025-01-09T14:48:08Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:48:13.368630249Z 2025-01-09T14:48:13Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:48:13.368630249Z 2025-01-09T14:48:13Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:48:13.405842279Z 2025-01-09T14:48:13Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:48:17.834740895Z 2025-01-09T14:48:17Z	INFO	verify deployment	{"namespace": "openshift-machine-config-operator"}
+2025-01-09T14:48:18.372750050Z 2025-01-09T14:48:18Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:48:18.372827645Z 2025-01-09T14:48:18Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:48:18.406581929Z 2025-01-09T14:48:18Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:48:22.318714726Z 2025-01-09T14:48:22Z	INFO	verify deployment	{"namespace": "openshift-cloud-network-config-controller"}
+2025-01-09T14:48:23.374550678Z 2025-01-09T14:48:23Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:48:23.374550678Z 2025-01-09T14:48:23Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:48:23.406155582Z 2025-01-09T14:48:23Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:48:28.370839209Z 2025-01-09T14:48:28Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:48:28.370839209Z 2025-01-09T14:48:28Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:48:28.406671762Z 2025-01-09T14:48:28Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:48:28.741294398Z 2025-01-09T14:48:28Z	INFO	verify deployment	{"namespace": "openshift-monitoring"}
+2025-01-09T14:48:29.467695648Z 2025-01-09T14:48:29Z	INFO	verify deployment	{"namespace": "openshift-multus"}
+2025-01-09T14:48:29.768807103Z 2025-01-09T14:48:29Z	INFO	verify deployment	{"namespace": "openshift-monitoring"}
+2025-01-09T14:48:31.852015513Z 2025-01-09T14:48:31Z	INFO	verify deployment	{"namespace": "openshift-monitoring"}
+2025-01-09T14:48:31.865567328Z 2025-01-09T14:48:31Z	INFO	verify deployment	{"namespace": "openshift-monitoring"}
+2025-01-09T14:48:33.382783682Z 2025-01-09T14:48:33Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:48:33.382783682Z 2025-01-09T14:48:33Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:48:33.406541673Z 2025-01-09T14:48:33Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:48:33.911228568Z 2025-01-09T14:48:33Z	INFO	verify deployment	{"namespace": "openshift-monitoring"}
+2025-01-09T14:48:36.903593721Z 2025-01-09T14:48:36Z	INFO	verify deployment	{"namespace": "openshift-monitoring"}
+2025-01-09T14:48:37.858206551Z 2025-01-09T14:48:37Z	INFO	verify deployment	{"namespace": "openshift-monitoring"}
+2025-01-09T14:48:37.868205155Z 2025-01-09T14:48:37Z	INFO	verify deployment	{"namespace": "openshift-ovn-kubernetes"}
+2025-01-09T14:48:38.371311501Z 2025-01-09T14:48:38Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:48:38.371311501Z 2025-01-09T14:48:38Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:48:38.406839227Z 2025-01-09T14:48:38Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:48:39.667992236Z 2025-01-09T14:48:39Z	INFO	verify deployment	{"namespace": "openshift-network-diagnostics"}
+2025-01-09T14:48:43.369145323Z 2025-01-09T14:48:43Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:48:43.369145323Z 2025-01-09T14:48:43Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:48:43.406266850Z 2025-01-09T14:48:43Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:48:45.269596965Z 2025-01-09T14:48:45Z	INFO	verify deployment	{"namespace": "openshift-network-console"}
+2025-01-09T14:48:47.125336187Z 2025-01-09T14:48:47Z	INFO	verify deployment	{"namespace": "openshift-monitoring"}
+2025-01-09T14:48:48.161405712Z 2025-01-09T14:48:48Z	INFO	verify deployment	{"namespace": "openshift-monitoring"}
+2025-01-09T14:48:48.372135547Z 2025-01-09T14:48:48Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:48:48.372135547Z 2025-01-09T14:48:48Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:48:48.406027507Z 2025-01-09T14:48:48Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:48:50.263333191Z 2025-01-09T14:48:50Z	INFO	verify deployment	{"namespace": "openshift-monitoring"}
+2025-01-09T14:48:50.271799403Z 2025-01-09T14:48:50Z	INFO	verify deployment	{"namespace": "openshift-monitoring"}
+2025-01-09T14:48:52.310457227Z 2025-01-09T14:48:52Z	INFO	verify deployment	{"namespace": "openshift-monitoring"}
+2025-01-09T14:48:53.372784807Z 2025-01-09T14:48:53Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:48:53.372784807Z 2025-01-09T14:48:53Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:48:53.406366739Z 2025-01-09T14:48:53Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:48:55.310098347Z 2025-01-09T14:48:55Z	INFO	verify deployment	{"namespace": "openshift-monitoring"}
+2025-01-09T14:48:56.263466934Z 2025-01-09T14:48:56Z	INFO	verify deployment	{"namespace": "openshift-monitoring"}
+2025-01-09T14:48:58.370698330Z 2025-01-09T14:48:58Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:48:58.370698330Z 2025-01-09T14:48:58Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:48:58.406517519Z 2025-01-09T14:48:58Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:49:03.369212976Z 2025-01-09T14:49:03Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:49:03.369212976Z 2025-01-09T14:49:03Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:49:03.406847526Z 2025-01-09T14:49:03Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:49:08.379981420Z 2025-01-09T14:49:08Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:49:08.379981420Z 2025-01-09T14:49:08Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:49:08.406359856Z 2025-01-09T14:49:08Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:49:13.372861499Z 2025-01-09T14:49:13Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:49:13.372861499Z 2025-01-09T14:49:13Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:49:13.406369287Z 2025-01-09T14:49:13Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:49:18.368871186Z 2025-01-09T14:49:18Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:49:18.368950610Z 2025-01-09T14:49:18Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:49:18.406058503Z 2025-01-09T14:49:18Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:49:23.372117582Z 2025-01-09T14:49:23Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:49:23.372117582Z 2025-01-09T14:49:23Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:49:23.406537406Z 2025-01-09T14:49:23Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:49:28.371606416Z 2025-01-09T14:49:28Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:49:28.371606416Z 2025-01-09T14:49:28Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:49:28.406218912Z 2025-01-09T14:49:28Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:49:33.368288778Z 2025-01-09T14:49:33Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:49:33.368288778Z 2025-01-09T14:49:33Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:49:33.406627871Z 2025-01-09T14:49:33Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:49:38.373904639Z 2025-01-09T14:49:38Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:49:38.373904639Z 2025-01-09T14:49:38Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:49:38.406855338Z 2025-01-09T14:49:38Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:49:43.372919298Z 2025-01-09T14:49:43Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:49:43.372919298Z 2025-01-09T14:49:43Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:49:43.405904979Z 2025-01-09T14:49:43Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:49:48.369307525Z 2025-01-09T14:49:48Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:49:48.369307525Z 2025-01-09T14:49:48Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:49:48.406671083Z 2025-01-09T14:49:48Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:49:53.378287067Z 2025-01-09T14:49:53Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:49:53.378287067Z 2025-01-09T14:49:53Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:49:53.405885204Z 2025-01-09T14:49:53Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:49:58.373741789Z 2025-01-09T14:49:58Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:49:58.373741789Z 2025-01-09T14:49:58Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:49:58.406563360Z 2025-01-09T14:49:58Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:50:03.368158411Z 2025-01-09T14:50:03Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:50:03.368158411Z 2025-01-09T14:50:03Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:50:03.406450091Z 2025-01-09T14:50:03Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:50:08.371285497Z 2025-01-09T14:50:08Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:50:08.371285497Z 2025-01-09T14:50:08Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:50:08.406174694Z 2025-01-09T14:50:08Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:50:13.371187299Z 2025-01-09T14:50:13Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:50:13.371187299Z 2025-01-09T14:50:13Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:50:13.406574095Z 2025-01-09T14:50:13Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:50:18.370689270Z 2025-01-09T14:50:18Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:50:18.370689270Z 2025-01-09T14:50:18Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:50:18.406173431Z 2025-01-09T14:50:18Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:50:23.374193777Z 2025-01-09T14:50:23Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:50:23.374193777Z 2025-01-09T14:50:23Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:50:23.406622805Z 2025-01-09T14:50:23Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:50:28.369696429Z 2025-01-09T14:50:28Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:50:28.369696429Z 2025-01-09T14:50:28Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:50:28.406108212Z 2025-01-09T14:50:28Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:50:33.088347558Z 2025-01-09T14:50:33Z	INFO	verify deployment	{"namespace": "openshift-machine-config-operator"}
+2025-01-09T14:50:33.372093342Z 2025-01-09T14:50:33Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:50:33.372093342Z 2025-01-09T14:50:33Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:50:33.406673831Z 2025-01-09T14:50:33Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:50:38.369264167Z 2025-01-09T14:50:38Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:50:38.369264167Z 2025-01-09T14:50:38Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:50:38.406364957Z 2025-01-09T14:50:38Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:50:38.772007031Z 2025-01-09T14:50:38Z	INFO	verify deployment	{"namespace": "openshift-machine-config-operator"}
+2025-01-09T14:50:43.371086160Z 2025-01-09T14:50:43Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:50:43.371086160Z 2025-01-09T14:50:43Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:50:43.406513106Z 2025-01-09T14:50:43Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:50:45.150016189Z 2025-01-09T14:50:45Z	INFO	verify deployment	{"namespace": "openshift-machine-config-operator"}
+2025-01-09T14:50:48.373081570Z 2025-01-09T14:50:48Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:50:48.373081570Z 2025-01-09T14:50:48Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:50:48.406193726Z 2025-01-09T14:50:48Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:50:53.373726502Z 2025-01-09T14:50:53Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:50:53.373726502Z 2025-01-09T14:50:53Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:50:53.405954498Z 2025-01-09T14:50:53Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:50:58.372424877Z 2025-01-09T14:50:58Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:50:58.372424877Z 2025-01-09T14:50:58Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:50:58.406176809Z 2025-01-09T14:50:58Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:51:03.371203987Z 2025-01-09T14:51:03Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:51:03.371203987Z 2025-01-09T14:51:03Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:51:03.406724559Z 2025-01-09T14:51:03Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:51:06.750354325Z 2025-01-09T14:51:06Z	INFO	verify deployment	{"namespace": "openshift-machine-config-operator"}
+2025-01-09T14:51:08.368631016Z 2025-01-09T14:51:08Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:51:08.368631016Z 2025-01-09T14:51:08Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:51:08.406273698Z 2025-01-09T14:51:08Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:51:12.435115657Z 2025-01-09T14:51:12Z	INFO	verify deployment	{"namespace": "openshift-machine-config-operator"}
+2025-01-09T14:51:13.371901523Z 2025-01-09T14:51:13Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:51:13.371901523Z 2025-01-09T14:51:13Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:51:13.405945712Z 2025-01-09T14:51:13Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:51:18.120740380Z 2025-01-09T14:51:18Z	INFO	verify deployment	{"namespace": "openshift-machine-config-operator"}
+2025-01-09T14:51:18.372004521Z 2025-01-09T14:51:18Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:51:18.372004521Z 2025-01-09T14:51:18Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:51:18.405894871Z 2025-01-09T14:51:18Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:51:23.372794739Z 2025-01-09T14:51:23Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:51:23.372794739Z 2025-01-09T14:51:23Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:51:23.406679819Z 2025-01-09T14:51:23Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:51:24.462132338Z 2025-01-09T14:51:24Z	INFO	verify deployment	{"namespace": "openshift-cloud-network-config-controller"}
+2025-01-09T14:51:28.354652559Z 2025-01-09T14:51:28Z	INFO	verify deployment	{"namespace": "openshift-machine-config-operator"}
+2025-01-09T14:51:28.370683152Z 2025-01-09T14:51:28Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:51:28.370683152Z 2025-01-09T14:51:28Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:51:28.406330081Z 2025-01-09T14:51:28Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:51:31.611621847Z 2025-01-09T14:51:31Z	INFO	verify deployment	{"namespace": "openshift-multus"}
+2025-01-09T14:51:33.370053496Z 2025-01-09T14:51:33Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:51:33.370053496Z 2025-01-09T14:51:33Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:51:33.406660818Z 2025-01-09T14:51:33Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:51:34.043748158Z 2025-01-09T14:51:34Z	INFO	verify deployment	{"namespace": "openshift-machine-config-operator"}
+2025-01-09T14:51:38.373673151Z 2025-01-09T14:51:38Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:51:38.373673151Z 2025-01-09T14:51:38Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:51:38.406061456Z 2025-01-09T14:51:38Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:51:39.730978804Z 2025-01-09T14:51:39Z	INFO	verify deployment	{"namespace": "openshift-machine-config-operator"}
+2025-01-09T14:51:40.007059606Z 2025-01-09T14:51:40Z	INFO	verify deployment	{"namespace": "openshift-ovn-kubernetes"}
+2025-01-09T14:51:41.805043584Z 2025-01-09T14:51:41Z	INFO	verify deployment	{"namespace": "openshift-network-diagnostics"}
+2025-01-09T14:51:43.373273407Z 2025-01-09T14:51:43Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:51:43.373273407Z 2025-01-09T14:51:43Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:51:43.406760077Z 2025-01-09T14:51:43Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:51:46.621569816Z 2025-01-09T14:51:46Z	INFO	verify deployment	{"namespace": "openshift-machine-config-operator"}
+2025-01-09T14:51:47.406828112Z 2025-01-09T14:51:47Z	INFO	verify deployment	{"namespace": "openshift-network-console"}
+2025-01-09T14:51:48.377794296Z 2025-01-09T14:51:48Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:51:48.377794296Z 2025-01-09T14:51:48Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:51:48.406609454Z 2025-01-09T14:51:48Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:51:49.835267119Z 2025-01-09T14:51:49Z	INFO	verify deployment	{"namespace": "openshift-cloud-network-config-controller"}
+2025-01-09T14:51:52.308831821Z 2025-01-09T14:51:52Z	INFO	verify deployment	{"namespace": "openshift-machine-config-operator"}
+2025-01-09T14:51:53.371003316Z 2025-01-09T14:51:53Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:51:53.371003316Z 2025-01-09T14:51:53Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:51:53.406618667Z 2025-01-09T14:51:53Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:51:57.005176338Z 2025-01-09T14:51:57Z	INFO	verify deployment	{"namespace": "openshift-multus"}
+2025-01-09T14:51:57.990493316Z 2025-01-09T14:51:57Z	INFO	verify deployment	{"namespace": "openshift-machine-config-operator"}
+2025-01-09T14:51:58.370197257Z 2025-01-09T14:51:58Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:51:58.370197257Z 2025-01-09T14:51:58Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:51:58.406562187Z 2025-01-09T14:51:58Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:52:03.371829506Z 2025-01-09T14:52:03Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:52:03.371829506Z 2025-01-09T14:52:03Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:52:03.406630978Z 2025-01-09T14:52:03Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:52:03.674734226Z 2025-01-09T14:52:03Z	INFO	verify deployment	{"namespace": "openshift-machine-config-operator"}
+2025-01-09T14:52:05.408083442Z 2025-01-09T14:52:05Z	INFO	verify deployment	{"namespace": "openshift-ovn-kubernetes"}
+2025-01-09T14:52:07.123732661Z 2025-01-09T14:52:07Z	INFO	Reconciling Namespace	{"namespace": "", "name": "openshift-serverless"}
+2025-01-09T14:52:07.206505038Z 2025-01-09T14:52:07Z	INFO	verify deployment	{"namespace": "openshift-network-diagnostics"}
+2025-01-09T14:52:07.210077700Z 2025-01-09T14:52:07Z	INFO	Reconciling Namespace	{"namespace": "", "name": "openshift-serverless"}
+2025-01-09T14:52:08.370792939Z 2025-01-09T14:52:08Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:52:08.370792939Z 2025-01-09T14:52:08Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:52:08.406537654Z 2025-01-09T14:52:08Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:52:09.370225473Z 2025-01-09T14:52:09Z	INFO	verify deployment	{"namespace": "openshift-machine-config-operator"}
+2025-01-09T14:52:12.807394164Z 2025-01-09T14:52:12Z	INFO	verify deployment	{"namespace": "openshift-network-console"}
+2025-01-09T14:52:13.379219440Z 2025-01-09T14:52:13Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:52:13.379219440Z 2025-01-09T14:52:13Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:52:13.406373446Z 2025-01-09T14:52:13Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:52:14.580264798Z 2025-01-09T14:52:14Z	INFO	Reconciling Namespace	{"namespace": "", "name": "cert-manager-operator"}
+2025-01-09T14:52:14.597010479Z 2025-01-09T14:52:14Z	INFO	Reconciling Namespace	{"namespace": "", "name": "cert-manager-operator"}
+2025-01-09T14:52:14.613498646Z 2025-01-09T14:52:14Z	INFO	Reconciling Namespace	{"namespace": "", "name": "cert-manager-operator"}
+2025-01-09T14:52:15.053571683Z 2025-01-09T14:52:15Z	INFO	verify deployment	{"namespace": "openshift-machine-config-operator"}
+2025-01-09T14:52:15.207466686Z 2025-01-09T14:52:15Z	INFO	verify deployment	{"namespace": "openshift-cloud-network-config-controller"}
+2025-01-09T14:52:15.369766934Z 2025-01-09T14:52:15Z	INFO	Reconciling Namespace	{"namespace": "", "name": "cert-manager-operator"}
+2025-01-09T14:52:18.369388049Z 2025-01-09T14:52:18Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:52:18.369388049Z 2025-01-09T14:52:18Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:52:18.405868370Z 2025-01-09T14:52:18Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:52:20.741444955Z 2025-01-09T14:52:20Z	INFO	verify deployment	{"namespace": "openshift-machine-config-operator"}
+2025-01-09T14:52:22.407220075Z 2025-01-09T14:52:22Z	INFO	verify deployment	{"namespace": "openshift-multus"}
+2025-01-09T14:52:23.373468360Z 2025-01-09T14:52:23Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:52:23.373468360Z 2025-01-09T14:52:23Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:52:23.406606313Z 2025-01-09T14:52:23Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:52:26.431133801Z 2025-01-09T14:52:26Z	INFO	verify deployment	{"namespace": "openshift-machine-config-operator"}
+2025-01-09T14:52:28.371686743Z 2025-01-09T14:52:28Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:52:28.371686743Z 2025-01-09T14:52:28Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:52:28.405962401Z 2025-01-09T14:52:28Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:52:30.807535627Z 2025-01-09T14:52:30Z	INFO	verify deployment	{"namespace": "openshift-ovn-kubernetes"}
+2025-01-09T14:52:32.155581984Z 2025-01-09T14:52:32Z	INFO	verify deployment	{"namespace": "openshift-machine-config-operator"}
+2025-01-09T14:52:32.609974865Z 2025-01-09T14:52:32Z	INFO	verify deployment	{"namespace": "openshift-network-diagnostics"}
+2025-01-09T14:52:33.384021017Z 2025-01-09T14:52:33Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:52:33.384021017Z 2025-01-09T14:52:33Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:52:33.406674125Z 2025-01-09T14:52:33Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:52:34.995363581Z 2025-01-09T14:52:34Z	INFO	verify deployment	{"namespace": "cert-manager-operator"}
+2025-01-09T14:52:35.034959308Z 2025-01-09T14:52:35Z	INFO	verify deployment	{"namespace": "cert-manager-operator"}
+2025-01-09T14:52:35.435896317Z 2025-01-09T14:52:35Z	INFO	verify deployment	{"namespace": "cert-manager-operator"}
+2025-01-09T14:52:35.521472577Z 2025-01-09T14:52:35Z	INFO	verify deployment	{"namespace": "cert-manager-operator"}
+2025-01-09T14:52:35.567351394Z 2025-01-09T14:52:35Z	INFO	verify deployment	{"namespace": "cert-manager-operator"}
+2025-01-09T14:52:35.599930588Z 2025-01-09T14:52:35Z	INFO	verify deployment	{"namespace": "cert-manager-operator"}
+2025-01-09T14:52:37.895687548Z 2025-01-09T14:52:37Z	INFO	verify deployment	{"namespace": "openshift-machine-config-operator"}
+2025-01-09T14:52:38.208864546Z 2025-01-09T14:52:38Z	INFO	verify deployment	{"namespace": "openshift-network-console"}
+2025-01-09T14:52:38.374815854Z 2025-01-09T14:52:38Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:52:38.374815854Z 2025-01-09T14:52:38Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:52:38.406053512Z 2025-01-09T14:52:38Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:52:43.372015810Z 2025-01-09T14:52:43Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:52:43.372015810Z 2025-01-09T14:52:43Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:52:43.406621147Z 2025-01-09T14:52:43Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:52:43.580376992Z 2025-01-09T14:52:43Z	INFO	verify deployment	{"namespace": "openshift-machine-config-operator"}
+2025-01-09T14:52:48.368864313Z 2025-01-09T14:52:48Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:52:48.368864313Z 2025-01-09T14:52:48Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:52:48.406336770Z 2025-01-09T14:52:48Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:52:49.275752880Z 2025-01-09T14:52:49Z	INFO	verify deployment	{"namespace": "openshift-machine-config-operator"}
+2025-01-09T14:52:53.373642411Z 2025-01-09T14:52:53Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:52:53.373642411Z 2025-01-09T14:52:53Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:52:53.406237268Z 2025-01-09T14:52:53Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:52:54.989967001Z 2025-01-09T14:52:54Z	INFO	verify deployment	{"namespace": "openshift-machine-config-operator"}
+2025-01-09T14:52:58.371603142Z 2025-01-09T14:52:58Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:52:58.371603142Z 2025-01-09T14:52:58Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:52:58.406049763Z 2025-01-09T14:52:58Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:53:00.071128983Z 2025-01-09T14:53:00Z	INFO	Reconciling Namespace	{"namespace": "", "name": "cert-manager"}
+2025-01-09T14:53:00.085569397Z 2025-01-09T14:53:00Z	INFO	verify deployment	{"namespace": "cert-manager"}
+2025-01-09T14:53:00.094023544Z 2025-01-09T14:53:00Z	INFO	verify deployment	{"namespace": "cert-manager"}
+2025-01-09T14:53:00.143562836Z 2025-01-09T14:53:00Z	INFO	verify deployment	{"namespace": "cert-manager"}
+2025-01-09T14:53:01.719931158Z 2025-01-09T14:53:01Z	INFO	verify deployment	{"namespace": "openshift-machine-config-operator"}
+2025-01-09T14:53:01.961964469Z 2025-01-09T14:53:01Z	INFO	verify deployment	{"namespace": "cert-manager"}
+2025-01-09T14:53:03.370977144Z 2025-01-09T14:53:03Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:53:03.370977144Z 2025-01-09T14:53:03Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:53:03.406765211Z 2025-01-09T14:53:03Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:53:07.439666275Z 2025-01-09T14:53:07Z	INFO	verify deployment	{"namespace": "openshift-machine-config-operator"}
+2025-01-09T14:53:08.373673703Z 2025-01-09T14:53:08Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:53:08.373673703Z 2025-01-09T14:53:08Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:53:08.406614029Z 2025-01-09T14:53:08Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:53:13.137191530Z 2025-01-09T14:53:13Z	INFO	verify deployment	{"namespace": "openshift-machine-config-operator"}
+2025-01-09T14:53:13.371951390Z 2025-01-09T14:53:13Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:53:13.371951390Z 2025-01-09T14:53:13Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:53:13.406231022Z 2025-01-09T14:53:13Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:53:18.370294625Z 2025-01-09T14:53:18Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:53:18.370294625Z 2025-01-09T14:53:18Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:53:18.405959363Z 2025-01-09T14:53:18Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:53:18.858735506Z 2025-01-09T14:53:18Z	INFO	verify deployment	{"namespace": "openshift-machine-config-operator"}
+2025-01-09T14:53:23.374061529Z 2025-01-09T14:53:23Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:53:23.374061529Z 2025-01-09T14:53:23Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:53:23.406128844Z 2025-01-09T14:53:23Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:53:24.551280641Z 2025-01-09T14:53:24Z	INFO	verify deployment	{"namespace": "openshift-machine-config-operator"}
+2025-01-09T14:53:28.372214205Z 2025-01-09T14:53:28Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:53:28.372214205Z 2025-01-09T14:53:28Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:53:28.406136986Z 2025-01-09T14:53:28Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:53:30.245551164Z 2025-01-09T14:53:30Z	INFO	verify deployment	{"namespace": "openshift-machine-config-operator"}
+2025-01-09T14:53:33.375805561Z 2025-01-09T14:53:33Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:53:33.375805561Z 2025-01-09T14:53:33Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:53:33.406639448Z 2025-01-09T14:53:33Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:53:38.374969083Z 2025-01-09T14:53:38Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:53:38.374969083Z 2025-01-09T14:53:38Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:53:38.406676537Z 2025-01-09T14:53:38Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:53:43.370657415Z 2025-01-09T14:53:43Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:53:43.370657415Z 2025-01-09T14:53:43Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:53:43.406053028Z 2025-01-09T14:53:43Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:53:48.372125036Z 2025-01-09T14:53:48Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:53:48.372125036Z 2025-01-09T14:53:48Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:53:48.406608137Z 2025-01-09T14:53:48Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:53:53.371729374Z 2025-01-09T14:53:53Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:53:53.371729374Z 2025-01-09T14:53:53Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:53:53.406804077Z 2025-01-09T14:53:53Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:53:53.513686159Z 2025-01-09T14:53:53Z	INFO	verify deployment	{"namespace": "openshift-monitoring"}
+2025-01-09T14:53:54.549956867Z 2025-01-09T14:53:54Z	INFO	verify deployment	{"namespace": "openshift-monitoring"}
+2025-01-09T14:53:56.768764010Z 2025-01-09T14:53:56Z	INFO	Reconciling Namespace	{"namespace": "", "name": "knative-serving"}
+2025-01-09T14:53:57.122283384Z 2025-01-09T14:53:57Z	INFO	verify deployment	{"namespace": "openshift-monitoring"}
+2025-01-09T14:53:57.138175888Z 2025-01-09T14:53:57Z	INFO	verify deployment	{"namespace": "openshift-monitoring"}
+2025-01-09T14:53:57.495818165Z 2025-01-09T14:53:57Z	INFO	Reconciling Namespace	{"namespace": "", "name": "knative-serving"}
+2025-01-09T14:53:58.372014538Z 2025-01-09T14:53:58Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:53:58.372014538Z 2025-01-09T14:53:58Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:53:58.406840557Z 2025-01-09T14:53:58Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:53:59.174919899Z 2025-01-09T14:53:59Z	INFO	verify deployment	{"namespace": "openshift-monitoring"}
+2025-01-09T14:54:01.814356410Z 2025-01-09T14:54:01Z	INFO	verify deployment	{"namespace": "openshift-machine-config-operator"}
+2025-01-09T14:54:02.178960719Z 2025-01-09T14:54:02Z	INFO	verify deployment	{"namespace": "openshift-monitoring"}
+2025-01-09T14:54:02.439506823Z 2025-01-09T14:54:02Z	INFO	Reconciling Namespace	{"namespace": "", "name": "knative-serving-ingress"}
+2025-01-09T14:54:02.461709922Z 2025-01-09T14:54:02Z	INFO	Reconciling Namespace	{"namespace": "", "name": "knative-serving-ingress"}
+2025-01-09T14:54:02.480188651Z 2025-01-09T14:54:02Z	INFO	Reconciling Namespace	{"namespace": "", "name": "knative-serving-ingress"}
+2025-01-09T14:54:02.842947396Z 2025-01-09T14:54:02Z	INFO	verify deployment	{"namespace": "openshift-monitoring"}
+2025-01-09T14:54:03.163987703Z 2025-01-09T14:54:03Z	INFO	Reconciling Namespace	{"namespace": "", "name": "knative-serving-ingress"}
+2025-01-09T14:54:03.371869357Z 2025-01-09T14:54:03Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:54:03.371869357Z 2025-01-09T14:54:03Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:54:03.405893830Z 2025-01-09T14:54:03Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:54:07.501566255Z 2025-01-09T14:54:07Z	INFO	verify deployment	{"namespace": "openshift-machine-config-operator"}
+2025-01-09T14:54:07.954021516Z 2025-01-09T14:54:07Z	INFO	Reconciling Namespace	{"namespace": "", "name": "istio-system"}
+2025-01-09T14:54:08.371999735Z 2025-01-09T14:54:08Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:54:08.371999735Z 2025-01-09T14:54:08Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:54:08.406791484Z 2025-01-09T14:54:08Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:54:08.753928237Z 2025-01-09T14:54:08Z	INFO	Reconciling Namespace	{"namespace": "", "name": "istio-system"}
+2025-01-09T14:54:13.203963807Z 2025-01-09T14:54:13Z	INFO	verify deployment	{"namespace": "openshift-machine-config-operator"}
+2025-01-09T14:54:13.371292846Z 2025-01-09T14:54:13Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:54:13.371292846Z 2025-01-09T14:54:13Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:54:13.406345519Z 2025-01-09T14:54:13Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:54:17.312208277Z 2025-01-09T14:54:17Z	INFO	Reconciling Namespace	{"namespace": "", "name": "knative-eventing"}
+2025-01-09T14:54:18.060383914Z 2025-01-09T14:54:18Z	INFO	Reconciling Namespace	{"namespace": "", "name": "knative-eventing"}
+2025-01-09T14:54:18.373582040Z 2025-01-09T14:54:18Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:54:18.373582040Z 2025-01-09T14:54:18Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:54:18.406290181Z 2025-01-09T14:54:18Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:54:20.718626687Z 2025-01-09T14:54:20Z	INFO	verify deployment	{"namespace": "openshift-machine-config-operator"}
+2025-01-09T14:54:23.370654864Z 2025-01-09T14:54:23Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:54:23.370654864Z 2025-01-09T14:54:23Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:54:23.406514375Z 2025-01-09T14:54:23Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:54:26.406381401Z 2025-01-09T14:54:26Z	INFO	verify deployment	{"namespace": "openshift-machine-config-operator"}
+2025-01-09T14:54:28.371152636Z 2025-01-09T14:54:28Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:54:28.371152636Z 2025-01-09T14:54:28Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:54:28.406506689Z 2025-01-09T14:54:28Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:54:32.104371704Z 2025-01-09T14:54:32Z	INFO	verify deployment	{"namespace": "openshift-machine-config-operator"}
+2025-01-09T14:54:33.370086739Z 2025-01-09T14:54:33Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:54:33.370086739Z 2025-01-09T14:54:33Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:54:33.406573486Z 2025-01-09T14:54:33Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:54:38.370985830Z 2025-01-09T14:54:38Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:54:38.370985830Z 2025-01-09T14:54:38Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:54:38.406294877Z 2025-01-09T14:54:38Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:54:40.560741170Z 2025-01-09T14:54:40Z	INFO	verify deployment	{"namespace": "openshift-machine-config-operator"}
+2025-01-09T14:54:43.371325630Z 2025-01-09T14:54:43Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:54:43.371325630Z 2025-01-09T14:54:43Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:54:43.405861644Z 2025-01-09T14:54:43Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:54:46.250663734Z 2025-01-09T14:54:46Z	INFO	verify deployment	{"namespace": "openshift-machine-config-operator"}
+2025-01-09T14:54:48.369090880Z 2025-01-09T14:54:48Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:54:48.369090880Z 2025-01-09T14:54:48Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:54:48.406034659Z 2025-01-09T14:54:48Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:54:48.920143996Z 2025-01-09T14:54:48Z	INFO	verify deployment	{"namespace": "openshift-cloud-network-config-controller"}
+2025-01-09T14:54:51.940091430Z 2025-01-09T14:54:51Z	INFO	verify deployment	{"namespace": "openshift-machine-config-operator"}
+2025-01-09T14:54:53.384081002Z 2025-01-09T14:54:53Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:54:53.384081002Z 2025-01-09T14:54:53Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:54:53.406523409Z 2025-01-09T14:54:53Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:54:56.071405519Z 2025-01-09T14:54:56Z	INFO	verify deployment	{"namespace": "openshift-multus"}
+2025-01-09T14:54:57.627333013Z 2025-01-09T14:54:57Z	INFO	verify deployment	{"namespace": "openshift-machine-config-operator"}
+2025-01-09T14:54:58.373368192Z 2025-01-09T14:54:58Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:54:58.373368192Z 2025-01-09T14:54:58Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:54:58.406066749Z 2025-01-09T14:54:58Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:55:03.368423106Z 2025-01-09T14:55:03Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:55:03.368423106Z 2025-01-09T14:55:03Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:55:03.405822845Z 2025-01-09T14:55:03Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:55:04.471100852Z 2025-01-09T14:55:04Z	INFO	verify deployment	{"namespace": "openshift-ovn-kubernetes"}
+2025-01-09T14:55:06.268835327Z 2025-01-09T14:55:06Z	INFO	verify deployment	{"namespace": "openshift-network-diagnostics"}
+2025-01-09T14:55:08.369990797Z 2025-01-09T14:55:08Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:55:08.369990797Z 2025-01-09T14:55:08Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:55:08.406640214Z 2025-01-09T14:55:08Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:55:11.870378648Z 2025-01-09T14:55:11Z	INFO	verify deployment	{"namespace": "openshift-network-console"}
+2025-01-09T14:55:13.371003433Z 2025-01-09T14:55:13Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:55:13.371003433Z 2025-01-09T14:55:13Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:55:13.406580927Z 2025-01-09T14:55:13Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:55:18.369176561Z 2025-01-09T14:55:18Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:55:18.369176561Z 2025-01-09T14:55:18Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:55:18.406044108Z 2025-01-09T14:55:18Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:55:23.370127003Z 2025-01-09T14:55:23Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:55:23.370127003Z 2025-01-09T14:55:23Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:55:23.406860662Z 2025-01-09T14:55:23Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:55:28.372719889Z 2025-01-09T14:55:28Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:55:28.372719889Z 2025-01-09T14:55:28Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:55:28.406497931Z 2025-01-09T14:55:28Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:55:33.368629704Z 2025-01-09T14:55:33Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:55:33.368629704Z 2025-01-09T14:55:33Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:55:33.406365838Z 2025-01-09T14:55:33Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:55:33.721569495Z 2025-01-09T14:55:33Z	INFO	verify deployment	{"namespace": "openshift-machine-config-operator"}
+2025-01-09T14:55:38.371696238Z 2025-01-09T14:55:38Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:55:38.371696238Z 2025-01-09T14:55:38Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:55:38.406124897Z 2025-01-09T14:55:38Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:55:39.407527203Z 2025-01-09T14:55:39Z	INFO	verify deployment	{"namespace": "openshift-machine-config-operator"}
+2025-01-09T14:55:43.372856737Z 2025-01-09T14:55:43Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:55:43.372856737Z 2025-01-09T14:55:43Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:55:43.406792769Z 2025-01-09T14:55:43Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:55:48.369785666Z 2025-01-09T14:55:48Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:55:48.369785666Z 2025-01-09T14:55:48Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:55:48.406461641Z 2025-01-09T14:55:48Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:55:53.371780070Z 2025-01-09T14:55:53Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:55:53.371780070Z 2025-01-09T14:55:53Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:55:53.406124524Z 2025-01-09T14:55:53Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:55:53.485132900Z 2025-01-09T14:55:53Z	INFO	verify deployment	{"namespace": "openshift-machine-config-operator"}
+2025-01-09T14:55:58.373352663Z 2025-01-09T14:55:58Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:55:58.373352663Z 2025-01-09T14:55:58Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:55:58.406020875Z 2025-01-09T14:55:58Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:55:59.200913024Z 2025-01-09T14:55:59Z	INFO	verify deployment	{"namespace": "openshift-machine-config-operator"}
+2025-01-09T14:56:03.372487520Z 2025-01-09T14:56:03Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:56:03.372487520Z 2025-01-09T14:56:03Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:56:03.406355580Z 2025-01-09T14:56:03Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:56:04.961506562Z 2025-01-09T14:56:04Z	INFO	verify deployment	{"namespace": "openshift-machine-config-operator"}
+2025-01-09T14:56:08.374616538Z 2025-01-09T14:56:08Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:56:08.374689243Z 2025-01-09T14:56:08Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:56:08.406829804Z 2025-01-09T14:56:08Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:56:08.641915384Z 2025-01-09T14:56:08Z	INFO	verify deployment	{"namespace": "openshift-monitoring"}
+2025-01-09T14:56:09.670983010Z 2025-01-09T14:56:09Z	INFO	verify deployment	{"namespace": "openshift-monitoring"}
+2025-01-09T14:56:10.660994330Z 2025-01-09T14:56:10Z	INFO	verify deployment	{"namespace": "openshift-machine-config-operator"}
+2025-01-09T14:56:11.757181103Z 2025-01-09T14:56:11Z	INFO	verify deployment	{"namespace": "openshift-monitoring"}
+2025-01-09T14:56:11.760951398Z 2025-01-09T14:56:11Z	INFO	verify deployment	{"namespace": "openshift-monitoring"}
+2025-01-09T14:56:13.372518454Z 2025-01-09T14:56:13Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:56:13.372518454Z 2025-01-09T14:56:13Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:56:13.406373414Z 2025-01-09T14:56:13Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:56:13.798776931Z 2025-01-09T14:56:13Z	INFO	verify deployment	{"namespace": "openshift-monitoring"}
+2025-01-09T14:56:16.345960887Z 2025-01-09T14:56:16Z	INFO	verify deployment	{"namespace": "openshift-machine-config-operator"}
+2025-01-09T14:56:16.793601098Z 2025-01-09T14:56:16Z	INFO	verify deployment	{"namespace": "openshift-monitoring"}
+2025-01-09T14:56:17.763202562Z 2025-01-09T14:56:17Z	INFO	verify deployment	{"namespace": "openshift-monitoring"}
+2025-01-09T14:56:18.369859064Z 2025-01-09T14:56:18Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:56:18.369859064Z 2025-01-09T14:56:18Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:56:18.406539722Z 2025-01-09T14:56:18Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:56:23.372603328Z 2025-01-09T14:56:23Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:56:23.372603328Z 2025-01-09T14:56:23Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:56:23.406706331Z 2025-01-09T14:56:23Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:56:28.373456535Z 2025-01-09T14:56:28Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:56:28.373456535Z 2025-01-09T14:56:28Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:56:28.406871910Z 2025-01-09T14:56:28Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:56:33.370829161Z 2025-01-09T14:56:33Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:56:33.370829161Z 2025-01-09T14:56:33Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:56:33.406691223Z 2025-01-09T14:56:33Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:56:33.953475367Z 2025-01-09T14:56:33Z	INFO	verify deployment	{"namespace": "openshift-machine-config-operator"}
+2025-01-09T14:56:38.370018557Z 2025-01-09T14:56:38Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:56:38.370018557Z 2025-01-09T14:56:38Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:56:38.406665063Z 2025-01-09T14:56:38Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:56:39.641799982Z 2025-01-09T14:56:39Z	INFO	verify deployment	{"namespace": "openshift-machine-config-operator"}
+2025-01-09T14:56:43.372908539Z 2025-01-09T14:56:43Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:56:43.372908539Z 2025-01-09T14:56:43Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:56:43.406794390Z 2025-01-09T14:56:43Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:56:45.323771598Z 2025-01-09T14:56:45Z	INFO	verify deployment	{"namespace": "openshift-machine-config-operator"}
+2025-01-09T14:56:48.370521813Z 2025-01-09T14:56:48Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:56:48.370521813Z 2025-01-09T14:56:48Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:56:48.406799451Z 2025-01-09T14:56:48Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:56:53.009455608Z 2025-01-09T14:56:53Z	INFO	Reconciling Namespace	{"namespace": "", "name": "cert-manager-operator"}
+2025-01-09T14:56:53.372494760Z 2025-01-09T14:56:53Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:56:53.372494760Z 2025-01-09T14:56:53Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:56:53.406496070Z 2025-01-09T14:56:53Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:56:54.276784073Z 2025-01-09T14:56:54Z	INFO	verify deployment	{"namespace": "openshift-machine-config-operator"}
+2025-01-09T14:56:58.375114905Z 2025-01-09T14:56:58Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:56:58.375114905Z 2025-01-09T14:56:58Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:56:58.406383462Z 2025-01-09T14:56:58Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:56:59.959770404Z 2025-01-09T14:56:59Z	INFO	verify deployment	{"namespace": "openshift-machine-config-operator"}
+2025-01-09T14:57:03.373346057Z 2025-01-09T14:57:03Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:57:03.373346057Z 2025-01-09T14:57:03Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:57:03.406515232Z 2025-01-09T14:57:03Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:57:08.370209496Z 2025-01-09T14:57:08Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:57:08.370209496Z 2025-01-09T14:57:08Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:57:08.406366790Z 2025-01-09T14:57:08Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:57:13.373454255Z 2025-01-09T14:57:13Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:57:13.373454255Z 2025-01-09T14:57:13Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:57:13.406401837Z 2025-01-09T14:57:13Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:57:18.371608908Z 2025-01-09T14:57:18Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:57:18.371608908Z 2025-01-09T14:57:18Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:57:18.406147030Z 2025-01-09T14:57:18Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:57:23.370541013Z 2025-01-09T14:57:23Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:57:23.370541013Z 2025-01-09T14:57:23Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:57:23.406483764Z 2025-01-09T14:57:23Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:57:24.884069470Z 2025-01-09T14:57:24Z	INFO	verify deployment	{"namespace": "openshift-machine-config-operator"}
+2025-01-09T14:57:28.372682535Z 2025-01-09T14:57:28Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:57:28.372682535Z 2025-01-09T14:57:28Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:57:28.406069173Z 2025-01-09T14:57:28Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:57:30.568407891Z 2025-01-09T14:57:30Z	INFO	verify deployment	{"namespace": "openshift-machine-config-operator"}
+2025-01-09T14:57:33.371552592Z 2025-01-09T14:57:33Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:57:33.371552592Z 2025-01-09T14:57:33Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:57:33.406700409Z 2025-01-09T14:57:33Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:57:36.260464421Z 2025-01-09T14:57:36Z	INFO	verify deployment	{"namespace": "openshift-machine-config-operator"}
+2025-01-09T14:57:38.369466228Z 2025-01-09T14:57:38Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:57:38.369466228Z 2025-01-09T14:57:38Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:57:38.406162785Z 2025-01-09T14:57:38Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:57:42.782507413Z 2025-01-09T14:57:42Z	INFO	verify deployment	{"namespace": "openshift-machine-config-operator"}
+2025-01-09T14:57:43.369634809Z 2025-01-09T14:57:43Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:57:43.369634809Z 2025-01-09T14:57:43Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:57:43.405897272Z 2025-01-09T14:57:43Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:57:44.411232304Z 2025-01-09T14:57:44Z	INFO	Reconciling Namespace	{"namespace": "", "name": "openshift-serverless"}
+2025-01-09T14:57:44.421596811Z 2025-01-09T14:57:44Z	INFO	Reconciling Namespace	{"namespace": "", "name": "openshift-serverless"}
+2025-01-09T14:57:48.380531720Z 2025-01-09T14:57:48Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:57:48.380531720Z 2025-01-09T14:57:48Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:57:48.406134748Z 2025-01-09T14:57:48Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:57:48.481798230Z 2025-01-09T14:57:48Z	INFO	verify deployment	{"namespace": "openshift-machine-config-operator"}
+2025-01-09T14:57:49.544972466Z 2025-01-09T14:57:49Z	INFO	verify deployment	{"namespace": "openshift-serverless"}
+2025-01-09T14:57:49.632177542Z 2025-01-09T14:57:49Z	INFO	verify deployment	{"namespace": "openshift-serverless"}
+2025-01-09T14:57:49.662695718Z 2025-01-09T14:57:49Z	INFO	verify deployment	{"namespace": "openshift-serverless"}
+2025-01-09T14:57:50.062958130Z 2025-01-09T14:57:50Z	INFO	verify deployment	{"namespace": "openshift-serverless"}
+2025-01-09T14:57:50.132302704Z 2025-01-09T14:57:50Z	INFO	verify deployment	{"namespace": "openshift-serverless"}
+2025-01-09T14:57:50.401158339Z 2025-01-09T14:57:50Z	INFO	verify deployment	{"namespace": "openshift-serverless"}
+2025-01-09T14:57:50.438175003Z 2025-01-09T14:57:50Z	INFO	verify deployment	{"namespace": "openshift-serverless"}
+2025-01-09T14:57:50.456079116Z 2025-01-09T14:57:50Z	INFO	verify deployment	{"namespace": "openshift-serverless"}
+2025-01-09T14:57:53.374472327Z 2025-01-09T14:57:53Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:57:53.374472327Z 2025-01-09T14:57:53Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:57:53.406868637Z 2025-01-09T14:57:53Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:57:54.245271403Z 2025-01-09T14:57:54Z	INFO	verify deployment	{"namespace": "openshift-machine-config-operator"}
+2025-01-09T14:57:58.371677853Z 2025-01-09T14:57:58Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:57:58.371677853Z 2025-01-09T14:57:58Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:57:58.406214173Z 2025-01-09T14:57:58Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:57:59.938360946Z 2025-01-09T14:57:59Z	INFO	verify deployment	{"namespace": "openshift-machine-config-operator"}
+2025-01-09T14:58:03.373238169Z 2025-01-09T14:58:03Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:58:03.373238169Z 2025-01-09T14:58:03Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:58:03.406477397Z 2025-01-09T14:58:03Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:58:05.061889534Z 2025-01-09T14:58:05Z	INFO	Reconciling Namespace	{"namespace": "", "name": "openshift-serverless"}
+2025-01-09T14:58:05.667360362Z 2025-01-09T14:58:05Z	INFO	verify deployment	{"namespace": "openshift-machine-config-operator"}
+2025-01-09T14:58:08.371617765Z 2025-01-09T14:58:08Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:58:08.371617765Z 2025-01-09T14:58:08Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:58:08.406612895Z 2025-01-09T14:58:08Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:58:11.371166632Z 2025-01-09T14:58:11Z	INFO	verify deployment	{"namespace": "openshift-machine-config-operator"}
+2025-01-09T14:58:13.374018611Z 2025-01-09T14:58:13Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:58:13.374018611Z 2025-01-09T14:58:13Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:58:13.403549424Z 2025-01-09T14:58:13Z	INFO	verify deployment	{"namespace": "openshift-cloud-network-config-controller"}
+2025-01-09T14:58:13.406094557Z 2025-01-09T14:58:13Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:58:14.925829009Z 2025-01-09T14:58:14Z	INFO	Reconciling Namespace	{"namespace": "", "name": "knative-serving"}
+2025-01-09T14:58:15.951206462Z 2025-01-09T14:58:15Z	INFO	Reconciling Namespace	{"namespace": "", "name": "serving-tests"}
+2025-01-09T14:58:17.081000065Z 2025-01-09T14:58:17Z	INFO	verify deployment	{"namespace": "openshift-machine-config-operator"}
+2025-01-09T14:58:18.372694766Z 2025-01-09T14:58:18Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:58:18.372694766Z 2025-01-09T14:58:18Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:58:18.406840099Z 2025-01-09T14:58:18Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:58:19.557466544Z 2025-01-09T14:58:19Z	INFO	verify deployment	{"namespace": "serving-tests"}
+2025-01-09T14:58:20.747066866Z 2025-01-09T14:58:20Z	INFO	verify deployment	{"namespace": "openshift-multus"}
+2025-01-09T14:58:22.060586535Z 2025-01-09T14:58:22Z	INFO	verify deployment	{"namespace": "knative-serving"}
+2025-01-09T14:58:22.327694687Z 2025-01-09T14:58:22Z	INFO	verify deployment	{"namespace": "knative-serving"}
+2025-01-09T14:58:22.593956461Z 2025-01-09T14:58:22Z	INFO	verify deployment	{"namespace": "knative-serving"}
+2025-01-09T14:58:22.787174862Z 2025-01-09T14:58:22Z	INFO	verify deployment	{"namespace": "openshift-machine-config-operator"}
+2025-01-09T14:58:23.128566427Z 2025-01-09T14:58:23Z	INFO	verify deployment	{"namespace": "knative-serving"}
+2025-01-09T14:58:23.372773019Z 2025-01-09T14:58:23Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:58:23.372773019Z 2025-01-09T14:58:23Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:58:23.405835020Z 2025-01-09T14:58:23Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:58:23.529935889Z 2025-01-09T14:58:23Z	INFO	verify deployment	{"namespace": "knative-serving"}
+2025-01-09T14:58:23.949584164Z 2025-01-09T14:58:23Z	INFO	verify deployment	{"namespace": "knative-serving"}
+2025-01-09T14:58:24.061728665Z 2025-01-09T14:58:24Z	INFO	verify deployment	{"namespace": "knative-serving"}
+2025-01-09T14:58:24.194749366Z 2025-01-09T14:58:24Z	INFO	verify deployment	{"namespace": "knative-serving"}
+2025-01-09T14:58:28.374234539Z 2025-01-09T14:58:28Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:58:28.374234539Z 2025-01-09T14:58:28Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:58:28.406316793Z 2025-01-09T14:58:28Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:58:28.504751789Z 2025-01-09T14:58:28Z	INFO	verify deployment	{"namespace": "openshift-machine-config-operator"}
+2025-01-09T14:58:29.152122093Z 2025-01-09T14:58:29Z	INFO	verify deployment	{"namespace": "openshift-ovn-kubernetes"}
+2025-01-09T14:58:30.945732090Z 2025-01-09T14:58:30Z	INFO	verify deployment	{"namespace": "openshift-network-diagnostics"}
+2025-01-09T14:58:33.381133956Z 2025-01-09T14:58:33Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:58:33.381133956Z 2025-01-09T14:58:33Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:58:33.406652489Z 2025-01-09T14:58:33Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:58:34.196999248Z 2025-01-09T14:58:34Z	INFO	verify deployment	{"namespace": "openshift-machine-config-operator"}
+2025-01-09T14:58:36.544432040Z 2025-01-09T14:58:36Z	INFO	verify deployment	{"namespace": "openshift-network-console"}
+2025-01-09T14:58:38.371932402Z 2025-01-09T14:58:38Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:58:38.372015017Z 2025-01-09T14:58:38Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:58:38.406010420Z 2025-01-09T14:58:38Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:58:43.373446871Z 2025-01-09T14:58:43Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:58:43.373446871Z 2025-01-09T14:58:43Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:58:43.406610362Z 2025-01-09T14:58:43Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:58:46.531208951Z 2025-01-09T14:58:46Z	INFO	verify deployment	{"namespace": "openshift-machine-config-operator"}
+2025-01-09T14:58:46.932160800Z 2025-01-09T14:58:46Z	INFO	verify deployment	{"namespace": "knative-serving"}
+2025-01-09T14:58:47.195232103Z 2025-01-09T14:58:47Z	INFO	verify deployment	{"namespace": "knative-serving"}
+2025-01-09T14:58:47.463535279Z 2025-01-09T14:58:47Z	INFO	verify deployment	{"namespace": "knative-serving"}
+2025-01-09T14:58:47.997342744Z 2025-01-09T14:58:47Z	INFO	verify deployment	{"namespace": "knative-serving"}
+2025-01-09T14:58:48.372346997Z 2025-01-09T14:58:48Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:58:48.372346997Z 2025-01-09T14:58:48Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:58:48.396602708Z 2025-01-09T14:58:48Z	INFO	verify deployment	{"namespace": "knative-serving"}
+2025-01-09T14:58:48.406818562Z 2025-01-09T14:58:48Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:58:48.929624200Z 2025-01-09T14:58:48Z	INFO	verify deployment	{"namespace": "knative-serving"}
+2025-01-09T14:58:49.061859450Z 2025-01-09T14:58:49Z	INFO	verify deployment	{"namespace": "knative-serving"}
+2025-01-09T14:58:52.274576662Z 2025-01-09T14:58:52Z	INFO	verify deployment	{"namespace": "openshift-machine-config-operator"}
+2025-01-09T14:58:53.370376613Z 2025-01-09T14:58:53Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:58:53.370376613Z 2025-01-09T14:58:53Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:58:53.406626987Z 2025-01-09T14:58:53Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:58:57.263181637Z 2025-01-09T14:58:57Z	INFO	verify deployment	{"namespace": "knative-serving"}
+2025-01-09T14:58:57.466760342Z 2025-01-09T14:58:57Z	INFO	verify deployment	{"namespace": "knative-serving"}
+2025-01-09T14:58:57.667368000Z 2025-01-09T14:58:57Z	INFO	verify deployment	{"namespace": "knative-serving"}
+2025-01-09T14:58:57.967125088Z 2025-01-09T14:58:57Z	INFO	verify deployment	{"namespace": "openshift-machine-config-operator"}
+2025-01-09T14:58:58.062601300Z 2025-01-09T14:58:58Z	INFO	verify deployment	{"namespace": "knative-serving"}
+2025-01-09T14:58:58.330168079Z 2025-01-09T14:58:58Z	INFO	verify deployment	{"namespace": "knative-serving"}
+2025-01-09T14:58:58.372956713Z 2025-01-09T14:58:58Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:58:58.372956713Z 2025-01-09T14:58:58Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:58:58.406190550Z 2025-01-09T14:58:58Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:58:58.728915706Z 2025-01-09T14:58:58Z	INFO	verify deployment	{"namespace": "knative-serving"}
+2025-01-09T14:58:58.862000842Z 2025-01-09T14:58:58Z	INFO	verify deployment	{"namespace": "knative-serving"}
+2025-01-09T14:59:03.375282049Z 2025-01-09T14:59:03Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:59:03.375282049Z 2025-01-09T14:59:03Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:59:03.406704624Z 2025-01-09T14:59:03Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:59:03.653532798Z 2025-01-09T14:59:03Z	INFO	verify deployment	{"namespace": "openshift-machine-config-operator"}
+2025-01-09T14:59:06.731857004Z 2025-01-09T14:59:06Z	INFO	verify deployment	{"namespace": "knative-serving"}
+2025-01-09T14:59:06.930993709Z 2025-01-09T14:59:06Z	INFO	verify deployment	{"namespace": "knative-serving"}
+2025-01-09T14:59:07.130491965Z 2025-01-09T14:59:07Z	INFO	verify deployment	{"namespace": "knative-serving"}
+2025-01-09T14:59:07.530231178Z 2025-01-09T14:59:07Z	INFO	verify deployment	{"namespace": "knative-serving"}
+2025-01-09T14:59:07.796889016Z 2025-01-09T14:59:07Z	INFO	verify deployment	{"namespace": "knative-serving"}
+2025-01-09T14:59:08.195760140Z 2025-01-09T14:59:08Z	INFO	verify deployment	{"namespace": "knative-serving"}
+2025-01-09T14:59:08.329617499Z 2025-01-09T14:59:08Z	INFO	verify deployment	{"namespace": "knative-serving"}
+2025-01-09T14:59:08.370441292Z 2025-01-09T14:59:08Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:59:08.370441292Z 2025-01-09T14:59:08Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:59:08.406659256Z 2025-01-09T14:59:08Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:59:09.343974904Z 2025-01-09T14:59:09Z	INFO	verify deployment	{"namespace": "openshift-machine-config-operator"}
+2025-01-09T14:59:13.377226388Z 2025-01-09T14:59:13Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:59:13.377226388Z 2025-01-09T14:59:13Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:59:13.406618869Z 2025-01-09T14:59:13Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:59:18.373522195Z 2025-01-09T14:59:18Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:59:18.373522195Z 2025-01-09T14:59:18Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:59:18.406265644Z 2025-01-09T14:59:18Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:59:23.368892519Z 2025-01-09T14:59:23Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:59:23.368892519Z 2025-01-09T14:59:23Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:59:23.406476300Z 2025-01-09T14:59:23Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:59:28.373392398Z 2025-01-09T14:59:28Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:59:28.373392398Z 2025-01-09T14:59:28Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:59:28.406811235Z 2025-01-09T14:59:28Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:59:32.753484710Z 2025-01-09T14:59:32Z	INFO	verify deployment	{"namespace": "openshift-machine-config-operator"}
+2025-01-09T14:59:33.370303845Z 2025-01-09T14:59:33Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:59:33.370303845Z 2025-01-09T14:59:33Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:59:33.406028291Z 2025-01-09T14:59:33Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:59:38.386454019Z 2025-01-09T14:59:38Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:59:38.386510032Z 2025-01-09T14:59:38Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:59:38.406780340Z 2025-01-09T14:59:38Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:59:38.442575920Z 2025-01-09T14:59:38Z	INFO	verify deployment	{"namespace": "openshift-machine-config-operator"}
+2025-01-09T14:59:40.705834396Z 2025-01-09T14:59:40Z	INFO	verify deployment	{"namespace": "serving-tests"}
+2025-01-09T14:59:40.760898058Z 2025-01-09T14:59:40Z	INFO	verify deployment	{"namespace": "serving-tests"}
+2025-01-09T14:59:40.776949319Z 2025-01-09T14:59:40Z	INFO	verify deployment	{"namespace": "serving-tests"}
+2025-01-09T14:59:40.794816983Z 2025-01-09T14:59:40Z	INFO	verify deployment	{"namespace": "serving-tests"}
+2025-01-09T14:59:40.882363889Z 2025-01-09T14:59:40Z	INFO	verify deployment	{"namespace": "serving-tests"}
+2025-01-09T14:59:40.984283451Z 2025-01-09T14:59:40Z	INFO	verify deployment	{"namespace": "serving-tests"}
+2025-01-09T14:59:41.349335870Z 2025-01-09T14:59:41Z	INFO	verify deployment	{"namespace": "serving-tests"}
+2025-01-09T14:59:41.385792677Z 2025-01-09T14:59:41Z	INFO	verify deployment	{"namespace": "serving-tests"}
+2025-01-09T14:59:43.369332325Z 2025-01-09T14:59:43Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:59:43.369332325Z 2025-01-09T14:59:43Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:59:43.406431408Z 2025-01-09T14:59:43Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:59:45.663184005Z 2025-01-09T14:59:45Z	INFO	verify deployment	{"namespace": "serving-tests"}
+2025-01-09T14:59:45.680291525Z 2025-01-09T14:59:45Z	INFO	verify deployment	{"namespace": "serving-tests"}
+2025-01-09T14:59:45.696066960Z 2025-01-09T14:59:45Z	INFO	verify deployment	{"namespace": "serving-tests"}
+2025-01-09T14:59:45.725983638Z 2025-01-09T14:59:45Z	INFO	verify deployment	{"namespace": "serving-tests"}
+2025-01-09T14:59:45.748935126Z 2025-01-09T14:59:45Z	INFO	verify deployment	{"namespace": "serving-tests"}
+2025-01-09T14:59:48.372823387Z 2025-01-09T14:59:48Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:59:48.372823387Z 2025-01-09T14:59:48Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:59:48.406219231Z 2025-01-09T14:59:48Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:59:53.381390702Z 2025-01-09T14:59:53Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:59:53.381390702Z 2025-01-09T14:59:53Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:59:53.406569664Z 2025-01-09T14:59:53Z	INFO	cleaning orphaned deployments.
+2025-01-09T14:59:57.022969245Z 2025-01-09T14:59:57Z	INFO	verify deployment	{"namespace": "openshift-machine-config-operator"}
+2025-01-09T14:59:58.372291772Z 2025-01-09T14:59:58Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T14:59:58.372380757Z 2025-01-09T14:59:58Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T14:59:58.406434068Z 2025-01-09T14:59:58Z	INFO	cleaning orphaned deployments.
+2025-01-09T15:00:02.705203415Z 2025-01-09T15:00:02Z	INFO	verify deployment	{"namespace": "openshift-machine-config-operator"}
+2025-01-09T15:00:03.370407342Z 2025-01-09T15:00:03Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T15:00:03.370407342Z 2025-01-09T15:00:03Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T15:00:03.406106231Z 2025-01-09T15:00:03Z	INFO	cleaning orphaned deployments.
+2025-01-09T15:00:08.371703734Z 2025-01-09T15:00:08Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T15:00:08.371703734Z 2025-01-09T15:00:08Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T15:00:08.406845473Z 2025-01-09T15:00:08Z	INFO	cleaning orphaned deployments.
+2025-01-09T15:00:13.373366019Z 2025-01-09T15:00:13Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T15:00:13.373366019Z 2025-01-09T15:00:13Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T15:00:13.405875650Z 2025-01-09T15:00:13Z	INFO	cleaning orphaned deployments.
+2025-01-09T15:00:18.369305979Z 2025-01-09T15:00:18Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T15:00:18.369305979Z 2025-01-09T15:00:18Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T15:00:18.406501987Z 2025-01-09T15:00:18Z	INFO	cleaning orphaned deployments.
+2025-01-09T15:00:23.369649814Z 2025-01-09T15:00:23Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T15:00:23.369649814Z 2025-01-09T15:00:23Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T15:00:23.406521023Z 2025-01-09T15:00:23Z	INFO	cleaning orphaned deployments.
+2025-01-09T15:00:28.371640908Z 2025-01-09T15:00:28Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T15:00:28.371640908Z 2025-01-09T15:00:28Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T15:00:28.405853418Z 2025-01-09T15:00:28Z	INFO	cleaning orphaned deployments.
+2025-01-09T15:00:33.373291980Z 2025-01-09T15:00:33Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T15:00:33.373342993Z 2025-01-09T15:00:33Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T15:00:33.405843957Z 2025-01-09T15:00:33Z	INFO	cleaning orphaned deployments.
+2025-01-09T15:00:38.372321506Z 2025-01-09T15:00:38Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T15:00:38.372321506Z 2025-01-09T15:00:38Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T15:00:38.405906222Z 2025-01-09T15:00:38Z	INFO	cleaning orphaned deployments.
+2025-01-09T15:00:43.370665822Z 2025-01-09T15:00:43Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T15:00:43.370665822Z 2025-01-09T15:00:43Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T15:00:43.406263341Z 2025-01-09T15:00:43Z	INFO	cleaning orphaned deployments.
+2025-01-09T15:00:48.374950501Z 2025-01-09T15:00:48Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T15:00:48.374950501Z 2025-01-09T15:00:48Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T15:00:48.406519244Z 2025-01-09T15:00:48Z	INFO	cleaning orphaned deployments.
+2025-01-09T15:00:53.372679787Z 2025-01-09T15:00:53Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T15:00:53.372679787Z 2025-01-09T15:00:53Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T15:00:53.406200089Z 2025-01-09T15:00:53Z	INFO	cleaning orphaned deployments.
+2025-01-09T15:00:58.373002029Z 2025-01-09T15:00:58Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T15:00:58.373002029Z 2025-01-09T15:00:58Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T15:00:58.406375953Z 2025-01-09T15:00:58Z	INFO	cleaning orphaned deployments.
+2025-01-09T15:01:03.372418561Z 2025-01-09T15:01:03Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T15:01:03.372418561Z 2025-01-09T15:01:03Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T15:01:03.406449112Z 2025-01-09T15:01:03Z	INFO	cleaning orphaned deployments.
+2025-01-09T15:01:08.370023084Z 2025-01-09T15:01:08Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T15:01:08.370023084Z 2025-01-09T15:01:08Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T15:01:08.406692452Z 2025-01-09T15:01:08Z	INFO	cleaning orphaned deployments.
+2025-01-09T15:01:13.369652436Z 2025-01-09T15:01:13Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T15:01:13.369652436Z 2025-01-09T15:01:13Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T15:01:13.406315394Z 2025-01-09T15:01:13Z	INFO	cleaning orphaned deployments.
+2025-01-09T15:01:18.373070808Z 2025-01-09T15:01:18Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T15:01:18.373070808Z 2025-01-09T15:01:18Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T15:01:18.406057260Z 2025-01-09T15:01:18Z	INFO	cleaning orphaned deployments.
+2025-01-09T15:01:23.371976662Z 2025-01-09T15:01:23Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T15:01:23.371976662Z 2025-01-09T15:01:23Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T15:01:23.406012124Z 2025-01-09T15:01:23Z	INFO	cleaning orphaned deployments.
+2025-01-09T15:01:28.371651188Z 2025-01-09T15:01:28Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T15:01:28.371651188Z 2025-01-09T15:01:28Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T15:01:28.406856746Z 2025-01-09T15:01:28Z	INFO	cleaning orphaned deployments.
+2025-01-09T15:01:33.369429405Z 2025-01-09T15:01:33Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T15:01:33.369429405Z 2025-01-09T15:01:33Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T15:01:33.406050073Z 2025-01-09T15:01:33Z	INFO	cleaning orphaned deployments.
+2025-01-09T15:01:38.088414099Z 2025-01-09T15:01:38Z	INFO	verify deployment	{"namespace": "openshift-cloud-network-config-controller"}
+2025-01-09T15:01:38.372163614Z 2025-01-09T15:01:38Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T15:01:38.372163614Z 2025-01-09T15:01:38Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T15:01:38.406435007Z 2025-01-09T15:01:38Z	INFO	cleaning orphaned deployments.
+2025-01-09T15:01:40.456366139Z 2025-01-09T15:01:40Z	INFO	verify deployment	{"namespace": "openshift-machine-config-operator"}
+2025-01-09T15:01:43.370808162Z 2025-01-09T15:01:43Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T15:01:43.370808162Z 2025-01-09T15:01:43Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T15:01:43.406303064Z 2025-01-09T15:01:43Z	INFO	cleaning orphaned deployments.
+2025-01-09T15:01:45.231395985Z 2025-01-09T15:01:45Z	INFO	verify deployment	{"namespace": "openshift-multus"}
+2025-01-09T15:01:48.372592268Z 2025-01-09T15:01:48Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T15:01:48.372779639Z 2025-01-09T15:01:48Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T15:01:48.406008663Z 2025-01-09T15:01:48Z	INFO	cleaning orphaned deployments.
+2025-01-09T15:01:50.062589849Z 2025-01-09T15:01:50Z	INFO	verify deployment	{"namespace": "openshift-machine-config-operator"}
+2025-01-09T15:01:53.373716286Z 2025-01-09T15:01:53Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T15:01:53.373716286Z 2025-01-09T15:01:53Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T15:01:53.406681235Z 2025-01-09T15:01:53Z	INFO	cleaning orphaned deployments.
+2025-01-09T15:01:53.628851537Z 2025-01-09T15:01:53Z	INFO	verify deployment	{"namespace": "openshift-ovn-kubernetes"}
+2025-01-09T15:01:55.431403816Z 2025-01-09T15:01:55Z	INFO	verify deployment	{"namespace": "openshift-network-diagnostics"}
+2025-01-09T15:01:58.370454578Z 2025-01-09T15:01:58Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T15:01:58.370454578Z 2025-01-09T15:01:58Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T15:01:58.406138481Z 2025-01-09T15:01:58Z	INFO	cleaning orphaned deployments.
+2025-01-09T15:02:01.027616410Z 2025-01-09T15:02:01Z	INFO	verify deployment	{"namespace": "openshift-network-console"}
+2025-01-09T15:02:03.368851373Z 2025-01-09T15:02:03Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T15:02:03.368851373Z 2025-01-09T15:02:03Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T15:02:03.406621494Z 2025-01-09T15:02:03Z	INFO	cleaning orphaned deployments.
+2025-01-09T15:02:08.374399391Z 2025-01-09T15:02:08Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T15:02:08.374399391Z 2025-01-09T15:02:08Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T15:02:08.406790931Z 2025-01-09T15:02:08Z	INFO	cleaning orphaned deployments.
+2025-01-09T15:02:13.372455543Z 2025-01-09T15:02:13Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T15:02:13.372455543Z 2025-01-09T15:02:13Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T15:02:13.405985447Z 2025-01-09T15:02:13Z	INFO	cleaning orphaned deployments.
+2025-01-09T15:02:18.370310131Z 2025-01-09T15:02:18Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T15:02:18.370310131Z 2025-01-09T15:02:18Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T15:02:18.405920762Z 2025-01-09T15:02:18Z	INFO	cleaning orphaned deployments.
+2025-01-09T15:02:23.369626285Z 2025-01-09T15:02:23Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T15:02:23.369626285Z 2025-01-09T15:02:23Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T15:02:23.406834376Z 2025-01-09T15:02:23Z	INFO	cleaning orphaned deployments.
+2025-01-09T15:02:28.373018136Z 2025-01-09T15:02:28Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T15:02:28.373018136Z 2025-01-09T15:02:28Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T15:02:28.406776423Z 2025-01-09T15:02:28Z	INFO	cleaning orphaned deployments.
+2025-01-09T15:02:33.372869084Z 2025-01-09T15:02:33Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T15:02:33.372869084Z 2025-01-09T15:02:33Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T15:02:33.406663082Z 2025-01-09T15:02:33Z	INFO	cleaning orphaned deployments.
+2025-01-09T15:02:35.045469894Z 2025-01-09T15:02:35Z	INFO	Reconciling Namespace	{"namespace": "", "name": "knative-serving"}
+2025-01-09T15:02:35.060809036Z 2025-01-09T15:02:35Z	INFO	Reconciling Namespace	{"namespace": "", "name": "openshift-serverless"}
+2025-01-09T15:02:36.257621986Z 2025-01-09T15:02:36Z	INFO	verify deployment	{"namespace": "openshift-machine-config-operator"}
+2025-01-09T15:02:38.369956183Z 2025-01-09T15:02:38Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T15:02:38.369956183Z 2025-01-09T15:02:38Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T15:02:38.406527168Z 2025-01-09T15:02:38Z	INFO	cleaning orphaned deployments.
+2025-01-09T15:02:41.949912157Z 2025-01-09T15:02:41Z	INFO	verify deployment	{"namespace": "openshift-machine-config-operator"}
+2025-01-09T15:02:43.371658695Z 2025-01-09T15:02:43Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T15:02:43.371658695Z 2025-01-09T15:02:43Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T15:02:43.406053821Z 2025-01-09T15:02:43Z	INFO	cleaning orphaned deployments.
+2025-01-09T15:02:48.371553632Z 2025-01-09T15:02:48Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T15:02:48.371553632Z 2025-01-09T15:02:48Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T15:02:48.406364320Z 2025-01-09T15:02:48Z	INFO	cleaning orphaned deployments.
+2025-01-09T15:02:53.373830148Z 2025-01-09T15:02:53Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T15:02:53.373830148Z 2025-01-09T15:02:53Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T15:02:53.406798542Z 2025-01-09T15:02:53Z	INFO	cleaning orphaned deployments.
+2025-01-09T15:02:55.454661727Z 2025-01-09T15:02:55Z	INFO	verify deployment	{"namespace": "openshift-machine-config-operator"}
+2025-01-09T15:02:58.370156526Z 2025-01-09T15:02:58Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T15:02:58.370156526Z 2025-01-09T15:02:58Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T15:02:58.406564645Z 2025-01-09T15:02:58Z	INFO	cleaning orphaned deployments.
+2025-01-09T15:03:01.135465651Z 2025-01-09T15:03:01Z	INFO	verify deployment	{"namespace": "openshift-machine-config-operator"}
+2025-01-09T15:03:03.370957347Z 2025-01-09T15:03:03Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T15:03:03.370957347Z 2025-01-09T15:03:03Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T15:03:03.406652436Z 2025-01-09T15:03:03Z	INFO	cleaning orphaned deployments.
+2025-01-09T15:03:08.371609947Z 2025-01-09T15:03:08Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T15:03:08.371609947Z 2025-01-09T15:03:08Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T15:03:08.406863931Z 2025-01-09T15:03:08Z	INFO	cleaning orphaned deployments.
+2025-01-09T15:03:13.369099911Z 2025-01-09T15:03:13Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T15:03:13.369099911Z 2025-01-09T15:03:13Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T15:03:13.406380380Z 2025-01-09T15:03:13Z	INFO	cleaning orphaned deployments.
+2025-01-09T15:03:17.814269273Z 2025-01-09T15:03:17Z	INFO	verify deployment	{"namespace": "openshift-machine-config-operator"}
+2025-01-09T15:03:18.372915217Z 2025-01-09T15:03:18Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T15:03:18.372915217Z 2025-01-09T15:03:18Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T15:03:18.405862160Z 2025-01-09T15:03:18Z	INFO	cleaning orphaned deployments.
+2025-01-09T15:03:23.372153452Z 2025-01-09T15:03:23Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T15:03:23.372153452Z 2025-01-09T15:03:23Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T15:03:23.406561707Z 2025-01-09T15:03:23Z	INFO	cleaning orphaned deployments.
+2025-01-09T15:03:23.501692626Z 2025-01-09T15:03:23Z	INFO	verify deployment	{"namespace": "openshift-machine-config-operator"}
+2025-01-09T15:03:28.373589158Z 2025-01-09T15:03:28Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T15:03:28.373589158Z 2025-01-09T15:03:28Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T15:03:28.406837298Z 2025-01-09T15:03:28Z	INFO	cleaning orphaned deployments.
+2025-01-09T15:03:28.751234244Z 2025-01-09T15:03:28Z	INFO	verify deployment	{"namespace": "openshift-monitoring"}
+2025-01-09T15:03:29.780912316Z 2025-01-09T15:03:29Z	INFO	verify deployment	{"namespace": "openshift-monitoring"}
+2025-01-09T15:03:31.873991460Z 2025-01-09T15:03:31Z	INFO	verify deployment	{"namespace": "openshift-monitoring"}
+2025-01-09T15:03:31.878930078Z 2025-01-09T15:03:31Z	INFO	verify deployment	{"namespace": "openshift-monitoring"}
+2025-01-09T15:03:33.371852929Z 2025-01-09T15:03:33Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T15:03:33.371852929Z 2025-01-09T15:03:33Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T15:03:33.406011589Z 2025-01-09T15:03:33Z	INFO	cleaning orphaned deployments.
+2025-01-09T15:03:33.939954600Z 2025-01-09T15:03:33Z	INFO	verify deployment	{"namespace": "openshift-monitoring"}
+2025-01-09T15:03:36.910744035Z 2025-01-09T15:03:36Z	INFO	verify deployment	{"namespace": "openshift-monitoring"}
+2025-01-09T15:03:37.871540297Z 2025-01-09T15:03:37Z	INFO	verify deployment	{"namespace": "openshift-monitoring"}
+2025-01-09T15:03:38.373122459Z 2025-01-09T15:03:38Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T15:03:38.373122459Z 2025-01-09T15:03:38Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T15:03:38.405899502Z 2025-01-09T15:03:38Z	INFO	cleaning orphaned deployments.
+2025-01-09T15:03:43.372682644Z 2025-01-09T15:03:43Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T15:03:43.372682644Z 2025-01-09T15:03:43Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T15:03:43.406027729Z 2025-01-09T15:03:43Z	INFO	cleaning orphaned deployments.
+2025-01-09T15:03:47.137025173Z 2025-01-09T15:03:47Z	INFO	verify deployment	{"namespace": "openshift-monitoring"}
+2025-01-09T15:03:48.165353772Z 2025-01-09T15:03:48Z	INFO	verify deployment	{"namespace": "openshift-monitoring"}
+2025-01-09T15:03:48.374286562Z 2025-01-09T15:03:48Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T15:03:48.374360817Z 2025-01-09T15:03:48Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T15:03:48.406479839Z 2025-01-09T15:03:48Z	INFO	cleaning orphaned deployments.
+2025-01-09T15:03:50.251531681Z 2025-01-09T15:03:50Z	INFO	verify deployment	{"namespace": "openshift-monitoring"}
+2025-01-09T15:03:50.258337238Z 2025-01-09T15:03:50Z	INFO	verify deployment	{"namespace": "openshift-monitoring"}
+2025-01-09T15:03:52.291871142Z 2025-01-09T15:03:52Z	INFO	verify deployment	{"namespace": "openshift-monitoring"}
+2025-01-09T15:03:53.374968106Z 2025-01-09T15:03:53Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T15:03:53.374968106Z 2025-01-09T15:03:53Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T15:03:53.406014437Z 2025-01-09T15:03:53Z	INFO	cleaning orphaned deployments.
+2025-01-09T15:03:55.297104931Z 2025-01-09T15:03:55Z	INFO	verify deployment	{"namespace": "openshift-monitoring"}
+2025-01-09T15:03:56.254521707Z 2025-01-09T15:03:56Z	INFO	verify deployment	{"namespace": "openshift-monitoring"}
+2025-01-09T15:03:58.372220105Z 2025-01-09T15:03:58Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T15:03:58.372220105Z 2025-01-09T15:03:58Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T15:03:58.406769625Z 2025-01-09T15:03:58Z	INFO	cleaning orphaned deployments.
+2025-01-09T15:03:58.794212661Z 2025-01-09T15:03:58Z	INFO	verify deployment	{"namespace": "openshift-machine-config-operator"}
+2025-01-09T15:04:03.369714398Z 2025-01-09T15:04:03Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T15:04:03.369714398Z 2025-01-09T15:04:03Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T15:04:03.406775140Z 2025-01-09T15:04:03Z	INFO	cleaning orphaned deployments.
+2025-01-09T15:04:08.371556664Z 2025-01-09T15:04:08Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T15:04:08.371556664Z 2025-01-09T15:04:08Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T15:04:08.406777014Z 2025-01-09T15:04:08Z	INFO	cleaning orphaned deployments.
+2025-01-09T15:04:08.529756669Z 2025-01-09T15:04:08Z	INFO	verify deployment	{"namespace": "openshift-machine-config-operator"}
+2025-01-09T15:04:13.373226406Z 2025-01-09T15:04:13Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T15:04:13.373226406Z 2025-01-09T15:04:13Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T15:04:13.406070033Z 2025-01-09T15:04:13Z	INFO	cleaning orphaned deployments.
+2025-01-09T15:04:14.230807763Z 2025-01-09T15:04:14Z	INFO	verify deployment	{"namespace": "openshift-machine-config-operator"}
+2025-01-09T15:04:18.372484154Z 2025-01-09T15:04:18Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T15:04:18.372662294Z 2025-01-09T15:04:18Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T15:04:18.406302535Z 2025-01-09T15:04:18Z	INFO	cleaning orphaned deployments.
+2025-01-09T15:04:23.373581894Z 2025-01-09T15:04:23Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T15:04:23.373581894Z 2025-01-09T15:04:23Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T15:04:23.406233560Z 2025-01-09T15:04:23Z	INFO	cleaning orphaned deployments.
+2025-01-09T15:04:28.370407524Z 2025-01-09T15:04:28Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T15:04:28.370407524Z 2025-01-09T15:04:28Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T15:04:28.406713135Z 2025-01-09T15:04:28Z	INFO	cleaning orphaned deployments.
+2025-01-09T15:04:33.370445656Z 2025-01-09T15:04:33Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T15:04:33.370445656Z 2025-01-09T15:04:33Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T15:04:33.405929010Z 2025-01-09T15:04:33Z	INFO	cleaning orphaned deployments.
+2025-01-09T15:04:38.371858562Z 2025-01-09T15:04:38Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T15:04:38.371858562Z 2025-01-09T15:04:38Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T15:04:38.406306290Z 2025-01-09T15:04:38Z	INFO	cleaning orphaned deployments.
+2025-01-09T15:04:39.309196487Z 2025-01-09T15:04:39Z	INFO	verify deployment	{"namespace": "openshift-machine-config-operator"}
+2025-01-09T15:04:43.369149566Z 2025-01-09T15:04:43Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T15:04:43.369149566Z 2025-01-09T15:04:43Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T15:04:43.406129816Z 2025-01-09T15:04:43Z	INFO	cleaning orphaned deployments.
+2025-01-09T15:04:48.370393183Z 2025-01-09T15:04:48Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T15:04:48.370448146Z 2025-01-09T15:04:48Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T15:04:48.406536656Z 2025-01-09T15:04:48Z	INFO	cleaning orphaned deployments.
+2025-01-09T15:04:53.402809830Z 2025-01-09T15:04:53Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T15:04:53.402809830Z 2025-01-09T15:04:53Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T15:04:53.406640945Z 2025-01-09T15:04:53Z	INFO	cleaning orphaned deployments.
+2025-01-09T15:04:58.372465871Z 2025-01-09T15:04:58Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T15:04:58.372465871Z 2025-01-09T15:04:58Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T15:04:58.406459044Z 2025-01-09T15:04:58Z	INFO	cleaning orphaned deployments.
+2025-01-09T15:05:02.542193714Z 2025-01-09T15:05:02Z	INFO	verify deployment	{"namespace": "openshift-cloud-network-config-controller"}
+2025-01-09T15:05:03.370020060Z 2025-01-09T15:05:03Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T15:05:03.370020060Z 2025-01-09T15:05:03Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T15:05:03.406279070Z 2025-01-09T15:05:03Z	INFO	cleaning orphaned deployments.
+2025-01-09T15:05:03.545964250Z 2025-01-09T15:05:03Z	INFO	verify deployment	{"namespace": "openshift-machine-config-operator"}
+2025-01-09T15:05:08.375552646Z 2025-01-09T15:05:08Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T15:05:08.375552646Z 2025-01-09T15:05:08Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T15:05:08.405870063Z 2025-01-09T15:05:08Z	INFO	cleaning orphaned deployments.
+2025-01-09T15:05:09.692613502Z 2025-01-09T15:05:09Z	INFO	verify deployment	{"namespace": "openshift-multus"}
+2025-01-09T15:05:13.371402338Z 2025-01-09T15:05:13Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T15:05:13.371402338Z 2025-01-09T15:05:13Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T15:05:13.406481432Z 2025-01-09T15:05:13Z	INFO	cleaning orphaned deployments.
+2025-01-09T15:05:18.095683118Z 2025-01-09T15:05:18Z	INFO	verify deployment	{"namespace": "openshift-ovn-kubernetes"}
+2025-01-09T15:05:18.372195733Z 2025-01-09T15:05:18Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T15:05:18.372284448Z 2025-01-09T15:05:18Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T15:05:18.406538186Z 2025-01-09T15:05:18Z	INFO	cleaning orphaned deployments.
+2025-01-09T15:05:19.893301445Z 2025-01-09T15:05:19Z	INFO	verify deployment	{"namespace": "openshift-network-diagnostics"}
+2025-01-09T15:05:23.372215431Z 2025-01-09T15:05:23Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T15:05:23.372215431Z 2025-01-09T15:05:23Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T15:05:23.406377425Z 2025-01-09T15:05:23Z	INFO	cleaning orphaned deployments.
+2025-01-09T15:05:25.492706120Z 2025-01-09T15:05:25Z	INFO	verify deployment	{"namespace": "openshift-network-console"}
+2025-01-09T15:05:28.372282413Z 2025-01-09T15:05:28Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T15:05:28.372282413Z 2025-01-09T15:05:28Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T15:05:28.405837221Z 2025-01-09T15:05:28Z	INFO	cleaning orphaned deployments.
+2025-01-09T15:05:33.370433662Z 2025-01-09T15:05:33Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T15:05:33.370433662Z 2025-01-09T15:05:33Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T15:05:33.405819493Z 2025-01-09T15:05:33Z	INFO	cleaning orphaned deployments.
+2025-01-09T15:05:38.371234123Z 2025-01-09T15:05:38Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T15:05:38.371234123Z 2025-01-09T15:05:38Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T15:05:38.406129267Z 2025-01-09T15:05:38Z	INFO	cleaning orphaned deployments.
+2025-01-09T15:05:43.369157414Z 2025-01-09T15:05:43Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T15:05:43.369157414Z 2025-01-09T15:05:43Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T15:05:43.406399686Z 2025-01-09T15:05:43Z	INFO	cleaning orphaned deployments.
+2025-01-09T15:05:48.372817427Z 2025-01-09T15:05:48Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T15:05:48.372817427Z 2025-01-09T15:05:48Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T15:05:48.406640084Z 2025-01-09T15:05:48Z	INFO	cleaning orphaned deployments.
+2025-01-09T15:05:53.371275979Z 2025-01-09T15:05:53Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T15:05:53.371275979Z 2025-01-09T15:05:53Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T15:05:53.406034199Z 2025-01-09T15:05:53Z	INFO	cleaning orphaned deployments.
+2025-01-09T15:05:58.369453774Z 2025-01-09T15:05:58Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T15:05:58.369453774Z 2025-01-09T15:05:58Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T15:05:58.405978418Z 2025-01-09T15:05:58Z	INFO	cleaning orphaned deployments.
+2025-01-09T15:06:03.372556850Z 2025-01-09T15:06:03Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T15:06:03.372556850Z 2025-01-09T15:06:03Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T15:06:03.406598444Z 2025-01-09T15:06:03Z	INFO	cleaning orphaned deployments.
+2025-01-09T15:06:08.369955745Z 2025-01-09T15:06:08Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T15:06:08.369955745Z 2025-01-09T15:06:08Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T15:06:08.406456769Z 2025-01-09T15:06:08Z	INFO	cleaning orphaned deployments.
+2025-01-09T15:06:13.373680018Z 2025-01-09T15:06:13Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T15:06:13.373680018Z 2025-01-09T15:06:13Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T15:06:13.406717986Z 2025-01-09T15:06:13Z	INFO	cleaning orphaned deployments.
+2025-01-09T15:06:18.375423906Z 2025-01-09T15:06:18Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T15:06:18.375423906Z 2025-01-09T15:06:18Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T15:06:18.406153754Z 2025-01-09T15:06:18Z	INFO	cleaning orphaned deployments.
+2025-01-09T15:06:23.370137509Z 2025-01-09T15:06:23Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T15:06:23.370232485Z 2025-01-09T15:06:23Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T15:06:23.405976145Z 2025-01-09T15:06:23Z	INFO	cleaning orphaned deployments.
+2025-01-09T15:06:28.370514642Z 2025-01-09T15:06:28Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T15:06:28.370514642Z 2025-01-09T15:06:28Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T15:06:28.406696377Z 2025-01-09T15:06:28Z	INFO	cleaning orphaned deployments.
+2025-01-09T15:06:33.371902885Z 2025-01-09T15:06:33Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T15:06:33.371902885Z 2025-01-09T15:06:33Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T15:06:33.406146871Z 2025-01-09T15:06:33Z	INFO	cleaning orphaned deployments.
+2025-01-09T15:06:38.370079259Z 2025-01-09T15:06:38Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T15:06:38.370079259Z 2025-01-09T15:06:38Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T15:06:38.406793964Z 2025-01-09T15:06:38Z	INFO	cleaning orphaned deployments.
+2025-01-09T15:06:43.372711953Z 2025-01-09T15:06:43Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T15:06:43.372711953Z 2025-01-09T15:06:43Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T15:06:43.406305122Z 2025-01-09T15:06:43Z	INFO	cleaning orphaned deployments.
+2025-01-09T15:06:45.951053302Z 2025-01-09T15:06:45Z	INFO	verify deployment	{"namespace": "openshift-machine-config-operator"}
+2025-01-09T15:06:48.371034614Z 2025-01-09T15:06:48Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T15:06:48.371034614Z 2025-01-09T15:06:48Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T15:06:48.409613964Z 2025-01-09T15:06:48Z	INFO	cleaning orphaned deployments.
+2025-01-09T15:06:53.374388666Z 2025-01-09T15:06:53Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T15:06:53.374388666Z 2025-01-09T15:06:53Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T15:06:53.406715285Z 2025-01-09T15:06:53Z	INFO	cleaning orphaned deployments.
+2025-01-09T15:06:56.898469937Z 2025-01-09T15:06:56Z	INFO	verify deployment	{"namespace": "openshift-machine-config-operator"}
+2025-01-09T15:06:58.370031045Z 2025-01-09T15:06:58Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T15:06:58.370031045Z 2025-01-09T15:06:58Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T15:06:58.405972346Z 2025-01-09T15:06:58Z	INFO	cleaning orphaned deployments.
+2025-01-09T15:07:02.954748331Z 2025-01-09T15:07:02Z	INFO	verify deployment	{"namespace": "openshift-machine-config-operator"}
+2025-01-09T15:07:03.374109015Z 2025-01-09T15:07:03Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T15:07:03.374109015Z 2025-01-09T15:07:03Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T15:07:03.406230882Z 2025-01-09T15:07:03Z	INFO	cleaning orphaned deployments.
+2025-01-09T15:07:08.369277773Z 2025-01-09T15:07:08Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T15:07:08.369277773Z 2025-01-09T15:07:08Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T15:07:08.406173658Z 2025-01-09T15:07:08Z	INFO	cleaning orphaned deployments.
+2025-01-09T15:07:08.639429532Z 2025-01-09T15:07:08Z	INFO	verify deployment	{"namespace": "openshift-machine-config-operator"}
+2025-01-09T15:07:13.373169609Z 2025-01-09T15:07:13Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T15:07:13.373169609Z 2025-01-09T15:07:13Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T15:07:13.406786331Z 2025-01-09T15:07:13Z	INFO	cleaning orphaned deployments.
+2025-01-09T15:07:18.370605069Z 2025-01-09T15:07:18Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T15:07:18.370605069Z 2025-01-09T15:07:18Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T15:07:18.406596020Z 2025-01-09T15:07:18Z	INFO	cleaning orphaned deployments.
+2025-01-09T15:07:23.375076029Z 2025-01-09T15:07:23Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T15:07:23.375076029Z 2025-01-09T15:07:23Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T15:07:23.406488311Z 2025-01-09T15:07:23Z	INFO	cleaning orphaned deployments.
+2025-01-09T15:07:25.072285460Z 2025-01-09T15:07:25Z	INFO	verify deployment	{"namespace": "openshift-machine-config-operator"}
+2025-01-09T15:07:28.370197810Z 2025-01-09T15:07:28Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T15:07:28.370197810Z 2025-01-09T15:07:28Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T15:07:28.406015460Z 2025-01-09T15:07:28Z	INFO	cleaning orphaned deployments.
+2025-01-09T15:07:30.765956817Z 2025-01-09T15:07:30Z	INFO	verify deployment	{"namespace": "openshift-machine-config-operator"}
+2025-01-09T15:07:33.371218982Z 2025-01-09T15:07:33Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T15:07:33.371218982Z 2025-01-09T15:07:33Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T15:07:33.406763977Z 2025-01-09T15:07:33Z	INFO	cleaning orphaned deployments.
+2025-01-09T15:07:37.030316597Z 2025-01-09T15:07:37Z	INFO	verify deployment	{"namespace": "openshift-machine-config-operator"}
+2025-01-09T15:07:38.373832240Z 2025-01-09T15:07:38Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T15:07:38.373832240Z 2025-01-09T15:07:38Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T15:07:38.406440327Z 2025-01-09T15:07:38Z	INFO	cleaning orphaned deployments.
+2025-01-09T15:07:42.714095095Z 2025-01-09T15:07:42Z	INFO	verify deployment	{"namespace": "openshift-machine-config-operator"}
+2025-01-09T15:07:43.371048402Z 2025-01-09T15:07:43Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T15:07:43.371048402Z 2025-01-09T15:07:43Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T15:07:43.406225694Z 2025-01-09T15:07:43Z	INFO	cleaning orphaned deployments.
+2025-01-09T15:07:48.369987143Z 2025-01-09T15:07:48Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T15:07:48.369987143Z 2025-01-09T15:07:48Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T15:07:48.406237875Z 2025-01-09T15:07:48Z	INFO	cleaning orphaned deployments.
+2025-01-09T15:07:53.381121671Z 2025-01-09T15:07:53Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T15:07:53.381121671Z 2025-01-09T15:07:53Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T15:07:53.406397565Z 2025-01-09T15:07:53Z	INFO	cleaning orphaned deployments.
+2025-01-09T15:07:58.371510376Z 2025-01-09T15:07:58Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T15:07:58.371510376Z 2025-01-09T15:07:58Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T15:07:58.406121516Z 2025-01-09T15:07:58Z	INFO	cleaning orphaned deployments.
+2025-01-09T15:08:03.370487805Z 2025-01-09T15:08:03Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T15:08:03.370487805Z 2025-01-09T15:08:03Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T15:08:03.405849067Z 2025-01-09T15:08:03Z	INFO	cleaning orphaned deployments.
+2025-01-09T15:08:08.372356398Z 2025-01-09T15:08:08Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T15:08:08.372356398Z 2025-01-09T15:08:08Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T15:08:08.406448533Z 2025-01-09T15:08:08Z	INFO	cleaning orphaned deployments.
+2025-01-09T15:08:13.372075001Z 2025-01-09T15:08:13Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T15:08:13.372075001Z 2025-01-09T15:08:13Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T15:08:13.406466263Z 2025-01-09T15:08:13Z	INFO	cleaning orphaned deployments.
+2025-01-09T15:08:18.210494904Z 2025-01-09T15:08:18Z	INFO	verify deployment	{"namespace": "openshift-machine-config-operator"}
+2025-01-09T15:08:18.369399121Z 2025-01-09T15:08:18Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T15:08:18.369399121Z 2025-01-09T15:08:18Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T15:08:18.406229293Z 2025-01-09T15:08:18Z	INFO	cleaning orphaned deployments.
+2025-01-09T15:08:23.372660971Z 2025-01-09T15:08:23Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T15:08:23.372660971Z 2025-01-09T15:08:23Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T15:08:23.406717107Z 2025-01-09T15:08:23Z	INFO	cleaning orphaned deployments.
+2025-01-09T15:08:23.895462887Z 2025-01-09T15:08:23Z	INFO	verify deployment	{"namespace": "openshift-machine-config-operator"}
+2025-01-09T15:08:27.016759591Z 2025-01-09T15:08:27Z	INFO	verify deployment	{"namespace": "openshift-cloud-network-config-controller"}
+2025-01-09T15:08:28.372084559Z 2025-01-09T15:08:28Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T15:08:28.372084559Z 2025-01-09T15:08:28Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T15:08:28.406191838Z 2025-01-09T15:08:28Z	INFO	cleaning orphaned deployments.
+2025-01-09T15:08:33.369577531Z 2025-01-09T15:08:33Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T15:08:33.369577531Z 2025-01-09T15:08:33Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T15:08:33.406774745Z 2025-01-09T15:08:33Z	INFO	cleaning orphaned deployments.
+2025-01-09T15:08:34.163980839Z 2025-01-09T15:08:34Z	INFO	verify deployment	{"namespace": "openshift-multus"}
+2025-01-09T15:08:38.372934222Z 2025-01-09T15:08:38Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T15:08:38.372934222Z 2025-01-09T15:08:38Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T15:08:38.406271518Z 2025-01-09T15:08:38Z	INFO	cleaning orphaned deployments.
+2025-01-09T15:08:42.564599492Z 2025-01-09T15:08:42Z	INFO	verify deployment	{"namespace": "openshift-ovn-kubernetes"}
+2025-01-09T15:08:43.369464732Z 2025-01-09T15:08:43Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T15:08:43.369464732Z 2025-01-09T15:08:43Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T15:08:43.406481285Z 2025-01-09T15:08:43Z	INFO	cleaning orphaned deployments.
+2025-01-09T15:08:44.363377793Z 2025-01-09T15:08:44Z	INFO	verify deployment	{"namespace": "openshift-network-diagnostics"}
+2025-01-09T15:08:48.373774271Z 2025-01-09T15:08:48Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T15:08:48.373774271Z 2025-01-09T15:08:48Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T15:08:48.406554396Z 2025-01-09T15:08:48Z	INFO	cleaning orphaned deployments.
+2025-01-09T15:08:49.963893659Z 2025-01-09T15:08:49Z	INFO	verify deployment	{"namespace": "openshift-network-console"}
+2025-01-09T15:08:53.298710516Z 2025-01-09T15:08:53Z	INFO	verify deployment	{"namespace": "openshift-monitoring"}
+2025-01-09T15:08:53.374913755Z 2025-01-09T15:08:53Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T15:08:53.374913755Z 2025-01-09T15:08:53Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T15:08:53.405837956Z 2025-01-09T15:08:53Z	INFO	cleaning orphaned deployments.
+2025-01-09T15:08:54.325937892Z 2025-01-09T15:08:54Z	INFO	verify deployment	{"namespace": "openshift-monitoring"}
+2025-01-09T15:08:56.420302088Z 2025-01-09T15:08:56Z	INFO	verify deployment	{"namespace": "openshift-monitoring"}
+2025-01-09T15:08:56.429391230Z 2025-01-09T15:08:56Z	INFO	verify deployment	{"namespace": "openshift-monitoring"}
+2025-01-09T15:08:58.371358848Z 2025-01-09T15:08:58Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T15:08:58.371358848Z 2025-01-09T15:08:58Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T15:08:58.406218270Z 2025-01-09T15:08:58Z	INFO	cleaning orphaned deployments.
+2025-01-09T15:08:58.475605685Z 2025-01-09T15:08:58Z	INFO	verify deployment	{"namespace": "openshift-monitoring"}
+2025-01-09T15:09:01.457068850Z 2025-01-09T15:09:01Z	INFO	verify deployment	{"namespace": "openshift-monitoring"}
+2025-01-09T15:09:02.416448401Z 2025-01-09T15:09:02Z	INFO	verify deployment	{"namespace": "openshift-monitoring"}
+2025-01-09T15:09:03.371886780Z 2025-01-09T15:09:03Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T15:09:03.372721117Z 2025-01-09T15:09:03Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T15:09:03.406902940Z 2025-01-09T15:09:03Z	INFO	cleaning orphaned deployments.
+2025-01-09T15:09:05.282216367Z 2025-01-09T15:09:05Z	INFO	verify deployment	{"namespace": "openshift-machine-config-operator"}
+2025-01-09T15:09:08.372050483Z 2025-01-09T15:09:08Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T15:09:08.372050483Z 2025-01-09T15:09:08Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T15:09:08.406211316Z 2025-01-09T15:09:08Z	INFO	cleaning orphaned deployments.
+2025-01-09T15:09:13.371657092Z 2025-01-09T15:09:13Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T15:09:13.371657092Z 2025-01-09T15:09:13Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T15:09:13.406840737Z 2025-01-09T15:09:13Z	INFO	cleaning orphaned deployments.
+2025-01-09T15:09:14.659158977Z 2025-01-09T15:09:14Z	INFO	verify deployment	{"namespace": "openshift-machine-config-operator"}
+2025-01-09T15:09:18.368844477Z 2025-01-09T15:09:18Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T15:09:18.368844477Z 2025-01-09T15:09:18Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T15:09:18.406617998Z 2025-01-09T15:09:18Z	INFO	cleaning orphaned deployments.
+2025-01-09T15:09:20.342012625Z 2025-01-09T15:09:20Z	INFO	verify deployment	{"namespace": "openshift-machine-config-operator"}
+2025-01-09T15:09:23.371527870Z 2025-01-09T15:09:23Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T15:09:23.371603974Z 2025-01-09T15:09:23Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T15:09:23.406474512Z 2025-01-09T15:09:23Z	INFO	cleaning orphaned deployments.
+2025-01-09T15:09:28.371080897Z 2025-01-09T15:09:28Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T15:09:28.371080897Z 2025-01-09T15:09:28Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T15:09:28.406016341Z 2025-01-09T15:09:28Z	INFO	cleaning orphaned deployments.
+2025-01-09T15:09:33.369068324Z 2025-01-09T15:09:33Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T15:09:33.369068324Z 2025-01-09T15:09:33Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T15:09:33.406032172Z 2025-01-09T15:09:33Z	INFO	cleaning orphaned deployments.
+2025-01-09T15:09:38.373921759Z 2025-01-09T15:09:38Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T15:09:38.373921759Z 2025-01-09T15:09:38Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T15:09:38.406074167Z 2025-01-09T15:09:38Z	INFO	cleaning orphaned deployments.
+2025-01-09T15:09:43.372774999Z 2025-01-09T15:09:43Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T15:09:43.372774999Z 2025-01-09T15:09:43Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T15:09:43.406199779Z 2025-01-09T15:09:43Z	INFO	cleaning orphaned deployments.
+2025-01-09T15:09:45.355218199Z 2025-01-09T15:09:45Z	INFO	verify deployment	{"namespace": "openshift-machine-config-operator"}
+2025-01-09T15:09:48.369720695Z 2025-01-09T15:09:48Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T15:09:48.369720695Z 2025-01-09T15:09:48Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T15:09:48.406313994Z 2025-01-09T15:09:48Z	INFO	cleaning orphaned deployments.
+2025-01-09T15:09:53.375142919Z 2025-01-09T15:09:53Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T15:09:53.375142919Z 2025-01-09T15:09:53Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T15:09:53.405890469Z 2025-01-09T15:09:53Z	INFO	cleaning orphaned deployments.
+2025-01-09T15:09:58.371893651Z 2025-01-09T15:09:58Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T15:09:58.372006107Z 2025-01-09T15:09:58Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T15:09:58.406102006Z 2025-01-09T15:09:58Z	INFO	cleaning orphaned deployments.
+2025-01-09T15:10:03.370350734Z 2025-01-09T15:10:03Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T15:10:03.370350734Z 2025-01-09T15:10:03Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T15:10:03.405850312Z 2025-01-09T15:10:03Z	INFO	cleaning orphaned deployments.
+2025-01-09T15:10:08.372528605Z 2025-01-09T15:10:08Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T15:10:08.372528605Z 2025-01-09T15:10:08Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T15:10:08.406544719Z 2025-01-09T15:10:08Z	INFO	cleaning orphaned deployments.
+2025-01-09T15:10:10.193719127Z 2025-01-09T15:10:10Z	INFO	verify deployment	{"namespace": "openshift-machine-config-operator"}
+2025-01-09T15:10:13.369318532Z 2025-01-09T15:10:13Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T15:10:13.369318532Z 2025-01-09T15:10:13Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T15:10:13.406597950Z 2025-01-09T15:10:13Z	INFO	cleaning orphaned deployments.
+2025-01-09T15:10:18.373441702Z 2025-01-09T15:10:18Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T15:10:18.373441702Z 2025-01-09T15:10:18Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T15:10:18.406508557Z 2025-01-09T15:10:18Z	INFO	cleaning orphaned deployments.
+2025-01-09T15:10:20.523714409Z 2025-01-09T15:10:20Z	INFO	Reconciling Namespace	{"namespace": "", "name": "openshift-must-gather-pdng5"}
+2025-01-09T15:10:20.549429419Z 2025-01-09T15:10:20Z	INFO	Reconciling Namespace	{"namespace": "", "name": "openshift-must-gather-pdng5"}
+2025-01-09T15:10:22.025473818Z 2025-01-09T15:10:22Z	INFO	verify deployment	{"namespace": "openshift-machine-config-operator"}
+2025-01-09T15:10:23.369843432Z 2025-01-09T15:10:23Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T15:10:23.369843432Z 2025-01-09T15:10:23Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T15:10:23.406559902Z 2025-01-09T15:10:23Z	INFO	cleaning orphaned deployments.
+2025-01-09T15:10:27.711396217Z 2025-01-09T15:10:27Z	INFO	verify deployment	{"namespace": "openshift-machine-config-operator"}
+2025-01-09T15:10:28.371150788Z 2025-01-09T15:10:28Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T15:10:28.371150788Z 2025-01-09T15:10:28Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T15:10:28.406642740Z 2025-01-09T15:10:28Z	INFO	cleaning orphaned deployments.
+2025-01-09T15:10:33.375674836Z 2025-01-09T15:10:33Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T15:10:33.375765701Z 2025-01-09T15:10:33Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T15:10:33.406716361Z 2025-01-09T15:10:33Z	INFO	cleaning orphaned deployments.
+2025-01-09T15:10:38.372033080Z 2025-01-09T15:10:38Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T15:10:38.372033080Z 2025-01-09T15:10:38Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T15:10:38.406543021Z 2025-01-09T15:10:38Z	INFO	cleaning orphaned deployments.
+2025-01-09T15:10:43.372022010Z 2025-01-09T15:10:43Z	INFO	Determining whether we should enable the Elasticsearch Operator integration
+2025-01-09T15:10:43.372022010Z 2025-01-09T15:10:43Z	INFO	Determining whether we should enable the Kafka Operator integration
+2025-01-09T15:10:43.406406464Z 2025-01-09T15:10:43Z	INFO	cleaning orphaned deployments.

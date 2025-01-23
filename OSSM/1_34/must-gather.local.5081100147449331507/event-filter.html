@@ -1,0 +1,2485 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+	<link href="https://unpkg.com/bootstrap-table@1.17.1/dist/bootstrap-table.min.css" rel="stylesheet">
+
+    <title>Events</title>
+	<style type="text/css">
+      body * {
+       font-size: 12px!important;
+      }
+	  .text-overflow() {
+       overflow: hidden;
+	   text-overflow: ellipsis;
+	   white-space: nowrap;
+	  }
+      .truncated {
+        display: inline-block;
+        max-width: 200px;
+        .text-overflow();
+      }
+    </style>
+  </head>
+  <body>
+
+<table
+  id="events"
+  class="table table-bordered table-hover table-sm"
+  data-toggle="table"
+  data-search="true"
+  data-show-search-clear-button="true"
+  data-filter-control="true"
+  data-advanced-search="true"
+  data-id-table="advancedTable"
+  data-pagination="true"
+  data-page-size="100"
+  data-show-columns-toggle-all="true"
+  data-show-pagination-switch="true"
+  data-show-columns="true">
+  <thead>
+    <tr>
+      <th data-width="100" data-field="time" data-filter-control="input" data-sortable="true">Time</th>
+      <th data-width="200" data-field="namespace" data-filter-control="input" data-sortable="true">Namespace</th>
+      <th data-width="200" data-field="component" data-filter-control="input" data-sortable="true">Component</th>
+      <th data-width="200" data-field="relatedobject" data-filter-control="input" data-sortable="true">RelatedObject</th>
+      <th data-field="reason" data-filter-control="input">Reason</th>
+      <th data-field="message" data-filter-control="input" data-escape="true">Message</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:57:49 +0200 EET" title="First Seen: 00:00:00">16:57:49</time></td>
+      <td><p class="truncated">openshift-serverless</p></td>
+      <td><p class="truncated"></p></td>
+      <td><p class="truncated">knative-operator-webhook-7655d96d78-dch7r</p></td>
+      <td><p class="text-muted">Scheduled</p></td>
+      <td data-formatter="messageFormatter">Successfully assigned openshift-serverless/knative-operator-webhook-7655d96d78-dch7r to ip-10-0-83-16.ec2.internal</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:22 +0200 EET" title="First Seen: 00:00:00">16:58:22</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated"></p></td>
+      <td><p class="truncated">controller-5cdf4475cb-mdk5g</p></td>
+      <td><p class="text-muted">Scheduled</p></td>
+      <td data-formatter="messageFormatter">Successfully assigned knative-serving/controller-5cdf4475cb-mdk5g to ip-10-0-83-16.ec2.internal</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:57:50 +0200 EET" title="First Seen: 00:00:00">16:57:50</time></td>
+      <td><p class="truncated">openshift-serverless</p></td>
+      <td><p class="truncated"></p></td>
+      <td><p class="truncated">knative-openshift-5fc65bff85-x4s2w</p></td>
+      <td><p class="text-muted">Scheduled</p></td>
+      <td data-formatter="messageFormatter">Successfully assigned openshift-serverless/knative-openshift-5fc65bff85-x4s2w to ip-10-0-83-16.ec2.internal</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:23 +0200 EET" title="First Seen: 00:00:00">16:58:23</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated"></p></td>
+      <td><p class="truncated">webhook-7bccb96f5b-tksl4</p></td>
+      <td><p class="text-muted">Scheduled</p></td>
+      <td data-formatter="messageFormatter">Successfully assigned knative-serving/webhook-7bccb96f5b-tksl4 to ip-10-0-63-72.ec2.internal</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 17:03:21 +0200 EET" title="First Seen: 00:00:00">17:03:21</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated"></p></td>
+      <td><p class="truncated">autoscaler-67654f944f-s7bhw</p></td>
+      <td><p class="text-muted">IPTablesUsageObserved</p></td>
+      <td data-formatter="messageFormatter">This pod appears to have created one or more iptables rules. IPTables is
+deprecated and will no longer be available in RHEL 10 and later. You should
+consider migrating to another API such as nftables or eBPF. See also
+https://access.redhat.com/solutions/6739041
+
+Example iptables rule seen in this pod:
+-A PREROUTING -p udp -m udp --sport 53 -j CT --zone 1
+</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:37 +0200 EET" title="First Seen: 00:00:00">16:58:37</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated"></p></td>
+      <td><p class="truncated">webhook-7bccb96f5b-p5w68</p></td>
+      <td><p class="text-muted">Scheduled</p></td>
+      <td data-formatter="messageFormatter">Successfully assigned knative-serving/webhook-7bccb96f5b-p5w68 to ip-10-0-83-16.ec2.internal</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:22 +0200 EET" title="First Seen: 00:00:00">16:58:22</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated"></p></td>
+      <td><p class="truncated">autoscaler-67654f944f-s7bhw</p></td>
+      <td><p class="text-muted">Scheduled</p></td>
+      <td data-formatter="messageFormatter">Successfully assigned knative-serving/autoscaler-67654f944f-s7bhw to ip-10-0-25-180.ec2.internal</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:22 +0200 EET" title="First Seen: 00:00:00">16:58:22</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated"></p></td>
+      <td><p class="truncated">activator-57c5775dc-7v8qc</p></td>
+      <td><p class="text-muted">Scheduled</p></td>
+      <td data-formatter="messageFormatter">Successfully assigned knative-serving/activator-57c5775dc-7v8qc to ip-10-0-118-213.ec2.internal</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:23 +0200 EET" title="First Seen: 00:00:00">16:58:23</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated"></p></td>
+      <td><p class="truncated">storage-version-migration-serving-serving-latest-1.34.1-kfpqv</p></td>
+      <td><p class="text-muted">Scheduled</p></td>
+      <td data-formatter="messageFormatter">Successfully assigned knative-serving/storage-version-migration-serving-serving-latest-1.34.1-kfpqv to ip-10-0-25-180.ec2.internal</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 17:00:05 +0200 EET" title="First Seen: 00:00:00">17:00:05</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated"></p></td>
+      <td><p class="truncated">activator-57c5775dc-zxbg9</p></td>
+      <td><p class="text-muted">IPTablesUsageObserved</p></td>
+      <td data-formatter="messageFormatter">This pod appears to have created one or more iptables rules. IPTables is
+deprecated and will no longer be available in RHEL 10 and later. You should
+consider migrating to another API such as nftables or eBPF. See also
+https://access.redhat.com/solutions/6739041
+
+Example iptables rule seen in this pod:
+-A PREROUTING -p udp -m udp --sport 53 -j CT --zone 1
+</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:24 +0200 EET" title="First Seen: 00:00:00">16:58:24</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated"></p></td>
+      <td><p class="truncated">net-istio-webhook-5fbccdd7d5-6wpfd</p></td>
+      <td><p class="text-muted">Scheduled</p></td>
+      <td data-formatter="messageFormatter">Successfully assigned knative-serving/net-istio-webhook-5fbccdd7d5-6wpfd to ip-10-0-118-213.ec2.internal</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:57:50 +0200 EET" title="First Seen: 00:00:00">16:57:50</time></td>
+      <td><p class="truncated">openshift-serverless</p></td>
+      <td><p class="truncated"></p></td>
+      <td><p class="truncated">knative-openshift-ingress-7dbfc8dbcd-c8gcn</p></td>
+      <td><p class="text-muted">Scheduled</p></td>
+      <td data-formatter="messageFormatter">Successfully assigned openshift-serverless/knative-openshift-ingress-7dbfc8dbcd-c8gcn to ip-10-0-83-16.ec2.internal</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 17:01:46 +0200 EET" title="First Seen: 00:00:00">17:01:46</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated"></p></td>
+      <td><p class="truncated">autoscaler-67654f944f-nkv26</p></td>
+      <td><p class="text-muted">IPTablesUsageObserved</p></td>
+      <td data-formatter="messageFormatter">This pod appears to have created one or more iptables rules. IPTables is
+deprecated and will no longer be available in RHEL 10 and later. You should
+consider migrating to another API such as nftables or eBPF. See also
+https://access.redhat.com/solutions/6739041
+
+Example iptables rule seen in this pod:
+-A PREROUTING -p udp -m udp --sport 53 -j CT --zone 1
+</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 17:02:39 +0200 EET" title="First Seen: 00:00:00">17:02:39</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated"></p></td>
+      <td><p class="truncated">activator-57c5775dc-7v8qc</p></td>
+      <td><p class="text-muted">IPTablesUsageObserved</p></td>
+      <td data-formatter="messageFormatter">This pod appears to have created one or more iptables rules. IPTables is
+deprecated and will no longer be available in RHEL 10 and later. You should
+consider migrating to another API such as nftables or eBPF. See also
+https://access.redhat.com/solutions/6739041
+
+Example iptables rule seen in this pod:
+-A PREROUTING -p udp -m udp --sport 53 -j CT --zone 1
+</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:24 +0200 EET" title="First Seen: 00:00:00">16:58:24</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated"></p></td>
+      <td><p class="truncated">net-istio-controller-7f99bfd446-76xqm</p></td>
+      <td><p class="text-muted">Scheduled</p></td>
+      <td data-formatter="messageFormatter">Successfully assigned knative-serving/net-istio-controller-7f99bfd446-76xqm to ip-10-0-63-72.ec2.internal</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:36 +0200 EET" title="First Seen: 00:00:00">16:58:36</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated"></p></td>
+      <td><p class="truncated">activator-57c5775dc-zxbg9</p></td>
+      <td><p class="text-muted">Scheduled</p></td>
+      <td data-formatter="messageFormatter">Successfully assigned knative-serving/activator-57c5775dc-zxbg9 to ip-10-0-63-72.ec2.internal</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:40 +0200 EET" title="First Seen: 00:00:00">16:58:40</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated"></p></td>
+      <td><p class="truncated">controller-84d56ccfc4-q2kkb</p></td>
+      <td><p class="text-muted">Scheduled</p></td>
+      <td data-formatter="messageFormatter">Successfully assigned knative-serving/controller-84d56ccfc4-q2kkb to ip-10-0-118-213.ec2.internal</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:22 +0200 EET" title="First Seen: 00:00:00">16:58:22</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated"></p></td>
+      <td><p class="truncated">autoscaler-67654f944f-nkv26</p></td>
+      <td><p class="text-muted">Scheduled</p></td>
+      <td data-formatter="messageFormatter">Successfully assigned knative-serving/autoscaler-67654f944f-nkv26 to ip-10-0-118-213.ec2.internal</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:24 +0200 EET" title="First Seen: 00:00:00">16:58:24</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated"></p></td>
+      <td><p class="truncated">controller-84d56ccfc4-ffm5k</p></td>
+      <td><p class="text-muted">Scheduled</p></td>
+      <td data-formatter="messageFormatter">Successfully assigned knative-serving/controller-84d56ccfc4-ffm5k to ip-10-0-25-180.ec2.internal</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:22 +0200 EET" title="First Seen: 00:00:00">16:58:22</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated"></p></td>
+      <td><p class="truncated">controller-5cdf4475cb-n97z7</p></td>
+      <td><p class="text-muted">Scheduled</p></td>
+      <td data-formatter="messageFormatter">Successfully assigned knative-serving/controller-5cdf4475cb-n97z7 to ip-10-0-63-72.ec2.internal</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:23 +0200 EET" title="First Seen: 00:00:00">16:58:23</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated"></p></td>
+      <td><p class="truncated">autoscaler-hpa-597557bd7b-6dsl9</p></td>
+      <td><p class="text-muted">Scheduled</p></td>
+      <td data-formatter="messageFormatter">Successfully assigned knative-serving/autoscaler-hpa-597557bd7b-6dsl9 to ip-10-0-25-180.ec2.internal</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:24 +0200 EET" title="First Seen: 00:00:00">16:58:24</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated"></p></td>
+      <td><p class="truncated">net-istio-webhook-5fbccdd7d5-6n9c9</p></td>
+      <td><p class="text-muted">Scheduled</p></td>
+      <td data-formatter="messageFormatter">Successfully assigned knative-serving/net-istio-webhook-5fbccdd7d5-6n9c9 to ip-10-0-63-72.ec2.internal</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:23 +0200 EET" title="First Seen: 00:00:00">16:58:23</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated"></p></td>
+      <td><p class="truncated">autoscaler-hpa-597557bd7b-9j47x</p></td>
+      <td><p class="text-muted">Scheduled</p></td>
+      <td data-formatter="messageFormatter">Successfully assigned knative-serving/autoscaler-hpa-597557bd7b-9j47x to ip-10-0-83-16.ec2.internal</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:24 +0200 EET" title="First Seen: 00:00:00">16:58:24</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated"></p></td>
+      <td><p class="truncated">net-istio-controller-7f99bfd446-qnvk9</p></td>
+      <td><p class="text-muted">Scheduled</p></td>
+      <td data-formatter="messageFormatter">Successfully assigned knative-serving/net-istio-controller-7f99bfd446-qnvk9 to ip-10-0-83-16.ec2.internal</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:57:45 +0200 EET" title="First Seen: 16:57:45">16:57:45</time></td>
+      <td><p class="truncated">openshift-serverless</p></td>
+      <td><p class="truncated">operator-lifecycle-manager</p></td>
+      <td><p class="truncated">serverless-operator.v1.34.1</p></td>
+      <td><p class="text-muted">RequirementsUnknown</p></td>
+      <td data-formatter="messageFormatter">requirements not yet checked</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:57:45 +0200 EET" title="First Seen: 16:57:45">16:57:45</time></td>
+      <td><p class="truncated">openshift-serverless</p></td>
+      <td><p class="truncated">operator-lifecycle-manager</p></td>
+      <td><p class="truncated">serverless-operator.v1.34.1</p></td>
+      <td><p class="text-muted">RequirementsNotMet</p></td>
+      <td data-formatter="messageFormatter">one or more requirements couldn&#39;t be found</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:57:48 +0200 EET" title="First Seen: 16:57:48">16:57:48</time></td>
+      <td><p class="truncated">openshift-serverless</p></td>
+      <td><p class="truncated">operator-lifecycle-manager</p></td>
+      <td><p class="truncated">serverless-operator.v1.34.1</p></td>
+      <td><p class="text-muted">AllRequirementsMet</p></td>
+      <td data-formatter="messageFormatter">all requirements found, attempting install</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:57:49 +0200 EET" title="First Seen: 16:57:49">16:57:49</time></td>
+      <td><p class="truncated">openshift-serverless</p></td>
+      <td><p class="truncated">replicaset-controller</p></td>
+      <td><p class="truncated">knative-operator-webhook-7655d96d78</p></td>
+      <td><p class="text-muted">SuccessfulCreate</p></td>
+      <td data-formatter="messageFormatter">Created pod: knative-operator-webhook-7655d96d78-dch7r</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:57:49 +0200 EET" title="First Seen: 16:57:49">16:57:49</time></td>
+      <td><p class="truncated">openshift-serverless</p></td>
+      <td><p class="truncated">deployment-controller</p></td>
+      <td><p class="truncated">knative-operator-webhook</p></td>
+      <td><p class="text-muted">ScalingReplicaSet</p></td>
+      <td data-formatter="messageFormatter">Scaled up replica set knative-operator-webhook-7655d96d78 to 1</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:57:50 +0200 EET" title="First Seen: 16:57:50">16:57:50</time></td>
+      <td><p class="truncated">openshift-serverless</p></td>
+      <td><p class="truncated">replicaset-controller</p></td>
+      <td><p class="truncated">knative-openshift-ingress-7dbfc8dbcd</p></td>
+      <td><p class="text-muted">SuccessfulCreate</p></td>
+      <td data-formatter="messageFormatter">Created pod: knative-openshift-ingress-7dbfc8dbcd-c8gcn</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:57:50 +0200 EET" title="First Seen: 16:57:50">16:57:50</time></td>
+      <td><p class="truncated">openshift-serverless</p></td>
+      <td><p class="truncated">deployment-controller</p></td>
+      <td><p class="truncated">knative-openshift-ingress</p></td>
+      <td><p class="text-muted">ScalingReplicaSet</p></td>
+      <td data-formatter="messageFormatter">Scaled up replica set knative-openshift-ingress-7dbfc8dbcd to 1</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:57:50 +0200 EET" title="First Seen: 16:57:50">16:57:50</time></td>
+      <td><p class="truncated">openshift-serverless</p></td>
+      <td><p class="truncated">deployment-controller</p></td>
+      <td><p class="truncated">knative-openshift</p></td>
+      <td><p class="text-muted">ScalingReplicaSet</p></td>
+      <td data-formatter="messageFormatter">Scaled up replica set knative-openshift-5fc65bff85 to 1</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:57:50 +0200 EET" title="First Seen: 16:57:50">16:57:50</time></td>
+      <td><p class="truncated">openshift-serverless</p></td>
+      <td><p class="truncated">replicaset-controller</p></td>
+      <td><p class="truncated">knative-openshift-5fc65bff85</p></td>
+      <td><p class="text-muted">SuccessfulCreate</p></td>
+      <td data-formatter="messageFormatter">Created pod: knative-openshift-5fc65bff85-x4s2w</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:57:50 +0200 EET" title="First Seen: 16:57:50">16:57:50</time></td>
+      <td><p class="truncated">openshift-serverless</p></td>
+      <td><p class="truncated">operator-lifecycle-manager</p></td>
+      <td><p class="truncated">serverless-operator.v1.34.1</p></td>
+      <td><p class="text-muted">InstallSucceeded</p></td>
+      <td data-formatter="messageFormatter">waiting for install components to report healthy</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:57:50 +0200 EET" title="First Seen: 16:57:50">16:57:50</time></td>
+      <td><p class="truncated">openshift-serverless</p></td>
+      <td><p class="truncated">multus</p></td>
+      <td><p class="truncated">knative-operator-webhook-7655d96d78-dch7r</p></td>
+      <td><p class="text-muted">AddedInterface</p></td>
+      <td data-formatter="messageFormatter">Add eth0 [10.130.2.19/23] from ovn-kubernetes</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:57:50 +0200 EET" title="First Seen: 16:57:50">16:57:50</time></td>
+      <td><p class="truncated">openshift-serverless</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">knative-operator-webhook-7655d96d78-dch7r</p></td>
+      <td><p class="text-muted">Pulling</p></td>
+      <td data-formatter="messageFormatter">Pulling image &#34;docker.io/skonto/serverless-openshift-knative-operator&#34;</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:57:51 +0200 EET" title="First Seen: 16:57:51">16:57:51</time></td>
+      <td><p class="truncated">openshift-serverless</p></td>
+      <td><p class="truncated">multus</p></td>
+      <td><p class="truncated">knative-openshift-ingress-7dbfc8dbcd-c8gcn</p></td>
+      <td><p class="text-muted">AddedInterface</p></td>
+      <td data-formatter="messageFormatter">Add eth0 [10.130.2.21/23] from ovn-kubernetes</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:57:51 +0200 EET" title="First Seen: 16:57:51">16:57:51</time></td>
+      <td><p class="truncated">openshift-serverless</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">knative-openshift-5fc65bff85-x4s2w</p></td>
+      <td><p class="text-muted">Pulling</p></td>
+      <td data-formatter="messageFormatter">Pulling image &#34;registry.ci.openshift.org/openshift/knative-v1.14.0:kn-cli-artifacts&#34;</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:57:51 +0200 EET" title="First Seen: 16:57:51">16:57:51</time></td>
+      <td><p class="truncated">openshift-serverless</p></td>
+      <td><p class="truncated">operator-lifecycle-manager</p></td>
+      <td><p class="truncated">serverless-operator.v1.34.1</p></td>
+      <td><p class="text-muted">InstallWaiting</p></td>
+      <td data-formatter="messageFormatter">installing: waiting for deployment knative-operator-webhook to become ready: deployment &#34;knative-operator-webhook&#34; not available: Deployment does not have minimum availability.</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:57:51 +0200 EET" title="First Seen: 16:57:51">16:57:51</time></td>
+      <td><p class="truncated">openshift-serverless</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">knative-openshift-ingress-7dbfc8dbcd-c8gcn</p></td>
+      <td><p class="text-muted">Pulling</p></td>
+      <td data-formatter="messageFormatter">Pulling image &#34;docker.io/skonto/serverless-ingress&#34;</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:57:51 +0200 EET" title="First Seen: 16:57:51">16:57:51</time></td>
+      <td><p class="truncated">openshift-serverless</p></td>
+      <td><p class="truncated">multus</p></td>
+      <td><p class="truncated">knative-openshift-5fc65bff85-x4s2w</p></td>
+      <td><p class="text-muted">AddedInterface</p></td>
+      <td data-formatter="messageFormatter">Add eth0 [10.130.2.20/23] from ovn-kubernetes</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:57:53 +0200 EET" title="First Seen: 16:57:53">16:57:53</time></td>
+      <td><p class="truncated">openshift-serverless</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">knative-operator-webhook-7655d96d78-dch7r</p></td>
+      <td><p class="text-muted">Started</p></td>
+      <td data-formatter="messageFormatter">Started container knative-operator</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:57:53 +0200 EET" title="First Seen: 16:57:53">16:57:53</time></td>
+      <td><p class="truncated">openshift-serverless</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">knative-operator-webhook-7655d96d78-dch7r</p></td>
+      <td><p class="text-muted">Pulled</p></td>
+      <td data-formatter="messageFormatter">Successfully pulled image &#34;docker.io/skonto/serverless-openshift-knative-operator&#34; in 3.405s (3.405s including waiting). Image size: 166517720 bytes.</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:57:53 +0200 EET" title="First Seen: 16:57:53">16:57:53</time></td>
+      <td><p class="truncated">openshift-serverless</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">knative-operator-webhook-7655d96d78-dch7r</p></td>
+      <td><p class="text-muted">Created</p></td>
+      <td data-formatter="messageFormatter">Created container knative-operator</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:57:53 +0200 EET" title="First Seen: 16:57:53">16:57:53</time></td>
+      <td><p class="truncated">openshift-serverless</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">knative-openshift-ingress-7dbfc8dbcd-c8gcn</p></td>
+      <td><p class="text-muted">Created</p></td>
+      <td data-formatter="messageFormatter">Created container knative-openshift-ingress</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:57:53 +0200 EET" title="First Seen: 16:57:53">16:57:53</time></td>
+      <td><p class="truncated">openshift-serverless</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">knative-openshift-ingress-7dbfc8dbcd-c8gcn</p></td>
+      <td><p class="text-muted">Pulled</p></td>
+      <td data-formatter="messageFormatter">Successfully pulled image &#34;docker.io/skonto/serverless-ingress&#34; in 2.604s (2.604s including waiting). Image size: 158751690 bytes.</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:57:53 +0200 EET" title="First Seen: 16:57:53">16:57:53</time></td>
+      <td><p class="truncated">openshift-serverless</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">knative-openshift-ingress-7dbfc8dbcd-c8gcn</p></td>
+      <td><p class="text-muted">Started</p></td>
+      <td data-formatter="messageFormatter">Started container knative-openshift-ingress</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:57:55 +0200 EET" title="First Seen: 16:57:55">16:57:55</time></td>
+      <td><p class="truncated">openshift-serverless</p></td>
+      <td><p class="truncated">operator-lifecycle-manager</p></td>
+      <td><p class="truncated">serverless-operator.v1.34.1</p></td>
+      <td><p class="text-muted">InstallWaiting</p></td>
+      <td data-formatter="messageFormatter">installing: waiting for deployment knative-openshift to become ready: deployment &#34;knative-openshift&#34; not available: Deployment does not have minimum availability.</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:02 +0200 EET" title="First Seen: 16:58:02">16:58:02</time></td>
+      <td><p class="truncated">openshift-serverless</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">knative-openshift-5fc65bff85-x4s2w</p></td>
+      <td><p class="text-muted">Created</p></td>
+      <td data-formatter="messageFormatter">Created container cli-artifacts</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:02 +0200 EET" title="First Seen: 16:58:02">16:58:02</time></td>
+      <td><p class="truncated">openshift-serverless</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">knative-openshift-5fc65bff85-x4s2w</p></td>
+      <td><p class="text-muted">Pulled</p></td>
+      <td data-formatter="messageFormatter">Successfully pulled image &#34;registry.ci.openshift.org/openshift/knative-v1.14.0:kn-cli-artifacts&#34; in 11.6s (11.6s including waiting). Image size: 433126674 bytes.</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:02 +0200 EET" title="First Seen: 16:58:02">16:58:02</time></td>
+      <td><p class="truncated">openshift-serverless</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">knative-openshift-5fc65bff85-x4s2w</p></td>
+      <td><p class="text-muted">Started</p></td>
+      <td data-formatter="messageFormatter">Started container cli-artifacts</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:03 +0200 EET" title="First Seen: 16:58:03">16:58:03</time></td>
+      <td><p class="truncated">openshift-serverless</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">knative-openshift-5fc65bff85-x4s2w</p></td>
+      <td><p class="text-muted">Pulling</p></td>
+      <td data-formatter="messageFormatter">Pulling image &#34;docker.io/skonto/serverless-knative-operator&#34;</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:04 +0200 EET" title="First Seen: 16:58:04">16:58:04</time></td>
+      <td><p class="truncated">openshift-serverless</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">knative-openshift-5fc65bff85-x4s2w</p></td>
+      <td><p class="text-muted">Created</p></td>
+      <td data-formatter="messageFormatter">Created container knative-openshift</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:04 +0200 EET" title="First Seen: 16:58:04">16:58:04</time></td>
+      <td><p class="truncated">openshift-serverless</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">knative-openshift-5fc65bff85-x4s2w</p></td>
+      <td><p class="text-muted">Pulled</p></td>
+      <td data-formatter="messageFormatter">Successfully pulled image &#34;docker.io/skonto/serverless-knative-operator&#34; in 1.097s (1.097s including waiting). Image size: 154517640 bytes.</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:04 +0200 EET" title="First Seen: 16:58:04">16:58:04</time></td>
+      <td><p class="truncated">openshift-serverless</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">knative-openshift-5fc65bff85-x4s2w</p></td>
+      <td><p class="text-muted">Started</p></td>
+      <td data-formatter="messageFormatter">Started container knative-openshift</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:05 +0200 EET" title="First Seen: 16:58:05">16:58:05</time></td>
+      <td><p class="truncated">openshift-serverless</p></td>
+      <td><p class="truncated">knative-openshift-5fc65bff85-x4s2w_0b33f4e2-940d-43f0-91f7-11091f09feb1</p></td>
+      <td><p class="truncated">knative-serving-openshift-lock</p></td>
+      <td><p class="text-muted">LeaderElection</p></td>
+      <td data-formatter="messageFormatter">knative-openshift-5fc65bff85-x4s2w_0b33f4e2-940d-43f0-91f7-11091f09feb1 became leader</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:06 +0200 EET" title="First Seen: 16:58:06">16:58:06</time></td>
+      <td><p class="truncated">openshift-serverless</p></td>
+      <td><p class="truncated">operator-lifecycle-manager</p></td>
+      <td><p class="truncated">serverless-operator.v1.34.1</p></td>
+      <td><p class="text-muted">InstallSucceeded</p></td>
+      <td data-formatter="messageFormatter">install strategy completed with no errors</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:14 +0200 EET" title="First Seen: 16:58:14">16:58:14</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">knativeserving-controller</p></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="text-muted">FinalizerUpdate</p></td>
+      <td data-formatter="messageFormatter">Updated &#34;knative-serving&#34; finalizers</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:14 +0200 EET" title="First Seen: 16:58:14">16:58:14</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">knativeserving-controller</p></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="text-danger">FinalizerUpdateFailed</p></td>
+      <td data-formatter="messageFormatter">Failed to update finalizers for &#34;knative-serving&#34;: Operation cannot be fulfilled on knativeservings.operator.knative.dev &#34;knative-serving&#34;: the object has been modified; please apply your changes to the latest version and try again</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:21 +0200 EET" title="First Seen: 16:58:21">16:58:21</time> <small>(x2)</small></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">controllermanager</p></td>
+      <td><p class="truncated">activator-pdb</p></td>
+      <td><p class="text-muted">NoPods</p></td>
+      <td data-formatter="messageFormatter">No matching pods found</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:22 +0200 EET" title="First Seen: 16:58:22">16:58:22</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">controlplane</p></td>
+      <td><p class="truncated">autoscaler-67654f944f-nkv26</p></td>
+      <td><p class="text-danger">ErrorUpdatingResource</p></td>
+      <td data-formatter="messageFormatter">addLogicalPort failed for knative-serving/autoscaler-67654f944f-nkv26: failed to update pod knative-serving/autoscaler-67654f944f-nkv26: Operation cannot be fulfilled on pods &#34;autoscaler-67654f944f-nkv26&#34;: the object has been modified; please apply your changes to the latest version and try again</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:22 +0200 EET" title="First Seen: 16:58:22">16:58:22</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">deployment-controller</p></td>
+      <td><p class="truncated">activator</p></td>
+      <td><p class="text-muted">ScalingReplicaSet</p></td>
+      <td data-formatter="messageFormatter">Scaled up replica set activator-57c5775dc to 1</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:22 +0200 EET" title="First Seen: 16:58:22">16:58:22</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">deployment-controller</p></td>
+      <td><p class="truncated">controller</p></td>
+      <td><p class="text-muted">ScalingReplicaSet</p></td>
+      <td data-formatter="messageFormatter">Scaled up replica set controller-5cdf4475cb to 2</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:22 +0200 EET" title="First Seen: 16:58:22">16:58:22</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">replicaset-controller</p></td>
+      <td><p class="truncated">activator-57c5775dc</p></td>
+      <td><p class="text-muted">SuccessfulCreate</p></td>
+      <td data-formatter="messageFormatter">Created pod: activator-57c5775dc-7v8qc</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:22 +0200 EET" title="First Seen: 16:58:22">16:58:22</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">deployment-controller</p></td>
+      <td><p class="truncated">autoscaler</p></td>
+      <td><p class="text-muted">ScalingReplicaSet</p></td>
+      <td data-formatter="messageFormatter">Scaled up replica set autoscaler-67654f944f to 2</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:22 +0200 EET" title="First Seen: 16:58:22">16:58:22</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">replicaset-controller</p></td>
+      <td><p class="truncated">controller-5cdf4475cb</p></td>
+      <td><p class="text-muted">SuccessfulCreate</p></td>
+      <td data-formatter="messageFormatter">Created pod: controller-5cdf4475cb-mdk5g</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:22 +0200 EET" title="First Seen: 16:58:22">16:58:22</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">replicaset-controller</p></td>
+      <td><p class="truncated">autoscaler-67654f944f</p></td>
+      <td><p class="text-muted">SuccessfulCreate</p></td>
+      <td data-formatter="messageFormatter">Created pod: autoscaler-67654f944f-s7bhw</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:22 +0200 EET" title="First Seen: 16:58:22">16:58:22</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">replicaset-controller</p></td>
+      <td><p class="truncated">autoscaler-67654f944f</p></td>
+      <td><p class="text-muted">SuccessfulCreate</p></td>
+      <td data-formatter="messageFormatter">Created pod: autoscaler-67654f944f-nkv26</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:22 +0200 EET" title="First Seen: 16:58:22">16:58:22</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">replicaset-controller</p></td>
+      <td><p class="truncated">controller-5cdf4475cb</p></td>
+      <td><p class="text-muted">SuccessfulCreate</p></td>
+      <td data-formatter="messageFormatter">Created pod: controller-5cdf4475cb-n97z7</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:23 +0200 EET" title="First Seen: 16:58:23">16:58:23</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">deployment-controller</p></td>
+      <td><p class="truncated">webhook</p></td>
+      <td><p class="text-muted">ScalingReplicaSet</p></td>
+      <td data-formatter="messageFormatter">Scaled up replica set webhook-7bccb96f5b to 1</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:23 +0200 EET" title="First Seen: 16:58:23">16:58:23</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">deployment-controller</p></td>
+      <td><p class="truncated">controller</p></td>
+      <td><p class="text-muted">ScalingReplicaSet</p></td>
+      <td data-formatter="messageFormatter">Scaled up replica set controller-84d56ccfc4 to 1</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:23 +0200 EET" title="First Seen: 16:58:22">16:58:23</time> <small>(x3)</small></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">activator-57c5775dc-7v8qc</p></td>
+      <td><p class="text-danger">FailedMount</p></td>
+      <td data-formatter="messageFormatter">MountVolume.SetUp failed for volume &#34;secret-activator-sm-service-tls&#34; : secret &#34;activator-sm-service-tls&#34; not found</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:23 +0200 EET" title="First Seen: 16:58:22">16:58:23</time> <small>(x2)</small></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">controllermanager</p></td>
+      <td><p class="truncated">webhook-pdb</p></td>
+      <td><p class="text-muted">NoPods</p></td>
+      <td data-formatter="messageFormatter">No matching pods found</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:23 +0200 EET" title="First Seen: 16:58:23">16:58:23</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">replicaset-controller</p></td>
+      <td><p class="truncated">webhook-7bccb96f5b</p></td>
+      <td><p class="text-muted">SuccessfulCreate</p></td>
+      <td data-formatter="messageFormatter">Created pod: webhook-7bccb96f5b-tksl4</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:23 +0200 EET" title="First Seen: 16:58:23">16:58:23</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">deployment-controller</p></td>
+      <td><p class="truncated">autoscaler-hpa</p></td>
+      <td><p class="text-muted">ScalingReplicaSet</p></td>
+      <td data-formatter="messageFormatter">Scaled up replica set autoscaler-hpa-597557bd7b to 2</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:23 +0200 EET" title="First Seen: 16:58:23">16:58:23</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">replicaset-controller</p></td>
+      <td><p class="truncated">autoscaler-hpa-597557bd7b</p></td>
+      <td><p class="text-muted">SuccessfulCreate</p></td>
+      <td data-formatter="messageFormatter">Created pod: autoscaler-hpa-597557bd7b-9j47x</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:23 +0200 EET" title="First Seen: 16:58:23">16:58:23</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">replicaset-controller</p></td>
+      <td><p class="truncated">autoscaler-hpa-597557bd7b</p></td>
+      <td><p class="text-muted">SuccessfulCreate</p></td>
+      <td data-formatter="messageFormatter">Created pod: autoscaler-hpa-597557bd7b-6dsl9</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:23 +0200 EET" title="First Seen: 16:58:23">16:58:23</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">job-controller</p></td>
+      <td><p class="truncated">storage-version-migration-serving-serving-latest-1.34.1</p></td>
+      <td><p class="text-muted">SuccessfulCreate</p></td>
+      <td data-formatter="messageFormatter">Created pod: storage-version-migration-serving-serving-latest-1.34.1-kfpqv</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:24 +0200 EET" title="First Seen: 16:58:24">16:58:24</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">multus</p></td>
+      <td><p class="truncated">net-istio-controller-7f99bfd446-76xqm</p></td>
+      <td><p class="text-muted">AddedInterface</p></td>
+      <td data-formatter="messageFormatter">Add eth0 [10.131.0.23/23] from ovn-kubernetes</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:24 +0200 EET" title="First Seen: 16:58:24">16:58:24</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">multus</p></td>
+      <td><p class="truncated">net-istio-controller-7f99bfd446-qnvk9</p></td>
+      <td><p class="text-muted">AddedInterface</p></td>
+      <td data-formatter="messageFormatter">Add eth0 [10.130.2.24/23] from ovn-kubernetes</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:24 +0200 EET" title="First Seen: 16:58:22">16:58:24</time> <small>(x3)</small></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">controller-5cdf4475cb-n97z7</p></td>
+      <td><p class="text-danger">FailedMount</p></td>
+      <td data-formatter="messageFormatter">MountVolume.SetUp failed for volume &#34;secret-controller-sm-service-tls&#34; : secret &#34;controller-sm-service-tls&#34; not found</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:24 +0200 EET" title="First Seen: 16:58:24">16:58:24</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">net-istio-webhook-5fbccdd7d5-6wpfd</p></td>
+      <td><p class="text-muted">Pulling</p></td>
+      <td data-formatter="messageFormatter">Pulling image &#34;registry.ci.openshift.org/openshift/net-istio-webhook:knative-v1.14&#34;</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:24 +0200 EET" title="First Seen: 16:58:24">16:58:24</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">replicaset-controller</p></td>
+      <td><p class="truncated">net-istio-webhook-5fbccdd7d5</p></td>
+      <td><p class="text-muted">SuccessfulCreate</p></td>
+      <td data-formatter="messageFormatter">Created pod: net-istio-webhook-5fbccdd7d5-6n9c9</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:24 +0200 EET" title="First Seen: 16:58:24">16:58:24</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">replicaset-controller</p></td>
+      <td><p class="truncated">net-istio-webhook-5fbccdd7d5</p></td>
+      <td><p class="text-muted">SuccessfulCreate</p></td>
+      <td data-formatter="messageFormatter">Created pod: net-istio-webhook-5fbccdd7d5-6wpfd</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:24 +0200 EET" title="First Seen: 16:58:24">16:58:24</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">deployment-controller</p></td>
+      <td><p class="truncated">net-istio-webhook</p></td>
+      <td><p class="text-muted">ScalingReplicaSet</p></td>
+      <td data-formatter="messageFormatter">Scaled up replica set net-istio-webhook-5fbccdd7d5 to 2</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:24 +0200 EET" title="First Seen: 16:58:24">16:58:24</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">multus</p></td>
+      <td><p class="truncated">storage-version-migration-serving-serving-latest-1.34.1-kfpqv</p></td>
+      <td><p class="text-muted">AddedInterface</p></td>
+      <td data-formatter="messageFormatter">Add eth0 [10.128.2.34/23] from ovn-kubernetes</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:24 +0200 EET" title="First Seen: 16:58:24">16:58:24</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">storage-version-migration-serving-serving-latest-1.34.1-kfpqv</p></td>
+      <td><p class="text-muted">Pulling</p></td>
+      <td data-formatter="messageFormatter">Pulling image &#34;registry.ci.openshift.org/openshift/knative-serving-storage-version-migration:knative-v1.14&#34;</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:24 +0200 EET" title="First Seen: 16:58:22">16:58:24</time> <small>(x3)</small></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">autoscaler-67654f944f-s7bhw</p></td>
+      <td><p class="text-danger">FailedMount</p></td>
+      <td data-formatter="messageFormatter">MountVolume.SetUp failed for volume &#34;secret-autoscaler-sm-service-tls&#34; : secret &#34;autoscaler-sm-service-tls&#34; not found</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:24 +0200 EET" title="First Seen: 16:58:24">16:58:24</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">deployment-controller</p></td>
+      <td><p class="truncated">net-istio-controller</p></td>
+      <td><p class="text-muted">ScalingReplicaSet</p></td>
+      <td data-formatter="messageFormatter">Scaled up replica set net-istio-controller-7f99bfd446 to 2</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:24 +0200 EET" title="First Seen: 16:58:24">16:58:24</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">net-istio-controller-7f99bfd446-76xqm</p></td>
+      <td><p class="text-muted">Pulling</p></td>
+      <td data-formatter="messageFormatter">Pulling image &#34;registry.ci.openshift.org/openshift/net-istio-controller:knative-v1.14&#34;</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:24 +0200 EET" title="First Seen: 16:58:24">16:58:24</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">replicaset-controller</p></td>
+      <td><p class="truncated">net-istio-controller-7f99bfd446</p></td>
+      <td><p class="text-muted">SuccessfulCreate</p></td>
+      <td data-formatter="messageFormatter">Created pod: net-istio-controller-7f99bfd446-76xqm</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:24 +0200 EET" title="First Seen: 16:58:24">16:58:24</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">multus</p></td>
+      <td><p class="truncated">net-istio-webhook-5fbccdd7d5-6wpfd</p></td>
+      <td><p class="text-muted">AddedInterface</p></td>
+      <td data-formatter="messageFormatter">Add eth0 [10.129.2.20/23] from ovn-kubernetes</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:24 +0200 EET" title="First Seen: 16:58:24">16:58:24</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">net-istio-controller-7f99bfd446-qnvk9</p></td>
+      <td><p class="text-muted">Pulling</p></td>
+      <td data-formatter="messageFormatter">Pulling image &#34;registry.ci.openshift.org/openshift/net-istio-controller:knative-v1.14&#34;</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:24 +0200 EET" title="First Seen: 16:58:23">16:58:24</time> <small>(x3)</small></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">webhook-7bccb96f5b-tksl4</p></td>
+      <td><p class="text-danger">FailedMount</p></td>
+      <td data-formatter="messageFormatter">MountVolume.SetUp failed for volume &#34;secret-webhook-sm-service-tls&#34; : secret &#34;webhook-sm-service-tls&#34; not found</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:24 +0200 EET" title="First Seen: 16:58:22">16:58:24</time> <small>(x3)</small></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">autoscaler-67654f944f-nkv26</p></td>
+      <td><p class="text-danger">FailedMount</p></td>
+      <td data-formatter="messageFormatter">MountVolume.SetUp failed for volume &#34;secret-autoscaler-sm-service-tls&#34; : secret &#34;autoscaler-sm-service-tls&#34; not found</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:24 +0200 EET" title="First Seen: 16:58:22">16:58:24</time> <small>(x3)</small></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">controller-5cdf4475cb-mdk5g</p></td>
+      <td><p class="text-danger">FailedMount</p></td>
+      <td data-formatter="messageFormatter">MountVolume.SetUp failed for volume &#34;secret-controller-sm-service-tls&#34; : secret &#34;controller-sm-service-tls&#34; not found</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:24 +0200 EET" title="First Seen: 16:58:24">16:58:24</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">replicaset-controller</p></td>
+      <td><p class="truncated">controller-84d56ccfc4</p></td>
+      <td><p class="text-muted">SuccessfulCreate</p></td>
+      <td data-formatter="messageFormatter">Created pod: controller-84d56ccfc4-ffm5k</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:24 +0200 EET" title="First Seen: 16:58:24">16:58:24</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">replicaset-controller</p></td>
+      <td><p class="truncated">net-istio-controller-7f99bfd446</p></td>
+      <td><p class="text-muted">SuccessfulCreate</p></td>
+      <td data-formatter="messageFormatter">Created pod: net-istio-controller-7f99bfd446-qnvk9</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:25 +0200 EET" title="First Seen: 16:58:24">16:58:25</time> <small>(x3)</small></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">controller-84d56ccfc4-ffm5k</p></td>
+      <td><p class="text-danger">FailedMount</p></td>
+      <td data-formatter="messageFormatter">MountVolume.SetUp failed for volume &#34;secret-controller-sm-service-tls&#34; : secret &#34;controller-sm-service-tls&#34; not found</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:25 +0200 EET" title="First Seen: 16:58:25">16:58:25</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">multus</p></td>
+      <td><p class="truncated">net-istio-webhook-5fbccdd7d5-6n9c9</p></td>
+      <td><p class="text-muted">AddedInterface</p></td>
+      <td data-formatter="messageFormatter">Add eth0 [10.131.0.24/23] from ovn-kubernetes</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:25 +0200 EET" title="First Seen: 16:58:25">16:58:25</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">net-istio-webhook-5fbccdd7d5-6n9c9</p></td>
+      <td><p class="text-muted">Pulling</p></td>
+      <td data-formatter="messageFormatter">Pulling image &#34;registry.ci.openshift.org/openshift/net-istio-webhook:knative-v1.14&#34;</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:25 +0200 EET" title="First Seen: 16:58:23">16:58:25</time> <small>(x3)</small></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">autoscaler-hpa-597557bd7b-6dsl9</p></td>
+      <td><p class="text-danger">FailedMount</p></td>
+      <td data-formatter="messageFormatter">MountVolume.SetUp failed for volume &#34;secret-autoscaler-hpa-sm-service-tls&#34; : secret &#34;autoscaler-hpa-sm-service-tls&#34; not found</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:25 +0200 EET" title="First Seen: 16:58:23">16:58:25</time> <small>(x3)</small></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">autoscaler-hpa-597557bd7b-9j47x</p></td>
+      <td><p class="text-danger">FailedMount</p></td>
+      <td data-formatter="messageFormatter">MountVolume.SetUp failed for volume &#34;secret-autoscaler-hpa-sm-service-tls&#34; : secret &#34;autoscaler-hpa-sm-service-tls&#34; not found</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:26 +0200 EET" title="First Seen: 16:58:26">16:58:26</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">storage-version-migration-serving-serving-latest-1.34.1-kfpqv</p></td>
+      <td><p class="text-muted">Started</p></td>
+      <td data-formatter="messageFormatter">Started container migrate</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:26 +0200 EET" title="First Seen: 16:58:26">16:58:26</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">autoscaler-67654f944f-s7bhw</p></td>
+      <td><p class="text-muted">Pulling</p></td>
+      <td data-formatter="messageFormatter">Pulling image &#34;registry.ci.openshift.org/openshift/knative-serving-autoscaler:knative-v1.14&#34;</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:26 +0200 EET" title="First Seen: 16:58:26">16:58:26</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">multus</p></td>
+      <td><p class="truncated">activator-57c5775dc-7v8qc</p></td>
+      <td><p class="text-muted">AddedInterface</p></td>
+      <td data-formatter="messageFormatter">Add eth0 [10.129.2.17/23] from ovn-kubernetes</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:26 +0200 EET" title="First Seen: 16:58:26">16:58:26</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">activator-57c5775dc-7v8qc</p></td>
+      <td><p class="text-muted">Pulling</p></td>
+      <td data-formatter="messageFormatter">Pulling image &#34;registry.ci.openshift.org/openshift/knative-serving-activator:knative-v1.14&#34;</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:26 +0200 EET" title="First Seen: 16:58:26">16:58:26</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">autoscaler-67654f944f-nkv26</p></td>
+      <td><p class="text-muted">Pulling</p></td>
+      <td data-formatter="messageFormatter">Pulling image &#34;registry.ci.openshift.org/openshift/knative-serving-autoscaler:knative-v1.14&#34;</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:26 +0200 EET" title="First Seen: 16:58:26">16:58:26</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">multus</p></td>
+      <td><p class="truncated">controller-5cdf4475cb-mdk5g</p></td>
+      <td><p class="text-muted">AddedInterface</p></td>
+      <td data-formatter="messageFormatter">Add eth0 [10.130.2.22/23] from ovn-kubernetes</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:26 +0200 EET" title="First Seen: 16:58:26">16:58:26</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">multus</p></td>
+      <td><p class="truncated">controller-5cdf4475cb-n97z7</p></td>
+      <td><p class="text-muted">AddedInterface</p></td>
+      <td data-formatter="messageFormatter">Add eth0 [10.131.0.21/23] from ovn-kubernetes</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:26 +0200 EET" title="First Seen: 16:58:26">16:58:26</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">multus</p></td>
+      <td><p class="truncated">autoscaler-67654f944f-nkv26</p></td>
+      <td><p class="text-muted">AddedInterface</p></td>
+      <td data-formatter="messageFormatter">Add eth0 [10.129.2.19/23] from ovn-kubernetes</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:26 +0200 EET" title="First Seen: 16:58:26">16:58:26</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">multus</p></td>
+      <td><p class="truncated">autoscaler-67654f944f-s7bhw</p></td>
+      <td><p class="text-muted">AddedInterface</p></td>
+      <td data-formatter="messageFormatter">Add eth0 [10.128.2.32/23] from ovn-kubernetes</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:26 +0200 EET" title="First Seen: 16:58:26">16:58:26</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">storage-version-migration-serving-serving-latest-1.34.1-kfpqv</p></td>
+      <td><p class="text-muted">Created</p></td>
+      <td data-formatter="messageFormatter">Created container migrate</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:26 +0200 EET" title="First Seen: 16:58:26">16:58:26</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">storage-version-migration-serving-serving-latest-1.34.1-kfpqv</p></td>
+      <td><p class="text-muted">Pulled</p></td>
+      <td data-formatter="messageFormatter">Successfully pulled image &#34;registry.ci.openshift.org/openshift/knative-serving-storage-version-migration:knative-v1.14&#34; in 2.397s (2.397s including waiting). Image size: 141535529 bytes.</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:27 +0200 EET" title="First Seen: 16:58:27">16:58:27</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">multus</p></td>
+      <td><p class="truncated">autoscaler-hpa-597557bd7b-6dsl9</p></td>
+      <td><p class="text-muted">AddedInterface</p></td>
+      <td data-formatter="messageFormatter">Add eth0 [10.128.2.33/23] from ovn-kubernetes</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:27 +0200 EET" title="First Seen: 16:58:27">16:58:27</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">autoscaler-hpa-597557bd7b-9j47x</p></td>
+      <td><p class="text-muted">Pulling</p></td>
+      <td data-formatter="messageFormatter">Pulling image &#34;registry.ci.openshift.org/openshift/knative-serving-autoscaler-hpa:knative-v1.14&#34;</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:27 +0200 EET" title="First Seen: 16:58:27">16:58:27</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">multus</p></td>
+      <td><p class="truncated">autoscaler-hpa-597557bd7b-9j47x</p></td>
+      <td><p class="text-muted">AddedInterface</p></td>
+      <td data-formatter="messageFormatter">Add eth0 [10.130.2.23/23] from ovn-kubernetes</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:27 +0200 EET" title="First Seen: 16:58:27">16:58:27</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">webhook-7bccb96f5b-tksl4</p></td>
+      <td><p class="text-muted">Pulling</p></td>
+      <td data-formatter="messageFormatter">Pulling image &#34;registry.ci.openshift.org/openshift/knative-serving-webhook:knative-v1.14&#34;</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:27 +0200 EET" title="First Seen: 16:58:27">16:58:27</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">controller-5cdf4475cb-n97z7</p></td>
+      <td><p class="text-muted">Pulling</p></td>
+      <td data-formatter="messageFormatter">Pulling image &#34;registry.ci.openshift.org/openshift/knative-serving-controller:knative-v1.14&#34;</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:27 +0200 EET" title="First Seen: 16:58:27">16:58:27</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">autoscaler-hpa-597557bd7b-6dsl9</p></td>
+      <td><p class="text-muted">Pulling</p></td>
+      <td data-formatter="messageFormatter">Pulling image &#34;registry.ci.openshift.org/openshift/knative-serving-autoscaler-hpa:knative-v1.14&#34;</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:27 +0200 EET" title="First Seen: 16:58:27">16:58:27</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">multus</p></td>
+      <td><p class="truncated">webhook-7bccb96f5b-tksl4</p></td>
+      <td><p class="text-muted">AddedInterface</p></td>
+      <td data-formatter="messageFormatter">Add eth0 [10.131.0.22/23] from ovn-kubernetes</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:27 +0200 EET" title="First Seen: 16:58:27">16:58:27</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">controller-5cdf4475cb-mdk5g</p></td>
+      <td><p class="text-muted">Pulling</p></td>
+      <td data-formatter="messageFormatter">Pulling image &#34;registry.ci.openshift.org/openshift/knative-serving-controller:knative-v1.14&#34;</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:28 +0200 EET" title="First Seen: 16:58:28">16:58:28</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">controller-84d56ccfc4-ffm5k</p></td>
+      <td><p class="text-muted">Pulling</p></td>
+      <td data-formatter="messageFormatter">Pulling image &#34;registry.ci.openshift.org/openshift/knative-serving-controller:knative-v1.14&#34;</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:28 +0200 EET" title="First Seen: 16:58:28">16:58:28</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">multus</p></td>
+      <td><p class="truncated">controller-84d56ccfc4-ffm5k</p></td>
+      <td><p class="text-muted">AddedInterface</p></td>
+      <td data-formatter="messageFormatter">Add eth0 [10.128.2.35/23] from ovn-kubernetes</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:29 +0200 EET" title="First Seen: 16:58:29">16:58:29</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">autoscaler-67654f944f-s7bhw</p></td>
+      <td><p class="text-muted">Pulling</p></td>
+      <td data-formatter="messageFormatter">Pulling image &#34;registry.ci.openshift.org/origin/4.15:kube-rbac-proxy&#34;</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:29 +0200 EET" title="First Seen: 16:58:29">16:58:29</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">job-controller</p></td>
+      <td><p class="truncated">storage-version-migration-serving-serving-latest-1.34.1</p></td>
+      <td><p class="text-muted">Completed</p></td>
+      <td data-formatter="messageFormatter">Job completed</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:29 +0200 EET" title="First Seen: 16:58:29">16:58:29</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">autoscaler-67654f944f-s7bhw</p></td>
+      <td><p class="text-muted">Pulled</p></td>
+      <td data-formatter="messageFormatter">Successfully pulled image &#34;registry.ci.openshift.org/openshift/knative-serving-autoscaler:knative-v1.14&#34; in 2.583s (2.583s including waiting). Image size: 160305401 bytes.</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:29 +0200 EET" title="First Seen: 16:58:29">16:58:29</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">autoscaler-67654f944f-s7bhw</p></td>
+      <td><p class="text-muted">Started</p></td>
+      <td data-formatter="messageFormatter">Started container autoscaler</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:29 +0200 EET" title="First Seen: 16:58:29">16:58:29</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">autoscaler-67654f944f-s7bhw</p></td>
+      <td><p class="text-muted">Created</p></td>
+      <td data-formatter="messageFormatter">Created container autoscaler</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:30 +0200 EET" title="First Seen: 16:58:30">16:58:30</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">controller-84d56ccfc4-ffm5k</p></td>
+      <td><p class="text-muted">Started</p></td>
+      <td data-formatter="messageFormatter">Started container controller</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:30 +0200 EET" title="First Seen: 16:58:30">16:58:30</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">controller-84d56ccfc4-ffm5k</p></td>
+      <td><p class="text-muted">Created</p></td>
+      <td data-formatter="messageFormatter">Created container controller</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:30 +0200 EET" title="First Seen: 16:58:30">16:58:30</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">controller-84d56ccfc4-ffm5k</p></td>
+      <td><p class="text-muted">Pulling</p></td>
+      <td data-formatter="messageFormatter">Pulling image &#34;registry.ci.openshift.org/origin/4.15:kube-rbac-proxy&#34;</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:30 +0200 EET" title="First Seen: 16:58:30">16:58:30</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">controller-84d56ccfc4-ffm5k</p></td>
+      <td><p class="text-muted">Pulled</p></td>
+      <td data-formatter="messageFormatter">Successfully pulled image &#34;registry.ci.openshift.org/openshift/knative-serving-controller:knative-v1.14&#34; in 2.379s (2.379s including waiting). Image size: 168792824 bytes.</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:31 +0200 EET" title="First Seen: 16:58:31">16:58:31</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">autoscaler-hpa-597557bd7b-6dsl9</p></td>
+      <td><p class="text-muted">Pulling</p></td>
+      <td data-formatter="messageFormatter">Pulling image &#34;registry.ci.openshift.org/origin/4.15:kube-rbac-proxy&#34;</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:31 +0200 EET" title="First Seen: 16:58:31">16:58:31</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">autoscaler-hpa-597557bd7b-6dsl9</p></td>
+      <td><p class="text-muted">Started</p></td>
+      <td data-formatter="messageFormatter">Started container autoscaler-hpa</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:31 +0200 EET" title="First Seen: 16:58:31">16:58:31</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">autoscaler-hpa-597557bd7b-6dsl9</p></td>
+      <td><p class="text-muted">Created</p></td>
+      <td data-formatter="messageFormatter">Created container autoscaler-hpa</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:31 +0200 EET" title="First Seen: 16:58:31">16:58:31</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">autoscaler-hpa-597557bd7b-6dsl9</p></td>
+      <td><p class="text-muted">Pulled</p></td>
+      <td data-formatter="messageFormatter">Successfully pulled image &#34;registry.ci.openshift.org/openshift/knative-serving-autoscaler-hpa:knative-v1.14&#34; in 3.299s (3.299s including waiting). Image size: 159160086 bytes.</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:33 +0200 EET" title="First Seen: 16:58:33">16:58:33</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">autoscaler-hpa-597557bd7b-9j47x</p></td>
+      <td><p class="text-muted">Started</p></td>
+      <td data-formatter="messageFormatter">Started container autoscaler-hpa</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:33 +0200 EET" title="First Seen: 16:58:33">16:58:33</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">net-istio-controller-7f99bfd446-qnvk9</p></td>
+      <td><p class="text-muted">Pulled</p></td>
+      <td data-formatter="messageFormatter">Successfully pulled image &#34;registry.ci.openshift.org/openshift/net-istio-controller:knative-v1.14&#34; in 8.446s (8.446s including waiting). Image size: 524385802 bytes.</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:33 +0200 EET" title="First Seen: 16:58:33">16:58:33</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">activator-57c5775dc-7v8qc</p></td>
+      <td><p class="text-muted">Pulled</p></td>
+      <td data-formatter="messageFormatter">Successfully pulled image &#34;registry.ci.openshift.org/openshift/knative-serving-activator:knative-v1.14&#34; in 6.637s (6.637s including waiting). Image size: 159846640 bytes.</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:33 +0200 EET" title="First Seen: 16:58:33">16:58:33</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">activator-57c5775dc-7v8qc</p></td>
+      <td><p class="text-muted">Created</p></td>
+      <td data-formatter="messageFormatter">Created container activator</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:33 +0200 EET" title="First Seen: 16:58:33">16:58:33</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">activator-57c5775dc-7v8qc</p></td>
+      <td><p class="text-muted">Started</p></td>
+      <td data-formatter="messageFormatter">Started container activator</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:33 +0200 EET" title="First Seen: 16:58:33">16:58:33</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">activator-57c5775dc-7v8qc</p></td>
+      <td><p class="text-muted">Pulling</p></td>
+      <td data-formatter="messageFormatter">Pulling image &#34;registry.ci.openshift.org/origin/4.15:kube-rbac-proxy&#34;</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:33 +0200 EET" title="First Seen: 16:58:33">16:58:33</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">net-istio-webhook-5fbccdd7d5-6wpfd</p></td>
+      <td><p class="text-muted">Started</p></td>
+      <td data-formatter="messageFormatter">Started container webhook</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:33 +0200 EET" title="First Seen: 16:58:33">16:58:33</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">autoscaler-67654f944f-nkv26</p></td>
+      <td><p class="text-muted">Pulled</p></td>
+      <td data-formatter="messageFormatter">Successfully pulled image &#34;registry.ci.openshift.org/openshift/knative-serving-autoscaler:knative-v1.14&#34; in 6.223s (6.223s including waiting). Image size: 160305401 bytes.</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:33 +0200 EET" title="First Seen: 16:58:33">16:58:33</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">net-istio-webhook-5fbccdd7d5-6wpfd</p></td>
+      <td><p class="text-muted">Created</p></td>
+      <td data-formatter="messageFormatter">Created container webhook</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:33 +0200 EET" title="First Seen: 16:58:33">16:58:33</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">autoscaler-67654f944f-nkv26</p></td>
+      <td><p class="text-muted">Created</p></td>
+      <td data-formatter="messageFormatter">Created container autoscaler</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:33 +0200 EET" title="First Seen: 16:58:33">16:58:33</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">net-istio-webhook-5fbccdd7d5-6wpfd</p></td>
+      <td><p class="text-muted">Pulled</p></td>
+      <td data-formatter="messageFormatter">Successfully pulled image &#34;registry.ci.openshift.org/openshift/net-istio-webhook:knative-v1.14&#34; in 8.278s (8.278s including waiting). Image size: 521743346 bytes.</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:33 +0200 EET" title="First Seen: 16:58:33">16:58:33</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">controller-5cdf4475cb-mdk5g</p></td>
+      <td><p class="text-muted">Pulling</p></td>
+      <td data-formatter="messageFormatter">Pulling image &#34;registry.ci.openshift.org/origin/4.15:kube-rbac-proxy&#34;</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:33 +0200 EET" title="First Seen: 16:58:33">16:58:33</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">autoscaler-67654f944f-nkv26</p></td>
+      <td><p class="text-muted">Started</p></td>
+      <td data-formatter="messageFormatter">Started container autoscaler</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:33 +0200 EET" title="First Seen: 16:58:33">16:58:33</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">controller-5cdf4475cb-mdk5g</p></td>
+      <td><p class="text-muted">Started</p></td>
+      <td data-formatter="messageFormatter">Started container controller</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:33 +0200 EET" title="First Seen: 16:58:33">16:58:33</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">net-istio-controller-7f99bfd446-qnvk9</p></td>
+      <td><p class="text-warning">Unhealthy</p></td>
+      <td data-formatter="messageFormatter">Readiness probe failed: Get &#34;http://10.130.2.24:8080/readiness&#34;: dial tcp 10.130.2.24:8080: connect: connection refused</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:33 +0200 EET" title="First Seen: 16:58:33">16:58:33</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">net-istio-controller-7f99bfd446-qnvk9</p></td>
+      <td><p class="text-muted">Started</p></td>
+      <td data-formatter="messageFormatter">Started container controller</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:33 +0200 EET" title="First Seen: 16:58:33">16:58:33</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">autoscaler-hpa-597557bd7b-9j47x</p></td>
+      <td><p class="text-muted">Pulling</p></td>
+      <td data-formatter="messageFormatter">Pulling image &#34;registry.ci.openshift.org/origin/4.15:kube-rbac-proxy&#34;</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:33 +0200 EET" title="First Seen: 16:58:33">16:58:33</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">net-istio-controller-7f99bfd446-qnvk9</p></td>
+      <td><p class="text-muted">Created</p></td>
+      <td data-formatter="messageFormatter">Created container controller</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:33 +0200 EET" title="First Seen: 16:58:33">16:58:33</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">autoscaler-hpa-597557bd7b-9j47x</p></td>
+      <td><p class="text-muted">Created</p></td>
+      <td data-formatter="messageFormatter">Created container autoscaler-hpa</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:33 +0200 EET" title="First Seen: 16:58:33">16:58:33</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">autoscaler-hpa-597557bd7b-9j47x</p></td>
+      <td><p class="text-muted">Pulled</p></td>
+      <td data-formatter="messageFormatter">Successfully pulled image &#34;registry.ci.openshift.org/openshift/knative-serving-autoscaler-hpa:knative-v1.14&#34; in 5.189s (5.189s including waiting). Image size: 159160086 bytes.</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:33 +0200 EET" title="First Seen: 16:58:33">16:58:33</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">controller-5cdf4475cb-mdk5g</p></td>
+      <td><p class="text-muted">Created</p></td>
+      <td data-formatter="messageFormatter">Created container controller</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:33 +0200 EET" title="First Seen: 16:58:33">16:58:33</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">controller-5cdf4475cb-mdk5g</p></td>
+      <td><p class="text-muted">Pulled</p></td>
+      <td data-formatter="messageFormatter">Successfully pulled image &#34;registry.ci.openshift.org/openshift/knative-serving-controller:knative-v1.14&#34; in 6.122s (6.122s including waiting). Image size: 168792824 bytes.</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:33 +0200 EET" title="First Seen: 16:58:33">16:58:33</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">autoscaler-67654f944f-nkv26</p></td>
+      <td><p class="text-muted">Pulling</p></td>
+      <td data-formatter="messageFormatter">Pulling image &#34;registry.ci.openshift.org/origin/4.15:kube-rbac-proxy&#34;</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:35 +0200 EET" title="First Seen: 16:58:35">16:58:35</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">webhook-7bccb96f5b-tksl4</p></td>
+      <td><p class="text-muted">Pulling</p></td>
+      <td data-formatter="messageFormatter">Pulling image &#34;registry.ci.openshift.org/origin/4.15:kube-rbac-proxy&#34;</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:35 +0200 EET" title="First Seen: 16:58:35">16:58:35</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">controller-5cdf4475cb-n97z7</p></td>
+      <td><p class="text-muted">Pulled</p></td>
+      <td data-formatter="messageFormatter">Successfully pulled image &#34;registry.ci.openshift.org/openshift/knative-serving-controller:knative-v1.14&#34; in 8.374s (8.374s including waiting). Image size: 168792824 bytes.</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:35 +0200 EET" title="First Seen: 16:58:35">16:58:35</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">controller-5cdf4475cb-n97z7</p></td>
+      <td><p class="text-muted">Created</p></td>
+      <td data-formatter="messageFormatter">Created container controller</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:35 +0200 EET" title="First Seen: 16:58:35">16:58:35</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">net-istio-controller-7f99bfd446-76xqm</p></td>
+      <td><p class="text-muted">Pulled</p></td>
+      <td data-formatter="messageFormatter">Successfully pulled image &#34;registry.ci.openshift.org/openshift/net-istio-controller:knative-v1.14&#34; in 10.918s (10.918s including waiting). Image size: 524385802 bytes.</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:35 +0200 EET" title="First Seen: 16:58:35">16:58:35</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">net-istio-controller-7f99bfd446-76xqm</p></td>
+      <td><p class="text-muted">Created</p></td>
+      <td data-formatter="messageFormatter">Created container controller</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:35 +0200 EET" title="First Seen: 16:58:35">16:58:35</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">net-istio-controller-7f99bfd446-76xqm</p></td>
+      <td><p class="text-muted">Started</p></td>
+      <td data-formatter="messageFormatter">Started container controller</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:35 +0200 EET" title="First Seen: 16:58:35">16:58:35</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">controller-5cdf4475cb-n97z7</p></td>
+      <td><p class="text-muted">Started</p></td>
+      <td data-formatter="messageFormatter">Started container controller</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:35 +0200 EET" title="First Seen: 16:58:35">16:58:35</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">controller-5cdf4475cb-n97z7</p></td>
+      <td><p class="text-muted">Pulling</p></td>
+      <td data-formatter="messageFormatter">Pulling image &#34;registry.ci.openshift.org/origin/4.15:kube-rbac-proxy&#34;</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:35 +0200 EET" title="First Seen: 16:58:32">16:58:35</time> <small>(x2)</small></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">knativeserving-controller</p></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="text-danger">InternalError</p></td>
+      <td data-formatter="messageFormatter">failed to apply non rbac manifest: Internal error occurred: failed calling webhook &#34;webhook.serving.knative.dev&#34;: failed to call webhook: Post &#34;https://webhook.knative-serving.svc:443/?timeout=10s&#34;: no endpoints available for service &#34;webhook&#34;</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:35 +0200 EET" title="First Seen: 16:58:35">16:58:35</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">webhook-7bccb96f5b-tksl4</p></td>
+      <td><p class="text-muted">Pulled</p></td>
+      <td data-formatter="messageFormatter">Successfully pulled image &#34;registry.ci.openshift.org/openshift/knative-serving-webhook:knative-v1.14&#34; in 7.858s (7.858s including waiting). Image size: 159400161 bytes.</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:35 +0200 EET" title="First Seen: 16:58:35">16:58:35</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">webhook-7bccb96f5b-tksl4</p></td>
+      <td><p class="text-muted">Created</p></td>
+      <td data-formatter="messageFormatter">Created container webhook</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:35 +0200 EET" title="First Seen: 16:58:35">16:58:35</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">net-istio-webhook-5fbccdd7d5-6n9c9</p></td>
+      <td><p class="text-muted">Created</p></td>
+      <td data-formatter="messageFormatter">Created container webhook</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:35 +0200 EET" title="First Seen: 16:58:35">16:58:35</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">net-istio-webhook-5fbccdd7d5-6n9c9</p></td>
+      <td><p class="text-muted">Pulled</p></td>
+      <td data-formatter="messageFormatter">Successfully pulled image &#34;registry.ci.openshift.org/openshift/net-istio-webhook:knative-v1.14&#34; in 10.49s (10.49s including waiting). Image size: 521743346 bytes.</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:35 +0200 EET" title="First Seen: 16:58:35">16:58:35</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">webhook-7bccb96f5b-tksl4</p></td>
+      <td><p class="text-muted">Started</p></td>
+      <td data-formatter="messageFormatter">Started container webhook</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:36 +0200 EET" title="First Seen: 16:58:36">16:58:36</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">replicaset-controller</p></td>
+      <td><p class="truncated">activator-57c5775dc</p></td>
+      <td><p class="text-muted">SuccessfulCreate</p></td>
+      <td data-formatter="messageFormatter">Created pod: activator-57c5775dc-zxbg9</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:36 +0200 EET" title="First Seen: 16:58:36">16:58:36</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">net-istio-webhook-5fbccdd7d5-6n9c9</p></td>
+      <td><p class="text-muted">Started</p></td>
+      <td data-formatter="messageFormatter">Started container webhook</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:36 +0200 EET" title="First Seen: 16:58:36">16:58:36</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">net-istio-controller-7f99bfd446-76xqm</p></td>
+      <td><p class="text-warning">Unhealthy</p></td>
+      <td data-formatter="messageFormatter">Readiness probe failed: Get &#34;http://10.131.0.23:8080/readiness&#34;: dial tcp 10.131.0.23:8080: connect: connection refused</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:36 +0200 EET" title="First Seen: 16:58:36">16:58:36</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">horizontal-pod-autoscaler</p></td>
+      <td><p class="truncated">activator</p></td>
+      <td><p class="text-muted">SuccessfulRescale</p></td>
+      <td data-formatter="messageFormatter">New size: 2; reason: Current number of replicas below Spec.MinReplicas</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:36 +0200 EET" title="First Seen: 16:58:36">16:58:36</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">deployment-controller</p></td>
+      <td><p class="truncated">activator</p></td>
+      <td><p class="text-muted">ScalingReplicaSet</p></td>
+      <td data-formatter="messageFormatter">Scaled up replica set activator-57c5775dc to 2 from 1</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:37 +0200 EET" title="First Seen: 16:58:37">16:58:37</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">replicaset-controller</p></td>
+      <td><p class="truncated">webhook-7bccb96f5b</p></td>
+      <td><p class="text-muted">SuccessfulCreate</p></td>
+      <td data-formatter="messageFormatter">Created pod: webhook-7bccb96f5b-p5w68</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:37 +0200 EET" title="First Seen: 16:58:37">16:58:37</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">controlplane</p></td>
+      <td><p class="truncated">activator-57c5775dc-zxbg9</p></td>
+      <td><p class="text-danger">ErrorUpdatingResource</p></td>
+      <td data-formatter="messageFormatter">addLogicalPort failed for knative-serving/activator-57c5775dc-zxbg9: failed to update pod knative-serving/activator-57c5775dc-zxbg9: Operation cannot be fulfilled on pods &#34;activator-57c5775dc-zxbg9&#34;: the object has been modified; please apply your changes to the latest version and try again</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:37 +0200 EET" title="First Seen: 16:58:37">16:58:37</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">deployment-controller</p></td>
+      <td><p class="truncated">webhook</p></td>
+      <td><p class="text-muted">ScalingReplicaSet</p></td>
+      <td data-formatter="messageFormatter">Scaled up replica set webhook-7bccb96f5b to 2 from 1</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:37 +0200 EET" title="First Seen: 16:58:37">16:58:37</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">horizontal-pod-autoscaler</p></td>
+      <td><p class="truncated">webhook</p></td>
+      <td><p class="text-muted">SuccessfulRescale</p></td>
+      <td data-formatter="messageFormatter">New size: 2; reason: Current number of replicas below Spec.MinReplicas</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:37 +0200 EET" title="First Seen: 16:58:37">16:58:37</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">multus</p></td>
+      <td><p class="truncated">activator-57c5775dc-zxbg9</p></td>
+      <td><p class="text-muted">AddedInterface</p></td>
+      <td data-formatter="messageFormatter">Add eth0 [10.131.0.26/23] from ovn-kubernetes</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:38 +0200 EET" title="First Seen: 16:58:38">16:58:38</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">autoscaler-hpa-597557bd7b-9j47x</p></td>
+      <td><p class="text-muted">Created</p></td>
+      <td data-formatter="messageFormatter">Created container kube-rbac-proxy</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:38 +0200 EET" title="First Seen: 16:58:38">16:58:38</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">autoscaler-67654f944f-nkv26</p></td>
+      <td><p class="text-muted">Pulled</p></td>
+      <td data-formatter="messageFormatter">Successfully pulled image &#34;registry.ci.openshift.org/origin/4.15:kube-rbac-proxy&#34; in 5.628s (5.628s including waiting). Image size: 498322628 bytes.</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:38 +0200 EET" title="First Seen: 16:58:38">16:58:38</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">autoscaler-hpa-597557bd7b-9j47x</p></td>
+      <td><p class="text-muted">Started</p></td>
+      <td data-formatter="messageFormatter">Started container kube-rbac-proxy</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:38 +0200 EET" title="First Seen: 16:58:38">16:58:38</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">controller-5cdf4475cb-mdk5g</p></td>
+      <td><p class="text-muted">Created</p></td>
+      <td data-formatter="messageFormatter">Created container kube-rbac-proxy</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:38 +0200 EET" title="First Seen: 16:58:38">16:58:38</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">controller-5cdf4475cb-mdk5g</p></td>
+      <td><p class="text-muted">Started</p></td>
+      <td data-formatter="messageFormatter">Started container kube-rbac-proxy</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:38 +0200 EET" title="First Seen: 16:58:38">16:58:38</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">activator-57c5775dc-7v8qc</p></td>
+      <td><p class="text-muted">Pulled</p></td>
+      <td data-formatter="messageFormatter">Successfully pulled image &#34;registry.ci.openshift.org/origin/4.15:kube-rbac-proxy&#34; in 5.631s (5.631s including waiting). Image size: 498322628 bytes.</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:38 +0200 EET" title="First Seen: 16:58:38">16:58:38</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">activator-57c5775dc-zxbg9</p></td>
+      <td><p class="text-muted">Pulling</p></td>
+      <td data-formatter="messageFormatter">Pulling image &#34;registry.ci.openshift.org/openshift/knative-serving-activator:knative-v1.14&#34;</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:38 +0200 EET" title="First Seen: 16:58:38">16:58:38</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">controller-5cdf4475cb-mdk5g</p></td>
+      <td><p class="text-muted">Pulled</p></td>
+      <td data-formatter="messageFormatter">Successfully pulled image &#34;registry.ci.openshift.org/origin/4.15:kube-rbac-proxy&#34; in 5.535s (5.535s including waiting). Image size: 498322628 bytes.</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:38 +0200 EET" title="First Seen: 16:58:38">16:58:38</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">autoscaler-hpa-597557bd7b-9j47x</p></td>
+      <td><p class="text-muted">Pulled</p></td>
+      <td data-formatter="messageFormatter">Successfully pulled image &#34;registry.ci.openshift.org/origin/4.15:kube-rbac-proxy&#34; in 5.456s (5.456s including waiting). Image size: 498322628 bytes.</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:39 +0200 EET" title="First Seen: 16:58:39">16:58:39</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">autoscaler-67654f944f-nkv26</p></td>
+      <td><p class="text-muted">Pulled</p></td>
+      <td data-formatter="messageFormatter">Container image &#34;registry.redhat.io/openshift-service-mesh/proxyv2-rhel8@sha256:4580f9a5da2c0ff7c881703095ab946b896f1703b6140c79091301648304cc37&#34; already present on machine</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:39 +0200 EET" title="First Seen: 16:58:39">16:58:39</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">autoscaler-67654f944f-nkv26</p></td>
+      <td><p class="text-muted">Created</p></td>
+      <td data-formatter="messageFormatter">Created container kube-rbac-proxy</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:39 +0200 EET" title="First Seen: 16:58:39">16:58:39</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">activator-57c5775dc-7v8qc</p></td>
+      <td><p class="text-muted">Created</p></td>
+      <td data-formatter="messageFormatter">Created container istio-proxy</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:39 +0200 EET" title="First Seen: 16:58:39">16:58:39</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">activator-57c5775dc-7v8qc</p></td>
+      <td><p class="text-muted">Created</p></td>
+      <td data-formatter="messageFormatter">Created container kube-rbac-proxy</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:39 +0200 EET" title="First Seen: 16:58:39">16:58:39</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">activator-57c5775dc-7v8qc</p></td>
+      <td><p class="text-muted">Pulled</p></td>
+      <td data-formatter="messageFormatter">Container image &#34;registry.redhat.io/openshift-service-mesh/proxyv2-rhel8@sha256:4580f9a5da2c0ff7c881703095ab946b896f1703b6140c79091301648304cc37&#34; already present on machine</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:39 +0200 EET" title="First Seen: 16:58:39">16:58:39</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">autoscaler-67654f944f-nkv26</p></td>
+      <td><p class="text-muted">Started</p></td>
+      <td data-formatter="messageFormatter">Started container istio-proxy</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:39 +0200 EET" title="First Seen: 16:58:39">16:58:39</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">activator-57c5775dc-7v8qc</p></td>
+      <td><p class="text-muted">Started</p></td>
+      <td data-formatter="messageFormatter">Started container kube-rbac-proxy</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:39 +0200 EET" title="First Seen: 16:58:39">16:58:39</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">autoscaler-67654f944f-nkv26</p></td>
+      <td><p class="text-muted">Created</p></td>
+      <td data-formatter="messageFormatter">Created container istio-proxy</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:39 +0200 EET" title="First Seen: 16:58:39">16:58:39</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">multus</p></td>
+      <td><p class="truncated">webhook-7bccb96f5b-p5w68</p></td>
+      <td><p class="text-muted">AddedInterface</p></td>
+      <td data-formatter="messageFormatter">Add eth0 [10.130.2.25/23] from ovn-kubernetes</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:39 +0200 EET" title="First Seen: 16:58:39">16:58:39</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">webhook-7bccb96f5b-p5w68</p></td>
+      <td><p class="text-muted">Pulling</p></td>
+      <td data-formatter="messageFormatter">Pulling image &#34;registry.ci.openshift.org/openshift/knative-serving-webhook:knative-v1.14&#34;</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:39 +0200 EET" title="First Seen: 16:58:39">16:58:39</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">activator-57c5775dc-7v8qc</p></td>
+      <td><p class="text-muted">Started</p></td>
+      <td data-formatter="messageFormatter">Started container istio-proxy</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:39 +0200 EET" title="First Seen: 16:58:39">16:58:39</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">autoscaler-67654f944f-nkv26</p></td>
+      <td><p class="text-muted">Started</p></td>
+      <td data-formatter="messageFormatter">Started container kube-rbac-proxy</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:40 +0200 EET" title="First Seen: 16:58:40">16:58:40</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">autoscaler-67654f944f-s7bhw</p></td>
+      <td><p class="text-muted">Started</p></td>
+      <td data-formatter="messageFormatter">Started container kube-rbac-proxy</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:40 +0200 EET" title="First Seen: 16:58:40">16:58:40</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">controller-84d56ccfc4-ffm5k</p></td>
+      <td><p class="text-muted">Pulled</p></td>
+      <td data-formatter="messageFormatter">Successfully pulled image &#34;registry.ci.openshift.org/origin/4.15:kube-rbac-proxy&#34; in 9.416s (9.416s including waiting). Image size: 498322628 bytes.</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:40 +0200 EET" title="First Seen: 16:58:40">16:58:40</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">replicaset-controller</p></td>
+      <td><p class="truncated">controller-84d56ccfc4</p></td>
+      <td><p class="text-muted">SuccessfulCreate</p></td>
+      <td data-formatter="messageFormatter">Created pod: controller-84d56ccfc4-q2kkb</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:40 +0200 EET" title="First Seen: 16:58:40">16:58:40</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">deployment-controller</p></td>
+      <td><p class="truncated">controller</p></td>
+      <td><p class="text-muted">ScalingReplicaSet</p></td>
+      <td data-formatter="messageFormatter">Scaled down replica set controller-5cdf4475cb to 1 from 2</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:40 +0200 EET" title="First Seen: 16:58:40">16:58:40</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">deployment-controller</p></td>
+      <td><p class="truncated">controller</p></td>
+      <td><p class="text-muted">ScalingReplicaSet</p></td>
+      <td data-formatter="messageFormatter">Scaled up replica set controller-84d56ccfc4 to 2 from 1</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:40 +0200 EET" title="First Seen: 16:58:40">16:58:40</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">controller-84d56ccfc4-ffm5k</p></td>
+      <td><p class="text-muted">Started</p></td>
+      <td data-formatter="messageFormatter">Started container kube-rbac-proxy</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:40 +0200 EET" title="First Seen: 16:58:40">16:58:40</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">autoscaler-hpa-597557bd7b-6dsl9</p></td>
+      <td><p class="text-muted">Started</p></td>
+      <td data-formatter="messageFormatter">Started container kube-rbac-proxy</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:40 +0200 EET" title="First Seen: 16:58:40">16:58:40</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">autoscaler-67654f944f-s7bhw</p></td>
+      <td><p class="text-muted">Pulled</p></td>
+      <td data-formatter="messageFormatter">Successfully pulled image &#34;registry.ci.openshift.org/origin/4.15:kube-rbac-proxy&#34; in 10.639s (10.639s including waiting). Image size: 498322628 bytes.</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:40 +0200 EET" title="First Seen: 16:58:40">16:58:40</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">autoscaler-67654f944f-s7bhw</p></td>
+      <td><p class="text-muted">Created</p></td>
+      <td data-formatter="messageFormatter">Created container kube-rbac-proxy</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:40 +0200 EET" title="First Seen: 16:58:40">16:58:40</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">autoscaler-67654f944f-s7bhw</p></td>
+      <td><p class="text-muted">Pulled</p></td>
+      <td data-formatter="messageFormatter">Container image &#34;registry.redhat.io/openshift-service-mesh/proxyv2-rhel8@sha256:4580f9a5da2c0ff7c881703095ab946b896f1703b6140c79091301648304cc37&#34; already present on machine</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:40 +0200 EET" title="First Seen: 16:58:40">16:58:40</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">autoscaler-67654f944f-s7bhw</p></td>
+      <td><p class="text-muted">Created</p></td>
+      <td data-formatter="messageFormatter">Created container istio-proxy</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:40 +0200 EET" title="First Seen: 16:58:40">16:58:40</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">autoscaler-67654f944f-s7bhw</p></td>
+      <td><p class="text-muted">Started</p></td>
+      <td data-formatter="messageFormatter">Started container istio-proxy</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:40 +0200 EET" title="First Seen: 16:58:40">16:58:40</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">replicaset-controller</p></td>
+      <td><p class="truncated">controller-5cdf4475cb</p></td>
+      <td><p class="text-muted">SuccessfulDelete</p></td>
+      <td data-formatter="messageFormatter">Deleted pod: controller-5cdf4475cb-n97z7</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:40 +0200 EET" title="First Seen: 16:58:40">16:58:40</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">autoscaler-hpa-597557bd7b-6dsl9</p></td>
+      <td><p class="text-muted">Created</p></td>
+      <td data-formatter="messageFormatter">Created container kube-rbac-proxy</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:40 +0200 EET" title="First Seen: 16:58:40">16:58:40</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">controller-84d56ccfc4-ffm5k</p></td>
+      <td><p class="text-muted">Created</p></td>
+      <td data-formatter="messageFormatter">Created container kube-rbac-proxy</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:40 +0200 EET" title="First Seen: 16:58:40">16:58:40</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">autoscaler-hpa-597557bd7b-6dsl9</p></td>
+      <td><p class="text-muted">Pulled</p></td>
+      <td data-formatter="messageFormatter">Successfully pulled image &#34;registry.ci.openshift.org/origin/4.15:kube-rbac-proxy&#34; in 8.966s (8.966s including waiting). Image size: 498322628 bytes.</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:41 +0200 EET" title="First Seen: 16:58:41">16:58:41</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">webhook-7bccb96f5b-p5w68</p></td>
+      <td><p class="text-muted">Pulled</p></td>
+      <td data-formatter="messageFormatter">Container image &#34;registry.ci.openshift.org/origin/4.15:kube-rbac-proxy&#34; already present on machine</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:41 +0200 EET" title="First Seen: 16:58:41">16:58:41</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">webhook-7bccb96f5b-p5w68</p></td>
+      <td><p class="text-muted">Pulled</p></td>
+      <td data-formatter="messageFormatter">Successfully pulled image &#34;registry.ci.openshift.org/openshift/knative-serving-webhook:knative-v1.14&#34; in 2.277s (2.277s including waiting). Image size: 159400161 bytes.</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:41 +0200 EET" title="First Seen: 16:58:38">16:58:41</time> <small>(x2)</small></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">knativeserving-controller</p></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="text-danger">InternalError</p></td>
+      <td data-formatter="messageFormatter">failed to apply non rbac manifest: Internal error occurred: failed calling webhook &#34;webhook.serving.knative.dev&#34;: failed to call webhook: Post &#34;https://webhook.knative-serving.svc:443/defaulting?timeout=10s&#34;: no endpoints available for service &#34;webhook&#34;</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:41 +0200 EET" title="First Seen: 16:58:41">16:58:41</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">webhook-7bccb96f5b-p5w68</p></td>
+      <td><p class="text-muted">Created</p></td>
+      <td data-formatter="messageFormatter">Created container webhook</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:41 +0200 EET" title="First Seen: 16:58:41">16:58:41</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">webhook-7bccb96f5b-p5w68</p></td>
+      <td><p class="text-muted">Started</p></td>
+      <td data-formatter="messageFormatter">Started container webhook</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:41 +0200 EET" title="First Seen: 16:58:40">16:58:41</time> <small>(x2)</small></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">activator-57c5775dc-7v8qc</p></td>
+      <td><p class="text-warning">Unhealthy</p></td>
+      <td data-formatter="messageFormatter">Readiness probe failed: HTTP probe failed with statuscode: 500</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:41 +0200 EET" title="First Seen: 16:58:41">16:58:41</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">multus</p></td>
+      <td><p class="truncated">controller-84d56ccfc4-q2kkb</p></td>
+      <td><p class="text-muted">AddedInterface</p></td>
+      <td data-formatter="messageFormatter">Add eth0 [10.129.2.21/23] from ovn-kubernetes</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:41 +0200 EET" title="First Seen: 16:58:41">16:58:41</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">webhook-7bccb96f5b-p5w68</p></td>
+      <td><p class="text-muted">Started</p></td>
+      <td data-formatter="messageFormatter">Started container kube-rbac-proxy</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:41 +0200 EET" title="First Seen: 16:58:41">16:58:41</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">webhook-7bccb96f5b-p5w68</p></td>
+      <td><p class="text-muted">Created</p></td>
+      <td data-formatter="messageFormatter">Created container kube-rbac-proxy</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:41 +0200 EET" title="First Seen: 16:58:41">16:58:41</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">controller-84d56ccfc4-q2kkb</p></td>
+      <td><p class="text-muted">Pulling</p></td>
+      <td data-formatter="messageFormatter">Pulling image &#34;registry.ci.openshift.org/openshift/knative-serving-controller:knative-v1.14&#34;</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:43 +0200 EET" title="First Seen: 16:58:43">16:58:43</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">activator-57c5775dc-zxbg9</p></td>
+      <td><p class="text-muted">Pulled</p></td>
+      <td data-formatter="messageFormatter">Successfully pulled image &#34;registry.ci.openshift.org/openshift/knative-serving-activator:knative-v1.14&#34; in 5.596s (5.596s including waiting). Image size: 159846640 bytes.</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:43 +0200 EET" title="First Seen: 16:58:43">16:58:43</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">webhook-7bccb96f5b-tksl4</p></td>
+      <td><p class="text-muted">Pulled</p></td>
+      <td data-formatter="messageFormatter">Successfully pulled image &#34;registry.ci.openshift.org/origin/4.15:kube-rbac-proxy&#34; in 7.975s (7.975s including waiting). Image size: 498322628 bytes.</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:43 +0200 EET" title="First Seen: 16:58:43">16:58:43</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">controller-5cdf4475cb-n97z7</p></td>
+      <td><p class="text-muted">Pulled</p></td>
+      <td data-formatter="messageFormatter">Successfully pulled image &#34;registry.ci.openshift.org/origin/4.15:kube-rbac-proxy&#34; in 7.967s (7.967s including waiting). Image size: 498322628 bytes.</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:43 +0200 EET" title="First Seen: 16:58:43">16:58:43</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">controller-5cdf4475cb-n97z7</p></td>
+      <td><p class="text-muted">Created</p></td>
+      <td data-formatter="messageFormatter">Created container kube-rbac-proxy</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:43 +0200 EET" title="First Seen: 16:58:43">16:58:43</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">controller-84d56ccfc4-q2kkb</p></td>
+      <td><p class="text-muted">Pulled</p></td>
+      <td data-formatter="messageFormatter">Container image &#34;registry.ci.openshift.org/origin/4.15:kube-rbac-proxy&#34; already present on machine</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:43 +0200 EET" title="First Seen: 16:58:43">16:58:43</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">controller-84d56ccfc4-q2kkb</p></td>
+      <td><p class="text-muted">Started</p></td>
+      <td data-formatter="messageFormatter">Started container controller</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:43 +0200 EET" title="First Seen: 16:58:43">16:58:43</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">controller-84d56ccfc4-q2kkb</p></td>
+      <td><p class="text-muted">Created</p></td>
+      <td data-formatter="messageFormatter">Created container controller</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:43 +0200 EET" title="First Seen: 16:58:43">16:58:43</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">controller-5cdf4475cb-n97z7</p></td>
+      <td><p class="text-muted">Started</p></td>
+      <td data-formatter="messageFormatter">Started container kube-rbac-proxy</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:43 +0200 EET" title="First Seen: 16:58:43">16:58:43</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">controller-84d56ccfc4-q2kkb</p></td>
+      <td><p class="text-muted">Created</p></td>
+      <td data-formatter="messageFormatter">Created container kube-rbac-proxy</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:43 +0200 EET" title="First Seen: 16:58:43">16:58:43</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">webhook-7bccb96f5b-tksl4</p></td>
+      <td><p class="text-muted">Created</p></td>
+      <td data-formatter="messageFormatter">Created container kube-rbac-proxy</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:43 +0200 EET" title="First Seen: 16:58:43">16:58:43</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">webhook-7bccb96f5b-tksl4</p></td>
+      <td><p class="text-muted">Started</p></td>
+      <td data-formatter="messageFormatter">Started container kube-rbac-proxy</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:43 +0200 EET" title="First Seen: 16:58:43">16:58:43</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">controller-84d56ccfc4-q2kkb</p></td>
+      <td><p class="text-warning">Unhealthy</p></td>
+      <td data-formatter="messageFormatter">Readiness probe failed: Get &#34;http://10.129.2.21:8080/readiness&#34;: dial tcp 10.129.2.21:8080: connect: connection refused</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:43 +0200 EET" title="First Seen: 16:58:43">16:58:43</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">controller-84d56ccfc4-q2kkb</p></td>
+      <td><p class="text-muted">Pulled</p></td>
+      <td data-formatter="messageFormatter">Successfully pulled image &#34;registry.ci.openshift.org/openshift/knative-serving-controller:knative-v1.14&#34; in 1.866s (1.866s including waiting). Image size: 168792824 bytes.</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:43 +0200 EET" title="First Seen: 16:58:43">16:58:43</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">activator-57c5775dc-zxbg9</p></td>
+      <td><p class="text-muted">Pulled</p></td>
+      <td data-formatter="messageFormatter">Container image &#34;registry.ci.openshift.org/origin/4.15:kube-rbac-proxy&#34; already present on machine</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:43 +0200 EET" title="First Seen: 16:58:43">16:58:43</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">activator-57c5775dc-zxbg9</p></td>
+      <td><p class="text-muted">Started</p></td>
+      <td data-formatter="messageFormatter">Started container activator</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:43 +0200 EET" title="First Seen: 16:58:43">16:58:43</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">activator-57c5775dc-zxbg9</p></td>
+      <td><p class="text-muted">Created</p></td>
+      <td data-formatter="messageFormatter">Created container activator</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:43 +0200 EET" title="First Seen: 16:58:43">16:58:43</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">controller-84d56ccfc4-q2kkb</p></td>
+      <td><p class="text-muted">Started</p></td>
+      <td data-formatter="messageFormatter">Started container kube-rbac-proxy</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:44 +0200 EET" title="First Seen: 16:58:44">16:58:44</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">controller-5cdf4475cb-n97z7</p></td>
+      <td><p class="text-danger">Killing</p></td>
+      <td data-formatter="messageFormatter">Stopping container kube-rbac-proxy</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:44 +0200 EET" title="First Seen: 16:58:44">16:58:44</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">activator-57c5775dc-zxbg9</p></td>
+      <td><p class="text-muted">Started</p></td>
+      <td data-formatter="messageFormatter">Started container kube-rbac-proxy</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:44 +0200 EET" title="First Seen: 16:58:44">16:58:44</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">controller-5cdf4475cb-mdk5g</p></td>
+      <td><p class="text-danger">Killing</p></td>
+      <td data-formatter="messageFormatter">Stopping container controller</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:44 +0200 EET" title="First Seen: 16:58:44">16:58:44</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">controller-5cdf4475cb-mdk5g</p></td>
+      <td><p class="text-danger">Killing</p></td>
+      <td data-formatter="messageFormatter">Stopping container kube-rbac-proxy</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:44 +0200 EET" title="First Seen: 16:58:44">16:58:44</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">deployment-controller</p></td>
+      <td><p class="truncated">controller</p></td>
+      <td><p class="text-muted">ScalingReplicaSet</p></td>
+      <td data-formatter="messageFormatter">Scaled down replica set controller-5cdf4475cb to 0 from 1</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:44 +0200 EET" title="First Seen: 16:58:44">16:58:44</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">activator-57c5775dc-zxbg9</p></td>
+      <td><p class="text-muted">Pulling</p></td>
+      <td data-formatter="messageFormatter">Pulling image &#34;registry.redhat.io/openshift-service-mesh/proxyv2-rhel8@sha256:4580f9a5da2c0ff7c881703095ab946b896f1703b6140c79091301648304cc37&#34;</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:44 +0200 EET" title="First Seen: 16:58:44">16:58:44</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">controller-5cdf4475cb-n97z7</p></td>
+      <td><p class="text-danger">Killing</p></td>
+      <td data-formatter="messageFormatter">Stopping container controller</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:44 +0200 EET" title="First Seen: 16:58:44">16:58:44</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">replicaset-controller</p></td>
+      <td><p class="truncated">controller-5cdf4475cb</p></td>
+      <td><p class="text-muted">SuccessfulDelete</p></td>
+      <td data-formatter="messageFormatter">Deleted pod: controller-5cdf4475cb-mdk5g</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:44 +0200 EET" title="First Seen: 16:58:44">16:58:44</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">activator-57c5775dc-zxbg9</p></td>
+      <td><p class="text-muted">Created</p></td>
+      <td data-formatter="messageFormatter">Created container kube-rbac-proxy</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:55 +0200 EET" title="First Seen: 16:58:55">16:58:55</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">activator-57c5775dc-zxbg9</p></td>
+      <td><p class="text-muted">Created</p></td>
+      <td data-formatter="messageFormatter">Created container istio-proxy</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:55 +0200 EET" title="First Seen: 16:58:55">16:58:55</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">activator-57c5775dc-zxbg9</p></td>
+      <td><p class="text-muted">Pulled</p></td>
+      <td data-formatter="messageFormatter">Successfully pulled image &#34;registry.redhat.io/openshift-service-mesh/proxyv2-rhel8@sha256:4580f9a5da2c0ff7c881703095ab946b896f1703b6140c79091301648304cc37&#34; in 11.61s (11.61s including waiting). Image size: 443521319 bytes.</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:58:55 +0200 EET" title="First Seen: 16:58:55">16:58:55</time></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">kubelet</p></td>
+      <td><p class="truncated">activator-57c5775dc-zxbg9</p></td>
+      <td><p class="text-muted">Started</p></td>
+      <td data-formatter="messageFormatter">Started container istio-proxy</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:59:06 +0200 EET" title="First Seen: 16:58:51">16:59:06</time> <small>(x2)</small></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">horizontal-pod-autoscaler</p></td>
+      <td><p class="truncated">activator</p></td>
+      <td><p class="text-danger">FailedGetResourceMetric</p></td>
+      <td data-formatter="messageFormatter">failed to get cpu utilization: did not receive metrics for targeted pods (pods might be unready)</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:59:06 +0200 EET" title="First Seen: 16:58:51">16:59:06</time> <small>(x2)</small></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">horizontal-pod-autoscaler</p></td>
+      <td><p class="truncated">activator</p></td>
+      <td><p class="text-danger">FailedComputeMetricsReplicas</p></td>
+      <td data-formatter="messageFormatter">invalid metrics (1 invalid out of 1), first error is: failed to get cpu resource metric value: failed to get cpu utilization: did not receive metrics for targeted pods (pods might be unready)</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:59:22 +0200 EET" title="First Seen: 16:58:52">16:59:22</time> <small>(x3)</small></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">horizontal-pod-autoscaler</p></td>
+      <td><p class="truncated">webhook</p></td>
+      <td><p class="text-danger">FailedGetResourceMetric</p></td>
+      <td data-formatter="messageFormatter">failed to get cpu utilization: unable to get metrics for resource cpu: no metrics returned from resource metrics API</td>
+    </tr>
+    
+    <tr>
+      <td><time datetime="2025-01-09 16:59:22 +0200 EET" title="First Seen: 16:58:52">16:59:22</time> <small>(x3)</small></td>
+      <td><p class="truncated">knative-serving</p></td>
+      <td><p class="truncated">horizontal-pod-autoscaler</p></td>
+      <td><p class="truncated">webhook</p></td>
+      <td><p class="text-danger">FailedComputeMetricsReplicas</p></td>
+      <td data-formatter="messageFormatter">invalid metrics (1 invalid out of 1), first error is: failed to get cpu resource metric value: failed to get cpu utilization: unable to get metrics for resource cpu: no metrics returned from resource metrics API</td>
+    </tr>
+    
+  </tbody>
+</table>
+
+    
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <script src="https://unpkg.com/bootstrap-table@1.17.1/dist/bootstrap-table.min.js" crossorigin="anonymous"></script>
+	<script src="https://unpkg.com/bootstrap-table@1.17.1/dist/extensions/toolbar/bootstrap-table-toolbar.min.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/bootstrap-table@1.17.1/dist/extensions/filter-control/bootstrap-table-filter-control.min.js" crossorigin="anonymous"></script>
+
+	<script>
+	function messageFormatter(value, row) {
+    	return '<code>'+value+'</code>'
+  	}
+    $(function() {
+      $('#events').bootstrapTable()
+    })
+	</script>
+  </body>
+</html>

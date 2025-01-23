@@ -1,0 +1,123 @@
+---
+apiVersion: serving.knative.dev/v1
+items:
+- apiVersion: serving.knative.dev/v1
+  kind: Service
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"serving.knative.dev/v1","kind":"Service","metadata":{"annotations":{"serving.knative.openshift.io/enablePassthrough":"true"},"name":"helloworld-go","namespace":"serving-tests"},"spec":{"template":{"metadata":{"annotations":{"autoscaling.knative.dev/minScale":"1","autoscaling.knative.dev/target":"10","sidecar.istio.io/inject":"true","sidecar.istio.io/rewriteAppHTTPProbers":"true"},"labels":{"app":"helloworld-go"}},"spec":{"containers":[{"env":[{"name":"TARGET","value":"Go Sample v1"}],"image":"docker.io/skonto/helloworld-go","imagePullPolicy":"Always","resources":{"requests":{"cpu":"200m"}}}]}}}}
+      serving.knative.dev/creator: system:admin
+      serving.knative.dev/lastModifier: system:admin
+      serving.knative.openshift.io/enablePassthrough: "true"
+    creationTimestamp: "2025-01-09T14:59:40Z"
+    generation: 1
+    managedFields:
+    - apiVersion: serving.knative.dev/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:kubectl.kubernetes.io/last-applied-configuration: {}
+            f:serving.knative.openshift.io/enablePassthrough: {}
+        f:spec:
+          .: {}
+          f:template:
+            .: {}
+            f:metadata:
+              .: {}
+              f:annotations:
+                .: {}
+                f:autoscaling.knative.dev/minScale: {}
+                f:autoscaling.knative.dev/target: {}
+                f:sidecar.istio.io/inject: {}
+                f:sidecar.istio.io/rewriteAppHTTPProbers: {}
+              f:labels:
+                .: {}
+                f:app: {}
+            f:spec:
+              .: {}
+              f:containers: {}
+      manager: kubectl-client-side-apply
+      operation: Update
+      time: "2025-01-09T14:59:40Z"
+    - apiVersion: serving.knative.dev/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          .: {}
+          f:address:
+            .: {}
+            f:url: {}
+          f:conditions: {}
+          f:latestCreatedRevisionName: {}
+          f:latestReadyRevisionName: {}
+          f:observedGeneration: {}
+          f:traffic: {}
+          f:url: {}
+      manager: controller
+      operation: Update
+      subresource: status
+      time: "2025-01-09T14:59:46Z"
+    name: helloworld-go
+    namespace: serving-tests
+    resourceVersion: "53731"
+    uid: 79f8a230-4abb-4fe0-9275-ba946e239b2f
+  spec:
+    template:
+      metadata:
+        annotations:
+          autoscaling.knative.dev/minScale: "1"
+          autoscaling.knative.dev/target: "10"
+          sidecar.istio.io/inject: "true"
+          sidecar.istio.io/rewriteAppHTTPProbers: "true"
+        creationTimestamp: null
+        labels:
+          app: helloworld-go
+      spec:
+        containerConcurrency: 0
+        containers:
+        - env:
+          - name: TARGET
+            value: Go Sample v1
+          image: docker.io/skonto/helloworld-go
+          imagePullPolicy: Always
+          name: user-container
+          readinessProbe:
+            successThreshold: 1
+            tcpSocket:
+              port: 0
+          resources:
+            requests:
+              cpu: 200m
+        enableServiceLinks: false
+        timeoutSeconds: 300
+    traffic:
+    - latestRevision: true
+      percent: 100
+  status:
+    address:
+      url: http://helloworld-go.serving-tests.svc.cluster.local
+    conditions:
+    - lastTransitionTime: "2025-01-09T14:59:45Z"
+      status: "True"
+      type: ConfigurationsReady
+    - lastTransitionTime: "2025-01-09T14:59:46Z"
+      status: "True"
+      type: Ready
+    - lastTransitionTime: "2025-01-09T14:59:46Z"
+      status: "True"
+      type: RoutesReady
+    latestCreatedRevisionName: helloworld-go-00001
+    latestReadyRevisionName: helloworld-go-00001
+    observedGeneration: 1
+    traffic:
+    - latestRevision: true
+      percent: 100
+      revisionName: helloworld-go-00001
+    url: https://helloworld-go-serving-tests.apps.ci-ln-6bt60xt-76ef8.aws-2.ci.openshift.org
+kind: ServiceList
+metadata:
+  continue: ""
+  resourceVersion: "60835"

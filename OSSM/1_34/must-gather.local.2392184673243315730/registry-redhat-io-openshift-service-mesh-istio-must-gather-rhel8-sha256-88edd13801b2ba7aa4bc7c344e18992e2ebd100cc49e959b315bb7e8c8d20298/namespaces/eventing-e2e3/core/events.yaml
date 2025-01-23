@@ -1,0 +1,49 @@
+---
+apiVersion: v1
+items:
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2025-01-09T14:46:13Z"
+  involvedObject:
+    apiVersion: maistra.io/v1
+    kind: ServiceMeshMember
+    name: default
+    namespace: eventing-e2e3
+    resourceVersion: "43512"
+    uid: ded5a74e-ffbf-491f-9622-232dbc0ea2f7
+  kind: Event
+  lastTimestamp: "2025-01-09T14:46:13Z"
+  message: 'could not create NetworkAttachmentDefinition eventing-e2e3/v2-4-istio-cni:
+    network-attachment-definitions.k8s.cni.cncf.io "v2-4-istio-cni" already exists'
+  metadata:
+    creationTimestamp: "2025-01-09T14:46:13Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: istio-operator
+      operation: Update
+      time: "2025-01-09T14:46:13Z"
+    name: default.18190d7fbac1befc
+    namespace: eventing-e2e3
+    resourceVersion: "43538"
+    uid: 41471041-72e1-4a5b-9b03-68a3920898f6
+  reason: FailedReconcile
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: servicemeshmember-controller
+  type: Warning
+kind: EventList
+metadata:
+  resourceVersion: "60596"

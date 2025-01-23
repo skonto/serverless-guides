@@ -1,0 +1,35 @@
+---
+apiVersion: security.istio.io/v1beta1
+kind: AuthorizationPolicy
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"security.istio.io/v1beta1","kind":"AuthorizationPolicy","metadata":{"annotations":{},"name":"allow-wait-for-drain","namespace":"eventing-e2e0"},"spec":{"action":"ALLOW","rules":[{"to":[{"operation":{"ports":["8022"]}}]}]}}
+  creationTimestamp: "2025-01-09T14:46:29Z"
+  generation: 1
+  managedFields:
+  - apiVersion: security.istio.io/v1beta1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:kubectl.kubernetes.io/last-applied-configuration: {}
+      f:spec:
+        .: {}
+        f:action: {}
+        f:rules: {}
+    manager: kubectl-client-side-apply
+    operation: Update
+    time: "2025-01-09T14:46:29Z"
+  name: allow-wait-for-drain
+  namespace: eventing-e2e0
+  resourceVersion: "43724"
+  uid: 98c14bd9-ae48-4e29-9abd-9fe85b53d70d
+spec:
+  action: ALLOW
+  rules:
+  - to:
+    - operation:
+        ports:
+        - "8022"

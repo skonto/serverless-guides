@@ -1,0 +1,15 @@
+2025-01-09T14:45:27.300270125Z {"level":"info","ts":"2025-01-09T14:45:27Z","logger":"cmd","msg":"Version","Go Version":"go1.20.12 X:strictfipsruntime","GOOS":"linux","GOARCH":"amd64","ansible-operator":"v1.31.0-ocp","commit":"bbab80aecf4bdefc7c92104e053905fd7e2f795b"}
+2025-01-09T14:45:27.300441409Z {"level":"info","ts":"2025-01-09T14:45:27Z","logger":"cmd","msg":"Watching all namespaces.","Namespace":""}
+2025-01-09T14:45:27.314693795Z {"level":"info","ts":"2025-01-09T14:45:27Z","logger":"controller-runtime.metrics","msg":"Metrics server is starting to listen","addr":":8080"}
+2025-01-09T14:45:27.315279380Z {"level":"info","ts":"2025-01-09T14:45:27Z","logger":"ansible-controller","msg":"Watching resource","Options.Group":"kiali.io","Options.Version":"v1alpha1","Options.Kind":"Kiali"}
+2025-01-09T14:45:27.315362442Z {"level":"info","ts":"2025-01-09T14:45:27Z","logger":"ansible-controller","msg":"Watching resource","Options.Group":"kiali.io","Options.Version":"v1alpha1","Options.Kind":"OSSMConsole"}
+2025-01-09T14:45:27.316426118Z {"level":"info","ts":"2025-01-09T14:45:27Z","logger":"proxy","msg":"Starting to serve","Address":"127.0.0.1:8888"}
+2025-01-09T14:45:27.316809088Z {"level":"info","ts":"2025-01-09T14:45:27Z","logger":"apiserver","msg":"Starting to serve metrics listener","Address":"localhost:5050"}
+2025-01-09T14:45:27.317026153Z {"level":"info","ts":"2025-01-09T14:45:27Z","msg":"Starting server","kind":"health probe","addr":"[::]:6789"}
+2025-01-09T14:45:27.317173537Z {"level":"info","ts":"2025-01-09T14:45:27Z","msg":"Starting server","path":"/metrics","kind":"metrics","addr":"[::]:8080"}
+2025-01-09T14:45:27.317304830Z {"level":"info","ts":"2025-01-09T14:45:27Z","msg":"Starting EventSource","controller":"kiali-controller","source":"kind source: *unstructured.Unstructured"}
+2025-01-09T14:45:27.317317311Z {"level":"info","ts":"2025-01-09T14:45:27Z","msg":"Starting Controller","controller":"kiali-controller"}
+2025-01-09T14:45:27.317390642Z {"level":"info","ts":"2025-01-09T14:45:27Z","msg":"Starting EventSource","controller":"ossmconsole-controller","source":"kind source: *unstructured.Unstructured"}
+2025-01-09T14:45:27.317426743Z {"level":"info","ts":"2025-01-09T14:45:27Z","msg":"Starting Controller","controller":"ossmconsole-controller"}
+2025-01-09T14:45:27.418138828Z {"level":"info","ts":"2025-01-09T14:45:27Z","msg":"Starting workers","controller":"kiali-controller","worker count":4}
+2025-01-09T14:45:27.419212275Z {"level":"info","ts":"2025-01-09T14:45:27Z","msg":"Starting workers","controller":"ossmconsole-controller","worker count":4}

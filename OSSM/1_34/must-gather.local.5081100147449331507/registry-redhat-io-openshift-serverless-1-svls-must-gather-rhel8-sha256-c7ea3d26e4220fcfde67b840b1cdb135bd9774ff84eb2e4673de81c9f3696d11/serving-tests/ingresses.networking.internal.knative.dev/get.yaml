@@ -1,0 +1,148 @@
+apiVersion: v1
+items:
+- apiVersion: networking.internal.knative.dev/v1alpha1
+  kind: Ingress
+  metadata:
+    annotations:
+      networking.internal.knative.dev/rollout: '{"configurations":[{"configurationName":"helloworld-go","percent":100,"revisions":[{"revisionName":"helloworld-go-00001","percent":100}],"stepParams":{}}]}'
+      networking.knative.dev/ingress.class: istio.ingress.networking.knative.dev
+      serving.knative.dev/creator: system:admin
+      serving.knative.dev/lastModifier: system:admin
+      serving.knative.openshift.io/enablePassthrough: "true"
+    creationTimestamp: "2025-01-09T14:59:45Z"
+    finalizers:
+    - ocp-ingress
+    - ingresses.networking.internal.knative.dev
+    generation: 1
+    labels:
+      serving.knative.dev/route: helloworld-go
+      serving.knative.dev/routeNamespace: serving-tests
+      serving.knative.dev/service: helloworld-go
+    name: helloworld-go
+    namespace: serving-tests
+    ownerReferences:
+    - apiVersion: serving.knative.dev/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Route
+      name: helloworld-go
+      uid: df3f94ba-08f4-4e25-a0ce-a05da7e31e86
+    resourceVersion: "53726"
+    uid: 25a9fdea-a9c3-4d27-8003-9730f995aeb1
+  spec:
+    httpOption: Enabled
+    rules:
+    - hosts:
+      - helloworld-go.serving-tests
+      - helloworld-go.serving-tests.svc
+      - helloworld-go.serving-tests.svc.cluster.local
+      http:
+        paths:
+        - splits:
+          - appendHeaders:
+              Knative-Serving-Namespace: serving-tests
+              Knative-Serving-Revision: helloworld-go-00001
+            percent: 100
+            serviceName: helloworld-go-00001
+            serviceNamespace: serving-tests
+            servicePort: 80
+      visibility: ClusterLocal
+    - hosts:
+      - helloworld-go-serving-tests.apps.ci-ln-6bt60xt-76ef8.aws-2.ci.openshift.org
+      http:
+        paths:
+        - splits:
+          - appendHeaders:
+              Knative-Serving-Namespace: serving-tests
+              Knative-Serving-Revision: helloworld-go-00001
+            percent: 100
+            serviceName: helloworld-go-00001
+            serviceNamespace: serving-tests
+            servicePort: 80
+      visibility: ExternalIP
+  status:
+    conditions:
+    - lastTransitionTime: "2025-01-09T14:59:46Z"
+      status: "True"
+      type: LoadBalancerReady
+    - lastTransitionTime: "2025-01-09T14:59:45Z"
+      status: "True"
+      type: NetworkConfigured
+    - lastTransitionTime: "2025-01-09T14:59:46Z"
+      status: "True"
+      type: Ready
+    observedGeneration: 1
+    privateLoadBalancer:
+      ingress:
+      - domainInternal: knative-local-gateway.istio-system.svc.cluster.local
+    publicLoadBalancer:
+      ingress:
+      - domainInternal: istio-ingressgateway.istio-system.svc.cluster.local
+- apiVersion: networking.internal.knative.dev/v1alpha1
+  kind: Ingress
+  metadata:
+    annotations:
+      networking.knative.dev/ingress.class: istio.ingress.networking.knative.dev
+      serving.knative.dev/creator: system:admin
+      serving.knative.dev/lastModifier: system:admin
+    creationTimestamp: "2025-01-09T15:00:43Z"
+    finalizers:
+    - ocp-ingress
+    - ingresses.networking.internal.knative.dev
+    generation: 1
+    labels:
+      serving.knative.dev/domainMappingNamespace: serving-tests
+      serving.knative.dev/domainMappingUID: b0bebd24-7a79-46e2-b6b7-3554ac45c972
+    name: stavros.com.apps.ci-ln-6bt60xt-76ef8.aws-2.ci.openshift.org
+    namespace: serving-tests
+    ownerReferences:
+    - apiVersion: serving.knative.dev/v1beta1
+      blockOwnerDeletion: true
+      controller: true
+      kind: DomainMapping
+      name: stavros.com.apps.ci-ln-6bt60xt-76ef8.aws-2.ci.openshift.org
+      uid: b0bebd24-7a79-46e2-b6b7-3554ac45c972
+    resourceVersion: "54316"
+    uid: e7650249-4d54-4d4e-8d66-d58bbcf64844
+  spec:
+    httpOption: Enabled
+    rules:
+    - hosts:
+      - stavros.com.apps.ci-ln-6bt60xt-76ef8.aws-2.ci.openshift.org
+      http:
+        paths:
+        - rewriteHost: helloworld-go.serving-tests.svc.cluster.local
+          splits:
+          - appendHeaders:
+              K-Original-Host: stavros.com.apps.ci-ln-6bt60xt-76ef8.aws-2.ci.openshift.org
+            percent: 100
+            serviceName: helloworld-go
+            serviceNamespace: serving-tests
+            servicePort: 80
+      visibility: ExternalIP
+    tls:
+    - hosts:
+      - stavros.com.apps.ci-ln-6bt60xt-76ef8.aws-2.ci.openshift.org
+      secretName: hello
+      secretNamespace: serving-tests
+  status:
+    conditions:
+    - lastTransitionTime: "2025-01-09T15:00:44Z"
+      status: "True"
+      type: LoadBalancerReady
+    - lastTransitionTime: "2025-01-09T15:00:43Z"
+      status: "True"
+      type: NetworkConfigured
+    - lastTransitionTime: "2025-01-09T15:00:44Z"
+      status: "True"
+      type: Ready
+    observedGeneration: 1
+    privateLoadBalancer:
+      ingress:
+      - domainInternal: knative-local-gateway.istio-system.svc.cluster.local
+    publicLoadBalancer:
+      ingress:
+      - domainInternal: istio-ingressgateway.istio-system.svc.cluster.local
+kind: List
+metadata:
+  resourceVersion: ""

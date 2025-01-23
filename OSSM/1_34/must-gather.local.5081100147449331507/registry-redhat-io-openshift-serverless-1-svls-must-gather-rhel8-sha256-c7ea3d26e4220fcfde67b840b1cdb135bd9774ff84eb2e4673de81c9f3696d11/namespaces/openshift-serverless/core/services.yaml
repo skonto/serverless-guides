@@ -1,0 +1,374 @@
+---
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: Service
+  metadata:
+    creationTimestamp: "2025-01-09T14:57:45Z"
+    labels:
+      name: knative-openshift-ingress
+      olm.managed: "true"
+      operators.coreos.com/serverless-operator.openshift-serverless: ""
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:labels:
+            .: {}
+            f:name: {}
+            f:olm.managed: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"726d7170-f13e-45ed-8372-4da6e47247a3"}: {}
+        f:spec:
+          f:internalTrafficPolicy: {}
+          f:ports:
+            .: {}
+            k:{"port":9090,"protocol":"TCP"}:
+              .: {}
+              f:name: {}
+              f:port: {}
+              f:protocol: {}
+              f:targetPort: {}
+          f:selector: {}
+          f:sessionAffinity: {}
+          f:type: {}
+      manager: catalog
+      operation: Update
+      time: "2025-01-09T14:57:45Z"
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:labels:
+            f:operators.coreos.com/serverless-operator.openshift-serverless: {}
+      manager: olm
+      operation: Update
+      time: "2025-01-09T14:57:45Z"
+    name: knative-openshift-ingress-metrics
+    namespace: openshift-serverless
+    ownerReferences:
+    - apiVersion: operators.coreos.com/v1alpha1
+      blockOwnerDeletion: false
+      controller: false
+      kind: ClusterServiceVersion
+      name: serverless-operator.v1.34.1
+      uid: 726d7170-f13e-45ed-8372-4da6e47247a3
+    resourceVersion: "50806"
+    uid: c1456d53-5126-45b8-8c71-2bb1267dfb38
+  spec:
+    clusterIP: 172.30.211.129
+    clusterIPs:
+    - 172.30.211.129
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - name: metrics
+      port: 9090
+      protocol: TCP
+      targetPort: 9090
+    selector:
+      name: knative-openshift-ingress
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    creationTimestamp: "2025-01-09T14:57:45Z"
+    labels:
+      name: knative-openshift
+      olm.managed: "true"
+      operators.coreos.com/serverless-operator.openshift-serverless: ""
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:labels:
+            .: {}
+            f:name: {}
+            f:olm.managed: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"726d7170-f13e-45ed-8372-4da6e47247a3"}: {}
+        f:spec:
+          f:internalTrafficPolicy: {}
+          f:ports:
+            .: {}
+            k:{"port":8080,"protocol":"TCP"}:
+              .: {}
+              f:name: {}
+              f:port: {}
+              f:protocol: {}
+              f:targetPort: {}
+            k:{"port":8383,"protocol":"TCP"}:
+              .: {}
+              f:name: {}
+              f:port: {}
+              f:protocol: {}
+              f:targetPort: {}
+          f:selector: {}
+          f:sessionAffinity: {}
+          f:type: {}
+      manager: catalog
+      operation: Update
+      time: "2025-01-09T14:57:45Z"
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:labels:
+            f:operators.coreos.com/serverless-operator.openshift-serverless: {}
+      manager: olm
+      operation: Update
+      time: "2025-01-09T14:57:45Z"
+    name: knative-openshift-metrics-3
+    namespace: openshift-serverless
+    ownerReferences:
+    - apiVersion: operators.coreos.com/v1alpha1
+      blockOwnerDeletion: false
+      controller: false
+      kind: ClusterServiceVersion
+      name: serverless-operator.v1.34.1
+      uid: 726d7170-f13e-45ed-8372-4da6e47247a3
+    resourceVersion: "50821"
+    uid: 8c9f9432-f10b-462d-9c47-d52fa501348b
+  spec:
+    clusterIP: 172.30.196.225
+    clusterIPs:
+    - 172.30.196.225
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - name: http-cli
+      port: 8080
+      protocol: TCP
+      targetPort: http-cli
+    - name: http-metrics
+      port: 8383
+      protocol: TCP
+      targetPort: 8383
+    selector:
+      name: knative-openshift
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    creationTimestamp: "2025-01-09T14:57:49Z"
+    labels:
+      olm.managed: "true"
+      operators.coreos.com/serverless-operator.openshift-serverless: ""
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:labels:
+            f:olm.managed: {}
+          f:ownerReferences:
+            k:{"uid":"726d7170-f13e-45ed-8372-4da6e47247a3"}: {}
+        f:spec:
+          f:ports:
+            k:{"port":9876,"protocol":"TCP"}:
+              .: {}
+              f:name: {}
+              f:port: {}
+              f:targetPort: {}
+          f:selector: {}
+      manager: olm.install
+      operation: Apply
+      time: "2025-01-09T14:57:49Z"
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:labels:
+            f:operators.coreos.com/serverless-operator.openshift-serverless: {}
+      manager: olm
+      operation: Update
+      time: "2025-01-09T14:57:49Z"
+    name: knative-openshift-service
+    namespace: openshift-serverless
+    ownerReferences:
+    - apiVersion: operators.coreos.com/v1alpha1
+      blockOwnerDeletion: false
+      controller: false
+      kind: ClusterServiceVersion
+      name: serverless-operator.v1.34.1
+      uid: 726d7170-f13e-45ed-8372-4da6e47247a3
+    resourceVersion: "50954"
+    uid: 9b8465c6-8f53-4437-b669-a9ada1b5ab96
+  spec:
+    clusterIP: 172.30.65.1
+    clusterIPs:
+    - 172.30.65.1
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - name: "9876"
+      port: 9876
+      protocol: TCP
+      targetPort: 9876
+    selector:
+      name: knative-openshift
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    creationTimestamp: "2025-01-09T14:57:46Z"
+    labels:
+      name: knative-operator
+      olm.managed: "true"
+      operators.coreos.com/serverless-operator.openshift-serverless: ""
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:labels:
+            .: {}
+            f:name: {}
+            f:olm.managed: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"726d7170-f13e-45ed-8372-4da6e47247a3"}: {}
+        f:spec:
+          f:internalTrafficPolicy: {}
+          f:ports:
+            .: {}
+            k:{"port":9090,"protocol":"TCP"}:
+              .: {}
+              f:name: {}
+              f:port: {}
+              f:protocol: {}
+              f:targetPort: {}
+          f:selector: {}
+          f:sessionAffinity: {}
+          f:type: {}
+      manager: catalog
+      operation: Update
+      time: "2025-01-09T14:57:46Z"
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:labels:
+            f:operators.coreos.com/serverless-operator.openshift-serverless: {}
+      manager: olm
+      operation: Update
+      time: "2025-01-09T14:57:46Z"
+    name: knative-operator-metrics
+    namespace: openshift-serverless
+    ownerReferences:
+    - apiVersion: operators.coreos.com/v1alpha1
+      blockOwnerDeletion: false
+      controller: false
+      kind: ClusterServiceVersion
+      name: serverless-operator.v1.34.1
+      uid: 726d7170-f13e-45ed-8372-4da6e47247a3
+    resourceVersion: "50836"
+    uid: 165fc0f3-8ce5-4b9e-b75d-6f077595710a
+  spec:
+    clusterIP: 172.30.124.111
+    clusterIPs:
+    - 172.30.124.111
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - name: metrics
+      port: 9090
+      protocol: TCP
+      targetPort: 9090
+    selector:
+      name: knative-operator
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    creationTimestamp: "2025-01-09T14:57:49Z"
+    labels:
+      olm.managed: "true"
+      operators.coreos.com/serverless-operator.openshift-serverless: ""
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:labels:
+            f:olm.managed: {}
+          f:ownerReferences:
+            k:{"uid":"726d7170-f13e-45ed-8372-4da6e47247a3"}: {}
+        f:spec:
+          f:ports:
+            k:{"port":8443,"protocol":"TCP"}:
+              .: {}
+              f:name: {}
+              f:port: {}
+              f:targetPort: {}
+          f:selector: {}
+      manager: olm.install
+      operation: Apply
+      time: "2025-01-09T14:57:49Z"
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:labels:
+            f:operators.coreos.com/serverless-operator.openshift-serverless: {}
+      manager: olm
+      operation: Update
+      time: "2025-01-09T14:57:49Z"
+    name: knative-operator-webhook-service
+    namespace: openshift-serverless
+    ownerReferences:
+    - apiVersion: operators.coreos.com/v1alpha1
+      blockOwnerDeletion: false
+      controller: false
+      kind: ClusterServiceVersion
+      name: serverless-operator.v1.34.1
+      uid: 726d7170-f13e-45ed-8372-4da6e47247a3
+    resourceVersion: "50921"
+    uid: 656e04ae-d953-4b4b-b8d0-7f34c6082ab3
+  spec:
+    clusterIP: 172.30.102.56
+    clusterIPs:
+    - 172.30.102.56
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - name: "8443"
+      port: 8443
+      protocol: TCP
+      targetPort: 8443
+    selector:
+      name: knative-operator
+      serverless.openshift.io/is: webhook
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+kind: ServiceList
+metadata:
+  resourceVersion: "62283"

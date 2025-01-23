@@ -1,0 +1,119 @@
+Name:         helloworld-go
+Namespace:    serving-tests
+Labels:       <none>
+Annotations:  serving.knative.dev/creator: system:admin
+              serving.knative.dev/lastModifier: system:admin
+              serving.knative.openshift.io/enablePassthrough: true
+API Version:  serving.knative.dev/v1
+Kind:         Service
+Metadata:
+  Creation Timestamp:  2025-01-09T14:59:40Z
+  Generation:          1
+  Managed Fields:
+    API Version:  serving.knative.dev/v1
+    Fields Type:  FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .:
+          f:kubectl.kubernetes.io/last-applied-configuration:
+          f:serving.knative.openshift.io/enablePassthrough:
+      f:spec:
+        .:
+        f:template:
+          .:
+          f:metadata:
+            .:
+            f:annotations:
+              .:
+              f:autoscaling.knative.dev/minScale:
+              f:autoscaling.knative.dev/target:
+              f:sidecar.istio.io/inject:
+              f:sidecar.istio.io/rewriteAppHTTPProbers:
+            f:labels:
+              .:
+              f:app:
+          f:spec:
+            .:
+            f:containers:
+    Manager:      kubectl-client-side-apply
+    Operation:    Update
+    Time:         2025-01-09T14:59:40Z
+    API Version:  serving.knative.dev/v1
+    Fields Type:  FieldsV1
+    fieldsV1:
+      f:status:
+        .:
+        f:address:
+          .:
+          f:url:
+        f:conditions:
+        f:latestCreatedRevisionName:
+        f:latestReadyRevisionName:
+        f:observedGeneration:
+        f:traffic:
+        f:url:
+    Manager:         controller
+    Operation:       Update
+    Subresource:     status
+    Time:            2025-01-09T14:59:46Z
+  Resource Version:  53731
+  UID:               79f8a230-4abb-4fe0-9275-ba946e239b2f
+Spec:
+  Template:
+    Metadata:
+      Annotations:
+        autoscaling.knative.dev/minScale:        1
+        autoscaling.knative.dev/target:          10
+        sidecar.istio.io/inject:                 true
+        sidecar.istio.io/rewriteAppHTTPProbers:  true
+      Creation Timestamp:                        <nil>
+      Labels:
+        App:  helloworld-go
+    Spec:
+      Container Concurrency:  0
+      Containers:
+        Env:
+          Name:             TARGET
+          Value:            Go Sample v1
+        Image:              docker.io/skonto/helloworld-go
+        Image Pull Policy:  Always
+        Name:               user-container
+        Readiness Probe:
+          Success Threshold:  1
+          Tcp Socket:
+            Port:  0
+        Resources:
+          Requests:
+            Cpu:             200m
+      Enable Service Links:  false
+      Timeout Seconds:       300
+  Traffic:
+    Latest Revision:  true
+    Percent:          100
+Status:
+  Address:
+    URL:  http://helloworld-go.serving-tests.svc.cluster.local
+  Conditions:
+    Last Transition Time:        2025-01-09T14:59:45Z
+    Status:                      True
+    Type:                        ConfigurationsReady
+    Last Transition Time:        2025-01-09T14:59:46Z
+    Status:                      True
+    Type:                        Ready
+    Last Transition Time:        2025-01-09T14:59:46Z
+    Status:                      True
+    Type:                        RoutesReady
+  Latest Created Revision Name:  helloworld-go-00001
+  Latest Ready Revision Name:    helloworld-go-00001
+  Observed Generation:           1
+  Traffic:
+    Latest Revision:  true
+    Percent:          100
+    Revision Name:    helloworld-go-00001
+  URL:                https://helloworld-go-serving-tests.apps.ci-ln-6bt60xt-76ef8.aws-2.ci.openshift.org
+Events:
+  Type    Reason   Age   From                Message
+  ----    ------   ----  ----                -------
+  Normal  Created  14m   service-controller  Created Configuration "helloworld-go"
+  Normal  Created  14m   service-controller  Created Route "helloworld-go"

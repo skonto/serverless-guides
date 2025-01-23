@@ -1,0 +1,55 @@
+---
+apiVersion: security.istio.io/v1beta1
+kind: AuthorizationPolicy
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"security.istio.io/v1beta1","kind":"AuthorizationPolicy","metadata":{"annotations":{},"name":"allow-eventing-e2e1-mt-channel-based-broker-reply","namespace":"knative-eventing"},"spec":{"action":"ALLOW","rules":[{"from":[{"source":{"namespaces":["knative-eventing"],"principals":["cluster.local/ns/knative-eventing/sa/imc-dispatcher","cluster.local/ns/knative-eventing/sa/mt-broker-filter","cluster.local/ns/knative-eventing/sa/knative-kafka-channel-data-plane"]}}],"to":[{"operation":{"paths":["/eventing-e2e1/*"]}}],"when":[{"key":"request.headers[Kn-Namespace]","values":["eventing-e2e1"]}]}],"selector":{"matchLabels":{"app.kubernetes.io/component":"broker-ingress"}}}}
+  creationTimestamp: "2025-01-09T14:46:32Z"
+  generation: 1
+  managedFields:
+  - apiVersion: security.istio.io/v1beta1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:kubectl.kubernetes.io/last-applied-configuration: {}
+      f:spec:
+        .: {}
+        f:action: {}
+        f:rules: {}
+        f:selector:
+          .: {}
+          f:matchLabels:
+            .: {}
+            f:app.kubernetes.io/component: {}
+    manager: kubectl-client-side-apply
+    operation: Update
+    time: "2025-01-09T14:46:32Z"
+  name: allow-eventing-e2e1-mt-channel-based-broker-reply
+  namespace: knative-eventing
+  resourceVersion: "43743"
+  uid: 89da104c-4b0e-4c9b-8b1d-c082ff0fc40b
+spec:
+  action: ALLOW
+  rules:
+  - from:
+    - source:
+        namespaces:
+        - knative-eventing
+        principals:
+        - cluster.local/ns/knative-eventing/sa/imc-dispatcher
+        - cluster.local/ns/knative-eventing/sa/mt-broker-filter
+        - cluster.local/ns/knative-eventing/sa/knative-kafka-channel-data-plane
+    to:
+    - operation:
+        paths:
+        - /eventing-e2e1/*
+    when:
+    - key: request.headers[Kn-Namespace]
+      values:
+      - eventing-e2e1
+  selector:
+    matchLabels:
+      app.kubernetes.io/component: broker-ingress

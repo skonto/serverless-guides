@@ -1,0 +1,54 @@
+Name:                activator
+Namespace:           knative-serving
+Labels:              app.kubernetes.io/component=activator
+                     app.kubernetes.io/name=knative-serving
+                     app.kubernetes.io/version=release-v1.14
+Annotations:         manifestival: new
+                     openshift.io/internal-registry-pull-secret-ref: activator-dockercfg-f2dxq
+Image pull secrets:  activator-dockercfg-f2dxq
+Mountable secrets:   activator-dockercfg-f2dxq
+Tokens:              <none>
+Events:              <none>
+
+
+Name:                builder
+Namespace:           knative-serving
+Labels:              <none>
+Annotations:         openshift.io/internal-registry-pull-secret-ref: builder-dockercfg-jrq2x
+Image pull secrets:  builder-dockercfg-jrq2x
+Mountable secrets:   builder-dockercfg-jrq2x
+Tokens:              <none>
+Events:              <none>
+
+
+Name:                controller
+Namespace:           knative-serving
+Labels:              app.kubernetes.io/component=controller
+                     app.kubernetes.io/name=knative-serving
+                     app.kubernetes.io/version=release-v1.14
+Annotations:         manifestival: new
+                     openshift.io/internal-registry-pull-secret-ref: controller-dockercfg-z7jv8
+Image pull secrets:  controller-dockercfg-z7jv8
+Mountable secrets:   controller-dockercfg-z7jv8
+Tokens:              <none>
+Events:              <none>
+
+
+Name:                default
+Namespace:           knative-serving
+Labels:              <none>
+Annotations:         openshift.io/internal-registry-pull-secret-ref: default-dockercfg-j6m26
+Image pull secrets:  default-dockercfg-j6m26
+Mountable secrets:   default-dockercfg-j6m26
+Tokens:              <none>
+Events:              <none>
+
+
+Name:                deployer
+Namespace:           knative-serving
+Labels:              <none>
+Annotations:         openshift.io/internal-registry-pull-secret-ref: deployer-dockercfg-sl25c
+Image pull secrets:  deployer-dockercfg-sl25c
+Mountable secrets:   deployer-dockercfg-sl25c
+Tokens:              <none>
+Events:              <none>

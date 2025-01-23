@@ -1,0 +1,103 @@
+apiVersion: v1
+items:
+- apiVersion: v1
+  imagePullSecrets:
+  - name: activator-dockercfg-f2dxq
+  kind: ServiceAccount
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"v1","kind":"ServiceAccount","metadata":{"labels":{"app.kubernetes.io/component":"activator","app.kubernetes.io/name":"knative-serving","app.kubernetes.io/version":"release-v1.14"},"name":"activator","namespace":"knative-serving","ownerReferences":[{"apiVersion":"operator.knative.dev/v1beta1","blockOwnerDeletion":true,"controller":true,"kind":"KnativeServing","name":"knative-serving","uid":"aed016d4-b7c0-4f05-ace9-ef4eec4aeb9c"}]}}
+      manifestival: new
+      openshift.io/internal-registry-pull-secret-ref: activator-dockercfg-f2dxq
+    creationTimestamp: "2025-01-09T14:58:18Z"
+    labels:
+      app.kubernetes.io/component: activator
+      app.kubernetes.io/name: knative-serving
+      app.kubernetes.io/version: release-v1.14
+    name: activator
+    namespace: knative-serving
+    ownerReferences:
+    - apiVersion: operator.knative.dev/v1beta1
+      blockOwnerDeletion: true
+      controller: true
+      kind: KnativeServing
+      name: knative-serving
+      uid: aed016d4-b7c0-4f05-ace9-ef4eec4aeb9c
+    resourceVersion: "52342"
+    uid: b6d0b844-3e4a-441f-86ae-8b1195ad51ff
+  secrets:
+  - name: activator-dockercfg-f2dxq
+- apiVersion: v1
+  imagePullSecrets:
+  - name: builder-dockercfg-jrq2x
+  kind: ServiceAccount
+  metadata:
+    annotations:
+      openshift.io/internal-registry-pull-secret-ref: builder-dockercfg-jrq2x
+    creationTimestamp: "2025-01-09T14:46:07Z"
+    name: builder
+    namespace: knative-serving
+    resourceVersion: "43057"
+    uid: af63595d-0a0f-4232-9481-e706e0a92725
+  secrets:
+  - name: builder-dockercfg-jrq2x
+- apiVersion: v1
+  imagePullSecrets:
+  - name: controller-dockercfg-z7jv8
+  kind: ServiceAccount
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"v1","kind":"ServiceAccount","metadata":{"labels":{"app.kubernetes.io/component":"controller","app.kubernetes.io/name":"knative-serving","app.kubernetes.io/version":"release-v1.14"},"name":"controller","namespace":"knative-serving","ownerReferences":[{"apiVersion":"operator.knative.dev/v1beta1","blockOwnerDeletion":true,"controller":true,"kind":"KnativeServing","name":"knative-serving","uid":"aed016d4-b7c0-4f05-ace9-ef4eec4aeb9c"}]}}
+      manifestival: new
+      openshift.io/internal-registry-pull-secret-ref: controller-dockercfg-z7jv8
+    creationTimestamp: "2025-01-09T14:58:18Z"
+    labels:
+      app.kubernetes.io/component: controller
+      app.kubernetes.io/name: knative-serving
+      app.kubernetes.io/version: release-v1.14
+    name: controller
+    namespace: knative-serving
+    ownerReferences:
+    - apiVersion: operator.knative.dev/v1beta1
+      blockOwnerDeletion: true
+      controller: true
+      kind: KnativeServing
+      name: knative-serving
+      uid: aed016d4-b7c0-4f05-ace9-ef4eec4aeb9c
+    resourceVersion: "52339"
+    uid: 7cf4748a-a6ed-4b85-9241-ddf609f73b10
+  secrets:
+  - name: controller-dockercfg-z7jv8
+- apiVersion: v1
+  imagePullSecrets:
+  - name: default-dockercfg-j6m26
+  kind: ServiceAccount
+  metadata:
+    annotations:
+      openshift.io/internal-registry-pull-secret-ref: default-dockercfg-j6m26
+    creationTimestamp: "2025-01-09T14:46:07Z"
+    name: default
+    namespace: knative-serving
+    resourceVersion: "43058"
+    uid: 069a37ab-03f1-4693-a745-6746f6572a5a
+  secrets:
+  - name: default-dockercfg-j6m26
+- apiVersion: v1
+  imagePullSecrets:
+  - name: deployer-dockercfg-sl25c
+  kind: ServiceAccount
+  metadata:
+    annotations:
+      openshift.io/internal-registry-pull-secret-ref: deployer-dockercfg-sl25c
+    creationTimestamp: "2025-01-09T14:46:07Z"
+    name: deployer
+    namespace: knative-serving
+    resourceVersion: "43056"
+    uid: 8f09c415-9651-470b-9d40-c830b80dc4a9
+  secrets:
+  - name: deployer-dockercfg-sl25c
+kind: List
+metadata:
+  resourceVersion: ""

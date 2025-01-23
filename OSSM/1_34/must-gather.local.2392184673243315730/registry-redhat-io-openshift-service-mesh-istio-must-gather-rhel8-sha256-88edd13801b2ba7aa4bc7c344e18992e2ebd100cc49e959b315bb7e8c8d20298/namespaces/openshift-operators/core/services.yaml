@@ -1,0 +1,351 @@
+---
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: Service
+  metadata:
+    creationTimestamp: "2025-01-09T14:45:09Z"
+    labels:
+      name: istio-operator
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:labels:
+            .: {}
+            f:name: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"29eee6e7-12de-4767-bde9-6c633569109a"}: {}
+        f:spec:
+          f:internalTrafficPolicy: {}
+          f:ports:
+            .: {}
+            k:{"port":8383,"protocol":"TCP"}:
+              .: {}
+              f:name: {}
+              f:port: {}
+              f:protocol: {}
+              f:targetPort: {}
+          f:selector: {}
+          f:sessionAffinity: {}
+          f:type: {}
+      manager: istio-operator
+      operation: Update
+      time: "2025-01-09T14:45:09Z"
+    name: istio-operator-metrics
+    namespace: openshift-operators
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Deployment
+      name: istio-operator
+      uid: 29eee6e7-12de-4767-bde9-6c633569109a
+    resourceVersion: "41399"
+    uid: 7237d3e3-dd03-4918-891f-6a701a026698
+  spec:
+    clusterIP: 172.30.222.124
+    clusterIPs:
+    - 172.30.222.124
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - name: http-metrics
+      port: 8383
+      protocol: TCP
+      targetPort: 8383
+    selector:
+      name: istio-operator
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    creationTimestamp: "2025-01-09T14:45:00Z"
+    labels:
+      olm.managed: "true"
+      operators.coreos.com/servicemeshoperator.openshift-operators: ""
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:labels:
+            f:olm.managed: {}
+          f:ownerReferences:
+            k:{"uid":"93902462-7888-436d-a712-d3cf0b1974a3"}: {}
+        f:spec:
+          f:ports:
+            k:{"port":443,"protocol":"TCP"}:
+              .: {}
+              f:name: {}
+              f:port: {}
+              f:targetPort: {}
+          f:selector: {}
+      manager: olm.install
+      operation: Apply
+      time: "2025-01-09T14:45:00Z"
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:labels:
+            f:operators.coreos.com/servicemeshoperator.openshift-operators: {}
+      manager: olm
+      operation: Update
+      time: "2025-01-09T14:45:02Z"
+    name: istio-operator-service
+    namespace: openshift-operators
+    ownerReferences:
+    - apiVersion: operators.coreos.com/v1alpha1
+      blockOwnerDeletion: false
+      controller: false
+      kind: ClusterServiceVersion
+      name: servicemeshoperator.v2.6.4
+      uid: 93902462-7888-436d-a712-d3cf0b1974a3
+    resourceVersion: "41018"
+    uid: 4b7817c3-0642-4476-9ce5-7351458bc239
+  spec:
+    clusterIP: 172.30.51.233
+    clusterIPs:
+    - 172.30.51.233
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - name: "443"
+      port: 443
+      protocol: TCP
+      targetPort: 11999
+    selector:
+      name: istio-operator
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    creationTimestamp: "2025-01-09T14:45:01Z"
+    labels:
+      app.kubernetes.io/component: metrics
+      name: jaeger-operator
+      olm.managed: "true"
+      operators.coreos.com/jaeger-product.openshift-operators: ""
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:labels:
+            .: {}
+            f:app.kubernetes.io/component: {}
+            f:name: {}
+            f:olm.managed: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"f111ea29-ca49-429a-a050-4597cfbb7e98"}: {}
+        f:spec:
+          f:internalTrafficPolicy: {}
+          f:ports:
+            .: {}
+            k:{"port":8443,"protocol":"TCP"}:
+              .: {}
+              f:name: {}
+              f:port: {}
+              f:protocol: {}
+              f:targetPort: {}
+          f:selector: {}
+          f:sessionAffinity: {}
+          f:type: {}
+      manager: catalog
+      operation: Update
+      time: "2025-01-09T14:45:01Z"
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:labels:
+            f:operators.coreos.com/jaeger-product.openshift-operators: {}
+      manager: olm
+      operation: Update
+      time: "2025-01-09T14:45:18Z"
+    name: jaeger-operator-metrics
+    namespace: openshift-operators
+    ownerReferences:
+    - apiVersion: operators.coreos.com/v1alpha1
+      blockOwnerDeletion: false
+      controller: false
+      kind: ClusterServiceVersion
+      name: jaeger-operator.v1.62.0-1
+      uid: f111ea29-ca49-429a-a050-4597cfbb7e98
+    resourceVersion: "41686"
+    uid: 9c5f6fe1-35fa-43b6-aefd-b8a9ca71d7b6
+  spec:
+    clusterIP: 172.30.187.224
+    clusterIPs:
+    - 172.30.187.224
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - name: https
+      port: 8443
+      protocol: TCP
+      targetPort: https
+    selector:
+      name: jaeger-operator
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    creationTimestamp: "2025-01-09T14:45:05Z"
+    labels:
+      olm.managed: "true"
+      operators.coreos.com/jaeger-product.openshift-operators: ""
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:labels:
+            f:olm.managed: {}
+          f:ownerReferences:
+            k:{"uid":"f111ea29-ca49-429a-a050-4597cfbb7e98"}: {}
+        f:spec:
+          f:ports:
+            k:{"port":443,"protocol":"TCP"}:
+              .: {}
+              f:name: {}
+              f:port: {}
+              f:targetPort: {}
+          f:selector: {}
+      manager: olm.install
+      operation: Apply
+      time: "2025-01-09T14:45:05Z"
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:labels:
+            f:operators.coreos.com/jaeger-product.openshift-operators: {}
+      manager: olm
+      operation: Update
+      time: "2025-01-09T14:45:06Z"
+    name: jaeger-operator-service
+    namespace: openshift-operators
+    ownerReferences:
+    - apiVersion: operators.coreos.com/v1alpha1
+      blockOwnerDeletion: false
+      controller: false
+      kind: ClusterServiceVersion
+      name: jaeger-operator.v1.62.0-1
+      uid: f111ea29-ca49-429a-a050-4597cfbb7e98
+    resourceVersion: "41225"
+    uid: f3f01dbc-fed4-4cb5-8b6e-ea6caecaf000
+  spec:
+    clusterIP: 172.30.255.64
+    clusterIPs:
+    - 172.30.255.64
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - name: "443"
+      port: 443
+      protocol: TCP
+      targetPort: 9443
+    selector:
+      name: jaeger-operator
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    creationTimestamp: "2025-01-09T14:45:00Z"
+    labels:
+      name: jaeger-operator
+      olm.managed: "true"
+      operators.coreos.com/jaeger-product.openshift-operators: ""
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:labels:
+            .: {}
+            f:name: {}
+            f:olm.managed: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"f111ea29-ca49-429a-a050-4597cfbb7e98"}: {}
+        f:spec:
+          f:internalTrafficPolicy: {}
+          f:ports:
+            .: {}
+            k:{"port":443,"protocol":"TCP"}:
+              .: {}
+              f:port: {}
+              f:protocol: {}
+              f:targetPort: {}
+          f:selector: {}
+          f:sessionAffinity: {}
+          f:type: {}
+      manager: catalog
+      operation: Update
+      time: "2025-01-09T14:45:00Z"
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:labels:
+            f:operators.coreos.com/jaeger-product.openshift-operators: {}
+      manager: olm
+      operation: Update
+      time: "2025-01-09T14:45:15Z"
+    name: jaeger-operator-webhook-service
+    namespace: openshift-operators
+    ownerReferences:
+    - apiVersion: operators.coreos.com/v1alpha1
+      blockOwnerDeletion: false
+      controller: false
+      kind: ClusterServiceVersion
+      name: jaeger-operator.v1.62.0-1
+      uid: f111ea29-ca49-429a-a050-4597cfbb7e98
+    resourceVersion: "41614"
+    uid: a6e4ac8a-a2ae-4305-9e6b-e4a5b61c7028
+  spec:
+    clusterIP: 172.30.128.152
+    clusterIPs:
+    - 172.30.128.152
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - port: 443
+      protocol: TCP
+      targetPort: 9443
+    selector:
+      name: jaeger-operator
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+kind: ServiceList
+metadata:
+  resourceVersion: "60379"
