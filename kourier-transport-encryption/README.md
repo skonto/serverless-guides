@@ -12,7 +12,7 @@
 oc get secret -n cert-manager "knative-selfsigned-ca" -o=jsonpath='{.data.tls\.crt}' | base64 -d > tls.crt
 oc get secret -n cert-manager "knative-selfsigned-ca" -o=jsonpath='{.data.ca\.crt}' | base64 -d > ca.crt
 
-# craete/sync trust bundles
+# create/sync trust bundles
 for ns in "knative-serving" "knative-serving-ingress" "test"; do
    echo "Syncing trust-bundle for namespace: ${ns}"
    oc create namespace "${ns}" --dry-run=client -o yaml | oc apply -f -
@@ -21,8 +21,6 @@ for ns in "knative-serving" "knative-serving-ingress" "test"; do
         --dry-run=client -o yaml | kubectl apply -n "${ns}" -f -
    oc label configmap -n "${ns}" knative-ca-bundle networking.knative.dev/trust-bundle=true --overwrite
 done
-
-rm -f tls.crt ca.crt
 
 # Install Serverless Operator, Serving and wait for the installation to be sucessful
 
