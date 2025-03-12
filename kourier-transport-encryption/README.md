@@ -71,6 +71,8 @@ Hello Go Sample v1!
 
 ## Using a non default OCP Ingress certificate
 
+See https://docs.openshift.com/container-platform/4.18/security/certificates/replacing-default-ingress-certificate.html for more,
+
 ```
 out_dir=./
 openssl req -x509 -sha256 -nodes -days 365 -newkey rsa:2048 \
@@ -136,7 +138,7 @@ spec:
       openshift-ingress-default-certificate: wildcard
 EOF
 
-# Check that the right env var is set when the net-kourie rpods are restarted
+# Check that the right env var is set when the net-kourier pods are restarted
 
 oc get po -lapp=net-kourier-controller -n knative-serving-ingress -o json | jq -r '.items[0].spec.containers[] | select(.env) | .env[] | select(.name=="CERTS_SECRET_NAMESPACE") | .value'
 openshift-ingress
