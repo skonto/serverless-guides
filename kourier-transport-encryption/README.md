@@ -12,8 +12,7 @@
 oc get secret -n cert-manager "knative-selfsigned-ca" -o=jsonpath='{.data.tls\.crt}' | base64 -d > tls.crt
 oc get secret -n cert-manager "knative-selfsigned-ca" -o=jsonpath='{.data.ca\.crt}' | base64 -d > ca.crt
 
-# app will run here
-oc create ns test
+# app will run in the test ns
 
 # create/sync trust bundles
 for ns in "knative-serving" "knative-serving-ingress" "test"; do
